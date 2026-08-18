@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { events, type EventRecord } from "./event-data";
+import { events, type EventRecord, type ReportSection } from "./event-data";
 
 function formatDate(date: string) {
   const [year, month, day] = date.split("-");
@@ -20,16 +20,21 @@ function getNewsOriginal(sourceReason: string) {
     .trim();
 }
 
+function formatSectionText(section: ReportSection) {
+  if (section.body) return section.body;
+  return section.items?.map((item) => `${item.label}：${item.text}`).join("\n") ?? "";
+}
+
 function createPlainText(event: EventRecord) {
   const sections = event.sections
-    .map((section) => `【${section.kicker}】\n${section.body}`)
+    .map((section) => `【${section.kicker}】\n${formatSectionText(section)}`)
     .join("\n\n");
 
   return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n【新闻原文】\n${getNewsOriginal(event.sourceReason)}\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
 }
 
 const reportParts = [
-  { number: "一", title: "事件基本情况", description: "新闻原文与客观再述", state: "当前阅读" },
+  { number: "一", title: "事件基本情况", description: "摘要、要点、理解与原文公司", state: "当前阅读" },
   { number: "二", title: "影响产业链", description: "环节、传导与受影响方向", state: "待接入" },
   { number: "三", title: "投资机会", description: "公司映射、指标与风险", state: "待接入" },
 ] as const;
@@ -161,7 +166,16 @@ export default function Home() {
                     <span>{section.number}</span>
                     <div><p>{section.question}</p><h2>{section.kicker}</h2></div>
                   </header>
-                  <p className="section-paragraph">{section.body}</p>
+                  {section.body && <p className="section-paragraph">{section.body}</p>}
+                  {section.items && (
+                    <div className="section-items">
+                      {section.items.map((item) => (
+                        <p className="section-item" key={`${section.key}-${item.label}`}>
+                          <strong>{item.label}</strong><span>{item.text}</span>
+                        </p>
+                      ))}
+                    </div>
+                  )}
                 </section>
               ))}
             </div>
