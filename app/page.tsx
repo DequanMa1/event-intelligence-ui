@@ -13,7 +13,7 @@ function createPlainText(event: EventRecord) {
     .map((section) => `【${section.kicker}】\n${section.paragraphs.join("")}`)
     .join("\n\n");
 
-  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.heat}/10\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
+  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
 }
 
 const reportParts = [
@@ -25,18 +25,20 @@ const reportParts = [
 export default function Home() {
   const [selectedId, setSelectedId] = useState(events[0].id);
   const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState<"全部" | "高热度">("全部");
+  const [filter, setFilter] = useState<"全部" | "热度 8—10">("全部");
   const [navOpen, setNavOpen] = useState(false);
   const [toast, setToast] = useState("");
 
   const selected = events.find((event) => event.id === selectedId) ?? events[0];
   const filteredEvents = useMemo(() => {
     const keyword = query.trim().toLowerCase();
-    return events.filter((event) => {
-      const matchesQuery = !keyword || `${event.title}${event.industry}`.toLowerCase().includes(keyword);
-      const matchesFilter = filter === "全部" || event.heat >= 8;
-      return matchesQuery && matchesFilter;
-    });
+    return events
+      .filter((event) => {
+        const matchesQuery = !keyword || `${event.title}${event.industry}`.toLowerCase().includes(keyword);
+        const matchesFilter = filter === "全部" || event.frequencyLevel >= 8;
+        return matchesQuery && matchesFilter;
+      })
+      .sort((a, b) => b.frequencyLevel - a.frequencyLevel);
   }, [filter, query]);
 
   const notify = (message: string) => {
@@ -96,7 +98,7 @@ export default function Home() {
         </label>
 
         <div className="filter-tabs" role="group" aria-label="筛选事件">
-          {(["全部", "高热度"] as const).map((item) => (
+          {(["全部", "热度 8—10"] as const).map((item) => (
             <button key={item} className={filter === item ? "active" : ""} onClick={() => setFilter(item)}>{item}</button>
           ))}
         </div>
@@ -104,7 +106,7 @@ export default function Home() {
         <div className="event-list">
           {filteredEvents.map((event) => (
             <button key={event.id} className={`event-row ${selected.id === event.id ? "active" : ""}`} onClick={() => chooseEvent(event.id)}>
-              <span className="event-row-meta">{formatDate(event.date)}　{event.industry}　热度 {event.heat}/10</span>
+              <span className="event-row-meta">{formatDate(event.date)}　{event.industry}　热度 {event.frequencyLevel}</span>
               <strong>{event.title}</strong>
             </button>
           ))}
@@ -133,7 +135,7 @@ export default function Home() {
             <header className="article-header">
               <p className="article-kicker">第一部分　事件基本情况</p>
               <h1>{selected.title}</h1>
-              <p className="article-meta">{formatDate(selected.date)}　·　{selected.industry}　·　事件热度 {selected.heat}/10</p>
+              <p className="article-meta">{formatDate(selected.date)}　·　{selected.industry}　·　事件热度 {selected.frequencyLevel}</p>
             </header>
 
             <div className="part-body">

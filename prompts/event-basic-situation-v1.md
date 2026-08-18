@@ -16,6 +16,8 @@
 
 “有主观判断”不等于可以编造事实。事实必须受证据约束，判断可以鲜明，但必须说明依据、条件和不确定性。
 
+`frequencyLevel` 是上游提供的事件热度原始值。模型只能原样保留，不得根据标题、事件重要性或自己的判断重新打分、归一化或调整。缺失时输出 `null`，不得补值。
+
 ---
 
 ## 一、最终正文应该像什么
@@ -291,7 +293,7 @@
     "title": "string",
     "event_date": "YYYY-MM-DD | null",
     "event_type_raw": "string | number | null",
-    "heat_raw": "string | number | null",
+    "frequency_level_raw": "string | number | null",
     "event_archetype": "policy | company_financial | price | order | capacity_capex | technology_product | supply_demand | geopolitical_event | other"
   },
   "input_assessment": {

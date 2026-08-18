@@ -14,7 +14,7 @@ export type EventRecord = {
   id: string;
   date: string;
   title: string;
-  heat: number;
+  frequencyLevel: number;
   type: "产业事件" | "机会事件";
   industry: string;
   oneLiner: string;
@@ -31,7 +31,7 @@ export const events: EventRecord[] = [
     id: "tsmc-price",
     date: "2026-06-25",
     title: "传台积电上调7nm及以下先进制程价格",
-    heat: 9,
+    frequencyLevel: 9,
     type: "产业事件",
     industry: "半导体",
     oneLiner: "真正的增量不是台积电可能涨价，而是涨价范围或从3nm扩大到7nm及以下，先进产能紧张可能正在向更广节点扩散。",
@@ -71,7 +71,7 @@ export const events: EventRecord[] = [
     id: "micron-capex",
     date: "2026-06-25",
     title: "美光上调资本开支加速洁净室建设",
-    heat: 9,
+    frequencyLevel: 9,
     type: "产业事件",
     industry: "半导体设备",
     oneLiner: "美光把全年资本开支指引提高到约270亿美元，并把增量资金优先投向洁净室，说明扩产正在从需求预期转入前置工程投入。",
@@ -91,7 +91,7 @@ export const events: EventRecord[] = [
     id: "liquid-cooling",
     date: "2026-06-25",
     title: "英特尔联合英维克完成冷板工质验证",
-    heat: 9,
+    frequencyLevel: 9,
     type: "产业事件",
     industry: "液冷散热",
     oneLiner: "225天长周期验证降低了冷板液冷工质在稳定性和兼容性上的技术疑虑，但平台认证还不等于批量订单。",
@@ -111,7 +111,7 @@ export const events: EventRecord[] = [
     id: "doubao-subscription",
     date: "2026-06-25",
     title: "字节豆包专业版上线启动付费订阅",
-    heat: 8,
+    frequencyLevel: 8,
     type: "产业事件",
     industry: "AI应用",
     oneLiner: "豆包以68元起的专业版测试用户是否愿意为高算力Agent任务付费，商业闭环开始验证，但续费率比首发更重要。",
@@ -131,7 +131,7 @@ export const events: EventRecord[] = [
     id: "fr4-price",
     date: "2026-06-25",
     title: "建滔积层板FR4及PP半固化片再提价",
-    heat: 8,
+    frequencyLevel: 8,
     type: "产业事件",
     industry: "PCB材料",
     oneLiner: "年内第五轮提价、间隔不足20天且幅度扩大到15%，比“又涨一次”更重要的是提价频率与幅度同时上升。",
@@ -151,7 +151,7 @@ export const events: EventRecord[] = [
     id: "vlcc-rate",
     date: "2026-06-25",
     title: "霍尔木兹海峡恢复通行油轮运价暴涨",
-    heat: 7,
+    frequencyLevel: 7,
     type: "产业事件",
     industry: "油运",
     oneLiner: "海峡恢复通行后的首个公开VLCC租约以WS550点成交，验证了抢运造成的短期运力紧张，但高运价能否持续要看补库存需求。",
