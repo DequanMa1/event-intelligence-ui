@@ -29,7 +29,7 @@ function createPlainText(event: EventRecord) {
 }
 
 const reportParts = [
-  { number: "一", title: "事件基本情况", description: "新闻原文与AI事件事实", state: "当前阅读" },
+  { number: "一", title: "事件基本情况", description: "API双字段的AI优化转述", state: "当前阅读" },
   { number: "二", title: "影响产业链", description: "环节、传导与受影响方向", state: "待接入" },
   { number: "三", title: "投资机会", description: "公司映射、指标与风险", state: "待接入" },
 ] as const;
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="event-list">
           {filteredEvents.map((event) => (
             <button key={event.id} className={`event-row ${selected.id === event.id ? "active" : ""}`} onClick={() => chooseEvent(event.id)}>
-              <span className="event-row-meta">{formatDate(event.date)}　{event.industry}　热度 {event.frequencyLevel}</span>
+              <span className="event-row-meta">{formatDate(event.date)} · {event.industry} · 热度 {event.frequencyLevel}</span>
               <strong>{event.title}</strong>
             </button>
           ))}
@@ -145,9 +145,9 @@ export default function Home() {
 
           <article className="report-document" key={selected.id}>
             <header className="article-header">
-              <p className="article-kicker">第一部分　事件基本情况</p>
+              <p className="article-kicker">第一部分 · 事件基本情况</p>
               <h1>{selected.title}</h1>
-              <p className="article-meta">{formatDate(selected.date)}　·　{selected.industry}　·　事件热度 {selected.frequencyLevel}</p>
+              <p className="article-meta">{formatDate(selected.date)} · {selected.industry} · 事件热度 {selected.frequencyLevel}</p>
               <div className="original-news">
                 <h2>新闻原文</h2>
                 <p>{getNewsOriginal(selected.sourceReason)}</p>
