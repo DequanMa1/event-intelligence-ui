@@ -168,9 +168,3 @@ export const events: EventRecord[] = [
     ],
   },
 ];
-
-export const claimLabels: Record<ClaimKind, string> = {
-  fact: "材料信息",
-  expectation: "待确认或预期",
-  judgment: "分析判断",
-};

@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { claimLabels, events, type EventRecord } from "./event-data";
+import { events, type EventRecord } from "./event-data";
 
 function formatDate(date: string) {
   const [year, month, day] = date.split("-");
@@ -12,8 +12,7 @@ function createPlainText(event: EventRecord) {
   const sections = event.sections
     .map((section) => {
       const paragraphs = section.paragraphs
-        .map((paragraph, index) => `${claimLabels[section.claimKinds[index]]}：${paragraph}`)
-        .join("\n");
+        .join("\n\n");
       const extra = section.key === "logic"
         ? `\n影响路径：${event.logicChain.join(" → ")}`
         : section.key === "watch"
@@ -178,16 +177,8 @@ export default function Home() {
                       <h3>{section.headline}</h3>
                     </header>
 
-                    <div className="section-copy">
-                      {section.paragraphs.map((paragraph, index) => {
-                        const kind = section.claimKinds[index];
-                        return (
-                          <div className={`claim-row ${kind}`} key={paragraph}>
-                            <span>{claimLabels[kind]}</span>
-                            <p>{paragraph}</p>
-                          </div>
-                        );
-                      })}
+                    <div className="narrative-copy">
+                      {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                     </div>
 
                     {section.key === "logic" && (
