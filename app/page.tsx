@@ -29,7 +29,7 @@ function createPlainText(event: EventRecord) {
 }
 
 const reportParts = [
-  { number: "一", title: "事件基本情况", description: "原文、拆解、逻辑与验证", state: "当前阅读" },
+  { number: "一", title: "事件基本情况", description: "事实、增量与投资逻辑", state: "当前阅读" },
   { number: "二", title: "影响产业链", description: "环节、传导与受影响方向", state: "待接入" },
   { number: "三", title: "投资机会", description: "公司映射、指标与风险", state: "待接入" },
 ] as const;
