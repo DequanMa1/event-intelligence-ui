@@ -8,12 +8,24 @@ function formatDate(date: string) {
   return `${year}.${month}.${day}`;
 }
 
+function getNewsOriginal(sourceReason: string) {
+  const focusMarker = sourceReason.search(/(?:<br\s*\/?>\s*){2,}关注\s*[：:]?/i);
+  const newsText = focusMarker >= 0 ? sourceReason.slice(0, focusMarker) : sourceReason;
+
+  return newsText
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<[^>]+>/g, "")
+    .replace(/\*\*/g, "")
+    .replace(/\s*\n\s*/g, " ")
+    .trim();
+}
+
 function createPlainText(event: EventRecord) {
   const sections = event.sections
     .map((section) => `【${section.kicker}】\n${section.body}`)
     .join("\n\n");
 
-  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
+  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n【新闻原文】\n${getNewsOriginal(event.sourceReason)}\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
 }
 
 const reportParts = [
@@ -136,6 +148,10 @@ export default function Home() {
               <p className="article-kicker">第一部分　事件基本情况</p>
               <h1>{selected.title}</h1>
               <p className="article-meta">{formatDate(selected.date)}　·　{selected.industry}　·　事件热度 {selected.frequencyLevel}</p>
+              <div className="original-news">
+                <h2>新闻原文</h2>
+                <p>{getNewsOriginal(selected.sourceReason)}</p>
+              </div>
             </header>
 
             <div className="part-body">
