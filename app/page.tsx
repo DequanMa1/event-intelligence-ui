@@ -10,7 +10,7 @@ function formatDate(date: string) {
 
 function createPlainText(event: EventRecord) {
   const sections = event.sections
-    .map((section) => `【${section.kicker}】\n${section.paragraphs.join("")}`)
+    .map((section) => `【${section.kicker}】\n${section.body}`)
     .join("\n\n");
 
   return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
@@ -145,7 +145,7 @@ export default function Home() {
                     <span>{section.number}</span>
                     <div><p>{section.question}</p><h2>{section.kicker}</h2></div>
                   </header>
-                  <p className="section-paragraph">{section.paragraphs.join("")}</p>
+                  <p className="section-paragraph">{section.body}</p>
                 </section>
               ))}
             </div>
