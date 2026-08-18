@@ -7,8 +7,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
   const baseUrl = new URL(`${protocol}://${host}`);
-  const title = "研报台 · 事件智能研究";
-  const description = "把迅兔财经事件转化为普通投资者能读懂、可验证的研究报告。";
+  const title = "事件选股 · 财经事件智能解读工具";
+  const description = "面向普通投资者的财经事件解读工具，快速看懂新闻、影响逻辑与后续验证点。";
 
   return {
     metadataBase: baseUrl,
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       type: "website",
-      images: [{ url: new URL("/og.png", baseUrl).toString(), width: 1728, height: 904, alt: "研报台：把事件，讲明白。" }],
+      images: [{ url: new URL("/og.png", baseUrl).toString(), width: 1728, height: 904, alt: "事件选股：财经事件智能解读工具" }],
     },
     twitter: {
       card: "summary_large_image",
