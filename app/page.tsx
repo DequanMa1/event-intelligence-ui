@@ -10,20 +10,10 @@ function formatDate(date: string) {
 
 function createPlainText(event: EventRecord) {
   const sections = event.sections
-    .map((section) => {
-      const paragraphs = section.paragraphs
-        .join("\n\n");
-      const extra = section.key === "logic"
-        ? `\n影响路径：${event.logicChain.join(" → ")}`
-        : section.key === "watch"
-          ? `\n后续重点跟踪：\n${event.watchItems.map((item, index) => `${index + 1}. ${item}`).join("\n")}\n证伪条件：${event.risk}`
-          : "";
-
-      return `【${section.kicker}】\n${section.headline}\n${paragraphs}${extra}`;
-    })
+    .map((section) => `【${section.kicker}】\n${section.paragraphs.join("")}`)
     .join("\n\n");
 
-  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.heat}/10\n\n【输入材料】\n${event.sourceReason}\n材料名称：${event.sourceTitle}\n\n【核心结论】\n${event.oneLiner}\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
+  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.heat}/10\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
 }
 
 const reportParts = [
@@ -146,66 +136,17 @@ export default function Home() {
               <p className="article-meta">{formatDate(selected.date)}　·　{selected.industry}　·　事件热度 {selected.heat}/10</p>
             </header>
 
-            <section className="material-section">
-              <p className="content-label">输入材料</p>
-              <p>{selected.sourceReason}</p>
-              <p className="source-line">材料名称：{selected.sourceTitle}</p>
-            </section>
-
-            <section className="conclusion-section">
-              <p className="content-label">核心结论</p>
-              <p>{selected.oneLiner}</p>
-            </section>
-
-            <nav className="section-index" aria-label="第一部分内容目录">
-              {selected.sections.map((section) => (
-                <a key={section.key} href={`#${selected.id}-${section.key}`}><span>{section.number}</span>{section.kicker}</a>
-              ))}
-            </nav>
-
             <div className="part-body">
               {selected.sections.map((section) => (
                 <section className="analysis-section" key={section.key} id={`${selected.id}-${section.key}`}>
-                  <div className="section-rail">
+                  <header className="section-heading">
                     <span>{section.number}</span>
-                    <i />
-                  </div>
-                  <div className="section-content">
-                    <header className="section-header">
-                      <p>{section.question}</p>
-                      <h2>{section.kicker}</h2>
-                      <h3>{section.headline}</h3>
-                    </header>
-
-                    <div className="narrative-copy">
-                      {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-                    </div>
-
-                    {section.key === "logic" && (
-                      <div className="logic-summary"><strong>影响路径</strong><p>{selected.logicChain.join(" → ")}</p></div>
-                    )}
-
-                    {section.key === "watch" && (
-                      <div className="watch-content">
-                        <div>
-                          <h3>后续重点跟踪</h3>
-                          <ol>{selected.watchItems.map((item) => <li key={item}>{item}</li>)}</ol>
-                        </div>
-                        <div className="falsification">
-                          <h3>证伪条件</h3>
-                          <p>{selected.risk}</p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                    <div><p>{section.question}</p><h2>{section.kicker}</h2></div>
+                  </header>
+                  <p className="section-paragraph">{section.paragraphs.join("")}</p>
                 </section>
               ))}
             </div>
-
-            <section className="next-parts" aria-label="后续报告章节">
-              <div><span>（二）</span><strong>影响产业链</strong><small>预留模块</small></div>
-              <div><span>（三）</span><strong>投资机会</strong><small>预留模块</small></div>
-            </section>
 
             <footer className="disclaimer">本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。市场有风险，投资需谨慎。</footer>
           </article>
