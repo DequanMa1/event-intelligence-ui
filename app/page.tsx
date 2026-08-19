@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { events, type EventRecord, type ReportRelevance, type ReportSection } from "./event-data";
+import { events, type EventRecord } from "./event-data";
 
 function formatDate(date: string) {
   const [year, month, day] = date.split("-");
@@ -22,31 +22,10 @@ function getNewsOriginal(sourceReason: string) {
 
 function createPlainText(event: EventRecord) {
   const sections = event.sections
-    .map((section) => {
-      const reports = section.reports?.map((report) =>
-        `关联研报：${report.institution ?? "机构未提供"}《${report.title}》｜${report.publishDate}｜${getReportStatusLabel(report.matchStatus, report.relevance)}`,
-      ).join("\n");
-
-      return `【${section.number} ${section.kicker}】\n${section.body}${reports ? `\n\n${reports}` : ""}`;
-    })
+    .map((section) => `【${section.number} ${section.kicker}】\n${section.body}`)
     .join("\n\n");
 
   return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n【新闻原文】\n${getNewsOriginal(event.sourceReason)}\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
-}
-
-function getReportStatusLabel(status: "reviewed" | "pending" | "ambiguous", relevance?: ReportRelevance) {
-  if (status === "reviewed") return `AI已通读${relevance ? ` · ${relevance}` : ""}`;
-  if (status === "ambiguous") return "同名待核验";
-  return "正文待匹配";
-}
-
-function getResearchStatus(section: ReportSection) {
-  const total = section.reports?.length ?? 0;
-  const reviewed = section.reports?.filter((report) => report.matchStatus === "reviewed").length ?? 0;
-
-  if (section.status === "no-links") return { label: "Excel暂无关联记录", tone: "empty" };
-  if (reviewed > 0) return { label: `AI已通读 ${reviewed}/${total}`, tone: "reviewed" };
-  return { label: `已关联 ${total} · 正文待匹配`, tone: "pending" };
 }
 
 const reportParts = [
@@ -176,49 +155,17 @@ export default function Home() {
             </header>
 
             <div className="part-body">
-              {selected.sections.map((section) => {
-                const researchStatus = section.key === "research" ? getResearchStatus(section) : null;
-
-                return (
+              {selected.sections.map((section) => (
                 <section className="analysis-section" key={section.key} id={`${selected.id}-${section.key}`}>
                   <header className="section-heading">
                     <span>{section.number}</span>
                     <div className="section-title-line">
                       <h2>{section.kicker}</h2>
-                      {researchStatus && (
-                        <small className={`research-status ${researchStatus.tone}`}>
-                          {researchStatus.label}
-                        </small>
-                      )}
                     </div>
                   </header>
                   <p className="section-paragraph">{section.body}</p>
-                  {section.reports && section.reports.length > 0 && (
-                    <div className="research-sources" aria-label="Excel关联研报">
-                      <p>Excel关联研报 · 共 {section.reports.length} 篇</p>
-                      {section.reports.map((report) => (
-                        <div
-                          className="research-source"
-                          key={report.relationId}
-                          title={report.localPath ?? "Excel已关联；本地正文尚未完成唯一匹配"}
-                        >
-                          <div>
-                            <strong>{report.title}</strong>
-                            <span>
-                              {report.institution ?? "机构未提供"} · {report.publishDate} · Excel关联 {report.relationId} · API排名 {report.rank}
-                              {report.reportId ? ` · 报告编号 ${report.reportId}` : ""}
-                            </span>
-                          </div>
-                          <em className={report.matchStatus}>
-                            {getReportStatusLabel(report.matchStatus, report.relevance)}
-                          </em>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </section>
-                );
-              })}
+              ))}
             </div>
 
             <footer className="disclaimer">本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。市场有风险，投资需谨慎。</footer>

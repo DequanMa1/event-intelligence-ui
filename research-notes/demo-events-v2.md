@@ -2,6 +2,8 @@
 
 本记录对应网页演示版本 `multi-report-demo-v3`。筛选条件为：Excel 中同一 `API_main_id` 至少关联 3 篇研报，并且本地至少存在 2 份可通读 PDF。网页中的“01 事件事实”由 API 原始详情的 `sourceReason` 与 `topicPaiPaiInfoDto.answer` 重新转述；“02 相关研究”只引用已匹配并通读的本地 PDF。
 
+自客户展示版本 `client-ready-research-v4` 起，“02 相关研究”仅展示最终分析段落，不显示研报数量、匹配过程或通读状态；全部映射和审阅标记继续保留在底层事件数据中。
+
 ## 27308｜英伟达确认 CPO 已在 Spectrum-X 量产
 
 - Excel 关联：13 篇；本地通读：2 篇。
