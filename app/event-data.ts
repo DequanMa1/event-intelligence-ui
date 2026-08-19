@@ -1,10 +1,13 @@
-export type ResearchSource = {
-  reportId: string;
+export type RelatedReport = {
+  relationId: string;
   title: string;
-  institution: string;
+  institution?: string;
   publishDate: string;
-  localPath: string;
-  relevance: "背景参考" | "关联不足";
+  rank: number;
+  matchStatus: "reviewed" | "pending" | "ambiguous";
+  reportId?: string;
+  localPath?: string;
+  relevance?: "背景参考" | "关联不足";
 };
 
 export type ReportSection = {
@@ -12,8 +15,8 @@ export type ReportSection = {
   number: "01" | "02";
   kicker: "事件事实" | "相关研究";
   body: string;
-  status?: "ai-reviewed" | "source-unavailable";
-  sources?: ResearchSource[];
+  status?: "ai-reviewed" | "linked-pending" | "no-links";
+  reports?: RelatedReport[];
 };
 
 export type EventRecord = {
@@ -57,8 +60,25 @@ export const events: EventRecord[] = [
         key: "research",
         number: "02",
         kicker: "相关研究",
-        status: "source-unavailable",
-        body: "本地映射中，与该事件相连的《建筑装饰行业专题研究：洁净室专题，AI先进制程发展下半导体资本开支扩张，洁净室下游高景气延续》和平安证券《每日晨报》均未形成可唯一核验的已下载PDF：前者未匹配到文件，后者存在同名多候选。由于没有可供通读的可靠研报正文，本节不依据标题推测报告观点。",
+        status: "linked-pending",
+        body: "Excel已为该事件关联2篇研报，但目前没有一篇完成本地正文的唯一匹配：平安证券《每日晨报》存在同名候选，洁净室专题报告尚未找到对应PDF。因此这里先如实展示关联研报，不把标题当作报告结论；待正文匹配完成后，再由AI通读全文并补充客观摘要。",
+        reports: [
+          {
+            relationId: "ER0000001",
+            title: "每日晨报",
+            institution: "平安证券",
+            publishDate: "2026-06-16",
+            rank: 13,
+            matchStatus: "ambiguous",
+          },
+          {
+            relationId: "ER0000002",
+            title: "建筑装饰行业专题研究：洁净室专题，AI先进制程发展下半导体资本开支扩张，洁净室下游高景气延续",
+            publishDate: "2026-06-24",
+            rank: 28,
+            matchStatus: "pending",
+          },
+        ],
       },
     ],
   },
@@ -84,8 +104,26 @@ export const events: EventRecord[] = [
         key: "research",
         number: "02",
         kicker: "相关研究",
-        status: "source-unavailable",
-        body: "本地映射记录列出了招商证券《电子行业美光FY26Q2跟踪报告：FY26Q2业绩超预期，上修FY26 Capex至超250亿美元》和华源证券《电子行业专题报告：AI算力浪潮奔涌，上游电子元件及原材料有望迎量价共振新周期》，但两条记录均未匹配到可用的本地PDF。由于无法核验报告正文，本节不复述标题或新闻内容，也不生成研报结论。",
+        status: "linked-pending",
+        body: "Excel已为该事件关联2篇研报，分别来自招商证券和华源证券；两篇目前都尚未匹配到可通读的本地PDF。为保证总结客观真实，本节保留关联关系和报告元数据，但暂不依据标题推演研报观点；正文补齐后再生成AI全文摘要。",
+        reports: [
+          {
+            relationId: "ER0000003",
+            title: "电子行业美光FY26Q2跟踪报告：FY26Q2业绩超预期，上修FY26 Capex至超250亿美元",
+            institution: "招商证券",
+            publishDate: "2026-03-19",
+            rank: 2,
+            matchStatus: "pending",
+          },
+          {
+            relationId: "ER0000004",
+            title: "电子行业专题报告：AI算力浪潮奔涌，上游电子元件及原材料有望迎量价共振新周期",
+            institution: "华源证券",
+            publishDate: "2026-06-21",
+            rank: 4,
+            matchStatus: "pending",
+          },
+        ],
       },
     ],
   },
@@ -111,8 +149,8 @@ export const events: EventRecord[] = [
         key: "research",
         number: "02",
         kicker: "相关研究",
-        status: "source-unavailable",
-        body: "当前研报映射文件中没有该事件（API mainId 26295）的关联记录，因此也没有能够与事件唯一对应并完成本地下载的研报正文。为避免把新闻信息或通用行业观点冒充为研报结论，本节暂不生成研究摘要。",
+        status: "no-links",
+        body: "当前Excel中没有该事件（API mainId 26295）的研报关联记录。由于既没有关联条目，也没有可核验的本地正文，本节暂不生成研究摘要。",
       },
     ],
   },
@@ -143,15 +181,65 @@ export const events: EventRecord[] = [
         number: "02",
         kicker: "相关研究",
         status: "ai-reviewed",
-        body: "东吴证券6月21日的策略周评认为，AI应用正在从内容生成和任务辅助走向交易执行与业务闭环；微信支付与WorkBuddy等案例仍保留用户授权和逐笔确认，显示智能体自主交易尚处于测试推进阶段。报告同时判断Agent普及将抬升推理算力需求，并提到字节正在洽谈采购至少5万颗推理GPU。该报告没有讨论豆包专业版68元订阅方案、付费用户数量或续费表现，因此只能作为“Agent走向任务执行、推理需求增加”的行业背景，不能用于验证豆包订阅的实际商业化成效。",
-        sources: [
+        body: "Excel共关联7篇研报，其中1篇已完成本地匹配并由AI通读。东吴证券6月21日的策略周评认为，AI应用正从内容生成和任务辅助走向交易执行与业务闭环；微信支付与WorkBuddy等案例仍保留用户授权和逐笔确认，显示智能体自主交易尚处于测试推进阶段。报告同时判断Agent普及将抬升推理算力需求，并提到字节正在洽谈采购至少5万颗推理GPU。该报告没有讨论豆包专业版68元订阅方案、付费用户数量或续费表现，因此只能作为行业背景，不能用于验证豆包订阅的实际商业化成效。其余6篇因正文尚未匹配，本摘要不引用其观点。",
+        reports: [
           {
+            relationId: "ER0000008",
             reportId: "3007392636",
             title: "策略周评：微信支付开启AI支付测试",
             institution: "东吴证券",
             publishDate: "2026-06-21",
+            rank: 6,
+            matchStatus: "reviewed",
             localPath: "../1.迅兔事件数据获取/event_report_output/pdfs/19700101_3007392636_东吴证券_策略周评：微信支付开启AI支付测试.pdf",
             relevance: "背景参考",
+          },
+          {
+            relationId: "ER0000009",
+            title: "华丰科技(688629)公司动态研究：AI算力增长强劲，前瞻布局Socket业务",
+            publishDate: "2026-06-24",
+            rank: 10,
+            matchStatus: "pending",
+          },
+          {
+            relationId: "ER0000010",
+            title: "计算机行业周观点第47期：Anthropic首次盈利，两大超级应用开启AI原生之路",
+            institution: "国泰海通",
+            publishDate: "2026-06-22",
+            rank: 11,
+            matchStatus: "pending",
+          },
+          {
+            relationId: "ER0000011",
+            title: "电子行业专题报告：AI算力浪潮奔涌，上游电子元件及原材料有望迎量价共振新周期",
+            institution: "华源证券",
+            publishDate: "2026-06-21",
+            rank: 19,
+            matchStatus: "pending",
+          },
+          {
+            relationId: "ER0000012",
+            title: "建信互联网+产业升级基金专题报告：砺炼十余年投研功底，聚焦高景气硬科技",
+            institution: "国金证券",
+            publishDate: "2026-06-12",
+            rank: 25,
+            matchStatus: "pending",
+          },
+          {
+            relationId: "ER0000013",
+            title: "第一创业｜晨会纪要",
+            institution: "第一创业",
+            publishDate: "2026-06-09",
+            rank: 30,
+            matchStatus: "pending",
+          },
+          {
+            relationId: "ER0000014",
+            title: "中信建投｜晨会纪要",
+            institution: "中信建投",
+            publishDate: "2026-06-09",
+            rank: 33,
+            matchStatus: "pending",
           },
         ],
       },
@@ -180,15 +268,57 @@ export const events: EventRecord[] = [
         number: "02",
         kicker: "相关研究",
         status: "ai-reviewed",
-        body: "平安证券（香港）6月18日《每日晨报》提到，建滔集团拟按每股76港元配售1.55亿股建滔积层板股份，套现约117.8亿港元；交易完成后，建滔集团持股比例将由约66.62%降至约61.70%，建滔积层板仍为其非全资附属公司。报告没有涉及FR4覆铜板、PP半固化片的第五轮提价，也未讨论AI服务器带来的材料供需变化，因此这份映射研报只能补充建滔积层板的股权事项，不能为本次产品涨价及产业链判断提供直接证据。",
-        sources: [
+        body: "Excel共关联6篇研报，其中1篇已完成本地匹配并由AI通读。平安证券（香港）6月18日《每日晨报》提到，建滔集团拟按每股76港元配售1.55亿股建滔积层板股份，套现约117.8亿港元；交易完成后，建滔集团持股比例将由约66.62%降至约61.70%，建滔积层板仍为其非全资附属公司。报告没有涉及FR4覆铜板、PP半固化片的第五轮提价，也未讨论AI服务器带来的材料供需变化，因此只能补充公司股权事项，不能为本次涨价及产业链判断提供直接证据。其余5篇因正文尚未匹配，本摘要不引用其观点。",
+        reports: [
           {
+            relationId: "ER0000015",
+            title: "建筑材料行业周报：重视电子布与玻璃基板产业趋势，原油价格回落缓解消费建材成本压力",
+            institution: "东方财富证券",
+            publishDate: "2026-06-21",
+            rank: 15,
+            matchStatus: "pending",
+          },
+          {
+            relationId: "ER0000016",
+            title: "转债双周报：为潜在转折时刻做好准备",
+            institution: "中泰证券",
+            publishDate: "2026-06-23",
+            rank: 36,
+            matchStatus: "pending",
+          },
+          {
+            relationId: "ER0000017",
+            title: "欧科亿(688308)点评报告：拟控股永鑫精工，深度卡位高成长PCB钻针赛道",
+            institution: "浙商证券",
+            publishDate: "2026-06-18",
+            rank: 38,
+            matchStatus: "pending",
+          },
+          {
+            relationId: "ER0000018",
+            title: "每日晨报",
+            institution: "平安证券",
+            publishDate: "2026-06-16",
+            rank: 45,
+            matchStatus: "ambiguous",
+          },
+          {
+            relationId: "ER0000019",
             reportId: "3007391560",
             title: "每日晨报",
             institution: "平安证券（香港）",
             publishDate: "2026-06-18",
+            rank: 46,
+            matchStatus: "reviewed",
             localPath: "../1.迅兔事件数据获取/event_report_output/pdfs/19700101_3007391560_平安证券(香港)_每日晨报.pdf",
             relevance: "关联不足",
+          },
+          {
+            relationId: "ER0000020",
+            title: "每日晨报",
+            publishDate: "2026-06-24",
+            rank: 47,
+            matchStatus: "ambiguous",
           },
         ],
       },
@@ -216,8 +346,8 @@ export const events: EventRecord[] = [
         key: "research",
         number: "02",
         kicker: "相关研究",
-        status: "source-unavailable",
-        body: "当前研报映射文件中没有该事件（API mainId 26304）的关联记录，因此也没有能够与事件唯一对应并完成本地下载的研报正文。为保证摘要可追溯且不凭空补充观点，本节暂不生成研究结论。",
+        status: "no-links",
+        body: "当前Excel中没有该事件（API mainId 26304）的研报关联记录。为保证摘要可追溯且不凭空补充观点，本节暂不生成研究结论。",
       },
     ],
   },
