@@ -22,14 +22,20 @@ function getNewsOriginal(sourceReason: string) {
 
 function createPlainText(event: EventRecord) {
   const sections = event.sections
-    .map((section) => `【${section.number} ${section.kicker}】\n${section.body}`)
+    .map((section) => {
+      const sources = section.sources?.map((source) =>
+        `研报来源：${source.institution}《${source.title}》｜${source.publishDate}｜${source.relevance}`,
+      ).join("\n");
+
+      return `【${section.number} ${section.kicker}】\n${section.body}${sources ? `\n\n${sources}` : ""}`;
+    })
     .join("\n\n");
 
   return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n【新闻原文】\n${getNewsOriginal(event.sourceReason)}\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
 }
 
 const reportParts = [
-  { number: "一", title: "事件基本情况", description: "API双字段的AI优化转述", state: "当前阅读" },
+  { number: "一", title: "事件基本情况", description: "AI事件事实与关联研报摘要", state: "当前阅读" },
   { number: "二", title: "影响产业链", description: "环节、传导与受影响方向", state: "待接入" },
   { number: "三", title: "投资机会", description: "公司映射、指标与风险", state: "待接入" },
 ] as const;
@@ -159,9 +165,30 @@ export default function Home() {
                 <section className="analysis-section" key={section.key} id={`${selected.id}-${section.key}`}>
                   <header className="section-heading">
                     <span>{section.number}</span>
-                    <div><h2>{section.kicker}</h2></div>
+                    <div className="section-title-line">
+                      <h2>{section.kicker}</h2>
+                      {section.key === "research" && (
+                        <small className={`research-status ${section.status === "ai-reviewed" ? "reviewed" : "unavailable"}`}>
+                          {section.status === "ai-reviewed" ? "AI已通读研报" : "暂无可靠正文"}
+                        </small>
+                      )}
+                    </div>
                   </header>
                   <p className="section-paragraph">{section.body}</p>
+                  {section.sources && section.sources.length > 0 && (
+                    <div className="research-sources" aria-label="研报来源">
+                      <p>通读来源</p>
+                      {section.sources.map((source) => (
+                        <div className="research-source" key={source.reportId} title={source.localPath}>
+                          <div>
+                            <strong>{source.title}</strong>
+                            <span>{source.institution} · {source.publishDate} · 报告编号 {source.reportId}</span>
+                          </div>
+                          <em className={source.relevance === "背景参考" ? "context" : "weak"}>{source.relevance}</em>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </section>
               ))}
             </div>
