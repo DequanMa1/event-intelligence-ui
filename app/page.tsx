@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { events, type EventRecord, type ReportSection } from "./event-data";
+import { events, type EventRecord, type ReportRelevance, type ReportSection } from "./event-data";
 
 function formatDate(date: string) {
   const [year, month, day] = date.split("-");
@@ -34,7 +34,7 @@ function createPlainText(event: EventRecord) {
   return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n【新闻原文】\n${getNewsOriginal(event.sourceReason)}\n\n${sections}\n\n（二）影响产业链｜待接入\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
 }
 
-function getReportStatusLabel(status: "reviewed" | "pending" | "ambiguous", relevance?: "背景参考" | "关联不足") {
+function getReportStatusLabel(status: "reviewed" | "pending" | "ambiguous", relevance?: ReportRelevance) {
   if (status === "reviewed") return `AI已通读${relevance ? ` · ${relevance}` : ""}`;
   if (status === "ambiguous") return "同名待核验";
   return "正文待匹配";
@@ -205,7 +205,7 @@ export default function Home() {
                           <div>
                             <strong>{report.title}</strong>
                             <span>
-                              {report.institution ?? "机构未提供"} · {report.publishDate} · 关联序号 {report.relationId}
+                              {report.institution ?? "机构未提供"} · {report.publishDate} · Excel关联 {report.relationId} · API排名 {report.rank}
                               {report.reportId ? ` · 报告编号 ${report.reportId}` : ""}
                             </span>
                           </div>
