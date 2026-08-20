@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "status": "ready",
+  "event": {
+    "mainId": "27189",
+    "uid": "0RB7WE92Z15FH",
+    "title": "万通发展子公司PCIe5.0交换芯片量产",
+    "date": "2026-07-08"
+  },
+  "selection": {
+    "rule": "filled_star_count == 4",
+    "sourceStockCount": 2,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 0,
+    "stocks": [
+      {
+        "sourceRowNumber": 21687,
+        "stockCode": "688008.SH",
+        "stockName": "澜起科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 13
+      },
+      {
+        "sourceRowNumber": 21688,
+        "stockCode": "688041.SH",
+        "stockName": "海光信息",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 4
+      }
+    ],
+    "unmappedStocks": []
+  },
+  "totals": {
+    "candidateCoreProductCount": 16,
+    "selectedCoreProductCount": 2,
+    "selectedCompanyCoreProductCount": 1,
+    "semanticBridgeCount": 1,
+    "upstreamCandidateCount": 0,
+    "downstreamCandidateCount": 3,
+    "shownUpstreamCount": 0,
+    "shownDownstreamCount": 3
+  },
+  "chain": {
+    "upstream": [],
+    "core": [
+      {
+        "code": "1140157923",
+        "name": "PCIeRetimer芯片",
+        "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 信号链芯片 > PCIeRetimer芯片",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "集成电路",
+          "IC设计",
+          "信号链芯片",
+          "PCIeRetimer芯片"
+        ],
+        "matchedSourceLevel": 7,
+        "mappingType": "company_product",
+        "bridgeBasis": "",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688008.SH",
+            "stockName": "澜起科技",
+            "rating": "★★★★☆"
+          }
+        ],
+        "upstreamCount": 0,
+        "downstreamCount": 0,
+        "relevanceScore": 9,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "pcieretimer",
+          "半导体",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140113825",
+        "name": "交换芯片",
+        "hierarchyPath": "",
+        "industryPath": [],
+        "matchedSourceLevel": 0,
+        "mappingType": "semantic_bridge",
+        "bridgeBasis": "event_title",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "688041.SH",
+            "stockName": "海光信息",
+            "rating": "★★★★"
+          },
+          {
+            "stockCode": "688008.SH",
+            "stockName": "澜起科技",
+            "rating": "★★★★☆"
+          }
+        ],
+        "upstreamCount": 0,
+        "downstreamCount": 3,
+        "relevanceScore": 0,
+        "strongRelevanceScore": 0,
+        "matchedTerms": []
+      }
+    ],
+    "downstream": [
+      {
+        "code": "1140112723",
+        "name": "监控网关",
+        "anchorCount": 1,
+        "stockCount": 2,
+        "linkedCoreProductCodes": [
+          "1140113825"
+        ],
+        "linkedCoreProductNames": [
+          "交换芯片"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      },
+      {
+        "code": "1140134057",
+        "name": "网络汇聚分流设备",
+        "anchorCount": 1,
+        "stockCount": 2,
+        "linkedCoreProductCodes": [
+          "1140113825"
+        ],
+        "linkedCoreProductNames": [
+          "交换芯片"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      },
+      {
+        "code": "1140166437",
+        "name": "高压厂用电保护测控装置",
+        "anchorCount": 1,
+        "stockCount": 2,
+        "linkedCoreProductCodes": [
+          "1140113825"
+        ],
+        "linkedCoreProductNames": [
+          "交换芯片"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      }
+    ]
+  },
+  "caveats": [
+    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
+    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+  ]
+}

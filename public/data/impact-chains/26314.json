@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "status": "ready",
+  "event": {
+    "mainId": "26314",
+    "uid": "0RB7WE8AK17T0",
+    "title": "SAF需求增长推动UCO原料量价齐升",
+    "date": "2026-06-25"
+  },
+  "selection": {
+    "rule": "filled_star_count == 4",
+    "sourceStockCount": 2,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 0,
+    "stocks": [
+      {
+        "sourceRowNumber": 681,
+        "stockCode": "603822.SH",
+        "stockName": "ST嘉澳",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 9
+      },
+      {
+        "sourceRowNumber": 682,
+        "stockCode": "688196.SH",
+        "stockName": "卓越新能",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
+      }
+    ],
+    "unmappedStocks": []
+  },
+  "totals": {
+    "candidateCoreProductCount": 14,
+    "selectedCoreProductCount": 1,
+    "selectedCompanyCoreProductCount": 1,
+    "semanticBridgeCount": 0,
+    "upstreamCandidateCount": 3,
+    "downstreamCandidateCount": 3,
+    "shownUpstreamCount": 3,
+    "shownDownstreamCount": 3
+  },
+  "chain": {
+    "upstream": [
+      {
+        "code": "1140089283",
+        "name": "厨余垃圾处置业务",
+        "anchorCount": 1,
+        "stockCount": 2,
+        "linkedCoreProductCodes": [
+          "1140071268"
+        ],
+        "linkedCoreProductNames": [
+          "生物柴油"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      },
+      {
+        "code": "1140089327",
+        "name": "新型环保装备",
+        "anchorCount": 1,
+        "stockCount": 2,
+        "linkedCoreProductCodes": [
+          "1140071268"
+        ],
+        "linkedCoreProductNames": [
+          "生物柴油"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      },
+      {
+        "code": "1140163609",
+        "name": "餐厨再生油脂",
+        "anchorCount": 1,
+        "stockCount": 2,
+        "linkedCoreProductCodes": [
+          "1140071268"
+        ],
+        "linkedCoreProductNames": [
+          "生物柴油"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      }
+    ],
+    "core": [
+      {
+        "code": "1140071268",
+        "name": "生物柴油",
+        "hierarchyPath": "化工 > 化学制品 > 其他化学制品 > 生物质燃料 > 生物质燃料 > 生物柴油",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "其他化学制品",
+          "生物质燃料",
+          "生物质燃料",
+          "生物柴油"
+        ],
+        "matchedSourceLevel": 7,
+        "mappingType": "company_product",
+        "bridgeBasis": "",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "603822.SH",
+            "stockName": "ST嘉澳",
+            "rating": "★★★★☆"
+          },
+          {
+            "stockCode": "688196.SH",
+            "stockName": "卓越新能",
+            "rating": "★★★★"
+          }
+        ],
+        "upstreamCount": 3,
+        "downstreamCount": 3,
+        "relevanceScore": 11,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "生物柴油",
+          "其他化学制品",
+          "化学制品"
+        ]
+      }
+    ],
+    "downstream": [
+      {
+        "code": "1140048489",
+        "name": "烷醇酰胺",
+        "anchorCount": 1,
+        "stockCount": 2,
+        "linkedCoreProductCodes": [
+          "1140071268"
+        ],
+        "linkedCoreProductNames": [
+          "生物柴油"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      },
+      {
+        "code": "1140078471",
+        "name": "生物能源进出口贸易",
+        "anchorCount": 1,
+        "stockCount": 2,
+        "linkedCoreProductCodes": [
+          "1140071268"
+        ],
+        "linkedCoreProductNames": [
+          "生物柴油"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      },
+      {
+        "code": "1140071269",
+        "name": "生物酯增塑剂",
+        "anchorCount": 1,
+        "stockCount": 2,
+        "linkedCoreProductCodes": [
+          "1140071268"
+        ],
+        "linkedCoreProductNames": [
+          "生物柴油"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      }
+    ]
+  },
+  "caveats": [
+    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
+    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+  ]
+}

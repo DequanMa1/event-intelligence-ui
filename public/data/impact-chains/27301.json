@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "status": "ready",
+  "event": {
+    "mainId": "27301",
+    "uid": "0RB7WE8ZV142M",
+    "title": "SK海力士美国IPO获逾七倍超额认购",
+    "date": "2026-07-09"
+  },
+  "selection": {
+    "rule": "filled_star_count == 4",
+    "sourceStockCount": 4,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 3,
+    "stocks": [
+      {
+        "sourceRowNumber": 24393,
+        "stockCode": "688825.SH",
+        "stockName": "长鑫科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 24394,
+        "stockCode": "未上市",
+        "stockName": "长江存储",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24401,
+        "stockCode": "6857.T",
+        "stockName": "爱德万",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24409,
+        "stockCode": "NVDA.O",
+        "stockName": "英伟达",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 24394,
+        "stockCode": "未上市",
+        "stockName": "长江存储",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24401,
+        "stockCode": "6857.T",
+        "stockName": "爱德万",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24409,
+        "stockCode": "NVDA.O",
+        "stockName": "英伟达",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
+  },
+  "totals": {
+    "candidateCoreProductCount": 4,
+    "selectedCoreProductCount": 1,
+    "selectedCompanyCoreProductCount": 1,
+    "semanticBridgeCount": 0,
+    "upstreamCandidateCount": 0,
+    "downstreamCandidateCount": 1,
+    "shownUpstreamCount": 0,
+    "shownDownstreamCount": 1
+  },
+  "chain": {
+    "upstream": [],
+    "core": [
+      {
+        "code": "1140165695",
+        "name": "存储晶圆",
+        "hierarchyPath": "电子 > 半导体 > 半导体材料 > 半导体生产原料 > 晶圆 > 存储晶圆",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "半导体材料",
+          "半导体生产原料",
+          "晶圆",
+          "存储晶圆"
+        ],
+        "matchedSourceLevel": 7,
+        "mappingType": "company_product",
+        "bridgeBasis": "",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688825.SH",
+            "stockName": "长鑫科技",
+            "rating": "★★★★☆"
+          }
+        ],
+        "upstreamCount": 0,
+        "downstreamCount": 1,
+        "relevanceScore": 9,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "半导体材料",
+          "半导体",
+          "电子"
+        ]
+      }
+    ],
+    "downstream": [
+      {
+        "code": "1140165539",
+        "name": "存储晶圆销售",
+        "anchorCount": 1,
+        "stockCount": 1,
+        "linkedCoreProductCodes": [
+          "1140165695"
+        ],
+        "linkedCoreProductNames": [
+          "存储晶圆"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      }
+    ]
+  },
+  "caveats": [
+    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
+    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "3只4星标的未在本地公司产品图谱中穿透。"
+  ]
+}

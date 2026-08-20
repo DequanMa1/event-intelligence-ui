@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "status": "ready",
+  "event": {
+    "mainId": "26486",
+    "uid": "0RB7WE8KK15D9",
+    "title": "震裕科技发布电机铁芯三代粘胶技术",
+    "date": "2026-06-28"
+  },
+  "selection": {
+    "rule": "filled_star_count == 4",
+    "sourceStockCount": 1,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 0,
+    "stocks": [
+      {
+        "sourceRowNumber": 5594,
+        "stockCode": "301577.SZ",
+        "stockName": "美信科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 7
+      }
+    ],
+    "unmappedStocks": []
+  },
+  "totals": {
+    "candidateCoreProductCount": 7,
+    "selectedCoreProductCount": 2,
+    "selectedCompanyCoreProductCount": 1,
+    "semanticBridgeCount": 1,
+    "upstreamCandidateCount": 3,
+    "downstreamCandidateCount": 1,
+    "shownUpstreamCount": 3,
+    "shownDownstreamCount": 1
+  },
+  "chain": {
+    "upstream": [
+      {
+        "code": "1140028895",
+        "name": "电机定子",
+        "anchorCount": 1,
+        "stockCount": 1,
+        "linkedCoreProductCodes": [
+          "1140116120"
+        ],
+        "linkedCoreProductNames": [
+          "电机铁芯"
+        ],
+        "evidence": {
+          "original": 1,
+          "directionalCompletion": 0
+        }
+      },
+      {
+        "code": "1140028896",
+        "name": "电机转子",
+        "anchorCount": 1,
+        "stockCount": 1,
+        "linkedCoreProductCodes": [
+          "1140116120"
+        ],
+        "linkedCoreProductNames": [
+          "电机铁芯"
+        ],
+        "evidence": {
+          "original": 1,
+          "directionalCompletion": 0
+        }
+      },
+      {
+        "code": "1140133910",
+        "name": "网络变压器插座",
+        "anchorCount": 1,
+        "stockCount": 1,
+        "linkedCoreProductCodes": [
+          "1140133909"
+        ],
+        "linkedCoreProductNames": [
+          "网络变压器"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      }
+    ],
+    "core": [
+      {
+        "code": "1140133909",
+        "name": "网络变压器",
+        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 线缆配件 > 网络变压器",
+        "industryPath": [
+          "通信",
+          "通信设备",
+          "通信传输设备",
+          "光通信设备",
+          "线缆配件",
+          "网络变压器"
+        ],
+        "matchedSourceLevel": 7,
+        "mappingType": "company_product",
+        "bridgeBasis": "",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "301577.SZ",
+            "stockName": "美信科技",
+            "rating": "★★★★"
+          }
+        ],
+        "upstreamCount": 1,
+        "downstreamCount": 0,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "通信设备",
+          "通信"
+        ]
+      },
+      {
+        "code": "1140116120",
+        "name": "电机铁芯",
+        "hierarchyPath": "",
+        "industryPath": [],
+        "matchedSourceLevel": 0,
+        "mappingType": "semantic_bridge",
+        "bridgeBasis": "event_title",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "301577.SZ",
+            "stockName": "美信科技",
+            "rating": "★★★★"
+          }
+        ],
+        "upstreamCount": 2,
+        "downstreamCount": 1,
+        "relevanceScore": 0,
+        "strongRelevanceScore": 0,
+        "matchedTerms": []
+      }
+    ],
+    "downstream": [
+      {
+        "code": "1140008574",
+        "name": "电机",
+        "anchorCount": 1,
+        "stockCount": 1,
+        "linkedCoreProductCodes": [
+          "1140116120"
+        ],
+        "linkedCoreProductNames": [
+          "电机铁芯"
+        ],
+        "evidence": {
+          "original": 1,
+          "directionalCompletion": 0
+        }
+      }
+    ]
+  },
+  "caveats": [
+    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
+    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "status": "ready",
+  "event": {
+    "mainId": "27229",
+    "uid": "0RB7WE913144R",
+    "title": "瑞芯微H1净利预增超60%",
+    "date": "2026-07-08"
+  },
+  "selection": {
+    "rule": "filled_star_count == 4",
+    "sourceStockCount": 5,
+    "mappedStockCount": 5,
+    "unmappedStockCount": 0,
+    "stocks": [
+      {
+        "sourceRowNumber": 22842,
+        "stockCode": "002701.SZ",
+        "stockName": "奥瑞金",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 22843,
+        "stockCode": "688099.SH",
+        "stockName": "晶晨股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 22844,
+        "stockCode": "301536.SZ",
+        "stockName": "星宸科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 22845,
+        "stockCode": "688620.SH",
+        "stockName": "安凯微",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 22848,
+        "stockCode": "688521.SH",
+        "stockName": "芯原股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      }
+    ],
+    "unmappedStocks": []
+  },
+  "totals": {
+    "candidateCoreProductCount": 19,
+    "selectedCoreProductCount": 2,
+    "selectedCompanyCoreProductCount": 2,
+    "semanticBridgeCount": 0,
+    "upstreamCandidateCount": 1,
+    "downstreamCandidateCount": 1,
+    "shownUpstreamCount": 1,
+    "shownDownstreamCount": 1
+  },
+  "chain": {
+    "upstream": [
+      {
+        "code": "1140111849",
+        "name": "半导体IP",
+        "anchorCount": 1,
+        "stockCount": 1,
+        "linkedCoreProductCodes": [
+          "1140111364"
+        ],
+        "linkedCoreProductNames": [
+          "半导体IP授权服务"
+        ],
+        "evidence": {
+          "original": 1,
+          "directionalCompletion": 0
+        }
+      }
+    ],
+    "core": [
+      {
+        "code": "1140111364",
+        "name": "半导体IP授权服务",
+        "hierarchyPath": "电子 > 其他电子 > 其他电子 > 电子技术服务 > 电子技术服务 > 半导体IP授权服务",
+        "industryPath": [
+          "电子",
+          "其他电子",
+          "其他电子",
+          "电子技术服务",
+          "电子技术服务",
+          "半导体IP授权服务"
+        ],
+        "matchedSourceLevel": 7,
+        "mappingType": "company_product",
+        "bridgeBasis": "",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★"
+          }
+        ],
+        "upstreamCount": 1,
+        "downstreamCount": 1,
+        "relevanceScore": 9,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "ip",
+          "半导体",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140215375",
+        "name": "视频解码SoC",
+        "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 音视频芯片 > 视频解码SoC",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "集成电路",
+          "IC设计",
+          "音视频芯片",
+          "视频解码SoC"
+        ],
+        "matchedSourceLevel": 7,
+        "mappingType": "company_product",
+        "bridgeBasis": "",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688099.SH",
+            "stockName": "晶晨股份",
+            "rating": "★★★★☆"
+          }
+        ],
+        "upstreamCount": 0,
+        "downstreamCount": 0,
+        "relevanceScore": 9,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "soc",
+          "半导体",
+          "电子"
+        ]
+      }
+    ],
+    "downstream": [
+      {
+        "code": "1140160951",
+        "name": "集成电路设计厂商",
+        "anchorCount": 1,
+        "stockCount": 1,
+        "linkedCoreProductCodes": [
+          "1140111364"
+        ],
+        "linkedCoreProductNames": [
+          "半导体IP授权服务"
+        ],
+        "evidence": {
+          "original": 1,
+          "directionalCompletion": 0
+        }
+      }
+    ]
+  },
+  "caveats": [
+    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
+    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+  ]
+}

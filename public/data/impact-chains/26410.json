@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "status": "ready",
+  "event": {
+    "mainId": "26410",
+    "uid": "0RB7WE88Z178H",
+    "title": "传闻冰轮环境6月新接液冷订单超60亿",
+    "date": "2026-06-26"
+  },
+  "selection": {
+    "rule": "filled_star_count == 4",
+    "sourceStockCount": 4,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 0,
+    "stocks": [
+      {
+        "sourceRowNumber": 3054,
+        "stockCode": "002518.SZ",
+        "stockName": "科士达",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 11
+      },
+      {
+        "sourceRowNumber": 3055,
+        "stockCode": "002851.SZ",
+        "stockName": "麦格米特",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 19
+      },
+      {
+        "sourceRowNumber": 3062,
+        "stockCode": "300972.SZ",
+        "stockName": "万辰集团",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 3063,
+        "stockCode": "002600.SZ",
+        "stockName": "领益智造",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 22
+      }
+    ],
+    "unmappedStocks": []
+  },
+  "totals": {
+    "candidateCoreProductCount": 56,
+    "selectedCoreProductCount": 2,
+    "selectedCompanyCoreProductCount": 1,
+    "semanticBridgeCount": 1,
+    "upstreamCandidateCount": 0,
+    "downstreamCandidateCount": 1,
+    "shownUpstreamCount": 0,
+    "shownDownstreamCount": 1
+  },
+  "chain": {
+    "upstream": [],
+    "core": [
+      {
+        "code": "1140216650",
+        "name": "冷却液分配单元(CDU)",
+        "hierarchyPath": "通信 > 通信设备 > 通信配套服务 > IDC服务 > IDC硬件产品 > 冷却液分配单元(CDU)",
+        "industryPath": [
+          "通信",
+          "通信设备",
+          "通信配套服务",
+          "IDC服务",
+          "IDC硬件产品",
+          "冷却液分配单元(CDU)"
+        ],
+        "matchedSourceLevel": 7,
+        "mappingType": "company_product",
+        "bridgeBasis": "",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002518.SZ",
+            "stockName": "科士达",
+            "rating": "★★★★"
+          }
+        ],
+        "upstreamCount": 0,
+        "downstreamCount": 0,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "冷却液"
+        ]
+      },
+      {
+        "code": "1140128178",
+        "name": "冷却液分配单元",
+        "hierarchyPath": "",
+        "industryPath": [],
+        "matchedSourceLevel": 0,
+        "mappingType": "semantic_bridge",
+        "bridgeBasis": "company_product:冷却液分配单元(CDU)",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002518.SZ",
+            "stockName": "科士达",
+            "rating": "★★★★"
+          }
+        ],
+        "upstreamCount": 0,
+        "downstreamCount": 1,
+        "relevanceScore": 0,
+        "strongRelevanceScore": 0,
+        "matchedTerms": []
+      }
+    ],
+    "downstream": [
+      {
+        "code": "1140128105",
+        "name": "汽车冷却系统电子水泵智能控制器",
+        "anchorCount": 1,
+        "stockCount": 1,
+        "linkedCoreProductCodes": [
+          "1140128178"
+        ],
+        "linkedCoreProductNames": [
+          "冷却液分配单元"
+        ],
+        "evidence": {
+          "original": 0,
+          "directionalCompletion": 1
+        }
+      }
+    ]
+  },
+  "caveats": [
+    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
+    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+  ]
+}
