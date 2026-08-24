@@ -131,7 +131,7 @@ function createImpactPlainText(impact: ImpactChainRecord | null) {
   const industryAnalysis = impact.industryAnalysis.status === "ready" && impact.industryAnalysis.target && impact.industryAnalysis.simulation
     ? [
         "",
-        `产业深度解读：${impact.industryAnalysis.target.name}`,
+        `事件影响解读：${impact.industryAnalysis.target.name}`,
         impact.industryAnalysis.simulation.text,
       ]
     : [];
@@ -218,21 +218,11 @@ function IndustryAnalysisPanel({ analysis }: { analysis: ImpactIndustryAnalysis 
     <section className="ai-industry-panel" aria-labelledby="ai-industry-title">
       <header className="ai-industry-heading">
         <div>
-          <span>产业深度解读</span>
-          <h3 id="ai-industry-title"><strong>{target.name}</strong></h3>
-          <p>理解产业定位、经营模式、景气变量与本次事件的影响性质。</p>
+          <span>事件影响解读</span>
+          <h3 id="ai-industry-title">为什么影响<strong>{target.name}</strong></h3>
         </div>
         <em>{analysis.simulation.classification.code} · {analysis.simulation.classification.label}</em>
       </header>
-
-      <div className="ai-core-products">
-        <span>相关核心产品</span>
-        <div>
-          {target.matchedCoreProducts.map((product) => (
-            <b key={product.code}>{product.name}</b>
-          ))}
-        </div>
-      </div>
 
       <div className="ai-response">
         <p>{analysis.simulation.text}</p>
@@ -251,7 +241,7 @@ function createPlainText(event: EventRecord, impact: ImpactChainRecord | null) {
 
 const reportParts = [
   { number: "一", title: "事件基本情况", description: "AI事件事实与关联研报摘要", state: "已接入" },
-  { number: "二", title: "影响产业链", description: "4星标的、上下游与产业经营逻辑", state: "已接入" },
+  { number: "二", title: "影响产业链", description: "4星标的、产业链映射与事件影响解读", state: "已接入" },
   { number: "三", title: "投资机会", description: "公司映射、指标与风险", state: "待接入" },
 ] as const;
 

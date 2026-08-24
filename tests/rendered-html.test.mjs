@@ -24,7 +24,7 @@ test("renders the event research page and the impact-chain section", async () =>
   assert.match(html, /第二部分 · 影响产业链/);
   assert.match(html, /4星标的产业链传导/);
   assert.match(html, /公司产品映射 · 双向补全关系/);
-  assert.match(html, /4星标的、上下游与产业经营逻辑/);
+  assert.match(html, /4星标的、产业链映射与事件影响解读/);
 });
 
 test("ships valid impact-chain data for every visible demo event", async () => {
@@ -32,7 +32,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
   for (const mainId of demoMainIds) {
     const fileUrl = new URL(`../public/data/impact-chains/${mainId}.json`, import.meta.url);
     const payload = JSON.parse(await readFile(fileUrl, "utf8"));
-    assert.equal(payload.schemaVersion, 3);
+    assert.equal(payload.schemaVersion, 4);
     assert.equal(payload.event.mainId, mainId);
     assert.equal(payload.status, "ready");
     assert.ok(payload.selection.sourceStockCount > 0);
@@ -47,7 +47,13 @@ test("ships valid impact-chain data for every visible demo event", async () => {
     assert.equal("prompt" in payload.industryAnalysis, false);
     assert.equal(payload.industryAnalysis.simulation.isRealModelOutput, false);
     assert.equal(payload.industryAnalysis.simulation.text.includes("\n"), false);
+    assert.match(payload.industryAnalysis.simulation.text, /之所以会影响/);
+    assert.match(payload.industryAnalysis.simulation.text, /后续重点观察/);
+    assert.ok(payload.industryAnalysis.simulation.text.length <= 220);
     for (const phrase of ["本地图谱", "现有语料", "模拟结果", "关键词规则", "模型返回区", "接入真实大模型", "提示词", "用于验证"]) {
+      assert.equal(payload.industryAnalysis.simulation.text.includes(phrase), false);
+    }
+    for (const phrase of ["从产业链位置", "企业通常通过", "赚钱最关键", "景气度主要由"]) {
       assert.equal(payload.industryAnalysis.simulation.text.includes(phrase), false);
     }
   }
@@ -58,7 +64,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   const manifest = JSON.parse(await readFile(manifestUrl, "utf8"));
   const statusTotal = Object.values(manifest.statusCounts).reduce((sum, value) => sum + value, 0);
 
-  assert.equal(manifest.schemaVersion, 3);
+  assert.equal(manifest.schemaVersion, 4);
   assert.equal(manifest.eventCount, 813);
   assert.equal(manifest.events.length, manifest.eventCount);
   assert.equal(statusTotal, manifest.eventCount);

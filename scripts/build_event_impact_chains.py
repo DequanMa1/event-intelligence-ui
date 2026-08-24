@@ -106,15 +106,26 @@ NEWS_VARIABLE_SIGNALS = {
     "出口与海外需求": ("出口", "海外", "关税", "贸易"),
 }
 VARIABLE_EXPLANATIONS = {
-    "下游需求与订单": "下游需求和订单决定销量或项目量，持续增长通常有助于收入扩张和产能利用率提升",
-    "产品价格": "产品价格决定单位收入，只有涨价能够被客户接受并且销量不明显下滑，利润才可能改善",
-    "原材料与成本": "原材料和交付成本决定单位利润，成本上涨而售价不能同步调整时，盈利空间会被压缩",
-    "供给与库存": "供给和库存反映供需松紧，库存下降、交期拉长往往意味着卖方议价能力增强",
-    "产能与开工": "产能和开工率决定企业能否把订单转化为收入，利用率提高通常有利于摊薄固定成本",
-    "技术与量产": "技术升级和量产进度决定产品竞争力，但商业价值仍取决于良率、成本和客户采用",
-    "政策与制度": "政策和制度影响需求释放节奏，关键在于约束是否落地以及能否形成持续采购",
-    "出口与海外需求": "出口和海外需求影响新增市场空间，同时也会受到贸易规则、认证和汇率变化影响",
-    "市场竞争": "市场竞争决定企业能否维持价格和份额，产能集中释放可能导致价格压力上升",
+    "下游需求与订单": "潜在需求只有转化为持续采购，才会形成产业订单",
+    "产品价格": "价格变化会直接影响产业收入和单位盈利",
+    "原材料与成本": "成本变化会改变利润空间，关键看能否向下游传导",
+    "供给与库存": "库存和交期变化会改变供需松紧和议价能力",
+    "产能与开工": "量产与开工决定订单能否转化为实际收入",
+    "技术与量产": "技术进展只有进入稳定量产并被客户采用，才会形成商业价值",
+    "政策与制度": "政策只有落实为执行细则和采购，才会形成真实需求",
+    "出口与海外需求": "海外需求变化会直接影响新增订单和交付",
+    "市场竞争": "竞争变化会影响价格、市场份额和盈利空间",
+}
+VARIABLE_VALIDATION_SIGNALS = {
+    "下游需求与订单": "订单和采购落地",
+    "产品价格": "价格持续性和销量",
+    "原材料与成本": "成本变化及其传导",
+    "供给与库存": "库存和交期",
+    "产能与开工": "实际产量和产能利用率",
+    "技术与量产": "量产规模、良率和客户采用",
+    "政策与制度": "执行细则和实际采购",
+    "出口与海外需求": "出口订单和交付",
+    "市场竞争": "价格和市场份额",
 }
 CLIENT_BANNED_PHRASES = (
     "本地图谱",
@@ -624,35 +635,30 @@ def classify_news(news_text: str) -> dict[str, Any]:
 
 def build_simulated_analysis(
     target: dict[str, Any],
-    upstream: list[dict[str, Any]],
-    downstream: list[dict[str, Any]],
     news_title: str,
     news_text: str,
 ) -> dict[str, Any]:
-    core_names = [item["name"] for item in target["matchedCoreProducts"]]
     variables = detect_news_variables(news_text)
     classification = classify_news(news_text)
-    description = target["description"] or f"该产业主要覆盖{compact_names(core_names)}等产品与服务"
-    description = description.rstrip("。！？；; ")
-    analysis_variables = variables or ["下游需求与订单", "产品价格", "原材料与成本", "产能与开工", "市场竞争"]
-    variable_text = "、".join(analysis_variables)
-    variable_logic = "；".join(VARIABLE_EXPLANATIONS[item] for item in analysis_variables)
-    if classification["code"] == "A":
-        classification_text = "可能影响未来数个季度的技术路线、商业化进程或供需结构，持续性强于单次经营波动"
-    elif classification["code"] == "B":
-        classification_text = "长期产业方向没有根本改变，但订单、价格、库存或开工等近期经营指标正在发生变化"
+    analysis_variables = variables[:2]
+    if analysis_variables:
+        variable_text = "、".join(analysis_variables)
+        variable_logic = "；".join(VARIABLE_EXPLANATIONS[item] for item in analysis_variables)
+        validation_text = "、".join(VARIABLE_VALIDATION_SIGNALS[item] for item in analysis_variables)
+        impact_reason = f"核心在于它直接触及{variable_text}：{variable_logic}"
     else:
-        classification_text = "影响范围和持续时间仍需后续经营数据确认，暂不足以据此判断产业趋势已经改变"
+        validation_text = "订单、价格、产能或客户采用等经营数据"
+        impact_reason = "目前披露的信息尚未指向明确的订单、价格、成本或产能变化，因此影响首先体现在产业预期"
+    if classification["code"] == "A":
+        classification_text = "可能影响未来多个季度的技术商业化或供需趋势"
+    elif classification["code"] == "B":
+        classification_text = "说明近期订单、价格、库存或开工正在加速或减速"
+    else:
+        classification_text = "目前更像局部扰动，尚不足以改变产业趋势"
     text = (
-        f"{target['name']}本质上是围绕{compact_names(core_names)}形成的细分产业，{description}。"
-        f"从产业链位置看，关键链条可以概括为{compact_names((item['name'] for item in upstream), 4)}"
-        f" → {target['name']} → {compact_names((item['name'] for item in downstream), 4)}，"
-        "企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，"
-        "利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。"
-        f"景气度主要由{variable_text}决定：{variable_logic}。"
-        f"近期事件“{news_title}”带来的关键变化集中在{variable_text}，如果相关变化能够持续兑现，"
-        "将通过订单、价格、成本或产能利用率传导至企业收入和利润；如果后续缺少订单、价格和经营数据验证，实际影响可能弱于事件本身的市场关注度。"
-        f"从影响性质看，这一事件更接近{classification['code']}类“{classification['label']}”，{classification_text}。"
+        f"“{news_title}”之所以会影响{target['name']}，{impact_reason}。"
+        f"影响性质更接近{classification['code']}类“{classification['label']}”，{classification_text}；"
+        f"后续重点观察{validation_text}，若未兑现，影响可能主要停留在预期层面。"
     )
     output_text = re.sub(r"\s+", " ", text).strip()
     forbidden = [phrase for phrase in CLIENT_BANNED_PHRASES if phrase in output_text]
@@ -765,8 +771,6 @@ def build_industry_analysis(
         "candidates": candidates,
         "simulation": build_simulated_analysis(
             target,
-            upstream,
-            downstream,
             news_title,
             news_text,
         ),
@@ -857,7 +861,7 @@ def finalize_event(
         draft["newsText"],
     )
     return {
-        "schemaVersion": 3,
+        "schemaVersion": 4,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -1071,7 +1075,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 3,
+        "schemaVersion": 4,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),
