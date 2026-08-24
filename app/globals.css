@@ -139,8 +139,16 @@ a { color: var(--blue); }
 .ai-industry-heading > div > span { color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .08em; }
 .ai-industry-heading h3 { margin: 5px 0 0; color: #27313b; font-size: 20px; line-height: 1.5; }
 .ai-industry-heading h3 strong { color: var(--blue-deep); font-weight: 800; }
-.ai-response { margin-top: 13px; padding-top: 13px; border-top: 1px solid #dce5ee; }
-.ai-response p { margin: 0; color: #303841; font-size: 13px; line-height: 1.9; text-align: justify; }
+.ai-analysis-parts { margin-top: 13px; display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.45fr); border-top: 1px solid #dce5ee; }
+.ai-analysis-parts > section { min-width: 0; padding: 15px 18px 0 0; }
+.ai-analysis-parts > section + section { padding-right: 0; padding-left: 18px; border-left: 1px solid #dce5ee; }
+.ai-analysis-parts span { color: var(--blue-deep); font-size: 9px; font-weight: 700; letter-spacing: .04em; }
+.ai-analysis-parts p { margin: 9px 0 0; color: #303841; font-size: 12px; line-height: 1.9; text-align: justify; }
+.ai-part-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.ai-part-heading em { flex: 0 0 auto; padding: 3px 7px; border: 1px solid; border-radius: 3px; font-size: 9px; font-style: normal; font-weight: 700; }
+.ai-part-heading em.positive { border-color: #b9ddca; background: #eff9f3; color: #24724b; }
+.ai-part-heading em.negative { border-color: #efc7c4; background: #fff3f1; color: #a63f37; }
+.ai-part-heading em.neutral { border-color: #d4dbe2; background: #f4f6f8; color: #596573; }
 
 .impact-audit { margin-top: 17px; border-top: 1px solid var(--border); }
 .impact-audit summary { padding: 12px 0 4px; color: #55616e; font-size: 10px; cursor: pointer; }
@@ -202,6 +210,9 @@ a { color: var(--blue); }
   .chain-column > header { min-height: auto; }
   .ai-industry-panel { padding: 18px 16px; }
   .ai-industry-heading { display: block; }
+  .ai-analysis-parts { grid-template-columns: 1fr; }
+  .ai-analysis-parts > section { padding-right: 0; }
+  .ai-analysis-parts > section + section { margin-top: 14px; padding-top: 14px; padding-left: 0; border-top: 1px solid #dce5ee; border-left: 0; }
   .impact-stock-list { grid-template-columns: 1fr; }
 }
 

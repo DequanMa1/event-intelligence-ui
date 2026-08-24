@@ -140,32 +140,60 @@ CLIENT_BANNED_PHRASES = (
     "B类",
     "C类",
     "影响性质更接近",
+    "规则命中",
+    "模型判断",
 )
-TREND_SIGNALS = (
-    "技术路线改变",
-    "技术突破",
-    "强制掺混",
-    "资本开支周期",
-    "渗透率",
-    "制度变化",
-    "商业化",
-    "进入量产",
-    "规模化量产",
-)
-ACCELERATION_SIGNALS = (
-    "涨价",
-    "提价",
-    "缺货",
-    "订单增加",
-    "订单已排",
-    "库存下降",
-    "开工率提高",
-    "出口增长",
-    "出口量环比",
-    "交付周期",
-    "量价齐升",
-)
-SHORT_DISTURBANCE_SIGNALS = ("单笔订单", "单家公司", "临时停产", "市场传闻", "短期波动")
+POSITIVE_IMPACT_SIGNALS = {
+    "客户采用": 4,
+    "规模化量产": 4,
+    "进入量产": 4,
+    "量产": 3,
+    "技术突破": 4,
+    "获批": 4,
+    "中标": 4,
+    "订单增长": 4,
+    "订单增加": 4,
+    "预增": 3,
+    "需求增长": 3,
+    "出口增长": 3,
+    "量价齐升": 4,
+    "推荐国产": 4,
+    "国产替代": 3,
+    "纳入": 3,
+    "达成合作": 3,
+    "授权": 3,
+    "扩产": 2,
+    "落地": 2,
+    "加速": 2,
+    "提升": 2,
+    "增长": 2,
+    "改善": 2,
+    "回升": 2,
+}
+NEGATIVE_IMPACT_SIGNALS = {
+    "需求下滑": 4,
+    "订单下降": 4,
+    "大幅减产": 4,
+    "停产": 4,
+    "禁售": 4,
+    "制裁": 4,
+    "召回": 4,
+    "违约": 4,
+    "亏损": 3,
+    "终止": 3,
+    "取消": 3,
+    "事故": 3,
+    "过剩": 3,
+    "疲软": 3,
+    "下滑": 2,
+    "下降": 2,
+    "收紧": 2,
+    "禁用": 2,
+    "减产": 2,
+    "裁员": 2,
+    "关税": 2,
+    "降价": 1,
+}
 
 
 def clean_text(value: Any) -> str:
@@ -613,70 +641,105 @@ def detect_news_variables(news_text: str) -> list[str]:
     ][:5]
 
 
-def classify_news(news_text: str) -> dict[str, Any]:
-    short_matches = [signal for signal in SHORT_DISTURBANCE_SIGNALS if signal in news_text]
-    trend_matches = [signal for signal in TREND_SIGNALS if signal in news_text]
-    acceleration_matches = [signal for signal in ACCELERATION_SIGNALS if signal in news_text]
-    if short_matches:
-        code, label, matches = "C", "短期事件扰动", short_matches
-    elif trend_matches:
-        code, label, matches = "A", "产业趋势变化", trend_matches
-    elif acceleration_matches:
-        code, label, matches = "B", "景气度加速/减速", acceleration_matches
+def assess_event_direction(news_text: str) -> str:
+    positive = [signal for signal in POSITIVE_IMPACT_SIGNALS if signal in news_text]
+    negative = [signal for signal in NEGATIVE_IMPACT_SIGNALS if signal in news_text]
+    positive_score = sum(POSITIVE_IMPACT_SIGNALS[signal] for signal in positive)
+    negative_score = sum(NEGATIVE_IMPACT_SIGNALS[signal] for signal in negative)
+    if positive_score >= negative_score + 2:
+        direction = "偏利好"
+    elif negative_score >= positive_score + 2:
+        direction = "偏利空"
+    elif positive_score and negative_score:
+        direction = "利好与利空并存"
     else:
-        code, label, matches = "C", "短期事件扰动", []
-    return {
-        "code": code,
-        "label": label,
-        "matchedSignals": matches[:4],
-        "basis": (
-            f"主要依据是事件涉及{'、'.join(matches[:4])}"
-            if matches
-            else "新闻披露的信息尚不足以支持长期趋势或景气加速判断，暂按短期扰动处理"
-        ),
-    }
+        direction = "影响暂不明确"
+    return direction
 
 
-def build_investor_analysis_text(
+def extract_key_event_fact(news_text: str, limit: int = 96) -> str:
+    first_sentence = re.split(r"[。！？]", clean_text(news_text), maxsplit=1)[0].strip(" ，,：:")
+    if len(first_sentence) <= limit:
+        return first_sentence
+    clauses = [clause.strip() for clause in re.split(r"[，,；;]", first_sentence) if clause.strip()]
+    selected: list[str] = []
+    for clause in clauses:
+        candidate = "，".join([*selected, clause])
+        if selected and len(candidate) > limit:
+            break
+        selected.append(clause)
+        if len(candidate) >= limit:
+            break
+    return ("，".join(selected) or first_sentence[:limit]).rstrip("，,；; ") + "……"
+
+
+def build_industry_overview(target: dict[str, Any]) -> str:
+    description = clean_text(target.get("description", ""))
+    first_sentence = re.split(r"[。！？；;]", description, maxsplit=1)[0].strip(" ，,：:")
+    products = unique_ordered(item["name"] for item in target["matchedCoreProducts"] if item["name"])
+    product_text = "、".join(products[:3]) + ("等" if len(products) > 3 else "")
+    if first_sentence:
+        overview = first_sentence + "。"
+    elif product_text:
+        overview = f"{target['name']}主要覆盖{product_text}相关产品或服务。"
+    else:
+        overview = f"{target['name']}是本次事件涉及的细分产业。"
+    if product_text and not any(product in overview for product in products[:3]):
+        overview += f"与本次事件关联度较高的产品包括{product_text}。"
+    return re.sub(r"\s+", " ", overview).strip()
+
+
+def build_event_impact_analysis(
     target: dict[str, Any],
-    news_title: str,
     news_text: str,
-) -> str:
+) -> dict[str, str]:
     variables = detect_news_variables(news_text)
-    classification = classify_news(news_text)
-    analysis_variables = variables[:3]
+    direction = assess_event_direction(news_text)
+    event_fact = extract_key_event_fact(news_text)
+    analysis_variables = variables[:2]
     if analysis_variables:
         variable_text = "、".join(analysis_variables)
         variable_logic = "；".join(VARIABLE_EXPLANATIONS[item] for item in analysis_variables)
         validation_text = "、".join(VARIABLE_VALIDATION_SIGNALS[item] for item in analysis_variables)
-        impact_reason = f"关键不是新闻热度本身，而是事件直接改变了市场对{variable_text}的判断。{variable_logic}"
-        transmission_text = "如果这些变化持续，影响会从产业预期进一步传导到订单、交付、价格、成本或产能利用率；如果只是单点信息，则难以形成产业面的持续改善"
     else:
+        variable_text = "需求、订单、价格或产能等经营变量"
+        variable_logic = "现有内容尚未提供足够的经营数据来确认传导幅度"
         validation_text = "订单、价格、产能或客户采用等经营数据"
-        impact_reason = "目前披露的信息尚未指向明确的订单、价格、成本或产能变化，新闻首先改变的是产业预期"
-        transmission_text = "在缺少经营数据支持的情况下，预期变化还不能直接等同于产业景气改善"
-    if classification["code"] == "A":
-        scope_text = "从影响范围看，这不只是一次短期信息刺激，还可能推动技术商业化或供需预期持续变化，影响可能跨越多个季度"
-    elif classification["code"] == "B":
-        scope_text = "从影响范围看，产业长期方向没有明显改变，但近期订单、价格、库存或开工节奏可能因此加快或放缓"
+
+    if direction == "偏利好":
+        text = (
+            f"（一）事件基本情况显示：{event_fact}。这对{target['name']}偏利好，相关变化直接作用于{variable_text}。"
+            f"{variable_logic}。如果相关变化继续兑现，产业订单、交付节奏或经营预期有望改善；"
+            f"后续仍需观察{validation_text}，否则利好可能主要停留在预期层面。"
+        )
+    elif direction == "偏利空":
+        text = (
+            f"（一）事件基本情况显示：{event_fact}。这对{target['name']}偏利空，相关压力直接作用于{variable_text}。"
+            f"{variable_logic}。如果压力持续，产业订单、价格、交付或产能利用率可能承压；"
+            f"后续应观察{validation_text}，确认负面影响是否已经进入实际经营。"
+        )
+    elif direction == "利好与利空并存":
+        text = (
+            f"（一）事件基本情况显示：{event_fact}。这一事件对{target['name']}同时包含利好和利空因素，"
+            f"两者共同作用于{variable_text}。{variable_logic}。"
+            f"后续要看{validation_text}，才能判断最终是利好占主导还是利空占主导。"
+        )
     else:
-        scope_text = "从影响范围看，目前仍偏向局部和短期扰动，尚不足以据此判断产业趋势已经改变"
-    text = (
-        f"“{news_title}”会影响{target['name']}，{impact_reason}。"
-        f"{transmission_text}。{scope_text}。"
-        f"后续应重点观察{validation_text}，只有相关数据连续兑现，才能确认影响已从预期进入实际经营。"
-    )
+        text = (
+            f"（一）事件基本情况显示：{event_fact}。目前还不能明确判断这一事件对{target['name']}是利好还是利空。"
+            f"现有内容尚未说明它是否会实质改变{variable_text}，{variable_logic}。"
+            f"后续需要观察{validation_text}，在这些数据出现前，不宜把新闻关注度直接等同于产业经营变化。"
+        )
     output_text = re.sub(r"\s+", " ", text).strip()
     forbidden = [phrase for phrase in CLIENT_BANNED_PHRASES if phrase in output_text]
     if forbidden:
         raise ValueError(f"投资者可见产业解读包含内部过程用语: {forbidden}")
-    return output_text
+    return {"direction": direction, "text": output_text}
 
 
 def build_industry_analysis(
     company_core_products: list[dict[str, Any]],
     level5_catalog: dict[str, dict[str, str]],
-    news_title: str,
     news_text: str,
 ) -> dict[str, Any]:
     level7_products = [
@@ -716,7 +779,8 @@ def build_industry_analysis(
         return {
             "status": "unavailable",
             "target": None,
-            "text": None,
+            "overview": None,
+            "impact": None,
             "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径",
         }
 
@@ -752,11 +816,8 @@ def build_industry_analysis(
     return {
         "status": "ready",
         "target": {"code": target["code"], "name": target["name"]},
-        "text": build_investor_analysis_text(
-            target,
-            news_title,
-            news_text,
-        ),
+        "overview": build_industry_overview(target),
+        "impact": build_event_impact_analysis(target, news_text),
         "reason": "",
     }
 
@@ -838,11 +899,10 @@ def finalize_event(
     industry_analysis = build_industry_analysis(
         company_core_products,
         level5_catalog,
-        draft["title"],
         draft["newsText"],
     )
     return {
-        "schemaVersion": 5,
+        "schemaVersion": 6,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -959,7 +1019,7 @@ def main() -> None:
     prompt_template = args.prompt_template.read_text(encoding="utf-8")
     missing_placeholders = [
         placeholder
-        for placeholder in ("{{industry_name}}", "{{industry_description}}", "{{news_text}}")
+        for placeholder in ("{{industry_name}}", "{{industry_description}}", "{{event_basic_info}}")
         if placeholder not in prompt_template
     ]
     if missing_placeholders:
@@ -1056,7 +1116,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 5,
+        "schemaVersion": 6,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),

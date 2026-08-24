@@ -42,7 +42,11 @@ type IndustryAnalysisTarget = {
 type ImpactIndustryAnalysis = {
   status: "ready" | "unavailable";
   target: IndustryAnalysisTarget | null;
-  text: string | null;
+  overview: string | null;
+  impact: {
+    direction: "偏利好" | "偏利空" | "利好与利空并存" | "影响暂不明确";
+    text: string;
+  } | null;
   reason: string;
 };
 
@@ -105,11 +109,13 @@ function createImpactPlainText(impact: ImpactChainRecord | null) {
   if (!impact.chain.core.length) return `（二）影响产业链\n\n${impactStatusText(impact.status)}`;
 
   const names = (values: Array<{ name: string }>) => values.map((item) => item.name).join("、") || "暂无直接关系";
-  const industryAnalysis = impact.industryAnalysis.status === "ready" && impact.industryAnalysis.target && impact.industryAnalysis.text
+  const industryAnalysis = impact.industryAnalysis.status === "ready" && impact.industryAnalysis.target && impact.industryAnalysis.overview && impact.industryAnalysis.impact
     ? [
         "",
-        `事件影响解读：${impact.industryAnalysis.target.name}`,
-        impact.industryAnalysis.text,
+        `产业说明：${impact.industryAnalysis.target.name}`,
+        impact.industryAnalysis.overview,
+        `事件影响：${impact.industryAnalysis.impact.direction}`,
+        impact.industryAnalysis.impact.text,
       ]
     : [];
   return [
@@ -186,22 +192,37 @@ function CoreProductColumn({ products, expanded }: { products: ImpactCoreProduct
 }
 
 function IndustryAnalysisPanel({ analysis }: { analysis: ImpactIndustryAnalysis }) {
-  if (analysis.status !== "ready" || !analysis.target || !analysis.text) {
+  if (analysis.status !== "ready" || !analysis.target || !analysis.overview || !analysis.impact) {
     return null;
   }
 
   const target = analysis.target;
+  const directionClass = analysis.impact.direction === "偏利好"
+    ? "positive"
+    : analysis.impact.direction === "偏利空"
+      ? "negative"
+      : "neutral";
   return (
     <section className="ai-industry-panel" aria-labelledby="ai-industry-title">
       <header className="ai-industry-heading">
         <div>
-          <span>事件影响解读</span>
-          <h3 id="ai-industry-title">为什么影响<strong>{target.name}</strong></h3>
+          <span>产业与事件影响</span>
+          <h3 id="ai-industry-title"><strong>{target.name}</strong></h3>
         </div>
       </header>
 
-      <div className="ai-response">
-        <p>{analysis.text}</p>
+      <div className="ai-analysis-parts">
+        <section>
+          <span>01 · 这个产业是做什么的</span>
+          <p>{analysis.overview}</p>
+        </section>
+        <section>
+          <div className="ai-part-heading">
+            <span>02 · 事件对产业的影响</span>
+            <em className={directionClass}>{analysis.impact.direction}</em>
+          </div>
+          <p>{analysis.impact.text}</p>
+        </section>
       </div>
     </section>
   );
@@ -217,7 +238,7 @@ function createPlainText(event: EventRecord, impact: ImpactChainRecord | null) {
 
 const reportParts = [
   { number: "一", title: "事件基本情况", description: "AI事件事实与关联研报摘要", state: "已接入" },
-  { number: "二", title: "影响产业链", description: "4星标的、产业链映射与事件影响解读", state: "已接入" },
+  { number: "二", title: "影响产业链", description: "4星标的、产业说明与利好利空判断", state: "已接入" },
   { number: "三", title: "投资机会", description: "公司映射、指标与风险", state: "待接入" },
 ] as const;
 
