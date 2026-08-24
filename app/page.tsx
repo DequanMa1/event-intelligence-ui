@@ -54,15 +54,6 @@ type ImpactIndustryAnalysis = {
   sourceLevel7ProductCount: number;
   target: IndustryAnalysisCandidate | null;
   candidates: IndustryAnalysisCandidate[];
-  prompt: {
-    templateId: string;
-    templateUrl: string;
-    inputs: {
-      industryName: string;
-      industryDescription: string;
-      newsText: string;
-    };
-  } | null;
   simulation: {
     mode: "local_rule_simulation";
     isRealModelOutput: false;
@@ -140,7 +131,7 @@ function createImpactPlainText(impact: ImpactChainRecord | null) {
   const industryAnalysis = impact.industryAnalysis.status === "ready" && impact.industryAnalysis.target && impact.industryAnalysis.simulation
     ? [
         "",
-        `AI产业认知（模拟）：${impact.industryAnalysis.target.name}`,
+        `产业深度解读：${impact.industryAnalysis.target.name}`,
         impact.industryAnalysis.simulation.text,
       ]
     : [];
@@ -217,23 +208,9 @@ function CoreProductColumn({ products, expanded }: { products: ImpactCoreProduct
   );
 }
 
-function IndustryAnalysisPanel({
-  analysis,
-  onCopyPrompt,
-}: {
-  analysis: ImpactIndustryAnalysis;
-  onCopyPrompt: () => void;
-}) {
+function IndustryAnalysisPanel({ analysis }: { analysis: ImpactIndustryAnalysis }) {
   if (analysis.status !== "ready" || !analysis.target || !analysis.simulation) {
-    return (
-      <section className="ai-industry-panel unavailable" aria-label="AI五级产业认知">
-        <div>
-          <span>AI产业认知 · 第1段</span>
-          <strong>暂时无法确定五级分析对象</strong>
-          <p>{analysis.reason}</p>
-        </div>
-      </section>
-    );
+    return null;
   }
 
   const target = analysis.target;
@@ -241,29 +218,15 @@ function IndustryAnalysisPanel({
     <section className="ai-industry-panel" aria-labelledby="ai-industry-title">
       <header className="ai-industry-heading">
         <div>
-          <span>AI产业认知 · 第1段</span>
-          <h3 id="ai-industry-title">重点分析：<strong>{target.name}</strong></h3>
-          <p>先把入选的七级核心产品回推到五级产业，选择归并后核心产品数量最多的一类。</p>
+          <span>产业深度解读</span>
+          <h3 id="ai-industry-title"><strong>{target.name}</strong></h3>
+          <p>理解产业定位、经营模式、景气变量与本次事件的影响性质。</p>
         </div>
-        <em>模拟输出 · 未调用真实模型</em>
+        <em>{analysis.simulation.classification.code} · {analysis.simulation.classification.label}</em>
       </header>
 
-      <div className="ai-derivation" aria-label="七级产品到五级产业的推导">
-        <div>
-          <small>入选七级核心产品</small>
-          <strong>{analysis.sourceLevel7ProductCount}</strong>
-          <span>个可回推产品</span>
-        </div>
-        <b aria-hidden="true">→</b>
-        <div className="selected">
-          <small>数量最多的五级产业</small>
-          <strong>{target.name}</strong>
-          <span>{target.coreProductCount} 个产品 · 占比 {(target.shareOfLevel7Products * 100).toFixed(0)}%</span>
-        </div>
-      </div>
-
       <div className="ai-core-products">
-        <span>本次归入该产业的七级产品</span>
+        <span>相关核心产品</span>
         <div>
           {target.matchedCoreProducts.map((product) => (
             <b key={product.code}>{product.name}</b>
@@ -272,31 +235,8 @@ function IndustryAnalysisPanel({
       </div>
 
       <div className="ai-response">
-        <div className="ai-response-label">
-          <span>模型返回区</span>
-          <small>{analysis.simulation.classification.code} · {analysis.simulation.classification.label}</small>
-        </div>
         <p>{analysis.simulation.text}</p>
       </div>
-
-      <div className="ai-industry-actions">
-        <span>输入语料：5industry_remark + 当前新闻原文</span>
-        <button type="button" onClick={onCopyPrompt}>复制本次完整提示词</button>
-      </div>
-
-      <details className="ai-industry-audit">
-        <summary>查看五级产业排序与原始解释</summary>
-        <p>{target.description || "原始图谱没有提供该五级产业的文字解释。"}</p>
-        <ol>
-          {analysis.candidates.slice(0, 6).map((candidate, index) => (
-            <li key={candidate.code} className={index === 0 ? "selected" : ""}>
-              <span>{index + 1}. {candidate.name}</span>
-              <b>{candidate.coreProductCount} 个核心产品</b>
-            </li>
-          ))}
-        </ol>
-        <small>{analysis.selectionRule}</small>
-      </details>
     </section>
   );
 }
@@ -311,7 +251,7 @@ function createPlainText(event: EventRecord, impact: ImpactChainRecord | null) {
 
 const reportParts = [
   { number: "一", title: "事件基本情况", description: "AI事件事实与关联研报摘要", state: "已接入" },
-  { number: "二", title: "影响产业链", description: "4星标的、产业图谱与AI产业认知", state: "已接入" },
+  { number: "二", title: "影响产业链", description: "4星标的、上下游与产业经营逻辑", state: "已接入" },
   { number: "三", title: "投资机会", description: "公司映射、指标与风险", state: "待接入" },
 ] as const;
 
@@ -382,27 +322,6 @@ export default function Home() {
       notify("全文已复制");
     } catch {
       notify("复制失败，请使用导出");
-    }
-  };
-
-  const copyIndustryPrompt = async () => {
-    const prompt = impactChain?.industryAnalysis.prompt;
-    if (!prompt) {
-      notify("该新闻尚未形成五级产业提示词");
-      return;
-    }
-    try {
-      const response = await fetch(prompt.templateUrl);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const template = await response.text();
-      const rendered = template
-        .replaceAll("{{industry_name}}", prompt.inputs.industryName)
-        .replaceAll("{{industry_description}}", prompt.inputs.industryDescription)
-        .replaceAll("{{news_text}}", prompt.inputs.newsText);
-      await navigator.clipboard.writeText(rendered);
-      notify("本次完整提示词已复制");
-    } catch {
-      notify("提示词复制失败，请稍后重试");
     }
   };
 
@@ -572,10 +491,7 @@ export default function Home() {
                     </div>
                   )}
 
-                  <IndustryAnalysisPanel
-                    analysis={impactChain.industryAnalysis}
-                    onCopyPrompt={copyIndustryPrompt}
-                  />
+                  <IndustryAnalysisPanel analysis={impactChain.industryAnalysis} />
 
                   <details className="impact-audit">
                     <summary>4星标的与映射说明</summary>

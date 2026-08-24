@@ -95,7 +95,6 @@ GENERIC_CONTEXT_TERMS = {
     "海外厂商",
 }
 
-PROMPT_TEMPLATE_ID = "industry-cognition-stage1-v1"
 NEWS_VARIABLE_SIGNALS = {
     "下游需求与订单": ("需求", "订单", "销量", "销售", "采购", "客户采用"),
     "产品价格": ("涨价", "提价", "价格上涨", "价格下跌", "降价", "价差"),
@@ -106,6 +105,27 @@ NEWS_VARIABLE_SIGNALS = {
     "政策与制度": ("政策", "强制", "监管", "补贴", "规划"),
     "出口与海外需求": ("出口", "海外", "关税", "贸易"),
 }
+VARIABLE_EXPLANATIONS = {
+    "下游需求与订单": "下游需求和订单决定销量或项目量，持续增长通常有助于收入扩张和产能利用率提升",
+    "产品价格": "产品价格决定单位收入，只有涨价能够被客户接受并且销量不明显下滑，利润才可能改善",
+    "原材料与成本": "原材料和交付成本决定单位利润，成本上涨而售价不能同步调整时，盈利空间会被压缩",
+    "供给与库存": "供给和库存反映供需松紧，库存下降、交期拉长往往意味着卖方议价能力增强",
+    "产能与开工": "产能和开工率决定企业能否把订单转化为收入，利用率提高通常有利于摊薄固定成本",
+    "技术与量产": "技术升级和量产进度决定产品竞争力，但商业价值仍取决于良率、成本和客户采用",
+    "政策与制度": "政策和制度影响需求释放节奏，关键在于约束是否落地以及能否形成持续采购",
+    "出口与海外需求": "出口和海外需求影响新增市场空间，同时也会受到贸易规则、认证和汇率变化影响",
+    "市场竞争": "市场竞争决定企业能否维持价格和份额，产能集中释放可能导致价格压力上升",
+}
+CLIENT_BANNED_PHRASES = (
+    "本地图谱",
+    "现有语料",
+    "模拟结果",
+    "关键词规则",
+    "模型返回区",
+    "接入真实大模型",
+    "提示词",
+    "用于验证",
+)
 TREND_SIGNALS = (
     "技术路线改变",
     "技术突破",
@@ -262,13 +282,6 @@ def atomic_write_json(path: Path, payload: Any) -> None:
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    temporary.replace(path)
-
-
-def atomic_write_text(path: Path, value: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(value.rstrip() + "\n", encoding="utf-8")
     temporary.replace(path)
 
 
@@ -602,9 +615,9 @@ def classify_news(news_text: str) -> dict[str, Any]:
         "label": label,
         "matchedSignals": matches[:4],
         "basis": (
-            f"新闻文本命中：{'、'.join(matches[:4])}"
+            f"主要依据是事件涉及{'、'.join(matches[:4])}"
             if matches
-            else "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+            else "新闻披露的信息尚不足以支持长期趋势或景气加速判断，暂按短期扰动处理"
         ),
     }
 
@@ -619,33 +632,38 @@ def build_simulated_analysis(
     core_names = [item["name"] for item in target["matchedCoreProducts"]]
     variables = detect_news_variables(news_text)
     classification = classify_news(news_text)
-    description = target["description"] or "原始产业图谱暂未提供该五级产业的文字解释"
+    description = target["description"] or f"该产业主要覆盖{compact_names(core_names)}等产品与服务"
     description = description.rstrip("。！？；; ")
-    variable_text = "、".join(variables) if variables else "需求、价格、成本、产能和竞争格局"
-    signal_text = (
-        "、".join(classification["matchedSignals"])
-        if classification["matchedSignals"]
-        else "尚无足够的持续性经营信号"
-    )
+    analysis_variables = variables or ["下游需求与订单", "产品价格", "原材料与成本", "产能与开工", "市场竞争"]
+    variable_text = "、".join(analysis_variables)
+    variable_logic = "；".join(VARIABLE_EXPLANATIONS[item] for item in analysis_variables)
+    if classification["code"] == "A":
+        classification_text = "可能影响未来数个季度的技术路线、商业化进程或供需结构，持续性强于单次经营波动"
+    elif classification["code"] == "B":
+        classification_text = "长期产业方向没有根本改变，但订单、价格、库存或开工等近期经营指标正在发生变化"
+    else:
+        classification_text = "影响范围和持续时间仍需后续经营数据确认，暂不足以据此判断产业趋势已经改变"
     text = (
-        f"{target['name']}可以理解为围绕{compact_names(core_names)}形成的五级细分产业，"
-        f"本地图谱对它的解释是“{description}”。"
-        f"把它放回本次事件的产业链，关键链条可以概括为{compact_names((item['name'] for item in upstream), 4)}"
+        f"{target['name']}本质上是围绕{compact_names(core_names)}形成的细分产业，{description}。"
+        f"从产业链位置看，关键链条可以概括为{compact_names((item['name'] for item in upstream), 4)}"
         f" → {target['name']} → {compact_names((item['name'] for item in downstream), 4)}，"
         "企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，"
         "利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。"
-        f"景气度需要重点跟踪{variable_text}，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。"
-        f"近期事件“{news_title}”在现有语料中主要新增了与{variable_text}有关的信息，"
-        "但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。"
-        f"按关键词规则暂归为{classification['code']}类“{classification['label']}”，依据是{signal_text}；"
-        "这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+        f"景气度主要由{variable_text}决定：{variable_logic}。"
+        f"近期事件“{news_title}”带来的关键变化集中在{variable_text}，如果相关变化能够持续兑现，"
+        "将通过订单、价格、成本或产能利用率传导至企业收入和利润；如果后续缺少订单、价格和经营数据验证，实际影响可能弱于事件本身的市场关注度。"
+        f"从影响性质看，这一事件更接近{classification['code']}类“{classification['label']}”，{classification_text}。"
     )
+    output_text = re.sub(r"\s+", " ", text).strip()
+    forbidden = [phrase for phrase in CLIENT_BANNED_PHRASES if phrase in output_text]
+    if forbidden:
+        raise ValueError(f"投资者可见产业解读包含内部过程用语: {forbidden}")
     return {
         "mode": "local_rule_simulation",
         "isRealModelOutput": False,
         "variables": variables,
         "classification": classification,
-        "text": re.sub(r"\s+", " ", text).strip(),
+        "text": output_text,
     }
 
 
@@ -656,7 +674,6 @@ def build_industry_analysis(
     downstream: list[dict[str, Any]],
     news_title: str,
     news_text: str,
-    prompt_template_url: str,
 ) -> dict[str, Any]:
     level7_products = [
         product
@@ -701,7 +718,6 @@ def build_industry_analysis(
             "sourceLevel7ProductCount": len(level7_products),
             "target": None,
             "candidates": [],
-            "prompt": None,
             "simulation": None,
             "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径",
         }
@@ -735,11 +751,6 @@ def build_industry_analysis(
         )
     )
     target = candidates[0]
-    prompt_inputs = {
-        "industryName": target["name"],
-        "industryDescription": target["description"] or "原始产业图谱未提供该五级产业的文字解释。",
-        "newsText": news_text or news_title,
-    }
     return {
         "status": "ready",
         "stage": 1,
@@ -752,11 +763,6 @@ def build_industry_analysis(
         "sourceLevel7ProductCount": total_level7_products,
         "target": target,
         "candidates": candidates,
-        "prompt": {
-            "templateId": PROMPT_TEMPLATE_ID,
-            "templateUrl": prompt_template_url,
-            "inputs": prompt_inputs,
-        },
         "simulation": build_simulated_analysis(
             target,
             upstream,
@@ -773,7 +779,6 @@ def finalize_event(
     edge_index: dict[str, list[dict[str, str]]],
     level5_catalog: dict[str, dict[str, str]],
     generated_at: str,
-    prompt_template_url: str,
 ) -> dict[str, Any]:
     company_core_products = draft["selectedCoreProducts"]
     bridge_products = draft["semanticBridges"]
@@ -850,12 +855,9 @@ def finalize_event(
         downstream,
         draft["title"],
         draft["newsText"],
-        prompt_template_url,
     )
-    caveats.append("AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。")
-
     return {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -956,11 +958,6 @@ def parse_args() -> argparse.Namespace:
         default=project_root / "prompts" / "industry-cognition-stage1-v1.md",
     )
     parser.add_argument(
-        "--public-prompt",
-        type=Path,
-        default=project_root / "public" / "data" / "prompts" / "industry-cognition-stage1-v1.md",
-    )
-    parser.add_argument(
         "--output-dir",
         type=Path,
         default=project_root / "public" / "data" / "impact-chains",
@@ -982,8 +979,6 @@ def main() -> None:
     ]
     if missing_placeholders:
         raise ValueError(f"产业认知提示词缺少占位符: {missing_placeholders}")
-    atomic_write_text(args.public_prompt, prompt_template)
-    prompt_template_url = f"/data/prompts/{args.public_prompt.name}"
     level5_catalog = build_level5_catalog(nodes)
 
     events.insert(0, "source_row_number", [str(number) for number in range(2, len(events) + 2)])
@@ -1049,7 +1044,6 @@ def main() -> None:
             edge_index,
             level5_catalog,
             generated_at,
-            prompt_template_url,
         )
         main_id = payload["event"]["mainId"]
         if not re.fullmatch(r"[A-Za-z0-9_-]+", main_id):
@@ -1077,7 +1071,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),
@@ -1091,7 +1085,6 @@ def main() -> None:
             "edgeEncoding": edge_encoding,
             "nodes": args.nodes.name,
             "nodeEncoding": node_encoding,
-            "promptTemplate": args.prompt_template.name,
         },
         "events": index_events,
     }
