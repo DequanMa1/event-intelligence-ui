@@ -95,38 +95,6 @@ GENERIC_CONTEXT_TERMS = {
     "海外厂商",
 }
 
-NEWS_VARIABLE_SIGNALS = {
-    "下游需求与订单": ("需求", "订单", "销量", "销售", "采购", "客户采用"),
-    "产品价格": ("涨价", "提价", "价格上涨", "价格下跌", "降价", "价差"),
-    "原材料与成本": ("原材料", "原料", "成本", "矿价", "油价", "铜价"),
-    "供给与库存": ("缺货", "短缺", "供给", "减产", "停产", "库存"),
-    "产能与开工": ("产能", "扩产", "开工率", "稼动率", "交付周期"),
-    "技术与量产": ("技术突破", "技术路线", "量产", "良率", "商业化"),
-    "政策与制度": ("政策", "强制", "监管", "补贴", "规划"),
-    "出口与海外需求": ("出口", "海外", "关税", "贸易"),
-}
-VARIABLE_EXPLANATIONS = {
-    "下游需求与订单": "潜在需求只有转化为持续采购，才会形成产业订单",
-    "产品价格": "价格变化会直接影响产业收入和单位盈利",
-    "原材料与成本": "成本变化会改变利润空间，关键看能否向下游传导",
-    "供给与库存": "库存和交期变化会改变供需松紧和议价能力",
-    "产能与开工": "量产与开工决定订单能否转化为实际收入",
-    "技术与量产": "技术进展只有进入稳定量产并被客户采用，才会形成商业价值",
-    "政策与制度": "政策只有落实为执行细则和采购，才会形成真实需求",
-    "出口与海外需求": "海外需求变化会直接影响新增订单和交付",
-    "市场竞争": "竞争变化会影响价格、市场份额和盈利空间",
-}
-VARIABLE_VALIDATION_SIGNALS = {
-    "下游需求与订单": "订单和采购落地",
-    "产品价格": "价格持续性和销量",
-    "原材料与成本": "成本变化及其传导",
-    "供给与库存": "库存和交期",
-    "产能与开工": "实际产量和产能利用率",
-    "技术与量产": "量产规模、良率和客户采用",
-    "政策与制度": "执行细则和实际采购",
-    "出口与海外需求": "出口订单和交付",
-    "市场竞争": "价格和市场份额",
-}
 CLIENT_BANNED_PHRASES = (
     "本地图谱",
     "现有语料",
@@ -142,58 +110,12 @@ CLIENT_BANNED_PHRASES = (
     "影响性质更接近",
     "规则命中",
     "模型判断",
+    "相关变化直接作用于",
+    "潜在需求只有转化为持续采购",
+    "如果相关变化继续兑现",
+    "后续仍需观察",
+    "利好可能主要停留在预期层面",
 )
-POSITIVE_IMPACT_SIGNALS = {
-    "客户采用": 4,
-    "规模化量产": 4,
-    "进入量产": 4,
-    "量产": 3,
-    "技术突破": 4,
-    "获批": 4,
-    "中标": 4,
-    "订单增长": 4,
-    "订单增加": 4,
-    "预增": 3,
-    "需求增长": 3,
-    "出口增长": 3,
-    "量价齐升": 4,
-    "推荐国产": 4,
-    "国产替代": 3,
-    "纳入": 3,
-    "达成合作": 3,
-    "授权": 3,
-    "扩产": 2,
-    "落地": 2,
-    "加速": 2,
-    "提升": 2,
-    "增长": 2,
-    "改善": 2,
-    "回升": 2,
-}
-NEGATIVE_IMPACT_SIGNALS = {
-    "需求下滑": 4,
-    "订单下降": 4,
-    "大幅减产": 4,
-    "停产": 4,
-    "禁售": 4,
-    "制裁": 4,
-    "召回": 4,
-    "违约": 4,
-    "亏损": 3,
-    "终止": 3,
-    "取消": 3,
-    "事故": 3,
-    "过剩": 3,
-    "疲软": 3,
-    "下滑": 2,
-    "下降": 2,
-    "收紧": 2,
-    "禁用": 2,
-    "减产": 2,
-    "裁员": 2,
-    "关税": 2,
-    "降价": 1,
-}
 
 
 def clean_text(value: Any) -> str:
@@ -633,46 +555,6 @@ def compact_names(values: Iterable[str], limit: int = 5) -> str:
     return "、".join(visible) + suffix
 
 
-def detect_news_variables(news_text: str) -> list[str]:
-    return [
-        label
-        for label, signals in NEWS_VARIABLE_SIGNALS.items()
-        if any(signal in news_text for signal in signals)
-    ][:5]
-
-
-def assess_event_direction(news_text: str) -> str:
-    positive = [signal for signal in POSITIVE_IMPACT_SIGNALS if signal in news_text]
-    negative = [signal for signal in NEGATIVE_IMPACT_SIGNALS if signal in news_text]
-    positive_score = sum(POSITIVE_IMPACT_SIGNALS[signal] for signal in positive)
-    negative_score = sum(NEGATIVE_IMPACT_SIGNALS[signal] for signal in negative)
-    if positive_score >= negative_score + 2:
-        direction = "偏利好"
-    elif negative_score >= positive_score + 2:
-        direction = "偏利空"
-    elif positive_score and negative_score:
-        direction = "利好与利空并存"
-    else:
-        direction = "影响暂不明确"
-    return direction
-
-
-def extract_key_event_fact(news_text: str, limit: int = 96) -> str:
-    first_sentence = re.split(r"[。！？]", clean_text(news_text), maxsplit=1)[0].strip(" ，,：:")
-    if len(first_sentence) <= limit:
-        return first_sentence
-    clauses = [clause.strip() for clause in re.split(r"[，,；;]", first_sentence) if clause.strip()]
-    selected: list[str] = []
-    for clause in clauses:
-        candidate = "，".join([*selected, clause])
-        if selected and len(candidate) > limit:
-            break
-        selected.append(clause)
-        if len(candidate) >= limit:
-            break
-    return ("，".join(selected) or first_sentence[:limit]).rstrip("，,；; ") + "……"
-
-
 def build_industry_overview(target: dict[str, Any]) -> str:
     description = clean_text(target.get("description", ""))
     first_sentence = re.split(r"[。！？；;]", description, maxsplit=1)[0].strip(" ，,：:")
@@ -689,58 +571,10 @@ def build_industry_overview(target: dict[str, Any]) -> str:
     return re.sub(r"\s+", " ", overview).strip()
 
 
-def build_event_impact_analysis(
-    target: dict[str, Any],
-    news_text: str,
-) -> dict[str, str]:
-    variables = detect_news_variables(news_text)
-    direction = assess_event_direction(news_text)
-    event_fact = extract_key_event_fact(news_text)
-    analysis_variables = variables[:2]
-    if analysis_variables:
-        variable_text = "、".join(analysis_variables)
-        variable_logic = "；".join(VARIABLE_EXPLANATIONS[item] for item in analysis_variables)
-        validation_text = "、".join(VARIABLE_VALIDATION_SIGNALS[item] for item in analysis_variables)
-    else:
-        variable_text = "需求、订单、价格或产能等经营变量"
-        variable_logic = "现有内容尚未提供足够的经营数据来确认传导幅度"
-        validation_text = "订单、价格、产能或客户采用等经营数据"
-
-    if direction == "偏利好":
-        text = (
-            f"（一）事件基本情况显示：{event_fact}。这对{target['name']}偏利好，相关变化直接作用于{variable_text}。"
-            f"{variable_logic}。如果相关变化继续兑现，产业订单、交付节奏或经营预期有望改善；"
-            f"后续仍需观察{validation_text}，否则利好可能主要停留在预期层面。"
-        )
-    elif direction == "偏利空":
-        text = (
-            f"（一）事件基本情况显示：{event_fact}。这对{target['name']}偏利空，相关压力直接作用于{variable_text}。"
-            f"{variable_logic}。如果压力持续，产业订单、价格、交付或产能利用率可能承压；"
-            f"后续应观察{validation_text}，确认负面影响是否已经进入实际经营。"
-        )
-    elif direction == "利好与利空并存":
-        text = (
-            f"（一）事件基本情况显示：{event_fact}。这一事件对{target['name']}同时包含利好和利空因素，"
-            f"两者共同作用于{variable_text}。{variable_logic}。"
-            f"后续要看{validation_text}，才能判断最终是利好占主导还是利空占主导。"
-        )
-    else:
-        text = (
-            f"（一）事件基本情况显示：{event_fact}。目前还不能明确判断这一事件对{target['name']}是利好还是利空。"
-            f"现有内容尚未说明它是否会实质改变{variable_text}，{variable_logic}。"
-            f"后续需要观察{validation_text}，在这些数据出现前，不宜把新闻关注度直接等同于产业经营变化。"
-        )
-    output_text = re.sub(r"\s+", " ", text).strip()
-    forbidden = [phrase for phrase in CLIENT_BANNED_PHRASES if phrase in output_text]
-    if forbidden:
-        raise ValueError(f"投资者可见产业解读包含内部过程用语: {forbidden}")
-    return {"direction": direction, "text": output_text}
-
-
 def build_industry_analysis(
     company_core_products: list[dict[str, Any]],
     level5_catalog: dict[str, dict[str, str]],
-    news_text: str,
+    research_bundle: dict[str, Any] | None,
 ) -> dict[str, Any]:
     level7_products = [
         product
@@ -781,6 +615,7 @@ def build_industry_analysis(
             "target": None,
             "overview": None,
             "impact": None,
+            "researchSources": [],
             "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径",
         }
 
@@ -813,11 +648,70 @@ def build_industry_analysis(
         )
     )
     target = candidates[0]
+    public_target = {"code": target["code"], "name": target["name"]}
+    synthesis = (research_bundle or {}).get("synthesis") or {}
+    if synthesis.get("summaryStatus") != "ai-reviewed":
+        return {
+            "status": "research_pending",
+            "target": public_target,
+            "overview": build_industry_overview(target),
+            "impact": None,
+            "researchSources": [],
+            "reason": "该产业的专项研究内容正在补充中",
+        }
+
+    if (
+        clean_text((research_bundle or {}).get("industryCode")) != target["code"]
+        or clean_text((research_bundle or {}).get("industryName")) != target["name"]
+    ):
+        raise ValueError(
+            f"事件研报语料与五级产业不一致: {research_bundle.get('mainId')} "
+            f"{research_bundle.get('industryName')} != {target['name']}"
+        )
+
+    overview = clean_text(synthesis.get("industryOverview"))
+    impact_direction = clean_text(synthesis.get("impactDirection"))
+    impact_text = clean_text(synthesis.get("impactAnalysis"))
+    allowed_directions = {"偏利好", "偏利空", "利好与利空并存", "影响暂不明确"}
+    if not overview or not impact_text or impact_direction not in allowed_directions:
+        raise ValueError(f"事件研报综合结论不完整: {research_bundle.get('mainId')}")
+    forbidden = [
+        phrase
+        for phrase in CLIENT_BANNED_PHRASES
+        if phrase in overview or phrase in impact_text
+    ]
+    if forbidden:
+        raise ValueError(f"投资者可见产业解读包含禁用表述: {forbidden}")
+
+    report_index = {
+        clean_text(report.get("reportId")): report
+        for report in (research_bundle or {}).get("reports", [])
+    }
+    research_sources: list[dict[str, str]] = []
+    for report_id in synthesis.get("sourceReportIds", []):
+        report = report_index.get(clean_text(report_id))
+        if not report:
+            raise ValueError(f"产业解读引用了不存在的研报: {report_id}")
+        publish_date = clean_text(report.get("publishDate"))
+        if re.fullmatch(r"\d{8}", publish_date):
+            publish_date = f"{publish_date[:4]}-{publish_date[4:6]}-{publish_date[6:]}"
+        research_sources.append(
+            {
+                "reportId": clean_text(report.get("reportId")),
+                "title": clean_text(report.get("title")),
+                "institution": clean_text(report.get("institution")),
+                "publishDate": publish_date,
+            }
+        )
+    if len(research_sources) != 3:
+        raise ValueError(f"每条产业解读必须引用3篇已通读研报: {research_bundle.get('mainId')}")
+
     return {
         "status": "ready",
-        "target": {"code": target["code"], "name": target["name"]},
-        "overview": build_industry_overview(target),
-        "impact": build_event_impact_analysis(target, news_text),
+        "target": public_target,
+        "overview": overview,
+        "impact": {"direction": impact_direction, "text": impact_text},
+        "researchSources": research_sources,
         "reason": "",
     }
 
@@ -826,6 +720,7 @@ def finalize_event(
     draft: dict[str, Any],
     edge_index: dict[str, list[dict[str, str]]],
     level5_catalog: dict[str, dict[str, str]],
+    research_bundle: dict[str, Any] | None,
     generated_at: str,
 ) -> dict[str, Any]:
     company_core_products = draft["selectedCoreProducts"]
@@ -899,10 +794,10 @@ def finalize_event(
     industry_analysis = build_industry_analysis(
         company_core_products,
         level5_catalog,
-        draft["newsText"],
+        research_bundle,
     )
     return {
-        "schemaVersion": 6,
+        "schemaVersion": 7,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -1003,6 +898,11 @@ def parse_args() -> argparse.Namespace:
         default=project_root / "prompts" / "industry-cognition-stage1-v1.md",
     )
     parser.add_argument(
+        "--report-corpus",
+        type=Path,
+        default=project_root / "generated" / "industry_report_corpus.json",
+    )
+    parser.add_argument(
         "--output-dir",
         type=Path,
         default=project_root / "public" / "data" / "impact-chains",
@@ -1017,9 +917,24 @@ def main() -> None:
     edges, edge_encoding = read_csv_columns(args.edges, EDGE_COLUMNS)
     nodes, node_encoding = read_csv_columns(args.nodes, NODE_COLUMNS)
     prompt_template = args.prompt_template.read_text(encoding="utf-8")
+    report_corpus = (
+        json.loads(args.report_corpus.read_text(encoding="utf-8"))
+        if args.report_corpus.exists()
+        else {"events": []}
+    )
+    research_by_main_id = {
+        clean_text(item.get("mainId")): item
+        for item in report_corpus.get("events", [])
+        if clean_text(item.get("mainId"))
+    }
     missing_placeholders = [
         placeholder
-        for placeholder in ("{{industry_name}}", "{{industry_description}}", "{{event_basic_info}}")
+        for placeholder in (
+            "{{industry_name}}",
+            "{{industry_description}}",
+            "{{event_basic_info}}",
+            "{{industry_research_corpus}}",
+        )
         if placeholder not in prompt_template
     ]
     if missing_placeholders:
@@ -1088,6 +1003,7 @@ def main() -> None:
             draft,
             edge_index,
             level5_catalog,
+            research_by_main_id.get(draft["mainId"]),
             generated_at,
         )
         main_id = payload["event"]["mainId"]
@@ -1116,7 +1032,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 6,
+        "schemaVersion": 7,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),

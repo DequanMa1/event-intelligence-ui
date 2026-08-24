@@ -29,10 +29,12 @@ test("renders the event research page and the impact-chain section", async () =>
 
 test("ships valid impact-chain data for every visible demo event", async () => {
   const demoMainIds = ["27308", "27202", "26314", "26562"];
+  const impactTexts = new Set();
+  const excludedReportPattern = /日报|日刊|每日|每周|周报|周评|周刊|周度|周观点|双周报|月报|月度|季报|季度|晨报|晨会|晨讯|早报|定期报告/;
   for (const mainId of demoMainIds) {
     const fileUrl = new URL(`../public/data/impact-chains/${mainId}.json`, import.meta.url);
     const payload = JSON.parse(await readFile(fileUrl, "utf8"));
-    assert.equal(payload.schemaVersion, 6);
+    assert.equal(payload.schemaVersion, 7);
     assert.equal(payload.event.mainId, mainId);
     assert.equal(payload.status, "ready");
     assert.ok(payload.selection.sourceStockCount > 0);
@@ -41,15 +43,14 @@ test("ships valid impact-chain data for every visible demo event", async () => {
     assert.ok(payload.chain.upstream.length > 0);
     assert.ok(payload.chain.downstream.length > 0);
     assert.equal(payload.industryAnalysis.status, "ready");
-    assert.deepEqual(Object.keys(payload.industryAnalysis).sort(), ["impact", "overview", "reason", "status", "target"]);
+    assert.deepEqual(Object.keys(payload.industryAnalysis).sort(), ["impact", "overview", "reason", "researchSources", "status", "target"]);
     assert.deepEqual(Object.keys(payload.industryAnalysis.target).sort(), ["code", "name"]);
     assert.deepEqual(Object.keys(payload.industryAnalysis.impact).sort(), ["direction", "text"]);
     assert.ok(["偏利好", "偏利空", "利好与利空并存", "影响暂不明确"].includes(payload.industryAnalysis.impact.direction));
     assert.ok(payload.industryAnalysis.overview.length >= 20);
-    assert.ok(payload.industryAnalysis.overview.length <= 220);
+    assert.ok(payload.industryAnalysis.overview.length <= 180);
     assert.equal(payload.industryAnalysis.impact.text.includes("\n"), false);
-    assert.match(payload.industryAnalysis.impact.text, /事件基本情况/);
-    assert.ok(payload.industryAnalysis.impact.text.length >= 100);
+    assert.ok(payload.industryAnalysis.impact.text.length >= 180);
     assert.ok(payload.industryAnalysis.impact.text.length <= 320);
     for (const phrase of ["本地图谱", "现有语料", "模拟", "关键词规则", "模型返回区", "接入真实大模型", "提示词", "用于验证", "A类", "B类", "C类", "更接近", "规则命中", "模型判断"]) {
       assert.equal(payload.industryAnalysis.impact.text.includes(phrase), false);
@@ -58,7 +59,21 @@ test("ships valid impact-chain data for every visible demo event", async () => {
     for (const phrase of ["从产业链位置", "企业通常通过", "赚钱最关键", "景气度主要由"]) {
       assert.equal(payload.industryAnalysis.impact.text.includes(phrase), false);
     }
+    for (const phrase of ["相关变化直接作用于", "潜在需求只有转化为持续采购", "如果相关变化继续兑现", "后续仍需观察", "利好可能主要停留在预期层面"]) {
+      assert.equal(payload.industryAnalysis.impact.text.includes(phrase), false);
+    }
+    assert.equal(payload.industryAnalysis.researchSources.length, 3);
+    assert.equal(new Set(payload.industryAnalysis.researchSources.map((source) => source.reportId)).size, 3);
+    assert.equal(new Set(payload.industryAnalysis.researchSources.map((source) => source.title)).size, 3);
+    for (const source of payload.industryAnalysis.researchSources) {
+      assert.ok(source.title.length > 0);
+      assert.ok(source.institution.length > 0);
+      assert.equal(excludedReportPattern.test(source.title), false);
+      assert.ok(source.publishDate <= payload.event.date);
+    }
+    impactTexts.add(payload.industryAnalysis.impact.text);
   }
+  assert.equal(impactTexts.size, demoMainIds.length);
 });
 
 test("keeps the generated manifest consistent with per-event files", async () => {
@@ -66,7 +81,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   const manifest = JSON.parse(await readFile(manifestUrl, "utf8"));
   const statusTotal = Object.values(manifest.statusCounts).reduce((sum, value) => sum + value, 0);
 
-  assert.equal(manifest.schemaVersion, 6);
+  assert.equal(manifest.schemaVersion, 7);
   assert.equal(manifest.eventCount, 813);
   assert.equal(manifest.events.length, manifest.eventCount);
   assert.equal(statusTotal, manifest.eventCount);
@@ -84,6 +99,7 @@ test("keeps the reusable prompt internal instead of publishing it to visitors", 
   assert.match(prompt, /\{\{industry_name\}\}/);
   assert.match(prompt, /\{\{industry_description\}\}/);
   assert.match(prompt, /\{\{event_basic_info\}\}/);
+  assert.match(prompt, /\{\{industry_research_corpus\}\}/);
   assert.match(prompt, /严格输出 JSON/);
   assert.match(prompt, /偏利好/);
   assert.match(prompt, /偏利空/);

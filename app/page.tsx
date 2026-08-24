@@ -39,14 +39,22 @@ type IndustryAnalysisTarget = {
   name: string;
 };
 
+type IndustryResearchSource = {
+  reportId: string;
+  title: string;
+  institution: string;
+  publishDate: string;
+};
+
 type ImpactIndustryAnalysis = {
-  status: "ready" | "unavailable";
+  status: "ready" | "research_pending" | "unavailable";
   target: IndustryAnalysisTarget | null;
   overview: string | null;
   impact: {
     direction: "偏利好" | "偏利空" | "利好与利空并存" | "影响暂不明确";
     text: string;
   } | null;
+  researchSources: IndustryResearchSource[];
   reason: string;
 };
 
@@ -116,6 +124,10 @@ function createImpactPlainText(impact: ImpactChainRecord | null) {
         impact.industryAnalysis.overview,
         `事件影响：${impact.industryAnalysis.impact.direction}`,
         impact.industryAnalysis.impact.text,
+        "参考研报：",
+        ...impact.industryAnalysis.researchSources.map(
+          (source) => `- ${source.title}｜${source.institution}｜${source.publishDate}`,
+        ),
       ]
     : [];
   return [
@@ -222,6 +234,19 @@ function IndustryAnalysisPanel({ analysis }: { analysis: ImpactIndustryAnalysis 
             <em className={directionClass}>{analysis.impact.direction}</em>
           </div>
           <p>{analysis.impact.text}</p>
+          {analysis.researchSources.length > 0 && (
+            <div className="industry-research-sources">
+              <strong>参考研报</strong>
+              <ol>
+                {analysis.researchSources.map((source) => (
+                  <li key={source.reportId}>
+                    <span>{source.title}</span>
+                    <small>{source.institution} · {formatDate(source.publishDate)}</small>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
         </section>
       </div>
     </section>
