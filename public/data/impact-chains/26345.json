@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 4,
-  "generatedAt": "2026-08-24T13:59:17+08:00",
+  "schemaVersion": 5,
+  "generatedAt": "2026-08-24T14:14:20+08:00",
   "status": "ready",
   "event": {
     "mainId": "26345",
@@ -743,133 +743,11 @@
   },
   "industryAnalysis": {
     "status": "ready",
-    "stage": 1,
-    "stageName": "五级产业认知",
-    "mode": "simulation",
-    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
-    "sourceLevel7ProductCount": 6,
     "target": {
       "code": "1200000228",
-      "name": "神经系统药物",
-      "description": "神经系统药物涵盖精神类、神经退行性等治疗用药。因人口老龄化加剧及社会压力增大，阿尔茨海默病、抑郁等需求爆发，市场空间广阔且壁垒高，兼具刚需与成长属性，故备受资本市场关注。",
-      "coreProductCount": 2,
-      "stockCount": 1,
-      "shareOfLevel7Products": 0.3333,
-      "relevanceScore": 12,
-      "matchedCoreProducts": [
-        {
-          "code": "1140001879",
-          "name": "丙泊酚",
-          "stockCount": 1
-        },
-        {
-          "code": "1140001880",
-          "name": "右美托咪定",
-          "stockCount": 1
-        }
-      ]
+      "name": "神经系统药物"
     },
-    "candidates": [
-      {
-        "code": "1200000228",
-        "name": "神经系统药物",
-        "description": "神经系统药物涵盖精神类、神经退行性等治疗用药。因人口老龄化加剧及社会压力增大，阿尔茨海默病、抑郁等需求爆发，市场空间广阔且壁垒高，兼具刚需与成长属性，故备受资本市场关注。",
-        "coreProductCount": 2,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.3333,
-        "relevanceScore": 12,
-        "matchedCoreProducts": [
-          {
-            "code": "1140001879",
-            "name": "丙泊酚",
-            "stockCount": 1
-          },
-          {
-            "code": "1140001880",
-            "name": "右美托咪定",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000239",
-        "name": "全身用抗感染药物",
-        "description": "该行业涵盖治疗全身性感染的抗生素、抗病毒等药物。因人口老龄化、耐药菌挑战及突发公卫事件频发，市场需求刚性且稳定。作为医药核心细分领域，其研发创新与供应链安全备受资本关注，具备长期投资价值。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.1667,
-        "relevanceScore": 6,
-        "matchedCoreProducts": [
-          {
-            "code": "1140078121",
-            "name": "利巴韦林",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000232",
-        "name": "杂类",
-        "description": "“杂类”并非A股官方行业分类，通常指业务多元、难以归入单一主流板块的公司。因概念模糊且常含跨界题材，易受游资炒作引发短期波动。投资者需警惕其基本面不透明及高风险，避免盲目追高。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.1667,
-        "relevanceScore": 6,
-        "matchedCoreProducts": [
-          {
-            "code": "1140172951",
-            "name": "中/长链脂肪乳注射液",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000231",
-        "name": "消化系统及代谢药",
-        "description": "该行业涵盖胃肠、肝胆及糖尿病等药物。因人口老龄化加剧、慢性病高发及消费升级，市场需求刚性且持续增长。龙头药企研发创新加速，叠加医保政策支持，使其成为兼具防御性与成长性的优质赛道，备受投资者关注。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.1667,
-        "relevanceScore": 6,
-        "matchedCoreProducts": [
-          {
-            "code": "1140172954",
-            "name": "消旋卡多曲",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000230",
-        "name": "生殖泌尿系统和性激素类药物",
-        "description": "该行业涵盖治疗泌尿生殖疾病及调节性激素的药物。因人口老龄化加剧前列腺等疾病高发，加上生育政策优化与消费升级推动需求增长，市场潜力大，故备受投资者关注。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.1667,
-        "relevanceScore": 6,
-        "matchedCoreProducts": [
-          {
-            "code": "1140001951",
-            "name": "奥硝唑",
-            "stockCount": 1
-          }
-        ]
-      }
-    ],
-    "simulation": {
-      "mode": "local_rule_simulation",
-      "isRealModelOutput": false,
-      "variables": [
-        "下游需求与订单"
-      ],
-      "classification": {
-        "code": "C",
-        "label": "短期事件扰动",
-        "matchedSignals": [],
-        "basis": "新闻披露的信息尚不足以支持长期趋势或景气加速判断，暂按短期扰动处理"
-      },
-      "text": "“默沙东Keytruda联用Trodelvy获批TNBC一线”之所以会影响神经系统药物，核心在于它直接触及下游需求与订单：潜在需求只有转化为持续采购，才会形成产业订单。影响性质更接近C类“短期事件扰动”，目前更像局部扰动，尚不足以改变产业趋势；后续重点观察订单和采购落地，若未兑现，影响可能主要停留在预期层面。"
-    },
+    "text": "“默沙东Keytruda联用Trodelvy获批TNBC一线”会影响神经系统药物，关键不是新闻热度本身，而是事件直接改变了市场对下游需求与订单的判断。潜在需求只有转化为持续采购，才会形成产业订单。如果这些变化持续，影响会从产业预期进一步传导到订单、交付、价格、成本或产能利用率；如果只是单点信息，则难以形成产业面的持续改善。从影响范围看，目前仍偏向局部和短期扰动，尚不足以据此判断产业趋势已经改变。后续应重点观察订单和采购落地，只有相关数据连续兑现，才能确认影响已从预期进入实际经营。",
     "reason": ""
   },
   "caveats": [

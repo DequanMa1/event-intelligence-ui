@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 4,
-  "generatedAt": "2026-08-24T13:59:17+08:00",
+  "schemaVersion": 5,
+  "generatedAt": "2026-08-24T14:14:20+08:00",
   "status": "ready",
   "event": {
     "mainId": "27119",
@@ -949,142 +949,11 @@
   },
   "industryAnalysis": {
     "status": "ready",
-    "stage": 1,
-    "stageName": "五级产业认知",
-    "mode": "simulation",
-    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
-    "sourceLevel7ProductCount": 9,
     "target": {
       "code": "1200000379",
-      "name": "船舶动力系统",
-      "description": "船舶动力系统指为船舶提供推进力的核心设备行业。受全球造船周期上行、绿色转型及国产替代驱动，该板块因业绩高增预期和技术突破备受A股关注，是高端制造与出海逻辑的重要代表。",
-      "coreProductCount": 3,
-      "stockCount": 1,
-      "shareOfLevel7Products": 0.3333,
-      "relevanceScore": 21,
-      "matchedCoreProducts": [
-        {
-          "code": "1140145621",
-          "name": "军用舰船蒸汽轮机",
-          "stockCount": 1
-        },
-        {
-          "code": "1140145618",
-          "name": "船用柴油机",
-          "stockCount": 1
-        },
-        {
-          "code": "1140145619",
-          "name": "船舶电力推进系统",
-          "stockCount": 1
-        }
-      ]
+      "name": "船舶动力系统"
     },
-    "candidates": [
-      {
-        "code": "1200000379",
-        "name": "船舶动力系统",
-        "description": "船舶动力系统指为船舶提供推进力的核心设备行业。受全球造船周期上行、绿色转型及国产替代驱动，该板块因业绩高增预期和技术突破备受A股关注，是高端制造与出海逻辑的重要代表。",
-        "coreProductCount": 3,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.3333,
-        "relevanceScore": 21,
-        "matchedCoreProducts": [
-          {
-            "code": "1140145621",
-            "name": "军用舰船蒸汽轮机",
-            "stockCount": 1
-          },
-          {
-            "code": "1140145618",
-            "name": "船用柴油机",
-            "stockCount": 1
-          },
-          {
-            "code": "1140145619",
-            "name": "船舶电力推进系统",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000381",
-        "name": "船舶零部件",
-        "description": "船舶零部件指造船所需的配套设备与材料。受全球造船周期上行、绿色转型及国产替代驱动，行业景气度提升。叠加“中特估”概念，龙头企业受益于订单饱满与业绩改善，成为市场关注焦点。",
-        "coreProductCount": 3,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.3333,
-        "relevanceScore": 21,
-        "matchedCoreProducts": [
-          {
-            "code": "1140215016",
-            "name": "主推调距桨",
-            "stockCount": 1
-          },
-          {
-            "code": "1140215017",
-            "name": "全回转舵桨",
-            "stockCount": 1
-          },
-          {
-            "code": "1140009612",
-            "name": "舵机",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000378",
-        "name": "军用船舶",
-        "description": "军用船舶指海军舰艇制造。受地缘局势紧张、国防预算增长及海军现代化加速驱动，该板块因具备高壁垒、订单确定性强及资产注入预期，成为军工核心赛道，备受市场关注。",
-        "coreProductCount": 2,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.2222,
-        "relevanceScore": 14,
-        "matchedCoreProducts": [
-          {
-            "code": "1140145629",
-            "name": "护卫舰",
-            "stockCount": 1
-          },
-          {
-            "code": "1140008363",
-            "name": "潜艇",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000382",
-        "name": "船舶服务",
-        "description": "船舶服务涵盖造船、修船及配套。近期因全球航运周期上行、新船订单激增及绿色转型需求，行业景气度显著提升。叠加“中特估”概念，业绩预期改善使其成为A股关注焦点。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.1111,
-        "relevanceScore": 7,
-        "matchedCoreProducts": [
-          {
-            "code": "1140145630",
-            "name": "船舶修理改造服务",
-            "stockCount": 1
-          }
-        ]
-      }
-    ],
-    "simulation": {
-      "mode": "local_rule_simulation",
-      "isRealModelOutput": false,
-      "variables": [
-        "下游需求与订单"
-      ],
-      "classification": {
-        "code": "C",
-        "label": "短期事件扰动",
-        "matchedSignals": [],
-        "basis": "新闻披露的信息尚不足以支持长期趋势或景气加速判断，暂按短期扰动处理"
-      },
-      "text": "“松发股份上半年新接207艘船舶订单”之所以会影响船舶动力系统，核心在于它直接触及下游需求与订单：潜在需求只有转化为持续采购，才会形成产业订单。影响性质更接近C类“短期事件扰动”，目前更像局部扰动，尚不足以改变产业趋势；后续重点观察订单和采购落地，若未兑现，影响可能主要停留在预期层面。"
-    },
+    "text": "“松发股份上半年新接207艘船舶订单”会影响船舶动力系统，关键不是新闻热度本身，而是事件直接改变了市场对下游需求与订单的判断。潜在需求只有转化为持续采购，才会形成产业订单。如果这些变化持续，影响会从产业预期进一步传导到订单、交付、价格、成本或产能利用率；如果只是单点信息，则难以形成产业面的持续改善。从影响范围看，目前仍偏向局部和短期扰动，尚不足以据此判断产业趋势已经改变。后续应重点观察订单和采购落地，只有相关数据连续兑现，才能确认影响已从预期进入实际经营。",
     "reason": ""
   },
   "caveats": [

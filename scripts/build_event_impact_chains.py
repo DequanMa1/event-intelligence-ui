@@ -136,6 +136,10 @@ CLIENT_BANNED_PHRASES = (
     "接入真实大模型",
     "提示词",
     "用于验证",
+    "A类",
+    "B类",
+    "C类",
+    "影响性质更接近",
 )
 TREND_SIGNALS = (
     "技术路线改变",
@@ -633,51 +637,45 @@ def classify_news(news_text: str) -> dict[str, Any]:
     }
 
 
-def build_simulated_analysis(
+def build_investor_analysis_text(
     target: dict[str, Any],
     news_title: str,
     news_text: str,
-) -> dict[str, Any]:
+) -> str:
     variables = detect_news_variables(news_text)
     classification = classify_news(news_text)
-    analysis_variables = variables[:2]
+    analysis_variables = variables[:3]
     if analysis_variables:
         variable_text = "、".join(analysis_variables)
         variable_logic = "；".join(VARIABLE_EXPLANATIONS[item] for item in analysis_variables)
         validation_text = "、".join(VARIABLE_VALIDATION_SIGNALS[item] for item in analysis_variables)
-        impact_reason = f"核心在于它直接触及{variable_text}：{variable_logic}"
+        impact_reason = f"关键不是新闻热度本身，而是事件直接改变了市场对{variable_text}的判断。{variable_logic}"
+        transmission_text = "如果这些变化持续，影响会从产业预期进一步传导到订单、交付、价格、成本或产能利用率；如果只是单点信息，则难以形成产业面的持续改善"
     else:
         validation_text = "订单、价格、产能或客户采用等经营数据"
-        impact_reason = "目前披露的信息尚未指向明确的订单、价格、成本或产能变化，因此影响首先体现在产业预期"
+        impact_reason = "目前披露的信息尚未指向明确的订单、价格、成本或产能变化，新闻首先改变的是产业预期"
+        transmission_text = "在缺少经营数据支持的情况下，预期变化还不能直接等同于产业景气改善"
     if classification["code"] == "A":
-        classification_text = "可能影响未来多个季度的技术商业化或供需趋势"
+        scope_text = "从影响范围看，这不只是一次短期信息刺激，还可能推动技术商业化或供需预期持续变化，影响可能跨越多个季度"
     elif classification["code"] == "B":
-        classification_text = "说明近期订单、价格、库存或开工正在加速或减速"
+        scope_text = "从影响范围看，产业长期方向没有明显改变，但近期订单、价格、库存或开工节奏可能因此加快或放缓"
     else:
-        classification_text = "目前更像局部扰动，尚不足以改变产业趋势"
+        scope_text = "从影响范围看，目前仍偏向局部和短期扰动，尚不足以据此判断产业趋势已经改变"
     text = (
-        f"“{news_title}”之所以会影响{target['name']}，{impact_reason}。"
-        f"影响性质更接近{classification['code']}类“{classification['label']}”，{classification_text}；"
-        f"后续重点观察{validation_text}，若未兑现，影响可能主要停留在预期层面。"
+        f"“{news_title}”会影响{target['name']}，{impact_reason}。"
+        f"{transmission_text}。{scope_text}。"
+        f"后续应重点观察{validation_text}，只有相关数据连续兑现，才能确认影响已从预期进入实际经营。"
     )
     output_text = re.sub(r"\s+", " ", text).strip()
     forbidden = [phrase for phrase in CLIENT_BANNED_PHRASES if phrase in output_text]
     if forbidden:
         raise ValueError(f"投资者可见产业解读包含内部过程用语: {forbidden}")
-    return {
-        "mode": "local_rule_simulation",
-        "isRealModelOutput": False,
-        "variables": variables,
-        "classification": classification,
-        "text": output_text,
-    }
+    return output_text
 
 
 def build_industry_analysis(
     company_core_products: list[dict[str, Any]],
     level5_catalog: dict[str, dict[str, str]],
-    upstream: list[dict[str, Any]],
-    downstream: list[dict[str, Any]],
     news_title: str,
     news_text: str,
 ) -> dict[str, Any]:
@@ -717,14 +715,8 @@ def build_industry_analysis(
     if not groups:
         return {
             "status": "unavailable",
-            "stage": 1,
-            "stageName": "五级产业认知",
-            "mode": "simulation",
-            "selectionRule": "将入选的七级核心产品按五级产业代码归并，优先选择核心产品数量最多者",
-            "sourceLevel7ProductCount": len(level7_products),
             "target": None,
-            "candidates": [],
-            "simulation": None,
+            "text": None,
             "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径",
         }
 
@@ -759,17 +751,8 @@ def build_industry_analysis(
     target = candidates[0]
     return {
         "status": "ready",
-        "stage": 1,
-        "stageName": "五级产业认知",
-        "mode": "simulation",
-        "selectionRule": (
-            "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，"
-            "并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象"
-        ),
-        "sourceLevel7ProductCount": total_level7_products,
-        "target": target,
-        "candidates": candidates,
-        "simulation": build_simulated_analysis(
+        "target": {"code": target["code"], "name": target["name"]},
+        "text": build_investor_analysis_text(
             target,
             news_title,
             news_text,
@@ -855,13 +838,11 @@ def finalize_event(
     industry_analysis = build_industry_analysis(
         company_core_products,
         level5_catalog,
-        upstream,
-        downstream,
         draft["title"],
         draft["newsText"],
     )
     return {
-        "schemaVersion": 4,
+        "schemaVersion": 5,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -1075,7 +1056,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 4,
+        "schemaVersion": 5,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),

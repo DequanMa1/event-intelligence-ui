@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 4,
-  "generatedAt": "2026-08-24T13:59:17+08:00",
+  "schemaVersion": 5,
+  "generatedAt": "2026-08-24T14:14:20+08:00",
   "status": "ready",
   "event": {
     "mainId": "26617",
@@ -991,148 +991,11 @@
   },
   "industryAnalysis": {
     "status": "ready",
-    "stage": 1,
-    "stageName": "五级产业认知",
-    "mode": "simulation",
-    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
-    "sourceLevel7ProductCount": 9,
     "target": {
       "code": "1200000810",
-      "name": "炼焦煤",
-      "description": "炼焦煤是焦炭原料，主要用于钢铁冶炼。A股中该板块受关注，因其资源稀缺、供给刚性，且与宏观经济及基建地产需求紧密相关作为强周期品种，其价格波动直接影响煤企盈利，兼具高股息与周期性博弈价值。",
-      "coreProductCount": 4,
-      "stockCount": 2,
-      "shareOfLevel7Products": 0.4444,
-      "relevanceScore": 52,
-      "matchedCoreProducts": [
-        {
-          "code": "1111000007",
-          "name": "1/3焦煤",
-          "stockCount": 2
-        },
-        {
-          "code": "1111000008",
-          "name": "气煤",
-          "stockCount": 2
-        },
-        {
-          "code": "1140032373",
-          "name": "焦煤",
-          "stockCount": 2
-        },
-        {
-          "code": "1111000009",
-          "name": "肥煤",
-          "stockCount": 1
-        }
-      ]
+      "name": "炼焦煤"
     },
-    "candidates": [
-      {
-        "code": "1200000810",
-        "name": "炼焦煤",
-        "description": "炼焦煤是焦炭原料，主要用于钢铁冶炼。A股中该板块受关注，因其资源稀缺、供给刚性，且与宏观经济及基建地产需求紧密相关作为强周期品种，其价格波动直接影响煤企盈利，兼具高股息与周期性博弈价值。",
-        "coreProductCount": 4,
-        "stockCount": 2,
-        "shareOfLevel7Products": 0.4444,
-        "relevanceScore": 52,
-        "matchedCoreProducts": [
-          {
-            "code": "1111000007",
-            "name": "1/3焦煤",
-            "stockCount": 2
-          },
-          {
-            "code": "1111000008",
-            "name": "气煤",
-            "stockCount": 2
-          },
-          {
-            "code": "1140032373",
-            "name": "焦煤",
-            "stockCount": 2
-          },
-          {
-            "code": "1111000009",
-            "name": "肥煤",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000811",
-        "name": "动力煤",
-        "description": "动力煤主要用于火力发电，是A股重要能源板块。因直接关联电力成本与供应安全，且具高分红、低估值特征，常被视为防御性资产。其股价受煤炭价格、政策调控及季节性用电需求影响显著，备受市场关注。",
-        "coreProductCount": 3,
-        "stockCount": 2,
-        "shareOfLevel7Products": 0.3333,
-        "relevanceScore": 39,
-        "matchedCoreProducts": [
-          {
-            "code": "1111000005",
-            "name": "不粘煤",
-            "stockCount": 1
-          },
-          {
-            "code": "1111000011",
-            "name": "贫煤",
-            "stockCount": 1
-          },
-          {
-            "code": "1111000001",
-            "name": "长焰煤",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000808",
-        "name": "焦油产品",
-        "description": "焦油产品指煤焦化副产物深加工行业。受关注因其衍生出针状焦等锂电负极关键材料，兼具传统化工与新能源双重属性。在储能需求驱动下，其高附加值转型潜力及周期波动中的盈利弹性，成为资本市场焦点。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.1111,
-        "relevanceScore": 7,
-        "matchedCoreProducts": [
-          {
-            "code": "1111000019",
-            "name": "焦油",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000807",
-        "name": "焦炭产品",
-        "description": "焦炭由煤高温干馏制成，主要用于钢铁冶炼。A股关注该行业因其作为钢铁上游，受供给侧改革、环保限产及下游钢铁需求影响显著，价格波动大，具有强周期性，是观察宏观经济与工业景气度的重要风向标。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.1111,
-        "relevanceScore": 7,
-        "matchedCoreProducts": [
-          {
-            "code": "1111000018",
-            "name": "焦炭",
-            "stockCount": 1
-          }
-        ]
-      }
-    ],
-    "simulation": {
-      "mode": "local_rule_simulation",
-      "isRealModelOutput": false,
-      "variables": [
-        "产品价格",
-        "供给与库存"
-      ],
-      "classification": {
-        "code": "C",
-        "label": "短期事件扰动",
-        "matchedSignals": [],
-        "basis": "新闻披露的信息尚不足以支持长期趋势或景气加速判断，暂按短期扰动处理"
-      },
-      "text": "“蒙古国能源行业工会宣布6月30日罢工”之所以会影响炼焦煤，核心在于它直接触及产品价格、供给与库存：价格变化会直接影响产业收入和单位盈利；库存和交期变化会改变供需松紧和议价能力。影响性质更接近C类“短期事件扰动”，目前更像局部扰动，尚不足以改变产业趋势；后续重点观察价格持续性和销量、库存和交期，若未兑现，影响可能主要停留在预期层面。"
-    },
+    "text": "“蒙古国能源行业工会宣布6月30日罢工”会影响炼焦煤，关键不是新闻热度本身，而是事件直接改变了市场对产品价格、供给与库存的判断。价格变化会直接影响产业收入和单位盈利；库存和交期变化会改变供需松紧和议价能力。如果这些变化持续，影响会从产业预期进一步传导到订单、交付、价格、成本或产能利用率；如果只是单点信息，则难以形成产业面的持续改善。从影响范围看，目前仍偏向局部和短期扰动，尚不足以据此判断产业趋势已经改变。后续应重点观察价格持续性和销量、库存和交期，只有相关数据连续兑现，才能确认影响已从预期进入实际经营。",
     "reason": ""
   },
   "caveats": [

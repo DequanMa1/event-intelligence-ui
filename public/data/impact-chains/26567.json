@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 4,
-  "generatedAt": "2026-08-24T13:59:17+08:00",
+  "schemaVersion": 5,
+  "generatedAt": "2026-08-24T14:14:20+08:00",
   "status": "ready",
   "event": {
     "mainId": "26567",
@@ -981,149 +981,11 @@
   },
   "industryAnalysis": {
     "status": "ready",
-    "stage": 1,
-    "stageName": "五级产业认知",
-    "mode": "simulation",
-    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
-    "sourceLevel7ProductCount": 10,
     "target": {
       "code": "1200000046",
-      "name": "反刍饲料",
-      "description": "反刍饲料指供牛、羊等食用的专用饲料。A股关注该行业，主要因养殖规模化提升及“粮改饲”政策推动需求增长，叠加原材料成本波动带来的盈利弹性，使头部企业备受投资者青睐。",
-      "coreProductCount": 3,
-      "stockCount": 2,
-      "shareOfLevel7Products": 0.3,
-      "relevanceScore": 21,
-      "matchedCoreProducts": [
-        {
-          "code": "1140128628",
-          "name": "全价反刍饲料",
-          "stockCount": 2
-        },
-        {
-          "code": "1140128603",
-          "name": "浓缩反刍饲料",
-          "stockCount": 2
-        },
-        {
-          "code": "1140128566",
-          "name": "预混反刍饲料",
-          "stockCount": 2
-        }
-      ]
+      "name": "反刍饲料"
     },
-    "candidates": [
-      {
-        "code": "1200000046",
-        "name": "反刍饲料",
-        "description": "反刍饲料指供牛、羊等食用的专用饲料。A股关注该行业，主要因养殖规模化提升及“粮改饲”政策推动需求增长，叠加原材料成本波动带来的盈利弹性，使头部企业备受投资者青睐。",
-        "coreProductCount": 3,
-        "stockCount": 2,
-        "shareOfLevel7Products": 0.3,
-        "relevanceScore": 21,
-        "matchedCoreProducts": [
-          {
-            "code": "1140128628",
-            "name": "全价反刍饲料",
-            "stockCount": 2
-          },
-          {
-            "code": "1140128603",
-            "name": "浓缩反刍饲料",
-            "stockCount": 2
-          },
-          {
-            "code": "1140128566",
-            "name": "预混反刍饲料",
-            "stockCount": 2
-          }
-        ]
-      },
-      {
-        "code": "1200000043",
-        "name": "猪饲料",
-        "description": "猪饲料指生猪养殖所需营养品。因“猪周期”显著，其需求与猪价、存栏量紧密挂钩，直接反映养殖景气度。作为上游核心环节，它受关注是因为能提前预判行业拐点，且头部企业具备成本优势，是捕捉农业板块投资机会的重要风向标。",
-        "coreProductCount": 3,
-        "stockCount": 2,
-        "shareOfLevel7Products": 0.3,
-        "relevanceScore": 21,
-        "matchedCoreProducts": [
-          {
-            "code": "1140128563",
-            "name": "全价猪饲料",
-            "stockCount": 2
-          },
-          {
-            "code": "1140128570",
-            "name": "浓缩猪饲料",
-            "stockCount": 2
-          },
-          {
-            "code": "1140128569",
-            "name": "预混猪饲料",
-            "stockCount": 2
-          }
-        ]
-      },
-      {
-        "code": "1200000045",
-        "name": "禽饲料",
-        "description": "禽饲料指供鸡鸭等家禽食用的配合饲料。该行业因直接关联养殖成本与肉蛋供给，且受玉米豆粕原料价格及猪周期替代效应影响显著，成为观察农业景气度、通胀预期及食品安全的重要风向标，备受投资者关注。",
-        "coreProductCount": 3,
-        "stockCount": 2,
-        "shareOfLevel7Products": 0.3,
-        "relevanceScore": 21,
-        "matchedCoreProducts": [
-          {
-            "code": "1140128564",
-            "name": "全价禽饲料",
-            "stockCount": 2
-          },
-          {
-            "code": "1140128627",
-            "name": "浓缩禽饲料",
-            "stockCount": 2
-          },
-          {
-            "code": "1140128567",
-            "name": "预混禽饲料",
-            "stockCount": 2
-          }
-        ]
-      },
-      {
-        "code": "1200000042",
-        "name": "饲料原料",
-        "description": "饲料原料指生产动物饲料的基础物资，如豆粕、玉米。该行业因直接关联养殖成本与肉价波动，且受全球大宗商品及供需周期影响显著，成为观察农业通胀和猪周期的关键指标，故备受市场关注。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.1,
-        "relevanceScore": 7,
-        "matchedCoreProducts": [
-          {
-            "code": "1140128629",
-            "name": "饲料用植物蛋白",
-            "stockCount": 1
-          }
-        ]
-      }
-    ],
-    "simulation": {
-      "mode": "local_rule_simulation",
-      "isRealModelOutput": false,
-      "variables": [
-        "原材料与成本",
-        "产能与开工",
-        "政策与制度"
-      ],
-      "classification": {
-        "code": "C",
-        "label": "短期事件扰动",
-        "matchedSignals": [],
-        "basis": "新闻披露的信息尚不足以支持长期趋势或景气加速判断，暂按短期扰动处理"
-      },
-      "text": "“生猪养殖行业产能去化或将加速”之所以会影响反刍饲料，核心在于它直接触及原材料与成本、产能与开工：成本变化会改变利润空间，关键看能否向下游传导；量产与开工决定订单能否转化为实际收入。影响性质更接近C类“短期事件扰动”，目前更像局部扰动，尚不足以改变产业趋势；后续重点观察成本变化及其传导、实际产量和产能利用率，若未兑现，影响可能主要停留在预期层面。"
-    },
+    "text": "“生猪养殖行业产能去化或将加速”会影响反刍饲料，关键不是新闻热度本身，而是事件直接改变了市场对原材料与成本、产能与开工、政策与制度的判断。成本变化会改变利润空间，关键看能否向下游传导；量产与开工决定订单能否转化为实际收入；政策只有落实为执行细则和采购，才会形成真实需求。如果这些变化持续，影响会从产业预期进一步传导到订单、交付、价格、成本或产能利用率；如果只是单点信息，则难以形成产业面的持续改善。从影响范围看，目前仍偏向局部和短期扰动，尚不足以据此判断产业趋势已经改变。后续应重点观察成本变化及其传导、实际产量和产能利用率、执行细则和实际采购，只有相关数据连续兑现，才能确认影响已从预期进入实际经营。",
     "reason": ""
   },
   "caveats": [

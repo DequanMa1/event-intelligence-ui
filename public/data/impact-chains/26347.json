@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 4,
-  "generatedAt": "2026-08-24T13:59:17+08:00",
+  "schemaVersion": 5,
+  "generatedAt": "2026-08-24T14:14:20+08:00",
   "status": "ready",
   "event": {
     "mainId": "26347",
@@ -704,106 +704,11 @@
   },
   "industryAnalysis": {
     "status": "ready",
-    "stage": 1,
-    "stageName": "五级产业认知",
-    "mode": "simulation",
-    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
-    "sourceLevel7ProductCount": 4,
     "target": {
       "code": "1200001393",
-      "name": "光通信设备",
-      "description": "光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注。",
-      "coreProductCount": 2,
-      "stockCount": 2,
-      "shareOfLevel7Products": 0.5,
-      "relevanceScore": 18,
-      "matchedCoreProducts": [
-        {
-          "code": "1140020963",
-          "name": "光纤光缆",
-          "stockCount": 2
-        },
-        {
-          "code": "1140021044",
-          "name": "海底线缆",
-          "stockCount": 1
-        }
-      ]
+      "name": "光通信设备"
     },
-    "candidates": [
-      {
-        "code": "1200001393",
-        "name": "光通信设备",
-        "description": "光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注。",
-        "coreProductCount": 2,
-        "stockCount": 2,
-        "shareOfLevel7Products": 0.5,
-        "relevanceScore": 18,
-        "matchedCoreProducts": [
-          {
-            "code": "1140020963",
-            "name": "光纤光缆",
-            "stockCount": 2
-          },
-          {
-            "code": "1140021044",
-            "name": "海底线缆",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200000885",
-        "name": "非金属卤化物",
-        "description": "非金属卤化物指硅、磷等非金属元素的卤素化合物。A股中主要涉及高纯电子化学品如四氯化硅等，用于半导体制造。因契合国产替代与芯片产业扩张需求，具备高技术壁垒，成为市场关注焦点。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.25,
-        "relevanceScore": 8,
-        "matchedCoreProducts": [
-          {
-            "code": "1140056626",
-            "name": "高纯四氯化硅",
-            "stockCount": 1
-          }
-        ]
-      },
-      {
-        "code": "1200001317",
-        "name": "光纤元件",
-        "description": "光纤元件指光通信核心器件如连接器、放大器等。受AI算力爆发驱动，高速光模块需求激增，带动上游元件量价齐升。作为数字经济底座，其高成长性与技术迭代潜力使其成为A股热门赛道，备受资金关注。",
-        "coreProductCount": 1,
-        "stockCount": 1,
-        "shareOfLevel7Products": 0.25,
-        "relevanceScore": 7,
-        "matchedCoreProducts": [
-          {
-            "code": "1125000142",
-            "name": "光纤预制棒",
-            "stockCount": 1
-          }
-        ]
-      }
-    ],
-    "simulation": {
-      "mode": "local_rule_simulation",
-      "isRealModelOutput": false,
-      "variables": [
-        "下游需求与订单",
-        "原材料与成本",
-        "供给与库存",
-        "产能与开工"
-      ],
-      "classification": {
-        "code": "B",
-        "label": "景气度加速/减速",
-        "matchedSignals": [
-          "量价齐升"
-        ],
-        "basis": "主要依据是事件涉及量价齐升"
-      },
-      "text": "“AI数据中心需求致光纤预制棒价格飙升”之所以会影响光通信设备，核心在于它直接触及下游需求与订单、原材料与成本：潜在需求只有转化为持续采购，才会形成产业订单；成本变化会改变利润空间，关键看能否向下游传导。影响性质更接近B类“景气度加速/减速”，说明近期订单、价格、库存或开工正在加速或减速；后续重点观察订单和采购落地、成本变化及其传导，若未兑现，影响可能主要停留在预期层面。"
-    },
+    "text": "“AI数据中心需求致光纤预制棒价格飙升”会影响光通信设备，关键不是新闻热度本身，而是事件直接改变了市场对下游需求与订单、原材料与成本、供给与库存的判断。潜在需求只有转化为持续采购，才会形成产业订单；成本变化会改变利润空间，关键看能否向下游传导；库存和交期变化会改变供需松紧和议价能力。如果这些变化持续，影响会从产业预期进一步传导到订单、交付、价格、成本或产能利用率；如果只是单点信息，则难以形成产业面的持续改善。从影响范围看，产业长期方向没有明显改变，但近期订单、价格、库存或开工节奏可能因此加快或放缓。后续应重点观察订单和采购落地、成本变化及其传导、库存和交期，只有相关数据连续兑现，才能确认影响已从预期进入实际经营。",
     "reason": ""
   },
   "caveats": [

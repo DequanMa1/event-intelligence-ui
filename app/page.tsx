@@ -34,38 +34,15 @@ type ImpactRelatedProduct = {
   linkedCoreProductNames: string[];
 };
 
-type IndustryAnalysisCandidate = {
+type IndustryAnalysisTarget = {
   code: string;
   name: string;
-  description: string;
-  coreProductCount: number;
-  stockCount: number;
-  shareOfLevel7Products: number;
-  relevanceScore: number;
-  matchedCoreProducts: Array<{ code: string; name: string; stockCount: number }>;
 };
 
 type ImpactIndustryAnalysis = {
   status: "ready" | "unavailable";
-  stage: number;
-  stageName: string;
-  mode: "simulation";
-  selectionRule: string;
-  sourceLevel7ProductCount: number;
-  target: IndustryAnalysisCandidate | null;
-  candidates: IndustryAnalysisCandidate[];
-  simulation: {
-    mode: "local_rule_simulation";
-    isRealModelOutput: false;
-    variables: string[];
-    classification: {
-      code: "A" | "B" | "C";
-      label: string;
-      matchedSignals: string[];
-      basis: string;
-    };
-    text: string;
-  } | null;
+  target: IndustryAnalysisTarget | null;
+  text: string | null;
   reason: string;
 };
 
@@ -128,11 +105,11 @@ function createImpactPlainText(impact: ImpactChainRecord | null) {
   if (!impact.chain.core.length) return `（二）影响产业链\n\n${impactStatusText(impact.status)}`;
 
   const names = (values: Array<{ name: string }>) => values.map((item) => item.name).join("、") || "暂无直接关系";
-  const industryAnalysis = impact.industryAnalysis.status === "ready" && impact.industryAnalysis.target && impact.industryAnalysis.simulation
+  const industryAnalysis = impact.industryAnalysis.status === "ready" && impact.industryAnalysis.target && impact.industryAnalysis.text
     ? [
         "",
         `事件影响解读：${impact.industryAnalysis.target.name}`,
-        impact.industryAnalysis.simulation.text,
+        impact.industryAnalysis.text,
       ]
     : [];
   return [
@@ -209,7 +186,7 @@ function CoreProductColumn({ products, expanded }: { products: ImpactCoreProduct
 }
 
 function IndustryAnalysisPanel({ analysis }: { analysis: ImpactIndustryAnalysis }) {
-  if (analysis.status !== "ready" || !analysis.target || !analysis.simulation) {
+  if (analysis.status !== "ready" || !analysis.target || !analysis.text) {
     return null;
   }
 
@@ -221,11 +198,10 @@ function IndustryAnalysisPanel({ analysis }: { analysis: ImpactIndustryAnalysis 
           <span>事件影响解读</span>
           <h3 id="ai-industry-title">为什么影响<strong>{target.name}</strong></h3>
         </div>
-        <em>{analysis.simulation.classification.code} · {analysis.simulation.classification.label}</em>
       </header>
 
       <div className="ai-response">
-        <p>{analysis.simulation.text}</p>
+        <p>{analysis.text}</p>
       </div>
     </section>
   );
