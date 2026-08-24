@@ -120,14 +120,9 @@ function createImpactPlainText(impact: ImpactChainRecord | null) {
   const industryAnalysis = impact.industryAnalysis.status === "ready" && impact.industryAnalysis.target && impact.industryAnalysis.overview && impact.industryAnalysis.impact
     ? [
         "",
-        `产业说明：${impact.industryAnalysis.target.name}`,
-        impact.industryAnalysis.overview,
-        `事件影响：${impact.industryAnalysis.impact.direction}`,
+        `该新闻主要影响的产业为${impact.industryAnalysis.target.name}。${impact.industryAnalysis.overview}`,
+        "",
         impact.industryAnalysis.impact.text,
-        "参考研报：",
-        ...impact.industryAnalysis.researchSources.map(
-          (source) => `- ${source.title}｜${source.institution}｜${source.publishDate}`,
-        ),
       ]
     : [];
   return [
@@ -209,45 +204,15 @@ function IndustryAnalysisPanel({ analysis }: { analysis: ImpactIndustryAnalysis 
   }
 
   const target = analysis.target;
-  const directionClass = analysis.impact.direction === "偏利好"
-    ? "positive"
-    : analysis.impact.direction === "偏利空"
-      ? "negative"
-      : "neutral";
   return (
     <section className="ai-industry-panel" aria-labelledby="ai-industry-title">
       <header className="ai-industry-heading">
-        <div>
-          <span>产业与事件影响</span>
-          <h3 id="ai-industry-title"><strong>{target.name}</strong></h3>
-        </div>
+        <h3 id="ai-industry-title">产业与事件影响</h3>
       </header>
 
-      <div className="ai-analysis-parts">
-        <section>
-          <span>01 · 这个产业是做什么的</span>
-          <p>{analysis.overview}</p>
-        </section>
-        <section>
-          <div className="ai-part-heading">
-            <span>02 · 事件对产业的影响</span>
-            <em className={directionClass}>{analysis.impact.direction}</em>
-          </div>
-          <p>{analysis.impact.text}</p>
-          {analysis.researchSources.length > 0 && (
-            <div className="industry-research-sources">
-              <strong>参考研报</strong>
-              <ol>
-                {analysis.researchSources.map((source) => (
-                  <li key={source.reportId}>
-                    <span>{source.title}</span>
-                    <small>{source.institution} · {formatDate(source.publishDate)}</small>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          )}
-        </section>
+      <div className="ai-analysis-paragraphs">
+        <p><strong>该新闻主要影响的产业为{target.name}。</strong>{analysis.overview}</p>
+        <p>{analysis.impact.text}</p>
       </div>
     </section>
   );

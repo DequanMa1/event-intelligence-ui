@@ -107,3 +107,14 @@ test("keeps the reusable prompt internal instead of publishing it to visitors", 
   const publicPromptUrl = new URL("../public/data/prompts/industry-cognition-stage1-v1.md", import.meta.url);
   await assert.rejects(readFile(publicPromptUrl, "utf8"), { code: "ENOENT" });
 });
+
+test("presents industry analysis as two uninterrupted customer-facing paragraphs", async () => {
+  const pageUrl = new URL("../app/page.tsx", import.meta.url);
+  const page = await readFile(pageUrl, "utf8");
+
+  assert.match(page, /该新闻主要影响的产业为\{target\.name\}。/);
+  assert.match(page, /className="ai-analysis-paragraphs"/);
+  assert.doesNotMatch(page, /01 · 这个产业是做什么的/);
+  assert.doesNotMatch(page, /02 · 事件对产业的影响/);
+  assert.doesNotMatch(page, />参考研报</);
+});
