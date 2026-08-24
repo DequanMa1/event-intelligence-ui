@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26566",
@@ -292,6 +292,18 @@
           "无机氟化合物",
           "高纯四氟化碳"
         ],
+        "level5Industry": {
+          "code": "1200000909",
+          "name": "无机氟化合物"
+        },
+        "level6Industry": {
+          "code": "1200004053",
+          "name": "无机氟化合物"
+        },
+        "level7Product": {
+          "code": "1140077527",
+          "name": "高纯四氟化碳"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -324,6 +336,18 @@
           "刻蚀气体",
           "高纯八氟环丁烷"
         ],
+        "level5Industry": {
+          "code": "1200001267",
+          "name": "电子特种气体"
+        },
+        "level6Industry": {
+          "code": "1200004904",
+          "name": "刻蚀气体"
+        },
+        "level7Product": {
+          "code": "1140077535",
+          "name": "高纯八氟环丁烷"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -361,6 +385,18 @@
           "刻蚀气体",
           "高纯六氟乙烷"
         ],
+        "level5Industry": {
+          "code": "1200001267",
+          "name": "电子特种气体"
+        },
+        "level6Industry": {
+          "code": "1200004904",
+          "name": "刻蚀气体"
+        },
+        "level7Product": {
+          "code": "1140077524",
+          "name": "高纯六氟乙烷"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -398,6 +434,18 @@
           "掺杂气体",
           "硅烷"
         ],
+        "level5Industry": {
+          "code": "1200001267",
+          "name": "电子特种气体"
+        },
+        "level6Industry": {
+          "code": "1200004900",
+          "name": "掺杂气体"
+        },
+        "level7Product": {
+          "code": "1140061645",
+          "name": "硅烷"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -430,6 +478,18 @@
           "刻蚀气体",
           "高纯八氟丙烷"
         ],
+        "level5Industry": {
+          "code": "1200001267",
+          "name": "电子特种气体"
+        },
+        "level6Industry": {
+          "code": "1200004904",
+          "name": "刻蚀气体"
+        },
+        "level7Product": {
+          "code": "1140077538",
+          "name": "高纯八氟丙烷"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -462,6 +522,18 @@
           "外延气体",
           "高纯氨"
         ],
+        "level5Industry": {
+          "code": "1200001267",
+          "name": "电子特种气体"
+        },
+        "level6Industry": {
+          "code": "1200004901",
+          "name": "外延气体"
+        },
+        "level7Product": {
+          "code": "1140077525",
+          "name": "高纯氨"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -494,6 +566,18 @@
           "化学气相沉积气体",
           "高纯氧化亚氮"
         ],
+        "level5Industry": {
+          "code": "1200001267",
+          "name": "电子特种气体"
+        },
+        "level6Industry": {
+          "code": "1200004905",
+          "name": "化学气相沉积气体"
+        },
+        "level7Product": {
+          "code": "1140108036",
+          "name": "高纯氧化亚氮"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -758,10 +842,147 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 7,
+    "target": {
+      "code": "1200001267",
+      "name": "电子特种气体",
+      "description": "电子特气是半导体制造关键材料，被誉为“芯片血液”。因国产替代加速及AI、新能源需求爆发，其战略地位凸显。作为卡脖子环节，技术突破带来高成长预期，成为A股硬科技投资热点。",
+      "coreProductCount": 6,
+      "stockCount": 2,
+      "shareOfLevel7Products": 0.8571,
+      "relevanceScore": 18,
+      "matchedCoreProducts": [
+        {
+          "code": "1140077535",
+          "name": "高纯八氟环丁烷",
+          "stockCount": 2
+        },
+        {
+          "code": "1140077524",
+          "name": "高纯六氟乙烷",
+          "stockCount": 2
+        },
+        {
+          "code": "1140061645",
+          "name": "硅烷",
+          "stockCount": 1
+        },
+        {
+          "code": "1140077538",
+          "name": "高纯八氟丙烷",
+          "stockCount": 1
+        },
+        {
+          "code": "1140108036",
+          "name": "高纯氧化亚氮",
+          "stockCount": 1
+        },
+        {
+          "code": "1140077525",
+          "name": "高纯氨",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001267",
+        "name": "电子特种气体",
+        "description": "电子特气是半导体制造关键材料，被誉为“芯片血液”。因国产替代加速及AI、新能源需求爆发，其战略地位凸显。作为卡脖子环节，技术突破带来高成长预期，成为A股硬科技投资热点。",
+        "coreProductCount": 6,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.8571,
+        "relevanceScore": 18,
+        "matchedCoreProducts": [
+          {
+            "code": "1140077535",
+            "name": "高纯八氟环丁烷",
+            "stockCount": 2
+          },
+          {
+            "code": "1140077524",
+            "name": "高纯六氟乙烷",
+            "stockCount": 2
+          },
+          {
+            "code": "1140061645",
+            "name": "硅烷",
+            "stockCount": 1
+          },
+          {
+            "code": "1140077538",
+            "name": "高纯八氟丙烷",
+            "stockCount": 1
+          },
+          {
+            "code": "1140108036",
+            "name": "高纯氧化亚氮",
+            "stockCount": 1
+          },
+          {
+            "code": "1140077525",
+            "name": "高纯氨",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000909",
+        "name": "无机氟化合物",
+        "description": "无机氟化合物指含氟无机物如氢氟酸。因新能源、半导体需求爆发，其战略地位凸显。投资者关注拥有萤石资源及高端产能的公司，看好其在锂电、芯片产业链中的高成长性与稀缺价值。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 5,
+        "matchedCoreProducts": [
+          {
+            "code": "1140077527",
+            "name": "高纯四氟化碳",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "电子特种气体",
+        "industryDescription": "电子特气是半导体制造关键材料，被誉为“芯片血液”。因国产替代加速及AI、新能源需求爆发，其战略地位凸显。作为卡脖子环节，技术突破带来高成长预期，成为A股硬科技投资热点。",
+        "newsText": "据韩媒报道，因上游石化厂开工率下降，用于半导体先进制程的高纯度二氧化碳（CO2）供应趋紧，三星、SK海力士等存储巨头库存已跌破安全水位。市场认为，在全球晶圆厂加速扩产背景下，多种电子特气已出现供应瓶颈，叠加六氟化钨等产品持续涨价，国产电子特气厂商迎来替代窗口期。"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "产品价格",
+        "供给与库存",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "涨价"
+        ],
+        "basis": "新闻文本命中：涨价"
+      },
+      "text": "电子特种气体可以理解为围绕高纯八氟环丁烷、高纯六氟乙烷、硅烷、高纯八氟丙烷、高纯氧化亚氮等6项形成的五级细分产业，本地图谱对它的解释是“电子特气是半导体制造关键材料，被誉为“芯片血液”。因国产替代加速及AI、新能源需求爆发，其战略地位凸显。作为卡脖子环节，技术突破带来高成长预期，成为A股硬科技投资热点”。把它放回本次事件的产业链，关键链条可以概括为八氟环丁烷、六氟乙烷、LiAlH4、SiCl4等11项 → 电子特种气体 → 光伏能源加工、光纤光缆加工、显示面板加工、集成电路加工等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪产品价格、供给与库存、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“半导体用高纯度二氧化碳供应紧张”在现有语料中主要新增了与产品价格、供给与库存、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是涨价；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "2只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

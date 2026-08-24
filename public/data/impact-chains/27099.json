@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27099",
@@ -127,6 +127,18 @@
           "涤纶民用丝",
           "DTY(拉伸变形丝)"
         ],
+        "level5Industry": {
+          "code": "1200000841",
+          "name": "涤纶长丝"
+        },
+        "level6Industry": {
+          "code": "1210003240",
+          "name": "涤纶民用丝"
+        },
+        "level7Product": {
+          "code": "1140007424",
+          "name": "DTY(拉伸变形丝)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -174,6 +186,18 @@
           "涤纶民用丝",
           "FDY(全拉伸丝)"
         ],
+        "level5Industry": {
+          "code": "1200000841",
+          "name": "涤纶长丝"
+        },
+        "level6Industry": {
+          "code": "1210003240",
+          "name": "涤纶民用丝"
+        },
+        "level7Product": {
+          "code": "1140007404",
+          "name": "FDY(全拉伸丝)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -221,6 +245,18 @@
           "涤纶民用丝",
           "POY(预取向丝)"
         ],
+        "level5Industry": {
+          "code": "1200000841",
+          "name": "涤纶长丝"
+        },
+        "level6Industry": {
+          "code": "1210003240",
+          "name": "涤纶民用丝"
+        },
+        "level7Product": {
+          "code": "1140007423",
+          "name": "POY(预取向丝)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -268,6 +304,18 @@
           "涤纶短纤",
           "涤纶短纤"
         ],
+        "level5Industry": {
+          "code": "1200000842",
+          "name": "涤纶短纤"
+        },
+        "level6Industry": {
+          "code": "1200003892",
+          "name": "涤纶短纤"
+        },
+        "level7Product": {
+          "code": "1130000644",
+          "name": "涤纶短纤"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -300,6 +348,18 @@
           "涤纶民用丝",
           "再生DTY(拉伸变形丝)"
         ],
+        "level5Industry": {
+          "code": "1200000841",
+          "name": "涤纶长丝"
+        },
+        "level6Industry": {
+          "code": "1210003240",
+          "name": "涤纶民用丝"
+        },
+        "level7Product": {
+          "code": "1140177896",
+          "name": "再生DTY(拉伸变形丝)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -332,6 +392,18 @@
           "其他合成纤维",
           "差异化涤纶长丝"
         ],
+        "level5Industry": {
+          "code": "1200000853",
+          "name": "合成纤维"
+        },
+        "level6Industry": {
+          "code": "1210003361",
+          "name": "其他合成纤维"
+        },
+        "level7Product": {
+          "code": "1140192233",
+          "name": "差异化涤纶长丝"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -364,6 +436,18 @@
           "其他石化副产品",
           "PTA(精对苯二甲酸)"
         ],
+        "level5Industry": {
+          "code": "1200000976",
+          "name": "石化制品"
+        },
+        "level6Industry": {
+          "code": "1200005716",
+          "name": "其他石化副产品"
+        },
+        "level7Product": {
+          "code": "1140007402",
+          "name": "PTA(精对苯二甲酸)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -514,9 +598,156 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 7,
+    "target": {
+      "code": "1200000841",
+      "name": "涤纶长丝",
+      "description": "涤纶长丝是纺织核心原料，A股相关龙头如桐昆股份等。因产能集中、景气度与油价及下游需求紧密挂钩，具备强周期属性。市场关注其供需格局改善带来的盈利弹性，以及行业整合下的龙头优势，是观察化工板块景气的重要风向标。",
+      "coreProductCount": 4,
+      "stockCount": 4,
+      "shareOfLevel7Products": 0.5714,
+      "relevanceScore": 20,
+      "matchedCoreProducts": [
+        {
+          "code": "1140007424",
+          "name": "DTY(拉伸变形丝)",
+          "stockCount": 4
+        },
+        {
+          "code": "1140007404",
+          "name": "FDY(全拉伸丝)",
+          "stockCount": 4
+        },
+        {
+          "code": "1140007423",
+          "name": "POY(预取向丝)",
+          "stockCount": 4
+        },
+        {
+          "code": "1140177896",
+          "name": "再生DTY(拉伸变形丝)",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000841",
+        "name": "涤纶长丝",
+        "description": "涤纶长丝是纺织核心原料，A股相关龙头如桐昆股份等。因产能集中、景气度与油价及下游需求紧密挂钩，具备强周期属性。市场关注其供需格局改善带来的盈利弹性，以及行业整合下的龙头优势，是观察化工板块景气的重要风向标。",
+        "coreProductCount": 4,
+        "stockCount": 4,
+        "shareOfLevel7Products": 0.5714,
+        "relevanceScore": 20,
+        "matchedCoreProducts": [
+          {
+            "code": "1140007424",
+            "name": "DTY(拉伸变形丝)",
+            "stockCount": 4
+          },
+          {
+            "code": "1140007404",
+            "name": "FDY(全拉伸丝)",
+            "stockCount": 4
+          },
+          {
+            "code": "1140007423",
+            "name": "POY(预取向丝)",
+            "stockCount": 4
+          },
+          {
+            "code": "1140177896",
+            "name": "再生DTY(拉伸变形丝)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000976",
+        "name": "石化制品",
+        "description": "石化制品指以石油、天然气为原料加工成的塑料、橡胶等基础材料。因处于产业链中游，其价格受原油波动影响大，且与宏观经济紧密相关，故备受投资者关注，常作为观察经济周期和通胀预期的重要风向标。",
+        "coreProductCount": 1,
+        "stockCount": 4,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 3,
+        "matchedCoreProducts": [
+          {
+            "code": "1140007402",
+            "name": "PTA(精对苯二甲酸)",
+            "stockCount": 4
+          }
+        ]
+      },
+      {
+        "code": "1200000853",
+        "name": "合成纤维",
+        "description": "合成纤维指以石油等为原料人工制造的纤维。A股中该行业受关注，因其兼具周期与成长属性：上游原料价格波动影响利润，下游纺织、工业需求强劲，且头部企业凭借规模优势和技术升级，有望在全球供应链重塑中提升份额。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 5,
+        "matchedCoreProducts": [
+          {
+            "code": "1140192233",
+            "name": "差异化涤纶长丝",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000842",
+        "name": "涤纶短纤",
+        "description": "涤纶短纤是聚酯纤维主要品种，广泛用于纺织。A股关注其因产能集中、与原油价格联动紧密，且受下游纺织服装需求及出口影响大。作为周期性化工品，其价格波动直接关系相关上市公司业绩，是观察化纤行业景气度的重要风向标。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 5,
+        "matchedCoreProducts": [
+          {
+            "code": "1130000644",
+            "name": "涤纶短纤",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "涤纶长丝",
+        "industryDescription": "涤纶长丝是纺织核心原料，A股相关龙头如桐昆股份等。因产能集中、景气度与油价及下游需求紧密挂钩，具备强周期属性。市场关注其供需格局改善带来的盈利弹性，以及行业整合下的龙头优势，是观察化工板块景气的重要风向标。",
+        "newsText": "7月6日新凤鸣披露的Q2业绩预告虽符合预期，但最新分析揭示了利润主要由4-5月贡献，6月受油价下跌影响或已计提库存减值，使市场关注点从已兑现的业绩转向未来盈利的持续性。投资视角下，核心在于行业协同减产与下游低库存共同驱动的Q3旺季补库行情能否兑现，若油价企稳，剔除库存减值影响后的真实盈利能力将成为估值修复的关键。 关注：新凤鸣/桐昆股份/恒逸石化（均为涤纶长丝行业龙头，受益于行业协同减产、价差扩大以及下游旺季补库预期），东方盛虹（PTA-涤纶长丝一体化龙头，同样受益于产业链景气回升）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "产品价格",
+        "原材料与成本",
+        "供给与库存"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "涤纶长丝可以理解为围绕DTY(拉伸变形丝)、FDY(全拉伸丝)、POY(预取向丝)、再生DTY(拉伸变形丝)形成的五级细分产业，本地图谱对它的解释是“涤纶长丝是纺织核心原料，A股相关龙头如桐昆股份等。因产能集中、景气度与油价及下游需求紧密挂钩，具备强周期属性。市场关注其供需格局改善带来的盈利弹性，以及行业整合下的龙头优势，是观察化工板块景气的重要风向标”。把它放回本次事件的产业链，关键链条可以概括为二甲苯、磷酸、乙二醇 → 涤纶长丝 → PTA管道、涤纶长丝、交叉型水刺非织造布、热风非织造布等7项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪产品价格、原材料与成本、供给与库存，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“新凤鸣上半年扣非净利预增超120%”在现有语料中主要新增了与产品价格、原材料与成本、供给与库存有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

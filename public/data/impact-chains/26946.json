@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26946",
@@ -320,6 +320,18 @@
           "无尘室工程",
           "洁净室工程"
         ],
+        "level5Industry": {
+          "code": "1210000285",
+          "name": "无尘室工程"
+        },
+        "level6Industry": {
+          "code": "1210000476",
+          "name": "无尘室工程"
+        },
+        "level7Product": {
+          "code": "1140077160",
+          "name": "洁净室工程"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -364,6 +376,18 @@
           "钢结构制造",
           "空间钢结构"
         ],
+        "level5Industry": {
+          "code": "1210000281",
+          "name": "钢结构制造"
+        },
+        "level6Industry": {
+          "code": "1210000472",
+          "name": "钢结构制造"
+        },
+        "level7Product": {
+          "code": "1140058852",
+          "name": "空间钢结构"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -398,6 +422,18 @@
           "钢结构制造",
           "建筑钢结构"
         ],
+        "level5Industry": {
+          "code": "1210000281",
+          "name": "钢结构制造"
+        },
+        "level6Industry": {
+          "code": "1210000472",
+          "name": "钢结构制造"
+        },
+        "level7Product": {
+          "code": "1140060387",
+          "name": "建筑钢结构"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -432,6 +468,18 @@
           "钢结构制造",
           "钢结构围护"
         ],
+        "level5Industry": {
+          "code": "1210000281",
+          "name": "钢结构制造"
+        },
+        "level6Industry": {
+          "code": "1210000472",
+          "name": "钢结构制造"
+        },
+        "level7Product": {
+          "code": "1140058847",
+          "name": "钢结构围护"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -466,6 +514,18 @@
           "钢结构制造",
           "设备钢结构"
         ],
+        "level5Industry": {
+          "code": "1210000281",
+          "name": "钢结构制造"
+        },
+        "level6Industry": {
+          "code": "1210000472",
+          "name": "钢结构制造"
+        },
+        "level7Product": {
+          "code": "1140058867",
+          "name": "设备钢结构"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -500,6 +560,18 @@
           "钢结构制造",
           "桥梁钢结构"
         ],
+        "level5Industry": {
+          "code": "1210000281",
+          "name": "钢结构制造"
+        },
+        "level6Industry": {
+          "code": "1210000472",
+          "name": "钢结构制造"
+        },
+        "level7Product": {
+          "code": "1140033689",
+          "name": "桥梁钢结构"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -756,9 +828,134 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 6,
+    "target": {
+      "code": "1210000281",
+      "name": "钢结构制造",
+      "description": "钢结构制造指以钢材为主要承重构件的建筑产业。其因契合装配式建筑政策、具备绿色低碳及施工高效优势而受关注。在基建提速与“双碳”背景下，行业龙头凭借技术壁垒和市场份额扩大，成为A股中兼具成长性与确定性的细分赛道。",
+      "coreProductCount": 5,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.8333,
+      "relevanceScore": 55,
+      "matchedCoreProducts": [
+        {
+          "code": "1140060387",
+          "name": "建筑钢结构",
+          "stockCount": 1
+        },
+        {
+          "code": "1140033689",
+          "name": "桥梁钢结构",
+          "stockCount": 1
+        },
+        {
+          "code": "1140058852",
+          "name": "空间钢结构",
+          "stockCount": 1
+        },
+        {
+          "code": "1140058867",
+          "name": "设备钢结构",
+          "stockCount": 1
+        },
+        {
+          "code": "1140058847",
+          "name": "钢结构围护",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210000281",
+        "name": "钢结构制造",
+        "description": "钢结构制造指以钢材为主要承重构件的建筑产业。其因契合装配式建筑政策、具备绿色低碳及施工高效优势而受关注。在基建提速与“双碳”背景下，行业龙头凭借技术壁垒和市场份额扩大，成为A股中兼具成长性与确定性的细分赛道。",
+        "coreProductCount": 5,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.8333,
+        "relevanceScore": 55,
+        "matchedCoreProducts": [
+          {
+            "code": "1140060387",
+            "name": "建筑钢结构",
+            "stockCount": 1
+          },
+          {
+            "code": "1140033689",
+            "name": "桥梁钢结构",
+            "stockCount": 1
+          },
+          {
+            "code": "1140058852",
+            "name": "空间钢结构",
+            "stockCount": 1
+          },
+          {
+            "code": "1140058867",
+            "name": "设备钢结构",
+            "stockCount": 1
+          },
+          {
+            "code": "1140058847",
+            "name": "钢结构围护",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000285",
+        "name": "无尘室工程",
+        "description": "无尘室工程指构建低微粒污染环境的特种建设。因半导体、生物医药等高端制造对洁净度要求极高，该领域具备高技术壁垒与刚性需求。投资者关注相关公司，旨在捕捉产业升级红利及头部企业在高景气赛道中的稳定增长潜力。",
+        "coreProductCount": 1,
+        "stockCount": 3,
+        "shareOfLevel7Products": 0.1667,
+        "relevanceScore": 12,
+        "matchedCoreProducts": [
+          {
+            "code": "1140077160",
+            "name": "洁净室工程",
+            "stockCount": 3
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "钢结构制造",
+        "industryDescription": "钢结构制造指以钢材为主要承重构件的建筑产业。其因契合装配式建筑政策、具备绿色低碳及施工高效优势而受关注。在基建提速与“双碳”背景下，行业龙头凭借技术壁垒和市场份额扩大，成为A股中兼具成长性与确定性的细分赛道。",
+        "newsText": "昨晚（7月3日）鸿路钢构披露的Q2经营数据显示，新签订单额与产量双双创下历史新高，印证了数据中心、新能源等新质生产力需求的旺盛。这一数据落地，彻底坐实了公司量价齐升的盈利拐点，市场预期从之前的博弈反转，转向交易Q2业绩高增的确定性，并对机器人降本增效和转债到期带来的中期赔率有了更高期待。 关注：鸿路钢构（盈利拐点确认，Q2业绩高增预期强），精工钢构（业务出海及高股息逻辑），利柏特（核电模块化订单预期，低位成长逻辑），亚翔集成/柏诚股份（受益于半导体等高端制造业资本开支）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "量价齐升"
+        ],
+        "basis": "新闻文本命中：量价齐升"
+      },
+      "text": "钢结构制造可以理解为围绕建筑钢结构、桥梁钢结构、空间钢结构、设备钢结构、钢结构围护形成的五级细分产业，本地图谱对它的解释是“钢结构制造指以钢材为主要承重构件的建筑产业。其因契合装配式建筑政策、具备绿色低碳及施工高效优势而受关注。在基建提速与“双碳”背景下，行业龙头凭借技术壁垒和市场份额扩大，成为A股中兼具成长性与确定性的细分赛道”。把它放回本次事件的产业链，关键链条可以概括为型钢、钢板、工程技术人员、工程设备等14项 → 钢结构制造 → 住宅、商业类建筑、云计算中心建设、半导体厂房建设等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“鸿路钢构Q2新签订单创历史新高”在现有语料中主要新增了与下游需求与订单有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是量价齐升；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

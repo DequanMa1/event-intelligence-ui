@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27216",
@@ -272,6 +272,18 @@
           "含氟制冷剂",
           "R32制冷剂"
         ],
+        "level5Industry": {
+          "code": "1200000907",
+          "name": "含氟制冷剂"
+        },
+        "level6Industry": {
+          "code": "1200004049",
+          "name": "含氟制冷剂"
+        },
+        "level7Product": {
+          "code": "1140191902",
+          "name": "R32制冷剂"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -305,6 +317,18 @@
           "含氟制冷剂",
           "R410A制冷剂"
         ],
+        "level5Industry": {
+          "code": "1200000907",
+          "name": "含氟制冷剂"
+        },
+        "level6Industry": {
+          "code": "1200004049",
+          "name": "含氟制冷剂"
+        },
+        "level7Product": {
+          "code": "1140153982",
+          "name": "R410A制冷剂"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -331,6 +355,18 @@
         "name": "制冷剂",
         "hierarchyPath": "",
         "industryPath": [],
+        "level5Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level6Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level7Product": {
+          "code": "",
+          "name": ""
+        },
         "matchedSourceLevel": 0,
         "mappingType": "semantic_bridge",
         "bridgeBasis": "company_product:R32制冷剂",
@@ -416,11 +452,94 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 2,
+    "target": {
+      "code": "1200000907",
+      "name": "含氟制冷剂",
+      "description": "含氟制冷剂是空调等核心冷媒。因《基加利修正案》实施，三代制冷剂配额冻结，供给受限而需求刚性，行业进入高景气周期，龙头企掌握定价权，盈利大幅改善，故受A股资金高度关注。",
+      "coreProductCount": 2,
+      "stockCount": 1,
+      "shareOfLevel7Products": 1.0,
+      "relevanceScore": 26,
+      "matchedCoreProducts": [
+        {
+          "code": "1140191902",
+          "name": "R32制冷剂",
+          "stockCount": 1
+        },
+        {
+          "code": "1140153982",
+          "name": "R410A制冷剂",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000907",
+        "name": "含氟制冷剂",
+        "description": "含氟制冷剂是空调等核心冷媒。因《基加利修正案》实施，三代制冷剂配额冻结，供给受限而需求刚性，行业进入高景气周期，龙头企掌握定价权，盈利大幅改善，故受A股资金高度关注。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 1.0,
+        "relevanceScore": 26,
+        "matchedCoreProducts": [
+          {
+            "code": "1140191902",
+            "name": "R32制冷剂",
+            "stockCount": 1
+          },
+          {
+            "code": "1140153982",
+            "name": "R410A制冷剂",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "含氟制冷剂",
+        "industryDescription": "含氟制冷剂是空调等核心冷媒。因《基加利修正案》实施，三代制冷剂配额冻结，供给受限而需求刚性，行业进入高景气周期，龙头企掌握定价权，盈利大幅改善，故受A股资金高度关注。",
+        "newsText": "三季度制冷剂长协价格已于7月4日前后落地，其中R32、R410a报价分别明确上调至6.45和5.95万元/吨，季度环比涨幅超越Q2，兑现并强化了旺季涨价预期。这一超预期的涨价幅度，再次印证了配额制下供给刚性与头部企业协同挺价带来的强定价权，在海外补库需求与国内旺季支撑下，行业下半年量价齐升、盈利能力持续走强的确定性得到进一步巩固。 关注：巨化股份/三美股份/昊华科技/东岳集团/永和股份/东阳光（作为拥有三代制冷剂配额的核心生产商，直接受益于产品价格上涨带来的盈利高弹性）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产品价格",
+        "供给与库存",
+        "出口与海外需求"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "涨价",
+          "量价齐升"
+        ],
+        "basis": "新闻文本命中：涨价、量价齐升"
+      },
+      "text": "含氟制冷剂可以理解为围绕R32制冷剂、R410A制冷剂形成的五级细分产业，本地图谱对它的解释是“含氟制冷剂是空调等核心冷媒。因《基加利修正案》实施，三代制冷剂配额冻结，供给受限而需求刚性，行业进入高景气周期，龙头企掌握定价权，盈利大幅改善，故受A股资金高度关注”。把它放回本次事件的产业链，关键链条可以概括为1,1,1,2-四氟乙烷(HFC-134a)、三氟乙烷、三氟乙烷(HFC-143a)、三氟甲烷(HFC-23)等12项 → 含氟制冷剂 → 冰吧、冰柜、冰箱、汽车空调养护产品代理，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产品价格、供给与库存、出口与海外需求，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“传三季度R32和R410a长协价将继续上涨”在现有语料中主要新增了与下游需求与订单、产品价格、供给与库存、出口与海外需求有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是涨价、量价齐升；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
     "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "1只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

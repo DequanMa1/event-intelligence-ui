@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "no_company_product_mapping",
   "event": {
     "mainId": "27298",
@@ -159,10 +159,24 @@
     "core": [],
     "downstream": []
   },
+  "industryAnalysis": {
+    "status": "unavailable",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并，优先选择核心产品数量最多者",
+    "sourceLevel7ProductCount": 0,
+    "target": null,
+    "candidates": [],
+    "prompt": null,
+    "simulation": null,
+    "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "7只4星标的未在本地公司产品图谱中穿透。"
+    "7只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

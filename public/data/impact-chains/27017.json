@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27017",
@@ -384,6 +384,18 @@
           "水力发电",
           "水力发电"
         ],
+        "level5Industry": {
+          "code": "1200000642",
+          "name": "水力发电"
+        },
+        "level6Industry": {
+          "code": "1200003525",
+          "name": "水力发电"
+        },
+        "level7Product": {
+          "code": "1140077781",
+          "name": "水力发电"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -433,6 +445,18 @@
           "燃煤发电",
           "燃煤发电"
         ],
+        "level5Industry": {
+          "code": "1200000636",
+          "name": "燃煤发电"
+        },
+        "level6Industry": {
+          "code": "1200003519",
+          "name": "燃煤发电"
+        },
+        "level7Product": {
+          "code": "1140084062",
+          "name": "燃煤发电"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -466,6 +490,18 @@
           "食品饮料贸易",
           "白砂糖贸易"
         ],
+        "level5Industry": {
+          "code": "1200001163",
+          "name": "消费品贸易"
+        },
+        "level6Industry": {
+          "code": "1200004662",
+          "name": "食品饮料贸易"
+        },
+        "level7Product": {
+          "code": "1140027402",
+          "name": "白砂糖贸易"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -521,9 +557,109 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 3,
+    "target": {
+      "code": "1200000642",
+      "name": "水力发电",
+      "description": "水力发电指利用水能转化为电能。A股中该板块因现金流稳定、高分红及低碳属性受青睐，兼具防御性与“双碳”政策红利，是稳健投资的重要选择，尤其在水资源丰富地区优势显著。",
+      "coreProductCount": 1,
+      "stockCount": 4,
+      "shareOfLevel7Products": 0.3333,
+      "relevanceScore": 12,
+      "matchedCoreProducts": [
+        {
+          "code": "1140077781",
+          "name": "水力发电",
+          "stockCount": 4
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000642",
+        "name": "水力发电",
+        "description": "水力发电指利用水能转化为电能。A股中该板块因现金流稳定、高分红及低碳属性受青睐，兼具防御性与“双碳”政策红利，是稳健投资的重要选择，尤其在水资源丰富地区优势显著。",
+        "coreProductCount": 1,
+        "stockCount": 4,
+        "shareOfLevel7Products": 0.3333,
+        "relevanceScore": 12,
+        "matchedCoreProducts": [
+          {
+            "code": "1140077781",
+            "name": "水力发电",
+            "stockCount": 4
+          }
+        ]
+      },
+      {
+        "code": "1200000636",
+        "name": "燃煤发电",
+        "description": "燃煤发电指利用煤炭燃烧产生电能。作为A股电力基石，其因具备兜底保供能力、高股息属性及“煤电联动”带来的盈利弹性而受关注。在能源转型期，它既是稳定器，也是价值投资的重要标的。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.3333,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140084062",
+            "name": "燃煤发电",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001163",
+        "name": "消费品贸易",
+        "description": "消费品贸易指从事日用商品进出口及国内流通的企业。因直接关联内需与出口，受宏观经济、汇率及消费政策影响显著，是观察经济活力的重要窗口，故备受市场关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.3333,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140027402",
+            "name": "白砂糖贸易",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "水力发电",
+        "industryDescription": "水力发电指利用水能转化为电能。A股中该板块因现金流稳定、高分红及低碳属性受青睐，兼具防御性与“双碳”政策红利，是稳健投资的重要选择，尤其在水资源丰富地区优势显著。",
+        "newsText": "截至7月5日晚间，最新披露的Q2水电发电量数据显示长江流域来水已兑现增长，而雅砻江流域因前期偏枯表现疲软，但这反而为三季度主汛期创造了极低的基数。市场正积极交易这一预期差，认为随着厄尔尼诺现象在夏秋季达到峰值，西南水电的发电量将迎来强劲的边际改善，水电资产的投资逻辑已从单纯的高股息防御，转向叠加了来水周期性反转带来的盈利弹性。 关注：长江电力/川投能源/国投电力（核心水电资产，直接受益于南方降水增加预期，且前期低基数有望带来业绩高弹性），华能水电/桂冠电力/黔源电力（所在流域同样受益于降水偏丰预期，具备估值修复潜力），棕榈油/白糖/天然橡胶等农产品题材（厄尔尼诺或致东南亚主产区干旱，引发供给收缩和价格上涨预期）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "产品价格",
+        "供给与库存"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "水力发电可以理解为围绕水力发电形成的五级细分产业，本地图谱对它的解释是“水力发电指利用水能转化为电能。A股中该板块因现金流稳定、高分红及低碳属性受青睐，兼具防御性与“双碳”政策红利，是稳健投资的重要选择，尤其在水资源丰富地区优势显著”。把它放回本次事件的产业链，关键链条可以概括为主阀、压力钢管、导翼、数据采集器等14项 → 水力发电 → 电力、火力发电厂，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪产品价格、供给与库存，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“厄尔尼诺现象或致我国南方降水增加”在现有语料中主要新增了与产品价格、供给与库存有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

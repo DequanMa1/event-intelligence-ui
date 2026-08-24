@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27057",
@@ -323,6 +323,18 @@
           "计算控制芯片",
           "服务器CPU"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1210003412",
+          "name": "计算控制芯片"
+        },
+        "level7Product": {
+          "code": "1140007907",
+          "name": "服务器CPU"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -362,6 +374,18 @@
           "计算控制芯片",
           "工作站CPU"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1210003412",
+          "name": "计算控制芯片"
+        },
+        "level7Product": {
+          "code": "1140170230",
+          "name": "工作站CPU"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -395,6 +419,18 @@
           "计算控制芯片",
           "数据中心CPU"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1210003412",
+          "name": "计算控制芯片"
+        },
+        "level7Product": {
+          "code": "1140215344",
+          "name": "数据中心CPU"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -428,6 +464,18 @@
           "服务器",
           "AI服务器"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005136",
+          "name": "服务器"
+        },
+        "level7Product": {
+          "code": "1140112576",
+          "name": "AI服务器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -461,6 +509,18 @@
           "计算机电源",
           "服务器电源"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005137",
+          "name": "计算机电源"
+        },
+        "level7Product": {
+          "code": "1140014459",
+          "name": "服务器电源"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -494,6 +554,18 @@
           "计算机整机",
           "台式计算机"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005144",
+          "name": "计算机整机"
+        },
+        "level7Product": {
+          "code": "1140024026",
+          "name": "台式计算机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -527,6 +599,18 @@
           "服务器",
           "通用服务器"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005136",
+          "name": "服务器"
+        },
+        "level7Product": {
+          "code": "1140119057",
+          "name": "通用服务器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -560,6 +644,18 @@
           "计算机整机",
           "一体台式电脑"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005144",
+          "name": "计算机整机"
+        },
+        "level7Product": {
+          "code": "1140204656",
+          "name": "一体台式电脑"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -809,10 +905,149 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 8,
+    "target": {
+      "code": "1200001368",
+      "name": "硬件设备",
+      "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+      "coreProductCount": 5,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.625,
+      "relevanceScore": 45,
+      "matchedCoreProducts": [
+        {
+          "code": "1140112576",
+          "name": "AI服务器",
+          "stockCount": 1
+        },
+        {
+          "code": "1140204656",
+          "name": "一体台式电脑",
+          "stockCount": 1
+        },
+        {
+          "code": "1140024026",
+          "name": "台式计算机",
+          "stockCount": 1
+        },
+        {
+          "code": "1140014459",
+          "name": "服务器电源",
+          "stockCount": 1
+        },
+        {
+          "code": "1140119057",
+          "name": "通用服务器",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001368",
+        "name": "硬件设备",
+        "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "coreProductCount": 5,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.625,
+        "relevanceScore": 45,
+        "matchedCoreProducts": [
+          {
+            "code": "1140112576",
+            "name": "AI服务器",
+            "stockCount": 1
+          },
+          {
+            "code": "1140204656",
+            "name": "一体台式电脑",
+            "stockCount": 1
+          },
+          {
+            "code": "1140024026",
+            "name": "台式计算机",
+            "stockCount": 1
+          },
+          {
+            "code": "1140014459",
+            "name": "服务器电源",
+            "stockCount": 1
+          },
+          {
+            "code": "1140119057",
+            "name": "通用服务器",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "coreProductCount": 3,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.375,
+        "relevanceScore": 39,
+        "matchedCoreProducts": [
+          {
+            "code": "1140007907",
+            "name": "服务器CPU",
+            "stockCount": 2
+          },
+          {
+            "code": "1140170230",
+            "name": "工作站CPU",
+            "stockCount": 1
+          },
+          {
+            "code": "1140215344",
+            "name": "数据中心CPU",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "硬件设备",
+        "industryDescription": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "newsText": "在过去24小时内，市场对英特尔7月初的服务器CPU涨价达成了新的共识：此次调价并非成本传导，而是由AI Agent等应用驱动的结构性供需失衡所引发的行业性价格重估，标志着CPU进入量价齐升周期。这一变化验证了AI服务器中CPU与GPU配比将加速提升的逻辑，由此产生的全球供给缺口正为国产CPU厂商打开前所未有的市场替代窗口，其在国内云厂商中的渗透率有望实现翻倍增长。 关注：海光信息/中科曙光（国产X86 CPU核心标的，直接受益于海外供给短缺和价格上涨带来的国产替代加速逻辑），浪潮信息/紫光股份（服务器整机厂商，受益于整体算力需求提升及供应链管理能力），澜起科技（内存接口芯片龙头，受益于服务器平台升级和出货量增长），芯原股份（一站式芯片定制服务商，受益于云厂商自研CPU/ASIC的趋势）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产品价格",
+        "原材料与成本",
+        "供给与库存",
+        "出口与海外需求"
+      ],
+      "classification": {
+        "code": "A",
+        "label": "产业趋势变化",
+        "matchedSignals": [
+          "渗透率"
+        ],
+        "basis": "新闻文本命中：渗透率"
+      },
+      "text": "硬件设备可以理解为围绕AI服务器、一体台式电脑、台式计算机、服务器电源、通用服务器形成的五级细分产业，本地图谱对它的解释是“硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道”。把它放回本次事件的产业链，关键链条可以概括为中央处理器(CPU)、主板、变压器、散热片等14项 → 硬件设备 → NAS存储服务器、智慧海关(含原检验检疫)查验系统、智能交通、智能系统维护等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产品价格、原材料与成本、供给与库存、出口与海外需求，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“英特尔7月上调部分服务器CPU价格”在现有语料中主要新增了与下游需求与订单、产品价格、原材料与成本、供给与库存、出口与海外需求有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为A类“产业趋势变化”，依据是渗透率；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "1只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

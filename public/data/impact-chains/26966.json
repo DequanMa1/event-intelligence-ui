@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26966",
@@ -481,6 +481,18 @@
           "中型卡车",
           "中型卡车"
         ],
+        "level5Industry": {
+          "code": "1210000602",
+          "name": "燃油货车"
+        },
+        "level6Industry": {
+          "code": "1200004652",
+          "name": "中型卡车"
+        },
+        "level7Product": {
+          "code": "1140135961",
+          "name": "中型卡车"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -513,6 +525,18 @@
           "轻型卡车",
           "轻型卡车"
         ],
+        "level5Industry": {
+          "code": "1210000602",
+          "name": "燃油货车"
+        },
+        "level6Industry": {
+          "code": "1200004651",
+          "name": "轻型卡车"
+        },
+        "level7Product": {
+          "code": "1140135916",
+          "name": "轻型卡车"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -545,6 +569,18 @@
           "重型卡车（重卡）",
           "重型卡车(重卡)"
         ],
+        "level5Industry": {
+          "code": "1210000602",
+          "name": "燃油货车"
+        },
+        "level6Industry": {
+          "code": "1200004653",
+          "name": "重型卡车（重卡）"
+        },
+        "level7Product": {
+          "code": "1140135962",
+          "name": "重型卡车(重卡)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -577,6 +613,18 @@
           "轻型卡车",
           "燃油皮卡"
         ],
+        "level5Industry": {
+          "code": "1210000602",
+          "name": "燃油货车"
+        },
+        "level6Industry": {
+          "code": "1200004651",
+          "name": "轻型卡车"
+        },
+        "level7Product": {
+          "code": "1140136018",
+          "name": "燃油皮卡"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -609,6 +657,18 @@
           "新能源货车",
           "纯电动皮卡"
         ],
+        "level5Industry": {
+          "code": "1210000603",
+          "name": "新能源货车"
+        },
+        "level6Industry": {
+          "code": "1210000611",
+          "name": "新能源货车"
+        },
+        "level7Product": {
+          "code": "1140057430",
+          "name": "纯电动皮卡"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -641,6 +701,18 @@
           "油电混动新能源乘用车",
           "油电混动新能源乘用车"
         ],
+        "level5Industry": {
+          "code": "1200001159",
+          "name": "新能源乘用车"
+        },
+        "level6Industry": {
+          "code": "1200004648",
+          "name": "油电混动新能源乘用车"
+        },
+        "level7Product": {
+          "code": "1140135870",
+          "name": "油电混动新能源乘用车"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -678,6 +750,18 @@
           "纯电动新能源乘用车",
           "纯电动新能源乘用车"
         ],
+        "level5Industry": {
+          "code": "1200001159",
+          "name": "新能源乘用车"
+        },
+        "level6Industry": {
+          "code": "1200004647",
+          "name": "纯电动新能源乘用车"
+        },
+        "level7Product": {
+          "code": "1140131416",
+          "name": "纯电动新能源乘用车"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -715,6 +799,18 @@
           "燃油运动型多用途乘用车（SUV）",
           "燃油运动型多用途乘用车(SUV)"
         ],
+        "level5Industry": {
+          "code": "1200001158",
+          "name": "燃油型乘用车"
+        },
+        "level6Industry": {
+          "code": "1200004644",
+          "name": "燃油运动型多用途乘用车（SUV）"
+        },
+        "level7Product": {
+          "code": "1140131415",
+          "name": "燃油运动型多用途乘用车(SUV)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -747,6 +843,18 @@
           "燃油轿车",
           "燃油轿车"
         ],
+        "level5Industry": {
+          "code": "1200001158",
+          "name": "燃油型乘用车"
+        },
+        "level6Industry": {
+          "code": "1200004643",
+          "name": "燃油轿车"
+        },
+        "level7Product": {
+          "code": "1140131414",
+          "name": "燃油轿车"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -815,10 +923,166 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 9,
+    "target": {
+      "code": "1210000602",
+      "name": "燃油货车",
+      "description": "燃油货车指以柴油等化石燃料为动力的货运车辆。投资者关注相关车企及产业链，因其受物流景气度、排放标准升级及新能源替代进程影响显著，具备周期性波动与转型机遇，是判断宏观运输需求及行业技术迭代的重要风向标。",
+      "coreProductCount": 4,
+      "stockCount": 2,
+      "shareOfLevel7Products": 0.4444,
+      "relevanceScore": 16,
+      "matchedCoreProducts": [
+        {
+          "code": "1140135961",
+          "name": "中型卡车",
+          "stockCount": 1
+        },
+        {
+          "code": "1140136018",
+          "name": "燃油皮卡",
+          "stockCount": 1
+        },
+        {
+          "code": "1140135916",
+          "name": "轻型卡车",
+          "stockCount": 1
+        },
+        {
+          "code": "1140135962",
+          "name": "重型卡车(重卡)",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210000602",
+        "name": "燃油货车",
+        "description": "燃油货车指以柴油等化石燃料为动力的货运车辆。投资者关注相关车企及产业链，因其受物流景气度、排放标准升级及新能源替代进程影响显著，具备周期性波动与转型机遇，是判断宏观运输需求及行业技术迭代的重要风向标。",
+        "coreProductCount": 4,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.4444,
+        "relevanceScore": 16,
+        "matchedCoreProducts": [
+          {
+            "code": "1140135961",
+            "name": "中型卡车",
+            "stockCount": 1
+          },
+          {
+            "code": "1140136018",
+            "name": "燃油皮卡",
+            "stockCount": 1
+          },
+          {
+            "code": "1140135916",
+            "name": "轻型卡车",
+            "stockCount": 1
+          },
+          {
+            "code": "1140135962",
+            "name": "重型卡车(重卡)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001159",
+        "name": "新能源乘用车",
+        "description": "新能源乘用车指纯电或插混等家用汽车。因契合“双碳”战略、技术迭代快及政策强力支持，兼具高成长性与广阔市场空间，成为A股核心赛道，备受资金青睐。",
+        "coreProductCount": 2,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.2222,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140135870",
+            "name": "油电混动新能源乘用车",
+            "stockCount": 2
+          },
+          {
+            "code": "1140131416",
+            "name": "纯电动新能源乘用车",
+            "stockCount": 2
+          }
+        ]
+      },
+      {
+        "code": "1200001158",
+        "name": "燃油型乘用车",
+        "description": "燃油型乘用车指传统内燃机驱动的汽车板块。其受关注源于高股息、低估值及稳定现金流，常被视为防御性资产；同时受油价波动、新能源替代压力及政策影响，是观察汽车产业转型与市场风格切换的重要风向标。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2222,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140131414",
+            "name": "燃油轿车",
+            "stockCount": 1
+          },
+          {
+            "code": "1140131415",
+            "name": "燃油运动型多用途乘用车(SUV)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000603",
+        "name": "新能源货车",
+        "description": "新能源货车指以电力等清洁能源驱动的商用车辆。受“双碳”政策、路权优势及TCO降低驱动，其渗透率快速提升。作为绿色物流核心载体，该行业兼具政策红利与市场潜力，成为A股关注焦点。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1111,
+        "relevanceScore": 4,
+        "matchedCoreProducts": [
+          {
+            "code": "1140057430",
+            "name": "纯电动皮卡",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "燃油货车",
+        "industryDescription": "燃油货车指以柴油等化石燃料为动力的货运车辆。投资者关注相关车企及产业链，因其受物流景气度、排放标准升级及新能源替代进程影响显著，具备周期性波动与转型机遇，是判断宏观运输需求及行业技术迭代的重要风向标。",
+        "newsText": "在7月1日吉利汽车公布6月销量数据后，市场关注点在过去24小时内已从其2%的平淡总销量增长，迅速转向其内部“总量微增、结构暴击”的剧变。面对国内市场的存量博弈，吉利单月出口首次突破10万辆大关，同比猛增157%，这标志着高毛利业务占比正急剧攀升，单车盈利面临实质性跃升，而当前不足8倍的估值尚未完全计入这一核心盈利弹性，构成了显著的预期差。 关注：吉利汽车/极氪（受益于出海爆发及高端化带动单车利润跃升），比亚迪/长城汽车（同为汽车出海核心标的）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "出口与海外需求"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "燃油货车可以理解为围绕中型卡车、燃油皮卡、轻型卡车、重型卡车(重卡)形成的五级细分产业，本地图谱对它的解释是“燃油货车指以柴油等化石燃料为动力的货运车辆。投资者关注相关车企及产业链，因其受物流景气度、排放标准升级及新能源替代进程影响显著，具备周期性波动与转型机遇，是判断宏观运输需求及行业技术迭代的重要风向标”。把它放回本次事件的产业链，关键链条可以概括为汽车发动机排气系统、汽车发动机进气系统、AFS自适应控制器、AVS执行器等14项 → 燃油货车 → 消费者、货运，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、出口与海外需求，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“吉利汽车6月出口销量同比大增157%”在现有语料中主要新增了与下游需求与订单、出口与海外需求有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "1只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

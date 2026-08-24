@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27115",
@@ -400,6 +400,18 @@
           "火电站用锅炉",
           "燃气-蒸汽联合循环发电用余热锅炉(HRSG)"
         ],
+        "level5Industry": {
+          "code": "1200000337",
+          "name": "火电站用锅炉"
+        },
+        "level6Industry": {
+          "code": "1210000587",
+          "name": "火电站用锅炉"
+        },
+        "level7Product": {
+          "code": "1140088917",
+          "name": "燃气-蒸汽联合循环发电用余热锅炉(HRSG)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -433,6 +445,18 @@
           "高温合金",
           "铸造高温合金"
         ],
+        "level5Industry": {
+          "code": "1210000308",
+          "name": "特种合金"
+        },
+        "level6Industry": {
+          "code": "1210000515",
+          "name": "高温合金"
+        },
+        "level7Product": {
+          "code": "1140008598",
+          "name": "铸造高温合金"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -472,6 +496,18 @@
           "高温合金",
           "变形高温合金"
         ],
+        "level5Industry": {
+          "code": "1210000308",
+          "name": "特种合金"
+        },
+        "level6Industry": {
+          "code": "1210000515",
+          "name": "高温合金"
+        },
+        "level7Product": {
+          "code": "1140008599",
+          "name": "变形高温合金"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -511,6 +547,18 @@
           "火电站用锅炉",
           "燃气-蒸汽联合循环发电设备(GTCC)"
         ],
+        "level5Industry": {
+          "code": "1200000337",
+          "name": "火电站用锅炉"
+        },
+        "level6Industry": {
+          "code": "1210000587",
+          "name": "火电站用锅炉"
+        },
+        "level7Product": {
+          "code": "1140166344",
+          "name": "燃气-蒸汽联合循环发电设备(GTCC)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -543,6 +591,18 @@
           "航空发动机",
           "航空发动机压气机叶片"
         ],
+        "level5Industry": {
+          "code": "1200000398",
+          "name": "航空发动机"
+        },
+        "level6Industry": {
+          "code": "1200002834",
+          "name": "航空发动机"
+        },
+        "level7Product": {
+          "code": "1140128115",
+          "name": "航空发动机压气机叶片"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -575,6 +635,18 @@
           "海上风电机组",
           "海上风电机组"
         ],
+        "level5Industry": {
+          "code": "1210000357",
+          "name": "海上风电机组"
+        },
+        "level6Industry": {
+          "code": "1210000584",
+          "name": "海上风电机组"
+        },
+        "level7Product": {
+          "code": "1140105863",
+          "name": "海上风电机组"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -612,6 +684,18 @@
           "陆上风电机组",
           "陆上风电机组"
         ],
+        "level5Industry": {
+          "code": "1210000358",
+          "name": "陆上风电机组"
+        },
+        "level6Industry": {
+          "code": "1210000585",
+          "name": "陆上风电机组"
+        },
+        "level7Product": {
+          "code": "1140150862",
+          "name": "陆上风电机组"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -883,10 +967,159 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 7,
+    "target": {
+      "code": "1200000337",
+      "name": "火电站用锅炉",
+      "description": "该行业指制造火力发电核心设备锅炉的企业。受关注因其在能源转型中承担调峰保供重任，且受益于煤电灵活性改造及出海需求增长。作为电力稳定器，其技术升级与市场扩容使其成为兼具防御性与成长性的细分赛道。",
+      "coreProductCount": 2,
+      "stockCount": 2,
+      "shareOfLevel7Products": 0.2857,
+      "relevanceScore": 24,
+      "matchedCoreProducts": [
+        {
+          "code": "1140088917",
+          "name": "燃气-蒸汽联合循环发电用余热锅炉(HRSG)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140166344",
+          "name": "燃气-蒸汽联合循环发电设备(GTCC)",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000337",
+        "name": "火电站用锅炉",
+        "description": "该行业指制造火力发电核心设备锅炉的企业。受关注因其在能源转型中承担调峰保供重任，且受益于煤电灵活性改造及出海需求增长。作为电力稳定器，其技术升级与市场扩容使其成为兼具防御性与成长性的细分赛道。",
+        "coreProductCount": 2,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.2857,
+        "relevanceScore": 24,
+        "matchedCoreProducts": [
+          {
+            "code": "1140088917",
+            "name": "燃气-蒸汽联合循环发电用余热锅炉(HRSG)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140166344",
+            "name": "燃气-蒸汽联合循环发电设备(GTCC)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000308",
+        "name": "特种合金",
+        "description": "特种合金指具备耐高温、耐腐蚀等优异性能的金属材料。因广泛应用于航空航天、核电及军工等高精尖领域，契合国产替代与高端制造升级趋势，技术壁垒高且需求刚性，故在A股备受资金关注。",
+        "coreProductCount": 2,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.2857,
+        "relevanceScore": 24,
+        "matchedCoreProducts": [
+          {
+            "code": "1140008599",
+            "name": "变形高温合金",
+            "stockCount": 2
+          },
+          {
+            "code": "1140008598",
+            "name": "铸造高温合金",
+            "stockCount": 2
+          }
+        ]
+      },
+      {
+        "code": "1210000357",
+        "name": "海上风电机组",
+        "description": "海上风电指在近海建设的风电项目。因风资源优、不占地、靠近负荷中心且受“双碳”政策驱动，装机增速快。A股相关涵盖整机、海缆等龙头，凭借高壁垒和高成长预期，成为新能源板块核心关注点。",
+        "coreProductCount": 1,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 7,
+        "matchedCoreProducts": [
+          {
+            "code": "1140105863",
+            "name": "海上风电机组",
+            "stockCount": 2
+          }
+        ]
+      },
+      {
+        "code": "1210000358",
+        "name": "陆上风电机组",
+        "description": "陆上风电机组指安装于陆地的风力发电设备。受“双碳”政策驱动，其凭借成本低、技术成熟及大型化趋势，成为能源转型主力。行业因装机需求旺盛、出海加速及盈利改善，备受资本市场关注。",
+        "coreProductCount": 1,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 7,
+        "matchedCoreProducts": [
+          {
+            "code": "1140150862",
+            "name": "陆上风电机组",
+            "stockCount": 2
+          }
+        ]
+      },
+      {
+        "code": "1200000398",
+        "name": "航空发动机",
+        "description": "航空发动机指为飞行器提供动力的核心装置。因技术壁垒极高、国产替代空间大及国防需求强劲，被视为高端制造皇冠明珠。其长周期高投入特性与国家战略安全紧密相关，故在A股备受资金关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 7,
+        "matchedCoreProducts": [
+          {
+            "code": "1140128115",
+            "name": "航空发动机压气机叶片",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "火电站用锅炉",
+        "industryDescription": "该行业指制造火力发电核心设备锅炉的企业。受关注因其在能源转型中承担调峰保供重任，且受益于煤电灵活性改造及出海需求增长。作为电力稳定器，其技术升级与市场扩容使其成为兼具防御性与成长性的细分赛道。",
+        "newsText": "西门子能源在近期Q3业绩前沟通会上将全球燃机年需求指引上调至110-120GW，这一由AI和能源转型驱动的景气判断，在过去几天被美国PJM电网创纪录的负荷和电价飙升所验证。这标志着行业已进入供给约束的超级周期，交付能力和定价权成为核心，为国产供应链承接外溢订单打开了确定性空间。 关注：中国动力/东方电气/上海电气（国产主机厂，受益于订单外溢和自主出海），应流股份/万泽股份（核心热端部件供应商，直接受益于海外巨头扩产和供应链本土化），杰瑞股份（燃机集成商，深度绑定海外巨头并斩获北美AIDC大单）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "供给与库存",
+        "产能与开工",
+        "出口与海外需求"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "火电站用锅炉可以理解为围绕燃气-蒸汽联合循环发电用余热锅炉(HRSG)、燃气-蒸汽联合循环发电设备(GTCC)形成的五级细分产业，本地图谱对它的解释是“该行业指制造火力发电核心设备锅炉的企业。受关注因其在能源转型中承担调峰保供重任，且受益于煤电灵活性改造及出海需求增长。作为电力稳定器，其技术升级与市场扩容使其成为兼具防御性与成长性的细分赛道”。把它放回本次事件的产业链，关键链条可以概括为钴、铁、镍、冷变形加工等14项 → 火电站用锅炉 → 冶金、工业用燃气轮机、汽车、玻璃制造等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、供给与库存、产能与开工、出口与海外需求，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“西门子能源上调燃气轮机年需求指引”在现有语料中主要新增了与下游需求与订单、供给与库存、产能与开工、出口与海外需求有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "3只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

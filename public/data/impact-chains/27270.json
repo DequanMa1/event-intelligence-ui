@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27270",
@@ -223,6 +223,18 @@
           "锌冶炼",
           "锌锭"
         ],
+        "level5Industry": {
+          "code": "1210000303",
+          "name": "锌"
+        },
+        "level6Industry": {
+          "code": "1210000505",
+          "name": "锌冶炼"
+        },
+        "level7Product": {
+          "code": "1137000010",
+          "name": "锌锭"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -266,6 +278,18 @@
           "黄金产品",
           "金锭"
         ],
+        "level5Industry": {
+          "code": "1200001053",
+          "name": "黄金产品"
+        },
+        "level6Industry": {
+          "code": "1200004418",
+          "name": "黄金产品"
+        },
+        "level7Product": {
+          "code": "1140070289",
+          "name": "金锭"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -304,6 +328,18 @@
           "铅冶炼",
           "电解铅"
         ],
+        "level5Industry": {
+          "code": "1210000302",
+          "name": "铅"
+        },
+        "level6Industry": {
+          "code": "1210000500",
+          "name": "铅冶炼"
+        },
+        "level7Product": {
+          "code": "1130000609",
+          "name": "电解铅"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -337,6 +373,18 @@
           "铅锌矿采选",
           "锌精矿"
         ],
+        "level5Industry": {
+          "code": "1200000816",
+          "name": "有色金属矿采选业"
+        },
+        "level6Industry": {
+          "code": "1200003789",
+          "name": "铅锌矿采选"
+        },
+        "level7Product": {
+          "code": "1114000043",
+          "name": "锌精矿"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -379,6 +427,18 @@
           "铅锌矿采选",
           "铅精矿"
         ],
+        "level5Industry": {
+          "code": "1200000816",
+          "name": "有色金属矿采选业"
+        },
+        "level6Industry": {
+          "code": "1200003789",
+          "name": "铅锌矿采选"
+        },
+        "level7Product": {
+          "code": "1130000608",
+          "name": "铅精矿"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -416,6 +476,18 @@
           "其他有色金属矿采选",
           "钨精矿"
         ],
+        "level5Industry": {
+          "code": "1200000816",
+          "name": "有色金属矿采选业"
+        },
+        "level6Industry": {
+          "code": "1210000615",
+          "name": "其他有色金属矿采选"
+        },
+        "level7Product": {
+          "code": "1114000146",
+          "name": "钨精矿"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -668,10 +740,146 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 6,
+    "target": {
+      "code": "1200000816",
+      "name": "有色金属矿采选业",
+      "description": "该行业指铜、铝、锂等金属矿产的开采与选矿。因兼具工业基础原料与新能源关键材料属性，受宏观经济复苏及能源转型驱动，具备强周期性与高成长潜力，是捕捉通胀预期和产业升级红利的重要投资板块。",
+      "coreProductCount": 3,
+      "stockCount": 4,
+      "shareOfLevel7Products": 0.5,
+      "relevanceScore": 20,
+      "matchedCoreProducts": [
+        {
+          "code": "1114000043",
+          "name": "锌精矿",
+          "stockCount": 3
+        },
+        {
+          "code": "1130000608",
+          "name": "铅精矿",
+          "stockCount": 2
+        },
+        {
+          "code": "1114000146",
+          "name": "钨精矿",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000816",
+        "name": "有色金属矿采选业",
+        "description": "该行业指铜、铝、锂等金属矿产的开采与选矿。因兼具工业基础原料与新能源关键材料属性，受宏观经济复苏及能源转型驱动，具备强周期性与高成长潜力，是捕捉通胀预期和产业升级红利的重要投资板块。",
+        "coreProductCount": 3,
+        "stockCount": 4,
+        "shareOfLevel7Products": 0.5,
+        "relevanceScore": 20,
+        "matchedCoreProducts": [
+          {
+            "code": "1114000043",
+            "name": "锌精矿",
+            "stockCount": 3
+          },
+          {
+            "code": "1130000608",
+            "name": "铅精矿",
+            "stockCount": 2
+          },
+          {
+            "code": "1114000146",
+            "name": "钨精矿",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000303",
+        "name": "锌",
+        "description": "锌行业指从事锌矿开采、冶炼及加工的企业。因锌广泛用于镀锌钢板、电池及合金，兼具工业与新能源属性，其价格受供需、宏观政策及基建需求影响显著，故成为A股中反映经济周期与绿色转型的重要板块。",
+        "coreProductCount": 1,
+        "stockCount": 3,
+        "shareOfLevel7Products": 0.1667,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1137000010",
+            "name": "锌锭",
+            "stockCount": 3
+          }
+        ]
+      },
+      {
+        "code": "1200001053",
+        "name": "黄金产品",
+        "description": "A股黄金行业涵盖采掘、冶炼及零售。因黄金具避险与抗通胀属性，在地缘动荡或经济不确定性高时受资金追捧。该板块与金价高度联动，是投资者对冲风险、保值增值的重要配置标的，市场关注度随宏观环境波动而显著变化。",
+        "coreProductCount": 1,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.1667,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140070289",
+            "name": "金锭",
+            "stockCount": 2
+          }
+        ]
+      },
+      {
+        "code": "1210000302",
+        "name": "铅",
+        "description": "A股铅行业指涉及铅矿开采、冶炼及蓄电池制造的企业。因铅酸电池在储能、汽车启动领域需求稳定，且再生铅符合循环经济政策，该板块受关注。其走势常与有色金属周期、环保政策及下游新能源车配套需求紧密相关。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1667,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1130000609",
+            "name": "电解铅",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "有色金属矿采选业",
+        "industryDescription": "该行业指铜、铝、锂等金属矿产的开采与选矿。因兼具工业基础原料与新能源关键材料属性，受宏观经济复苏及能源转型驱动，具备强周期性与高成长潜力，是捕捉通胀预期和产业升级红利的重要投资板块。",
+        "newsText": "昨晚（7月8日）江西铜业披露的Q2业绩预告，单季盈利50亿，这验证了在13000美元/吨以上铜价背景下，铜企的盈利兑现能力。核心在于，年化200亿的利润对应当前估值依然偏低，市场对铜价持续性的预期差提供了显著的投资价值。 关注：江西铜业/西部矿业（Q2业绩验证高铜价下的盈利弹性，估值仍有吸引力），紫金矿业/洛阳钼业（资源自给率高的龙头，最受益于铜价中枢上行），铜陵有色（冶炼产能领先，同时受益于副产品硫酸价格高企）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "原材料与成本",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "有色金属矿采选业可以理解为围绕锌精矿、铅精矿、钨精矿形成的五级细分产业，本地图谱对它的解释是“该行业指铜、铝、锂等金属矿产的开采与选矿。因兼具工业基础原料与新能源关键材料属性，受宏观经济复苏及能源转型驱动，具备强周期性与高成长潜力，是捕捉通胀预期和产业升级红利的重要投资板块”。把它放回本次事件的产业链，关键链条可以概括为铅锌精矿、电解锌、锌矿石、铅锑精矿等6项 → 有色金属矿采选业 → 氧化锌、黄铜管、锌合金、黄铜等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪原材料与成本、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“江西铜业Q2业绩环比预增超68%”在现有语料中主要新增了与原材料与成本、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "1只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

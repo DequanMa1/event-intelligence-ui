@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26541",
@@ -317,6 +317,18 @@
           "IGBT",
           "IGBT模块"
         ],
+        "level5Industry": {
+          "code": "1200001276",
+          "name": "功率分立器件"
+        },
+        "level6Industry": {
+          "code": "1200004931",
+          "name": "IGBT"
+        },
+        "level7Product": {
+          "code": "1140078581",
+          "name": "IGBT模块"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -356,6 +368,18 @@
           "晶圆",
           "6英寸半导体硅片"
         ],
+        "level5Industry": {
+          "code": "1200001261",
+          "name": "半导体生产原料"
+        },
+        "level6Industry": {
+          "code": "1200004883",
+          "name": "晶圆"
+        },
+        "level7Product": {
+          "code": "1140192231",
+          "name": "6英寸半导体硅片"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -390,6 +414,18 @@
           "晶圆",
           "8英寸半导体硅片"
         ],
+        "level5Industry": {
+          "code": "1200001261",
+          "name": "半导体生产原料"
+        },
+        "level6Industry": {
+          "code": "1200004883",
+          "name": "晶圆"
+        },
+        "level7Product": {
+          "code": "1140174108",
+          "name": "8英寸半导体硅片"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -424,6 +460,18 @@
           "IGBT",
           "车规级IGBT模块"
         ],
+        "level5Industry": {
+          "code": "1200001276",
+          "name": "功率分立器件"
+        },
+        "level6Industry": {
+          "code": "1200004931",
+          "name": "IGBT"
+        },
+        "level7Product": {
+          "code": "1140206481",
+          "name": "车规级IGBT模块"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -458,6 +506,18 @@
           "专用车辆",
           "接触网作业车"
         ],
+        "level5Industry": {
+          "code": "1200000609",
+          "name": "工业用车辆"
+        },
+        "level6Industry": {
+          "code": "1200003424",
+          "name": "专用车辆"
+        },
+        "level7Product": {
+          "code": "1140098684",
+          "name": "接触网作业车"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -706,10 +766,132 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 5,
+    "target": {
+      "code": "1200001276",
+      "name": "功率分立器件",
+      "description": "功率分立器件指用于电能转换控制的半导体元件。因新能源、电动车及AI算力需求爆发，带动高效能芯片需求激增，行业景气度高涨，成为A股中兼具国产替代逻辑与高成长性的热门赛道。",
+      "coreProductCount": 2,
+      "stockCount": 2,
+      "shareOfLevel7Products": 0.4,
+      "relevanceScore": 24,
+      "matchedCoreProducts": [
+        {
+          "code": "1140078581",
+          "name": "IGBT模块",
+          "stockCount": 2
+        },
+        {
+          "code": "1140206481",
+          "name": "车规级IGBT模块",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001276",
+        "name": "功率分立器件",
+        "description": "功率分立器件指用于电能转换控制的半导体元件。因新能源、电动车及AI算力需求爆发，带动高效能芯片需求激增，行业景气度高涨，成为A股中兼具国产替代逻辑与高成长性的热门赛道。",
+        "coreProductCount": 2,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.4,
+        "relevanceScore": 24,
+        "matchedCoreProducts": [
+          {
+            "code": "1140078581",
+            "name": "IGBT模块",
+            "stockCount": 2
+          },
+          {
+            "code": "1140206481",
+            "name": "车规级IGBT模块",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001261",
+        "name": "半导体生产原料",
+        "description": "该行业指提供硅片、光刻胶等芯片制造基础材料的领域。因关乎国产替代与供应链安全，且技术壁垒高、需求随算力爆发增长，成为A股焦点。其自主可控进程直接决定中国半导体产业竞争力备受市场追捧。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.4,
+        "relevanceScore": 24,
+        "matchedCoreProducts": [
+          {
+            "code": "1140192231",
+            "name": "6英寸半导体硅片",
+            "stockCount": 1
+          },
+          {
+            "code": "1140174108",
+            "name": "8英寸半导体硅片",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000609",
+        "name": "工业用车辆",
+        "description": "工业用车辆指叉车、AGV等物流装备。受智能制造、电商物流及出口增长驱动，该行业景气度提升。其作为自动化升级关键设备，兼具周期与成长属性，因业绩确定性强及国产替代潜力，备受资本市场关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2,
+        "relevanceScore": 7,
+        "matchedCoreProducts": [
+          {
+            "code": "1140098684",
+            "name": "接触网作业车",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "功率分立器件",
+        "industryDescription": "功率分立器件指用于电能转换控制的半导体元件。因新能源、电动车及AI算力需求爆发，带动高效能芯片需求激增，行业景气度高涨，成为A股中兼具国产替代逻辑与高成长性的热门赛道。",
+        "newsText": "最新情况是，央视财经于6月29日报道安徽滁州功率半导体厂商产线满负荷，订单已排至四五个月后，市场供需格局已从单纯涨价演变为“涨价+缺货”并存，并开始出现“分货”状态。这一边际变化验证了AI算力对传统产能的刚性挤占效应正在加剧，产业链供需失衡已从价格传导进入到产能分配阶段，拥有自有产能的IDM厂商因成本可控和出货保障，其盈利弹性将得到最大化释放。 关注：扬杰科技/士兰微/华润微（IDM模式自有产能，充分受益涨价周期），新洁能/东微半导（卡位AI服务器电源等高增市场），芯联集成（功率代工龙头直接受益于价格调涨），天岳先进（碳化硅衬底龙头卡位上游材料）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产品价格",
+        "原材料与成本",
+        "供给与库存",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "涨价",
+          "缺货",
+          "订单已排"
+        ],
+        "basis": "新闻文本命中：涨价、缺货、订单已排"
+      },
+      "text": "功率分立器件可以理解为围绕IGBT模块、车规级IGBT模块形成的五级细分产业，本地图谱对它的解释是“功率分立器件指用于电能转换控制的半导体元件。因新能源、电动车及AI算力需求爆发，带动高效能芯片需求激增，行业景气度高涨，成为A股中兼具国产替代逻辑与高成长性的热门赛道”。把它放回本次事件的产业链，关键链条可以概括为双极结型晶体管、金属氧化物场效应晶体管、IGBT芯片、快恢复二极管芯片等12项 → 功率分立器件 → 充电桩、光伏逆变器、功率半导体分立器件、变频器等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产品价格、原材料与成本、供给与库存、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“功率半导体厂商订单排产至数月后”在现有语料中主要新增了与下游需求与订单、产品价格、原材料与成本、供给与库存、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是涨价、缺货、订单已排；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "2只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

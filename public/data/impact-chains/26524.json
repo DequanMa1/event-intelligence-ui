@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26524",
@@ -77,6 +77,18 @@
           "计算控制芯片",
           "服务器CPU"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1210003412",
+          "name": "计算控制芯片"
+        },
+        "level7Product": {
+          "code": "1140007907",
+          "name": "服务器CPU"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -103,6 +115,18 @@
         "name": "CPU",
         "hierarchyPath": "",
         "industryPath": [],
+        "level5Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level6Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level7Product": {
+          "code": "",
+          "name": ""
+        },
         "matchedSourceLevel": 0,
         "mappingType": "semantic_bridge",
         "bridgeBasis": "event_title",
@@ -353,10 +377,81 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 1,
+    "target": {
+      "code": "1200001282",
+      "name": "IC设计",
+      "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+      "coreProductCount": 1,
+      "stockCount": 1,
+      "shareOfLevel7Products": 1.0,
+      "relevanceScore": 11,
+      "matchedCoreProducts": [
+        {
+          "code": "1140007907",
+          "name": "服务器CPU",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 1.0,
+        "relevanceScore": 11,
+        "matchedCoreProducts": [
+          {
+            "code": "1140007907",
+            "name": "服务器CPU",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "IC设计",
+        "industryDescription": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "newsText": "截至6月28日晚间，最新的渠道与厂商调研确认，国内服务器CPU现货及整机厂库存已基本清零，这标志着AI Agent应用爆发驱动的需求与海外供给受限的矛盾已传导至临界点，三季度供需缺口将进一步加剧。这一库存清零的质变，意味着国产CPU进入大型云厂商供应链的逻辑已从预期演变为现实，市场正快速定价其在通算领域实现从0到1突破、并有望在明年拿下20%-30%份额的巨大弹性。 关注：海光信息/中国长城（国产X86与ARM架构CPU核心标的，直接受益于海外CPU缺货带来的国产替代加速，有望实现云大厂客户从0到1的突破）/中科曙光/浪潮信息（服务器整机厂商，深度绑定国产CPU，是国产替代落地和需求放量的核心环节）/澜起科技（服务器内存接口芯片龙头，受益于服务器整体需求放量）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "供给与库存",
+        "出口与海外需求"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "缺货"
+        ],
+        "basis": "新闻文本命中：缺货"
+      },
+      "text": "IC设计可以理解为围绕服务器CPU形成的五级细分产业，本地图谱对它的解释是“IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注”。把它放回本次事件的产业链，关键链条可以概括为处理器SoC芯片 → IC设计 → 可编程控制器(PLC)、游戏机、电网配电用智能安全网关、系统硬件系统等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、供给与库存、出口与海外需求，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“国产CPU三季度供需缺口预计加剧”在现有语料中主要新增了与下游需求与订单、供给与库存、出口与海外需求有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是缺货；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

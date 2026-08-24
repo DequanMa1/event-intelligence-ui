@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27286",
@@ -402,6 +402,18 @@
           "无尘室工程",
           "洁净室工程"
         ],
+        "level5Industry": {
+          "code": "1210000285",
+          "name": "无尘室工程"
+        },
+        "level6Industry": {
+          "code": "1210000476",
+          "name": "无尘室工程"
+        },
+        "level7Product": {
+          "code": "1140077160",
+          "name": "洁净室工程"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -436,6 +448,18 @@
           "半导体封装设备",
           "后道先进封装电镀设备"
         ],
+        "level5Industry": {
+          "code": "1200000577",
+          "name": "半导体设备"
+        },
+        "level6Industry": {
+          "code": "1200003334",
+          "name": "半导体封装设备"
+        },
+        "level7Product": {
+          "code": "1140161021",
+          "name": "后道先进封装电镀设备"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -470,6 +494,18 @@
           "无尘室工程",
           "洁净室二次配系统工程"
         ],
+        "level5Industry": {
+          "code": "1210000285",
+          "name": "无尘室工程"
+        },
+        "level6Industry": {
+          "code": "1210000476",
+          "name": "无尘室工程"
+        },
+        "level7Product": {
+          "code": "1140218264",
+          "name": "洁净室二次配系统工程"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -504,6 +540,18 @@
           "无尘室工程",
           "洁净室工艺系统"
         ],
+        "level5Industry": {
+          "code": "1210000285",
+          "name": "无尘室工程"
+        },
+        "level6Industry": {
+          "code": "1210000476",
+          "name": "无尘室工程"
+        },
+        "level7Product": {
+          "code": "1140218263",
+          "name": "洁净室工艺系统"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -658,9 +706,115 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 4,
+    "target": {
+      "code": "1210000285",
+      "name": "无尘室工程",
+      "description": "无尘室工程指构建低微粒污染环境的特种建设。因半导体、生物医药等高端制造对洁净度要求极高，该领域具备高技术壁垒与刚性需求。投资者关注相关公司，旨在捕捉产业升级红利及头部企业在高景气赛道中的稳定增长潜力。",
+      "coreProductCount": 3,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.75,
+      "relevanceScore": 36,
+      "matchedCoreProducts": [
+        {
+          "code": "1140218264",
+          "name": "洁净室二次配系统工程",
+          "stockCount": 1
+        },
+        {
+          "code": "1140077160",
+          "name": "洁净室工程",
+          "stockCount": 1
+        },
+        {
+          "code": "1140218263",
+          "name": "洁净室工艺系统",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210000285",
+        "name": "无尘室工程",
+        "description": "无尘室工程指构建低微粒污染环境的特种建设。因半导体、生物医药等高端制造对洁净度要求极高，该领域具备高技术壁垒与刚性需求。投资者关注相关公司，旨在捕捉产业升级红利及头部企业在高景气赛道中的稳定增长潜力。",
+        "coreProductCount": 3,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.75,
+        "relevanceScore": 36,
+        "matchedCoreProducts": [
+          {
+            "code": "1140218264",
+            "name": "洁净室二次配系统工程",
+            "stockCount": 1
+          },
+          {
+            "code": "1140077160",
+            "name": "洁净室工程",
+            "stockCount": 1
+          },
+          {
+            "code": "1140218263",
+            "name": "洁净室工艺系统",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000577",
+        "name": "半导体设备",
+        "description": "半导体设备指芯片制造所需的关键机械。因国产替代加速、政策强力支持及AI需求爆发，该行业成A股焦点。它关乎供应链安全与技术自主，具备高成长性和战略价值，是科技投资的核心赛道。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.25,
+        "relevanceScore": 12,
+        "matchedCoreProducts": [
+          {
+            "code": "1140161021",
+            "name": "后道先进封装电镀设备",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "无尘室工程",
+        "industryDescription": "无尘室工程指构建低微粒污染环境的特种建设。因半导体、生物医药等高端制造对洁净度要求极高，该领域具备高技术壁垒与刚性需求。投资者关注相关公司，旨在捕捉产业升级红利及头部企业在高景气赛道中的稳定增长潜力。",
+        "newsText": "截至7月9日，长鑫存储正式披露招股意向书，将国产存储大厂的扩产周期从市场预期转变为有明确资金支持和项目落地的确定性事件。这一变化为国产半导体设备产业链提供了前所未有的订单确定性，投资逻辑的重心正从远期的国产替代故事，迅速切换至由资本开支落地驱动的近期业绩高弹性兑现。 关注：北方华创/中微公司（平台型龙头，全面受益于晶圆厂资本开支），拓荆科技/微导纳米（薄膜沉积设备作为存储扩产核心环节，需求弹性高），华海清科（CMP设备在3D NAND多层堆叠工艺中价值量提升），长川科技（HBM带动测试需求量价齐升，国产替代空间大），富创精密（核心零部件深度绑定下游设备龙头）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "量价齐升"
+        ],
+        "basis": "新闻文本命中：量价齐升"
+      },
+      "text": "无尘室工程可以理解为围绕洁净室二次配系统工程、洁净室工程、洁净室工艺系统形成的五级细分产业，本地图谱对它的解释是“无尘室工程指构建低微粒污染环境的特种建设。因半导体、生物医药等高端制造对洁净度要求极高，该领域具备高技术壁垒与刚性需求。投资者关注相关公司，旨在捕捉产业升级红利及头部企业在高景气赛道中的稳定增长潜力”。把它放回本次事件的产业链，关键链条可以概括为刻蚀机、前端控制面板、去胶机、工程技术人员等14项 → 无尘室工程 → HDFan-out、PillarBump、RDL、TSV等8项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“国产半导体设备受益于存储厂扩产周期”在现有语料中主要新增了与下游需求与订单、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是量价齐升；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

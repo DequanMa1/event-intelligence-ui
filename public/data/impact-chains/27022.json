@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27022",
@@ -166,6 +166,18 @@
           "存储器芯片",
           "LPDDR SDRAM存储器芯片"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1200004954",
+          "name": "存储器芯片"
+        },
+        "level7Product": {
+          "code": "1140215416",
+          "name": "LPDDR SDRAM存储器芯片"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -209,6 +221,18 @@
           "存储器芯片",
           "DDR SDRAM存储器芯片"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1200004954",
+          "name": "存储器芯片"
+        },
+        "level7Product": {
+          "code": "1140215415",
+          "name": "DDR SDRAM存储器芯片"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -242,6 +266,18 @@
           "芯片封装测试",
           "存储芯片封装"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140173704",
+          "name": "存储芯片封装"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -275,6 +311,18 @@
           "芯片封装测试",
           "存储芯片测试"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140173705",
+          "name": "存储芯片测试"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -308,6 +356,18 @@
           "芯片封装测试",
           "系统级封装(SiP)"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140171737",
+          "name": "系统级封装(SiP)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -334,6 +394,18 @@
         "name": "DRAM",
         "hierarchyPath": "",
         "industryPath": [],
+        "level5Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level6Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level7Product": {
+          "code": "",
+          "name": ""
+        },
         "matchedSourceLevel": 0,
         "mappingType": "semantic_bridge",
         "bridgeBasis": "event_title",
@@ -412,11 +484,122 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 5,
+    "target": {
+      "code": "1200001284",
+      "name": "IC封测",
+      "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+      "coreProductCount": 3,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.6,
+      "relevanceScore": 27,
+      "matchedCoreProducts": [
+        {
+          "code": "1140173704",
+          "name": "存储芯片封装",
+          "stockCount": 1
+        },
+        {
+          "code": "1140173705",
+          "name": "存储芯片测试",
+          "stockCount": 1
+        },
+        {
+          "code": "1140171737",
+          "name": "系统级封装(SiP)",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001284",
+        "name": "IC封测",
+        "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "coreProductCount": 3,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.6,
+        "relevanceScore": 27,
+        "matchedCoreProducts": [
+          {
+            "code": "1140173704",
+            "name": "存储芯片封装",
+            "stockCount": 1
+          },
+          {
+            "code": "1140173705",
+            "name": "存储芯片测试",
+            "stockCount": 1
+          },
+          {
+            "code": "1140171737",
+            "name": "系统级封装(SiP)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "coreProductCount": 2,
+        "stockCount": 3,
+        "shareOfLevel7Products": 0.4,
+        "relevanceScore": 22,
+        "matchedCoreProducts": [
+          {
+            "code": "1140215416",
+            "name": "LPDDR SDRAM存储器芯片",
+            "stockCount": 3
+          },
+          {
+            "code": "1140215415",
+            "name": "DDR SDRAM存储器芯片",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "IC封测",
+        "industryDescription": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "newsText": "7月5日以来，三星Q3 DRAM提价20%的计划已从市场传闻落地为对下游客户的口头通知，在AI挤占通用产能的背景下，存储原厂已完全掌握定价主导权。这一超预期的涨幅直接对冲了近期“算力过剩”的担忧，以原厂强势定价的实际行动验证了存储超级周期的核心逻辑，产业链的盈利预期将全面上修。 关注：江波龙（中报业绩预告验证行业高景气，直接受益于存储涨价）/香农芯创/佰维存储（存储模组及分销商，受益于价格传导），澜起科技（内存接口芯片核心供应商，受益于DDR5渗透率提升），兆易创新/普冉股份/北京君正（国产存储芯片设计龙头，受益于行业上行周期和国产替代）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "产品价格",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [
+          "市场传闻"
+        ],
+        "basis": "新闻文本命中：市场传闻"
+      },
+      "text": "IC封测可以理解为围绕存储芯片封装、存储芯片测试、系统级封装(SiP)形成的五级细分产业，本地图谱对它的解释是“IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注”。把它放回本次事件的产业链，关键链条可以概括为TEBO单片清洗设备、内存接口芯片 → IC封测 → MCP、非易失存储器，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪产品价格、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“三星电子据悉计划三季度DRAM提价20%”在现有语料中主要新增了与产品价格、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是市场传闻；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
     "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "2只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

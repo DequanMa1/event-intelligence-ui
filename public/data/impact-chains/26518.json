@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26518",
@@ -229,6 +229,18 @@
           "芯片封装测试",
           "晶圆测试"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140079991",
+          "name": "晶圆测试"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -267,6 +279,18 @@
           "芯片封装测试",
           "芯片封装"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140041938",
+          "name": "芯片封装"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -305,6 +329,18 @@
           "芯片封装测试",
           "芯片测试"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140024047",
+          "name": "芯片测试"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -338,6 +374,18 @@
           "芯片封装测试",
           "共封装光学(CPO)封装"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140220957",
+          "name": "共封装光学(CPO)封装"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -371,6 +419,18 @@
           "芯片封装测试",
           "显示驱动晶圆测试"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140174117",
+          "name": "显示驱动晶圆测试"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -404,6 +464,18 @@
           "芯片封装测试",
           "显示驱动芯片封装"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140174115",
+          "name": "显示驱动芯片封装"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -437,6 +509,18 @@
           "芯片封装测试",
           "显示驱动芯片测试"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140174116",
+          "name": "显示驱动芯片测试"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -510,9 +594,138 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 7,
+    "target": {
+      "code": "1200001284",
+      "name": "IC封测",
+      "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+      "coreProductCount": 7,
+      "stockCount": 3,
+      "shareOfLevel7Products": 1.0,
+      "relevanceScore": 63,
+      "matchedCoreProducts": [
+        {
+          "code": "1140079991",
+          "name": "晶圆测试",
+          "stockCount": 2
+        },
+        {
+          "code": "1140041938",
+          "name": "芯片封装",
+          "stockCount": 2
+        },
+        {
+          "code": "1140220957",
+          "name": "共封装光学(CPO)封装",
+          "stockCount": 1
+        },
+        {
+          "code": "1140174117",
+          "name": "显示驱动晶圆测试",
+          "stockCount": 1
+        },
+        {
+          "code": "1140174115",
+          "name": "显示驱动芯片封装",
+          "stockCount": 1
+        },
+        {
+          "code": "1140174116",
+          "name": "显示驱动芯片测试",
+          "stockCount": 1
+        },
+        {
+          "code": "1140024047",
+          "name": "芯片测试",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001284",
+        "name": "IC封测",
+        "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "coreProductCount": 7,
+        "stockCount": 3,
+        "shareOfLevel7Products": 1.0,
+        "relevanceScore": 63,
+        "matchedCoreProducts": [
+          {
+            "code": "1140079991",
+            "name": "晶圆测试",
+            "stockCount": 2
+          },
+          {
+            "code": "1140041938",
+            "name": "芯片封装",
+            "stockCount": 2
+          },
+          {
+            "code": "1140220957",
+            "name": "共封装光学(CPO)封装",
+            "stockCount": 1
+          },
+          {
+            "code": "1140174117",
+            "name": "显示驱动晶圆测试",
+            "stockCount": 1
+          },
+          {
+            "code": "1140174115",
+            "name": "显示驱动芯片封装",
+            "stockCount": 1
+          },
+          {
+            "code": "1140174116",
+            "name": "显示驱动芯片测试",
+            "stockCount": 1
+          },
+          {
+            "code": "1140024047",
+            "name": "芯片测试",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "IC封测",
+        "industryDescription": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "newsText": "在过去24小时内，以甬矽电子、盛合晶微为代表的国内封测龙头在宁波、上海等地集中宣布了总额超两百亿的先进封装扩产计划。这标志着国内应对全球AI算力需求的资本开支已从概念规划进入密集落地阶段，市场视其为AI产业链的价值瓶颈正确定性地从前端制造向上游设备和后端封测转移，相关公司正从传统周期股向具备高增长和稀缺性的算力核心资产进行价值重估。 关注：长电科技/通富微电/甬矽电子/盛合晶微（先进封装龙头，直接承接AI算力需求并迎来价值重估），长川科技/华峰测控/芯碁微装/金海通（后道设备商，直接受益于封测厂资本开支，订单和业绩弹性高）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产能与开工",
+        "政策与制度"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "IC封测可以理解为围绕晶圆测试、芯片封装、共封装光学(CPO)封装、显示驱动晶圆测试、显示驱动芯片封装等7项形成的五级细分产业，本地图谱对它的解释是“IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注”。把它放回本次事件的产业链，关键链条可以概括为探针卡、测试机台、晶圆划片机、晶圆测试机等6项 → IC封测 → 晶圆封装、晶体硅太阳能电池芯片及组件、IC检测，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产能与开工、政策与制度，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“国内多家封测龙头宣布百亿级先进封装扩产”在现有语料中主要新增了与下游需求与订单、产能与开工、政策与制度有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

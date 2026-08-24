@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27294",
@@ -317,6 +317,18 @@
           "LED芯片",
           "LED芯片"
         ],
+        "level5Industry": {
+          "code": "1210002759",
+          "name": "LED制造"
+        },
+        "level6Industry": {
+          "code": "1200004986",
+          "name": "LED芯片"
+        },
+        "level7Product": {
+          "code": "1140044920",
+          "name": "LED芯片"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -351,6 +363,18 @@
           "LCD",
           "车载显示屏"
         ],
+        "level5Industry": {
+          "code": "1210002764",
+          "name": "显示屏"
+        },
+        "level6Industry": {
+          "code": "1210002823",
+          "name": "LCD"
+        },
+        "level7Product": {
+          "code": "1140025202",
+          "name": "车载显示屏"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -384,6 +408,18 @@
           "电子玻璃",
           "玻璃基板切割"
         ],
+        "level5Industry": {
+          "code": "1210000248",
+          "name": "玻璃"
+        },
+        "level6Industry": {
+          "code": "1200004353",
+          "name": "电子玻璃"
+        },
+        "level7Product": {
+          "code": "1140194520",
+          "name": "玻璃基板切割"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -416,6 +452,18 @@
           "电子玻璃",
           "玻璃基板薄化"
         ],
+        "level5Industry": {
+          "code": "1210000248",
+          "name": "玻璃"
+        },
+        "level6Industry": {
+          "code": "1200004353",
+          "name": "电子玻璃"
+        },
+        "level7Product": {
+          "code": "1140194518",
+          "name": "玻璃基板薄化"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -448,6 +496,18 @@
           "电子玻璃",
           "玻璃基板镀膜"
         ],
+        "level5Industry": {
+          "code": "1210000248",
+          "name": "玻璃"
+        },
+        "level6Industry": {
+          "code": "1200004353",
+          "name": "电子玻璃"
+        },
+        "level7Product": {
+          "code": "1140194519",
+          "name": "玻璃基板镀膜"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -480,6 +540,18 @@
           "液晶电视",
           "LCD液晶电视"
         ],
+        "level5Industry": {
+          "code": "1200001135",
+          "name": "高端彩电"
+        },
+        "level6Industry": {
+          "code": "1200004562",
+          "name": "液晶电视"
+        },
+        "level7Product": {
+          "code": "1140025829",
+          "name": "LCD液晶电视"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -511,6 +583,18 @@
           "其他光学膜",
           "光学膜模切"
         ],
+        "level5Industry": {
+          "code": "1200001319",
+          "name": "光学膜"
+        },
+        "level6Industry": {
+          "code": "1210002837",
+          "name": "其他光学膜"
+        },
+        "level7Product": {
+          "code": "1140202145",
+          "name": "光学膜模切"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -761,10 +845,161 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 7,
+    "target": {
+      "code": "1210000248",
+      "name": "玻璃",
+      "description": "A股玻璃行业主要指浮法玻璃及光伏玻璃制造。其受关注源于强周期性，需求紧密挂钩房地产竣工与新能源装机。作为建材和光伏核心材料，其价格波动直接反映宏观地产景气度及绿色能源发展态势，是观察经济冷暖的重要风向标。",
+      "coreProductCount": 3,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.4286,
+      "relevanceScore": 21,
+      "matchedCoreProducts": [
+        {
+          "code": "1140194520",
+          "name": "玻璃基板切割",
+          "stockCount": 1
+        },
+        {
+          "code": "1140194518",
+          "name": "玻璃基板薄化",
+          "stockCount": 1
+        },
+        {
+          "code": "1140194519",
+          "name": "玻璃基板镀膜",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210000248",
+        "name": "玻璃",
+        "description": "A股玻璃行业主要指浮法玻璃及光伏玻璃制造。其受关注源于强周期性，需求紧密挂钩房地产竣工与新能源装机。作为建材和光伏核心材料，其价格波动直接反映宏观地产景气度及绿色能源发展态势，是观察经济冷暖的重要风向标。",
+        "coreProductCount": 3,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.4286,
+        "relevanceScore": 21,
+        "matchedCoreProducts": [
+          {
+            "code": "1140194520",
+            "name": "玻璃基板切割",
+            "stockCount": 1
+          },
+          {
+            "code": "1140194518",
+            "name": "玻璃基板薄化",
+            "stockCount": 1
+          },
+          {
+            "code": "1140194519",
+            "name": "玻璃基板镀膜",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210002759",
+        "name": "LED制造",
+        "description": "A股LED制造指发光二极管研发生产。因节能高效、应用广泛（照明、显示）及Mini/Micro LED技术突破受关注。它是半导体光电核心，受益于政策支持与消费升级，具备高成长性和国产替代潜力，是科技投资热点。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 12,
+        "matchedCoreProducts": [
+          {
+            "code": "1140044920",
+            "name": "LED芯片",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001319",
+        "name": "光学膜",
+        "description": "光学膜是显示面板核心材料，用于提升亮度与画质。因受益于Mini/Micro LED、车载屏及折叠屏等新技术渗透，叠加国产替代加速，行业景气度回升，成为A股关注焦点，具备高成长潜力。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 11,
+        "matchedCoreProducts": [
+          {
+            "code": "1140202145",
+            "name": "光学膜模切",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210002764",
+        "name": "显示屏",
+        "description": "A股显示屏行业涵盖LCD、OLED等面板制造及模组。受关注因它是消费电子核心部件，且受益于Mini/Micro LED等新技术迭代、国产替代加速及车载、VR等新场景需求爆发，具备高成长性与技术壁垒，是科技投资热点。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140025202",
+            "name": "车载显示屏",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001135",
+        "name": "高端彩电",
+        "description": "高端彩电指具备大屏、高清及智能交互功能的电视。因消费升级、OLED/Mini LED等技术迭代及居家娱乐需求增长，该行业备受市场关注，被视为家电板块中高附加值与成长性的代表领域。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140025829",
+            "name": "LCD液晶电视",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "玻璃",
+        "industryDescription": "A股玻璃行业主要指浮法玻璃及光伏玻璃制造。其受关注源于强周期性，需求紧密挂钩房地产竣工与新能源装机。作为建材和光伏核心材料，其价格波动直接反映宏观地产景气度及绿色能源发展态势，是观察经济冷暖的重要风向标。",
+        "newsText": "7月8日晚间，京东方发布上半年业绩预告，归母净利同比增长54%-69%，其中扣非净利增长35%-45%符合预期，但超过20亿元的非经常性损益则显著超出市场预期。这一业绩表现验证了其显示主业的强劲现金牛属性，为公司摆脱传统面板周期估值、向AI算力核心材料（玻璃基板）等高增长领域转型的平台化战略提供了坚实的财务支撑和更高的确定性。 关注：京东方A（业绩超预期，核心业务提供稳定现金流支撑AI材料等新业务转型），奥来德（深度绑定京东方高世代OLED产线，受益于其设备及材料需求），天禄科技（京东方参股并深度绑定，受益于显示材料国产化），帝尔激光（受益于京东方及行业向玻璃基板转型带来的TGV激光设备增量需求）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "玻璃可以理解为围绕玻璃基板切割、玻璃基板薄化、玻璃基板镀膜形成的五级细分产业，本地图谱对它的解释是“A股玻璃行业主要指浮法玻璃及光伏玻璃制造。其受关注源于强周期性，需求紧密挂钩房地产竣工与新能源装机。作为建材和光伏核心材料，其价格波动直接反映宏观地产景气度及绿色能源发展态势，是观察经济冷暖的重要风向标”。把它放回本次事件的产业链，关键链条可以概括为LCM(液晶模块)、中大尺寸LCM(液晶模块)、3D膜、FFC柔性扁平线缆等14项 → 玻璃 → LED、LED区域照明灯、LED室内灯具、LED封装等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“京东方上半年净利预增超54%”在现有语料中主要新增了与下游需求与订单有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "1只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

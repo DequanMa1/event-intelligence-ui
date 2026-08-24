@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26400",
@@ -173,6 +173,18 @@
           "临床前CRO",
           "药代动力学研究"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002853",
+          "name": "临床前CRO"
+        },
+        "level7Product": {
+          "code": "1140101592",
+          "name": "药代动力学研究"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -206,6 +218,18 @@
           "临床研究",
           "临床CRO"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002854",
+          "name": "临床研究"
+        },
+        "level7Product": {
+          "code": "1140193352",
+          "name": "临床CRO"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -239,6 +263,18 @@
           "CDMO",
           "多肽药物CDMO"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002855",
+          "name": "CDMO"
+        },
+        "level7Product": {
+          "code": "1140194457",
+          "name": "多肽药物CDMO"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -272,6 +308,18 @@
           "CDMO",
           "小分子化药CDMO"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002855",
+          "name": "CDMO"
+        },
+        "level7Product": {
+          "code": "1140193351",
+          "name": "小分子化药CDMO"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -305,6 +353,18 @@
           "CDMO",
           "生物大分子药物CDMO"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002855",
+          "name": "CDMO"
+        },
+        "level7Product": {
+          "code": "1140194464",
+          "name": "生物大分子药物CDMO"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -338,6 +398,18 @@
           "CDMO",
           "细胞和基因治疗产品CDMO"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002855",
+          "name": "CDMO"
+        },
+        "level7Product": {
+          "code": "1140194458",
+          "name": "细胞和基因治疗产品CDMO"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -371,6 +443,18 @@
           "临床前CRO",
           "药效学研究"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002853",
+          "name": "临床前CRO"
+        },
+        "level7Product": {
+          "code": "1140194462",
+          "name": "药效学研究"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -404,6 +488,18 @@
           "临床前CRO",
           "药物安全性评价"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002853",
+          "name": "临床前CRO"
+        },
+        "level7Product": {
+          "code": "1140194468",
+          "name": "药物安全性评价"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -430,6 +526,18 @@
         "name": "鼻咽癌",
         "hierarchyPath": "",
         "industryPath": [],
+        "level5Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level6Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level7Product": {
+          "code": "",
+          "name": ""
+        },
         "matchedSourceLevel": 0,
         "mappingType": "semantic_bridge",
         "bridgeBasis": "event_title",
@@ -467,11 +575,151 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 8,
+    "target": {
+      "code": "1210002773",
+      "name": "医药研发服务",
+      "description": "医药研发服务（CXO）为药企提供研发、生产外包。因能降低新药成本、缩短周期，助力创新药爆发而受关注。作为“卖水人”，其业绩确定性高，伴随全球研发投入增长及中国工程师红利，成为A股长期热门赛道。",
+      "coreProductCount": 8,
+      "stockCount": 1,
+      "shareOfLevel7Products": 1.0,
+      "relevanceScore": 72,
+      "matchedCoreProducts": [
+        {
+          "code": "1140193352",
+          "name": "临床CRO",
+          "stockCount": 1
+        },
+        {
+          "code": "1140194457",
+          "name": "多肽药物CDMO",
+          "stockCount": 1
+        },
+        {
+          "code": "1140193351",
+          "name": "小分子化药CDMO",
+          "stockCount": 1
+        },
+        {
+          "code": "1140194464",
+          "name": "生物大分子药物CDMO",
+          "stockCount": 1
+        },
+        {
+          "code": "1140194458",
+          "name": "细胞和基因治疗产品CDMO",
+          "stockCount": 1
+        },
+        {
+          "code": "1140101592",
+          "name": "药代动力学研究",
+          "stockCount": 1
+        },
+        {
+          "code": "1140194462",
+          "name": "药效学研究",
+          "stockCount": 1
+        },
+        {
+          "code": "1140194468",
+          "name": "药物安全性评价",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210002773",
+        "name": "医药研发服务",
+        "description": "医药研发服务（CXO）为药企提供研发、生产外包。因能降低新药成本、缩短周期，助力创新药爆发而受关注。作为“卖水人”，其业绩确定性高，伴随全球研发投入增长及中国工程师红利，成为A股长期热门赛道。",
+        "coreProductCount": 8,
+        "stockCount": 1,
+        "shareOfLevel7Products": 1.0,
+        "relevanceScore": 72,
+        "matchedCoreProducts": [
+          {
+            "code": "1140193352",
+            "name": "临床CRO",
+            "stockCount": 1
+          },
+          {
+            "code": "1140194457",
+            "name": "多肽药物CDMO",
+            "stockCount": 1
+          },
+          {
+            "code": "1140193351",
+            "name": "小分子化药CDMO",
+            "stockCount": 1
+          },
+          {
+            "code": "1140194464",
+            "name": "生物大分子药物CDMO",
+            "stockCount": 1
+          },
+          {
+            "code": "1140194458",
+            "name": "细胞和基因治疗产品CDMO",
+            "stockCount": 1
+          },
+          {
+            "code": "1140101592",
+            "name": "药代动力学研究",
+            "stockCount": 1
+          },
+          {
+            "code": "1140194462",
+            "name": "药效学研究",
+            "stockCount": 1
+          },
+          {
+            "code": "1140194468",
+            "name": "药物安全性评价",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "医药研发服务",
+        "industryDescription": "医药研发服务（CXO）为药企提供研发、生产外包。因能降低新药成本、缩短周期，助力创新药爆发而受关注。作为“卖水人”，其业绩确定性高，伴随全球研发投入增长及中国工程师红利，成为A股长期热门赛道。",
+        "newsText": "在过去24小时，继百利天恒izabren鼻咽癌适应症获批后，市场叙事焦点已从单纯的获批事件转向其全球合作伙伴BMS在ASCO会议后明确表态将加速该产品全球开发（尤其是在“novel novel”联合疗法中），这标志着事件的边际变化已进入到对全球商业化路径的重估阶段。投资逻辑的核心在于，国内商业化即将进入拥有8-10个适应症密集上市的商业化爆发期，同时BMS的加速意向极大地提升了该资产全球临床推进和未来销售分成的确定性，为公司估值打开了新的空间。 关注：百利天恒（核心产品进入商业化爆发期，全球合作伙伴BMS加速推进提供估值弹性），科伦博泰/康方生物/信达生物（同为具备全球潜力创新药企，百利天恒的兑现强化了板块龙头由biotech向MNC进阶的估值逻辑），百济神州/恒瑞医药（作为已验证的MNC或准MNC，为创新药企的全球化路径提供参照和估值锚点）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "技术与量产"
+      ],
+      "classification": {
+        "code": "A",
+        "label": "产业趋势变化",
+        "matchedSignals": [
+          "商业化"
+        ],
+        "basis": "新闻文本命中：商业化"
+      },
+      "text": "医药研发服务可以理解为围绕临床CRO、多肽药物CDMO、小分子化药CDMO、生物大分子药物CDMO、细胞和基因治疗产品CDMO等8项形成的五级细分产业，本地图谱对它的解释是“医药研发服务（CXO）为药企提供研发、生产外包。因能降低新药成本、缩短周期，助力创新药爆发而受关注。作为“卖水人”，其业绩确定性高，伴随全球研发投入增长及中国工程师红利，成为A股长期热门赛道”。把它放回本次事件的产业链，关键链条可以概括为放疗服务、氨磷汀、阿米福汀 → 医药研发服务 → 临床前研究服务，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、技术与量产，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“百利天恒izabren鼻咽癌适应症获批上市”在现有语料中主要新增了与下游需求与订单、技术与量产有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为A类“产业趋势变化”，依据是商业化；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
     "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "4只4星标的未在本地公司产品图谱中穿透。"
+    "4只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

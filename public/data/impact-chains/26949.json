@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26949",
@@ -155,6 +155,18 @@
           "IP版权",
           "IP版权授权"
         ],
+        "level5Industry": {
+          "code": "1210000091",
+          "name": "IP产业"
+        },
+        "level6Industry": {
+          "code": "1210000163",
+          "name": "IP版权"
+        },
+        "level7Product": {
+          "code": "1140154473",
+          "name": "IP版权授权"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -187,6 +199,18 @@
           "IP衍生品",
           "IP衍生品电商零售"
         ],
+        "level5Industry": {
+          "code": "1210000091",
+          "name": "IP产业"
+        },
+        "level6Industry": {
+          "code": "1210000164",
+          "name": "IP衍生品"
+        },
+        "level7Product": {
+          "code": "1140206463",
+          "name": "IP衍生品电商零售"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -307,10 +331,89 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 2,
+    "target": {
+      "code": "1210000091",
+      "name": "IP产业",
+      "description": "A股IP产业指围绕知识产权（如影视、游戏、动漫形象）进行内容创作与商业变现的行业。因具备高附加值、长尾效应及跨界联动能力，能持续衍生周边、授权等收益，受资本青睐，是文化消费升级的核心赛道。",
+      "coreProductCount": 2,
+      "stockCount": 2,
+      "shareOfLevel7Products": 1.0,
+      "relevanceScore": 12,
+      "matchedCoreProducts": [
+        {
+          "code": "1140154473",
+          "name": "IP版权授权",
+          "stockCount": 1
+        },
+        {
+          "code": "1140206463",
+          "name": "IP衍生品电商零售",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210000091",
+        "name": "IP产业",
+        "description": "A股IP产业指围绕知识产权（如影视、游戏、动漫形象）进行内容创作与商业变现的行业。因具备高附加值、长尾效应及跨界联动能力，能持续衍生周边、授权等收益，受资本青睐，是文化消费升级的核心赛道。",
+        "coreProductCount": 2,
+        "stockCount": 2,
+        "shareOfLevel7Products": 1.0,
+        "relevanceScore": 12,
+        "matchedCoreProducts": [
+          {
+            "code": "1140154473",
+            "name": "IP版权授权",
+            "stockCount": 1
+          },
+          {
+            "code": "1140206463",
+            "name": "IP衍生品电商零售",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "IP产业",
+        "industryDescription": "A股IP产业指围绕知识产权（如影视、游戏、动漫形象）进行内容创作与商业变现的行业。因具备高附加值、长尾效应及跨界联动能力，能持续衍生周边、授权等收益，受资本青睐，是文化消费升级的核心赛道。",
+        "newsText": "今日（7月4日），芒果超媒旗下电商平台小芒正式承接韩国JYP在中国的官方IP周边商品（MD）授权与流通业务。此举标志着小芒的“内容电商”模式从内生IP孵化向外部顶级IP合作的战略升级，通过绑定头部K-POP艺人粉丝经济，有望大幅提升其平台的用户粘性与变现天花板。 关注：芒果超媒（旗下小芒电商锁定顶级娱乐IP，内容电商模式实现战略外延与商业化突破）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "技术与量产"
+      ],
+      "classification": {
+        "code": "A",
+        "label": "产业趋势变化",
+        "matchedSignals": [
+          "商业化"
+        ],
+        "basis": "新闻文本命中：商业化"
+      },
+      "text": "IP产业可以理解为围绕IP版权授权、IP衍生品电商零售形成的五级细分产业，本地图谱对它的解释是“A股IP产业指围绕知识产权（如影视、游戏、动漫形象）进行内容创作与商业变现的行业。因具备高附加值、长尾效应及跨界联动能力，能持续衍生周边、授权等收益，受资本青睐，是文化消费升级的核心赛道”。把它放回本次事件的产业链，关键链条可以概括为专利研发、商标设计、著作创作 → IP产业 → 影视剧出品商、游戏研发商、衍生品开发商、商场儿童游乐项目等6项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪技术与量产，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“芒果超媒旗下小芒与JYP达成战略合作”在现有语料中主要新增了与技术与量产有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为A类“产业趋势变化”，依据是商业化；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "2只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27272",
@@ -259,6 +259,18 @@
           "半导体测试设备",
           "芯片分选机"
         ],
+        "level5Industry": {
+          "code": "1200000577",
+          "name": "半导体设备"
+        },
+        "level6Industry": {
+          "code": "1200003333",
+          "name": "半导体测试设备"
+        },
+        "level7Product": {
+          "code": "1140033592",
+          "name": "芯片分选机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -293,6 +305,18 @@
           "半导体测试设备",
           "数模混合测试机"
         ],
+        "level5Industry": {
+          "code": "1200000577",
+          "name": "半导体设备"
+        },
+        "level6Industry": {
+          "code": "1200003333",
+          "name": "半导体测试设备"
+        },
+        "level7Product": {
+          "code": "1140200855",
+          "name": "数模混合测试机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -327,6 +351,18 @@
           "芯片封装测试",
           "晶圆测试"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140079991",
+          "name": "晶圆测试"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -375,6 +411,18 @@
           "芯片封装测试",
           "芯片封装"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140041938",
+          "name": "芯片封装"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -423,6 +471,18 @@
           "芯片封装测试",
           "芯片测试"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140024047",
+          "name": "芯片测试"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -466,6 +526,18 @@
           "芯片封装测试",
           "共封装光学(CPO)封装"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140220957",
+          "name": "共封装光学(CPO)封装"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -504,6 +576,18 @@
           "芯片封装测试",
           "扁平无引脚封装(QFN/DFN)"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140171738",
+          "name": "扁平无引脚封装(QFN/DFN)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -537,6 +621,18 @@
           "芯片封装测试",
           "系统级封装(SiP)"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140171737",
+          "name": "系统级封装(SiP)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -570,6 +666,18 @@
           "芯片封装测试",
           "高密度细间距凸点倒装(FC类产品)"
         ],
+        "level5Industry": {
+          "code": "1200001284",
+          "name": "IC封测"
+        },
+        "level6Industry": {
+          "code": "1200004969",
+          "name": "芯片封装测试"
+        },
+        "level7Product": {
+          "code": "1140171739",
+          "name": "高密度细间距凸点倒装(FC类产品)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -691,9 +799,162 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 9,
+    "target": {
+      "code": "1200001284",
+      "name": "IC封测",
+      "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+      "coreProductCount": 7,
+      "stockCount": 5,
+      "shareOfLevel7Products": 0.7778,
+      "relevanceScore": 56,
+      "matchedCoreProducts": [
+        {
+          "code": "1140079991",
+          "name": "晶圆测试",
+          "stockCount": 4
+        },
+        {
+          "code": "1140041938",
+          "name": "芯片封装",
+          "stockCount": 4
+        },
+        {
+          "code": "1140024047",
+          "name": "芯片测试",
+          "stockCount": 3
+        },
+        {
+          "code": "1140220957",
+          "name": "共封装光学(CPO)封装",
+          "stockCount": 2
+        },
+        {
+          "code": "1140171738",
+          "name": "扁平无引脚封装(QFN/DFN)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140171737",
+          "name": "系统级封装(SiP)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140171739",
+          "name": "高密度细间距凸点倒装(FC类产品)",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001284",
+        "name": "IC封测",
+        "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "coreProductCount": 7,
+        "stockCount": 5,
+        "shareOfLevel7Products": 0.7778,
+        "relevanceScore": 56,
+        "matchedCoreProducts": [
+          {
+            "code": "1140079991",
+            "name": "晶圆测试",
+            "stockCount": 4
+          },
+          {
+            "code": "1140041938",
+            "name": "芯片封装",
+            "stockCount": 4
+          },
+          {
+            "code": "1140024047",
+            "name": "芯片测试",
+            "stockCount": 3
+          },
+          {
+            "code": "1140220957",
+            "name": "共封装光学(CPO)封装",
+            "stockCount": 2
+          },
+          {
+            "code": "1140171738",
+            "name": "扁平无引脚封装(QFN/DFN)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140171737",
+            "name": "系统级封装(SiP)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140171739",
+            "name": "高密度细间距凸点倒装(FC类产品)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000577",
+        "name": "半导体设备",
+        "description": "半导体设备指芯片制造所需的关键机械。因国产替代加速、政策强力支持及AI需求爆发，该行业成A股焦点。它关乎供应链安全与技术自主，具备高成长性和战略价值，是科技投资的核心赛道。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2222,
+        "relevanceScore": 24,
+        "matchedCoreProducts": [
+          {
+            "code": "1140200855",
+            "name": "数模混合测试机",
+            "stockCount": 1
+          },
+          {
+            "code": "1140033592",
+            "name": "芯片分选机",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "IC封测",
+        "industryDescription": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "newsText": "日月光本周初宣布的先进封装（含CoWoS）报价上调最高20%的事件持续发酵，市场视角已从单一涨价事件，扩展至确认AI硬件进入全产业链成本与价值重估周期，涨价正沿着供应链向DRAM、IC基板等环节蔓延。这一变化直接验证了先进封装的供需缺口，投资逻辑的核心已从传统封测的利润修复，转向对国内具备稀缺先进封装产能及客户验证基础公司的价值重估，其估值锚正向单位产能市值切换。 关注：甬矽电子/长电科技/通富微电/汇成股份（国内具备CoWoS等先进封装扩产能力和客户基础，受益于产能价值重估和涨价预期），同兴达（与日月光合资从事CoWoS前道Bumping工艺，直接受益于涨价传导和订单放量），上峰材料（IC基板供应商，受益于先进封装带动上游材料供需紧张和价格上涨），华岭股份（先进封装测试龙头，受益于产业链高景气度）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产品价格",
+        "原材料与成本",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "涨价"
+        ],
+        "basis": "新闻文本命中：涨价"
+      },
+      "text": "IC封测可以理解为围绕晶圆测试、芯片封装、芯片测试、共封装光学(CPO)封装、扁平无引脚封装(QFN/DFN)等7项形成的五级细分产业，本地图谱对它的解释是“IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注”。把它放回本次事件的产业链，关键链条可以概括为探针卡、测试机台、晶圆划片机、晶圆测试机等9项 → IC封测 → 晶圆封装、晶体硅太阳能电池芯片及组件、IC检测、芯片等6项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产品价格、原材料与成本、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“传日月光先进封装部分报价涨幅达20%”在现有语料中主要新增了与下游需求与订单、产品价格、原材料与成本、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是涨价；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

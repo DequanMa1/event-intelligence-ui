@@ -1,10 +1,11 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 import unicodedata
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
@@ -18,6 +19,7 @@ EVENT_COLUMNS = [
     "uid",
     "calendar_day",
     "topic_name",
+    "source_reason",
     "stock_code",
     "stock_name",
     "origin_star_num",
@@ -40,7 +42,19 @@ PATH_COLUMNS = [
     "matched_source_level",
     "matched_node_code",
     "matched_node_name",
+    "5industry_code",
+    "5industry_name",
+    "6industry_code",
+    "6industry_name",
+    "7industry_code",
+    "7industry_name",
     "hierarchy_path",
+]
+
+NODE_COLUMNS = [
+    "5industry_code",
+    "5industry_name",
+    "5industry_remark",
 ]
 
 EDGE_COLUMNS = [
@@ -81,11 +95,67 @@ GENERIC_CONTEXT_TERMS = {
     "海外厂商",
 }
 
+PROMPT_TEMPLATE_ID = "industry-cognition-stage1-v1"
+NEWS_VARIABLE_SIGNALS = {
+    "下游需求与订单": ("需求", "订单", "销量", "销售", "采购", "客户采用"),
+    "产品价格": ("涨价", "提价", "价格上涨", "价格下跌", "降价", "价差"),
+    "原材料与成本": ("原材料", "原料", "成本", "矿价", "油价", "铜价"),
+    "供给与库存": ("缺货", "短缺", "供给", "减产", "停产", "库存"),
+    "产能与开工": ("产能", "扩产", "开工率", "稼动率", "交付周期"),
+    "技术与量产": ("技术突破", "技术路线", "量产", "良率", "商业化"),
+    "政策与制度": ("政策", "强制", "监管", "补贴", "规划"),
+    "出口与海外需求": ("出口", "海外", "关税", "贸易"),
+}
+TREND_SIGNALS = (
+    "技术路线改变",
+    "技术突破",
+    "强制掺混",
+    "资本开支周期",
+    "渗透率",
+    "制度变化",
+    "商业化",
+    "进入量产",
+    "规模化量产",
+)
+ACCELERATION_SIGNALS = (
+    "涨价",
+    "提价",
+    "缺货",
+    "订单增加",
+    "订单已排",
+    "库存下降",
+    "开工率提高",
+    "出口增长",
+    "出口量环比",
+    "交付周期",
+    "量价齐升",
+)
+SHORT_DISTURBANCE_SIGNALS = ("单笔订单", "单家公司", "临时停产", "市场传闻", "短期波动")
+
 
 def clean_text(value: Any) -> str:
     if value is None or pd.isna(value):
         return ""
     return re.sub(r"[\t\r\n]+", " ", str(value).replace("\u3000", " ").strip())
+
+
+def canonical_text(values: Iterable[Any]) -> str:
+    cleaned = [clean_text(value) for value in values if clean_text(value)]
+    if not cleaned:
+        return ""
+    counts = Counter(cleaned)
+    return sorted(counts, key=lambda item: (-counts[item], -len(item), item))[0]
+
+
+def extract_news_text(value: Any) -> str:
+    text = clean_text(value)
+    focus_marker = re.search(r"(?:<br\s*/?>\s*){2,}关注\s*[：:]?", text, flags=re.IGNORECASE)
+    if focus_marker:
+        text = text[: focus_marker.start()]
+    text = re.sub(r"<br\s*/?>", "\n", text, flags=re.IGNORECASE)
+    text = re.sub(r"<[^>]+>", "", text)
+    text = html.unescape(text).replace("**", "")
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def normalize_text(value: Any) -> str:
@@ -195,6 +265,13 @@ def atomic_write_json(path: Path, payload: Any) -> None:
     temporary.replace(path)
 
 
+def atomic_write_text(path: Path, value: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(value.rstrip() + "\n", encoding="utf-8")
+    temporary.replace(path)
+
+
 def make_stock_record(row: pd.Series, product_count: int, mapped: bool) -> dict[str, Any]:
     return {
         "sourceRowNumber": int(row["source_row_number"]),
@@ -243,6 +320,12 @@ def build_event_draft(
                     "name": path["matched_node_name"],
                     "hierarchyPath": path["hierarchy_path"],
                     "industryPath": [part.strip() for part in path["hierarchy_path"].split(">") if part.strip()],
+                    "level5IndustryCode": path["5industry_code"],
+                    "level5IndustryName": path["5industry_name"],
+                    "level6IndustryCode": path["6industry_code"],
+                    "level6IndustryName": path["6industry_name"],
+                    "level7ProductCode": path["7industry_code"],
+                    "level7ProductName": path["7industry_name"],
                     "matchedSourceLevel": int(path["matched_source_level"]),
                     "relevanceScore": score,
                     "strongRelevanceScore": strong_score,
@@ -264,6 +347,7 @@ def build_event_draft(
         "uid": first["uid"],
         "title": first["topic_name"],
         "date": first["calendar_day"],
+        "newsText": extract_news_text(first["source_reason"]),
         "stocks": stocks,
         "candidates": candidates,
     }
@@ -365,6 +449,12 @@ def choose_semantic_bridge(
                     "name": node["name"],
                     "hierarchyPath": "",
                     "industryPath": [],
+                    "level5IndustryCode": "",
+                    "level5IndustryName": "",
+                    "level6IndustryCode": "",
+                    "level6IndustryName": "",
+                    "level7ProductCode": "",
+                    "level7ProductName": "",
                     "matchedSourceLevel": 0,
                     "relevanceScore": 0,
                     "strongRelevanceScore": 0,
@@ -466,10 +556,224 @@ def build_related_products(
     return output, len(ranked)
 
 
+def build_level5_catalog(nodes: pd.DataFrame) -> dict[str, dict[str, str]]:
+    catalog: dict[str, dict[str, str]] = {}
+    valid = nodes[nodes["5industry_code"].ne("")]
+    for code, group in valid.groupby("5industry_code", sort=False):
+        catalog[code] = {
+            "code": code,
+            "name": canonical_text(group["5industry_name"]),
+            "description": canonical_text(group["5industry_remark"]),
+        }
+    return catalog
+
+
+def compact_names(values: Iterable[str], limit: int = 5) -> str:
+    names = unique_ordered(values)
+    if not names:
+        return "暂无直接节点"
+    visible = names[:limit]
+    suffix = f"等{len(names)}项" if len(names) > limit else ""
+    return "、".join(visible) + suffix
+
+
+def detect_news_variables(news_text: str) -> list[str]:
+    return [
+        label
+        for label, signals in NEWS_VARIABLE_SIGNALS.items()
+        if any(signal in news_text for signal in signals)
+    ][:5]
+
+
+def classify_news(news_text: str) -> dict[str, Any]:
+    short_matches = [signal for signal in SHORT_DISTURBANCE_SIGNALS if signal in news_text]
+    trend_matches = [signal for signal in TREND_SIGNALS if signal in news_text]
+    acceleration_matches = [signal for signal in ACCELERATION_SIGNALS if signal in news_text]
+    if short_matches:
+        code, label, matches = "C", "短期事件扰动", short_matches
+    elif trend_matches:
+        code, label, matches = "A", "产业趋势变化", trend_matches
+    elif acceleration_matches:
+        code, label, matches = "B", "景气度加速/减速", acceleration_matches
+    else:
+        code, label, matches = "C", "短期事件扰动", []
+    return {
+        "code": code,
+        "label": label,
+        "matchedSignals": matches[:4],
+        "basis": (
+            f"新闻文本命中：{'、'.join(matches[:4])}"
+            if matches
+            else "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+        ),
+    }
+
+
+def build_simulated_analysis(
+    target: dict[str, Any],
+    upstream: list[dict[str, Any]],
+    downstream: list[dict[str, Any]],
+    news_title: str,
+    news_text: str,
+) -> dict[str, Any]:
+    core_names = [item["name"] for item in target["matchedCoreProducts"]]
+    variables = detect_news_variables(news_text)
+    classification = classify_news(news_text)
+    description = target["description"] or "原始产业图谱暂未提供该五级产业的文字解释"
+    description = description.rstrip("。！？；; ")
+    variable_text = "、".join(variables) if variables else "需求、价格、成本、产能和竞争格局"
+    signal_text = (
+        "、".join(classification["matchedSignals"])
+        if classification["matchedSignals"]
+        else "尚无足够的持续性经营信号"
+    )
+    text = (
+        f"{target['name']}可以理解为围绕{compact_names(core_names)}形成的五级细分产业，"
+        f"本地图谱对它的解释是“{description}”。"
+        f"把它放回本次事件的产业链，关键链条可以概括为{compact_names((item['name'] for item in upstream), 4)}"
+        f" → {target['name']} → {compact_names((item['name'] for item in downstream), 4)}，"
+        "企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，"
+        "利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。"
+        f"景气度需要重点跟踪{variable_text}，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。"
+        f"近期事件“{news_title}”在现有语料中主要新增了与{variable_text}有关的信息，"
+        "但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。"
+        f"按关键词规则暂归为{classification['code']}类“{classification['label']}”，依据是{signal_text}；"
+        "这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    )
+    return {
+        "mode": "local_rule_simulation",
+        "isRealModelOutput": False,
+        "variables": variables,
+        "classification": classification,
+        "text": re.sub(r"\s+", " ", text).strip(),
+    }
+
+
+def build_industry_analysis(
+    company_core_products: list[dict[str, Any]],
+    level5_catalog: dict[str, dict[str, str]],
+    upstream: list[dict[str, Any]],
+    downstream: list[dict[str, Any]],
+    news_title: str,
+    news_text: str,
+    prompt_template_url: str,
+) -> dict[str, Any]:
+    level7_products = [
+        product
+        for product in company_core_products
+        if product["matchedSourceLevel"] == 7
+        and product["level7ProductName"]
+        and product["level5IndustryCode"]
+        and product["level5IndustryName"]
+    ]
+    groups: dict[str, dict[str, Any]] = {}
+    for product in level7_products:
+        code = product["level5IndustryCode"]
+        catalog_item = level5_catalog.get(code, {})
+        group = groups.setdefault(
+            code,
+            {
+                "code": code,
+                "name": catalog_item.get("name") or product["level5IndustryName"],
+                "description": catalog_item.get("description", ""),
+                "matchedCoreProducts": [],
+                "stockKeys": set(),
+                "relevanceScore": 0,
+            },
+        )
+        group["matchedCoreProducts"].append(
+            {
+                "code": product["level7ProductCode"] or product["code"],
+                "name": product["level7ProductName"] or product["name"],
+                "stockCount": len(product["stocks"]),
+            }
+        )
+        group["stockKeys"].update(product["stocks"])
+        group["relevanceScore"] += product["relevanceScore"]
+
+    if not groups:
+        return {
+            "status": "unavailable",
+            "stage": 1,
+            "stageName": "五级产业认知",
+            "mode": "simulation",
+            "selectionRule": "将入选的七级核心产品按五级产业代码归并，优先选择核心产品数量最多者",
+            "sourceLevel7ProductCount": len(level7_products),
+            "target": None,
+            "candidates": [],
+            "prompt": None,
+            "simulation": None,
+            "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径",
+        }
+
+    candidates: list[dict[str, Any]] = []
+    total_level7_products = len(level7_products)
+    for group in groups.values():
+        products = sorted(
+            group["matchedCoreProducts"],
+            key=lambda item: (-item["stockCount"], item["name"], natural_code_key(item["code"])),
+        )
+        candidates.append(
+            {
+                "code": group["code"],
+                "name": group["name"],
+                "description": group["description"],
+                "coreProductCount": len(products),
+                "stockCount": len(group["stockKeys"]),
+                "shareOfLevel7Products": round(len(products) / total_level7_products, 4),
+                "relevanceScore": group["relevanceScore"],
+                "matchedCoreProducts": products,
+            }
+        )
+    candidates.sort(
+        key=lambda item: (
+            -item["coreProductCount"],
+            -item["stockCount"],
+            -item["relevanceScore"],
+            item["name"],
+            natural_code_key(item["code"]),
+        )
+    )
+    target = candidates[0]
+    prompt_inputs = {
+        "industryName": target["name"],
+        "industryDescription": target["description"] or "原始产业图谱未提供该五级产业的文字解释。",
+        "newsText": news_text or news_title,
+    }
+    return {
+        "status": "ready",
+        "stage": 1,
+        "stageName": "五级产业认知",
+        "mode": "simulation",
+        "selectionRule": (
+            "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，"
+            "并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象"
+        ),
+        "sourceLevel7ProductCount": total_level7_products,
+        "target": target,
+        "candidates": candidates,
+        "prompt": {
+            "templateId": PROMPT_TEMPLATE_ID,
+            "templateUrl": prompt_template_url,
+            "inputs": prompt_inputs,
+        },
+        "simulation": build_simulated_analysis(
+            target,
+            upstream,
+            downstream,
+            news_title,
+            news_text,
+        ),
+        "reason": "",
+    }
+
+
 def finalize_event(
     draft: dict[str, Any],
     edge_index: dict[str, list[dict[str, str]]],
+    level5_catalog: dict[str, dict[str, str]],
     generated_at: str,
+    prompt_template_url: str,
 ) -> dict[str, Any]:
     company_core_products = draft["selectedCoreProducts"]
     bridge_products = draft["semanticBridges"]
@@ -486,6 +790,18 @@ def finalize_event(
                 "name": core["name"],
                 "hierarchyPath": core["hierarchyPath"],
                 "industryPath": core["industryPath"],
+                "level5Industry": {
+                    "code": core["level5IndustryCode"],
+                    "name": core["level5IndustryName"],
+                },
+                "level6Industry": {
+                    "code": core["level6IndustryCode"],
+                    "name": core["level6IndustryName"],
+                },
+                "level7Product": {
+                    "code": core["level7ProductCode"],
+                    "name": core["level7ProductName"],
+                },
                 "matchedSourceLevel": core["matchedSourceLevel"],
                 "mappingType": core["mappingType"],
                 "bridgeBasis": core["bridgeBasis"],
@@ -527,8 +843,19 @@ def finalize_event(
     if unmapped_stocks:
         caveats.append(f"{len(unmapped_stocks)}只4星标的未在本地公司产品图谱中穿透。")
 
+    industry_analysis = build_industry_analysis(
+        company_core_products,
+        level5_catalog,
+        upstream,
+        downstream,
+        draft["title"],
+        draft["newsText"],
+        prompt_template_url,
+    )
+    caveats.append("AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。")
+
     return {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -560,6 +887,7 @@ def finalize_event(
             "core": output_core,
             "downstream": downstream,
         },
+        "industryAnalysis": industry_analysis,
         "caveats": caveats,
     }
 
@@ -618,6 +946,21 @@ def parse_args() -> argparse.Namespace:
         default=project_root / "data" / "generated" / "产业链_双向补全明细.csv",
     )
     parser.add_argument(
+        "--nodes",
+        type=Path,
+        default=workspace_root / "2.产业数据图谱" / "20260820节点.csv",
+    )
+    parser.add_argument(
+        "--prompt-template",
+        type=Path,
+        default=project_root / "prompts" / "industry-cognition-stage1-v1.md",
+    )
+    parser.add_argument(
+        "--public-prompt",
+        type=Path,
+        default=project_root / "public" / "data" / "prompts" / "industry-cognition-stage1-v1.md",
+    )
+    parser.add_argument(
         "--output-dir",
         type=Path,
         default=project_root / "public" / "data" / "impact-chains",
@@ -630,6 +973,18 @@ def main() -> None:
     events, event_encoding = read_csv_columns(args.events, EVENT_COLUMNS)
     paths, path_encoding = read_csv_columns(args.paths, PATH_COLUMNS)
     edges, edge_encoding = read_csv_columns(args.edges, EDGE_COLUMNS)
+    nodes, node_encoding = read_csv_columns(args.nodes, NODE_COLUMNS)
+    prompt_template = args.prompt_template.read_text(encoding="utf-8")
+    missing_placeholders = [
+        placeholder
+        for placeholder in ("{{industry_name}}", "{{industry_description}}", "{{news_text}}")
+        if placeholder not in prompt_template
+    ]
+    if missing_placeholders:
+        raise ValueError(f"产业认知提示词缺少占位符: {missing_placeholders}")
+    atomic_write_text(args.public_prompt, prompt_template)
+    prompt_template_url = f"/data/prompts/{args.public_prompt.name}"
+    level5_catalog = build_level5_catalog(nodes)
 
     events.insert(0, "source_row_number", [str(number) for number in range(2, len(events) + 2)])
     events["filled_star_count"] = events["origin_star_num"].map(filled_star_count)
@@ -687,14 +1042,23 @@ def main() -> None:
     generated_at = datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
     index_events: list[dict[str, Any]] = []
     status_counts: dict[str, int] = defaultdict(int)
+    analysis_status_counts: dict[str, int] = defaultdict(int)
     for draft in drafts:
-        payload = finalize_event(draft, edge_index, generated_at)
+        payload = finalize_event(
+            draft,
+            edge_index,
+            level5_catalog,
+            generated_at,
+            prompt_template_url,
+        )
         main_id = payload["event"]["mainId"]
         if not re.fullmatch(r"[A-Za-z0-9_-]+", main_id):
             raise ValueError(f"main_id 不适合用作文件名: {main_id!r}")
         filename = f"{main_id}.json"
         atomic_write_json(args.output_dir / filename, payload)
         status_counts[payload["status"]] += 1
+        analysis_status_counts[payload["industryAnalysis"]["status"]] += 1
+        analysis_target = payload["industryAnalysis"]["target"]
         index_events.append(
             {
                 **payload["event"],
@@ -705,15 +1069,19 @@ def main() -> None:
                 "coreProductCount": payload["totals"]["selectedCoreProductCount"],
                 "upstreamCount": payload["totals"]["shownUpstreamCount"],
                 "downstreamCount": payload["totals"]["shownDownstreamCount"],
+                "industryAnalysisStatus": payload["industryAnalysis"]["status"],
+                "level5IndustryCode": analysis_target["code"] if analysis_target else "",
+                "level5IndustryName": analysis_target["name"] if analysis_target else "",
             }
         )
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),
+        "industryAnalysisStatusCounts": dict(sorted(analysis_status_counts.items())),
         "source": {
             "events": args.events.name,
             "eventEncoding": event_encoding,
@@ -721,6 +1089,9 @@ def main() -> None:
             "pathEncoding": path_encoding,
             "edges": args.edges.name,
             "edgeEncoding": edge_encoding,
+            "nodes": args.nodes.name,
+            "nodeEncoding": node_encoding,
+            "promptTemplate": args.prompt_template.name,
         },
         "events": index_events,
     }
@@ -731,6 +1102,7 @@ def main() -> None:
     print(f"恰好4个实心星的新闻: {sum(item['sourceStockCount'] > 0 for item in index_events):,}")
     print(f"可展示核心产品的新闻: {ready_or_core_only:,}")
     print(f"可展示上下游的新闻: {status_counts.get('ready', 0):,}")
+    print(f"可生成五级产业认知语料的新闻: {analysis_status_counts.get('ready', 0):,}")
     print(f"状态分布: {dict(sorted(status_counts.items()))}")
     print(f"输出目录: {args.output_dir}")
 

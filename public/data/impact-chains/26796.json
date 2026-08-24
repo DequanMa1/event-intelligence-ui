@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26796",
@@ -421,6 +421,18 @@
           "工业电子制造装备",
           "PCB板用机械钻孔设备"
         ],
+        "level5Industry": {
+          "code": "1200005604",
+          "name": "工业电子制造装备"
+        },
+        "level6Industry": {
+          "code": "1200005688",
+          "name": "工业电子制造装备"
+        },
+        "level7Product": {
+          "code": "1140163245",
+          "name": "PCB板用机械钻孔设备"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -455,6 +467,18 @@
           "激光加工设备",
           "PCB板用图形激光直接成像设备"
         ],
+        "level5Industry": {
+          "code": "1200000556",
+          "name": "激光专用设备"
+        },
+        "level6Industry": {
+          "code": "1200003298",
+          "name": "激光加工设备"
+        },
+        "level7Product": {
+          "code": "1140163249",
+          "name": "PCB板用图形激光直接成像设备"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -488,6 +512,18 @@
           "工业电子制造装备",
           "PCB板电性能测试设备"
         ],
+        "level5Industry": {
+          "code": "1200005604",
+          "name": "工业电子制造装备"
+        },
+        "level6Industry": {
+          "code": "1200005688",
+          "name": "工业电子制造装备"
+        },
+        "level7Product": {
+          "code": "1140163252",
+          "name": "PCB板电性能测试设备"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -521,6 +557,18 @@
           "工业电子制造装备",
           "FPCB贴补强机"
         ],
+        "level5Industry": {
+          "code": "1200005604",
+          "name": "工业电子制造装备"
+        },
+        "level6Industry": {
+          "code": "1200005688",
+          "name": "工业电子制造装备"
+        },
+        "level7Product": {
+          "code": "1140171674",
+          "name": "FPCB贴补强机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -554,6 +602,18 @@
           "激光加工设备",
           "HDI板用CO2激光钻孔设备"
         ],
+        "level5Industry": {
+          "code": "1200000556",
+          "name": "激光专用设备"
+        },
+        "level6Industry": {
+          "code": "1200003298",
+          "name": "激光加工设备"
+        },
+        "level7Product": {
+          "code": "1140163246",
+          "name": "HDI板用CO2激光钻孔设备"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -587,6 +647,18 @@
           "激光加工设备",
           "IC封装基板用超快激光钻孔设备"
         ],
+        "level5Industry": {
+          "code": "1200000556",
+          "name": "激光专用设备"
+        },
+        "level6Industry": {
+          "code": "1200003298",
+          "name": "激光加工设备"
+        },
+        "level7Product": {
+          "code": "1140163248",
+          "name": "IC封装基板用超快激光钻孔设备"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -620,6 +692,18 @@
           "激光加工设备",
           "挠性线路板用UV激光钻孔设备"
         ],
+        "level5Industry": {
+          "code": "1200000556",
+          "name": "激光专用设备"
+        },
+        "level6Industry": {
+          "code": "1200003298",
+          "name": "激光加工设备"
+        },
+        "level7Product": {
+          "code": "1140163247",
+          "name": "挠性线路板用UV激光钻孔设备"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -713,9 +797,139 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 7,
+    "target": {
+      "code": "1200000556",
+      "name": "激光专用设备",
+      "description": "激光专用设备指利用激光进行切割、焊接等加工的设备。因契合制造业升级与国产替代趋势，兼具高精度、高效率优势，且下游覆盖新能源、半导体等高景气领域，业绩增长潜力大，故备受A股市场关注。",
+      "coreProductCount": 4,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.5714,
+      "relevanceScore": 38,
+      "matchedCoreProducts": [
+        {
+          "code": "1140163246",
+          "name": "HDI板用CO2激光钻孔设备",
+          "stockCount": 1
+        },
+        {
+          "code": "1140163248",
+          "name": "IC封装基板用超快激光钻孔设备",
+          "stockCount": 1
+        },
+        {
+          "code": "1140163249",
+          "name": "PCB板用图形激光直接成像设备",
+          "stockCount": 1
+        },
+        {
+          "code": "1140163247",
+          "name": "挠性线路板用UV激光钻孔设备",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000556",
+        "name": "激光专用设备",
+        "description": "激光专用设备指利用激光进行切割、焊接等加工的设备。因契合制造业升级与国产替代趋势，兼具高精度、高效率优势，且下游覆盖新能源、半导体等高景气领域，业绩增长潜力大，故备受A股市场关注。",
+        "coreProductCount": 4,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.5714,
+        "relevanceScore": 38,
+        "matchedCoreProducts": [
+          {
+            "code": "1140163246",
+            "name": "HDI板用CO2激光钻孔设备",
+            "stockCount": 1
+          },
+          {
+            "code": "1140163248",
+            "name": "IC封装基板用超快激光钻孔设备",
+            "stockCount": 1
+          },
+          {
+            "code": "1140163249",
+            "name": "PCB板用图形激光直接成像设备",
+            "stockCount": 1
+          },
+          {
+            "code": "1140163247",
+            "name": "挠性线路板用UV激光钻孔设备",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200005604",
+        "name": "工业电子制造装备",
+        "description": "该行业指为电子产业提供生产设备的领域，如半导体、PCB及显示面板设备。因受益于国产替代加速、AI算力需求爆发及制造业升级，成为A股高景气赛道，备受资金关注，是科技自立自强核心环节。",
+        "coreProductCount": 3,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.4286,
+        "relevanceScore": 39,
+        "matchedCoreProducts": [
+          {
+            "code": "1140171674",
+            "name": "FPCB贴补强机",
+            "stockCount": 1
+          },
+          {
+            "code": "1140163245",
+            "name": "PCB板用机械钻孔设备",
+            "stockCount": 1
+          },
+          {
+            "code": "1140163252",
+            "name": "PCB板电性能测试设备",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "激光专用设备",
+        "industryDescription": "激光专用设备指利用激光进行切割、焊接等加工的设备。因契合制造业升级与国产替代趋势，兼具高精度、高效率优势，且下游覆盖新能源、半导体等高景气领域，业绩增长潜力大，故备受A股市场关注。",
+        "newsText": "7月1日，日本京瓷官宣对其SGS全系列产品（含微钻）提价25%，此举是过去24小时内行业最关键的边际变化，它发生在AI需求旺盛与上游钨原料供给持续紧张的背景下，直接印证了成本驱动的涨价潮已从预期走向现实。这一海外巨头的明确提价，为国内厂商提供了直接的价格参照和提价理由，投资逻辑的核心已从对上游断供的担忧，转向对钻针环节利润弹性释放的确认，产业链的通胀正式由成本端向下游传导。 关注：中钨高新/欧科亿（棒材钻针一体化及国产替代领先），鼎泰高科/民爆光电（高端钻针龙头，产能释放与技术领先），厦门钨业/博云新材（上游核心棒材国产化突破）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产品价格",
+        "原材料与成本",
+        "供给与库存",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "涨价",
+          "提价"
+        ],
+        "basis": "新闻文本命中：涨价、提价"
+      },
+      "text": "激光专用设备可以理解为围绕HDI板用CO2激光钻孔设备、IC封装基板用超快激光钻孔设备、PCB板用图形激光直接成像设备、挠性线路板用UV激光钻孔设备形成的五级细分产业，本地图谱对它的解释是“激光专用设备指利用激光进行切割、焊接等加工的设备。因契合制造业升级与国产替代趋势，兼具高精度、高效率优势，且下游覆盖新能源、半导体等高景气领域，业绩增长潜力大，故备受A股市场关注”。把它放回本次事件的产业链，关键链条可以概括为Z轴底板、主轴夹、平板直线电机、床身等14项 → 激光专用设备 → PCB板、HDI板、IC封装基板、挠性线路板，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产品价格、原材料与成本、供给与库存、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“PCB钻针及棒材供需偏紧”在现有语料中主要新增了与下游需求与订单、产品价格、原材料与成本、供给与库存、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是涨价、提价；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

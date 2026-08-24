@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26384",
@@ -349,6 +349,18 @@
           "IDC硬件产品",
           "冷却液分歧管(Manifold)"
         ],
+        "level5Industry": {
+          "code": "1200001406",
+          "name": "IDC服务"
+        },
+        "level6Industry": {
+          "code": "1200005283",
+          "name": "IDC硬件产品"
+        },
+        "level7Product": {
+          "code": "1140216651",
+          "name": "冷却液分歧管(Manifold)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -384,6 +396,18 @@
           "IDC硬件产品",
           "冷却液分配单元(CDU)"
         ],
+        "level5Industry": {
+          "code": "1200001406",
+          "name": "IDC服务"
+        },
+        "level6Industry": {
+          "code": "1200005283",
+          "name": "IDC硬件产品"
+        },
+        "level7Product": {
+          "code": "1140216650",
+          "name": "冷却液分配单元(CDU)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -418,6 +442,18 @@
           "新能源汽车动力电池系统",
           "电池液冷板"
         ],
+        "level5Industry": {
+          "code": "1200005623",
+          "name": "新能源汽车动力电池系统"
+        },
+        "level6Industry": {
+          "code": "1200005723",
+          "name": "新能源汽车动力电池系统"
+        },
+        "level7Product": {
+          "code": "1140200859",
+          "name": "电池液冷板"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -452,6 +488,18 @@
           "IDC硬件产品",
           "冷却应用快速接头(UQD)"
         ],
+        "level5Industry": {
+          "code": "1200001406",
+          "name": "IDC服务"
+        },
+        "level6Industry": {
+          "code": "1200005283",
+          "name": "IDC硬件产品"
+        },
+        "level7Product": {
+          "code": "1140216652",
+          "name": "冷却应用快速接头(UQD)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -485,6 +533,18 @@
           "IDC硬件产品",
           "冷板式液冷机柜"
         ],
+        "level5Industry": {
+          "code": "1200001406",
+          "name": "IDC服务"
+        },
+        "level6Industry": {
+          "code": "1200005283",
+          "name": "IDC硬件产品"
+        },
+        "level7Product": {
+          "code": "1140216649",
+          "name": "冷板式液冷机柜"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -518,6 +578,18 @@
           "IDC硬件产品",
           "服务器液冷板"
         ],
+        "level5Industry": {
+          "code": "1200001406",
+          "name": "IDC服务"
+        },
+        "level6Industry": {
+          "code": "1200005283",
+          "name": "IDC硬件产品"
+        },
+        "level7Product": {
+          "code": "1140202350",
+          "name": "服务器液冷板"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -544,6 +616,18 @@
         "name": "服务器",
         "hierarchyPath": "",
         "industryPath": [],
+        "level5Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level6Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level7Product": {
+          "code": "",
+          "name": ""
+        },
         "matchedSourceLevel": 0,
         "mappingType": "semantic_bridge",
         "bridgeBasis": "company_product:服务器液冷板",
@@ -789,11 +873,132 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 6,
+    "target": {
+      "code": "1200001406",
+      "name": "IDC服务",
+      "description": "IDC即互联网数据中心，提供服务器托管及算力支持。作为“东数西算”和AI发展的核心基建，其受益于数字化转型与算力需求爆发，具备高成长性和确定性，因而成为A股备受关注的科技细分赛道。",
+      "coreProductCount": 5,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.8333,
+      "relevanceScore": 63,
+      "matchedCoreProducts": [
+        {
+          "code": "1140216652",
+          "name": "冷却应用快速接头(UQD)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140216651",
+          "name": "冷却液分歧管(Manifold)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140216650",
+          "name": "冷却液分配单元(CDU)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140216649",
+          "name": "冷板式液冷机柜",
+          "stockCount": 1
+        },
+        {
+          "code": "1140202350",
+          "name": "服务器液冷板",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001406",
+        "name": "IDC服务",
+        "description": "IDC即互联网数据中心，提供服务器托管及算力支持。作为“东数西算”和AI发展的核心基建，其受益于数字化转型与算力需求爆发，具备高成长性和确定性，因而成为A股备受关注的科技细分赛道。",
+        "coreProductCount": 5,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.8333,
+        "relevanceScore": 63,
+        "matchedCoreProducts": [
+          {
+            "code": "1140216652",
+            "name": "冷却应用快速接头(UQD)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140216651",
+            "name": "冷却液分歧管(Manifold)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140216650",
+            "name": "冷却液分配单元(CDU)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140216649",
+            "name": "冷板式液冷机柜",
+            "stockCount": 1
+          },
+          {
+            "code": "1140202350",
+            "name": "服务器液冷板",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200005623",
+        "name": "新能源汽车动力电池系统",
+        "description": "该行业指为新能源车提供核心动力源（如锂电池）及管理系统。因契合“双碳”战略、技术迭代快且市场空间巨大，成为A股高成长赛道。其景气度直接决定整车性能与成本，备受资本青睐，是新能源产业链的核心环节。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1667,
+        "relevanceScore": 11,
+        "matchedCoreProducts": [
+          {
+            "code": "1140200859",
+            "name": "电池液冷板",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "IDC服务",
+        "industryDescription": "IDC即互联网数据中心，提供服务器托管及算力支持。作为“东数西算”和AI发展的核心基建，其受益于数字化转型与算力需求爆发，具备高成长性和确定性，因而成为A股备受关注的科技细分赛道。",
+        "newsText": "在英伟达于美东时间6月21日官宣Rubin平台将采用100%全液冷架构后，过去24小时的边际变化在于，英特尔联合产业链伙伴完成冷板工质验证，叠加谷歌TPU液冷方案的推进，确立了液冷从单一巨头引领向全行业生态共振的格局。投资视角已从主题预期转向Q3业绩兑现的产业拐点，市场开始挖掘从“算力配套”升级为“AI基建核心支柱”的确定性增量，尤其关注在光模块液冷Cage、高功率CDU等技术壁垒和价值量双高环节具备核心卡位的公司。 关注：英维克/申菱环境/高澜股份（液冷系统及CDU方案商，英维克参与英特尔生态验证），金富科技/五洋自控（不锈钢Manifold歧管及管路核心供应商），鼎通科技/奕东电子（高价值量光模块液冷Cage），裕同科技/领益智造（快接头UQD/QD核心供应商，MIM工艺具备壁垒），飞龙股份/大元泵业（电子泵阀组件），博杰股份（液冷机柜核心检测设备），思泉新材（冷板及导热材料）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "IDC服务可以理解为围绕冷却应用快速接头(UQD)、冷却液分歧管(Manifold)、冷却液分配单元(CDU)、冷板式液冷机柜、服务器液冷板形成的五级细分产业，本地图谱对它的解释是“IDC即互联网数据中心，提供服务器托管及算力支持。作为“东数西算”和AI发展的核心基建，其受益于数字化转型与算力需求爆发，具备高成长性和确定性，因而成为A股备受关注的科技细分赛道”。把它放回本次事件的产业链，关键链条可以概括为中央处理器(CPU)、光驱、分布式布局、变压器等14项 → IDC服务 → 云服务器服务、云服务平台、云服务数据中心、网络宽带服务等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪需求、价格、成本、产能和竞争格局，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“英伟达Rubin平台确认采用全液冷架构”在现有语料中主要新增了与需求、价格、成本、产能和竞争格局有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
     "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "3只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

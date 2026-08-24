@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27130",
@@ -312,6 +312,18 @@
           "火电站用锅炉",
           "燃气-蒸汽联合循环发电设备(GTCC)"
         ],
+        "level5Industry": {
+          "code": "1200000337",
+          "name": "火电站用锅炉"
+        },
+        "level6Industry": {
+          "code": "1210000587",
+          "name": "火电站用锅炉"
+        },
+        "level7Product": {
+          "code": "1140166344",
+          "name": "燃气-蒸汽联合循环发电设备(GTCC)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -344,6 +356,18 @@
           "发电工程",
           "水电站工程"
         ],
+        "level5Industry": {
+          "code": "1210000277",
+          "name": "发电工程"
+        },
+        "level6Industry": {
+          "code": "1210000470",
+          "name": "发电工程"
+        },
+        "level7Product": {
+          "code": "1140141533",
+          "name": "水电站工程"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -376,6 +400,18 @@
           "发电工程",
           "核电工程"
         ],
+        "level5Industry": {
+          "code": "1210000277",
+          "name": "发电工程"
+        },
+        "level6Industry": {
+          "code": "1210000470",
+          "name": "发电工程"
+        },
+        "level7Product": {
+          "code": "1140058799",
+          "name": "核电工程"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -408,6 +444,18 @@
           "水电设备",
           "水轮机"
         ],
+        "level5Industry": {
+          "code": "1210000361",
+          "name": "水电设备"
+        },
+        "level6Industry": {
+          "code": "1200002680",
+          "name": "水电设备"
+        },
+        "level7Product": {
+          "code": "1140008638",
+          "name": "水轮机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -439,6 +487,18 @@
           "核电设备",
           "核电蒸汽发生器"
         ],
+        "level5Industry": {
+          "code": "1210000360",
+          "name": "核电设备"
+        },
+        "level6Industry": {
+          "code": "1200002677",
+          "name": "核电设备"
+        },
+        "level7Product": {
+          "code": "1140044193",
+          "name": "核电蒸汽发生器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -638,9 +698,135 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 5,
+    "target": {
+      "code": "1210000277",
+      "name": "发电工程",
+      "description": "发电工程指电力设施建设与安装。受“双碳”政策驱动，风光等新能源装机需求爆发，行业景气度持续高企。叠加特高压建设加速及出海机遇，业绩增长确定性强，成为A股聚焦绿色转型与基建投资的核心板块。",
+      "coreProductCount": 2,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.4,
+      "relevanceScore": 16,
+      "matchedCoreProducts": [
+        {
+          "code": "1140058799",
+          "name": "核电工程",
+          "stockCount": 1
+        },
+        {
+          "code": "1140141533",
+          "name": "水电站工程",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210000277",
+        "name": "发电工程",
+        "description": "发电工程指电力设施建设与安装。受“双碳”政策驱动，风光等新能源装机需求爆发，行业景气度持续高企。叠加特高压建设加速及出海机遇，业绩增长确定性强，成为A股聚焦绿色转型与基建投资的核心板块。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.4,
+        "relevanceScore": 16,
+        "matchedCoreProducts": [
+          {
+            "code": "1140058799",
+            "name": "核电工程",
+            "stockCount": 1
+          },
+          {
+            "code": "1140141533",
+            "name": "水电站工程",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000337",
+        "name": "火电站用锅炉",
+        "description": "该行业指制造火力发电核心设备锅炉的企业。受关注因其在能源转型中承担调峰保供重任，且受益于煤电灵活性改造及出海需求增长。作为电力稳定器，其技术升级与市场扩容使其成为兼具防御性与成长性的细分赛道。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140166344",
+            "name": "燃气-蒸汽联合循环发电设备(GTCC)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000360",
+        "name": "核电设备",
+        "description": "核电设备指核反应堆及配套系统制造。受“双碳”目标推动，核电作为稳定清洁能源获政策重启加速，审批常态化带来确定性增长。加之技术自主化突破及出海预期，行业景气度提升，成为兼具安全与成长属性的投资热点。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140044193",
+            "name": "核电蒸汽发生器",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000361",
+        "name": "水电设备",
+        "description": "水电设备指水轮发电机组等制造行业。受“双碳”政策及清洁能源转型驱动，其因具备稳定现金流、低估值及高股息特性而受关注。随着大型水电站建设及存量机组更新改造需求释放，行业景气度持续向好。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140008638",
+            "name": "水轮机",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "发电工程",
+        "industryDescription": "发电工程指电力设施建设与安装。受“双碳”政策驱动，风光等新能源装机需求爆发，行业景气度持续高企。叠加特高压建设加速及出海机遇，业绩增长确定性强，成为A股聚焦绿色转型与基建投资的核心板块。",
+        "newsText": "7月3日以来，北美PJM电网因极端高温及负荷激增启动二级电力应急警报，北弗吉尼亚等数据中心集群区域现货电价飙升超60倍，标志着AI用电与电网老化的结构性矛盾在夏季高峰期首次集中爆发。这一事件将北美缺电问题从远期担忧转变为当下刚性约束，市场交易的核心正从AI算力本身转向为其供电的基础设施，具备快速交付能力的燃气轮机、变压器等电力设备供应商的订单确定性及业绩弹性被重估。 关注：金盘科技/思源电气/白云电器/安靠智电（变压器出海订单持续超预期，受益于电网升级和AIDC并网需求），潍柴动力/杰瑞股份/东方电气（燃气/柴油发电机组作为关键备用和补充电源，产能外溢效应下国产厂商迎来出海机遇），艾可蓝（受益于柴油发电机组放量，尾气处理需求增长），开山股份（地热发电作为新型清洁能源解决方案获得关注）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "发电工程可以理解为围绕核电工程、水电站工程形成的五级细分产业，本地图谱对它的解释是“发电工程指电力设施建设与安装。受“双碳”政策驱动，风光等新能源装机需求爆发，行业景气度持续高企。叠加特高压建设加速及出海机遇，业绩增长确定性强，成为A股聚焦绿色转型与基建投资的核心板块”。把它放回本次事件的产业链，关键链条可以概括为传热管束、余热锅炉、压力管道挖掘、压水堆等14项 → 发电工程 → 发电、核电、核电企业、水电站等11项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“北美高温致部分地区电价飙升”在现有语料中主要新增了与下游需求与订单、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

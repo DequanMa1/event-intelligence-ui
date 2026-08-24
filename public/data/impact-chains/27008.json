@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27008",
@@ -335,6 +335,18 @@
           "锂离子电池",
           "锂-二氧化锰电池"
         ],
+        "level5Industry": {
+          "code": "1210000367",
+          "name": "锂离子电池"
+        },
+        "level6Industry": {
+          "code": "1200002621",
+          "name": "锂离子电池"
+        },
+        "level7Product": {
+          "code": "1140135771",
+          "name": "锂-二氧化锰电池"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -367,6 +379,18 @@
           "锂离子电池",
           "磷酸铁锂电池"
         ],
+        "level5Industry": {
+          "code": "1210000367",
+          "name": "锂离子电池"
+        },
+        "level6Industry": {
+          "code": "1200002621",
+          "name": "锂离子电池"
+        },
+        "level7Product": {
+          "code": "1140050606",
+          "name": "磷酸铁锂电池"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -399,6 +423,18 @@
           "锂离子电池",
           "锂-亚硫酰氯电池"
         ],
+        "level5Industry": {
+          "code": "1210000367",
+          "name": "锂离子电池"
+        },
+        "level6Industry": {
+          "code": "1200002621",
+          "name": "锂离子电池"
+        },
+        "level7Product": {
+          "code": "1140135770",
+          "name": "锂-亚硫酰氯电池"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -431,6 +467,18 @@
           "锂离子电池",
           "三元锂电池"
         ],
+        "level5Industry": {
+          "code": "1210000367",
+          "name": "锂离子电池"
+        },
+        "level6Industry": {
+          "code": "1200002621",
+          "name": "锂离子电池"
+        },
+        "level7Product": {
+          "code": "1140005412",
+          "name": "三元锂电池"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -463,6 +511,18 @@
           "锂离子电池",
           "储能锂电池"
         ],
+        "level5Industry": {
+          "code": "1210000367",
+          "name": "锂离子电池"
+        },
+        "level6Industry": {
+          "code": "1200002621",
+          "name": "锂离子电池"
+        },
+        "level7Product": {
+          "code": "1140069150",
+          "name": "储能锂电池"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -495,6 +555,18 @@
           "锂离子电池",
           "全固态电池"
         ],
+        "level5Industry": {
+          "code": "1210000367",
+          "name": "锂离子电池"
+        },
+        "level6Industry": {
+          "code": "1200002621",
+          "name": "锂离子电池"
+        },
+        "level7Product": {
+          "code": "1140209668",
+          "name": "全固态电池"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -527,6 +599,18 @@
           "锂离子电池",
           "半固态电池"
         ],
+        "level5Industry": {
+          "code": "1210000367",
+          "name": "锂离子电池"
+        },
+        "level6Industry": {
+          "code": "1200002621",
+          "name": "锂离子电池"
+        },
+        "level7Product": {
+          "code": "1140209667",
+          "name": "半固态电池"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -559,6 +643,18 @@
           "锂离子电池",
           "消费类锂离子电池"
         ],
+        "level5Industry": {
+          "code": "1210000367",
+          "name": "锂离子电池"
+        },
+        "level6Industry": {
+          "code": "1200002621",
+          "name": "锂离子电池"
+        },
+        "level7Product": {
+          "code": "1140192183",
+          "name": "消费类锂离子电池"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -807,10 +903,151 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 8,
+    "target": {
+      "code": "1210000367",
+      "name": "锂离子电池",
+      "description": "锂离子电池是新能源汽车与储能的核心动力源。A股该板块因契合“双碳”战略、下游需求爆发及国产供应链优势而备受瞩目，汇聚了众多全球龙头，兼具高成长性与政策红利，是资本市场长期关注的黄金赛道。",
+      "coreProductCount": 8,
+      "stockCount": 1,
+      "shareOfLevel7Products": 1.0,
+      "relevanceScore": 40,
+      "matchedCoreProducts": [
+        {
+          "code": "1140005412",
+          "name": "三元锂电池",
+          "stockCount": 1
+        },
+        {
+          "code": "1140069150",
+          "name": "储能锂电池",
+          "stockCount": 1
+        },
+        {
+          "code": "1140209668",
+          "name": "全固态电池",
+          "stockCount": 1
+        },
+        {
+          "code": "1140209667",
+          "name": "半固态电池",
+          "stockCount": 1
+        },
+        {
+          "code": "1140192183",
+          "name": "消费类锂离子电池",
+          "stockCount": 1
+        },
+        {
+          "code": "1140050606",
+          "name": "磷酸铁锂电池",
+          "stockCount": 1
+        },
+        {
+          "code": "1140135771",
+          "name": "锂-二氧化锰电池",
+          "stockCount": 1
+        },
+        {
+          "code": "1140135770",
+          "name": "锂-亚硫酰氯电池",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210000367",
+        "name": "锂离子电池",
+        "description": "锂离子电池是新能源汽车与储能的核心动力源。A股该板块因契合“双碳”战略、下游需求爆发及国产供应链优势而备受瞩目，汇聚了众多全球龙头，兼具高成长性与政策红利，是资本市场长期关注的黄金赛道。",
+        "coreProductCount": 8,
+        "stockCount": 1,
+        "shareOfLevel7Products": 1.0,
+        "relevanceScore": 40,
+        "matchedCoreProducts": [
+          {
+            "code": "1140005412",
+            "name": "三元锂电池",
+            "stockCount": 1
+          },
+          {
+            "code": "1140069150",
+            "name": "储能锂电池",
+            "stockCount": 1
+          },
+          {
+            "code": "1140209668",
+            "name": "全固态电池",
+            "stockCount": 1
+          },
+          {
+            "code": "1140209667",
+            "name": "半固态电池",
+            "stockCount": 1
+          },
+          {
+            "code": "1140192183",
+            "name": "消费类锂离子电池",
+            "stockCount": 1
+          },
+          {
+            "code": "1140050606",
+            "name": "磷酸铁锂电池",
+            "stockCount": 1
+          },
+          {
+            "code": "1140135771",
+            "name": "锂-二氧化锰电池",
+            "stockCount": 1
+          },
+          {
+            "code": "1140135770",
+            "name": "锂-亚硫酰氯电池",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "锂离子电池",
+        "industryDescription": "锂离子电池是新能源汽车与储能的核心动力源。A股该板块因契合“双碳”战略、下游需求爆发及国产供应链优势而备受瞩目，汇聚了众多全球龙头，兼具高成长性与政策红利，是资本市场长期关注的黄金赛道。",
+        "newsText": "7月5日，海外媒体确认，AI数据中心需求激增已导致松下、三星等一线厂商的BBU电池供应出现短缺，这正加速BBU从服务器的可选配置向标准配置演进。这一供需错配为国内厂商创造了窗口期，核心逻辑在于一线大厂的产能瓶颈为具备高性能圆柱电芯量产能力的二线供应商打开了直接切入大型集成商供应链的通道，从而获得可观的订单溢出。 关注：蔚蓝锂芯（国内圆柱电芯龙头，BBU业务有望受益于日韩厂商供应缺口加速放量，并直接对接Flex等大客户）/阳光电源（AIDC储能解决方案供应商，数据中心配储趋势明确，下半年订单有望起量）/江海股份（备用电源超级电容技术路线，受益于数据中心备电需求多样化趋势）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "供给与库存",
+        "产能与开工",
+        "技术与量产",
+        "出口与海外需求"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "锂离子电池可以理解为围绕三元锂电池、储能锂电池、全固态电池、半固态电池、消费类锂离子电池等8项形成的五级细分产业，本地图谱对它的解释是“锂离子电池是新能源汽车与储能的核心动力源。A股该板块因契合“双碳”战略、下游需求爆发及国产供应链优势而备受瞩目，汇聚了众多全球龙头，兼具高成长性与政策红利，是资本市场长期关注的黄金赛道”。把它放回本次事件的产业链，关键链条可以概括为电芯泄漏氦检测设备、硅负极材料、二氧化锰电解液、亚硫酰氯电解液等14项 → 锂离子电池 → 助听器、复印机、心电图仪、心脏起搏器等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、供给与库存、产能与开工、技术与量产、出口与海外需求，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“传松下三星数据中心BBU电池供应紧缺”在现有语料中主要新增了与下游需求与订单、供给与库存、产能与开工、技术与量产、出口与海外需求有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "3只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

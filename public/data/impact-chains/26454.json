@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26454",
@@ -367,6 +367,18 @@
           "机器人部件",
           "人形机器人用执行器"
         ],
+        "level5Industry": {
+          "code": "1200000463",
+          "name": "机器人"
+        },
+        "level6Industry": {
+          "code": "1200003046",
+          "name": "机器人部件"
+        },
+        "level7Product": {
+          "code": "1140215871",
+          "name": "人形机器人用执行器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -405,6 +417,18 @@
           "汽车发动机进气系统",
           "电子废气门执行器(EWGA)"
         ],
+        "level5Industry": {
+          "code": "1200001152",
+          "name": "汽车进排气系统"
+        },
+        "level6Industry": {
+          "code": "1200004622",
+          "name": "汽车发动机进气系统"
+        },
+        "level7Product": {
+          "code": "1140136248",
+          "name": "电子废气门执行器(EWGA)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -439,6 +463,18 @@
           "汽车底盘传动系统",
           "汽车传动轴"
         ],
+        "level5Industry": {
+          "code": "1200001153",
+          "name": "汽车底盘系统"
+        },
+        "level6Industry": {
+          "code": "1200004624",
+          "name": "汽车底盘传动系统"
+        },
+        "level7Product": {
+          "code": "1140043665",
+          "name": "汽车传动轴"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -472,6 +508,18 @@
           "汽车底盘传动系统",
           "汽车驱动轴"
         ],
+        "level5Industry": {
+          "code": "1200001153",
+          "name": "汽车底盘系统"
+        },
+        "level6Industry": {
+          "code": "1200004624",
+          "name": "汽车底盘传动系统"
+        },
+        "level7Product": {
+          "code": "1140136167",
+          "name": "汽车驱动轴"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -505,6 +553,18 @@
           "自动化设备配件",
           "旋转执行器"
         ],
+        "level5Industry": {
+          "code": "1200000474",
+          "name": "自动化设备"
+        },
+        "level6Industry": {
+          "code": "1200003073",
+          "name": "自动化设备配件"
+        },
+        "level7Product": {
+          "code": "1140149145",
+          "name": "旋转执行器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -538,6 +598,18 @@
           "消费电子结构件",
           "折叠屏支撑件"
         ],
+        "level5Industry": {
+          "code": "1210002779",
+          "name": "消费电子结构件"
+        },
+        "level6Industry": {
+          "code": "1210002864",
+          "name": "消费电子结构件"
+        },
+        "level7Product": {
+          "code": "1140217129",
+          "name": "折叠屏支撑件"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -571,6 +643,18 @@
           "消费电子结构件",
           "消费电子声学结构件"
         ],
+        "level5Industry": {
+          "code": "1210002779",
+          "name": "消费电子结构件"
+        },
+        "level6Industry": {
+          "code": "1210002864",
+          "name": "消费电子结构件"
+        },
+        "level7Product": {
+          "code": "1140200873",
+          "name": "消费电子声学结构件"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -604,6 +688,18 @@
           "检测用试剂/设备",
           "工业三维测量设备"
         ],
+        "level5Industry": {
+          "code": "1200001487",
+          "name": "检测用试剂/设备"
+        },
+        "level6Industry": {
+          "code": "1200005542",
+          "name": "检测用试剂/设备"
+        },
+        "level7Product": {
+          "code": "1140200957",
+          "name": "工业三维测量设备"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -897,10 +993,175 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 8,
+    "target": {
+      "code": "1200001153",
+      "name": "汽车底盘系统",
+      "description": "汽车底盘系统涵盖悬挂、制动等核心部件，决定车辆操控与安全。因新能源汽车轻量化、线控底盘及智能化升级需求爆发，该行业技术壁垒高且价值量提升，成为A股聚焦的高成长赛道，备受资本关注。",
+      "coreProductCount": 2,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.25,
+      "relevanceScore": 18,
+      "matchedCoreProducts": [
+        {
+          "code": "1140043665",
+          "name": "汽车传动轴",
+          "stockCount": 1
+        },
+        {
+          "code": "1140136167",
+          "name": "汽车驱动轴",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001153",
+        "name": "汽车底盘系统",
+        "description": "汽车底盘系统涵盖悬挂、制动等核心部件，决定车辆操控与安全。因新能源汽车轻量化、线控底盘及智能化升级需求爆发，该行业技术壁垒高且价值量提升，成为A股聚焦的高成长赛道，备受资本关注。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.25,
+        "relevanceScore": 18,
+        "matchedCoreProducts": [
+          {
+            "code": "1140043665",
+            "name": "汽车传动轴",
+            "stockCount": 1
+          },
+          {
+            "code": "1140136167",
+            "name": "汽车驱动轴",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210002779",
+        "name": "消费电子结构件",
+        "description": "消费电子结构件指手机等设备的金属/塑料外壳及内部支撑组件。因AI终端创新推动换机潮，叠加轻量化、散热等技术升级需求，该行业受益于量价齐升预期，成为A股关注焦点，龙头公司业绩弹性显著。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.25,
+        "relevanceScore": 18,
+        "matchedCoreProducts": [
+          {
+            "code": "1140217129",
+            "name": "折叠屏支撑件",
+            "stockCount": 1
+          },
+          {
+            "code": "1140200873",
+            "name": "消费电子声学结构件",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000463",
+        "name": "机器人",
+        "description": "A股机器人行业涵盖工业机器人、服务及人形机器人产业链。受AI技术突破、人口老龄化及“新质生产力”政策驱动，行业迎来智能化升级与人形机器人量产预期，具备高成长潜力，成为市场聚焦的科技热点。",
+        "coreProductCount": 1,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.125,
+        "relevanceScore": 10,
+        "matchedCoreProducts": [
+          {
+            "code": "1140215871",
+            "name": "人形机器人用执行器",
+            "stockCount": 2
+          }
+        ]
+      },
+      {
+        "code": "1200001152",
+        "name": "汽车进排气系统",
+        "description": "该行业主营汽车尾气处理及进气组件。受关注源于环保法规趋严推动技术升级，以及新能源车热管理需求带来的增量市场。它是汽车轻量化、低碳化转型的关键环节，兼具传统车改造与新能源配套双重增长逻辑。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.125,
+        "relevanceScore": 10,
+        "matchedCoreProducts": [
+          {
+            "code": "1140136248",
+            "name": "电子废气门执行器(EWGA)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000474",
+        "name": "自动化设备",
+        "description": "自动化设备指替代人工的机械系统。A股中该板块因制造业升级、人口红利消退及“新质生产力”政策驱动而受关注。它提升效率与精度，是工业智能化核心，具备高成长性与国产替代潜力，成为资本市场焦点。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.125,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140149145",
+            "name": "旋转执行器",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001487",
+        "name": "检测用试剂/设备",
+        "description": "该行业涵盖体外诊断试剂及仪器，用于疾病筛查与监测。因人口老龄化、健康意识提升及医疗新基建推动，市场需求持续增长。作为医疗器械核心细分赛道，其高成长性与国产替代潜力备受资本市场关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.125,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140200957",
+            "name": "工业三维测量设备",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "汽车底盘系统",
+        "industryDescription": "汽车底盘系统涵盖悬挂、制动等核心部件，决定车辆操控与安全。因新能源汽车轻量化、线控底盘及智能化升级需求爆发，该行业技术壁垒高且价值量提升，成为A股聚焦的高成长赛道，备受资本关注。",
+        "newsText": "继峰股份于6月27日宣布与灵巧手头部公司灵心巧手成立合资公司，正式跨界布局机器人业务，此举是其从传统汽车零部件向高成长赛道转型的关键一步。这一合作不仅绑定了具备明确量产规划（26年目标5-10万台）的稀缺技术伙伴，更重要的是为其打开了清晰的AI机器人商业化路径与估值重塑空间，而其主业已连续五个季度利润正增长，基本面提供了安全垫。 关注：继峰股份（主业拐点叠加机器人新业务，迎估值重塑），拓普集团/双环传动/新泉股份（汽车零部件跨界机器人板块，有望受益于题材热度扩散），人形机器人/AI应用（核心题材）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "技术与量产",
+        "政策与制度"
+      ],
+      "classification": {
+        "code": "A",
+        "label": "产业趋势变化",
+        "matchedSignals": [
+          "商业化"
+        ],
+        "basis": "新闻文本命中：商业化"
+      },
+      "text": "汽车底盘系统可以理解为围绕汽车传动轴、汽车驱动轴形成的五级细分产业，本地图谱对它的解释是“汽车底盘系统涵盖悬挂、制动等核心部件，决定车辆操控与安全。因新能源汽车轻量化、线控底盘及智能化升级需求爆发，该行业技术壁垒高且价值量提升，成为A股聚焦的高成长赛道，备受资本关注”。把它放回本次事件的产业链，关键链条可以概括为万向节、三球销式万向节、中间轴、传动轴套等14项 → 汽车底盘系统 → 中型卡车、中型燃油客车、大型燃油客车、燃油多功能乘用车(MPV)等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪技术与量产、政策与制度，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“继峰股份与灵心巧手合资布局机器人”在现有语料中主要新增了与技术与量产、政策与制度有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为A类“产业趋势变化”，依据是商业化；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "2只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

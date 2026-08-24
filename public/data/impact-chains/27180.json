@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27180",
@@ -342,6 +342,18 @@
           "船舶维修",
           "船舶修理改造服务"
         ],
+        "level5Industry": {
+          "code": "1200000382",
+          "name": "船舶服务"
+        },
+        "level6Industry": {
+          "code": "1200002808",
+          "name": "船舶维修"
+        },
+        "level7Product": {
+          "code": "1140145630",
+          "name": "船舶修理改造服务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -375,6 +387,18 @@
           "潜艇",
           "潜艇"
         ],
+        "level5Industry": {
+          "code": "1200000378",
+          "name": "军用船舶"
+        },
+        "level6Industry": {
+          "code": "1200002799",
+          "name": "潜艇"
+        },
+        "level7Product": {
+          "code": "1140008363",
+          "name": "潜艇"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -407,6 +431,18 @@
           "水面舰艇",
           "护卫舰"
         ],
+        "level5Industry": {
+          "code": "1200000378",
+          "name": "军用船舶"
+        },
+        "level6Industry": {
+          "code": "1200002798",
+          "name": "水面舰艇"
+        },
+        "level7Product": {
+          "code": "1140145629",
+          "name": "护卫舰"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -439,6 +475,18 @@
           "船舶动力系统",
           "船用柴油机"
         ],
+        "level5Industry": {
+          "code": "1200000379",
+          "name": "船舶动力系统"
+        },
+        "level6Industry": {
+          "code": "1200002804",
+          "name": "船舶动力系统"
+        },
+        "level7Product": {
+          "code": "1140145618",
+          "name": "船用柴油机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -471,6 +519,18 @@
           "船舶动力系统",
           "军用舰船蒸汽轮机"
         ],
+        "level5Industry": {
+          "code": "1200000379",
+          "name": "船舶动力系统"
+        },
+        "level6Industry": {
+          "code": "1200002804",
+          "name": "船舶动力系统"
+        },
+        "level7Product": {
+          "code": "1140145621",
+          "name": "军用舰船蒸汽轮机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -503,6 +563,18 @@
           "船舶动力系统",
           "船舶电力推进系统"
         ],
+        "level5Industry": {
+          "code": "1200000379",
+          "name": "船舶动力系统"
+        },
+        "level6Industry": {
+          "code": "1200002804",
+          "name": "船舶动力系统"
+        },
+        "level7Product": {
+          "code": "1140145619",
+          "name": "船舶电力推进系统"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -535,6 +607,18 @@
           "船舶零部件",
           "舵机"
         ],
+        "level5Industry": {
+          "code": "1200000381",
+          "name": "船舶零部件"
+        },
+        "level6Industry": {
+          "code": "1200002806",
+          "name": "船舶零部件"
+        },
+        "level7Product": {
+          "code": "1140009612",
+          "name": "舵机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -567,6 +651,18 @@
           "船舶零部件",
           "主推调距桨"
         ],
+        "level5Industry": {
+          "code": "1200000381",
+          "name": "船舶零部件"
+        },
+        "level6Industry": {
+          "code": "1200002806",
+          "name": "船舶零部件"
+        },
+        "level7Product": {
+          "code": "1140215016",
+          "name": "主推调距桨"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -599,6 +695,18 @@
           "船舶零部件",
           "全回转舵桨"
         ],
+        "level5Industry": {
+          "code": "1200000381",
+          "name": "船舶零部件"
+        },
+        "level6Industry": {
+          "code": "1200002806",
+          "name": "船舶零部件"
+        },
+        "level7Product": {
+          "code": "1140215017",
+          "name": "全回转舵桨"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -849,10 +957,161 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 9,
+    "target": {
+      "code": "1200000379",
+      "name": "船舶动力系统",
+      "description": "船舶动力系统指为船舶提供推进力的核心设备行业。受全球造船周期上行、绿色转型及国产替代驱动，该板块因业绩高增预期和技术突破备受A股关注，是高端制造与出海逻辑的重要代表。",
+      "coreProductCount": 3,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.3333,
+      "relevanceScore": 21,
+      "matchedCoreProducts": [
+        {
+          "code": "1140145621",
+          "name": "军用舰船蒸汽轮机",
+          "stockCount": 1
+        },
+        {
+          "code": "1140145618",
+          "name": "船用柴油机",
+          "stockCount": 1
+        },
+        {
+          "code": "1140145619",
+          "name": "船舶电力推进系统",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000379",
+        "name": "船舶动力系统",
+        "description": "船舶动力系统指为船舶提供推进力的核心设备行业。受全球造船周期上行、绿色转型及国产替代驱动，该板块因业绩高增预期和技术突破备受A股关注，是高端制造与出海逻辑的重要代表。",
+        "coreProductCount": 3,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.3333,
+        "relevanceScore": 21,
+        "matchedCoreProducts": [
+          {
+            "code": "1140145621",
+            "name": "军用舰船蒸汽轮机",
+            "stockCount": 1
+          },
+          {
+            "code": "1140145618",
+            "name": "船用柴油机",
+            "stockCount": 1
+          },
+          {
+            "code": "1140145619",
+            "name": "船舶电力推进系统",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000381",
+        "name": "船舶零部件",
+        "description": "船舶零部件指造船所需的配套设备与材料。受全球造船周期上行、绿色转型及国产替代驱动，行业景气度提升。叠加“中特估”概念，龙头企业受益于订单饱满与业绩改善，成为市场关注焦点。",
+        "coreProductCount": 3,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.3333,
+        "relevanceScore": 21,
+        "matchedCoreProducts": [
+          {
+            "code": "1140215016",
+            "name": "主推调距桨",
+            "stockCount": 1
+          },
+          {
+            "code": "1140215017",
+            "name": "全回转舵桨",
+            "stockCount": 1
+          },
+          {
+            "code": "1140009612",
+            "name": "舵机",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000378",
+        "name": "军用船舶",
+        "description": "军用船舶指海军舰艇制造。受地缘局势紧张、国防预算增长及海军现代化加速驱动，该板块因具备高壁垒、订单确定性强及资产注入预期，成为军工核心赛道，备受市场关注。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2222,
+        "relevanceScore": 14,
+        "matchedCoreProducts": [
+          {
+            "code": "1140145629",
+            "name": "护卫舰",
+            "stockCount": 1
+          },
+          {
+            "code": "1140008363",
+            "name": "潜艇",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000382",
+        "name": "船舶服务",
+        "description": "船舶服务涵盖造船、修船及配套。近期因全球航运周期上行、新船订单激增及绿色转型需求，行业景气度显著提升。叠加“中特估”概念，业绩预期改善使其成为A股关注焦点。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1111,
+        "relevanceScore": 13,
+        "matchedCoreProducts": [
+          {
+            "code": "1140145630",
+            "name": "船舶修理改造服务",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "船舶动力系统",
+        "industryDescription": "船舶动力系统指为船舶提供推进力的核心设备行业。受全球造船周期上行、绿色转型及国产替代驱动，该板块因业绩高增预期和技术突破备受A股关注，是高端制造与出海逻辑的重要代表。",
+        "newsText": "7月7日，松发股份发布上半年业绩预告，其Q2归母净利润同比激增538%，大幅超出预期。这一业绩兑现标志着公司已从“接单验证”阶段正式进入“利润释放”期，市场关注点从订单数量转向盈利弹性，即高价订单正通过产能爬坡和船型结构优化被高效转化为利润，同时其稀缺的后续产能扩张潜力也为远期业绩打开了新的上修空间。 关注：松发股份（业绩超预期兑现，产能释放与订单结构优化逻辑得到验证）/ 中国船舶/中船防务（行业龙头，共享造船高景气度beta）/ 中国动力（核心配套商，受益于下游船厂订单放量）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "船舶动力系统可以理解为围绕军用舰船蒸汽轮机、船用柴油机、船舶电力推进系统形成的五级细分产业，本地图谱对它的解释是“船舶动力系统指为船舶提供推进力的核心设备行业。受全球造船周期上行、绿色转型及国产替代驱动，该板块因业绩高增预期和技术突破备受A股关注，是高端制造与出海逻辑的重要代表”。把它放回本次事件的产业链，关键链条可以概括为动力系统、信息化和电子系统、光电射控装置、全自动舰炮等14项 → 船舶动力系统 → 海军、公务船、军用舰船、勘探开采等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“松发股份预告H1净利增456%造船景气兑现”在现有语料中主要新增了与下游需求与订单、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "3只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

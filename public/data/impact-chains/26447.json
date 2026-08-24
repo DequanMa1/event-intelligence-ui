@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26447",
@@ -254,6 +254,18 @@
           "有源光器件",
           "三向光发射接受组件(TRI-OSA)"
         ],
+        "level5Industry": {
+          "code": "1200001393",
+          "name": "光通信设备"
+        },
+        "level6Industry": {
+          "code": "1200005258",
+          "name": "有源光器件"
+        },
+        "level7Product": {
+          "code": "1140220979",
+          "name": "三向光发射接受组件(TRI-OSA)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -287,6 +299,18 @@
           "有源光器件",
           "光发射接收组件(BOSA)"
         ],
+        "level5Industry": {
+          "code": "1200001393",
+          "name": "光通信设备"
+        },
+        "level6Industry": {
+          "code": "1200005258",
+          "name": "有源光器件"
+        },
+        "level7Product": {
+          "code": "1140220958",
+          "name": "光发射接收组件(BOSA)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -320,6 +344,18 @@
           "有源光器件",
           "光发射组件(TOSA)"
         ],
+        "level5Industry": {
+          "code": "1200001393",
+          "name": "光通信设备"
+        },
+        "level6Industry": {
+          "code": "1200005258",
+          "name": "有源光器件"
+        },
+        "level7Product": {
+          "code": "1140190067",
+          "name": "光发射组件(TOSA)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -353,6 +389,18 @@
           "有源光器件",
           "光接收组件(ROSA)"
         ],
+        "level5Industry": {
+          "code": "1200001393",
+          "name": "光通信设备"
+        },
+        "level6Industry": {
+          "code": "1200005258",
+          "name": "有源光器件"
+        },
+        "level7Product": {
+          "code": "1140190066",
+          "name": "光接收组件(ROSA)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -386,6 +434,18 @@
           "其他传感器",
           "汽车光电子传感器"
         ],
+        "level5Industry": {
+          "code": "1200001279",
+          "name": "传感器"
+        },
+        "level6Industry": {
+          "code": "1200004948",
+          "name": "其他传感器"
+        },
+        "level7Product": {
+          "code": "1140209023",
+          "name": "汽车光电子传感器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -412,6 +472,18 @@
         "name": "光发射组件",
         "hierarchyPath": "",
         "industryPath": [],
+        "level5Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level6Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level7Product": {
+          "code": "",
+          "name": ""
+        },
         "matchedSourceLevel": 0,
         "mappingType": "semantic_bridge",
         "bridgeBasis": "company_product:光发射组件(TOSA)",
@@ -449,11 +521,128 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 5,
+    "target": {
+      "code": "1200001393",
+      "name": "光通信设备",
+      "description": "光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注。",
+      "coreProductCount": 4,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.8,
+      "relevanceScore": 36,
+      "matchedCoreProducts": [
+        {
+          "code": "1140220979",
+          "name": "三向光发射接受组件(TRI-OSA)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140220958",
+          "name": "光发射接收组件(BOSA)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140190067",
+          "name": "光发射组件(TOSA)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140190066",
+          "name": "光接收组件(ROSA)",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001393",
+        "name": "光通信设备",
+        "description": "光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注。",
+        "coreProductCount": 4,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.8,
+        "relevanceScore": 36,
+        "matchedCoreProducts": [
+          {
+            "code": "1140220979",
+            "name": "三向光发射接受组件(TRI-OSA)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140220958",
+            "name": "光发射接收组件(BOSA)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140190067",
+            "name": "光发射组件(TOSA)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140190066",
+            "name": "光接收组件(ROSA)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001279",
+        "name": "传感器",
+        "description": "传感器是将物理量转为电信号的器件，被誉为工业“五官”。A股该板块受关注，主要因其在智能制造、自动驾驶及物联网中的核心地位，叠加国产替代加速与政策红利，市场空间广阔，成长确定性高。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140209023",
+            "name": "汽车光电子传感器",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "光通信设备",
+        "industryDescription": "光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注。",
+        "newsText": "北京时间6月26日，OpenAI发布了GPT-5.6系列模型的有限预览版，这一事件的核心边际变化在于，竞争焦点已从单纯的性能跑分转向了单位任务经济效益和特定领域的商业化落地。尽管新模型在编程与网络安全等基准上对标甚至超越了竞品Mythos，但市场更关注其通过大幅降低的token消耗和API定价（旗舰版Sol成本仅为Mythos的约1/5），在实现同等智力水平的同时，展现出压倒性的成本优势，这预示着AI行业的竞争将进入以商业化效率和成本控制为核心的新阶段。 关注：智谱/minimax（理由：OpenAI的快速迭代与激进定价策略将加速国内大模型市场出清，技术和商业化能力领先的头部厂商有望受益于行业集中度提升），网络安全概念股（理由：GPT-5.6在网络安全攻防场景展现出卓越能力和成本优势，直接催化AI在网安领域的应用落地和需求增长）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "原材料与成本",
+        "技术与量产"
+      ],
+      "classification": {
+        "code": "A",
+        "label": "产业趋势变化",
+        "matchedSignals": [
+          "商业化"
+        ],
+        "basis": "新闻文本命中：商业化"
+      },
+      "text": "光通信设备可以理解为围绕三向光发射接受组件(TRI-OSA)、光发射接收组件(BOSA)、光发射组件(TOSA)、光接收组件(ROSA)形成的五级细分产业，本地图谱对它的解释是“光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注”。把它放回本次事件的产业链，关键链条可以概括为微型热电制冷器件、激光器、激光器芯片 → 光通信设备 → 光模块，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、原材料与成本、技术与量产，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“OpenAI发布GPT5.6系列模型预览版”在现有语料中主要新增了与下游需求与订单、原材料与成本、技术与量产有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为A类“产业趋势变化”，依据是商业化；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
     "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "8只4星标的未在本地公司产品图谱中穿透。"
+    "8只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

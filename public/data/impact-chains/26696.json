@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26696",
@@ -340,6 +340,18 @@
           "机床刀具",
           "PCB钻针"
         ],
+        "level5Industry": {
+          "code": "1200000433",
+          "name": "刀具"
+        },
+        "level6Industry": {
+          "code": "1200002900",
+          "name": "机床刀具"
+        },
+        "level7Product": {
+          "code": "1140171668",
+          "name": "PCB钻针"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -373,6 +385,18 @@
           "其他小金属及合金",
           "硬质合金刀具"
         ],
+        "level5Industry": {
+          "code": "1210000329",
+          "name": "其他小金属及合金"
+        },
+        "level6Industry": {
+          "code": "1210000540",
+          "name": "其他小金属及合金"
+        },
+        "level7Product": {
+          "code": "1140062268",
+          "name": "硬质合金刀具"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -406,6 +430,18 @@
           "机床刀具",
           "铣刀"
         ],
+        "level5Industry": {
+          "code": "1200000433",
+          "name": "刀具"
+        },
+        "level6Industry": {
+          "code": "1200002900",
+          "name": "机床刀具"
+        },
+        "level7Product": {
+          "code": "1140033485",
+          "name": "铣刀"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -438,6 +474,18 @@
           "机床刀具",
           "钻石刀轮"
         ],
+        "level5Industry": {
+          "code": "1200000433",
+          "name": "刀具"
+        },
+        "level6Industry": {
+          "code": "1200002900",
+          "name": "机床刀具"
+        },
+        "level7Product": {
+          "code": "1140008036",
+          "name": "钻石刀轮"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -470,6 +518,18 @@
           "机床刀具",
           "高精密超硬刀具"
         ],
+        "level5Industry": {
+          "code": "1200000433",
+          "name": "刀具"
+        },
+        "level6Industry": {
+          "code": "1200002900",
+          "name": "机床刀具"
+        },
+        "level7Product": {
+          "code": "1140008038",
+          "name": "高精密超硬刀具"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -502,6 +562,18 @@
           "钻头",
           "聚晶金刚石微钻钻头"
         ],
+        "level5Industry": {
+          "code": "1200000433",
+          "name": "刀具"
+        },
+        "level6Industry": {
+          "code": "1200002901",
+          "name": "钻头"
+        },
+        "level7Product": {
+          "code": "1140088699",
+          "name": "聚晶金刚石微钻钻头"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -534,6 +606,18 @@
           "机床刀具",
           "数控刀片"
         ],
+        "level5Industry": {
+          "code": "1200000433",
+          "name": "刀具"
+        },
+        "level6Industry": {
+          "code": "1200002900",
+          "name": "机床刀具"
+        },
+        "level7Product": {
+          "code": "1140005208",
+          "name": "数控刀片"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -566,6 +650,18 @@
           "机床刀具",
           "PCB铣刀"
         ],
+        "level5Industry": {
+          "code": "1200000433",
+          "name": "刀具"
+        },
+        "level6Industry": {
+          "code": "1200002900",
+          "name": "机床刀具"
+        },
+        "level7Product": {
+          "code": "1140171669",
+          "name": "PCB铣刀"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -816,10 +912,154 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 8,
+    "target": {
+      "code": "1200000433",
+      "name": "刀具",
+      "description": "A股刀具指硬质合金等切削工具企业。因属工业“牙齿”，直接受益制造业升级、国产替代及新能源需求爆发，具备高成长性与技术壁垒，成为高端制造核心标的，备受市场关注。",
+      "coreProductCount": 7,
+      "stockCount": 2,
+      "shareOfLevel7Products": 0.875,
+      "relevanceScore": 55,
+      "matchedCoreProducts": [
+        {
+          "code": "1140171668",
+          "name": "PCB钻针",
+          "stockCount": 1
+        },
+        {
+          "code": "1140171669",
+          "name": "PCB铣刀",
+          "stockCount": 1
+        },
+        {
+          "code": "1140005208",
+          "name": "数控刀片",
+          "stockCount": 1
+        },
+        {
+          "code": "1140088699",
+          "name": "聚晶金刚石微钻钻头",
+          "stockCount": 1
+        },
+        {
+          "code": "1140008036",
+          "name": "钻石刀轮",
+          "stockCount": 1
+        },
+        {
+          "code": "1140033485",
+          "name": "铣刀",
+          "stockCount": 1
+        },
+        {
+          "code": "1140008038",
+          "name": "高精密超硬刀具",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000433",
+        "name": "刀具",
+        "description": "A股刀具指硬质合金等切削工具企业。因属工业“牙齿”，直接受益制造业升级、国产替代及新能源需求爆发，具备高成长性与技术壁垒，成为高端制造核心标的，备受市场关注。",
+        "coreProductCount": 7,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.875,
+        "relevanceScore": 55,
+        "matchedCoreProducts": [
+          {
+            "code": "1140171668",
+            "name": "PCB钻针",
+            "stockCount": 1
+          },
+          {
+            "code": "1140171669",
+            "name": "PCB铣刀",
+            "stockCount": 1
+          },
+          {
+            "code": "1140005208",
+            "name": "数控刀片",
+            "stockCount": 1
+          },
+          {
+            "code": "1140088699",
+            "name": "聚晶金刚石微钻钻头",
+            "stockCount": 1
+          },
+          {
+            "code": "1140008036",
+            "name": "钻石刀轮",
+            "stockCount": 1
+          },
+          {
+            "code": "1140033485",
+            "name": "铣刀",
+            "stockCount": 1
+          },
+          {
+            "code": "1140008038",
+            "name": "高精密超硬刀具",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000329",
+        "name": "其他小金属及合金",
+        "description": "该行业涵盖钨、钼、锑等小众金属及其合金。因具备稀缺性及在军工、新能源、半导体等领域的关键应用，受地缘政治与供需错配影响大。其战略价值凸显，价格弹性高，常随政策变动或技术突破成为市场炒作热点。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.125,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140062268",
+            "name": "硬质合金刀具",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "刀具",
+        "industryDescription": "A股刀具指硬质合金等切削工具企业。因属工业“牙齿”，直接受益制造业升级、国产替代及新能源需求爆发，具备高成长性与技术壁垒，成为高端制造核心标的，备受市场关注。",
+        "newsText": "6月30日晚，四方达公告拟定增20亿，以远超预期的710万支年产能布局金刚石钻针，直指AI算力升级带来的高阶PCB加工痛点。这一举动标志着公司从技术验证转向大规模产能卡位，旨在通过前瞻性重资产投建构筑先发壁垒，在下游需求放量初期即确立市场主导地位。 关注：四方达（定增扩产主体，抢占AI高阶PCB加工耗材市场先机），国机精工/沃尔德/惠丰钻石（同属金刚石功能材料赛道，板块逻辑得到强化，关注其在钻针或散热领域的布局跟进），共达电声（金刚石加工设备商，有望受益于产业链资本开支上行）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "刀具可以理解为围绕PCB钻针、PCB铣刀、数控刀片、聚晶金刚石微钻钻头、钻石刀轮等7项形成的五级细分产业，本地图谱对它的解释是“A股刀具指硬质合金等切削工具企业。因属工业“牙齿”，直接受益制造业升级、国产替代及新能源需求爆发，具备高成长性与技术壁垒，成为高端制造核心标的，备受市场关注”。把它放回本次事件的产业链，关键链条可以概括为乙醇、冲压机、冲模、刀头等14项 → 刀具 → 数控机床、农业机械、基板玻璃、建材等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“四方达拟定增20亿扩产金刚石钻针”在现有语料中主要新增了与下游需求与订单、产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "2只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

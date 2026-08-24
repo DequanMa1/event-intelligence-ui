@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26967",
@@ -327,6 +327,18 @@
           "投资咨询业务",
           "证券研究咨询业务"
         ],
+        "level5Industry": {
+          "code": "1200001096",
+          "name": "非通道业务"
+        },
+        "level6Industry": {
+          "code": "1200004486",
+          "name": "投资咨询业务"
+        },
+        "level7Product": {
+          "code": "1140148519",
+          "name": "证券研究咨询业务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -384,6 +396,18 @@
           "自营业务",
           "证券自营业务"
         ],
+        "level5Industry": {
+          "code": "1200001096",
+          "name": "非通道业务"
+        },
+        "level6Industry": {
+          "code": "1200004488",
+          "name": "自营业务"
+        },
+        "level7Product": {
+          "code": "1140148518",
+          "name": "证券自营业务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -441,6 +465,18 @@
           "资产管理业务",
           "证券资管业务"
         ],
+        "level5Industry": {
+          "code": "1200001096",
+          "name": "非通道业务"
+        },
+        "level6Industry": {
+          "code": "1200004487",
+          "name": "资产管理业务"
+        },
+        "level7Product": {
+          "code": "1140148516",
+          "name": "证券资管业务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -498,6 +534,18 @@
           "信用交易业务",
           "信用交易业务"
         ],
+        "level5Industry": {
+          "code": "1200001096",
+          "name": "非通道业务"
+        },
+        "level6Industry": {
+          "code": "1200004485",
+          "name": "信用交易业务"
+        },
+        "level7Product": {
+          "code": "1140077005",
+          "name": "信用交易业务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -555,6 +603,18 @@
           "证券经纪业务",
           "证券经纪业务"
         ],
+        "level5Industry": {
+          "code": "1200001095",
+          "name": "通道业务"
+        },
+        "level6Industry": {
+          "code": "1200004483",
+          "name": "证券经纪业务"
+        },
+        "level7Product": {
+          "code": "1140019865",
+          "name": "证券经纪业务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -612,6 +672,18 @@
           "证券投资银行业务",
           "债券承销业务"
         ],
+        "level5Industry": {
+          "code": "1200001095",
+          "name": "通道业务"
+        },
+        "level6Industry": {
+          "code": "1200004484",
+          "name": "证券投资银行业务"
+        },
+        "level7Product": {
+          "code": "1140124843",
+          "name": "债券承销业务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -669,6 +741,18 @@
           "证券投资银行业务",
           "证券保荐业务"
         ],
+        "level5Industry": {
+          "code": "1200001095",
+          "name": "通道业务"
+        },
+        "level6Industry": {
+          "code": "1200004484",
+          "name": "证券投资银行业务"
+        },
+        "level7Product": {
+          "code": "1140173552",
+          "name": "证券保荐业务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -726,6 +810,18 @@
           "证券投资银行业务",
           "证券承销业务"
         ],
+        "level5Industry": {
+          "code": "1200001095",
+          "name": "通道业务"
+        },
+        "level6Industry": {
+          "code": "1200004484",
+          "name": "证券投资银行业务"
+        },
+        "level7Product": {
+          "code": "1140173553",
+          "name": "证券承销业务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -783,6 +879,18 @@
           "资产管理业务",
           "股权投资业务"
         ],
+        "level5Industry": {
+          "code": "1200001096",
+          "name": "非通道业务"
+        },
+        "level6Industry": {
+          "code": "1200004487",
+          "name": "资产管理业务"
+        },
+        "level7Product": {
+          "code": "1140006536",
+          "name": "股权投资业务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -947,9 +1055,145 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 9,
+    "target": {
+      "code": "1200001096",
+      "name": "非通道业务",
+      "description": "非通道业务指券商摆脱单纯经纪中介角色，转向投行、资管等主动管理领域。因能提升盈利稳定性与估值上限，减少对市场交易量依赖，成为机构关注焦点，被视为券商转型高质量增长的关键驱动力。",
+      "coreProductCount": 5,
+      "stockCount": 6,
+      "shareOfLevel7Products": 0.5556,
+      "relevanceScore": 30,
+      "matchedCoreProducts": [
+        {
+          "code": "1140077005",
+          "name": "信用交易业务",
+          "stockCount": 6
+        },
+        {
+          "code": "1140148519",
+          "name": "证券研究咨询业务",
+          "stockCount": 6
+        },
+        {
+          "code": "1140148518",
+          "name": "证券自营业务",
+          "stockCount": 6
+        },
+        {
+          "code": "1140148516",
+          "name": "证券资管业务",
+          "stockCount": 6
+        },
+        {
+          "code": "1140006536",
+          "name": "股权投资业务",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001096",
+        "name": "非通道业务",
+        "description": "非通道业务指券商摆脱单纯经纪中介角色，转向投行、资管等主动管理领域。因能提升盈利稳定性与估值上限，减少对市场交易量依赖，成为机构关注焦点，被视为券商转型高质量增长的关键驱动力。",
+        "coreProductCount": 5,
+        "stockCount": 6,
+        "shareOfLevel7Products": 0.5556,
+        "relevanceScore": 30,
+        "matchedCoreProducts": [
+          {
+            "code": "1140077005",
+            "name": "信用交易业务",
+            "stockCount": 6
+          },
+          {
+            "code": "1140148519",
+            "name": "证券研究咨询业务",
+            "stockCount": 6
+          },
+          {
+            "code": "1140148518",
+            "name": "证券自营业务",
+            "stockCount": 6
+          },
+          {
+            "code": "1140148516",
+            "name": "证券资管业务",
+            "stockCount": 6
+          },
+          {
+            "code": "1140006536",
+            "name": "股权投资业务",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001095",
+        "name": "通道业务",
+        "description": "通道业务指金融机构借牌照协助资金规避监管投向限制领域。因易引发影子银行风险、加剧金融空转，受监管严打。其兴衰反映去杠杆政策力度，影响券商信托业绩及市场流动性，故备受投资者与监管层关注。",
+        "coreProductCount": 4,
+        "stockCount": 6,
+        "shareOfLevel7Products": 0.4444,
+        "relevanceScore": 24,
+        "matchedCoreProducts": [
+          {
+            "code": "1140124843",
+            "name": "债券承销业务",
+            "stockCount": 6
+          },
+          {
+            "code": "1140173552",
+            "name": "证券保荐业务",
+            "stockCount": 6
+          },
+          {
+            "code": "1140173553",
+            "name": "证券承销业务",
+            "stockCount": 6
+          },
+          {
+            "code": "1140019865",
+            "name": "证券经纪业务",
+            "stockCount": 6
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "非通道业务",
+        "industryDescription": "非通道业务指券商摆脱单纯经纪中介角色，转向投行、资管等主动管理领域。因能提升盈利稳定性与估值上限，减少对市场交易量依赖，成为机构关注焦点，被视为券商转型高质量增长的关键驱动力。",
+        "newsText": "继7月3日晚间国泰海通发布超预期Q2业绩预告后，市场分析迅速聚焦于其业绩构成的两大亮点：一是受益于市场高活跃度的全业务线增长，二是“投行+投资”联动模式下科创类直投跟投项目带来的巨额收益。这一事件被视为券商板块中报行情的发令枪，市场逻辑已从对单一公司弹性的认知，转向挖掘并期待其他同样具备强劲科技投资组合的券商复制此路径。 关注：国泰海通（业绩超预期，投行+投资模式验证，打响中报行情第一枪），中金公司/华泰证券/招商证券/广发证券（同为头部券商，市场预期其在科技投资和核心业务上同样具备高增长潜力），大普微/联讯仪器/华虹宏力（作为国泰海通的重点持股，是其二季度投资收益的主要贡献来源）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "非通道业务可以理解为围绕信用交易业务、证券研究咨询业务、证券自营业务、证券资管业务、股权投资业务形成的五级细分产业，本地图谱对它的解释是“非通道业务指券商摆脱单纯经纪中介角色，转向投行、资管等主动管理领域。因能提升盈利稳定性与估值上限，减少对市场交易量依赖，成为机构关注焦点，被视为券商转型高质量增长的关键驱动力”。把它放回本次事件的产业链，关键链条可以概括为募集资金、自有资金、证券从业资格证、上市公司等14项 → 非通道业务 → 个人投资者、机构投资者、债券市场、同业拆借市场等8项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪需求、价格、成本、产能和竞争格局，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“国泰海通预告Q2净利大超预期”在现有语料中主要新增了与需求、价格、成本、产能和竞争格局有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

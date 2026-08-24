@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27207",
@@ -339,6 +339,18 @@
           "其他变压器",
           "配电变压器"
         ],
+        "level5Industry": {
+          "code": "1210000337",
+          "name": "变压器"
+        },
+        "level6Industry": {
+          "code": "1210000557",
+          "name": "其他变压器"
+        },
+        "level7Product": {
+          "code": "1140029758",
+          "name": "配电变压器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -372,6 +384,18 @@
           "绝缘子",
           "陶瓷绝缘子"
         ],
+        "level5Industry": {
+          "code": "1210000345",
+          "name": "绝缘子"
+        },
+        "level6Industry": {
+          "code": "1200002762",
+          "name": "绝缘子"
+        },
+        "level7Product": {
+          "code": "1140010670",
+          "name": "陶瓷绝缘子"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -405,6 +429,18 @@
           "开关设备",
           "变压器有载分接开关"
         ],
+        "level5Industry": {
+          "code": "1210000339",
+          "name": "开关设备"
+        },
+        "level6Industry": {
+          "code": "1210000559",
+          "name": "开关设备"
+        },
+        "level7Product": {
+          "code": "1140029329",
+          "name": "变压器有载分接开关"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -438,6 +474,18 @@
           "绝缘子",
           "复合绝缘子"
         ],
+        "level5Industry": {
+          "code": "1210000345",
+          "name": "绝缘子"
+        },
+        "level6Industry": {
+          "code": "1200002762",
+          "name": "绝缘子"
+        },
+        "level7Product": {
+          "code": "1140029197",
+          "name": "复合绝缘子"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -471,6 +519,18 @@
           "开关设备",
           "无励磁分接开关"
         ],
+        "level5Industry": {
+          "code": "1210000339",
+          "name": "开关设备"
+        },
+        "level6Industry": {
+          "code": "1210000559",
+          "name": "开关设备"
+        },
+        "level7Product": {
+          "code": "1140029330",
+          "name": "无励磁分接开关"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -504,6 +564,18 @@
           "变电站",
           "预制舱式变电站"
         ],
+        "level5Industry": {
+          "code": "1210000340",
+          "name": "变电站"
+        },
+        "level6Industry": {
+          "code": "1210000560",
+          "name": "变电站"
+        },
+        "level7Product": {
+          "code": "1140175652",
+          "name": "预制舱式变电站"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -691,9 +763,141 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 6,
+    "target": {
+      "code": "1210000339",
+      "name": "开关设备",
+      "description": "开关设备指控制电路通断的电力装置。A股中该行业受关注，主要因电网升级、新能源并网及特高压建设带来强劲需求，叠加国产替代与技术迭代预期，具备高景气度与成长潜力，是电力基础设施投资的核心受益板块。",
+      "coreProductCount": 2,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.3333,
+      "relevanceScore": 22,
+      "matchedCoreProducts": [
+        {
+          "code": "1140029329",
+          "name": "变压器有载分接开关",
+          "stockCount": 1
+        },
+        {
+          "code": "1140029330",
+          "name": "无励磁分接开关",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210000339",
+        "name": "开关设备",
+        "description": "开关设备指控制电路通断的电力装置。A股中该行业受关注，主要因电网升级、新能源并网及特高压建设带来强劲需求，叠加国产替代与技术迭代预期，具备高景气度与成长潜力，是电力基础设施投资的核心受益板块。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.3333,
+        "relevanceScore": 22,
+        "matchedCoreProducts": [
+          {
+            "code": "1140029329",
+            "name": "变压器有载分接开关",
+            "stockCount": 1
+          },
+          {
+            "code": "1140029330",
+            "name": "无励磁分接开关",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000345",
+        "name": "绝缘子",
+        "description": "绝缘子是电网关键组件，用于支撑导线并绝缘。A股中该行业受关注，主要因特高压建设加速、电网投资加大及新能源并网需求激增，带动产品量价齐升，头部企业受益明显，具备高景气度预期。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.3333,
+        "relevanceScore": 22,
+        "matchedCoreProducts": [
+          {
+            "code": "1140029197",
+            "name": "复合绝缘子",
+            "stockCount": 1
+          },
+          {
+            "code": "1140010670",
+            "name": "陶瓷绝缘子",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000337",
+        "name": "变压器",
+        "description": "变压器是电力传输核心设备。A股该板块因全球电网升级、新能源并网及AI算力中心高能耗需求而受关注。出海机遇与国产替代逻辑共振，推动行业景气度上行，成为兼具成长性与确定性的热门赛道。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1667,
+        "relevanceScore": 11,
+        "matchedCoreProducts": [
+          {
+            "code": "1140029758",
+            "name": "配电变压器",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210000340",
+        "name": "变电站",
+        "description": "变电站是电网电能转换与分配的核心枢纽。A股中该板块因新型电力系统建设、特高压投资加速及电网智能化升级而受关注，主要涉及变压器、开关设备等龙头企业受益于政策红利与技术迭代带来的业绩增长预期。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1667,
+        "relevanceScore": 11,
+        "matchedCoreProducts": [
+          {
+            "code": "1140175652",
+            "name": "预制舱式变电站",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "开关设备",
+        "industryDescription": "开关设备指控制电路通断的电力装置。A股中该行业受关注，主要因电网升级、新能源并网及特高压建设带来强劲需求，叠加国产替代与技术迭代预期，具备高景气度与成长潜力，是电力基础设施投资的核心受益板块。",
+        "newsText": "美国AIDC建设带来的电力需求激增，叠加海外主变产能刚性，大量订单外溢至中国企业。白云电气披露上半年中标8台美国138kV主变，金盘科技Q1新增超10亿美国主变订单，验证了主变出海逻辑，出口美国单价和毛利率远高于内销，盈利能力可观。"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产能与开工",
+        "出口与海外需求"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "开关设备可以理解为围绕变压器有载分接开关、无励磁分接开关形成的五级细分产业，本地图谱对它的解释是“开关设备指控制电路通断的电力装置。A股中该行业受关注，主要因电网升级、新能源并网及特高压建设带来强劲需求，叠加国产替代与技术迭代预期，具备高景气度与成长潜力，是电力基础设施投资的核心受益板块”。把它放回本次事件的产业链，关键链条可以概括为分接选择器、切换开关、接触系统、操作机构等14项 → 开关设备 → 变压器、悬式绝缘子、拉线绝缘子、电子线路等10项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产能与开工、出口与海外需求，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“白云电气上半年中标8台美国138kV主变”在现有语料中主要新增了与下游需求与订单、产能与开工、出口与海外需求有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

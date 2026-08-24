@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27187",
@@ -256,6 +256,18 @@
           "塑料板、管、型、带材",
           "PP蜂窝板"
         ],
+        "level5Industry": {
+          "code": "1200000992",
+          "name": "塑料板、管、型、带材"
+        },
+        "level6Industry": {
+          "code": "1200004304",
+          "name": "塑料板、管、型、带材"
+        },
+        "level7Product": {
+          "code": "1140195157",
+          "name": "PP蜂窝板"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -288,6 +300,18 @@
           "玻璃纤维制品",
           "电子纱"
         ],
+        "level5Industry": {
+          "code": "1200000895",
+          "name": "玻璃纤维"
+        },
+        "level6Industry": {
+          "code": "1210000396",
+          "name": "玻璃纤维制品"
+        },
+        "level7Product": {
+          "code": "1140046602",
+          "name": "电子纱"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -323,6 +347,18 @@
           "负极集流体",
           "锂电铜箔"
         ],
+        "level5Industry": {
+          "code": "1210003321",
+          "name": "集流体"
+        },
+        "level6Industry": {
+          "code": "1210003401",
+          "name": "负极集流体"
+        },
+        "level7Product": {
+          "code": "1140008307",
+          "name": "锂电铜箔"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -355,6 +391,18 @@
           "铜压延加工",
           "印刷电路板铜箔"
         ],
+        "level5Industry": {
+          "code": "1200001051",
+          "name": "铜压延加工"
+        },
+        "level6Industry": {
+          "code": "1200004416",
+          "name": "铜压延加工"
+        },
+        "level7Product": {
+          "code": "1140173821",
+          "name": "印刷电路板铜箔"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -410,9 +458,128 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 4,
+    "target": {
+      "code": "1200000895",
+      "name": "玻璃纤维",
+      "description": "玻璃纤维是轻质高强无机非金属材料。投资者关注因其广泛应用于风电、汽车及建筑，受益于新能源需求增长及行业集中度提升。龙头公司具备成本优势与规模效应，业绩弹性大，是布局绿色制造与基建复苏的重要标的。",
+      "coreProductCount": 1,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.25,
+      "relevanceScore": 13,
+      "matchedCoreProducts": [
+        {
+          "code": "1140046602",
+          "name": "电子纱",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000895",
+        "name": "玻璃纤维",
+        "description": "玻璃纤维是轻质高强无机非金属材料。投资者关注因其广泛应用于风电、汽车及建筑，受益于新能源需求增长及行业集中度提升。龙头公司具备成本优势与规模效应，业绩弹性大，是布局绿色制造与基建复苏的重要标的。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.25,
+        "relevanceScore": 13,
+        "matchedCoreProducts": [
+          {
+            "code": "1140046602",
+            "name": "电子纱",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000992",
+        "name": "塑料板、管、型、带材",
+        "description": "该行业指生产塑料板材、管材等基础建材及工业材料的A股板块。因广泛应用于基建、汽车轻量化及新能源领域，具备刚需属性且受原材料价格波动影响大，其业绩弹性与宏观政策紧密相关，故备受市场关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.25,
+        "relevanceScore": 10,
+        "matchedCoreProducts": [
+          {
+            "code": "1140195157",
+            "name": "PP蜂窝板",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210003321",
+        "name": "集流体",
+        "description": "集流体是电池中承载活性物质的关键材料（如铜箔、铝箔）。因新能源高景气及轻量化技术迭代（如复合集流体），其能显著提升电池安全性与能量密度，成为A股热门赛道，备受资本关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.25,
+        "relevanceScore": 8,
+        "matchedCoreProducts": [
+          {
+            "code": "1140008307",
+            "name": "锂电铜箔",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001051",
+        "name": "铜压延加工",
+        "description": "铜压延加工指将铜材轧制成板带箔管等半成品。因铜具优良导电性，该行业受益于新能源、光伏及AI算力基建带来的强劲需求，成为A股热门赛道，兼具周期性与成长属性，备受投资者关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.25,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140173821",
+            "name": "印刷电路板铜箔",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "玻璃纤维",
+        "industryDescription": "玻璃纤维是轻质高强无机非金属材料。投资者关注因其广泛应用于风电、汽车及建筑，受益于新能源需求增长及行业集中度提升。龙头公司具备成本优势与规模效应，业绩弹性大，是布局绿色制造与基建复苏的重要标的。",
+        "newsText": "7月6日，覆铜板龙头建滔积层板在距上次提价仅20天后，再次宣布将FR-4及PP价格上调15%，并超预期地首次上调铜箔加工费。这一边际变化确认了从电子布到铜箔的上游供给紧张已全面加剧且传导顺畅，市场视此为行业景气度持续超预期的强力信号，而建滔凭借其“铜箔-电子布-覆铜板”全产业链一体化的独特优势，在涨价周期中将展现出无与伦比的盈利弹性。 关注：建滔积层板/建滔集团/生益科技/金安国纪/南亚新材/华正新材（覆铜板行业进入卖方市场，涨价直接增厚利润，其中建滔系一体化优势最为显著），中国巨石/宏和科技/中材科技/国际复材（上游电子布环节供给缺口确定性高，是本轮涨价周期的核心驱动力之一），德福科技/铜冠铜箔/嘉元科技/海亮股份（铜箔加工费超预期上涨，验证AI驱动下高端铜箔供需紧张，相关公司受益）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "产品价格",
+        "供给与库存"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "涨价",
+          "提价"
+        ],
+        "basis": "新闻文本命中：涨价、提价"
+      },
+      "text": "玻璃纤维可以理解为围绕电子纱形成的五级细分产业，本地图谱对它的解释是“玻璃纤维是轻质高强无机非金属材料。投资者关注因其广泛应用于风电、汽车及建筑，受益于新能源需求增长及行业集中度提升。龙头公司具备成本优势与规模效应，业绩弹性大，是布局绿色制造与基建复苏的重要标的”。把它放回本次事件的产业链，关键链条可以概括为去离子水、工业硫酸、玻璃纤维材料、生箔机等6项 → 玻璃纤维 → 电子布、锂电池，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪产品价格、供给与库存，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“建滔积层板再次上调FR-4及PP价格15%”在现有语料中主要新增了与产品价格、供给与库存有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是涨价、提价；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

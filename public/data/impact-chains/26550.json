@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26550",
@@ -502,6 +502,18 @@
           "计算控制芯片",
           "服务器CPU"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1210003412",
+          "name": "计算控制芯片"
+        },
+        "level7Product": {
+          "code": "1140007907",
+          "name": "服务器CPU"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -535,6 +547,18 @@
           "计算控制芯片",
           "工作站CPU"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1210003412",
+          "name": "计算控制芯片"
+        },
+        "level7Product": {
+          "code": "1140170230",
+          "name": "工作站CPU"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -568,6 +592,18 @@
           "计算控制芯片",
           "数据中心CPU"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1210003412",
+          "name": "计算控制芯片"
+        },
+        "level7Product": {
+          "code": "1140215344",
+          "name": "数据中心CPU"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -594,6 +630,18 @@
         "name": "数据中心",
         "hierarchyPath": "",
         "industryPath": [],
+        "level5Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level6Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level7Product": {
+          "code": "",
+          "name": ""
+        },
         "matchedSourceLevel": 0,
         "mappingType": "semantic_bridge",
         "bridgeBasis": "company_product:数据中心CPU",
@@ -839,11 +887,102 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 3,
+    "target": {
+      "code": "1200001282",
+      "name": "IC设计",
+      "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+      "coreProductCount": 3,
+      "stockCount": 1,
+      "shareOfLevel7Products": 1.0,
+      "relevanceScore": 27,
+      "matchedCoreProducts": [
+        {
+          "code": "1140170230",
+          "name": "工作站CPU",
+          "stockCount": 1
+        },
+        {
+          "code": "1140215344",
+          "name": "数据中心CPU",
+          "stockCount": 1
+        },
+        {
+          "code": "1140007907",
+          "name": "服务器CPU",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "coreProductCount": 3,
+        "stockCount": 1,
+        "shareOfLevel7Products": 1.0,
+        "relevanceScore": 27,
+        "matchedCoreProducts": [
+          {
+            "code": "1140170230",
+            "name": "工作站CPU",
+            "stockCount": 1
+          },
+          {
+            "code": "1140215344",
+            "name": "数据中心CPU",
+            "stockCount": 1
+          },
+          {
+            "code": "1140007907",
+            "name": "服务器CPU",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "IC设计",
+        "industryDescription": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "newsText": "北京时间6月27日，OpenAI在美政府审查背景下限量发布GPT-5.6系列，通过分层产品（Sol/Terra/Luna）和激进定价（Terra性能持平5.5但价格减半）开启新打法。此次发布的边际变化核心在于，市场不再仅关注单一性能跑分，而是转向评估模型在复杂Agent任务中的单位经济效益——即以更少token、更低成本完成同等任务的能力，这标志着竞争焦点已从“智力”转向“效率”和商业化落地。 关注：微软（GPT-5.6性能与成本优势有望带动Azure云业务加速增长），博通（与OpenAI合作开发定制AI推理芯片，深度绑定其基础设施扩张），Cerebras（其算力硬件被OpenAI选用部署高吞吐推理服务），智谱/minimax（海外顶尖模型受限为国产模型提供了追赶和构建独立生态的窗口期）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "原材料与成本",
+        "技术与量产",
+        "出口与海外需求"
+      ],
+      "classification": {
+        "code": "A",
+        "label": "产业趋势变化",
+        "matchedSignals": [
+          "商业化"
+        ],
+        "basis": "新闻文本命中：商业化"
+      },
+      "text": "IC设计可以理解为围绕工作站CPU、数据中心CPU、服务器CPU形成的五级细分产业，本地图谱对它的解释是“IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注”。把它放回本次事件的产业链，关键链条可以概括为土地、散热设备、服务器、机架设备等14项 → IC设计 → 云储存、云计算、互联网企业、制造业企业等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪原材料与成本、技术与量产、出口与海外需求，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“OpenAI限量发布GPT-5.6系列模型”在现有语料中主要新增了与原材料与成本、技术与量产、出口与海外需求有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为A类“产业趋势变化”，依据是商业化；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
     "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "10只4星标的未在本地公司产品图谱中穿透。"
+    "10只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

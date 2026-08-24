@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27058",
@@ -342,6 +342,18 @@
           "全身用抗病毒药",
           "利巴韦林"
         ],
+        "level5Industry": {
+          "code": "1200000239",
+          "name": "全身用抗感染药物"
+        },
+        "level6Industry": {
+          "code": "1200002299",
+          "name": "全身用抗病毒药"
+        },
+        "level7Product": {
+          "code": "1140078121",
+          "name": "利巴韦林"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -375,6 +387,18 @@
           "精神安定药",
           "右美托咪定"
         ],
+        "level5Industry": {
+          "code": "1200000228",
+          "name": "神经系统药物"
+        },
+        "level6Industry": {
+          "code": "1200002222",
+          "name": "精神安定药"
+        },
+        "level7Product": {
+          "code": "1140001880",
+          "name": "右美托咪定"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -408,6 +432,18 @@
           "妇科抗感染药和抗菌剂",
           "奥硝唑"
         ],
+        "level5Industry": {
+          "code": "1200000230",
+          "name": "生殖泌尿系统和性激素类药物"
+        },
+        "level6Industry": {
+          "code": "1200002242",
+          "name": "妇科抗感染药和抗菌剂"
+        },
+        "level7Product": {
+          "code": "1140001951",
+          "name": "奥硝唑"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -441,6 +477,18 @@
           "麻醉剂",
           "丙泊酚"
         ],
+        "level5Industry": {
+          "code": "1200000228",
+          "name": "神经系统药物"
+        },
+        "level6Industry": {
+          "code": "1200002221",
+          "name": "麻醉剂"
+        },
+        "level7Product": {
+          "code": "1140001879",
+          "name": "丙泊酚"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -474,6 +522,18 @@
           "基础输液",
           "中/长链脂肪乳注射液"
         ],
+        "level5Industry": {
+          "code": "1200000232",
+          "name": "杂类"
+        },
+        "level6Industry": {
+          "code": "1200002265",
+          "name": "基础输液"
+        },
+        "level7Product": {
+          "code": "1140172951",
+          "name": "中/长链脂肪乳注射液"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -507,6 +567,18 @@
           "止泻药，肠道抗炎/抗感染药",
           "消旋卡多曲"
         ],
+        "level5Industry": {
+          "code": "1200000231",
+          "name": "消化系统及代谢药"
+        },
+        "level6Industry": {
+          "code": "1200002251",
+          "name": "止泻药，肠道抗炎/抗感染药"
+        },
+        "level7Product": {
+          "code": "1140172954",
+          "name": "消旋卡多曲"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -540,6 +612,18 @@
           "医疗运营服务",
           "BL-B01D1专利授权许可服务"
         ],
+        "level5Industry": {
+          "code": "1200000261",
+          "name": "医疗运营服务"
+        },
+        "level6Industry": {
+          "code": "1200002392",
+          "name": "医疗运营服务"
+        },
+        "level7Product": {
+          "code": "1140209542",
+          "name": "BL-B01D1专利授权许可服务"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -572,6 +656,18 @@
           "药物发现",
           "分子砌块"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002852",
+          "name": "药物发现"
+        },
+        "level7Product": {
+          "code": "1140194466",
+          "name": "分子砌块"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -604,6 +700,18 @@
           "CDMO",
           "小分子化药CDMO"
         ],
+        "level5Industry": {
+          "code": "1210002773",
+          "name": "医药研发服务"
+        },
+        "level6Industry": {
+          "code": "1210002855",
+          "name": "CDMO"
+        },
+        "level7Product": {
+          "code": "1140193351",
+          "name": "小分子化药CDMO"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -756,10 +864,186 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 9,
+    "target": {
+      "code": "1200000228",
+      "name": "神经系统药物",
+      "description": "神经系统药物涵盖精神类、神经退行性等治疗用药。因人口老龄化加剧及社会压力增大，阿尔茨海默病、抑郁等需求爆发，市场空间广阔且壁垒高，兼具刚需与成长属性，故备受资本市场关注。",
+      "coreProductCount": 2,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.2222,
+      "relevanceScore": 12,
+      "matchedCoreProducts": [
+        {
+          "code": "1140001879",
+          "name": "丙泊酚",
+          "stockCount": 1
+        },
+        {
+          "code": "1140001880",
+          "name": "右美托咪定",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000228",
+        "name": "神经系统药物",
+        "description": "神经系统药物涵盖精神类、神经退行性等治疗用药。因人口老龄化加剧及社会压力增大，阿尔茨海默病、抑郁等需求爆发，市场空间广阔且壁垒高，兼具刚需与成长属性，故备受资本市场关注。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2222,
+        "relevanceScore": 12,
+        "matchedCoreProducts": [
+          {
+            "code": "1140001879",
+            "name": "丙泊酚",
+            "stockCount": 1
+          },
+          {
+            "code": "1140001880",
+            "name": "右美托咪定",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210002773",
+        "name": "医药研发服务",
+        "description": "医药研发服务（CXO）为药企提供研发、生产外包。因能降低新药成本、缩短周期，助力创新药爆发而受关注。作为“卖水人”，其业绩确定性高，伴随全球研发投入增长及中国工程师红利，成为A股长期热门赛道。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2222,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140194466",
+            "name": "分子砌块",
+            "stockCount": 1
+          },
+          {
+            "code": "1140193351",
+            "name": "小分子化药CDMO",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000239",
+        "name": "全身用抗感染药物",
+        "description": "该行业涵盖治疗全身性感染的抗生素、抗病毒等药物。因人口老龄化、耐药菌挑战及突发公卫事件频发，市场需求刚性且稳定。作为医药核心细分领域，其研发创新与供应链安全备受资本关注，具备长期投资价值。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1111,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140078121",
+            "name": "利巴韦林",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000232",
+        "name": "杂类",
+        "description": "“杂类”并非A股官方行业分类，通常指业务多元、难以归入单一主流板块的公司。因概念模糊且常含跨界题材，易受游资炒作引发短期波动。投资者需警惕其基本面不透明及高风险，避免盲目追高。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1111,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140172951",
+            "name": "中/长链脂肪乳注射液",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000231",
+        "name": "消化系统及代谢药",
+        "description": "该行业涵盖胃肠、肝胆及糖尿病等药物。因人口老龄化加剧、慢性病高发及消费升级，市场需求刚性且持续增长。龙头药企研发创新加速，叠加医保政策支持，使其成为兼具防御性与成长性的优质赛道，备受投资者关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1111,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140172954",
+            "name": "消旋卡多曲",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000230",
+        "name": "生殖泌尿系统和性激素类药物",
+        "description": "该行业涵盖治疗泌尿生殖疾病及调节性激素的药物。因人口老龄化加剧前列腺等疾病高发，加上生育政策优化与消费升级推动需求增长，市场潜力大，故备受投资者关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1111,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140001951",
+            "name": "奥硝唑",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000261",
+        "name": "医疗运营服务",
+        "description": "医疗运营服务指为医院提供非诊疗支持（如后勤、IT、供应链）。因医改推动医院降本增效及专业化分工，该赛道凭借稳定现金流和抗周期特性受关注，是医疗服务细分领域中具备长期成长潜力的优质方向。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1111,
+        "relevanceScore": 3,
+        "matchedCoreProducts": [
+          {
+            "code": "1140209542",
+            "name": "BL-B01D1专利授权许可服务",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "神经系统药物",
+        "industryDescription": "神经系统药物涵盖精神类、神经退行性等治疗用药。因人口老龄化加剧及社会压力增大，阿尔茨海默病、抑郁等需求爆发，市场空间广阔且壁垒高，兼具刚需与成长属性，故备受资本市场关注。",
+        "newsText": "7月6日，诺华宣布斥资15亿美元收购英国ADC公司Myricx，标志着MNC对新一代ADC技术的争夺已进入payload创新层面，其核心是看中NMTi这一全新payload技术在解决耐药性上的潜力。这笔交易直接验证了NMTi这类新型payload平台的巨大价值，投资逻辑正从单一管线转向对具备差异化、可克服耐药性等特性的底层技术平台的估值重估。 关注：先声药业（拥有国内同类NMTi payload ADC平台，诺华的收购提升了其技术平台的价值预期和未来BD合作潜力）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "神经系统药物可以理解为围绕丙泊酚、右美托咪定形成的五级细分产业，本地图谱对它的解释是“神经系统药物涵盖精神类、神经退行性等治疗用药。因人口老龄化加剧及社会压力增大，阿尔茨海默病、抑郁等需求爆发，市场空间广阔且壁垒高，兼具刚需与成长属性，故备受资本市场关注”。把它放回本次事件的产业链，关键链条可以概括为氯化钠、2-甲基-5-硝基咪唑、Lewis酸、M三甲基硅咪唑等14项 → 神经系统药物 → 全身麻醉、厌氧菌、原虫感染、支气管炎等8项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪需求、价格、成本、产能和竞争格局，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“诺华斥资15亿美元收购NMTi ADC公司”在现有语料中主要新增了与需求、价格、成本、产能和竞争格局有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "3只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

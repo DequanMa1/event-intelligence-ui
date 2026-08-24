@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27181",
@@ -432,6 +432,18 @@
           "计算控制芯片",
           "服务器CPU"
         ],
+        "level5Industry": {
+          "code": "1200001282",
+          "name": "IC设计"
+        },
+        "level6Industry": {
+          "code": "1210003412",
+          "name": "计算控制芯片"
+        },
+        "level7Product": {
+          "code": "1140007907",
+          "name": "服务器CPU"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -465,6 +477,18 @@
           "IaaS",
           "智能计算集群系统"
         ],
+        "level5Industry": {
+          "code": "1210003145",
+          "name": "云计算"
+        },
+        "level6Industry": {
+          "code": "1210003278",
+          "name": "IaaS"
+        },
+        "level7Product": {
+          "code": "1140108410",
+          "name": "智能计算集群系统"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -497,6 +521,18 @@
           "人工智能",
           "推理软件平台"
         ],
+        "level5Industry": {
+          "code": "1200001378",
+          "name": "人工智能"
+        },
+        "level6Industry": {
+          "code": "1200005182",
+          "name": "人工智能"
+        },
+        "level7Product": {
+          "code": "1140211638",
+          "name": "推理软件平台"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -529,6 +565,18 @@
           "人工智能",
           "训练开发平台"
         ],
+        "level5Industry": {
+          "code": "1200001378",
+          "name": "人工智能"
+        },
+        "level6Industry": {
+          "code": "1200005182",
+          "name": "人工智能"
+        },
+        "level7Product": {
+          "code": "1140211637",
+          "name": "训练开发平台"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -681,10 +729,122 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 4,
+    "target": {
+      "code": "1200001378",
+      "name": "人工智能",
+      "description": "A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块。",
+      "coreProductCount": 2,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.5,
+      "relevanceScore": 14,
+      "matchedCoreProducts": [
+        {
+          "code": "1140211638",
+          "name": "推理软件平台",
+          "stockCount": 1
+        },
+        {
+          "code": "1140211637",
+          "name": "训练开发平台",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001378",
+        "name": "人工智能",
+        "description": "A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.5,
+        "relevanceScore": 14,
+        "matchedCoreProducts": [
+          {
+            "code": "1140211638",
+            "name": "推理软件平台",
+            "stockCount": 1
+          },
+          {
+            "code": "1140211637",
+            "name": "训练开发平台",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.25,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140007907",
+            "name": "服务器CPU",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1210003145",
+        "name": "云计算",
+        "description": "云计算指通过互联网提供计算资源服务。A股中该板块受关注，因其作为数字经济底座，受益于企业数字化转型、AI算力需求爆发及政策支持，具备高成长性与广阔市场空间，是科技投资的核心赛道之一。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.25,
+        "relevanceScore": 7,
+        "matchedCoreProducts": [
+          {
+            "code": "1140108410",
+            "name": "智能计算集群系统",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "人工智能",
+        "industryDescription": "A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块。",
+        "newsText": "7月7日，市场确认月之暗面Kimi K3模型将于本月发布，其2.5万亿的参数规模和升级的MoE架构，标志着国内大模型竞赛已从基础能力比拼转向规模与效率并重的阶段。这一进展被视为国产AI追赶全球顶尖水平的关键节点，因为其庞大参数与高效架构的结合预示着性能的巨大飞跃，而公司近期高达315亿美元的估值和超3亿美元的ARR则为这场技术军备竞赛提供了强劲的商业化验证与资本背书。 关注：月之暗面（模型发布主体，技术与商业化能力得到验证），智谱/腾讯控股/DeepSeek（国产大模型竞争格局白热化，面临能力与定价双重考验），国产算力/AI应用（模型参数竞赛直接拉动上游算力需求，并加速下游应用创新）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "技术与量产"
+      ],
+      "classification": {
+        "code": "A",
+        "label": "产业趋势变化",
+        "matchedSignals": [
+          "商业化"
+        ],
+        "basis": "新闻文本命中：商业化"
+      },
+      "text": "人工智能可以理解为围绕推理软件平台、训练开发平台形成的五级细分产业，本地图谱对它的解释是“A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块”。把它放回本次事件的产业链，关键链条可以概括为云端智能加速卡、云端智能芯片、存储设备、应用开发调试工具包等13项 → 人工智能 → 云计算数据中心、NAS存储服务器、智慧海关(含原检验检疫)查验系统、智能交通等8项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、技术与量产，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“传月之暗面KimiK3模型将于7月发布”在现有语料中主要新增了与下游需求与订单、技术与量产有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为A类“产业趋势变化”，依据是商业化；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "9只4星标的未在本地公司产品图谱中穿透。"
+    "9只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

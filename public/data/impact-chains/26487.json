@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26487",
@@ -357,6 +357,18 @@
           "服务器",
           "超节点服务器"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005136",
+          "name": "服务器"
+        },
+        "level7Product": {
+          "code": "1140220847",
+          "name": "超节点服务器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -397,6 +409,18 @@
           "服务器",
           "AI服务器"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005136",
+          "name": "服务器"
+        },
+        "level7Product": {
+          "code": "1140112576",
+          "name": "AI服务器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -435,6 +459,18 @@
           "服务器",
           "通用服务器"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005136",
+          "name": "服务器"
+        },
+        "level7Product": {
+          "code": "1140119057",
+          "name": "通用服务器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -473,6 +509,18 @@
           "服务器",
           "边缘服务器"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005136",
+          "name": "服务器"
+        },
+        "level7Product": {
+          "code": "1140112577",
+          "name": "边缘服务器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -506,6 +554,18 @@
           "服务器",
           "关键应用主机"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005136",
+          "name": "服务器"
+        },
+        "level7Product": {
+          "code": "1140108739",
+          "name": "关键应用主机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -539,6 +599,18 @@
           "服务器",
           "服务器代工"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005136",
+          "name": "服务器"
+        },
+        "level7Product": {
+          "code": "1140204686",
+          "name": "服务器代工"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -572,6 +644,18 @@
           "IDC硬件产品",
           "服务器液冷板"
         ],
+        "level5Industry": {
+          "code": "1200001406",
+          "name": "IDC服务"
+        },
+        "level6Industry": {
+          "code": "1200005283",
+          "name": "IDC硬件产品"
+        },
+        "level7Product": {
+          "code": "1140202350",
+          "name": "服务器液冷板"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -605,6 +689,18 @@
           "服务器",
           "液冷服务器"
         ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005136",
+          "name": "服务器"
+        },
+        "level7Product": {
+          "code": "1140202373",
+          "name": "液冷服务器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -638,6 +734,18 @@
           "数据管理系统",
           "存储服务器"
         ],
+        "level5Industry": {
+          "code": "1200001387",
+          "name": "专业应用软件"
+        },
+        "level6Industry": {
+          "code": "1200005243",
+          "name": "数据管理系统"
+        },
+        "level7Product": {
+          "code": "1140121599",
+          "name": "存储服务器"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -913,10 +1021,169 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 9,
+    "target": {
+      "code": "1200001368",
+      "name": "硬件设备",
+      "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+      "coreProductCount": 7,
+      "stockCount": 2,
+      "shareOfLevel7Products": 0.7778,
+      "relevanceScore": 75,
+      "matchedCoreProducts": [
+        {
+          "code": "1140112576",
+          "name": "AI服务器",
+          "stockCount": 2
+        },
+        {
+          "code": "1140220847",
+          "name": "超节点服务器",
+          "stockCount": 2
+        },
+        {
+          "code": "1140119057",
+          "name": "通用服务器",
+          "stockCount": 2
+        },
+        {
+          "code": "1140108739",
+          "name": "关键应用主机",
+          "stockCount": 1
+        },
+        {
+          "code": "1140204686",
+          "name": "服务器代工",
+          "stockCount": 1
+        },
+        {
+          "code": "1140202373",
+          "name": "液冷服务器",
+          "stockCount": 1
+        },
+        {
+          "code": "1140112577",
+          "name": "边缘服务器",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001368",
+        "name": "硬件设备",
+        "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "coreProductCount": 7,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.7778,
+        "relevanceScore": 75,
+        "matchedCoreProducts": [
+          {
+            "code": "1140112576",
+            "name": "AI服务器",
+            "stockCount": 2
+          },
+          {
+            "code": "1140220847",
+            "name": "超节点服务器",
+            "stockCount": 2
+          },
+          {
+            "code": "1140119057",
+            "name": "通用服务器",
+            "stockCount": 2
+          },
+          {
+            "code": "1140108739",
+            "name": "关键应用主机",
+            "stockCount": 1
+          },
+          {
+            "code": "1140204686",
+            "name": "服务器代工",
+            "stockCount": 1
+          },
+          {
+            "code": "1140202373",
+            "name": "液冷服务器",
+            "stockCount": 1
+          },
+          {
+            "code": "1140112577",
+            "name": "边缘服务器",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001387",
+        "name": "专业应用软件",
+        "description": "专业应用软件指面向特定行业提供深度解决方案的软件。因契合数字经济与国产替代趋势，具备高壁垒、高粘性及稳定现金流，成为A股关注焦点，尤其在工业软件、金融IT等领域潜力巨大。",
+        "coreProductCount": 1,
+        "stockCount": 2,
+        "shareOfLevel7Products": 0.1111,
+        "relevanceScore": 7,
+        "matchedCoreProducts": [
+          {
+            "code": "1140121599",
+            "name": "存储服务器",
+            "stockCount": 2
+          }
+        ]
+      },
+      {
+        "code": "1200001406",
+        "name": "IDC服务",
+        "description": "IDC即互联网数据中心，提供服务器托管及算力支持。作为“东数西算”和AI发展的核心基建，其受益于数字化转型与算力需求爆发，具备高成长性和确定性，因而成为A股备受关注的科技细分赛道。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1111,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140202350",
+            "name": "服务器液冷板",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "硬件设备",
+        "industryDescription": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "newsText": "随着昇腾950超节点下半年进入规模交付阶段，市场关注点已从供应商认证名单转向实际交付能力，最新的观点强调，产能储备将是决定下半年乃至明年市场份额的核心变量。在此背景下，具备显著产能优势和扩产计划的公司，不仅能巩固其在核心客户供应链中的主导地位，更有望通过布局NPO光引擎配套等新产品打开第二增长曲线。 关注：华丰科技（224G高速线模组产能优势显著，将主导昇腾950供应链份额）、航天电器（高速背板连接器核心供应商，预计7月放量并获取可观份额）、中航光电（通过224G高速互联产品认证，切入国产算力核心供应链）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "产能与开工"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "硬件设备可以理解为围绕AI服务器、超节点服务器、通用服务器、关键应用主机、服务器代工等7项形成的五级细分产业，本地图谱对它的解释是“硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道”。把它放回本次事件的产业链，关键链条可以概括为中央处理器(CPU)、主板、内存、存储等14项 → 硬件设备 → VR/AR、云服务平台、云计算、工业互联网等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪产能与开工，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“华丰科技升腾950线模组6月规模交付”在现有语料中主要新增了与产能与开工有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "2只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

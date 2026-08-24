@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26607",
@@ -400,6 +400,18 @@
           "封装基材",
           "射频模块封装基板"
         ],
+        "level5Industry": {
+          "code": "1200001274",
+          "name": "封装材料"
+        },
+        "level6Industry": {
+          "code": "1200004922",
+          "name": "封装基材"
+        },
+        "level7Product": {
+          "code": "1140005825",
+          "name": "射频模块封装基板"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -435,6 +447,18 @@
           "封装基材",
           "微机电系统封装基板"
         ],
+        "level5Industry": {
+          "code": "1200001274",
+          "name": "封装材料"
+        },
+        "level6Industry": {
+          "code": "1200004922",
+          "name": "封装基材"
+        },
+        "level7Product": {
+          "code": "1140005824",
+          "name": "微机电系统封装基板"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -470,6 +494,18 @@
           "封装基材",
           "处理器芯片封装基板"
         ],
+        "level5Industry": {
+          "code": "1200001274",
+          "name": "封装材料"
+        },
+        "level6Industry": {
+          "code": "1200004922",
+          "name": "封装基材"
+        },
+        "level7Product": {
+          "code": "1140005826",
+          "name": "处理器芯片封装基板"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -505,6 +541,18 @@
           "封装基材",
           "存储芯片封装基板"
         ],
+        "level5Industry": {
+          "code": "1200001274",
+          "name": "封装材料"
+        },
+        "level6Industry": {
+          "code": "1200004922",
+          "name": "封装基材"
+        },
+        "level7Product": {
+          "code": "1140005823",
+          "name": "存储芯片封装基板"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -540,6 +588,18 @@
           "封装基材",
           "高速通信封装基板"
         ],
+        "level5Industry": {
+          "code": "1200001274",
+          "name": "封装材料"
+        },
+        "level6Industry": {
+          "code": "1200004922",
+          "name": "封装基材"
+        },
+        "level7Product": {
+          "code": "1140005827",
+          "name": "高速通信封装基板"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -575,6 +635,18 @@
           "半导体封装设备",
           "后道先进封装电镀设备"
         ],
+        "level5Industry": {
+          "code": "1200000577",
+          "name": "半导体设备"
+        },
+        "level6Industry": {
+          "code": "1200003334",
+          "name": "半导体封装设备"
+        },
+        "level7Product": {
+          "code": "1140161021",
+          "name": "后道先进封装电镀设备"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -827,9 +899,134 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 6,
+    "target": {
+      "code": "1200001274",
+      "name": "封装材料",
+      "description": "封装材料指用于保护芯片、实现电气连接的基材。受AI算力爆发及先进封装技术迭代驱动，该行业因国产替代加速和高成长预期备受关注，是半导体产业链中提升芯片性能与可靠性的关键环节。",
+      "coreProductCount": 5,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.8333,
+      "relevanceScore": 90,
+      "matchedCoreProducts": [
+        {
+          "code": "1140005826",
+          "name": "处理器芯片封装基板",
+          "stockCount": 1
+        },
+        {
+          "code": "1140005823",
+          "name": "存储芯片封装基板",
+          "stockCount": 1
+        },
+        {
+          "code": "1140005825",
+          "name": "射频模块封装基板",
+          "stockCount": 1
+        },
+        {
+          "code": "1140005824",
+          "name": "微机电系统封装基板",
+          "stockCount": 1
+        },
+        {
+          "code": "1140005827",
+          "name": "高速通信封装基板",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001274",
+        "name": "封装材料",
+        "description": "封装材料指用于保护芯片、实现电气连接的基材。受AI算力爆发及先进封装技术迭代驱动，该行业因国产替代加速和高成长预期备受关注，是半导体产业链中提升芯片性能与可靠性的关键环节。",
+        "coreProductCount": 5,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.8333,
+        "relevanceScore": 90,
+        "matchedCoreProducts": [
+          {
+            "code": "1140005826",
+            "name": "处理器芯片封装基板",
+            "stockCount": 1
+          },
+          {
+            "code": "1140005823",
+            "name": "存储芯片封装基板",
+            "stockCount": 1
+          },
+          {
+            "code": "1140005825",
+            "name": "射频模块封装基板",
+            "stockCount": 1
+          },
+          {
+            "code": "1140005824",
+            "name": "微机电系统封装基板",
+            "stockCount": 1
+          },
+          {
+            "code": "1140005827",
+            "name": "高速通信封装基板",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000577",
+        "name": "半导体设备",
+        "description": "半导体设备指芯片制造所需的关键机械。因国产替代加速、政策强力支持及AI需求爆发，该行业成A股焦点。它关乎供应链安全与技术自主，具备高成长性和战略价值，是科技投资的核心赛道。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1667,
+        "relevanceScore": 11,
+        "matchedCoreProducts": [
+          {
+            "code": "1140161021",
+            "name": "后道先进封装电镀设备",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "封装材料",
+        "industryDescription": "封装材料指用于保护芯片、实现电气连接的基材。受AI算力爆发及先进封装技术迭代驱动，该行业因国产替代加速和高成长预期备受关注，是半导体产业链中提升芯片性能与可靠性的关键环节。",
+        "newsText": "过去24-48小时内，以甬矽电子（拟投103亿）、盛合晶微（拟投100亿）为代表的国内多家OSAT厂商密集宣布了总额超2800亿的先进封装扩产计划，标志着行业已从规划阶段全面进入产能建设期。巨额资本开支验证了AI驱动下先进封装产能的极度紧缺，这意味着封测厂正从传统周期股向算力瓶颈资产重估，而上游设备和零部件厂商将因订单确定性高而率先兑现业绩。 关注：长电科技/通富微电/甬矽电子/汇成股份（头部OSAT厂商直接受益于本轮扩产周期和价值重估），长川科技/华峰测控（AI芯片复杂度提升和KGD测试需求拉动ATE设备放量），芯碁微装/金海通（CoWoS-L等先进封装工艺直接拉动光刻、键合等核心设备需求），北方华创/中微公司/盛美上海（先进封装中的RDL、Bumping等环节需要大量前道工艺设备），深南电路/兴森科技（ABF载板作为先进封装关键材料需求旺盛），江丰电子/富创精密（半导体设备及零部件国产替代加速，受益于设备订单爆发）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产能与开工",
+        "政策与制度"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "封装材料可以理解为围绕处理器芯片封装基板、存储芯片封装基板、射频模块封装基板、微机电系统封装基板、高速通信封装基板形成的五级细分产业，本地图谱对它的解释是“封装材料指用于保护芯片、实现电气连接的基材。受AI算力爆发及先进封装技术迭代驱动，该行业因国产替代加速和高成长预期备受关注，是半导体产业链中提升芯片性能与可靠性的关键环节”。把它放回本次事件的产业链，关键链条可以概括为封装基板、电路板、中央处理器(CPU)、储存芯片等14项 → 封装材料 → 电子通信、HDFan-out、PillarBump、RDL等14项，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产能与开工、政策与制度，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“国内多家OSAT厂商宣布先进封装扩产”在现有语料中主要新增了与下游需求与订单、产能与开工、政策与制度有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

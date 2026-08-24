@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "26837",
@@ -152,6 +152,18 @@
           "电池隔膜",
           "湿法锂电池隔膜"
         ],
+        "level5Industry": {
+          "code": "1210000371",
+          "name": "电池隔膜"
+        },
+        "level6Industry": {
+          "code": "1200002634",
+          "name": "电池隔膜"
+        },
+        "level7Product": {
+          "code": "1140046200",
+          "name": "湿法锂电池隔膜"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -196,6 +208,18 @@
           "电池隔膜",
           "半固态电池隔膜"
         ],
+        "level5Industry": {
+          "code": "1210000371",
+          "name": "电池隔膜"
+        },
+        "level6Industry": {
+          "code": "1200002634",
+          "name": "电池隔膜"
+        },
+        "level7Product": {
+          "code": "1140215878",
+          "name": "半固态电池隔膜"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -234,6 +258,18 @@
           "芳纶纤维",
           "间位芳纶"
         ],
+        "level5Industry": {
+          "code": "1200000853",
+          "name": "合成纤维"
+        },
+        "level6Industry": {
+          "code": "1210003358",
+          "name": "芳纶纤维"
+        },
+        "level7Product": {
+          "code": "1140158395",
+          "name": "间位芳纶"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -260,6 +296,18 @@
         "name": "锂电池隔膜",
         "hierarchyPath": "",
         "industryPath": [],
+        "level5Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level6Industry": {
+          "code": "",
+          "name": ""
+        },
+        "level7Product": {
+          "code": "",
+          "name": ""
+        },
         "matchedSourceLevel": 0,
         "mappingType": "semantic_bridge",
         "bridgeBasis": "company_product:湿法锂电池隔膜",
@@ -323,10 +371,109 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 3,
+    "target": {
+      "code": "1210000371",
+      "name": "电池隔膜",
+      "description": "电池隔膜是锂电池关键内层组件，起隔离正负极、防短路及导离子作用。因直接决定电池安全性与能量密度且技术壁垒高，作为新能源车核心材料，其性能提升备受市场关注，是A股锂电板块的重要细分赛道。",
+      "coreProductCount": 2,
+      "stockCount": 3,
+      "shareOfLevel7Products": 0.6667,
+      "relevanceScore": 25,
+      "matchedCoreProducts": [
+        {
+          "code": "1140046200",
+          "name": "湿法锂电池隔膜",
+          "stockCount": 3
+        },
+        {
+          "code": "1140215878",
+          "name": "半固态电池隔膜",
+          "stockCount": 2
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1210000371",
+        "name": "电池隔膜",
+        "description": "电池隔膜是锂电池关键内层组件，起隔离正负极、防短路及导离子作用。因直接决定电池安全性与能量密度且技术壁垒高，作为新能源车核心材料，其性能提升备受市场关注，是A股锂电板块的重要细分赛道。",
+        "coreProductCount": 2,
+        "stockCount": 3,
+        "shareOfLevel7Products": 0.6667,
+        "relevanceScore": 25,
+        "matchedCoreProducts": [
+          {
+            "code": "1140046200",
+            "name": "湿法锂电池隔膜",
+            "stockCount": 3
+          },
+          {
+            "code": "1140215878",
+            "name": "半固态电池隔膜",
+            "stockCount": 2
+          }
+        ]
+      },
+      {
+        "code": "1200000853",
+        "name": "合成纤维",
+        "description": "合成纤维指以石油等为原料人工制造的纤维。A股中该行业受关注，因其兼具周期与成长属性：上游原料价格波动影响利润，下游纺织、工业需求强劲，且头部企业凭借规模优势和技术升级，有望在全球供应链重塑中提升份额。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.3333,
+        "relevanceScore": 11,
+        "matchedCoreProducts": [
+          {
+            "code": "1140158395",
+            "name": "间位芳纶",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "电池隔膜",
+        "industryDescription": "电池隔膜是锂电池关键内层组件，起隔离正负极、防短路及导离子作用。因直接决定电池安全性与能量密度且技术壁垒高，作为新能源车核心材料，其性能提升备受市场关注，是A股锂电板块的重要细分赛道。",
+        "newsText": "7月2日产业链确认，因5-7月新增供给显著不及终端需求，隔膜已开启第三轮涨价谈判，大客户有望在三季度落地新一轮涨价，供需失衡正在加剧。投资逻辑已从供需紧平衡转向旺季下持续涨价带来的超额盈利弹性，由于大规模新增供给需等到28年以后，本轮涨价周期的强度和持续性或将超预期。 关注：恩捷股份（行业绝对龙头，充分享受涨价周期盈利弹性），星源材质（盈利能力追赶龙头，海外产能释放叠加半导体新业务打开估值空间），璞泰来（涂覆隔膜龙头，估值具备安全边际），佛塑科技（超薄隔膜细分龙头，产能扩张积极）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "下游需求与订单",
+        "产品价格",
+        "供给与库存",
+        "产能与开工",
+        "出口与海外需求"
+      ],
+      "classification": {
+        "code": "B",
+        "label": "景气度加速/减速",
+        "matchedSignals": [
+          "涨价"
+        ],
+        "basis": "新闻文本命中：涨价"
+      },
+      "text": "电池隔膜可以理解为围绕湿法锂电池隔膜、半固态电池隔膜形成的五级细分产业，本地图谱对它的解释是“电池隔膜是锂电池关键内层组件，起隔离正负极、防短路及导离子作用。因直接决定电池安全性与能量密度且技术壁垒高，作为新能源车核心材料，其性能提升备受市场关注，是A股锂电板块的重要细分赛道”。把它放回本次事件的产业链，关键链条可以概括为聚丙烯(PP)、聚乙烯、超细旦丙纶长丝、锂电池基膜 → 电池隔膜 → 锂电池、芳纶纸，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪下游需求与订单、产品价格、供给与库存、产能与开工、出口与海外需求，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“隔膜开启第三轮涨价谈判”在现有语料中主要新增了与下游需求与订单、产品价格、供给与库存、产能与开工、出口与海外需求有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为B类“景气度加速/减速”，依据是涨价；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

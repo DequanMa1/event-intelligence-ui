@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27214",
@@ -543,6 +543,18 @@
           "燃油摩托车",
           "燃油摩托车"
         ],
+        "level5Industry": {
+          "code": "1200001144",
+          "name": "摩托车"
+        },
+        "level6Industry": {
+          "code": "1200004593",
+          "name": "燃油摩托车"
+        },
+        "level7Product": {
+          "code": "1140135810",
+          "name": "燃油摩托车"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -575,6 +587,18 @@
           "摩托车零部件",
           "摩托车汽油发动机"
         ],
+        "level5Industry": {
+          "code": "1200001144",
+          "name": "摩托车"
+        },
+        "level6Industry": {
+          "code": "1210000007",
+          "name": "摩托车零部件"
+        },
+        "level7Product": {
+          "code": "1140135811",
+          "name": "摩托车汽油发动机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -607,6 +631,18 @@
           "汽车车身电子控制系统",
           "高级驾驶辅助系统(ADAS)"
         ],
+        "level5Industry": {
+          "code": "1200001155",
+          "name": "汽车电子"
+        },
+        "level6Industry": {
+          "code": "1200004638",
+          "name": "汽车车身电子控制系统"
+        },
+        "level7Product": {
+          "code": "1140017261",
+          "name": "高级驾驶辅助系统(ADAS)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -640,6 +676,18 @@
           "燃油多功能乘用车（MPV）",
           "燃油多功能乘用车(MPV)"
         ],
+        "level5Industry": {
+          "code": "1200001158",
+          "name": "燃油型乘用车"
+        },
+        "level6Industry": {
+          "code": "1200004645",
+          "name": "燃油多功能乘用车（MPV）"
+        },
+        "level7Product": {
+          "code": "1140135809",
+          "name": "燃油多功能乘用车(MPV)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -672,6 +720,18 @@
           "燃油运动型多用途乘用车（SUV）",
           "燃油运动型多用途乘用车(SUV)"
         ],
+        "level5Industry": {
+          "code": "1200001158",
+          "name": "燃油型乘用车"
+        },
+        "level6Industry": {
+          "code": "1200004644",
+          "name": "燃油运动型多用途乘用车（SUV）"
+        },
+        "level7Product": {
+          "code": "1140131415",
+          "name": "燃油运动型多用途乘用车(SUV)"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -704,6 +764,18 @@
           "燃油轿车",
           "燃油轿车"
         ],
+        "level5Industry": {
+          "code": "1200001158",
+          "name": "燃油型乘用车"
+        },
+        "level6Industry": {
+          "code": "1200004643",
+          "name": "燃油轿车"
+        },
+        "level7Product": {
+          "code": "1140131414",
+          "name": "燃油轿车"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -736,6 +808,18 @@
           "纯电动新能源乘用车",
           "纯电动新能源乘用车"
         ],
+        "level5Industry": {
+          "code": "1200001159",
+          "name": "新能源乘用车"
+        },
+        "level6Industry": {
+          "code": "1200004647",
+          "name": "纯电动新能源乘用车"
+        },
+        "level7Product": {
+          "code": "1140131416",
+          "name": "纯电动新能源乘用车"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -798,10 +882,150 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 7,
+    "target": {
+      "code": "1200001158",
+      "name": "燃油型乘用车",
+      "description": "燃油型乘用车指传统内燃机驱动的汽车板块。其受关注源于高股息、低估值及稳定现金流，常被视为防御性资产；同时受油价波动、新能源替代压力及政策影响，是观察汽车产业转型与市场风格切换的重要风向标。",
+      "coreProductCount": 3,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.4286,
+      "relevanceScore": 9,
+      "matchedCoreProducts": [
+        {
+          "code": "1140135809",
+          "name": "燃油多功能乘用车(MPV)",
+          "stockCount": 1
+        },
+        {
+          "code": "1140131414",
+          "name": "燃油轿车",
+          "stockCount": 1
+        },
+        {
+          "code": "1140131415",
+          "name": "燃油运动型多用途乘用车(SUV)",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200001158",
+        "name": "燃油型乘用车",
+        "description": "燃油型乘用车指传统内燃机驱动的汽车板块。其受关注源于高股息、低估值及稳定现金流，常被视为防御性资产；同时受油价波动、新能源替代压力及政策影响，是观察汽车产业转型与市场风格切换的重要风向标。",
+        "coreProductCount": 3,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.4286,
+        "relevanceScore": 9,
+        "matchedCoreProducts": [
+          {
+            "code": "1140135809",
+            "name": "燃油多功能乘用车(MPV)",
+            "stockCount": 1
+          },
+          {
+            "code": "1140131414",
+            "name": "燃油轿车",
+            "stockCount": 1
+          },
+          {
+            "code": "1140131415",
+            "name": "燃油运动型多用途乘用车(SUV)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001144",
+        "name": "摩托车",
+        "description": "A股摩托车板块指主营两轮车研发制造的上市公司。因出口强劲、大排量娱乐化转型及电动化趋势，业绩增长显著，受市场关注。代表企业如春风动力、钱江摩托等，兼具消费与高端制造属性。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2857,
+        "relevanceScore": 8,
+        "matchedCoreProducts": [
+          {
+            "code": "1140135811",
+            "name": "摩托车汽油发动机",
+            "stockCount": 1
+          },
+          {
+            "code": "1140135810",
+            "name": "燃油摩托车",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001155",
+        "name": "汽车电子",
+        "description": "汽车电子指车辆中所有电子控制系统。因受益于电动化、智能化及自动驾驶趋势，其单车价值量显著提升，成为A股高成长赛道，吸引资金重点关注产业链中的芯片、传感器及智能座舱等核心环节。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 4,
+        "matchedCoreProducts": [
+          {
+            "code": "1140017261",
+            "name": "高级驾驶辅助系统(ADAS)",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200001159",
+        "name": "新能源乘用车",
+        "description": "新能源乘用车指纯电或插混等家用汽车。因契合“双碳”战略、技术迭代快及政策强力支持，兼具高成长性与广阔市场空间，成为A股核心赛道，备受资金青睐。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 3,
+        "matchedCoreProducts": [
+          {
+            "code": "1140131416",
+            "name": "纯电动新能源乘用车",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "燃油型乘用车",
+        "industryDescription": "燃油型乘用车指传统内燃机驱动的汽车板块。其受关注源于高股息、低估值及稳定现金流，常被视为防御性资产；同时受油价波动、新能源替代压力及政策影响，是观察汽车产业转型与市场风格切换的重要风向标。",
+        "newsText": "2026年7月8日，Momenta（06880.HK）在港交所正式挂牌，成为港股“智驾第一股”，市值近700亿港元。此次上市的核心看点在于其商业模式已成功验证，高毛利的软件许可收入占比激增至40%以上，驱动整体毛利率跃升至71.6%，这种从硬件集成向高溢价软件平台收费的商业模式转变，结合其在第三方城市NOA市场64.5%的绝对龙头地位，是支撑其高估值的关键。 关注：Momenta（智驾算法龙头，商业模式验证）、比亚迪/梅赛德斯-奔驰（深度合作的整车厂及基石投资者，量产落地加速）、地平线机器人/小鹏汽车（同为智驾赛道核心标的，存在竞争与合作关系）、兆易创新（作为产业资本参与基石投资，体现产业链协同看好）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [
+        "技术与量产"
+      ],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "燃油型乘用车可以理解为围绕燃油多功能乘用车(MPV)、燃油轿车、燃油运动型多用途乘用车(SUV)形成的五级细分产业，本地图谱对它的解释是“燃油型乘用车指传统内燃机驱动的汽车板块。其受关注源于高股息、低估值及稳定现金流，常被视为防御性资产；同时受油价波动、新能源替代压力及政策影响，是观察汽车产业转型与市场风格切换的重要风向标”。把它放回本次事件的产业链，关键链条可以概括为机动车检测设备、AFS自适应控制器、AVS执行器、HID电子镇流器等14项 → 燃油型乘用车 → 消费者、智能驾驶舱，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪技术与量产，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“Momenta港股挂牌上市成智驾第一股”在现有语料中主要新增了与技术与量产有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
     "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "10只4星标的未在本地公司产品图谱中穿透。"
+    "10只4星标的未在本地公司产品图谱中穿透。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }

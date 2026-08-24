@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-20T17:27:39+08:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T11:09:06+08:00",
   "status": "ready",
   "event": {
     "mainId": "27061",
@@ -314,6 +314,18 @@
           "收获机械",
           "玉米收获机"
         ],
+        "level5Industry": {
+          "code": "1200000553",
+          "name": "农业工作机具"
+        },
+        "level6Industry": {
+          "code": "1200003291",
+          "name": "收获机械"
+        },
+        "level7Product": {
+          "code": "1140080806",
+          "name": "玉米收获机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -347,6 +359,18 @@
           "收获机械",
           "辣椒收获机"
         ],
+        "level5Industry": {
+          "code": "1200000553",
+          "name": "农业工作机具"
+        },
+        "level6Industry": {
+          "code": "1200003291",
+          "name": "收获机械"
+        },
+        "level7Product": {
+          "code": "1140145488",
+          "name": "辣椒收获机"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -380,6 +404,18 @@
           "塑料板、管、型、带材",
           "普通高分子材料精密工业用带"
         ],
+        "level5Industry": {
+          "code": "1200000992",
+          "name": "塑料板、管、型、带材"
+        },
+        "level6Industry": {
+          "code": "1200004304",
+          "name": "塑料板、管、型、带材"
+        },
+        "level7Product": {
+          "code": "1140007396",
+          "name": "普通高分子材料精密工业用带"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -412,6 +448,18 @@
           "塑料板、管、型、带材",
           "环境友好型高分子材料精密工业用带"
         ],
+        "level5Industry": {
+          "code": "1200000992",
+          "name": "塑料板、管、型、带材"
+        },
+        "level6Industry": {
+          "code": "1200004304",
+          "name": "塑料板、管、型、带材"
+        },
+        "level7Product": {
+          "code": "1140007395",
+          "name": "环境友好型高分子材料精密工业用带"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -444,6 +492,18 @@
           "塑料丝、绳及编织品",
           "芳纶纤维带"
         ],
+        "level5Industry": {
+          "code": "1200000993",
+          "name": "塑料丝、绳及编织品"
+        },
+        "level6Industry": {
+          "code": "1200004305",
+          "name": "塑料丝、绳及编织品"
+        },
+        "level7Product": {
+          "code": "1140067181",
+          "name": "芳纶纤维带"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -476,6 +536,18 @@
           "燃气轮机",
           "燃气轮机动力涡轮外机匣"
         ],
+        "level5Industry": {
+          "code": "1200000593",
+          "name": "燃气轮机"
+        },
+        "level6Industry": {
+          "code": "1200003378",
+          "name": "燃气轮机"
+        },
+        "level7Product": {
+          "code": "1140145487",
+          "name": "燃气轮机动力涡轮外机匣"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -508,6 +580,18 @@
           "燃气轮机",
           "燃气轮机导流管"
         ],
+        "level5Industry": {
+          "code": "1200000593",
+          "name": "燃气轮机"
+        },
+        "level6Industry": {
+          "code": "1200003378",
+          "name": "燃气轮机"
+        },
+        "level7Product": {
+          "code": "1140145485",
+          "name": "燃气轮机导流管"
+        },
         "matchedSourceLevel": 7,
         "mappingType": "company_product",
         "bridgeBasis": "",
@@ -586,9 +670,142 @@
       }
     ]
   },
+  "industryAnalysis": {
+    "status": "ready",
+    "stage": 1,
+    "stageName": "五级产业认知",
+    "mode": "simulation",
+    "selectionRule": "将入选的七级核心产品按五级产业代码归并；先按核心产品数量降序，并列时依次按关联股票数、相关性得分和产业代码确定唯一分析对象",
+    "sourceLevel7ProductCount": 7,
+    "target": {
+      "code": "1200000553",
+      "name": "农业工作机具",
+      "description": "农业工作机具指用于耕种、收割等作业的机械装备。受粮食安全战略、农机智能化升级及政策补贴驱动，该行业因具备国产替代潜力和效率提升逻辑而备受关注，是现代农业转型的核心受益板块。",
+      "coreProductCount": 2,
+      "stockCount": 1,
+      "shareOfLevel7Products": 0.2857,
+      "relevanceScore": 12,
+      "matchedCoreProducts": [
+        {
+          "code": "1140080806",
+          "name": "玉米收获机",
+          "stockCount": 1
+        },
+        {
+          "code": "1140145488",
+          "name": "辣椒收获机",
+          "stockCount": 1
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "code": "1200000553",
+        "name": "农业工作机具",
+        "description": "农业工作机具指用于耕种、收割等作业的机械装备。受粮食安全战略、农机智能化升级及政策补贴驱动，该行业因具备国产替代潜力和效率提升逻辑而备受关注，是现代农业转型的核心受益板块。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2857,
+        "relevanceScore": 12,
+        "matchedCoreProducts": [
+          {
+            "code": "1140080806",
+            "name": "玉米收获机",
+            "stockCount": 1
+          },
+          {
+            "code": "1140145488",
+            "name": "辣椒收获机",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000992",
+        "name": "塑料板、管、型、带材",
+        "description": "该行业指生产塑料板材、管材等基础建材及工业材料的A股板块。因广泛应用于基建、汽车轻量化及新能源领域，具备刚需属性且受原材料价格波动影响大，其业绩弹性与宏观政策紧密相关，故备受市场关注。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2857,
+        "relevanceScore": 10,
+        "matchedCoreProducts": [
+          {
+            "code": "1140007396",
+            "name": "普通高分子材料精密工业用带",
+            "stockCount": 1
+          },
+          {
+            "code": "1140007395",
+            "name": "环境友好型高分子材料精密工业用带",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000593",
+        "name": "燃气轮机",
+        "description": "燃气轮机被誉为装备制造业“皇冠明珠A股相关指研发制造该核心动力设备的板块。因具备高效清洁优势，且涉及能源安全与国产替代战略，叠加AI算力中心供电需求激增，成为兼具政策支撑与市场高增长潜力的热门赛道。",
+        "coreProductCount": 2,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.2857,
+        "relevanceScore": 6,
+        "matchedCoreProducts": [
+          {
+            "code": "1140145487",
+            "name": "燃气轮机动力涡轮外机匣",
+            "stockCount": 1
+          },
+          {
+            "code": "1140145485",
+            "name": "燃气轮机导流管",
+            "stockCount": 1
+          }
+        ]
+      },
+      {
+        "code": "1200000993",
+        "name": "塑料丝、绳及编织品",
+        "description": "该行业主营塑料丝、绳及编织品制造。因产品广泛应用于农业、包装及基建，且部分企业涉足高性能纤维或环保材料，具备成本优势与细分领域成长性，故受市场关注，常随原材料价格波动及下游需求变化呈现周期性机会。",
+        "coreProductCount": 1,
+        "stockCount": 1,
+        "shareOfLevel7Products": 0.1429,
+        "relevanceScore": 5,
+        "matchedCoreProducts": [
+          {
+            "code": "1140067181",
+            "name": "芳纶纤维带",
+            "stockCount": 1
+          }
+        ]
+      }
+    ],
+    "prompt": {
+      "templateId": "industry-cognition-stage1-v1",
+      "templateUrl": "/data/prompts/industry-cognition-stage1-v1.md",
+      "inputs": {
+        "industryName": "农业工作机具",
+        "industryDescription": "农业工作机具指用于耕种、收割等作业的机械装备。受粮食安全战略、农机智能化升级及政策补贴驱动，该行业因具备国产替代潜力和效率提升逻辑而备受关注，是现代农业转型的核心受益板块。",
+        "newsText": "自2026年7月6日起，作为A股一揽子交易新规的一部分，沪深主板ST及*ST股票的涨跌幅限制正式由5%放宽至10%；这一调整在拉平与主板普通股交易机制差异的同时，通过放大日内波动来提升定价效率和流动性，短期或加剧“壳价值”炒作风险，但长期看有助于加速基本面劣质公司的出清。 关注：具有重组预期或基本面改善的ST公司（定价效率提升和流动性改善，有助于价值重估加速），基本面持续恶化、依赖壳价值的ST公司（波动放大增加了交易风险和价值毁灭速度）"
+      }
+    },
+    "simulation": {
+      "mode": "local_rule_simulation",
+      "isRealModelOutput": false,
+      "variables": [],
+      "classification": {
+        "code": "C",
+        "label": "短期事件扰动",
+        "matchedSignals": [],
+        "basis": "现有文本未命中可验证的长期趋势或景气加速信号，模拟阶段从严归为短期扰动"
+      },
+      "text": "农业工作机具可以理解为围绕玉米收获机、辣椒收获机形成的五级细分产业，本地图谱对它的解释是“农业工作机具指用于耕种、收割等作业的机械装备。受粮食安全战略、农机智能化升级及政策补贴驱动，该行业因具备国产替代潜力和效率提升逻辑而备受关注，是现代农业转型的核心受益板块”。把它放回本次事件的产业链，关键链条可以概括为高温合金、PVC粉、TPU(热塑性聚氨酯弹性体橡胶)、一体式矮盘收获割台等14项 → 农业工作机具 → 农业、燃气轮机、输送皮带，企业通常通过销售相关产品、设备或服务获得收入，收入可先理解为销量或项目量乘以单价，利润则同时受上游投入成本、制造或交付成本、产能利用率和竞争强度影响，所以这个产业赚钱最关键看的是需求能否兑现并转化为可持续的单位利润。景气度需要重点跟踪需求、价格、成本、产能和竞争格局，因为这些变量会依次影响订单或销量、价格与成本，再传导到收入和利润。近期事件“A股主板ST股涨跌幅限制放宽至10%”在现有语料中主要新增了与需求、价格、成本、产能和竞争格局有关的信息，但模拟结果不会补写材料没有提供的历史状态、市场份额、公司订单或价格数据。按关键词规则暂归为C类“短期事件扰动”，依据是尚无足够的持续性经营信号；这段文字仅用于验证五级产业归并、语料装配和模型返回区的页面流程，接入真实大模型后应由完整提示词基于原始事实重新判断。"
+    },
+    "reason": ""
+  },
   "caveats": [
     "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
     "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
+    "AI产业认知仅归并入选的七级公司产品，语义桥接节点不参与五级产业计数。"
   ]
 }
