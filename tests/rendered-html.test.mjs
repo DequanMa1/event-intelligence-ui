@@ -1,17 +1,59 @@
 import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
 import { readFile } from "node:fs/promises";
-import test from "node:test";
+import net from "node:net";
+import { after, before, test } from "node:test";
+import { fileURLToPath } from "node:url";
+
+let productionServer;
+let siteUrl;
+
+async function reservePort() {
+  const probe = net.createServer();
+  await new Promise((resolve, reject) => {
+    probe.once("error", reject);
+    probe.listen(0, "127.0.0.1", resolve);
+  });
+  const address = probe.address();
+  const port = typeof address === "object" && address ? address.port : 0;
+  await new Promise((resolve) => probe.close(resolve));
+  return port;
+}
+
+before(async () => {
+  const port = await reservePort();
+  siteUrl = `http://127.0.0.1:${port}/`;
+  const nextCli = fileURLToPath(new URL("../node_modules/next/dist/bin/next", import.meta.url));
+  let diagnostics = "";
+
+  productionServer = spawn(process.execPath, [nextCli, "start", "-H", "127.0.0.1", "-p", String(port)], {
+    cwd: new URL("..", import.meta.url),
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+  productionServer.stdout.on("data", (chunk) => { diagnostics += chunk; });
+  productionServer.stderr.on("data", (chunk) => { diagnostics += chunk; });
+
+  for (let attempt = 0; attempt < 60; attempt += 1) {
+    if (productionServer.exitCode !== null) {
+      throw new Error(`Next.js production server stopped during startup.\n${diagnostics}`);
+    }
+    try {
+      const response = await fetch(siteUrl);
+      if (response.ok) return;
+    } catch {
+      // The server is still starting.
+    }
+    await new Promise((resolve) => setTimeout(resolve, 250));
+  }
+  throw new Error(`Next.js production server did not become ready.\n${diagnostics}`);
+});
+
+after(() => {
+  productionServer?.kill();
+});
 
 async function render() {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
-
-  return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
-    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
-    { waitUntil() {}, passThroughOnException() {} },
-  );
+  return fetch(siteUrl, { headers: { accept: "text/html" } });
 }
 
 test("renders the event research page and the impact-chain section", async () => {
@@ -118,3 +160,4 @@ test("presents industry analysis as two uninterrupted customer-facing paragraphs
   assert.doesNotMatch(page, /02 · 事件对产业的影响/);
   assert.doesNotMatch(page, />参考研报</);
 });
+
