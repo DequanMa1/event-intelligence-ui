@@ -6,7 +6,7 @@ $pidFile = Join-Path $runtimeDir "server.pid"
 $outputLog = Join-Path $runtimeDir "server.log"
 $errorLog = Join-Path $runtimeDir "server-error.log"
 $siteUrl = "http://127.0.0.1:3100/"
-$vinextCli = Join-Path $projectDir "node_modules\vinext\dist\cli.js"
+$nextCli = Join-Path $projectDir "node_modules\next\dist\bin\next"
 
 function Show-ErrorAndWait([string]$message) {
   Write-Host ""
@@ -37,7 +37,7 @@ if (-not $nodeExe) {
   Show-ErrorAndWait "Node.js was not found. Install Node.js 22 or reopen this project in Codex."
 }
 
-if (-not (Test-Path -LiteralPath $vinextCli)) {
+if (-not (Test-Path -LiteralPath $nextCli)) {
   Show-ErrorAndWait "Website dependencies are incomplete. Ask Codex to reinstall local dependencies."
 }
 
@@ -46,7 +46,7 @@ $env:Path = "$(Split-Path -Parent $nodeExe);$env:Path"
 
 $server = Start-Process `
   -FilePath $nodeExe `
-  -ArgumentList @($vinextCli, "dev", "--host", "127.0.0.1", "--port", "3100", "--strictPort") `
+  -ArgumentList @($nextCli, "dev", "-H", "127.0.0.1", "-p", "3100") `
   -WorkingDirectory $projectDir `
   -WindowStyle Hidden `
   -RedirectStandardOutput $outputLog `
@@ -74,4 +74,3 @@ for ($attempt = 0; $attempt -lt 30; $attempt++) {
 }
 
 Show-ErrorAndWait "Local website startup timed out. Check the .local-site log files."
-
