@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -161,6 +162,13 @@ INVESTMENT_ANALYSIS_BANNED_PHRASES = (
     "建议关注",
     "后续重点跟踪",
     "系统打分",
+    "不是纯蹭热点，不过只能算宽口径相关",
+    "宽口径相关。这事和",
+    "宽口径相关。",
+    "真相关。",
+    "小基数布局。",
+    "业务错位。",
+    "蹭概念。",
 )
 
 INVESTMENT_GROUPS = {
@@ -1126,8 +1134,22 @@ def infer_event_transmission(event_title: str, reason: str) -> dict[str, Any]:
     return DEFAULT_TRANSMISSION_PROFILE
 
 
-def narrative_variant(stock_name: str) -> int:
-    return sum(ord(character) for character in stock_name) % 3
+def narrative_variant(*values: Any, salt: str = "", modulo: int = 3) -> int:
+    """Choose stable prose variants from the complete event-stock context."""
+
+    if modulo <= 0:
+        raise ValueError("narrative variant modulo must be positive")
+    material = "\x1f".join(clean_text(value) for value in (*values, salt))
+    digest = hashlib.sha256(material.encode("utf-8")).digest()
+    return int.from_bytes(digest[:8], "big") % modulo
+
+
+def choose_narrative_option(
+    options: tuple[str, ...],
+    *values: Any,
+    salt: str,
+) -> str:
+    return options[narrative_variant(*values, salt=salt, modulo=len(options))]
 
 
 def format_segment_evidence(segments: list[dict[str, Any]], limit: int = 2) -> str:
@@ -1276,12 +1298,13 @@ def extract_reason_fact(reason: str, event_title: str) -> str:
 
 
 def build_investment_analysis(
+    event_key: str,
     event_title: str,
     stock_name: str,
     reason: str,
     company_evidence: dict[str, Any],
     filled_stars: int,
-) -> str:
+) -> dict[str, str]:
     """Write an A-share event note around business identity, realization and disproof."""
 
     reason_text = professionalize_reason(reason)
@@ -1398,168 +1421,369 @@ def build_investment_analysis(
         event_role_text = "7nm及以下先进制程代工与定价"
         company_role_text = "成熟制程或特色工艺晶圆制造"
     product_anchor = relevant_product_text or known_product_text or compact_text(business_base, 54)
-    variant = narrative_variant(stock_name)
+    event_focus = compact_text(event_label, 52)
+    narrative_key = (event_key, event_focus, stock_name, product_anchor, reason_text)
     reason_fact = extract_reason_fact(reason, event_title)
 
     if relation_label == "真相关":
-        openings = (
-            f"真相关。{stock_name}这次对应的不是泛题材，而是{product_anchor}，新闻动到的就是公司能收费的产品线。",
-            f"{stock_name}和这件事属于真相关，落点在{product_anchor}；产品、客户使用场景和公司收入科目能接上。",
-            f"真相关。这条新闻确实打到{stock_name}的生意上，直接抓手是{product_anchor}，不是只靠名字联想。",
+        opening_options = (
+            f"把“{event_focus}”落到{stock_name}的经营上，最直接的抓手是{product_anchor}，新闻对象、产品用途与收款环节能够接成一条线。",
+            f"{stock_name}与“{event_focus}”的交集并不靠题材联想，实际承接点就在{product_anchor}，这块产品卖得动才会改公司收入。",
+            f"“{event_focus}”讨论的需求正好落在{stock_name}的{product_anchor}上，客户采购、公司交付和收入确认指向同一笔生意。",
+            f"对{stock_name}来说，“{event_focus}”能碰到的不是外围概念，而是{product_anchor}这条已经进入公司经营口径的产品线。",
+            f"{product_anchor}是{stock_name}接住“{event_focus}”的实质载体，产品规格、应用位置和付款客户没有隔着另一层产业链。",
+            f"“{event_focus}”映射到{stock_name}时，钱最终落在{product_anchor}的订单与交付上，这部分与公司现有业务主体重合。",
         )
     elif relation_label == "宽口径相关":
-        openings = (
-            f"宽口径相关。{stock_name}能接上{product_anchor}这条线，但新闻对应的实际敞口没有被单独拆出来。",
-            f"{stock_name}不是纯蹭热点，不过只能算宽口径相关：公司卖{product_anchor}，与事件处在同一业务场景，分部口径却给不出准确权重。",
-            f"宽口径相关。这事和{stock_name}有业务交集，真正能对上的部分是{product_anchor}；问题在于这部分被装在更大的收入科目里。",
+        opening_options = (
+            f"“{event_focus}”和{stock_name}确有业务交集，能对上的部分是{product_anchor}；难点在于这块收入没有从更大的经营分部中单列。",
+            f"{stock_name}承接“{event_focus}”的产品入口在{product_anchor}，业务不是空的，但现有收入口径还不足以量出事件敞口。",
+            f"把“{event_focus}”拆到公司产品，{stock_name}能拿出来的是{product_anchor}；它处在对应应用场景，却不能代表整个收入分部都被新闻驱动。",
+            f"{product_anchor}让{stock_name}与“{event_focus}”发生真实交集，不过相关产品被并入更宽的业务科目，眼下只能确认参与，不能放大权重。",
+            f"“{event_focus}”落到{stock_name}并非毫无实货，实际连接点是{product_anchor}，只是这条产品线的收入和利润没有独立披露。",
+            f"{stock_name}和“{event_focus}”处在同一个商业场景，真正能收钱的是{product_anchor}；目前的问题不是有没有业务，而是业务敞口拆不出来。",
         )
     elif relation_label == "小基数布局":
-        openings = (
-            f"小基数布局。{stock_name}在{product_anchor}上有产品或项目，但目前更像一条待放量的新业务，改不了公司当期收入大盘。",
-            f"小基数布局。{stock_name}方向没跑偏，能对应的是{product_anchor}，只是生意还小，题材热度明显跑在报表前面。",
-            f"小基数布局。这票不是完全没货，{stock_name}手里有{product_anchor}，但现阶段不能当成熟主业定价。",
+        opening_options = (
+            f"{stock_name}手里的{product_anchor}能接到“{event_focus}”，但它仍是一条待放量业务，题材声量明显大于当前报表分量。",
+            f"“{event_focus}”在{stock_name}这里有产品落点，具体是{product_anchor}；现阶段更像新业务爬坡，尚不足以改写公司收入大盘。",
+            f"{product_anchor}让{stock_name}进入“{event_focus}”的产业链讨论，不过这块生意还小，不能按成熟主业的利润贡献去理解。",
+            f"对{stock_name}而言，“{event_focus}”并非只有口号，{product_anchor}已经提供业务入口，只是收入基数与兑现进度仍落后于市场热度。",
+            f"{stock_name}能拿{product_anchor}回应“{event_focus}”，方向对得上，当前经营权重却有限，短期很难单独拉动整家公司。",
+            f"“{event_focus}”对应到{stock_name}的是{product_anchor}这条增量线，而不是已经占据利润主体的成熟业务。",
         )
     elif relation_label == "错位":
-        openings = (
-            f"业务错位。新闻要看的是{event_role_text}，{stock_name}目前卖的主要是{company_role_text}，同在一条大产业链不代表赚的是同一笔钱。",
-            f"业务错位。{stock_name}和这条新闻对不上同一个利润池：事件影响{event_role_text}，公司收入落在{company_role_text}，中间缺少直接订单关系。",
-            f"业务错位。这次不能硬往{stock_name}身上套。新闻对象是{event_role_text}，公司手里的实货是{company_role_text}，产品用途和收款环节不同。",
+        opening_options = (
+            f"“{event_focus}”真正影响的是{event_role_text}，{stock_name}收钱的主线却在{company_role_text}，两者虽然相邻，产品用途与采购方并不相同。",
+            f"把“{event_focus}”和{stock_name}的生意逐项对照，事件落点是{event_role_text}，公司收入落点是{company_role_text}，中间缺一条直接订单链。",
+            f"{stock_name}现有业务主要围绕{company_role_text}，而“{event_focus}”讨论的是{event_role_text}；同处一个大行业，赚的仍不是同一笔钱。",
+            f"“{event_focus}”不能直接套到{stock_name}身上：新闻需要{event_role_text}，公司能交付的是{company_role_text}，规格、客户和结算环节已经错开。",
+            f"市场把{stock_name}放进“{event_focus}”容易，报表却只认{company_role_text}；新闻对应的{event_role_text}没有形成公司的直接收入抓手。",
+            f"{stock_name}与“{event_focus}”共享产业链标签，但公司卖的是{company_role_text}，事件所需的是{event_role_text}，板块同涨不能弥合这层业务差异。",
         )
     else:
-        openings = (
-            f"蹭概念成分更重。{stock_name}现有产品里找不到与{event_role_text}同用途、同客户环节的明确收入抓手。",
-            f"蹭概念。{stock_name}目前只能算题材映射：新闻讲的是{event_role_text}，公司能落到报表的仍是{company_role_text}，两边缺产品和订单验证。",
-            f"蹭概念。这条新闻和{stock_name}的关系更像分时图逻辑，现有业务没有给出{event_role_text}对应的产品、客户位置或收入科目。",
+        opening_options = (
+            f"“{event_focus}”在{stock_name}这里暂时找不到可收费的产品入口：新闻需要{event_role_text}，公司现有收入仍来自{company_role_text}。",
+            f"{stock_name}被带进“{event_focus}”更多是板块联想，现有业务没有给出与{event_role_text}同用途、同客户位置的明确产品。",
+            f"把产品和客户环节摊开看，{stock_name}的{company_role_text}接不到“{event_focus}”所需的{event_role_text}，当前缺少订单层面的连接。",
+            f"“{event_focus}”可以让{stock_name}的分时图跟着动，暂时却没有落到公司的产品、收入科目或供货关系上。",
+            f"{stock_name}与“{event_focus}”目前只共享题材标签，公司手里的{company_role_text}没有变成{event_role_text}对应的可验证收入。",
+            f"新闻讲的是{event_role_text}，{stock_name}实际经营的是{company_role_text}；两边缺少同产品、同用途和同付款客户的交集。",
         )
-    opening = openings[variant]
-    fact_sentence = f"公司侧能落地的具体事实是{reason_fact}。" if reason_fact else ""
+    opening = choose_narrative_option(opening_options, *narrative_key, salt="opening")
+    opening_lead = choose_narrative_option(
+        (
+            "从实际收款环节看，",
+            "把题材还原成公司生意，",
+            "拆到产品和客户层面，",
+            "按利润表能承接的口径，",
+            "顺着采购与交付链条看，",
+            "把行业叙事压到公司层面，",
+            "对照公司真正卖出的东西，",
+            "从订单最终落在哪边看，",
+            "按产品用途而不是概念名称，",
+            "把新闻换成经营语言，",
+            "从客户为什么付款来判断，",
+            "沿着收入确认的位置往回拆，",
+            "看产品而不看题材标签，",
+            "从公司能否因此多卖货出发，",
+            "把产业链位置和利润位置分开，",
+            "落到公司现有业务结构，",
+            "从事件能否形成新增订单看，",
+            "按业务实货逐项拆开，",
+            "对照产品规格与应用场景，",
+            "把市场联想落到收入科目，",
+            "从量、价和供货份额看，",
+            "沿着客户采购决策往下看，",
+            "把热度和报表分开处理，",
+            "从公司能交付什么开始，",
+        ),
+        *narrative_key,
+        salt="opening-lead",
+    )
+    opening = f"{opening_lead}{opening}"
+    fact_sentence = ""
+    if reason_fact:
+        fact_sentence = choose_narrative_option(
+            (
+                f"围绕这次题材，{stock_name}已经能落到经营链条上的动作是{reason_fact}，这比名称联想更能说明兑现位置。",
+                f"{reason_fact}，这是{stock_name}目前与事件最具体的业务连接，能不能继续往订单和交付推进才有经营含量。",
+                f"{stock_name}现阶段可核到的业务动作落在{reason_fact}；它说明产品走到哪一步，却不能替代后续收入验证。",
+                f"真正能替{stock_name}这条逻辑增加分量的事实是{reason_fact}，其含金量取决于后面是否进入采购和结算。",
+            ),
+            *narrative_key,
+            salt="reason-fact",
+        )
 
     if relation_label == "错位" and direct_share > 0 and direct_text:
-        revenue_sentence = f"{direct_text}合计约占收入{format_share_pct(direct_share)}，说明{company_role_text}确实是公司生意，但这恰好证明钱落在另一类产品和收款环节。"
+        revenue_options = (
+            f"{stock_name}的{direct_text}合计约占收入{format_share_pct(direct_share)}，这证明{company_role_text}确实有经营分量，也同时说明收入落在新闻之外的产品与收款环节。",
+            f"报表中{direct_text}合计约占{stock_name}收入{format_share_pct(direct_share)}；分量不小，但对应的是{company_role_text}，不能顺手换算成{event_role_text}敞口。",
+            f"{direct_text}合计约占收入{format_share_pct(direct_share)}，{stock_name}的主要生意由此可见，只是这笔钱与“{event_focus}”要求的产品并不相同。",
+        )
     elif direct_share >= 50 and direct_text:
-        revenue_sentence = f"{direct_text}合计约占收入{format_share_pct(direct_share)}，是主业级别，订单、售价或出货一旦变化，整张利润表都会有感觉。"
+        revenue_options = (
+            f"{stock_name}的{direct_text}合计约占收入{format_share_pct(direct_share)}，已经是主业级分量，“{event_focus}”一旦改变订单、售价或出货，利润表会直接有反应。",
+            f"{direct_text}合计约占{stock_name}收入{format_share_pct(direct_share)}，相关业务站在收入主体里，事件要是兑现，先看销量、价格和产品结构怎么动。",
+            f"从经营权重看，{stock_name}的{direct_text}合计约占收入{format_share_pct(direct_share)}；这不是边角业务，订单与交付变化足以影响公司整体表现。",
+        )
     elif direct_share >= 15 and direct_text:
-        revenue_sentence = f"{direct_text}合计约占收入{format_share_pct(direct_share)}，已经有经营分量，但公司其他业务仍会稀释这条新闻对整体利润的影响。"
+        revenue_options = (
+            f"{stock_name}的{direct_text}合计约占收入{format_share_pct(direct_share)}，已有经营分量，不过其他业务会稀释“{event_focus}”对整体利润的影响。",
+            f"{direct_text}合计约占{stock_name}收入{format_share_pct(direct_share)}，事件对应部分并非可忽略的小项，但也不能按全公司口径放大利润变化。",
+            f"{stock_name}约有{format_share_pct(direct_share)}的收入落在{direct_text}，足以产生边际影响，离决定整张报表仍有距离。",
+        )
     elif direct_share > 0 and direct_text:
-        revenue_sentence = f"{direct_text}合计约占收入{format_share_pct(direct_share)}，产品是真产品，分部却还是小分部，高增速也不等于能拉动全公司。"
+        revenue_options = (
+            f"{stock_name}的{direct_text}合计约占收入{format_share_pct(direct_share)}，产品已经存在，分部仍偏小，单项高增速也未必拉得动公司总利润。",
+            f"{direct_text}在{stock_name}收入中合计约占{format_share_pct(direct_share)}，这块业务不是概念，基数却决定了短期报表贡献不会太大。",
+            f"能直接对应的{direct_text}合计约占{stock_name}收入{format_share_pct(direct_share)}；“{event_focus}”带来的增量要足够大，才可能穿透到整体业绩。",
+        )
     elif contained_text:
-        revenue_sentence = f"相关产品被装进{contained_text}这类大分部，能确认公司参与，却不能把整个分部占比都算成新闻敞口。"
+        revenue_options = (
+            f"{stock_name}把相关产品并在{contained_text}这类大分部里，能确认公司参与“{event_focus}”对应的生意，却不能把整个分部占比都当作事件敞口。",
+            f"收入端只能看到{stock_name}的{contained_text}，相关产品藏在宽口径科目中；业务位置可以判断，真正受事件影响的收入比例仍拆不出来。",
+            f"{contained_text}是{stock_name}目前能对应到的收入容器，但里面还装着其他产品，“{event_focus}”不能按这个大分部的全部占比计算。",
+        )
     elif top_revenue_text:
-        revenue_sentence = f"公司收入大头在{top_revenue_text}，事件相关产品没有独立列项，能判断业务位置，算不出它到底贡献了多少收入和利润。"
+        revenue_options = (
+            f"{stock_name}的收入大头在{top_revenue_text}，事件相关产品没有独立列项，眼下能判断业务位置，算不出它贡献了多少收入和利润。",
+            f"报表把{stock_name}的主要收入列在{top_revenue_text}，却没有单独拆出“{event_focus}”对应产品，因此不能把业务存在等同于利润敞口。",
+            f"{top_revenue_text}构成{stock_name}当前收入主体，新闻相关产品未单列；市场可以先交易方向，经营判断仍缺权重。",
+        )
     else:
-        revenue_sentence = "现有信息没有把对应产品落到明确收入科目，眼下只能判断业务方向，不能给经营权重。"
+        revenue_options = (
+            f"{stock_name}目前没有把“{event_focus}”对应产品落到明确收入科目，只能辨认业务方向，无法给出经营权重。",
+            f"在{stock_name}的收入结构里，事件产品尚未形成可单独识别的科目，题材关联不能直接换算成利润贡献。",
+            f"{stock_name}缺少对应产品的独立收入线，现阶段最多说明方向有交集，不能说明公司赚到了多少钱。",
+        )
+    revenue_sentence = choose_narrative_option(revenue_options, *narrative_key, salt="revenue")
 
     context_roles = event_roles | company_roles | reason_roles
     driver = transmission["driver"]
     if not same_profit_pool and event_roles and company_roles:
-        operating_sentence = (
-            f"这里最容易混淆的是产业链相邻和利润直接受益：{event_role_text}的{driver}不会自动变成"
-            f"{company_role_text}的提价或新增订单，先影响的反而可能是客户采购节奏、成本或资本开支。"
+        operating_options = (
+            f"对{stock_name}而言，{event_role_text}出现{driver}不会自动变成{company_role_text}的提价或订单，先变的更可能是客户采购节奏、成本或资本开支。",
+            f"产业链相邻不等于利润同步，{stock_name}只有让{event_role_text}的变化转成{company_role_text}的采购量和售价，事件才会进入报表。",
+            f"“{event_focus}”先作用于{event_role_text}，{stock_name}赚的却是{company_role_text}的钱；中间没有新增采购，热度就越不过这层利润隔断。",
         )
     elif "liquid_cooling" in context_roles or "thermal_management" in context_roles:
-        operating_sentence = (
-            "液冷事件真正改的是客户认证、冷板或工质方案的定型，以及后面的采购量。验证通过只解决技术可用性，"
-            "还要经过定点和批量订单；收入放量靠交付数量，利润则会被定制开发、材料成本、大客户议价和售后维护啃掉。"
+        operating_options = (
+            f"{stock_name}的{product_anchor}要靠客户认证、方案定型和采购量赚钱，验证只说明技术可用；定制开发、材料成本、大客户议价和售后投入都会侵蚀新增出货的利润。",
+            f"液冷链条落到{stock_name}，先看{product_anchor}能否从方案验证走向定点和批量采购，再看交付量能不能覆盖材料、定制与售后成本。",
+            f"“{event_focus}”真正能改{stock_name}报表的，是冷板、工质或温控方案拿到采购份额；方案频繁调整和客户压价会让收入增长留不住利润。",
         )
     elif "semiconductor_equipment" in company_roles:
-        operating_sentence = (
-            "设备公司赚的不是芯片涨价本身，而是晶圆厂扩线形成的设备订单。合同之后还有交付和验收，收入落点取决于验收节奏；"
-            "研发投入、售后服务和应收回款会决定订单看着很满时，利润和现金能不能同步。"
+        operating_options = (
+            f"{stock_name}赚的是晶圆厂扩线形成的设备订单，不是芯片涨价本身；{product_anchor}签约后还要交付验收，研发、售后与回款决定利润和现金能否同步。",
+            f"“{event_focus}”传到{stock_name}要经过晶圆厂资本开支和设备采购，订单领先于收入，验收决定确认时点，售后投入与应收质量决定利润含金量。",
+            f"设备端真正要看{stock_name}的{product_anchor}是否新增订单并按期验收，行业景气只抬采购意愿，不能替公司完成交付、确认和回款。",
         )
     elif "wafer_foundry" in company_roles or "power_semiconductor" in company_roles:
-        operating_sentence = (
-            "这类公司的报表敏感项是报价、排产、产能利用率和产品结构。紧缺型号多卖、产线更满可以抬收入，"
-            "但晶圆及封装成本、良率爬坡、折旧和客户压价会吃掉价差，收入涨幅不能直接照搬成利润涨幅。"
+        operating_options = (
+            f"{stock_name}的报表主要吃报价、排产、产能利用率和产品结构，紧缺型号多卖会抬收入，晶圆成本、良率爬坡、折旧与客户压价则会吞掉价差。",
+            f"“{event_focus}”要让{stock_name}多赚钱，{product_anchor}必须同时拿到更高出货和更好价格；产线利用率不升或良率拖后腿，收入增幅不会等比例变成利润。",
+            f"对{stock_name}，供需热度最终要落在{product_anchor}的报价与排产上，制造成本、折旧和客户议价决定新增收入能留下多少。",
         )
     elif context_roles & {"cpo", "optical_module", "optical_component", "optical_chip"}:
         if "semiconductor_equipment" in company_roles:
-            operating_sentence = "CPO设备收入看客户扩线、工艺改造和新增测试工位，订单领先于收入，验收决定报表时点，售后投入和设备标准化程度决定毛利质量。"
+            operating_options = (
+                f"{stock_name}的CPO设备收入取决于客户扩线、工艺改造和新增测试工位，订单先于报表，验收时点、售后投入与设备标准化程度决定毛利质量。",
+                f"“{event_focus}”不会直接增加{stock_name}收入，只有{product_anchor}进入客户资本开支并完成验收，设备订单才会转成利润和现金。",
+            )
         elif "optical_component" in company_roles:
-            operating_sentence = "精密连接与耦合件赚的是单机用量和供货份额，平台定点转成批量采购才算数；量产良率、自动化程度和客户压价决定新增出货能留下多少利润。"
+            operating_options = (
+                f"{stock_name}的{product_anchor}赚单机用量和供货份额，平台定点转成批量采购才算数；量产良率、自动化程度与客户压价决定新增出货能留下多少利润。",
+                f"光连接环节落到{stock_name}，关键不是CPO话题多热，而是{product_anchor}的单机价值、客户份额和批量良率能否一起抬升。",
+            )
         elif "optical_chip" in company_roles:
-            operating_sentence = "光源和光芯片看单套系统用量、功率规格与供货份额，认证慢、良率低或方案减少外置光源数量，都会让行业放量落不到公司利润上。"
+            operating_options = (
+                f"{stock_name}的光源与光芯片看单套系统用量、功率规格和供货份额，认证慢、良率低或方案减少外置光源数量，都会让行业放量落不到利润上。",
+                f"“{event_focus}”给{stock_name}带来的不是固定价值量，{product_anchor}的规格、用量和客户份额会随方案变化，量产良率决定最后的利润率。",
+            )
         else:
-            operating_sentence = "CPO不是传统可插拔光模块销量的简单倍增，产品形态和单机价值量都在变。新方案能否拿到定点、批量份额并覆盖旧产品替代压力，才决定收入和毛利方向。"
+            operating_options = (
+                f"CPO不是传统可插拔光模块销量的简单倍增，{stock_name}的{product_anchor}会同时面对产品形态和单机价值变化，定点、批量份额与旧产品替代压力要合在一起算。",
+                f"“{event_focus}”采用新光互联形态后，{stock_name}能否守住单机价值和客户份额比行业出货更重要，旧产品被替代也可能抵消新增订单。",
+            )
     elif "innovative_drug" in context_roles or "drug_service" in context_roles:
         if "drug_service" in company_roles:
-            operating_sentence = "药企授权金额不是服务商收入，服务商只能靠新增项目、在手订单执行和产能利用率赚钱；项目取消、价格竞争和回款变慢，会把行业交易热度吃掉。"
+            operating_options = (
+                f"药企授权金额不是{stock_name}的服务收入，公司要靠{product_anchor}新增项目、在手订单执行和产能利用率赚钱；项目取消、价格竞争与回款变慢都会吃掉行业热度。",
+                f"“{event_focus}”传到{stock_name}，必须先形成研发或生产服务订单，客户交易总额不能照搬；项目执行率、报价和回款才决定利润。",
+            )
         else:
-            operating_sentence = "创新药要拆开首付款、里程碑、销售分成和持续研发费用，交易总额不能一次性当利润。临床成功率、商业化费用和同适应症竞争，决定账面价值最终能留下多少。"
+            operating_options = (
+                f"{stock_name}的创新药价值要拆开首付款、里程碑、销售分成与持续研发费用，交易总额不能一次性当利润，临床成功率和商业化成本决定最后能留下多少。",
+                f"“{event_focus}”落到{stock_name}，先区分授权收入、研发支出和后续分成；临床进度与同适应症竞争变化，都会重估{product_anchor}的兑现质量。",
+            )
     elif context_roles & {"biofuel_feedstock", "biofuel_production"}:
         if "biofuel_feedstock" in company_roles:
-            operating_sentence = "原料端赚的是采购与销售价差，不是SAF销量本身。废弃油脂价格、库存周转、认证追溯和运费一起决定收入增加后还能不能保住利润。"
+            operating_options = (
+                f"{stock_name}在原料端赚的是{product_anchor}采购与销售的价差，不是SAF销量本身；废弃油脂价格、库存周转、认证追溯和运费共同决定增收能否增利。",
+                f"“{event_focus}”抬升原料需求时，{stock_name}只有扩大{product_anchor}销量并守住购销差价才会多赚钱，囤货成本、运费和追溯认证都会侵蚀利润。",
+                f"对{stock_name}，这条线的利润变量是废弃油脂的采购价、售价和周转速度，SAF终端再热，也要先穿过原料价差与现金占用。",
+            )
         else:
-            operating_sentence = "生产端看SAF或生物燃料产销量、装置利用率和单位价差。原料上涨快过产品提价，或者工艺收率和认证进度拖后腿，销量增长也可能不增利。"
+            operating_options = (
+                f"{stock_name}在生产端要看{product_anchor}产销量、装置利用率和单位价差；原料上涨快过产品提价，或工艺收率与认证进度拖后腿，销量增长也可能不增利。",
+                f"“{event_focus}”要进入{stock_name}利润，{product_anchor}必须既放量又覆盖原料、能耗与爬坡成本，单看行业销量容易高估公司收益。",
+            )
     elif "供需缺口" in driver:
-        operating_sentence = "供需变化先打到报价、排产和库存。公司只有同时拿到销量与价格，且原料和制造成本没有更快上涨，毛利才会真改善；渠道补库造成的短缺通常来得快、退得也快。"
+        operating_options = (
+            f"供需变化先打到{stock_name}的{product_anchor}报价、排产和库存，销量与价格必须同时抬升且成本没有更快上涨，毛利才会改善。",
+            f"“{event_focus}”给{stock_name}的盈利窗口取决于{product_anchor}能否量价齐升；渠道补库来得快、退得也快，库存堆高反而会吞掉后续利润。",
+            f"{stock_name}要从这轮供需变化中赚钱，需要{product_anchor}提价能落地、产线能多排且原料成本受控，缺一项都可能只增收不增利。",
+        )
     elif "政策约束" in driver:
-        operating_sentence = "政策不直接给公司打钱，能改报表的是准入、采购预算、招投标和项目开工。订单增加但回款周期拉长，利润表好看、经营现金流难看，股价逻辑照样会打折。"
+        operating_options = (
+            f"政策不会直接给{stock_name}增加收入，真正改报表的是{product_anchor}对应的准入、采购预算、招投标和项目开工；回款拉长会让利润与现金流背离。",
+            f"“{event_focus}”传到{stock_name}，要看政策预算是否变成{product_anchor}的正式合同和结算，只有项目数量没有回款，经营质量仍会打折。",
+            f"对{stock_name}，政策力度最终由{product_anchor}的招标、开工和回款来计价，订单增加但应收上升更快，报表表面改善也不扎实。",
+        )
     elif "产能释放" in driver:
-        operating_sentence = "扩产只是把可交付上限抬高，不是锁定收入。新增产线能否被订单填满、售价能否覆盖折旧和爬坡费用，决定扩产是放大利润还是制造闲置成本。"
+        operating_options = (
+            f"{stock_name}扩产只是抬高{product_anchor}的可交付上限，新增产线能否被订单填满、售价能否覆盖折旧和爬坡费用，决定产能是利润还是闲置成本。",
+            f"“{event_focus}”给{stock_name}打开的是产能空间，不是锁定收入；{product_anchor}的产销率、价格与转固折旧要一起看。",
+            f"新增产线对{stock_name}是否有价值，取决于{product_anchor}订单能否消化产能并覆盖良率爬坡与折旧，达产本身不等于增利。",
+        )
     elif "终端需求" in driver:
-        operating_sentence = "需求增长要经过客户采购量、公司份额和产品单价三道关。出货多了但价格战加剧，或低毛利产品占比上升，收入往上走，利润未必跟得上。"
+        operating_options = (
+            f"终端需求要经过客户采购量、{stock_name}的供货份额和{product_anchor}单价三道关，出货多但价格战加剧或低毛利产品占比上升，利润仍可能跟不上。",
+            f"“{event_focus}”带来的需求只有落成{stock_name}的{product_anchor}订单才有意义，份额、售价与产品结构会决定收入增长是不是有效增长。",
+            f"对{stock_name}，行业需求不是一比一映射，客户多买多少、公司拿到多少份额、{product_anchor}卖什么价格，要逐层扣完才能看到利润。",
+        )
     elif "技术商业化" in driver:
-        operating_sentence = "技术新闻先改认证和产品导入速度，不直接改收入。产品定型后还要看订单、交付和良率；研发费用已经花出去、量产迟迟不上来，题材越热，报表落差越大。"
+        operating_options = (
+            f"技术进展先改变{stock_name}的{product_anchor}认证和导入速度，不直接增加收入；产品定型后仍要过订单、交付和良率，量产拖延只会继续消耗研发费用。",
+            f"“{event_focus}”对{stock_name}的实际价值，要看{product_anchor}能否从技术可用走到稳定量产，认证进度、良率和客户采购缺一不可。",
+            f"{stock_name}要把技术话题变成利润，必须让{product_anchor}完成定型并持续交付；研发先投入、订单迟迟不来，报表落差反而会扩大。",
+        )
     else:
-        operating_sentence = f"对{stock_name}真正有用的变量是{transmission['signals']}。订单、交付、收入确认和回款要能串起来，行业热度才不会只停在盘口。"
+        operating_options = (
+            f"对{stock_name}真正有用的变量是{transmission['signals']}，这些变化必须落进{product_anchor}的订单、交付、收入确认和回款，行业热度才有经营含量。",
+            f"“{event_focus}”最终要用{transmission['signals']}检验，{stock_name}只有把这些变量串到{product_anchor}的交付和结算，才算赚到钱。",
+            f"{stock_name}这条线不能只看盘口，{product_anchor}的{transmission['signals']}需要与收入确认和现金回款同时出现。",
+        )
+    operating_sentence = choose_narrative_option(operating_options, *narrative_key, salt="operating")
 
     if stage_rank >= 10:
-        stage_sentence = f"兑现已经走到{stage_label}，含金量高，接下来要防的是应收、减值或一次性确认让利润质量打折。"
+        stage_options = (
+            f"{stock_name}围绕{product_anchor}的兑现已走到{stage_label}，接下来主要检查应收、减值和一次性确认是否让利润质量打折。",
+            f"“{event_focus}”在{stock_name}这里已经进入{stage_label}，经营含量较高，利润是否可持续要由回款与后续重复订单确认。",
+        )
     elif stage_rank >= 8:
-        stage_sentence = f"当前线索已到{stage_label}，离报表不远；出货能否按期确认收入、回款能否跟上，比新增题材标签重要。"
+        stage_options = (
+            f"{stock_name}的业务进度已到{stage_label}，离报表不远，{product_anchor}能否按期确认收入并完成回款比新增题材标签更重要。",
+            f"“{event_focus}”对应线索在{stock_name}已走到{stage_label}，后面重点是出货确认节奏与现金回收，而不是继续增加概念名称。",
+        )
     elif stage_rank >= 6:
-        stage_sentence = f"现在能确认到{stage_label}，还没走完交付、验收、收入确认和回款，合同含金量要靠执行率说话。"
+        stage_options = (
+            f"{stock_name}目前能确认到{stage_label}，{product_anchor}还没走完交付、验收、收入确认和回款，合同含金量要靠执行率说话。",
+            f"“{event_focus}”在{stock_name}这里已进入{stage_label}，但订单到利润之间仍隔着交付、验收与回款，不能只看合同名义金额。",
+        )
     elif stage_rank == 5:
-        stage_sentence = "目前只到框架协议，框架不等于采购订单，数量、价格和交付时间没落定前，不能拿协议总盘子估收入。"
+        stage_options = (
+            f"{stock_name}这条线目前只到框架协议，{product_anchor}的数量、价格和交付时间没有落定，协议总盘子不能直接估成收入。",
+            f"围绕“{event_focus}”，{stock_name}拿到的是合作框架而非采购订单，后续没有明确数量与交期就仍停在意向层。",
+        )
     elif stage_rank == 4:
-        stage_sentence = "线索走到客户定点，说明进入方案，但定点不保证份额；正式订单、单机用量和量产节奏才决定收入。"
+        stage_options = (
+            f"{stock_name}的{product_anchor}已经走到客户定点，说明进入方案，但定点不保证份额，正式订单、单机用量和量产节奏才决定收入。",
+            f"“{event_focus}”对应业务在{stock_name}目前是定点阶段，拿到方案席位不等于拿到供货量，采购份额仍需订单确认。",
+        )
     elif stage_rank == 3:
-        stage_sentence = "现在只到认证或联合验证，技术可用不等于进入批量供应链，后面还差定点、采购订单和规模交付。"
+        stage_options = (
+            f"{stock_name}的{product_anchor}目前只到认证或联合验证，技术可用不等于批量供货，后面还差定点、采购订单和规模交付。",
+            f"围绕“{event_focus}”，{stock_name}现阶段解决的是认证问题，商业化还要经过定点、议价和批量交付。",
+        )
     elif stage_rank == 2:
-        stage_sentence = "当前只到送样，样品过关之前没有供货资格，过关之后也要重新争定点和价格，离收入仍有好几步。"
+        stage_options = (
+            f"{stock_name}的{product_anchor}当前只到送样，样品过关后仍要争定点、价格和采购量，离收入确认还有数道门槛。",
+            f"“{event_focus}”在{stock_name}这里尚处送样阶段，测试通过只获得继续竞争的资格，并不等于已经供货。",
+        )
     elif stage_rank in {0, 1}:
-        stage_sentence = f"兑现阶段还在{stage_label}，没有明确订单和收入，短期先反映在研发费用和市场情绪，改不了利润表。"
+        stage_options = (
+            f"{stock_name}围绕{product_anchor}的兑现还在{stage_label}，没有明确订单和收入，短期更多体现为研发投入与题材交易。",
+            f"“{event_focus}”对应业务在{stock_name}仍处{stage_label}，产品没有跨到采购和交付前，利润表不会因概念本身变化。",
+        )
     elif "供需缺口" in driver:
-        stage_sentence = "这是一条行业价格与供需新闻，不代表公司已经新增订单；公司报价、排产和库存没有同步变化，报表就不会跟。"
+        stage_options = (
+            f"“{event_focus}”属于行业供需信号，不代表{stock_name}已经新增订单；{product_anchor}的报价、排产和库存没有同步变化，报表就不会跟。",
+            f"{stock_name}目前面对的是价格与供需线索，尚非公司订单事实，{product_anchor}只有出现真实量价变化才算进入经营阶段。",
+        )
     elif "政策约束" in driver:
-        stage_sentence = "这条线目前停在政策端，细则、招标和项目开工还没落到公司合同之前，不能提前把行业预算算成公司收入。"
+        stage_options = (
+            f"“{event_focus}”目前停在政策端，细则、招标和项目开工没有落到{stock_name}的{product_anchor}合同前，行业预算不能提前算成公司收入。",
+            f"{stock_name}这条线尚未越过政策到订单的门槛，{product_anchor}需要看到招标、正式合同和开工结算，才有报表意义。",
+        )
     else:
-        stage_sentence = "目前没有看到它跨过正式订单、批量交付和收入确认这些门槛，经营影响只能按待验证处理。"
+        stage_options = (
+            f"{stock_name}的{product_anchor}目前没有跨过正式订单、批量交付和收入确认这些门槛，经营影响仍待验证。",
+            f"围绕“{event_focus}”，{stock_name}尚缺订单、交付或收入确认中的明确节点，业务关系还没有走到报表兑现。",
+        )
+    stage_sentence = choose_narrative_option(stage_options, *narrative_key, salt="stage")
 
     if relation_label == "错位":
-        disproof_sentence = f"最容易证伪的点很直接：{stock_name}拿不出与{event_role_text}同产品、同客户用途的合同或收入科目，这个关联就只能留在板块联动。"
+        disproof_options = (
+            f"检验“{event_focus}”与{stock_name}的关系很直接：拿不出{event_role_text}同产品、同用途的合同或收入科目，行情就只能由板块联动解释。",
+            f"后续若仍只能看到{stock_name}的{company_role_text}，看不到{event_role_text}对应的产品和客户采购，这层题材映射就站不住。",
+        )
     elif relation_label == "蹭概念":
-        disproof_sentence = f"{filled_stars}星在这里不能替代生意。中报、季报里看不到对应产品收入，订单也没有从口头布局往前走，分时图的热度就没有报表接力。"
+        disproof_options = (
+            f"{filled_stars}星不能替{stock_name}创造生意；后续报表仍看不到“{event_focus}”对应产品收入，订单也没从口头布局往前走，分时图就没有经营接力。",
+            f"这条逻辑最容易被{stock_name}自己的经营数据推翻：{product_anchor}没有订单、收入和回款，星级再高也只是题材标签。",
+        )
     elif "semiconductor_equipment" in company_roles:
-        disproof_sentence = "晶圆厂资本开支没有转成设备订单，或者设备交付后长期等不到验收，芯片端再热也改不了设备公司的收入和现金回款。"
+        disproof_options = (
+            f"“{event_focus}”最容易在设备订单处证伪：晶圆厂资本开支没有转成{stock_name}的{product_anchor}订单，或交付后长期不验收，芯片端再热也无效。",
+            f"检查{stock_name}的新增设备合同、验收和回款即可判断成色，三项都不动，行业扩线就没有传到公司报表。",
+        )
     elif stage_rank == -1 and "供需缺口" in driver:
-        disproof_sentence = "公司报价、排产、产能利用率和毛利没有同步改善，或者库存先堆起来，这条缺货逻辑就更像渠道补库，不是持续景气。"
+        disproof_options = (
+            f"检验“{event_focus}”看{stock_name}的{product_anchor}报价、排产、产能利用率与毛利，指标没有同步改善或库存先堆高，缺货更像渠道补库。",
+            f"{stock_name}的价格、排产和毛利只要没有共振，或者{product_anchor}库存先上升，这轮供需故事就没有形成持续经营改善。",
+        )
     elif stage_rank == -1 and "政策约束" in driver:
-        disproof_sentence = "政策细则没有带来招标、正式合同和回款，或者项目只开工不结算，行业预算就不能算成公司的经营增量。"
+        disproof_options = (
+            f"“{event_focus}”没有给{stock_name}带来{product_anchor}招标、正式合同和回款，或者项目只开工不结算，行业预算就不是公司经营增量。",
+            f"检查{stock_name}后续合同与现金回收即可证伪，政策有预算却没有{product_anchor}订单，题材和报表仍是两回事。",
+        )
     elif stage_rank <= 3:
-        disproof_sentence = "最容易被打脸的是认证、送样或布局迟迟转不成定点和批量订单；相关产品收入没有抬头，题材强度就应主动下修。"
+        disproof_options = (
+            f"“{event_focus}”最容易被{stock_name}的商业化进度证伪：认证、送样或布局迟迟转不成定点和批量订单，{product_anchor}收入就不会抬头。",
+            f"后续看{stock_name}能否把{product_anchor}推进到定点和批量采购，仍停在验证阶段，就说明题材速度远快于经营速度。",
+        )
     elif stage_rank <= 6:
-        disproof_sentence = "最容易证伪的是协议或订单不转交付，或者交付后应收账款抬得比收入更快，前者说明需求虚，后者说明现金含量差。"
+        disproof_options = (
+            f"检验“{event_focus}”要看{stock_name}的协议或订单能否转成交付；{product_anchor}不出货，或应收增速长期快于收入，订单含金量都会打折。",
+            f"{stock_name}后续若只有合同没有交付，或{product_anchor}出货后回款明显落后，前者说明需求虚，后者说明现金质量差。",
+        )
     else:
-        disproof_sentence = f"最硬的照妖镜是{transmission['signals']}：这些指标没有在收入、毛利和经营现金流里一起出现，股价讲的就比公司赚的多。"
+        disproof_options = (
+            f"“{event_focus}”最终由{stock_name}的{transmission['signals']}验真，这些指标没有同时进入收入、毛利和经营现金流，股价讲的就比公司赚的多。",
+            f"检验{stock_name}这条线，直接看{transmission['signals']}是否在{product_anchor}收入与现金回款中同步出现，单项变化不足以坐实利润。",
+        )
+    disproof_sentence = choose_narrative_option(disproof_options, *narrative_key, salt="disproof")
 
-    if relation_label == "真相关":
-        parts = [opening, fact_sentence, revenue_sentence, operating_sentence, stage_sentence, disproof_sentence]
-    elif relation_label == "宽口径相关":
-        parts = [opening, fact_sentence, revenue_sentence, stage_sentence, operating_sentence, disproof_sentence]
-    elif relation_label == "小基数布局":
-        parts = [opening, fact_sentence, stage_sentence, revenue_sentence, operating_sentence, disproof_sentence]
-    elif relation_label == "错位":
-        parts = [opening, revenue_sentence, operating_sentence, stage_sentence, disproof_sentence]
-    else:
-        parts = [opening, revenue_sentence, stage_sentence, disproof_sentence]
+    middle_parts = [part for part in (fact_sentence, revenue_sentence, operating_sentence, stage_sentence) if part]
+    middle_orders = (
+        middle_parts,
+        [*middle_parts[:1], *middle_parts[2:3], *middle_parts[1:2], *middle_parts[3:]],
+        [*middle_parts[1:2], *middle_parts[:1], *middle_parts[2:]],
+    )
+    ordered_middle = middle_orders[narrative_variant(*narrative_key, salt="order", modulo=len(middle_orders))]
+    parts = [opening, *ordered_middle, disproof_sentence]
 
     analysis = clean_text("".join(parts))
     if len(analysis) < 180:
-        analysis += "要把这条逻辑坐实，至少需要对应产品、正式订单、收入确认和现金回款中的两项同时出现，单靠板块上涨不能证明公司赚到了钱。"
+        analysis += f"要让“{event_focus}”真正进入{stock_name}报表，{product_anchor}至少需要在正式订单、收入确认和现金回款中出现两项，板块上涨本身不能证明公司多赚钱。"
     if len(analysis) > 540:
         analysis = compact_text(analysis, 540)
-    return finalize_investment_analysis(analysis, stock_name)
+    return {
+        "relationLabel": relation_label,
+        "analysis": finalize_investment_analysis(analysis, stock_name),
+    }
 def build_investment_opportunities(
     event_rows: pd.DataFrame,
     company_paths_by_source_row: dict[str, list[dict[str, str]]],
@@ -1567,6 +1791,7 @@ def build_investment_opportunities(
     analysis_prompt_version: str,
 ) -> dict[str, Any]:
     first = event_rows.iloc[0]
+    event_key = first["main_id"]
     event_title = first["topic_name"]
     selected_by_stock: dict[tuple[str, str], dict[str, Any]] = {}
     invalid_rating_count = 0
@@ -1601,6 +1826,14 @@ def build_investment_opportunities(
         reason = clean_reason(row["reason"])
         stock_paths = company_paths_by_source_row.get(row["source_row_number"], [])
         company_evidence = build_company_evidence(row, company_profiles, stock_paths)
+        assessment = build_investment_analysis(
+            event_key,
+            event_title,
+            stock_name or stock_code,
+            reason,
+            company_evidence,
+            filled_stars,
+        )
         record = {
             "sourceRowNumber": int(row["source_row_number"]),
             "stockCode": stock_code,
@@ -1610,13 +1843,7 @@ def build_investment_opportunities(
             "reason": reason,
             "reasonSourceAvailable": bool(reason),
             "companyEvidence": company_evidence,
-            "analysis": build_investment_analysis(
-                event_title,
-                stock_name or stock_code,
-                reason,
-                company_evidence,
-                filled_stars,
-            ),
+            **assessment,
         }
         stock_key = (stock_code, stock_name)
         existing = selected_by_stock.get(stock_key)
@@ -1696,6 +1923,58 @@ def build_investment_opportunities(
         "analysisPromptVersion": analysis_prompt_version,
         "groups": groups,
         "caveats": caveats,
+    }
+
+
+def audit_investment_narratives(drafts: list[dict[str, Any]]) -> dict[str, int]:
+    """Reject canned openings and repeated event-stock paragraphs before publishing."""
+
+    valid_labels = {"真相关", "宽口径相关", "小基数布局", "蹭概念", "错位"}
+    category_opening_pattern = re.compile(r"^(?:真相关|宽口径相关|小基数布局|蹭概念|业务错位)[。 ：:]")
+    removed_template_phrases = (
+        "不是纯蹭热点，不过只能算宽口径相关",
+        "宽口径相关。这事和",
+        "这票不是完全没货",
+        "这次不能硬往",
+        "这条新闻和",
+    )
+    seen_openings: dict[str, str] = {}
+    seen_analyses: dict[str, str] = {}
+    stock_count = 0
+
+    for draft in drafts:
+        main_id = clean_text(draft.get("mainId"))
+        for group in draft["investmentOpportunities"]["groups"]:
+            for stock in group["stocks"]:
+                stock_count += 1
+                stock_key = f"{main_id}:{stock['stockCode']}:{stock['stockName']}"
+                label = clean_text(stock.get("relationLabel"))
+                analysis = clean_text(stock.get("analysis"))
+                if label not in valid_labels:
+                    raise ValueError(f"{stock_key}缺少有效关联类型: {label!r}")
+                if category_opening_pattern.search(analysis):
+                    raise ValueError(f"{stock_key}仍使用分类标签作固定开场")
+                stale = [phrase for phrase in removed_template_phrases if phrase in analysis]
+                if stale:
+                    raise ValueError(f"{stock_key}仍包含已移除模板: {stale}")
+
+                opening_match = re.match(r"^.*?[。！？]", analysis)
+                opening = opening_match.group(0) if opening_match else analysis
+                if opening in seen_openings:
+                    raise ValueError(
+                        f"个股研究判断出现重复开场: {seen_openings[opening]} 与 {stock_key}: {opening}"
+                    )
+                if analysis in seen_analyses:
+                    raise ValueError(
+                        f"个股研究判断整段重复: {seen_analyses[analysis]} 与 {stock_key}"
+                    )
+                seen_openings[opening] = stock_key
+                seen_analyses[analysis] = stock_key
+
+    return {
+        "stockCount": stock_count,
+        "uniqueOpeningCount": len(seen_openings),
+        "uniqueAnalysisCount": len(seen_analyses),
     }
 
 
@@ -2261,7 +2540,7 @@ def finalize_event(
         level5_catalog,
     )
     return {
-        "schemaVersion": 15,
+        "schemaVersion": 16,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -2345,7 +2624,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--investment-prompt-template",
         type=Path,
-        default=project_root / "prompts" / "investment-opportunity-analyst-v6.md",
+        default=project_root / "prompts" / "investment-opportunity-analyst-v7.md",
     )
     parser.add_argument(
         "--report-corpus",
@@ -2438,6 +2717,7 @@ def main() -> None:
 
     for draft in drafts:
         draft["selectedCoreProducts"] = choose_core_products(draft["candidates"])
+    narrative_audit = audit_investment_narratives(drafts)
 
     generated_at = datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
     index_events: list[dict[str, Any]] = []
@@ -2479,7 +2759,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 15,
+        "schemaVersion": 16,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),
@@ -2507,6 +2787,11 @@ def main() -> None:
     print(f"A股2025年报公司资料: {company_profiles['companyCount']:,}")
     print(f"3至5星投资标的: {sum(item['investmentStockCount'] for item in index_events):,}")
     print(f"已匹配年报资料: {sum(item['investmentCompanyProfileMatchedCount'] for item in index_events):,}")
+    print(
+        "投资判断去模板审计: "
+        f"{narrative_audit['uniqueOpeningCount']:,}个唯一开场 / "
+        f"{narrative_audit['uniqueAnalysisCount']:,}段唯一正文"
+    )
     print(f"状态分布: {dict(sorted(status_counts.items()))}")
     print(f"输出目录: {args.output_dir}")
 

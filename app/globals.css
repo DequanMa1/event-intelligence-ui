@@ -180,7 +180,12 @@ a { color: var(--blue); }
 .investment-stock { min-width: 0; padding: 17px 18px; border: 1px solid #dfe5ea; border-radius: 5px; background: #fff; }
 .investment-stock > header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .investment-stock h4 { margin: 0; color: #27313b; font-size: 13px; line-height: 1.45; }
-.investment-stock header div > span { display: block; margin-top: 3px; color: var(--muted); font-size: 9px; }
+.investment-stock > header > div:first-child > span { display: block; margin-top: 3px; color: var(--muted); font-size: 9px; }
+.stock-assessment-meta { flex: 0 0 auto; display: flex; align-items: center; gap: 8px; }
+.relation-label { display: inline-flex; align-items: center; min-height: 20px; padding: 2px 7px; border: 1px solid #cbd8e4; border-radius: 999px; color: #365c7c; background: #f2f7fb; font-size: 8px; font-weight: 700; line-height: 1; white-space: nowrap; }
+.relation-label[data-relation="真相关"] { border-color: #d7bc83; color: #865912; background: #fff9ec; }
+.relation-label[data-relation="小基数布局"] { border-color: #d8d1bd; color: #6f6243; background: #faf8f1; }
+.relation-label[data-relation="蹭概念"], .relation-label[data-relation="错位"] { border-color: #dfcaca; color: #825555; background: #fcf6f6; }
 .stock-rating { flex: 0 0 auto; color: #a46f1c; font-size: 10px; letter-spacing: .02em; white-space: nowrap; }
 .investment-analysis-block { margin-top: 13px; padding: 2px 0 2px 12px; border-left: 2px solid #6f8fab; }
 .investment-analysis-block > span { color: #2d5f88; font-size: 9px; font-weight: 700; letter-spacing: .06em; }

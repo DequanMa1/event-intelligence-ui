@@ -89,6 +89,7 @@ type InvestmentStock = {
   filledStars: number;
   reason: string;
   reasonSourceAvailable: boolean;
+  relationLabel: "真相关" | "宽口径相关" | "小基数布局" | "蹭概念" | "错位";
   companyEvidence: {
     matched: boolean;
     matchMethod: "stock_code" | "stock_name" | "none";
@@ -323,7 +324,7 @@ function createInvestmentPlainText(impact: ImpactChainRecord | null) {
         .map((segment) => `${segment.name} ${segment.sharePct.toFixed(2).replace(/\.00$/, "")}%`)
         .join("、");
       return [
-        `${stock.stockName}${stock.stockCode ? `（${stock.stockCode}）` : ""} · ${stock.rating}`,
+        `${stock.stockName}${stock.stockCode ? `（${stock.stockCode}）` : ""} · ${stock.rating} · ${stock.relationLabel}`,
         stock.analysis,
         evidence.matched ? `公司概况：${evidence.profileSummary || evidence.companyProfile}` : "公司概况：暂缺。",
         evidence.matched ? `主营业务结构：${revenue || "暂无可展示的分部占比"}` : "",
@@ -380,7 +381,10 @@ function InvestmentOpportunitiesPanel({ opportunities }: { opportunities: Invest
                       <h4>{stock.stockName}</h4>
                       {stock.stockCode && <span>{stock.stockCode}</span>}
                     </div>
-                    <span className="stock-rating">{stock.rating}</span>
+                    <div className="stock-assessment-meta">
+                      <span className="relation-label" data-relation={stock.relationLabel}>{stock.relationLabel}</span>
+                      <span className="stock-rating">{stock.rating}</span>
+                    </div>
                   </header>
                   <div className="investment-analysis-block">
                     <span>研究判断</span>
