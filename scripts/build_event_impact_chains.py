@@ -155,6 +155,12 @@ INVESTMENT_ANALYSIS_BANNED_PHRASES = (
     "利润弹性会低于主题预期",
     "预期进入经营结果仍需完成",
     "相关性停留在估值预期",
+    "有望受益",
+    "未来可期",
+    "长期空间广阔",
+    "建议关注",
+    "后续重点跟踪",
+    "系统打分",
 )
 
 INVESTMENT_GROUPS = {
@@ -277,6 +283,10 @@ BUSINESS_SEMANTIC_GROUPS = {
     "network_compute": (
         "服务器", "超算", "交换机", "路由器", "网络设备", "数据中心", "算力",
         "云计算", "云端", "边缘计算", "机房", "网关", "idc", "ict", "hpc",
+    ),
+    "thermal_management": (
+        "液冷", "冷板", "冷却液", "冷却工质", "温控", "散热", "热管理", "精密空调",
+        "机房空调", "冷水机组", "液冷机组", "浸没式冷却", "冷板式冷却", "均热板", "工质",
     ),
     "semiconductor_equipment": (
         "半导体设备", "封装设备", "封测设备", "测试设备", "检测设备", "耦合设备", "清洗设备", "电镀设备",
@@ -406,6 +416,9 @@ BROAD_REVENUE_CONTAINMENT = (
     ("网络设备", {"network_compute", "optical_communication"}),
     ("通信设备", {"network_compute", "optical_communication", "pcb_components"}),
     ("ict基础设施", {"network_compute", "optical_communication", "software_ai"}),
+    ("机房温控节能设备", {"thermal_management", "network_compute"}),
+    ("户外机柜温控节能设备", {"thermal_management", "network_compute"}),
+    ("温控节能设备", {"thermal_management", "network_compute"}),
     ("新能源", {"battery_storage", "solar", "wind_power", "power_grid", "hydrogen_energy"}),
     ("新能源材料", {"battery_storage", "solar", "advanced_materials", "chemicals"}),
     ("生物能源", {"biofuel", "oil_gas_energy", "environmental"}),
@@ -1136,6 +1149,132 @@ def finalize_investment_analysis(text: str, stock_name: str) -> str:
     return analysis
 
 
+BUSINESS_ROLE_KEYWORDS = {
+    "wafer_foundry": ("晶圆代工", "晶圆制造", "晶圆加工", "晶圆厂", "先进制程", "成熟制程", "制程价格", "台积电"),
+    "chip_packaging": ("芯片封装", "集成电路封装", "先进封装", "封装测试", "芯片封测", "晶圆级封装", "倒装", "qfn", "dfn", "sip"),
+    "semiconductor_equipment": ("刻蚀设备", "薄膜沉积设备", "光刻设备", "量测设备", "清洗设备", "封装设备", "测试设备", "半导体设备"),
+    "power_semiconductor": ("功率半导体", "功率器件", "igbt", "mosfet", "功率模块", "功率模组", "二极管"),
+    "cpo": ("共封装光学", "cpo", "光引擎", "外置光源", "els"),
+    "optical_module": ("光模块", "光收发", "光通信模块", "光互联产品"),
+    "optical_component": ("光器件", "光组件", "光纤阵列", "fau", "连接器", "耦合", "光纤预制棒"),
+    "optical_chip": ("光芯片", "激光器", "dfb", "cw激光", "外置光源"),
+    "liquid_cooling": ("液冷", "冷板", "冷却工质", "冷却液", "液冷机组", "浸没式冷却", "冷板式冷却"),
+    "thermal_management": ("温控", "散热", "热管理", "精密空调", "机房空调", "均热板", "冷水机组"),
+    "server_compute": ("服务器", "交换机", "数据中心", "算力", "超算", "hpc"),
+    "innovative_drug": ("创新药", "新药", "临床", "适应症", "药物授权", "药品获批"),
+    "drug_service": ("cro", "cdmo", "研发服务", "临床服务", "医药外包", "商业化生产"),
+    "biofuel_feedstock": ("废弃油脂", "地沟油", "餐厨废油", "uco", "原料收集", "油脂回收"),
+    "biofuel_production": ("可持续航空燃料", "生物航油", "生物柴油", "生物燃料", "saf", "hvo"),
+    "battery": ("动力电池", "储能电池", "锂电池", "固态电池", "电芯", "正极材料", "负极材料", "电解液", "隔膜"),
+    "solar": ("光伏", "太阳能", "光伏组件", "逆变器", "电池片"),
+    "grid": ("电网", "输变电", "变压器", "配电", "电力设备", "电力电子", "充电桩"),
+    "robotics": ("机器人", "减速器", "伺服", "机器视觉", "工业自动化"),
+    "software_ai": ("人工智能", "大模型", "ai软件", "算法", "数据库", "操作系统", "云服务"),
+}
+
+BUSINESS_ROLE_LABELS = {
+    "wafer_foundry": "晶圆代工与制程定价",
+    "chip_packaging": "芯片封装与测试",
+    "semiconductor_equipment": "半导体制造设备",
+    "power_semiconductor": "功率器件",
+    "cpo": "CPO与光引擎",
+    "optical_module": "光模块",
+    "optical_component": "光器件与精密连接",
+    "optical_chip": "光芯片与激光器",
+    "liquid_cooling": "液冷系统、冷板与工质",
+    "thermal_management": "温控与散热设备",
+    "server_compute": "服务器与数据中心设备",
+    "innovative_drug": "创新药权益与商业化",
+    "drug_service": "医药研发及生产服务",
+    "biofuel_feedstock": "废弃油脂原料",
+    "biofuel_production": "SAF与生物燃料生产",
+    "battery": "动力电池与储能材料",
+    "solar": "光伏产品",
+    "grid": "电网与电力设备",
+    "robotics": "机器人与工业自动化",
+    "software_ai": "AI软件与算力应用",
+}
+
+ROLE_COMPATIBILITY = {
+    "cpo": {"cpo", "optical_module", "optical_component", "optical_chip", "chip_packaging", "semiconductor_equipment"},
+    "optical_module": {"cpo", "optical_module", "optical_component", "optical_chip"},
+    "optical_component": {"cpo", "optical_module", "optical_component", "optical_chip"},
+    "optical_chip": {"cpo", "optical_module", "optical_component", "optical_chip"},
+    "liquid_cooling": {"liquid_cooling", "thermal_management", "server_compute"},
+    "thermal_management": {"liquid_cooling", "thermal_management"},
+    "innovative_drug": {"innovative_drug", "drug_service"},
+    "biofuel_production": {"biofuel_production", "biofuel_feedstock"},
+}
+
+
+def infer_business_roles(value: Any) -> set[str]:
+    text = normalize_text(value)
+    return {
+        role
+        for role, keywords in BUSINESS_ROLE_KEYWORDS.items()
+        if any(normalize_text(keyword) in text for keyword in keywords)
+    }
+
+
+def roles_are_compatible(event_roles: set[str], company_roles: set[str]) -> bool:
+    if not event_roles or not company_roles:
+        return False
+    if event_roles & company_roles:
+        return True
+    return any(
+        company_role in ROLE_COMPATIBILITY.get(event_role, {event_role})
+        for event_role in event_roles
+        for company_role in company_roles
+    )
+
+
+def role_label(roles: set[str], fallback: str) -> str:
+    labels = [BUSINESS_ROLE_LABELS[role] for role in BUSINESS_ROLE_LABELS if role in roles]
+    return "、".join(labels[:2]) or fallback
+
+
+def infer_realization_stage(event_title: str, reason: str) -> tuple[int, str, str]:
+    text = normalize_text(f"{event_title} {reason}")
+    stage_rules = (
+        (11, "利润体现", ("利润体现", "贡献利润", "实现盈利")),
+        (10, "回款", ("完成回款", "收到货款", "回款")),
+        (9, "收入确认", ("确认收入", "收入确认")),
+        (8, "规模出货", ("规模出货", "大批量交付", "批量供货", "规模交付")),
+        (7, "小批交付", ("小批交付", "小批量供货", "小批量交付")),
+        (6, "正式合同或订单", ("正式合同", "销售合同", "采购订单", "中标", "获得订单", "签订合同")),
+        (5, "框架协议", ("框架协议", "战略协议", "合作协议")),
+        (4, "客户定点", ("客户定点", "项目定点", "获得定点", "定点")),
+        (3, "认证或验证", ("完成认证", "通过认证", "完成验证", "通过验证", "联合验证", "客户认证", "进入供应链", "进入产线", "验证")),
+        (2, "送样", ("送样", "样品测试", "样品验证")),
+        (1, "研发或试产", ("试产", "中试", "在研", "研发", "临床")),
+        (0, "概念或布局", ("布局", "关注", "具备能力", "技术储备", "互动平台")),
+    )
+    for rank, label, keywords in stage_rules:
+        if any(normalize_text(keyword) in text for keyword in keywords):
+            return rank, label, keywords[0]
+    return -1, "行业事件", ""
+
+
+def extract_reason_fact(reason: str, event_title: str) -> str:
+    candidates: list[tuple[int, str]] = []
+    promotional_terms = ("受益", "龙头", "核心标的", "直接映射", "最直接", "稀缺标的", "弹性标的", "值得")
+    fact_terms = ("产品", "设备", "材料", "客户", "订单", "合同", "中标", "验证", "认证", "定点", "送样", "量产", "供货", "产线", "项目", "权益", "授权")
+    for clause in re.split(r"[。；;！!?，,]", professionalize_reason(reason)):
+        cleaned = clean_text(clause).strip(" ：:，,；;。")
+        if len(cleaned) < 8 or normalize_text(cleaned) in normalize_text(event_title):
+            continue
+        if any(term in cleaned for term in promotional_terms):
+            continue
+        score = sum(2 for term in fact_terms if term in cleaned)
+        score += 2 if re.search(r"\d", cleaned) else 0
+        score += 1 if any(term in cleaned for term in ("已", "完成", "进入", "覆盖", "占")) else 0
+        if score:
+            candidates.append((score, cleaned))
+    if not candidates:
+        return ""
+    return compact_text(max(candidates, key=lambda item: (item[0], len(item[1])))[1], 72)
+
+
 def build_investment_analysis(
     event_title: str,
     stock_name: str,
@@ -1143,404 +1282,283 @@ def build_investment_analysis(
     company_evidence: dict[str, Any],
     filled_stars: int,
 ) -> str:
-    """Write a fact-first stock note without forcing every company into one rhetoric arc."""
+    """Write an A-share event note around business identity, realization and disproof."""
 
-    reason_text = compact_text(professionalize_reason(reason), 108)
-    reason_clause = (
-        clean_text(reason_text).rstrip("。；;，, ")
-        or "现有事件线索尚未明确公司的具体供货产品与客户位置"
-    )
+    reason_text = professionalize_reason(reason)
     event_label = clean_text(event_title)
     for source_term, client_term in (
-        ("半年度报告", "中期业绩"),
-        ("半年报", "中期业绩"),
-        ("年度报告", "年度业绩"),
-        ("年报", "年度业绩"),
-        ("季度报告", "季度业绩"),
-        ("季报", "季度业绩"),
+        ("半年度报告", "中期业绩"), ("半年报", "中期业绩"),
+        ("年度报告", "年度业绩"), ("年报", "年度业绩"),
+        ("季度报告", "季度业绩"), ("季报", "季度业绩"),
     ):
         event_label = event_label.replace(source_term, client_term)
-    transmission = infer_event_transmission(event_title, reason_text)
 
+    transmission = infer_event_transmission(event_title, reason_text)
     business_relation = company_evidence.get("businessRelation", {})
     relation_status = clean_text(business_relation.get("status")) or "unavailable"
-    relevant_product_names = list(
-        dict.fromkeys(
-            clean_text(product.get("name"))
-            for product in business_relation.get("relevantProducts", [])
-            if clean_text(product.get("name"))
-        )
-    )
-    known_products = list(
-        dict.fromkeys(
-            clean_text(product)
-            for product in business_relation.get("knownProducts", [])
-            if clean_text(product)
-        )
-    )
-    product_text = "、".join(relevant_product_names[:4])
+    relevant_products = list(dict.fromkeys(
+        clean_text(product.get("name"))
+        for product in business_relation.get("relevantProducts", [])
+        if clean_text(product.get("name"))
+    ))
+    known_products = list(dict.fromkeys(
+        clean_text(product)
+        for product in business_relation.get("knownProducts", [])
+        if clean_text(product)
+    ))
+    relevant_product_text = "、".join(relevant_products[:4])
     known_product_text = "、".join(known_products[:4])
-
     profile_focus = compact_text(
-        company_evidence.get("profileSummary")
-        or company_evidence.get("majorProducts"),
-        104,
+        company_evidence.get("profileSummary") or company_evidence.get("majorProducts"), 82
     ).rstrip("。；;，, ")
     business_base = compact_text(
-        company_evidence.get("majorProducts")
-        or profile_focus
-        or known_product_text
-        or "现有业务",
-        104,
+        company_evidence.get("majorProducts") or known_product_text or profile_focus or "现有产品与服务", 88
     ).rstrip("。；;，, ")
 
     positive_segments = [
-        segment
-        for segment in company_evidence.get("revenueSegments", [])
+        segment for segment in company_evidence.get("revenueSegments", [])
         if segment.get("sharePct", 0) > 0
     ]
-    direct_segments = [
-        segment
-        for segment in positive_segments
-        if segment.get("relationType") == "direct"
-    ]
-    contained_segments = [
-        segment
-        for segment in positive_segments
-        if segment.get("relationType") == "contained"
-    ]
+    direct_segments = [segment for segment in positive_segments if segment.get("relationType") == "direct"]
+    contained_segments = [segment for segment in positive_segments if segment.get("relationType") == "contained"]
     top_segments = positive_segments[:3]
-    direct_share = sum(segment["sharePct"] for segment in direct_segments)
     top_revenue_text = format_segment_evidence(top_segments, 3)
-    business_context = normalize_text(
-        " ".join(
-            (
-                event_title,
-                reason_clause,
-                product_text,
-                known_product_text,
-                business_base,
-            )
-        )
+
+    event_roles = infer_business_roles(event_title)
+    company_business_text = " ".join((
+        company_evidence.get("majorProducts", ""), company_evidence.get("companyProfile", ""),
+        known_product_text, relevant_product_text,
+        " ".join(segment["name"] for segment in positive_segments),
+    ))
+    company_roles = infer_business_roles(company_business_text)
+    reason_roles = infer_business_roles(reason_text)
+    role_match = roles_are_compatible(event_roles, company_roles)
+    semantic_overlap = bool(
+        semantic_business_tags(event_title) & semantic_business_tags(company_business_text) & SPECIFIC_BUSINESS_TAGS
     )
-    role_context = normalize_text(
-        " ".join(
-            (
-                product_text,
-                " ".join(segment["name"] for segment in direct_segments),
-                " ".join(segment["name"] for segment in contained_segments),
-                reason_clause,
-            )
-        )
+    event_names_company = bool(normalize_text(stock_name) and normalize_text(stock_name) in normalize_text(event_title))
+
+    role_segments = [
+        segment for segment in positive_segments
+        if event_roles & infer_business_roles(segment["name"])
+    ]
+    effective_direct_segments = direct_segments or role_segments
+    direct_share = sum(segment["sharePct"] for segment in effective_direct_segments)
+    direct_text = format_segment_evidence(effective_direct_segments, 3)
+    contained_text = format_segment_evidence(contained_segments, 3)
+
+    stage_rank, stage_label, _ = infer_realization_stage(event_title, reason_text)
+    early_stage = stage_rank in {0, 1, 2}
+    same_profit_pool = role_match or not event_roles or not company_roles
+    advanced_process_event = bool(re.search(r"(?:[357]\s*nm|先进制程)", event_title, flags=re.IGNORECASE))
+    specialty_process_company = any(
+        term in normalize_text(f"{company_business_text} {reason_text}")
+        for term in ("成熟制程", "特色工艺", "功率器件晶圆制造", "mems晶圆制造")
     )
+    advanced_process_company = bool(re.search(
+        r"(?:[357]\s*nm|先进制程)", f"{company_business_text} {reason_text}", flags=re.IGNORECASE
+    ))
+    process_spec_mismatch = advanced_process_event and specialty_process_company and not advanced_process_company
 
-    def operating_mechanism() -> str:
-        driver = transmission["driver"]
-        signals = transmission["signals"]
-
-        if relation_status in {"business_mismatch", "unverified", "unavailable"}:
-            return (
-                f"行业层面的{driver}不会自动落到{stock_name}的经营结果上；公司需要先出现与新闻产品一致的"
-                f"产品定型、客户验证或订单记录，才具备讨论收入贡献的基础。"
-            )
-        if "cpo" in business_context or "共封装光" in business_context:
-            if any(term in role_context for term in ("测试设备", "耦合设备", "封装设备", "自动化设备")):
-                return (
-                    f"罗列CPO出货量并不能直接估算{stock_name}的设备收入，设备商真正对应的是客户扩线、工艺改造和新增测试工位。"
-                    "订单通常领先于收入确认，验收节奏决定收入落点，设备标准化程度、交付效率与售后投入则决定毛利质量。"
-                )
-            if any(term in role_context for term in ("fau", "光纤阵列", "连接器", "光组件", "跳线", "耦合")):
-                return (
-                    f"{stock_name}提供的是CPO高密度连接和精密耦合部件，价值量来自通道数、耦合精度及在客户方案中的单机用量。"
-                    "真正影响收入的是平台定点能否转成稳定份额；量产良率和自动化程度决定新增订单会放大利润，还是被制造成本和交付损耗消化。"
-                )
-            if any(term in role_context for term in ("光模块", "光通讯收发", "光互联产品", "光收发")):
-                return (
-                    f"CPO量产对{stock_name}并不等同于传统可插拔光模块需求同比例增加，因为交换机侧架构正在改变产品形态。"
-                    "公司能否把既有客户和封装能力迁移到光引擎、CPO或相关新方案，并维持价值量与份额，决定新业务增量能否覆盖旧产品被替代的压力。"
-                )
-            if any(term in role_context for term in ("激光器", "光芯片", "dfb", "cw激光", "els")):
-                return (
-                    f"{stock_name}处在CPO外置光源或发射芯片环节，需求增量取决于单套系统的光源数量、功率要求和公司供货份额。"
-                    "高功率可靠性、良率与客户认证速度会同时影响出货和单位成本，因此行业量产与公司利润之间并不是简单的销量倍增关系。"
-                )
-        if any(term in business_context for term in ("功率半导体", "功率器件", "igbt", "mosfet")):
-            if "设备" in role_context:
-                return (
-                    f"功率器件缺货不会立即增加{stock_name}的设备收入，只有晶圆厂和器件厂把高产销率转化为扩线计划，设备订单才会出现。"
-                    "从客户资本开支到设备验收存在时间差，订单覆盖度、国产化份额和验收周期比短期芯片报价更能决定利润。"
-                )
-            return (
-                f"缺货环境对{stock_name}的作用主要落在产能利用率、产品报价和高端器件占比。"
-                "公司已有产能能否快速切换到紧缺型号决定销量弹性；价格涨幅若被晶圆、封装和渠道成本吸收，收入改善也未必带来同幅度的毛利提升。"
-            )
-        if any(term in business_context for term in ("创新药", "新药", "临床", "医药", "生物制药")):
-            if any(term in role_context for term in ("cro", "cdmo", "研发服务", "临床服务", "外包服务")):
-                return (
-                    f"授权交易提高的是药企研发投入和项目推进意愿，{stock_name}作为研发或生产服务商，受益点应落在新增项目数、在手订单和产能利用率。"
-                    "项目取消率、订单执行周期和价格竞争会决定行业交易活跃度能否转成服务收入与现金回款。"
-                )
-            if any(term in role_context for term in ("原料药", "中间体", "制剂生产", "商业化生产")):
-                return (
-                    f"{stock_name}若承担原料、制剂或商业化生产，授权金额本身不属于公司收入，真正相关的是项目推进后新增的生产批次和供货份额。"
-                    "临床进度、放量节奏与产线利用率决定订单规模，质量体系和制造成本决定收入兑现后的利润水平。"
-                )
-            return (
-                f"{stock_name}在创新药事件中的价值取决于是否拥有相关药物权益。自研项目应区分首付款、里程碑、销售分成与持续研发费用，"
-                "不能把交易总额一次性理解为利润；适应症竞争、临床成功率和商业化费用会显著改变项目净价值。"
-            )
-        if any(term in business_context for term in ("saf", "可持续航空燃料", "uco", "废弃油脂", "地沟油")):
-            if any(term in role_context for term in ("废弃油脂", "uco", "回收", "原料", "贸易")):
-                return (
-                    f"{stock_name}位于废弃油脂收集、加工或贸易端，SAF需求增长首先改变原料采购价差和出口流向。"
-                    "销量增加并不必然改善利润，关键在于采购成本能否向下游转嫁、库存周转是否稳定，以及认证与追溯能力能否维持客户溢价。"
-                )
-            if any(term in role_context for term in ("生物柴油", "航空燃料", "炼化", "燃料", "hvo", "saf")):
-                return (
-                    f"{stock_name}的业绩敏感项是SAF或生物燃料产销量、原料成本和产品价差。"
-                    "装置利用率提高能够摊薄固定成本，但原料价格上涨、工艺收率和认证进度会决定需求增长最终体现为销量还是毛利。"
-                )
-            return (
-                f"SAF需求对{stock_name}的影响取决于公司在原料、生产或使用端的实际合同位置。"
-                "没有采购量、供货量或价差变化支撑时，行业需求增长不能直接解释公司收入，更不能据此估算利润。"
-            )
-        if "供需缺口" in driver:
-            return (
-                f"事件中的供需缺口如果覆盖上述产品，{stock_name}最先感受到的是报价、排产和产销率变化。"
-                "售价提升能否覆盖原料与制造成本、产能是否已有足够利用空间，决定收入增长能否同步改善毛利。"
-            )
-        if "研发里程碑" in driver:
-            return (
-                f"研发、获批或授权节点对{stock_name}的价值取决于公司在项目中拥有的权益：自有产品看获批后的销售放量，"
-                "授权合作看首付款、里程碑和分成，研发服务则看新增订单与项目执行，三者不能按同一种利润弹性估算。"
-            )
-        if "政策约束" in driver:
-            return (
-                f"政策本身不直接贡献{stock_name}的收入，真正影响经营的是准入范围、客户采购预算和项目落地速度。"
-                "招投标规模、开工率与回款周期会共同决定订单增长最终对应的是利润还是应收账款占用。"
-            )
-        if "商业化进度" in driver:
-            return (
-                f"量产、采购或客户采用对{stock_name}的含义，要落实到其产品在客户方案中的用量和价值量。"
-                "认证转为批量订单后，交付节奏、良率和产能利用率共同决定收入规模，产品结构则决定利润增幅是否高于收入增幅。"
-            )
-        if "产能释放" in driver:
-            return (
-                f"扩产提高的是{stock_name}的可交付上限，而不是确定收入。需求能否填满新增产线、产品价格能否覆盖折旧和爬坡成本，"
-                "会决定产能投放是扩大盈利还是增加闲置负担。"
-            )
-        if "终端需求" in driver:
-            return (
-                f"需求增长对{stock_name}的影响取决于客户采购量、公司份额和产品单价能否同时保持。"
-                "出货增长只有在价格竞争可控、产品结构改善或单位成本下降时，才可能带来更明显的利润变化。"
-            )
-        if "技术商业化" in driver:
-            return (
-                f"技术进展对{stock_name}的价值不在于概念发布，而在于相关产品能否通过客户认证并稳定批量交付。"
-                "良率、单位价值量和客户导入速度决定技术优势是转化为收入，还是继续停留在研发投入和小批量验证阶段。"
-            )
-        if "经营约束" in driver:
-            return (
-                f"限制、停产或需求冲击对{stock_name}的实际影响取决于受影响订单占比、替代客户和成本转嫁能力。"
-                "销量损失、价格变化与减值压力需要分开判断，不能把行业冲击简单等同为公司利润同比例变化。"
-            )
-        return (
-            f"{stock_name}的经营敏感项是{signals}，这些指标需要与相关产品的订单和收入变化相互印证。"
-            "行业热度本身不能替代公司的客户份额、交付能力和单位盈利。"
-        )
-
-    def validation_focus() -> str:
-        if "cpo" in business_context or "共封装光" in business_context:
-            if any(term in role_context for term in ("测试设备", "耦合设备", "封装设备", "自动化设备")):
-                return (
-                    "验证重点是CPO相关新增设备订单、单机价值量和验收收入，而不是整个光通信行业的出货增速；"
-                    "客户扩产延后或验收周期拉长会直接改变设备收入确认节奏。"
-                )
-            if any(term in role_context for term in ("fau", "光纤阵列", "连接器", "光组件", "跳线", "耦合")):
-                return (
-                    "平台定点、单机用量、量产良率和相关产品收入是这条逻辑的有效验证项；"
-                    "如果连接方案切换或客户自制比例提高，行业放量也可能无法转化为公司份额。"
-                )
-            if any(term in role_context for term in ("光模块", "光通讯收发", "光互联产品", "光收发")):
-                return (
-                    "研究上应分开跟踪传统可插拔模块与CPO、光引擎等新产品的收入和毛利，"
-                    "只有新方案取得明确份额且抵消旧产品替代压力，整体盈利判断才有支撑。"
-                )
-            if any(term in role_context for term in ("激光器", "光芯片", "dfb", "cw激光", "els")):
-                return (
-                    "高功率光源认证、批量出货、良率和产品单价比CPO概念热度更重要；"
-                    "客户方案减少外置光源用量或认证周期延长，都会压低芯片环节的实际增量。"
-                )
-        if any(term in business_context for term in ("功率半导体", "功率器件", "igbt", "mosfet")):
-            return (
-                "需要同时核对紧缺型号报价、排产周期、产能利用率和毛利率：只有报价与利用率改善且库存没有异常累积，"
-                "缺货才是公司盈利改善而不是渠道补库。"
-            )
-        if any(term in business_context for term in ("创新药", "新药", "临床", "医药", "生物制药")):
-            if any(term in role_context for term in ("cro", "cdmo", "研发服务", "临床服务", "外包服务")):
-                return (
-                    "服务商应检查新增项目、在手订单、项目执行率和经营现金流，不能用药企授权总额替代公司订单；"
-                    "研发项目缩减或价格竞争加剧会削弱交易活跃度带来的收入增量。"
-                )
-            if any(term in role_context for term in ("原料药", "中间体", "制剂生产", "商业化生产")):
-                return (
-                    "生产端应跟踪供货批次、产线利用率、质量认证和客户集中度；项目仍在临床阶段时，"
-                    "授权交易对当期制造收入的解释力有限。"
-                )
-            return (
-                "应把具体项目权益、首付款确认、后续里程碑、销售分成和持续研发费用分别建模，"
-                "同业授权金额只能提供估值参照，不能直接替代公司的收入和净利润。"
-            )
-        if any(term in business_context for term in ("saf", "可持续航空燃料", "uco", "废弃油脂", "地沟油")):
-            if any(term in role_context for term in ("废弃油脂", "uco", "回收", "原料", "贸易")):
-                return (
-                    "UCO采购价、销售价、库存周转和出口量需要合并观察；销量上升但价差收窄时，"
-                    "收入增长可能伴随盈利能力下降。"
-                )
-            if any(term in role_context for term in ("生物柴油", "航空燃料", "炼化", "燃料", "hvo", "saf")):
-                return (
-                    "SAF或HVO的实际产量、认证进度、装置利用率和单位价差决定经营弹性，"
-                    "原料上涨速度快于产品提价时，需求扩张反而可能挤压利润。"
-                )
-        return (
-            f"研究上应把{transmission['signals']}与相关业务收入、毛利率和现金回款相互核对，"
-            f"并留意{transmission['risk']}。"
-        )
-
-    sentences: list[str] = []
-
-    if not company_evidence.get("matched"):
-        sentences.append(
-            f"{stock_name}被纳入“{event_label}”的具体线索是{reason_clause}，但目前还不能把这条描述定位到"
-            "公司哪一项存量产品或收入来源。"
-        )
-        sentences.append(operating_mechanism())
-        sentences.append(
-            f"研究判断应暂时停留在业务线索层面，验证点是{transmission['signals']}；"
-            "没有明确产品、客户和收入权重之前，星级不能替代基本面关联。"
-        )
-    elif relation_status == "direct_segment" and direct_segments:
-        direct_text = format_segment_evidence(direct_segments, 3)
-        anchor = product_text or reason_clause
-        sentences.append(
-            f"{stock_name}与“{event_label}”的业务连接落在{anchor}，{reason_clause}。"
-        )
-        if direct_share >= 50:
-            sentences.append(
-                f"{direct_text}合计约占收入{format_share_pct(direct_share)}，已经是公司经营主体，"
-                "事件对订单、售价或交付量的影响具备改变整体收入增速的条件。"
-            )
-        elif direct_share >= 15:
-            sentences.append(
-                f"{direct_text}合计约占收入{format_share_pct(direct_share)}，相关业务已有足够规模影响经营，"
-                "但其他业务仍会稀释其对公司整体利润的贡献。"
-            )
-        else:
-            sentences.append(
-                f"{direct_text}合计约占收入{format_share_pct(direct_share)}，业务连接真实但基数较小，"
-                "即使增速较高，短期也未必足以主导公司整体业绩。"
-            )
-        sentences.append(operating_mechanism())
-        if direct_share >= 50:
-            sentences.append(
-                "相关分部已经足以影响公司整体经营，验证时应直接比较该分部收入、毛利率与现金回款是否同步改善。"
-                + validation_focus()
-            )
-        elif direct_share >= 15:
-            sentences.append(
-                "相关业务需要跑赢公司其他分部，才能明显抬升整体利润增速。" + validation_focus()
-            )
-        else:
-            sentences.append(
-                "小基数业务应看绝对收入、客户数量和毛利贡献是否跨过规模门槛，不能只看同比增速。"
-                + validation_focus()
-            )
-    elif relation_status == "broad_segment" and contained_segments:
-        contained_text = format_segment_evidence(contained_segments, 3)
-        anchor = product_text or reason_clause
-        sentences.append(
-            f"{stock_name}确有{anchor}这一业务抓手，与“{event_label}”并非单纯题材映射；{reason_clause}。"
-        )
-        sentences.append(
-            f"相关收入被并入{contained_text}等宽口径分部，能够确认公司参与，却不能把整个分部占比都当成事件敞口。"
-        )
-        sentences.append(operating_mechanism())
-        sentences.append(validation_focus())
+    if direct_share > 0 and same_profit_pool:
+        relation_label = "真相关" if direct_share >= 15 else "小基数布局"
+    elif relation_status == "broad_segment":
+        relation_label = "宽口径相关"
     elif relation_status == "product_confirmed":
-        anchor = product_text or known_product_text or reason_clause
-        sentences.append(
-            f"{stock_name}已经经营{anchor}，与“{event_label}”所指产业环节能够对应；{reason_clause}。"
-        )
-        if top_revenue_text:
-            sentences.append(
-                f"公司收入目前主要由{top_revenue_text}承载，事件相关产品没有独立拆分，"
-                "因此可以确认参与位置，但无法据此直接计算收入权重和利润弹性。"
-            )
-        else:
-            sentences.append(
-                "事件相关产品尚未形成可单独量化的收入项目，当前更适合判断产品能力和客户位置，而不是估算利润贡献。"
-            )
-        sentences.append(operating_mechanism())
-        sentences.append(validation_focus())
+        relation_label = "小基数布局" if early_stage else "宽口径相关"
     elif relation_status == "profile_supported":
-        focus = profile_focus or business_base
-        sentences.append(
-            f"{stock_name}的现有业务范围覆盖“{event_label}”涉及的方向，具体交集是{reason_clause}。"
-        )
-        if top_revenue_text:
-            sentences.append(
-                f"现有收入重心在{top_revenue_text}，而上述业务没有独立列示，说明公司具备承接场景，"
-                "但它对总收入和利润的实际权重仍不能确认。"
-            )
+        if role_match and role_segments and direct_share >= 15:
+            relation_label = "真相关"
+        elif early_stage:
+            relation_label = "小基数布局"
         else:
-            sentences.append(
-                f"公司业务基础集中在{focus}，与事件方向存在交集，但对应产品的经营规模尚未被单独识别。"
-            )
-        sentences.append(operating_mechanism())
-        sentences.append(
-            f"这类标的应以{transmission['signals']}检验业务交集是否扩大，"
-            "不能因为业务方向相近就把行业空间直接外推为公司盈利空间。"
-        )
+            relation_label = "宽口径相关"
     elif relation_status == "business_mismatch":
-        revenue_anchor = top_revenue_text or "现有收入项目"
-        product_anchor = business_base or known_product_text or "现有产品体系"
-        sentences.append(
-            f"{stock_name}当前收入集中在{revenue_anchor}，产品和服务主要是{product_anchor}。"
+        relation_label = "宽口径相关" if event_names_company and role_match else "错位"
+    elif relation_status in {"unverified", "unavailable"}:
+        if event_names_company and (role_match or semantic_overlap):
+            relation_label = "小基数布局" if early_stage else "宽口径相关"
+        elif role_match and reason_roles & company_roles:
+            relation_label = "小基数布局"
+        else:
+            relation_label = "蹭概念"
+    elif event_roles and company_roles and not role_match:
+        relation_label = "错位"
+    else:
+        relation_label = "宽口径相关" if semantic_overlap else "蹭概念"
+
+    if relation_label == "真相关" and not same_profit_pool:
+        relation_label = "宽口径相关"
+    if process_spec_mismatch:
+        relation_label = "错位"
+
+    event_role_text = role_label(event_roles, compact_text(event_label, 38))
+    company_role_text = role_label(company_roles, known_product_text or compact_text(business_base, 46))
+    if process_spec_mismatch:
+        event_role_text = "7nm及以下先进制程代工与定价"
+        company_role_text = "成熟制程或特色工艺晶圆制造"
+    product_anchor = relevant_product_text or known_product_text or compact_text(business_base, 54)
+    variant = narrative_variant(stock_name)
+    reason_fact = extract_reason_fact(reason, event_title)
+
+    if relation_label == "真相关":
+        openings = (
+            f"真相关。{stock_name}这次对应的不是泛题材，而是{product_anchor}，新闻动到的就是公司能收费的产品线。",
+            f"{stock_name}和这件事属于真相关，落点在{product_anchor}；产品、客户使用场景和公司收入科目能接上。",
+            f"真相关。这条新闻确实打到{stock_name}的生意上，直接抓手是{product_anchor}，不是只靠名字联想。",
         )
-        sentences.append(
-            f"这些业务与“{event_label}”中的{reason_clause}不处在同一产品链条，名称相近或同属大科技类别都不足以建立收入关联。"
+    elif relation_label == "宽口径相关":
+        openings = (
+            f"宽口径相关。{stock_name}能接上{product_anchor}这条线，但新闻对应的实际敞口没有被单独拆出来。",
+            f"{stock_name}不是纯蹭热点，不过只能算宽口径相关：公司卖{product_anchor}，与事件处在同一业务场景，分部口径却给不出准确权重。",
+            f"宽口径相关。这事和{stock_name}有业务交集，真正能对上的部分是{product_anchor}；问题在于这部分被装在更大的收入科目里。",
         )
-        sentences.append(operating_mechanism())
-        sentences.append(
-            "在出现对应产品、明确客户和批量订单之前，这只股票更适合按主题相关处理，而不是按业绩相关处理。"
+    elif relation_label == "小基数布局":
+        openings = (
+            f"小基数布局。{stock_name}在{product_anchor}上有产品或项目，但目前更像一条待放量的新业务，改不了公司当期收入大盘。",
+            f"小基数布局。{stock_name}方向没跑偏，能对应的是{product_anchor}，只是生意还小，题材热度明显跑在报表前面。",
+            f"小基数布局。这票不是完全没货，{stock_name}手里有{product_anchor}，但现阶段不能当成熟主业定价。",
+        )
+    elif relation_label == "错位":
+        openings = (
+            f"业务错位。新闻要看的是{event_role_text}，{stock_name}目前卖的主要是{company_role_text}，同在一条大产业链不代表赚的是同一笔钱。",
+            f"业务错位。{stock_name}和这条新闻对不上同一个利润池：事件影响{event_role_text}，公司收入落在{company_role_text}，中间缺少直接订单关系。",
+            f"业务错位。这次不能硬往{stock_name}身上套。新闻对象是{event_role_text}，公司手里的实货是{company_role_text}，产品用途和收款环节不同。",
         )
     else:
-        focus = profile_focus or business_base
-        sentences.append(
-            f"{stock_name}与“{event_label}”的关联线索是{reason_clause}。"
+        openings = (
+            f"蹭概念成分更重。{stock_name}现有产品里找不到与{event_role_text}同用途、同客户环节的明确收入抓手。",
+            f"蹭概念。{stock_name}目前只能算题材映射：新闻讲的是{event_role_text}，公司能落到报表的仍是{company_role_text}，两边缺产品和订单验证。",
+            f"蹭概念。这条新闻和{stock_name}的关系更像分时图逻辑，现有业务没有给出{event_role_text}对应的产品、客户位置或收入科目。",
         )
-        if top_revenue_text:
-            sentences.append(
-                f"公司收入重心是{top_revenue_text}，现有经营内容{('集中在' + focus) if focus else '尚未把事件相关产品单独列出'}，"
-                "目前无法确认新闻对应业务在公司内部的实际规模。"
-            )
-        else:
-            sentences.append(
-                f"公司现有业务以{focus or '已披露产品和服务'}为主，事件相关部分尚未形成可独立识别的收入项目。"
-            )
-        sentences.append(operating_mechanism())
-        sentences.append(
-            f"在{transmission['signals']}出现持续变化前，不宜把{filled_stars}星关联直接解释为公司收入或利润变化。"
-        )
+    opening = openings[variant]
+    fact_sentence = f"公司侧能落地的具体事实是{reason_fact}。" if reason_fact else ""
 
-    analysis = clean_text("".join(sentences))
-    if len(analysis) < 180:
-        analysis += (
-            f"更有效的验证方式是把{transmission['signals']}与公司相关业务收入、毛利率和现金回款放在一起观察，"
-            "而不是仅依据行业新闻判断盈利方向。"
+    if relation_label == "错位" and direct_share > 0 and direct_text:
+        revenue_sentence = f"{direct_text}合计约占收入{format_share_pct(direct_share)}，说明{company_role_text}确实是公司生意，但这恰好证明钱落在另一类产品和收款环节。"
+    elif direct_share >= 50 and direct_text:
+        revenue_sentence = f"{direct_text}合计约占收入{format_share_pct(direct_share)}，是主业级别，订单、售价或出货一旦变化，整张利润表都会有感觉。"
+    elif direct_share >= 15 and direct_text:
+        revenue_sentence = f"{direct_text}合计约占收入{format_share_pct(direct_share)}，已经有经营分量，但公司其他业务仍会稀释这条新闻对整体利润的影响。"
+    elif direct_share > 0 and direct_text:
+        revenue_sentence = f"{direct_text}合计约占收入{format_share_pct(direct_share)}，产品是真产品，分部却还是小分部，高增速也不等于能拉动全公司。"
+    elif contained_text:
+        revenue_sentence = f"相关产品被装进{contained_text}这类大分部，能确认公司参与，却不能把整个分部占比都算成新闻敞口。"
+    elif top_revenue_text:
+        revenue_sentence = f"公司收入大头在{top_revenue_text}，事件相关产品没有独立列项，能判断业务位置，算不出它到底贡献了多少收入和利润。"
+    else:
+        revenue_sentence = "现有信息没有把对应产品落到明确收入科目，眼下只能判断业务方向，不能给经营权重。"
+
+    context_roles = event_roles | company_roles | reason_roles
+    driver = transmission["driver"]
+    if not same_profit_pool and event_roles and company_roles:
+        operating_sentence = (
+            f"这里最容易混淆的是产业链相邻和利润直接受益：{event_role_text}的{driver}不会自动变成"
+            f"{company_role_text}的提价或新增订单，先影响的反而可能是客户采购节奏、成本或资本开支。"
         )
-    if len(analysis) > 590:
-        analysis = compact_text(analysis, 590)
+    elif "liquid_cooling" in context_roles or "thermal_management" in context_roles:
+        operating_sentence = (
+            "液冷事件真正改的是客户认证、冷板或工质方案的定型，以及后面的采购量。验证通过只解决技术可用性，"
+            "还要经过定点和批量订单；收入放量靠交付数量，利润则会被定制开发、材料成本、大客户议价和售后维护啃掉。"
+        )
+    elif "semiconductor_equipment" in company_roles:
+        operating_sentence = (
+            "设备公司赚的不是芯片涨价本身，而是晶圆厂扩线形成的设备订单。合同之后还有交付和验收，收入落点取决于验收节奏；"
+            "研发投入、售后服务和应收回款会决定订单看着很满时，利润和现金能不能同步。"
+        )
+    elif "wafer_foundry" in company_roles or "power_semiconductor" in company_roles:
+        operating_sentence = (
+            "这类公司的报表敏感项是报价、排产、产能利用率和产品结构。紧缺型号多卖、产线更满可以抬收入，"
+            "但晶圆及封装成本、良率爬坡、折旧和客户压价会吃掉价差，收入涨幅不能直接照搬成利润涨幅。"
+        )
+    elif context_roles & {"cpo", "optical_module", "optical_component", "optical_chip"}:
+        if "semiconductor_equipment" in company_roles:
+            operating_sentence = "CPO设备收入看客户扩线、工艺改造和新增测试工位，订单领先于收入，验收决定报表时点，售后投入和设备标准化程度决定毛利质量。"
+        elif "optical_component" in company_roles:
+            operating_sentence = "精密连接与耦合件赚的是单机用量和供货份额，平台定点转成批量采购才算数；量产良率、自动化程度和客户压价决定新增出货能留下多少利润。"
+        elif "optical_chip" in company_roles:
+            operating_sentence = "光源和光芯片看单套系统用量、功率规格与供货份额，认证慢、良率低或方案减少外置光源数量，都会让行业放量落不到公司利润上。"
+        else:
+            operating_sentence = "CPO不是传统可插拔光模块销量的简单倍增，产品形态和单机价值量都在变。新方案能否拿到定点、批量份额并覆盖旧产品替代压力，才决定收入和毛利方向。"
+    elif "innovative_drug" in context_roles or "drug_service" in context_roles:
+        if "drug_service" in company_roles:
+            operating_sentence = "药企授权金额不是服务商收入，服务商只能靠新增项目、在手订单执行和产能利用率赚钱；项目取消、价格竞争和回款变慢，会把行业交易热度吃掉。"
+        else:
+            operating_sentence = "创新药要拆开首付款、里程碑、销售分成和持续研发费用，交易总额不能一次性当利润。临床成功率、商业化费用和同适应症竞争，决定账面价值最终能留下多少。"
+    elif context_roles & {"biofuel_feedstock", "biofuel_production"}:
+        if "biofuel_feedstock" in company_roles:
+            operating_sentence = "原料端赚的是采购与销售价差，不是SAF销量本身。废弃油脂价格、库存周转、认证追溯和运费一起决定收入增加后还能不能保住利润。"
+        else:
+            operating_sentence = "生产端看SAF或生物燃料产销量、装置利用率和单位价差。原料上涨快过产品提价，或者工艺收率和认证进度拖后腿，销量增长也可能不增利。"
+    elif "供需缺口" in driver:
+        operating_sentence = "供需变化先打到报价、排产和库存。公司只有同时拿到销量与价格，且原料和制造成本没有更快上涨，毛利才会真改善；渠道补库造成的短缺通常来得快、退得也快。"
+    elif "政策约束" in driver:
+        operating_sentence = "政策不直接给公司打钱，能改报表的是准入、采购预算、招投标和项目开工。订单增加但回款周期拉长，利润表好看、经营现金流难看，股价逻辑照样会打折。"
+    elif "产能释放" in driver:
+        operating_sentence = "扩产只是把可交付上限抬高，不是锁定收入。新增产线能否被订单填满、售价能否覆盖折旧和爬坡费用，决定扩产是放大利润还是制造闲置成本。"
+    elif "终端需求" in driver:
+        operating_sentence = "需求增长要经过客户采购量、公司份额和产品单价三道关。出货多了但价格战加剧，或低毛利产品占比上升，收入往上走，利润未必跟得上。"
+    elif "技术商业化" in driver:
+        operating_sentence = "技术新闻先改认证和产品导入速度，不直接改收入。产品定型后还要看订单、交付和良率；研发费用已经花出去、量产迟迟不上来，题材越热，报表落差越大。"
+    else:
+        operating_sentence = f"对{stock_name}真正有用的变量是{transmission['signals']}。订单、交付、收入确认和回款要能串起来，行业热度才不会只停在盘口。"
+
+    if stage_rank >= 10:
+        stage_sentence = f"兑现已经走到{stage_label}，含金量高，接下来要防的是应收、减值或一次性确认让利润质量打折。"
+    elif stage_rank >= 8:
+        stage_sentence = f"当前线索已到{stage_label}，离报表不远；出货能否按期确认收入、回款能否跟上，比新增题材标签重要。"
+    elif stage_rank >= 6:
+        stage_sentence = f"现在能确认到{stage_label}，还没走完交付、验收、收入确认和回款，合同含金量要靠执行率说话。"
+    elif stage_rank == 5:
+        stage_sentence = "目前只到框架协议，框架不等于采购订单，数量、价格和交付时间没落定前，不能拿协议总盘子估收入。"
+    elif stage_rank == 4:
+        stage_sentence = "线索走到客户定点，说明进入方案，但定点不保证份额；正式订单、单机用量和量产节奏才决定收入。"
+    elif stage_rank == 3:
+        stage_sentence = "现在只到认证或联合验证，技术可用不等于进入批量供应链，后面还差定点、采购订单和规模交付。"
+    elif stage_rank == 2:
+        stage_sentence = "当前只到送样，样品过关之前没有供货资格，过关之后也要重新争定点和价格，离收入仍有好几步。"
+    elif stage_rank in {0, 1}:
+        stage_sentence = f"兑现阶段还在{stage_label}，没有明确订单和收入，短期先反映在研发费用和市场情绪，改不了利润表。"
+    elif "供需缺口" in driver:
+        stage_sentence = "这是一条行业价格与供需新闻，不代表公司已经新增订单；公司报价、排产和库存没有同步变化，报表就不会跟。"
+    elif "政策约束" in driver:
+        stage_sentence = "这条线目前停在政策端，细则、招标和项目开工还没落到公司合同之前，不能提前把行业预算算成公司收入。"
+    else:
+        stage_sentence = "目前没有看到它跨过正式订单、批量交付和收入确认这些门槛，经营影响只能按待验证处理。"
+
+    if relation_label == "错位":
+        disproof_sentence = f"最容易证伪的点很直接：{stock_name}拿不出与{event_role_text}同产品、同客户用途的合同或收入科目，这个关联就只能留在板块联动。"
+    elif relation_label == "蹭概念":
+        disproof_sentence = f"{filled_stars}星在这里不能替代生意。中报、季报里看不到对应产品收入，订单也没有从口头布局往前走，分时图的热度就没有报表接力。"
+    elif "semiconductor_equipment" in company_roles:
+        disproof_sentence = "晶圆厂资本开支没有转成设备订单，或者设备交付后长期等不到验收，芯片端再热也改不了设备公司的收入和现金回款。"
+    elif stage_rank == -1 and "供需缺口" in driver:
+        disproof_sentence = "公司报价、排产、产能利用率和毛利没有同步改善，或者库存先堆起来，这条缺货逻辑就更像渠道补库，不是持续景气。"
+    elif stage_rank == -1 and "政策约束" in driver:
+        disproof_sentence = "政策细则没有带来招标、正式合同和回款，或者项目只开工不结算，行业预算就不能算成公司的经营增量。"
+    elif stage_rank <= 3:
+        disproof_sentence = "最容易被打脸的是认证、送样或布局迟迟转不成定点和批量订单；相关产品收入没有抬头，题材强度就应主动下修。"
+    elif stage_rank <= 6:
+        disproof_sentence = "最容易证伪的是协议或订单不转交付，或者交付后应收账款抬得比收入更快，前者说明需求虚，后者说明现金含量差。"
+    else:
+        disproof_sentence = f"最硬的照妖镜是{transmission['signals']}：这些指标没有在收入、毛利和经营现金流里一起出现，股价讲的就比公司赚的多。"
+
+    if relation_label == "真相关":
+        parts = [opening, fact_sentence, revenue_sentence, operating_sentence, stage_sentence, disproof_sentence]
+    elif relation_label == "宽口径相关":
+        parts = [opening, fact_sentence, revenue_sentence, stage_sentence, operating_sentence, disproof_sentence]
+    elif relation_label == "小基数布局":
+        parts = [opening, fact_sentence, stage_sentence, revenue_sentence, operating_sentence, disproof_sentence]
+    elif relation_label == "错位":
+        parts = [opening, revenue_sentence, operating_sentence, stage_sentence, disproof_sentence]
+    else:
+        parts = [opening, revenue_sentence, stage_sentence, disproof_sentence]
+
+    analysis = clean_text("".join(parts))
+    if len(analysis) < 180:
+        analysis += "要把这条逻辑坐实，至少需要对应产品、正式订单、收入确认和现金回款中的两项同时出现，单靠板块上涨不能证明公司赚到了钱。"
+    if len(analysis) > 540:
+        analysis = compact_text(analysis, 540)
     return finalize_investment_analysis(analysis, stock_name)
 def build_investment_opportunities(
     event_rows: pd.DataFrame,
@@ -2243,7 +2261,7 @@ def finalize_event(
         level5_catalog,
     )
     return {
-        "schemaVersion": 14,
+        "schemaVersion": 15,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -2327,7 +2345,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--investment-prompt-template",
         type=Path,
-        default=project_root / "prompts" / "investment-opportunity-analyst-v5.md",
+        default=project_root / "prompts" / "investment-opportunity-analyst-v6.md",
     )
     parser.add_argument(
         "--report-corpus",
@@ -2461,7 +2479,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 14,
+        "schemaVersion": 15,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),

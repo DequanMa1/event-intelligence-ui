@@ -37,7 +37,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
   for (const mainId of demoMainIds) {
     const fileUrl = new URL(`../public/data/impact-chains/${mainId}.json`, import.meta.url);
     const payload = JSON.parse(await readFile(fileUrl, "utf8"));
-    assert.equal(payload.schemaVersion, 14);
+    assert.equal(payload.schemaVersion, 15);
     assert.equal(payload.event.mainId, mainId);
     assert.equal(payload.status, "ready");
     assert.ok(payload.selection.sourceStockCount > 0);
@@ -88,7 +88,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
       }
     }
     assert.equal(payload.investmentOpportunities.status, "ready");
-    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v5.md");
+    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v6.md");
     assert.ok(payload.investmentOpportunities.totalStockCount > 0);
     assert.ok(payload.investmentOpportunities.groupCount > 0);
     assert.equal(payload.investmentOpportunities.groups.length, payload.investmentOpportunities.groupCount);
@@ -260,7 +260,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   const manifest = JSON.parse(await readFile(manifestUrl, "utf8"));
   const statusTotal = Object.values(manifest.statusCounts).reduce((sum, value) => sum + value, 0);
 
-  assert.equal(manifest.schemaVersion, 14);
+  assert.equal(manifest.schemaVersion, 15);
   assert.equal(manifest.eventCount, 813);
   assert.equal(manifest.events.length, manifest.eventCount);
   assert.equal(statusTotal, manifest.eventCount);
@@ -271,7 +271,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   );
   assert.equal(manifest.source.companyProfiles, "2025年报公司简介和主营业务占比.xlsx");
   assert.equal(manifest.source.companyProfileCount, 5499);
-  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v5.md");
+  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v6.md");
   assert.equal(Object.hasOwn(manifest.source, "edges"), false);
   assert.ok(manifest.events.every((event) => event.relatedIndustryCount >= 0 && event.relatedIndustryCount <= 2));
   assert.ok(manifest.events.some((event) => event.relatedIndustryCount === 2));
@@ -295,27 +295,27 @@ test("keeps the reusable prompt internal instead of publishing it to visitors", 
 });
 
 test("keeps the investment analyst prompt structured and internal", async () => {
-  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v5.md", import.meta.url);
+  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v6.md", import.meta.url);
   const prompt = await readFile(promptUrl, "utf8");
 
   for (const placeholder of ["event_title", "stock_name", "stock_code", "filled_stars", "reason", "company_profile", "major_products", "revenue_composition", "mapped_products", "revenue_segment_relations"]) {
     assert.ok(prompt.includes(`{{${placeholder}}}`));
   }
-  for (const requirement of ["研究目标", "不要求依次回答固定问题", "星级和reason是待核验线索", "禁止的固定骨架"]) {
+  for (const requirement of ["你要回答的一件事", "只是线索，不是结论", "判定顺序", "关联强度口径"]) {
     assert.match(prompt, new RegExp(requirement));
   }
-  for (const requirement of ["客户端表达边界", "不解释信息来自哪里", "数据处理过程"]) {
+  for (const requirement of ["输入（内部字段", "正文里不要解释来源", "不暴露"]) {
     assert.match(prompt, new RegExp(requirement));
   }
-  for (const requirement of ["业务判断原则", "名称相近但产品、客户或用途不同", "宽口径分部", "不能按零处理", "实际产品", "第一两句就写出公司对应的具体产品"]) {
+  for (const requirement of ["名字像不算数", "宽口径分部", "没收入就是没收入", "兑现到哪一步了", "利润会被什么吃掉"]) {
     assert.match(prompt, new RegExp(requirement));
   }
-  for (const forbiddenSkeleton of ["本次事件首先改变", "只有经过", "产业链位置仍然成立", "利润弹性会低于主题预期"]) {
+  for (const forbiddenSkeleton of ["先改变预期—再传导—最后列风险", "若……则……", "相关性停留在估值层面", "有望受益"]) {
     assert.match(prompt, new RegExp(forbiddenSkeleton));
   }
-  assert.match(prompt, /通常220—450字/);
+  assert.match(prompt, /220—420字为主/);
 
-  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v5.md", import.meta.url);
+  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v6.md", import.meta.url);
   await assert.rejects(readFile(publicPromptUrl, "utf8"), { code: "ENOENT" });
 });
 
