@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27323",
@@ -9,10 +9,10 @@
     "date": "2026-07-09"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 6,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 5,
     "mappedStockCount": 5,
-    "unmappedStockCount": 1,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 25110,
@@ -30,16 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
-      },
-      {
-        "sourceRowNumber": 25112,
-        "stockCode": "未上市",
-        "stockName": "留神峪煤业",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 5
       },
       {
         "sourceRowNumber": 25113,
@@ -48,7 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 9
+        "anchorProductCount": 7
       },
       {
         "sourceRowNumber": 25114,
@@ -57,7 +48,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 6
+        "anchorProductCount": 5
       },
       {
         "sourceRowNumber": 25115,
@@ -66,129 +57,21 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 6
+        "anchorProductCount": 3
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 25112,
-        "stockCode": "未上市",
-        "stockName": "留神峪煤业",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 21,
     "selectedCoreProductCount": 10,
     "selectedCompanyCoreProductCount": 10,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 2,
-    "downstreamCandidateCount": 5,
-    "shownUpstreamCount": 2,
-    "shownDownstreamCount": 5
+    "level7ProductCount": 32,
+    "relatedIndustryCandidateCount": 16,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140046490",
-        "name": "煤炭开采",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1111000001",
-          "1111000005"
-        ],
-        "linkedCoreProductNames": [
-          "不粘煤",
-          "长焰煤"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140005128",
-        "name": "煤炭",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032373"
-        ],
-        "linkedCoreProductNames": [
-          "焦煤"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1111000008",
-        "name": "气煤",
-        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 气煤",
-        "industryPath": [
-          "采掘",
-          "煤炭开采",
-          "煤炭开采",
-          "炼焦煤",
-          "炼焦煤",
-          "气煤"
-        ],
-        "level5Industry": {
-          "code": "1200000810",
-          "name": "炼焦煤"
-        },
-        "level6Industry": {
-          "code": "1200003774",
-          "name": "炼焦煤"
-        },
-        "level7Product": {
-          "code": "1111000008",
-          "name": "气煤"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 4,
-        "stocks": [
-          {
-            "stockCode": "600546.SH",
-            "stockName": "山煤国际",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601101.SH",
-            "stockName": "昊华能源",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601001.SH",
-            "stockName": "晋控煤业",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "600985.SH",
-            "stockName": "淮北矿业",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 4,
-        "relevanceScore": 9,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "焦煤",
-          "煤炭开采",
-          "煤炭"
-        ]
-      },
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1111000007",
         "name": "1/3焦煤",
@@ -214,33 +97,93 @@
           "name": "1/3焦煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 4,
         "stocks": [
           {
             "stockCode": "600546.SH",
             "stockName": "山煤国际",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "601666.SH",
             "stockName": "平煤股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "601001.SH",
             "stockName": "晋控煤业",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "600985.SH",
             "stockName": "淮北矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 3,
+        "relevanceScore": 9,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "焦煤",
+          "煤炭开采",
+          "煤炭"
+        ]
+      },
+      {
+        "code": "1111000008",
+        "name": "气煤",
+        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 气煤",
+        "industryPath": [
+          "采掘",
+          "煤炭开采",
+          "煤炭开采",
+          "炼焦煤",
+          "炼焦煤",
+          "气煤"
+        ],
+        "level5Industry": {
+          "code": "1200000810",
+          "name": "炼焦煤"
+        },
+        "level6Industry": {
+          "code": "1200003774",
+          "name": "炼焦煤"
+        },
+        "level7Product": {
+          "code": "1111000008",
+          "name": "气煤"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 4,
+        "stocks": [
+          {
+            "stockCode": "600546.SH",
+            "stockName": "山煤国际",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601101.SH",
+            "stockName": "昊华能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601001.SH",
+            "stockName": "晋控煤业",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -274,28 +217,27 @@
           "name": "焦煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "600546.SH",
             "stockName": "山煤国际",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "601666.SH",
             "stockName": "平煤股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "600985.SH",
             "stockName": "淮北矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 3,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -329,28 +271,27 @@
           "name": "肥煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "600546.SH",
             "stockName": "山煤国际",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "601666.SH",
             "stockName": "平煤股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "600985.SH",
             "stockName": "淮北矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 4,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -384,28 +325,27 @@
           "name": "长焰煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "600546.SH",
             "stockName": "山煤国际",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "601101.SH",
             "stockName": "昊华能源",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "601001.SH",
             "stockName": "晋控煤业",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -439,23 +379,21 @@
           "name": "不粘煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "601101.SH",
             "stockName": "昊华能源",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "601001.SH",
             "stockName": "晋控煤业",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -489,23 +427,21 @@
           "name": "贫煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600546.SH",
             "stockName": "山煤国际",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "600985.SH",
             "stockName": "淮北矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -539,68 +475,21 @@
           "name": "贫瘦煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600546.SH",
             "stockName": "山煤国际",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "601666.SH",
             "stockName": "平煤股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 9,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "焦煤",
-          "煤炭开采",
-          "煤炭"
-        ]
-      },
-      {
-        "code": "1111000010",
-        "name": "瘦煤",
-        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 瘦煤",
-        "industryPath": [
-          "采掘",
-          "煤炭开采",
-          "煤炭开采",
-          "炼焦煤",
-          "炼焦煤",
-          "瘦煤"
-        ],
-        "level5Industry": {
-          "code": "1200000810",
-          "name": "炼焦煤"
-        },
-        "level6Industry": {
-          "code": "1200003774",
-          "name": "炼焦煤"
-        },
-        "level7Product": {
-          "code": "1111000010",
-          "name": "瘦煤"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "601666.SH",
-            "stockName": "平煤股份",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 4,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -634,18 +523,15 @@
           "name": "弱粘煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "601001.SH",
             "stockName": "晋控煤业",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -653,114 +539,809 @@
           "煤炭开采",
           "煤炭"
         ]
+      },
+      {
+        "code": "1111000010",
+        "name": "瘦煤",
+        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 瘦煤",
+        "industryPath": [
+          "采掘",
+          "煤炭开采",
+          "煤炭开采",
+          "炼焦煤",
+          "炼焦煤",
+          "瘦煤"
+        ],
+        "level5Industry": {
+          "code": "1200000810",
+          "name": "炼焦煤"
+        },
+        "level6Industry": {
+          "code": "1200003774",
+          "name": "炼焦煤"
+        },
+        "level7Product": {
+          "code": "1111000010",
+          "name": "瘦煤"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "601666.SH",
+            "stockName": "平煤股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 9,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "焦煤",
+          "煤炭开采",
+          "煤炭"
+        ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1111000018",
-        "name": "焦炭",
-        "anchorCount": 5,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1111000007",
-          "1111000008",
-          "1111000009",
-          "1111000010",
-          "1140032373"
+        "code": "1200000811",
+        "name": "动力煤",
+        "description": "动力煤主要用于火力发电，是A股重要能源板块。因直接关联电力成本与供应安全，且具高分红、低估值特征，常被视为防御性资产。其股价受煤炭价格、政策调控及季节性用电需求影响显著，备受市场关注。",
+        "stockCount": 10,
+        "starWeight": 36,
+        "level7ProductCount": 4,
+        "relevanceScore": 404,
+        "stocks": [
+          {
+            "stockCode": "601699.SH",
+            "stockName": "潞安环能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600546.SH",
+            "stockName": "山煤国际",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601101.SH",
+            "stockName": "昊华能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601001.SH",
+            "stockName": "晋控煤业",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601088.SH",
+            "stockName": "中国神华",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601898.SH",
+            "stockName": "中煤能源",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600256.SH",
+            "stockName": "广汇能源",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "1/3焦煤",
-          "气煤",
-          "焦煤",
-          "瘦煤",
-          "肥煤"
+        "products": [
+          {
+            "code": "1111000001",
+            "name": "长焰煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 长焰煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 8,
+            "stocks": [
+              {
+                "stockCode": "600546.SH",
+                "stockName": "山煤国际",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601101.SH",
+                "stockName": "昊华能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601001.SH",
+                "stockName": "晋控煤业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601088.SH",
+                "stockName": "中国神华",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600256.SH",
+                "stockName": "广汇能源",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000005",
+            "name": "不粘煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 不粘煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 7,
+            "stocks": [
+              {
+                "stockCode": "601101.SH",
+                "stockName": "昊华能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601001.SH",
+                "stockName": "晋控煤业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601088.SH",
+                "stockName": "中国神华",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600256.SH",
+                "stockName": "广汇能源",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000011",
+            "name": "贫煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 贫煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "601699.SH",
+                "stockName": "潞安环能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600546.SH",
+                "stockName": "山煤国际",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600985.SH",
+                "stockName": "淮北矿业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000004",
+            "name": "弱粘煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 弱粘煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "601001.SH",
+                "stockName": "晋控煤业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 5
-        }
+        "rank": 1
       },
       {
-        "code": "1111000019",
-        "name": "焦油",
-        "anchorCount": 4,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1111000007",
-          "1111000008",
-          "1111000009",
-          "1111000010"
+        "code": "1200000791",
+        "name": "铁路货物运输",
+        "description": "铁路货物运输指通过铁路运送物资。因具备大运量、低成本及绿色优势，受“公转铁”政策推动及物流降本增效需求驱动，行业景气度提升，成为A股中兼具稳定分红与成长潜力的关注焦点。",
+        "stockCount": 4,
+        "starWeight": 13,
+        "level7ProductCount": 1,
+        "relevanceScore": 16,
+        "stocks": [
+          {
+            "stockCode": "601101.SH",
+            "stockName": "昊华能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601088.SH",
+            "stockName": "中国神华",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "1/3焦煤",
-          "气煤",
-          "瘦煤",
-          "肥煤"
+        "products": [
+          {
+            "code": "1140065110",
+            "name": "煤炭铁路运输",
+            "hierarchyPath": "交通运输 > 铁路运输 > 铁路运输 > 铁路货物运输 > 铁路货物运输 > 煤炭铁路运输",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "601101.SH",
+                "stockName": "昊华能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601088.SH",
+                "stockName": "中国神华",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 12,
+    "mappedStockCount": 12,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 32,
+    "candidateIndustryCount": 16,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 25108,
+        "stockCode": "601699.SH",
+        "stockName": "潞安环能",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1111000037",
-        "name": "焦炉煤气",
-        "anchorCount": 4,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1111000007",
-          "1111000008",
-          "1111000009",
-          "1111000010"
-        ],
-        "linkedCoreProductNames": [
-          "1/3焦煤",
-          "气煤",
-          "瘦煤",
-          "肥煤"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
+        "sourceRowNumber": 25109,
+        "stockCode": "000983.SZ",
+        "stockName": "山西焦煤",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140077808",
-        "name": "焦碳",
-        "anchorCount": 4,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1111000008",
-          "1111000009",
-          "1111000010",
-          "1140032373"
-        ],
-        "linkedCoreProductNames": [
-          "气煤",
-          "焦煤",
-          "瘦煤",
-          "肥煤"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
+        "sourceRowNumber": 25110,
+        "stockCode": "601666.SH",
+        "stockName": "平煤股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140086240",
-        "name": "不锈钢炉料",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032373"
+        "sourceRowNumber": 25111,
+        "stockCode": "600985.SH",
+        "stockName": "淮北矿业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 25113,
+        "stockCode": "600546.SH",
+        "stockName": "山煤国际",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 9
+      },
+      {
+        "sourceRowNumber": 25114,
+        "stockCode": "601001.SH",
+        "stockName": "晋控煤业",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 25115,
+        "stockCode": "601101.SH",
+        "stockName": "昊华能源",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 25116,
+        "stockCode": "600188.SH",
+        "stockName": "兖矿能源",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 9
+      },
+      {
+        "sourceRowNumber": 25117,
+        "stockCode": "601225.SH",
+        "stockName": "陕西煤业",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 25118,
+        "stockCode": "601088.SH",
+        "stockName": "中国神华",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 25119,
+        "stockCode": "601898.SH",
+        "stockName": "中煤能源",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 25120,
+        "stockCode": "600256.SH",
+        "stockName": "广汇能源",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000811",
+        "name": "动力煤",
+        "description": "动力煤主要用于火力发电，是A股重要能源板块。因直接关联电力成本与供应安全，且具高分红、低估值特征，常被视为防御性资产。其股价受煤炭价格、政策调控及季节性用电需求影响显著，备受市场关注。",
+        "stockCount": 10,
+        "starWeight": 36,
+        "level7ProductCount": 4,
+        "relevanceScore": 404,
+        "stocks": [
+          {
+            "stockCode": "601699.SH",
+            "stockName": "潞安环能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600546.SH",
+            "stockName": "山煤国际",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601101.SH",
+            "stockName": "昊华能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601001.SH",
+            "stockName": "晋控煤业",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601088.SH",
+            "stockName": "中国神华",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601898.SH",
+            "stockName": "中煤能源",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600256.SH",
+            "stockName": "广汇能源",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "焦煤"
+        "products": [
+          {
+            "code": "1111000001",
+            "name": "长焰煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 长焰煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 8,
+            "stocks": [
+              {
+                "stockCode": "600546.SH",
+                "stockName": "山煤国际",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601101.SH",
+                "stockName": "昊华能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601001.SH",
+                "stockName": "晋控煤业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601088.SH",
+                "stockName": "中国神华",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600256.SH",
+                "stockName": "广汇能源",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000005",
+            "name": "不粘煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 不粘煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 7,
+            "stocks": [
+              {
+                "stockCode": "601101.SH",
+                "stockName": "昊华能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601001.SH",
+                "stockName": "晋控煤业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601088.SH",
+                "stockName": "中国神华",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600256.SH",
+                "stockName": "广汇能源",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000011",
+            "name": "贫煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 贫煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "601699.SH",
+                "stockName": "潞安环能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600546.SH",
+                "stockName": "山煤国际",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600985.SH",
+                "stockName": "淮北矿业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000004",
+            "name": "弱粘煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 弱粘煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "601001.SH",
+                "stockName": "晋控煤业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000791",
+        "name": "铁路货物运输",
+        "description": "铁路货物运输指通过铁路运送物资。因具备大运量、低成本及绿色优势，受“公转铁”政策推动及物流降本增效需求驱动，行业景气度提升，成为A股中兼具稳定分红与成长潜力的关注焦点。",
+        "stockCount": 4,
+        "starWeight": 13,
+        "level7ProductCount": 1,
+        "relevanceScore": 16,
+        "stocks": [
+          {
+            "stockCode": "601101.SH",
+            "stockName": "昊华能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601088.SH",
+            "stockName": "中国神华",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140065110",
+            "name": "煤炭铁路运输",
+            "hierarchyPath": "交通运输 > 铁路运输 > 铁路运输 > 铁路货物运输 > 铁路货物运输 > 煤炭铁路运输",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "601101.SH",
+                "stockName": "昊华能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601088.SH",
+                "stockName": "中国神华",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -775,10 +1356,1234 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 17,
+    "eligibleSourceRowCount": 12,
+    "totalStockCount": 12,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 4,
+    "excludedNonAShareCount": 1,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 12,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 25108,
+            "stockCode": "601699.SH",
+            "stockName": "潞安环能",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "地处山西长治的国内喷吹煤龙头，受安监影响直接，且现货销售比例高，业绩对煤价上涨高度敏感。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601699.SH",
+              "companyName": "潞安环能",
+              "companyProfile": "公司以原煤开采、煤炭洗选、煤焦冶炼为核心主业，同步布局洁净煤技术开发、煤层气开发、煤炭综合利用等多元配套业务，开采煤种以瘦煤、贫瘦煤、贫煤为主。所产煤炭产品兼具低灰、特低硫、高发热量、超洁净的优质环保特性，形成混煤、洗精煤、喷吹煤等煤炭产品及焦炭产品体系，广泛应用于发电、动力、炼焦、钢铁等重点行业，是国家重要的喷吹煤和优质动力煤生产基地。公司拥有生产矿井多座，总产能达到5,000万吨级，所属主体矿井均为行业高产高效矿井，综合机械化开采程度达100%，智能化产能占比超90%。公司累计多座矿井入选国家及山西省绿色矿山创建名录，余吾煤业成功入选“零碳矿山”试点单位，绿色智能化发展走在行业前沿。公司拥有国家级企业技术中心，是全国煤炭行业首家且唯一的国家级高新技术企业、国家火炬计划重点高新技术企业。自主首创的“潞安采煤法”引领世界厚煤层采煤技术变革，烟煤高炉喷吹技术斩获国家发明专利、中国煤炭工业科技进步特等奖，成为该产品国家标准制定的核心基准，科技创新综合实力稳居煤炭行业前列。",
+              "profileSummary": "公司以原煤开采、煤炭洗选、煤焦冶炼为核心主业，同步布局洁净煤技术开发、煤层气开发、煤炭综合利用等多元配套业务，开采煤种以瘦煤、贫瘦煤、贫煤为主。所产煤炭产品兼具低灰、特低硫、高发热量、超洁净的优质环保特性，形成混煤、洗精煤、喷吹煤等煤炭产品及焦炭产品体系，广泛应用于发电、动力、炼焦、钢铁等重点行业，是国家重要的喷吹煤和优质动力煤生产基地。",
+              "majorProducts": "潞安混煤、潞安焦炭、潞安喷吹煤、潞安洗混块煤、潞安洗精煤",
+              "revenueComposition": "煤炭:94.28%;焦炭:4.15%;其他业务:1.57%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭",
+                  "sharePct": 94.28,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "焦炭",
+                  "sharePct": 4.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "贫瘦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "无烟煤",
+                    "category": "无烟煤"
+                  },
+                  {
+                    "name": "焦炭",
+                    "category": "冶金焦"
+                  },
+                  {
+                    "name": "贫煤",
+                    "category": "动力煤"
+                  }
+                ],
+                "knownProducts": [
+                  "焦炭",
+                  "贫煤",
+                  "无烟煤",
+                  "气煤",
+                  "焦煤",
+                  "贫瘦煤"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "潞安环能与事件存在真实业务交集：公司已有气煤、焦煤、贫瘦煤，与地处山西长治的国内喷吹煤龙头，受安监影响直接，且现货销售比例高，业绩对煤价上涨高度敏感所处的产业环节一致。煤炭（94.28%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响经营约束及需求或供给冲击，只有经过“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”，才会形成可确认的收入和利润增量。订单变化、产品价格、交付节奏和减值迹象能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 25109,
+            "stockCode": "000983.SZ",
+            "stockName": "山西焦煤",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内焦煤行业绝对龙头，地处本次安监风暴中心的山西，其生产受限情况是市场供给变化的核心风向标。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000983.SZ",
+              "companyName": "山西焦煤",
+              "companyProfile": "公司是全国首批循环经济试点单位。公司主营业务是煤炭的生产、洗选加工、销售及发供电，矿山开发设计施工、矿用及电力器材生产经营等。公司的主要产品为煤炭、电力热力、焦炭及化工产品等。煤炭产品主要是：焦煤、肥煤、瘦煤、贫瘦煤、气煤等。公司煤炭销售的主要区域是东北、华北、南方地区的大型钢铁企业及发电企业。公司所属矿区资源储量丰富，煤层赋存稳定，属近水平煤层，地质构造简单，并且煤种齐全：有焦煤、肥煤、瘦煤、贫瘦煤、气煤等，特别是在冶炼煤中，公司的冶炼精煤具有低灰分、低硫分、结焦性好等优点，属优质炼焦煤品种，是稀缺、保护性开采煤种。从规模优势和质量优势而言，公司的冶炼精煤在市场上有较强的竞争力，在国内冶炼精煤供给方面具有重要地位。公司曾荣获全国五一劳动奖状、全国思想政治工作优秀企业、全国模范职工之家等荣誉称号，“煤矿通风瓦斯超限预控与监管技术及系统”荣膺国家科技进步二等奖。",
+              "profileSummary": "公司主营业务是煤炭的生产、洗选加工、销售及发供电，矿山开发设计施工、矿用及电力器材生产经营等。煤炭产品主要是：焦煤、肥煤、瘦煤、贫瘦煤、气煤等。",
+              "majorProducts": "西山电精煤、西山肥精煤、西山供热、西山焦精煤、西山煤电火电供应、西山煤电焦煤、西山煤电煤泥、西山煤电洗混煤、西山煤电洗精煤、西山煤电原煤、西山普通动力煤、西山筛混煤、西山瘦精煤、西山洗混煤",
+              "revenueComposition": "煤炭:57.33%;电力热力:18.82%;焦炭:16.29%;其他化工产品及副产品:4.73%;其他:1.41%;焦油:1.02%;建材:0.39%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭",
+                  "sharePct": 57.33,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电力热力",
+                  "sharePct": 18.82,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "焦炭",
+                  "sharePct": 16.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他化工产品及副产品",
+                  "sharePct": 4.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "焦油",
+                  "sharePct": 1.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "建材",
+                  "sharePct": 0.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "瘦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "肥煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "贫瘦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "热电联产(电力)",
+                    "category": "热电联产"
+                  }
+                ],
+                "knownProducts": [
+                  "热电联产(电力)",
+                  "粗苯",
+                  "甲醇",
+                  "硫磺",
+                  "橡胶用炭黑",
+                  "煤焦油",
+                  "焦炭",
+                  "气煤"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "山西焦煤已经具备气煤、焦煤、瘦煤等业务能力，国内焦煤行业绝对龙头，地处本次安监风暴中心的山西，其生产受限情况是市场供给变化的核心风向标并非单纯概念映射。当前对应的收入被归入煤炭（57.33%）、电力热力（18.82%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于经营约束及需求或供给冲击是否通过“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”放大，并最终反映在订单变化、产品价格、交付节奏和减值迹象上；冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 25110,
+            "stockCode": "601666.SH",
+            "stockName": "平煤股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "位于河南的焦煤龙头，虽不受山西直接停产影响，但能充分受益于焦煤行业供给收缩带来的价格普涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601666.SH",
+              "companyName": "平煤股份",
+              "companyProfile": "公司以平顶山天安煤业股份有限公司为前身，成立于1998年3月17日，并于2006年11月23日在上海证券交易所上市，控股股东为中国平煤神马控股集团有限公司，实际控制人为河南省国资委。公司自成立以来，生产经营稳健，安全状况良好，资源禀赋优异，得到了社会各界的广泛认可。公司位于河南省平顶山市，是新中国第一个自行勘探、设计兴建的国有特大型煤炭基地，素有“中原煤仓”之称。主营业务为煤炭开采、洗选加工和销售，资源储量近30亿吨，煤炭产品主要为混煤和冶炼精煤，是中南地区最大的炼焦煤生产基地。近年来，公司聚焦“大精煤”战略，把优质低硫主焦煤作为核心产品，并积极实施智能矿山建设、主辅分离、对标提升、瓦斯综合治理等专项行动，经营质效大幅提升。",
+              "profileSummary": "主营业务为煤炭开采、洗选加工和销售，资源储量近30亿吨，煤炭产品主要为混煤和冶炼精煤，是中南地区最大的炼焦煤生产基地。近年来，公司聚焦“大精煤”战略，把优质低硫主焦煤作为核心产品，并积极实施智能矿山建设、主辅分离、对标提升、瓦斯综合治理等专项行动，经营质效大幅提升。",
+              "majorProducts": "1/3焦精、肥精、天安动力煤、天安混煤、天安冶炼精煤、主焦精",
+              "revenueComposition": "冶炼精煤:63.8%;混煤:20.49%;其他业务:12.65%;其他洗煤:1.96%;材料销售:0.93%;地质勘探:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "冶炼精煤",
+                  "sharePct": 63.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "混煤",
+                  "sharePct": 20.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 12.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他洗煤",
+                  "sharePct": 1.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "材料销售",
+                  "sharePct": 0.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "地质勘探",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "1/3焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "瘦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "肥煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "贫瘦煤",
+                    "category": "炼焦煤"
+                  }
+                ],
+                "knownProducts": [
+                  "1/3焦煤",
+                  "焦煤",
+                  "瘦煤",
+                  "肥煤",
+                  "贫瘦煤"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "平煤股份拥有1/3焦煤、焦煤、瘦煤，其产业链位置与位于河南的焦煤龙头，虽不受山西直接停产影响，但能充分受益于焦煤行业供给收缩带来的价格普涨一致；当前的冶炼精煤（63.8%）、混煤（20.49%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由经营约束及需求或供给冲击决定，并需完成“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”。只有订单变化、产品价格、交付节奏和减值迹象持续改善，产品能力才会转化为公司层面的收入和盈利提升；冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 25111,
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "安徽焦煤龙头企业，受益于山西供给收缩带来的焦煤价格上涨，具备较强的业绩弹性。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600985.SH",
+              "companyName": "淮北矿业",
+              "companyProfile": "公司主营业务涵盖煤炭采掘、洗选加工及销售，以及煤化工产品的生产与销售。作为华东地区煤种齐全的重要炼焦精煤生产企业，公司拥有焦煤、肥煤、瘦煤、1/3焦煤、贫煤、气煤等主要煤种，其中焦煤、肥煤、瘦煤等炼焦煤储量占比超过70%。近年来，公司始终坚持“依托煤炭、延伸煤炭、超越煤炭”的发展战略，狠抓安全体系、开源提效、节流增效及管理创效。通过大力推进产业链的强链、延链、补链，公司积极探索人工智能、工业物联网、大数据、智能装备与现代煤炭开发利用的深度融合，已形成从煤炭开采、洗选、加工到焦炭冶炼及煤化工产品加工、煤泥矸石发电为一体的煤炭综合利用产业链条。未来，公司将坚持战略目标不动摇，以高质量和绿色低碳为主线，以改革创新为动力，以效率效益为导向。重点聚焦煤炭主业升级改造、高端化工向新材料延伸、新能源、新型建筑、智慧物流五大方向，进一步提升转型发展的引领能力，致力于建设成为国内一流的能源化工示范企业。",
+              "profileSummary": "公司主营业务涵盖煤炭采掘、洗选加工及销售，以及煤化工产品的生产与销售。通过大力推进产业链的强链、延链、补链，公司积极探索人工智能、工业物联网、大数据、智能装备与现代煤炭开发利用的深度融合，已形成从煤炭开采、洗选、加工到焦炭冶炼及煤化工产品加工、煤泥矸石发电为一体的煤炭综合利用产业链条。",
+              "majorProducts": "动力煤、焦炭、雷鸣科化安全被筒、雷鸣科化铵梯炸药、雷鸣科化爆破线、雷鸣科化导爆管、雷鸣科化电雷管、雷鸣科化高岭土、雷鸣科化雷管、雷鸣科化膨化硝铵炸药、雷鸣科化水胶炸药、雷鸣科化瓦楞纸箱、雷鸣科化五芯铅延期体、雷鸣科化震源药柱、炼焦精煤、煤化工、煤炭采掘、洗选加工",
+              "revenueComposition": "商品贸易:32.01%;煤炭产品:26.05%;煤化工产品:23.42%;工程及劳务:5.31%;配煤业务:3.93%;其他:3.15%;电力销售:2.02%;矿山业务:1.42%;爆破工程:1.16%;民爆器材产品销售:0.76%;运输服务:0.49%;其他业务:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "商品贸易",
+                  "sharePct": 32.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "煤炭产品",
+                  "sharePct": 26.05,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "煤化工产品",
+                  "sharePct": 23.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程及劳务",
+                  "sharePct": 5.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配煤业务",
+                  "sharePct": 3.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力销售",
+                  "sharePct": 2.02,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "矿山业务",
+                  "sharePct": 1.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "爆破工程",
+                  "sharePct": 1.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "民爆器材产品销售",
+                  "sharePct": 0.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运输服务",
+                  "sharePct": 0.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "1/3焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "肥煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦油",
+                    "category": "煤焦油"
+                  },
+                  {
+                    "name": "焦炭",
+                    "category": "冶金焦"
+                  }
+                ],
+                "knownProducts": [
+                  "硫酸铵",
+                  "粗苯",
+                  "乙醇",
+                  "甲醇",
+                  "化工产品贸易",
+                  "焦油",
+                  "焦炭",
+                  "贫煤"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "淮北矿业的煤炭产品（26.05%）、电力销售（2.02%）覆盖范围较宽，其中能够承载1/3焦煤、气煤、焦煤，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：安徽焦煤龙头企业，受益于山西供给收缩带来的焦煤价格上涨，具备较强的业绩弹性。现阶段无法用整个分部占比直接衡量受益程度，因为经营约束及需求或供给冲击还需沿“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”传导，相关产品在分部内部的收入权重才会逐步显现。订单变化、产品价格、交付节奏和减值迹象若持续增强，事件影响可以从产品层面扩散到公司盈利；若冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 25113,
+            "stockCode": "600546.SH",
+            "stockName": "山煤国际",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "地处山西的煤炭生产商，现货销售比例高，能最大程度受益于供给收缩带来的煤价上涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600546.SH",
+              "companyName": "山煤国际",
+              "companyProfile": "公司是山西煤炭进出口集团有限公司控股的A股上市公司(股票代码600546)，是在国内同行业中率先实现煤炭主营业务整体成功上市的企业，是山西省第28家A股上市公司、第10家煤焦能源类上市公司。经过多年的发展和积累，山煤国际现已形成覆盖各煤炭主产区、遍布重要运输线、占据主要出海口的相对独立完善的煤炭内外贸生产和销售体系。公司所属煤矿分布于大同、忻州、临汾、长治、晋城等地，煤矿地区分布广、品种齐全、煤质优良、产品入洗率高，矿井采掘系统先进、人员少、管理水平高。公司目前已形成动力煤、焦煤、无烟煤、半无烟煤四大煤炭生产基地，配有商品煤中心化验室，通过对各煤矿、选煤厂煤质管理工作严格考核，使公司煤炭产品长期保持高质量、低成本发展。",
+              "profileSummary": "公司是山西煤炭进出口集团有限公司控股的A股上市公司(股票代码600546)，是在国内同行业中率先实现煤炭主营业务整体成功上市的企业，是山西省第28家A股上市公司、第10家煤焦能源类上市公司。公司目前已形成动力煤、焦煤、无烟煤、半无烟煤四大煤炭生产基地，配有商品煤中心化验室，通过对各煤矿、选煤厂煤质管理工作严格考核，使公司煤炭产品长期保持高质量、低成本发展。",
+              "majorProducts": "山煤国际动力煤、山煤国际肥煤、山煤国际褐煤、山煤国际焦煤、山煤国际炼焦煤、山煤国际贫煤、山煤国际气煤、山煤国际弱粘结煤、山煤国际瘦煤、山煤国际无烟煤、山煤国际长焰煤",
+              "revenueComposition": "动力煤:38.88%;冶金煤:32.42%;贸易煤:25.38%;运输:1.98%;其他:1.34%",
+              "revenueSegments": [
+                {
+                  "name": "动力煤",
+                  "sharePct": 38.88,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "冶金煤",
+                  "sharePct": 32.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易煤",
+                  "sharePct": 25.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运输",
+                  "sharePct": 1.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "贫煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "1/3焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "无烟煤",
+                    "category": "无烟煤"
+                  },
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  }
+                ],
+                "knownProducts": [
+                  "煤炭贸易",
+                  "贫煤",
+                  "长焰煤",
+                  "无烟煤",
+                  "1/3焦煤",
+                  "气煤",
+                  "焦煤",
+                  "肥煤"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对山煤国际而言，地处山西的煤炭生产商，现货销售比例高，能最大程度受益于供给收缩带来的煤价上涨并非纯概念映射，因为动力煤占收入的38.88%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是经营约束及需求或供给冲击，传导效率取决于“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由订单变化、产品价格、交付节奏和减值迹象来区分；若冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 25114,
+            "stockCode": "601001.SH",
+            "stockName": "晋控煤业",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "山西省属重点动力煤企业，地处核心产区，生产受安监影响直接，且现货比例高，业绩弹性大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601001.SH",
+              "companyName": "晋控煤业",
+              "companyProfile": "公司是经山西省人民政府批准，由大同煤矿集团有限责任公司为主发起人，联合多家知名企业共同发起设立的一家集煤炭生产、洗选、加工和销售一体化的股份有限公司。公司作为优质动力煤生产企业，拥有低灰、低硫、挥发分适中、高发热量的可采煤层，被誉为工业粮食中的精品。公司具备灵活的生产能力，可根据用户的具体需求，定制生产不同发热量等级及不同粒度的洗选产品，从而全面适应各类用户的多样化要求。公司的销售网络及煤炭用户遍及全国20多个省、市、自治区，主要销往华东、华南、华北、华中、东北等核心区域。其煤炭产品广泛应用于电力、建材等多个重要行业，凭借卓越的品质和稳定的供应能力，深受用户青睐。",
+              "profileSummary": "公司是经山西省人民政府批准，由大同煤矿集团有限责任公司为主发起人，联合多家知名企业共同发起设立的一家集煤炭生产、洗选、加工和销售一体化的股份有限公司。其煤炭产品广泛应用于电力、建材等多个重要行业，凭借卓越的品质和稳定的供应能力，深受用户青睐。",
+              "majorProducts": "大同煤业大友洗煤、大同煤业大友粘结煤",
+              "revenueComposition": "煤炭:95.51%;煤炭附产品销售:3.21%;运输业务:0.77%;其他-其他:0.52%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭",
+                  "sharePct": 95.51,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "煤炭附产品销售",
+                  "sharePct": 3.21,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "运输业务",
+                  "sharePct": 0.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他-其他",
+                  "sharePct": 0.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "弱粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "1/3焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  }
+                ],
+                "knownProducts": [
+                  "高岭土原矿",
+                  "不粘煤",
+                  "弱粘煤",
+                  "长焰煤",
+                  "1/3焦煤",
+                  "气煤"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "晋控煤业的煤炭（95.51%）、煤炭附产品销售（3.21%）覆盖范围较宽，其中能够承载不粘煤、弱粘煤、长焰煤，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：山西省属重点动力煤企业，地处核心产区，生产受安监影响直接，且现货比例高，业绩弹性大。现阶段无法用整个分部占比直接衡量受益程度，因为经营约束及需求或供给冲击还需沿“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”传导，相关产品在分部内部的收入权重才会逐步显现。订单变化、产品价格、交付节奏和减值迹象若持续增强，事件影响可以从产品层面扩散到公司盈利；若冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 25115,
+            "stockCode": "601101.SH",
+            "stockName": "昊华能源",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "拥有较高现货销售比例的煤炭企业，能充分受益于煤炭价格上涨带来的盈利提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601101.SH",
+              "companyName": "昊华能源",
+              "companyProfile": "公司是中国五大无烟煤生产基地之一，拥有丰富的煤资源储量。主导产品“京局洁”牌煤炭具有特低硫、低磷、低氮、中低灰分、低挥发份、高发热量的特点，是洁净、环保、优质的无烟煤。产品广泛应用于冶金、电力、化工、建材等工业行业，畅销东北、华北、中南地区和京津两市，并出口亚洲、欧洲、北美、南美四大洲。公司拥有完备的安全生产系统、先进的质量检测技术和完善的储装运系统，是中国北方距港口最近的优质无烟煤生产企业。公司在大力发展煤炭主业的同时，将重点拓展环保新能源和新材料领域，努力打造一流国际化公司。",
+              "profileSummary": "主导产品“京局洁”牌煤炭具有特低硫、低磷、低氮、中低灰分、低挥发份、高发热量的特点，是洁净、环保、优质的无烟煤。产品广泛应用于冶金、电力、化工、建材等工业行业，畅销东北、华北、中南地区和京津两市，并出口亚洲、欧洲、北美、南美四大洲。",
+              "majorProducts": "甲醇、煤炭",
+              "revenueComposition": "煤炭:87.91%;化工:11.68%;其他业务:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭",
+                  "sharePct": 87.91,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "化工",
+                  "sharePct": 11.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "无烟煤",
+                    "category": "无烟煤"
+                  },
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "煤炭铁路运输",
+                    "category": "铁路货物运输"
+                  }
+                ],
+                "knownProducts": [
+                  "煤炭铁路运输",
+                  "甲醇",
+                  "不粘煤",
+                  "长焰煤",
+                  "无烟煤",
+                  "气煤"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "昊华能源的事件暴露较为直接：煤炭占收入的87.91%，相关业务不是边缘尝试；具体业务抓手是：拥有较高现货销售比例的煤炭企业，能充分受益于煤炭价格上涨带来的盈利提升。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于经营约束及需求或供给冲击是否通过“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”放大，尤其需要用订单变化、产品价格、交付节奏和减值迹象区分行业普涨与公司自身竞争力。如果冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 25116,
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内及澳洲均有大型煤矿，国内山西产能小受影响有限，能充分受益于全球能源价格上涨和国内供给紧张局面。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600188.SH",
+              "companyName": "兖矿能源",
+              "companyProfile": "公司是华东地区最大的煤炭生产商和中国最大的煤炭出口企业之一，主要从事煤炭生产、洗选加工、煤炭销售和铁路运输,煤化工，电力等业务，在国内煤炭行业中处于龙头地位。公司拥有自营铁路网和现代化煤炭水运码头，京沪、兖石、新兖铁路，京沪、京福高速公路穿越矿区。得天独厚的区位和交通优势，使公司成为东北亚市场，中国华东、华南市场最具竞争力的煤炭供应商之一。公司在中国境内的发展区域主要集中在中国山东、山西、陕西、内蒙古。在境外的产业主要分布在澳大利亚的昆士兰州、新南威尔士州和西澳大利亚洲；在加拿大萨斯喀彻温省拥有钾矿资源项目。公司同时在中国北京、上海、深圳、青岛、中国香港及新加坡等国家拥有金融投资及物流贸易产业布局。",
+              "profileSummary": "公司是华东地区最大的煤炭生产商和中国最大的煤炭出口企业之一，主要从事煤炭生产、洗选加工、煤炭销售和铁路运输,煤化工，电力等业务，在国内煤炭行业中处于龙头地位。公司拥有自营铁路网和现代化煤炭水运码头，京沪、兖石、新兖铁路，京沪、京福高速公路穿越矿区。",
+              "majorProducts": "兖州煤业1号精煤、兖州煤业2号精煤、兖州煤业3号精煤、兖州煤业混煤、兖州煤业块精煤、兖州煤业筛选原煤",
+              "revenueComposition": "煤炭:61.18%;煤化工、电力及热力:18.98%;物流贸易:12.66%;未分配项目:5.14%;矿用设备制造:1.43%;贷款和融资租赁:0.6%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭",
+                  "sharePct": 61.18,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "煤化工、电力及热力",
+                  "sharePct": 18.98,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "物流贸易",
+                  "sharePct": 12.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "未分配项目",
+                  "sharePct": 5.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿用设备制造",
+                  "sharePct": 1.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贷款和融资租赁",
+                  "sharePct": 0.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "1/3焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "供热",
+                    "category": "供暖"
+                  },
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  }
+                ],
+                "knownProducts": [
+                  "煤炭铁路运输",
+                  "燃煤发电",
+                  "供热",
+                  "煤化工石脑油",
+                  "醋酸",
+                  "己内酰胺",
+                  "醋酸乙酯",
+                  "甲醇"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "兖矿能源与事件存在真实业务交集：公司已有不粘煤、长焰煤、1/3焦煤，与国内及澳洲均有大型煤矿，国内山西产能小受影响有限，能充分受益于全球能源价格上涨和国内供给紧张局面所处的产业环节一致。煤炭（61.18%）、煤化工、电力及热力（18.98%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响经营约束及需求或供给冲击，只有经过“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”，才会形成可确认的收入和利润增量。订单变化、产品价格、交付节奏和减值迹象能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 25117,
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "地处陕西的大型煤企，虽受山西停产的直接影响较小，但安监形势已向全国扩散，且其高现货比例使其能受益于煤价上涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601225.SH",
+              "companyName": "陕西煤业",
+              "companyProfile": "公司是陕西煤业化工集团公司以煤炭主业资产出资，联合三峡集团、华能开发、陕西有色、陕鼓集团于2008年12月23日共同发起设立的股份有限公司。公司具有较强的资源优势、产品优势、区位优势、政策优势和专业化管理优势。公司主营业务为煤炭开采、洗选、加工、销售以及生产服务等。主要产品为煤炭，具有低灰、低硫、低磷、高发热量等特点，是优质的动力、化工及冶金用煤。公司现有“黄灵牌”“黄灵一号”“玉华牌”“红柳林牌”等多个品牌，多次被陕西省评为“信得过产品”“优质煤炭产品”。近年来，公司深入贯彻习近平新时代中国特色社会主义思想，全面落实新发展理念，紧盯国家能源安全发展战略，坚持“创新、安全、高效、绿色、和谐”理念，全面加快煤矿智能化建设进程，煤矿智能化采煤产能超过99%，7个全国智能化示范煤矿成功通过国家验收，建成全球首个10米大采高全国产智能化综采工作面、全国首个智能化无人综采工作面、全国首个450米超长智能综采工作面、全国首个全矿井智能化示范标杆、研发应用全国首个“AI+NOSA”安全风险智能监控系统等一系列智能化技术成果，为行业智能化建设提供了实践经验和典型示范。下属黄陵矿区、神南矿区连续两届获得中国工业大奖，公司连续获得“最佳上市公司”“中国最具价值投资百强”等多项荣誉。经过十余年的快速发展，公司已成为我国煤炭行业最具竞争力的上市公司之一，蝉联地方煤炭企业和陕西省上市企业市值首位，位列煤炭行业A股上市公司市值第二，入选陕西省国资委世界一流专业领军企业创建名单，被国务院国资委列为国有重点企业管理标杆创建行动标杆企业。",
+              "profileSummary": "公司主营业务为煤炭开采、洗选、加工、销售以及生产服务等。主要产品为煤炭，具有低灰、低硫、低磷、高发热量等特点，是优质的动力、化工及冶金用煤。",
+              "majorProducts": "陕西煤业不粘煤、陕西煤业贫瘦煤、陕西煤业气煤、陕西煤业弱粘煤、陕西煤业瘦煤、陕西煤业长焰煤",
+              "revenueComposition": "原选煤:39.18%;贸易煤:32.18%;洗煤:16.39%;电力:9.83%;其他:2.24%;运输:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "原选煤",
+                  "sharePct": 39.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易煤",
+                  "sharePct": 32.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "洗煤",
+                  "sharePct": 16.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力",
+                  "sharePct": 9.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运输",
+                  "sharePct": 0.18,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "煤炭管道运输",
+                    "category": "危险品运输"
+                  },
+                  {
+                    "name": "煤炭贸易",
+                    "category": "煤炭贸易"
+                  },
+                  {
+                    "name": "煤炭铁路运输",
+                    "category": "铁路货物运输"
+                  },
+                  {
+                    "name": "燃煤发电",
+                    "category": "燃煤发电"
+                  }
+                ],
+                "knownProducts": [
+                  "煤炭管道运输",
+                  "煤炭铁路运输",
+                  "铁路专用线运输业务",
+                  "燃煤发电",
+                  "煤炭贸易",
+                  "不粘煤",
+                  "长焰煤"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "陕西煤业更接近“小基数、高弹性”的事件期权，而不是当前利润主线。运输占收入的0.18%，公司在产业链中的具体抓手是：地处陕西的大型煤企，虽受山西停产的直接影响较小，但安监形势已向全国扩散，且其高现货比例使其能受益于煤价上涨。若经营约束及需求或供给冲击沿着“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”兑现，相关业务增速可能很高，但较低的收入基数意味着短期贡献未必足以改变公司整体业绩。这类标的最重要的不是行业空间叙事，而是订单变化、产品价格、交付节奏和减值迹象能否证明业务开始跨越规模门槛；若冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力，估值弹性往往会先于报表弹性消退。"
+          },
+          {
+            "sourceRowNumber": 25118,
+            "stockCode": "601088.SH",
+            "stockName": "中国神华",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "煤电运一体化龙头，长协比例高使其业绩稳健，虽弹性较小，但在能源安全和行业景气上行背景下具备核心价值。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601088.SH",
+              "companyName": "中国神华",
+              "companyProfile": "公司是世界领先的以煤炭为基础的一体化能源公司，是我国最大的煤炭生产企业和销售企业，全球第二大煤炭上市公司，并拥有中国最大规模的优质煤炭储量。主营业务是煤炭、电力的生产和销售，铁路、港口和船舶运输，煤制烯烃等业务。煤炭、发电、铁路、港口、航运、煤化工一体化经营模式是中国神华的独特经营方式和盈利模式。中国神华的发展战略目标是“建设世界一流的清洁能源供应商”。",
+              "profileSummary": "公司是世界领先的以煤炭为基础的一体化能源公司，是我国最大的煤炭生产企业和销售企业，全球第二大煤炭上市公司，并拥有中国最大规模的优质煤炭储量。主营业务是煤炭、电力的生产和销售，铁路、港口和船舶运输，煤制烯烃等业务。",
+              "majorProducts": "神华动力配煤、神华混煤、神华火电供应、神华块煤、神华石炭混煤、神华石炭优混、神华特低灰煤、神华选精煤、神华优混、神华原煤、神华准混5000、神华准混5100",
+              "revenueComposition": "煤炭收入:60.47%;电力收入:28.04%;运输收入:5.12%;其他业务:4.64%;煤化工收入:1.72%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭收入",
+                  "sharePct": 60.47,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电力收入",
+                  "sharePct": 28.04,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "运输收入",
+                  "sharePct": 5.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 4.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "煤化工收入",
+                  "sharePct": 1.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "煤炭水路运输",
+                    "category": "内河货物航运"
+                  },
+                  {
+                    "name": "煤炭港口装卸堆存业务",
+                    "category": "港口综合服务"
+                  },
+                  {
+                    "name": "煤炭铁路运输",
+                    "category": "铁路货物运输"
+                  },
+                  {
+                    "name": "燃煤发电",
+                    "category": "燃煤发电"
+                  }
+                ],
+                "knownProducts": [
+                  "煤炭港口装卸堆存业务",
+                  "煤炭水路运输",
+                  "煤炭铁路运输",
+                  "燃煤发电",
+                  "聚丙烯(PP)",
+                  "聚乙烯",
+                  "不粘煤",
+                  "长焰煤"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "中国神华的煤炭收入（60.47%）、电力收入（28.04%）覆盖范围较宽，其中能够承载不粘煤、长焰煤、煤炭水路运输，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：煤电运一体化龙头，长协比例高使其业绩稳健，虽弹性较小，但在能源安全和行业景气上行背景下具备核心价值。现阶段无法用整个分部占比直接衡量受益程度，因为经营约束及需求或供给冲击还需沿“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”传导，相关产品在分部内部的收入权重才会逐步显现。订单变化、产品价格、交付节奏和减值迹象若持续增强，事件影响可以从产品层面扩散到公司盈利；若冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 25119,
+            "stockCode": "601898.SH",
+            "stockName": "中煤能源",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "大型央企，煤种齐全，受益于煤价中枢抬升，经营稳健，在保供体系中地位重要。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601898.SH",
+              "companyName": "中煤能源",
+              "companyProfile": "中国中煤能源股份有限公司是中国中煤能源集团有限公司于2006年8月22日独家发起设立的股份制公司。2006年12月公司在香港成功上市，2008年2月发行A股。公司总部设于中国北京。公司是集煤炭生产和贸易、煤化工、发电、煤矿装备制造四大主业于一体的大型能源企业，致力于建设具有较强国际竞争力的清洁能源供应商，成为安全绿色生产的领航者、清洁高效利用的示范者、提供优质服务的践行者，创造企业发展的经济、社会和环境综合价值。公司拥有丰富的煤炭资源、多样化的煤炭产品以及现代化煤炭开采、洗选和混配生产技术工艺。以本公司为主体开发的山西平朔矿区、内蒙古鄂尔多斯呼吉尔特矿区是中国重要的动力煤基地，山西乡宁矿区的焦煤资源是国内低硫、特低磷的优质炼焦煤资源。公司主要煤炭生产基地均配备畅通的运煤通道，并与煤炭港口连接，为公司赢得竞争优势、实现持续发展提供有利条件。",
+              "profileSummary": "公司是集煤炭生产和贸易、煤化工、发电、煤矿装备制造四大主业于一体的大型能源企业，致力于建设具有较强国际竞争力的清洁能源供应商，成为安全绿色生产的领航者、清洁高效利用的示范者、提供优质服务的践行者，创造企业发展的经济、社会和环境综合价值。公司拥有丰富的煤炭资源、多样化的煤炭产品以及现代化煤炭开采、洗选和混配生产技术工艺。",
+              "majorProducts": "金融业务、煤化工、煤矿装备、煤炭生产、煤炭销售",
+              "revenueComposition": "煤炭业务:80.96%;煤化工业务:12.51%;其他业务收入:6.7%;煤矿装备制造业务:6.16%;金融业务:1.49%;租赁收入:0.24%;其他:0.23%;销售材料:0.11%;劳务收入:0.05%;内部抵销:-8.45%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭业务",
+                  "sharePct": 80.96,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "煤化工业务",
+                  "sharePct": 12.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务收入",
+                  "sharePct": 6.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "煤矿装备制造业务",
+                  "sharePct": 6.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金融业务",
+                  "sharePct": 1.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁收入",
+                  "sharePct": 0.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "销售材料",
+                  "sharePct": 0.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "劳务收入",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -8.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "弱粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "1/3焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  }
+                ],
+                "knownProducts": [
+                  "燃煤发电",
+                  "农业用尿素",
+                  "硝酸铵",
+                  "甲醇",
+                  "工业用尿素",
+                  "聚丙烯(PP)",
+                  "聚乙烯",
+                  "液压支架"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中煤能源已经具备不粘煤、弱粘煤、长焰煤等业务能力，大型央企，煤种齐全，受益于煤价中枢抬升，经营稳健，在保供体系中地位重要并非单纯概念映射。当前对应的收入被归入煤炭业务（80.96%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于经营约束及需求或供给冲击是否通过“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”放大，并最终反映在订单变化、产品价格、交付节奏和减值迹象上；冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 25120,
+            "stockCode": "600256.SH",
+            "stockName": "广汇能源",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "新疆煤炭龙头，受益于\"疆煤外运\"和全国性供给偏紧，煤化工业务亦受益于高油价下的成本优势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600256.SH",
+              "companyName": "广汇能源",
+              "companyProfile": "公司立足新疆本土及中亚丰富的石油、天然气和煤炭资源，确立了以能源产业为经营中心的产业发展格局，做强资源获取与资源转换，形成了以LNG、煤炭、煤化工、石油为核心产品，能源物流为支撑的天然气液化、煤化工、石油天然气勘探开发三大业务板块，发展成为国内经营规模最大的陆基LNG供应商，成为国内唯一一家同时具有煤、油、气三种资源的民营企业。公司东联内地、沿海开拓市场，在甘肃、宁夏、江苏、中原、西南等区域构建能源物流中转基地，形成了较完善的中游能源物流通道及“疆煤东运”产、供、销体系，确保了产品畅通有序均衡生产，最大程度实现资源、产能间的效率与效益，促进广汇能源可持续发展。公司承担“国家863计划中重型LNG运输车辆开发项目”，加快推进LNG、L-CNG加气站及配套服务体系建设，利用科技创新优势率先在中重型货运卡车上推广使用公司生产的LNG环保燃料，形成了LNG燃料中重型车辆的产业化推广路径，为中国清洁能源汽车产业发展和地区节能减排发挥重要作用。",
+              "profileSummary": "公司立足新疆本土及中亚丰富的石油、天然气和煤炭资源，确立了以能源产业为经营中心的产业发展格局，做强资源获取与资源转换，形成了以LNG、煤炭、煤化工、石油为核心产品，能源物流为支撑的天然气液化、煤化工、石油天然气勘探开发三大业务板块，发展成为国内经营规模最大的陆基LNG供应商，成为国内唯一一家同时具有煤、油、气三种资源的民营企业。公司东联内地、沿海开拓市场，在甘肃、宁夏、江苏、中原、西南等区域构建能源物流中转基地，形成了较完善的中游能源…",
+              "majorProducts": "煤化工产品、煤炭、天然气销售",
+              "revenueComposition": "煤炭销售:52.6%;天然气销售:31.41%;煤化工产品:14.2%;其他:1.79%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭销售",
+                  "sharePct": 52.6,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "天然气销售",
+                  "sharePct": 31.41,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "煤化工产品",
+                  "sharePct": 14.2,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "加氢尾油",
+                    "category": "矿物油"
+                  },
+                  {
+                    "name": "粗白油",
+                    "category": "矿物油"
+                  },
+                  {
+                    "name": "LNG(液化天然气)",
+                    "category": "陆地天然气开采"
+                  },
+                  {
+                    "name": "乙二醇(MEG)",
+                    "category": "醇"
+                  }
+                ],
+                "knownProducts": [
+                  "二甲基二硫(DMDS)",
+                  "二甲基亚砜(DMSO)",
+                  "乙二醇(MEG)",
+                  "甲醇",
+                  "二甲醚",
+                  "加氢尾油",
+                  "粗白油",
+                  "LNG(液化天然气)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "广汇能源的事件逻辑具备真实业务底座，但尚不足以代表全部公司：煤化工产品占收入的14.2%。公司与事件的具体联系在于：新疆煤炭龙头，受益于\"疆煤外运\"和全国性供给偏紧，煤化工业务亦受益于高油价下的成本优势，对应的核心变量是经营约束及需求或供给冲击。若这一变量沿着“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，订单变化、产品价格、交付节奏和减值迹象既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力则可能令增量低于预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "4条低于3星的源记录已按当前关注口径排除。",
+      "1条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

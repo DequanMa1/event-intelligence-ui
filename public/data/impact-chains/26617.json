@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26617",
@@ -9,37 +9,19 @@
     "date": "2026-06-30"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 5,
-    "mappedStockCount": 3,
-    "unmappedStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 1,
     "stocks": [
-      {
-        "sourceRowNumber": 8689,
-        "stockCode": "00975.HK",
-        "stockName": "MONGOL MINING",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 8690,
-        "stockCode": "00276.HK",
-        "stockName": "蒙古能源",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 8693,
         "stockCode": "603871.SH",
         "stockName": "嘉友国际",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 8697,
@@ -48,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 17
+        "anchorProductCount": 5
       },
       {
         "sourceRowNumber": 8698,
@@ -57,24 +39,15 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 7
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 8689,
-        "stockCode": "00975.HK",
-        "stockName": "MONGOL MINING",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 8690,
-        "stockCode": "00276.HK",
-        "stockName": "蒙古能源",
-        "rating": "★★★★☆",
+        "sourceRowNumber": 8693,
+        "stockCode": "603871.SH",
+        "stockName": "嘉友国际",
+        "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
@@ -85,254 +58,60 @@
     "candidateCoreProductCount": 30,
     "selectedCoreProductCount": 9,
     "selectedCompanyCoreProductCount": 9,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 14,
-    "downstreamCandidateCount": 31,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 24,
+    "relatedIndustryCandidateCount": 13,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
-        "code": "1111000006",
-        "name": "主焦煤",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018",
-          "1111000019"
+        "code": "1111000007",
+        "name": "1/3焦煤",
+        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 1/3焦煤",
+        "industryPath": [
+          "采掘",
+          "煤炭开采",
+          "煤炭开采",
+          "炼焦煤",
+          "炼焦煤",
+          "1/3焦煤"
         ],
-        "linkedCoreProductNames": [
-          "焦油",
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1111000010",
-        "name": "瘦煤",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018",
-          "1111000019"
-        ],
-        "linkedCoreProductNames": [
-          "焦油",
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1111000026",
-        "name": "原煤",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018",
-          "1111000019"
-        ],
-        "linkedCoreProductNames": [
-          "焦油",
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1111000023",
-        "name": "洗中煤",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018",
-          "1111000019"
-        ],
-        "linkedCoreProductNames": [
-          "焦油",
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1111000014",
-        "name": "洗精煤",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018",
-          "1111000019"
-        ],
-        "linkedCoreProductNames": [
-          "焦油",
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1111000025",
-        "name": "炼焦煤",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018",
-          "1111000019"
-        ],
-        "linkedCoreProductNames": [
-          "焦油",
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140046490",
-        "name": "煤炭开采",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000001",
-          "1111000005"
-        ],
-        "linkedCoreProductNames": [
-          "不粘煤",
-          "长焰煤"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140005128",
-        "name": "煤炭",
-        "anchorCount": 1,
+        "level5Industry": {
+          "code": "1200000810",
+          "name": "炼焦煤"
+        },
+        "level6Industry": {
+          "code": "1200003774",
+          "name": "炼焦煤"
+        },
+        "level7Product": {
+          "code": "1111000007",
+          "name": "1/3焦煤"
+        },
+        "matchedSourceLevel": 7,
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032373"
+        "stocks": [
+          {
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "焦煤"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "relevanceScore": 13,
+        "strongRelevanceScore": 12,
+        "matchedTerms": [
+          "煤炭开采",
+          "焦煤",
+          "煤炭"
+        ]
       },
-      {
-        "code": "1140075729",
-        "name": "仪器售后维修服务",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140075727",
-        "name": "仪器备品备件销售",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140075723",
-        "name": "检测分析仪器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140033671",
-        "name": "焦炉机械成套设备",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140058898",
-        "name": "煤化工领域催化剂销售",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140141460",
-        "name": "石化工程",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
       {
         "code": "1111000008",
         "name": "气煤",
@@ -358,23 +137,21 @@
           "name": "气煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600188.SH",
             "stockName": "兖矿能源",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "600985.SH",
             "stockName": "淮北矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 4,
         "relevanceScore": 13,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -408,118 +185,21 @@
           "name": "焦煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600188.SH",
             "stockName": "兖矿能源",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "600985.SH",
             "stockName": "淮北矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 3,
-        "relevanceScore": 13,
-        "strongRelevanceScore": 12,
-        "matchedTerms": [
-          "煤炭开采",
-          "焦煤",
-          "煤炭"
-        ]
-      },
-      {
-        "code": "1111000007",
-        "name": "1/3焦煤",
-        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 1/3焦煤",
-        "industryPath": [
-          "采掘",
-          "煤炭开采",
-          "煤炭开采",
-          "炼焦煤",
-          "炼焦煤",
-          "1/3焦煤"
-        ],
-        "level5Industry": {
-          "code": "1200000810",
-          "name": "炼焦煤"
-        },
-        "level6Industry": {
-          "code": "1200003774",
-          "name": "炼焦煤"
-        },
-        "level7Product": {
-          "code": "1111000007",
-          "name": "1/3焦煤"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "600188.SH",
-            "stockName": "兖矿能源",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "600985.SH",
-            "stockName": "淮北矿业",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 3,
-        "relevanceScore": 13,
-        "strongRelevanceScore": 12,
-        "matchedTerms": [
-          "煤炭开采",
-          "焦煤",
-          "煤炭"
-        ]
-      },
-      {
-        "code": "1111000009",
-        "name": "肥煤",
-        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 肥煤",
-        "industryPath": [
-          "采掘",
-          "煤炭开采",
-          "煤炭开采",
-          "炼焦煤",
-          "炼焦煤",
-          "肥煤"
-        ],
-        "level5Industry": {
-          "code": "1200000810",
-          "name": "炼焦煤"
-        },
-        "level6Industry": {
-          "code": "1200003774",
-          "name": "炼焦煤"
-        },
-        "level7Product": {
-          "code": "1111000009",
-          "name": "肥煤"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "600985.SH",
-            "stockName": "淮北矿业",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 4,
         "relevanceScore": 13,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -553,18 +233,99 @@
           "name": "不粘煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600188.SH",
             "stockName": "兖矿能源",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 0,
+        "relevanceScore": 13,
+        "strongRelevanceScore": 12,
+        "matchedTerms": [
+          "煤炭开采",
+          "动力煤",
+          "煤炭"
+        ]
+      },
+      {
+        "code": "1111000009",
+        "name": "肥煤",
+        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 肥煤",
+        "industryPath": [
+          "采掘",
+          "煤炭开采",
+          "煤炭开采",
+          "炼焦煤",
+          "炼焦煤",
+          "肥煤"
+        ],
+        "level5Industry": {
+          "code": "1200000810",
+          "name": "炼焦煤"
+        },
+        "level6Industry": {
+          "code": "1200003774",
+          "name": "炼焦煤"
+        },
+        "level7Product": {
+          "code": "1111000009",
+          "name": "肥煤"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 13,
+        "strongRelevanceScore": 12,
+        "matchedTerms": [
+          "煤炭开采",
+          "焦煤",
+          "煤炭"
+        ]
+      },
+      {
+        "code": "1111000011",
+        "name": "贫煤",
+        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 贫煤",
+        "industryPath": [
+          "采掘",
+          "煤炭开采",
+          "煤炭开采",
+          "动力煤",
+          "动力煤",
+          "贫煤"
+        ],
+        "level5Industry": {
+          "code": "1200000811",
+          "name": "动力煤"
+        },
+        "level6Industry": {
+          "code": "1200003775",
+          "name": "动力煤"
+        },
+        "level7Product": {
+          "code": "1111000011",
+          "name": "贫煤"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 13,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -598,112 +359,20 @@
           "name": "长焰煤"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600188.SH",
             "stockName": "兖矿能源",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 0,
         "relevanceScore": 13,
         "strongRelevanceScore": 12,
         "matchedTerms": [
           "煤炭开采",
           "动力煤",
-          "煤炭"
-        ]
-      },
-      {
-        "code": "1111000011",
-        "name": "贫煤",
-        "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 贫煤",
-        "industryPath": [
-          "采掘",
-          "煤炭开采",
-          "煤炭开采",
-          "动力煤",
-          "动力煤",
-          "贫煤"
-        ],
-        "level5Industry": {
-          "code": "1200000811",
-          "name": "动力煤"
-        },
-        "level6Industry": {
-          "code": "1200003775",
-          "name": "动力煤"
-        },
-        "level7Product": {
-          "code": "1111000011",
-          "name": "贫煤"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "600985.SH",
-            "stockName": "淮北矿业",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 13,
-        "strongRelevanceScore": 12,
-        "matchedTerms": [
-          "煤炭开采",
-          "动力煤",
-          "煤炭"
-        ]
-      },
-      {
-        "code": "1111000018",
-        "name": "焦炭",
-        "hierarchyPath": "采掘 > 煤炭开采 > 焦炭加工 > 焦炭产品 > 冶金焦 > 焦炭",
-        "industryPath": [
-          "采掘",
-          "煤炭开采",
-          "焦炭加工",
-          "焦炭产品",
-          "冶金焦",
-          "焦炭"
-        ],
-        "level5Industry": {
-          "code": "1200000807",
-          "name": "焦炭产品"
-        },
-        "level6Industry": {
-          "code": "1210000051",
-          "name": "冶金焦"
-        },
-        "level7Product": {
-          "code": "1111000018",
-          "name": "焦炭"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "600985.SH",
-            "stockName": "淮北矿业",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 16,
-        "downstreamCount": 25,
-        "relevanceScore": 7,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "煤炭开采",
           "煤炭"
         ]
       },
@@ -732,18 +401,56 @@
           "name": "焦油"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600985.SH",
             "stockName": "淮北矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 9,
-        "downstreamCount": 4,
+        "relevanceScore": 7,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "煤炭开采",
+          "煤炭"
+        ]
+      },
+      {
+        "code": "1111000018",
+        "name": "焦炭",
+        "hierarchyPath": "采掘 > 煤炭开采 > 焦炭加工 > 焦炭产品 > 冶金焦 > 焦炭",
+        "industryPath": [
+          "采掘",
+          "煤炭开采",
+          "焦炭加工",
+          "焦炭产品",
+          "冶金焦",
+          "焦炭"
+        ],
+        "level5Industry": {
+          "code": "1200000807",
+          "name": "焦炭产品"
+        },
+        "level6Industry": {
+          "code": "1210000051",
+          "name": "冶金焦"
+        },
+        "level7Product": {
+          "code": "1111000018",
+          "name": "焦炭"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -752,240 +459,507 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1111000037",
-        "name": "焦炉煤气",
-        "anchorCount": 3,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1111000007",
-          "1111000008",
-          "1111000009"
+        "code": "1200000811",
+        "name": "动力煤",
+        "description": "动力煤主要用于火力发电，是A股重要能源板块。因直接关联电力成本与供应安全，且具高分红、低估值特征，常被视为防御性资产。其股价受煤炭价格、政策调控及季节性用电需求影响显著，备受市场关注。",
+        "stockCount": 4,
+        "starWeight": 14,
+        "level7ProductCount": 4,
+        "relevanceScore": 158,
+        "stocks": [
+          {
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601898.SH",
+            "stockName": "中煤能源",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "1/3焦煤",
-          "气煤",
-          "肥煤"
+        "products": [
+          {
+            "code": "1111000005",
+            "name": "不粘煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 不粘煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000001",
+            "name": "长焰煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 长焰煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000004",
+            "name": "弱粘煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 弱粘煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000011",
+            "name": "贫煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 贫煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600985.SH",
+                "stockName": "淮北矿业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 3
-        }
+        "rank": 1
       },
       {
-        "code": "1140077808",
-        "name": "焦碳",
-        "anchorCount": 3,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1111000008",
-          "1111000009",
-          "1140032373"
+        "code": "1200001164",
+        "name": "工业品贸易",
+        "description": "工业品贸易指B2B模式下MRO等物资的流通服务。因受益于制造业升级、供应链数字化及国产替代，具备规模效应与效率提升逻辑，成为资本市场关注焦点，旨在通过整合长尾需求降低企业采购成本。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 2,
+        "relevanceScore": 20,
+        "stocks": [
+          {
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000065.SZ",
+            "stockName": "北方国际",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "气煤",
-          "焦煤",
-          "肥煤"
+        "products": [
+          {
+            "code": "1140166063",
+            "name": "石油装备出口贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 机械设备贸易 > 石油装备出口贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000065.SZ",
+                "stockName": "北方国际",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140052897",
+            "name": "煤炭贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 煤炭贸易 > 煤炭贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 3
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 8,
+    "mappedStockCount": 7,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 24,
+    "candidateIndustryCount": 13,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 8692,
+        "stockCode": "300191.SZ",
+        "stockName": "潜能恒信",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140132260",
-        "name": "碳砖",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018",
-          "1111000019"
-        ],
-        "linkedCoreProductNames": [
-          "焦油",
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 8693,
+        "stockCode": "603871.SH",
+        "stockName": "嘉友国际",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140086240",
-        "name": "不锈钢炉料",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032373"
-        ],
-        "linkedCoreProductNames": [
-          "焦煤"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8694,
+        "stockCode": "000065.SZ",
+        "stockName": "北方国际",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140005309",
-        "name": "煤沥青",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000019"
-        ],
-        "linkedCoreProductNames": [
-          "焦油"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 8695,
+        "stockCode": "600010.SH",
+        "stockName": "包钢股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140033029",
-        "name": "生铁",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 8697,
+        "stockCode": "600188.SH",
+        "stockName": "兖矿能源",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 9
       },
       {
-        "code": "1140028002",
-        "name": "萘",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000019"
-        ],
-        "linkedCoreProductNames": [
-          "焦油"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 8698,
+        "stockCode": "600985.SH",
+        "stockName": "淮北矿业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140042174",
-        "name": "金属加工",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 8699,
+        "stockCode": "601225.SH",
+        "stockName": "陕西煤业",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1113000017",
-        "name": "钛合金",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
+        "sourceRowNumber": 8700,
+        "stockCode": "601898.SH",
+        "stockName": "中煤能源",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000811",
+        "name": "动力煤",
+        "description": "动力煤主要用于火力发电，是A股重要能源板块。因直接关联电力成本与供应安全，且具高分红、低估值特征，常被视为防御性资产。其股价受煤炭价格、政策调控及季节性用电需求影响显著，备受市场关注。",
+        "stockCount": 4,
+        "starWeight": 14,
+        "level7ProductCount": 4,
+        "relevanceScore": 158,
+        "stocks": [
+          {
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601898.SH",
+            "stockName": "中煤能源",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "焦炭"
+        "products": [
+          {
+            "code": "1111000005",
+            "name": "不粘煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 不粘煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000001",
+            "name": "长焰煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 长焰煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000004",
+            "name": "弱粘煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 弱粘煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601898.SH",
+                "stockName": "中煤能源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "动力煤"
+            ]
+          },
+          {
+            "code": "1111000011",
+            "name": "贫煤",
+            "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 贫煤",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600985.SH",
+                "stockName": "淮北矿业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140046775",
-        "name": "TDI(甲苯二异氰酸酯)",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
+        "code": "1200001164",
+        "name": "工业品贸易",
+        "description": "工业品贸易指B2B模式下MRO等物资的流通服务。因受益于制造业升级、供应链数字化及国产替代，具备规模效应与效率提升逻辑，成为资本市场关注焦点，旨在通过整合长尾需求降低企业采购成本。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 2,
+        "relevanceScore": 20,
+        "stocks": [
+          {
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000065.SZ",
+            "stockName": "北方国际",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "焦炭"
+        "products": [
+          {
+            "code": "1140166063",
+            "name": "石油装备出口贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 机械设备贸易 > 石油装备出口贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000065.SZ",
+                "stockName": "北方国际",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140052897",
+            "name": "煤炭贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 煤炭贸易 > 煤炭贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600188.SH",
+                "stockName": "兖矿能源",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601225.SH",
+                "stockName": "陕西煤业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140007463",
-        "name": "一氧化碳",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140029121",
-        "name": "光伏产品制造",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140045225",
-        "name": "冶金工业原料贸易",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140071210",
-        "name": "冶金工程",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1111000018"
-        ],
-        "linkedCoreProductNames": [
-          "焦炭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -1000,10 +974,798 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 13,
+    "eligibleSourceRowCount": 8,
+    "totalStockCount": 8,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 1,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 8,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 8693,
+            "stockCode": "603871.SH",
+            "stockName": "嘉友国际",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司是中蒙跨境综合物流龙头，罢工将直接影响其核心业务蒙古煤炭的运输量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603871.SH",
+              "companyName": "嘉友国际",
+              "companyProfile": "公司成立于2005年6月，是国内率先开展跨境多式联运的物流企业，公司于2018年成功登陆上海证券交易所A股主板市场，是国际化的、可持续发展的、稳定盈利的中国物流领先企业。公司业务包括国内、国际多式联运、物流基础设施投资运营和供应链贸易。公司以蒙古、非洲、中亚等陆运跨境需求旺盛的地区为重点发展区域，投资道路、保税仓库及海关监管场所等物流基础设施并运营，在全球范围内汇聚物流人才，整合物流资源，为客户提供订制化的供应链贸易及物流服务产品，业务范围遍布亚洲、非洲、欧洲、北美等60多个国家和地区。公司坚持“科技助力物流标准化”的先进理念，将传统物流服务向数字化、智能化、信息化发展。公司自主研发的“物流信息管理系统”将每一单物流产品从订制方案到实施到交付全过程监控并记录，信息同步共享，实现数据实时分析处理，最终形成公司丰富的产品智能数据库，保障公司业务长期稳定发展。公司以物流信息管理系统为核心，集成不同专业化信息系统，其中“智能仓库管理信息系统”被评为“中国交通运输信息化智能化优秀新技术创新应用”，“嘉盈吉运”智慧物流平台被评为“中国交通运输信息化创新技术”。公司具有国际货运代理、网络货运平台、无船承运人资质，是国际货运代理协会(FIATA)、中国国际货运代理协会(CIFA)、国际货运联盟(WCA)会员单位。在国家“一带一路”发展战略的带动下，嘉友公司发挥长期在中蒙、中亚、非洲、东南亚等“一带一路”沿线市场积累的品牌资源，加快公司现代化，国际化、多元化发展进程，以中国企业的新发展为世界提供新机遇，为全球经济的共同发展做贡献。",
+              "profileSummary": "公司业务包括国内、国际多式联运、物流基础设施投资运营和供应链贸易。公司以蒙古、非洲、中亚等陆运跨境需求旺盛的地区为重点发展区域，投资道路、保税仓库及海关监管场所等物流基础设施并运营，在全球范围内汇聚物流人才，整合物流资源，为客户提供订制化的供应链贸易及物流服务产品，业务范围遍布亚洲、非洲、欧洲、北美等60多个国家和地区。",
+              "majorProducts": "大宗矿产品物流、供应链贸易服务、跨境多式联运、智能仓储",
+              "revenueComposition": "主焦煤供应链贸易服务:61.77%;跨境多式联运综合物流服务:28.6%;陆港项目服务:7.34%;PPP项目合同:2.28%",
+              "revenueSegments": [
+                {
+                  "name": "主焦煤供应链贸易服务",
+                  "sharePct": 61.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "跨境多式联运综合物流服务",
+                  "sharePct": 28.6,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "陆港项目服务",
+                  "sharePct": 7.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "PPP项目合同",
+                  "sharePct": 2.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "国际大宗矿产物流",
+                    "category": "跨境物流"
+                  },
+                  {
+                    "name": "国际物流业务",
+                    "category": "跨境物流"
+                  }
+                ],
+                "knownProducts": [
+                  "进出口货物保税仓储",
+                  "国际大宗矿产物流",
+                  "国际物流业务",
+                  "大宗商品全供应链服务",
+                  "国际工程"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "嘉友国际与事件存在真实业务交集：公司已有国际大宗矿产物流、国际物流业务，与公司是中蒙跨境综合物流龙头，罢工将直接影响其核心业务蒙古煤炭的运输量所处的产业环节一致。跨境多式联运综合物流服务（28.6%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 8697,
+            "stockCode": "600188.SH",
+            "stockName": "兖矿能源",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "作为国内大型煤炭生产商，蒙古煤炭供应中断将利好国内煤价，公司作为弹性标的将受益。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600188.SH",
+              "companyName": "兖矿能源",
+              "companyProfile": "公司是华东地区最大的煤炭生产商和中国最大的煤炭出口企业之一，主要从事煤炭生产、洗选加工、煤炭销售和铁路运输,煤化工，电力等业务，在国内煤炭行业中处于龙头地位。公司拥有自营铁路网和现代化煤炭水运码头，京沪、兖石、新兖铁路，京沪、京福高速公路穿越矿区。得天独厚的区位和交通优势，使公司成为东北亚市场，中国华东、华南市场最具竞争力的煤炭供应商之一。公司在中国境内的发展区域主要集中在中国山东、山西、陕西、内蒙古。在境外的产业主要分布在澳大利亚的昆士兰州、新南威尔士州和西澳大利亚洲；在加拿大萨斯喀彻温省拥有钾矿资源项目。公司同时在中国北京、上海、深圳、青岛、中国香港及新加坡等国家拥有金融投资及物流贸易产业布局。",
+              "profileSummary": "公司是华东地区最大的煤炭生产商和中国最大的煤炭出口企业之一，主要从事煤炭生产、洗选加工、煤炭销售和铁路运输,煤化工，电力等业务，在国内煤炭行业中处于龙头地位。公司拥有自营铁路网和现代化煤炭水运码头，京沪、兖石、新兖铁路，京沪、京福高速公路穿越矿区。",
+              "majorProducts": "兖州煤业1号精煤、兖州煤业2号精煤、兖州煤业3号精煤、兖州煤业混煤、兖州煤业块精煤、兖州煤业筛选原煤",
+              "revenueComposition": "煤炭:61.18%;煤化工、电力及热力:18.98%;物流贸易:12.66%;未分配项目:5.14%;矿用设备制造:1.43%;贷款和融资租赁:0.6%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭",
+                  "sharePct": 61.18,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "煤化工、电力及热力",
+                  "sharePct": 18.98,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "物流贸易",
+                  "sharePct": 12.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "未分配项目",
+                  "sharePct": 5.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿用设备制造",
+                  "sharePct": 1.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贷款和融资租赁",
+                  "sharePct": 0.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "1/3焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "供热",
+                    "category": "供暖"
+                  }
+                ],
+                "knownProducts": [
+                  "煤炭铁路运输",
+                  "燃煤发电",
+                  "供热",
+                  "煤化工石脑油",
+                  "醋酸",
+                  "己内酰胺",
+                  "醋酸乙酯",
+                  "甲醇"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "兖矿能源与事件存在真实业务交集：公司已有不粘煤、长焰煤、1/3焦煤，与作为国内大型煤炭生产商，蒙古煤炭供应中断将利好国内煤价，公司作为弹性标的将受益所处的产业环节一致。煤炭（61.18%）、煤化工、电力及热力（18.98%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 8698,
+            "stockCode": "600985.SH",
+            "stockName": "淮北矿业",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "蒙古国是焦煤进口重要来源国，罢工导致的供应收缩将利好国内焦煤企业，公司作为重点焦煤标的将受益。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600985.SH",
+              "companyName": "淮北矿业",
+              "companyProfile": "公司主营业务涵盖煤炭采掘、洗选加工及销售，以及煤化工产品的生产与销售。作为华东地区煤种齐全的重要炼焦精煤生产企业，公司拥有焦煤、肥煤、瘦煤、1/3焦煤、贫煤、气煤等主要煤种，其中焦煤、肥煤、瘦煤等炼焦煤储量占比超过70%。近年来，公司始终坚持“依托煤炭、延伸煤炭、超越煤炭”的发展战略，狠抓安全体系、开源提效、节流增效及管理创效。通过大力推进产业链的强链、延链、补链，公司积极探索人工智能、工业物联网、大数据、智能装备与现代煤炭开发利用的深度融合，已形成从煤炭开采、洗选、加工到焦炭冶炼及煤化工产品加工、煤泥矸石发电为一体的煤炭综合利用产业链条。未来，公司将坚持战略目标不动摇，以高质量和绿色低碳为主线，以改革创新为动力，以效率效益为导向。重点聚焦煤炭主业升级改造、高端化工向新材料延伸、新能源、新型建筑、智慧物流五大方向，进一步提升转型发展的引领能力，致力于建设成为国内一流的能源化工示范企业。",
+              "profileSummary": "公司主营业务涵盖煤炭采掘、洗选加工及销售，以及煤化工产品的生产与销售。通过大力推进产业链的强链、延链、补链，公司积极探索人工智能、工业物联网、大数据、智能装备与现代煤炭开发利用的深度融合，已形成从煤炭开采、洗选、加工到焦炭冶炼及煤化工产品加工、煤泥矸石发电为一体的煤炭综合利用产业链条。",
+              "majorProducts": "动力煤、焦炭、雷鸣科化安全被筒、雷鸣科化铵梯炸药、雷鸣科化爆破线、雷鸣科化导爆管、雷鸣科化电雷管、雷鸣科化高岭土、雷鸣科化雷管、雷鸣科化膨化硝铵炸药、雷鸣科化水胶炸药、雷鸣科化瓦楞纸箱、雷鸣科化五芯铅延期体、雷鸣科化震源药柱、炼焦精煤、煤化工、煤炭采掘、洗选加工",
+              "revenueComposition": "商品贸易:32.01%;煤炭产品:26.05%;煤化工产品:23.42%;工程及劳务:5.31%;配煤业务:3.93%;其他:3.15%;电力销售:2.02%;矿山业务:1.42%;爆破工程:1.16%;民爆器材产品销售:0.76%;运输服务:0.49%;其他业务:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "商品贸易",
+                  "sharePct": 32.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "煤炭产品",
+                  "sharePct": 26.05,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "煤化工产品",
+                  "sharePct": 23.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程及劳务",
+                  "sharePct": 5.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配煤业务",
+                  "sharePct": 3.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力销售",
+                  "sharePct": 2.02,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "矿山业务",
+                  "sharePct": 1.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "爆破工程",
+                  "sharePct": 1.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "民爆器材产品销售",
+                  "sharePct": 0.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运输服务",
+                  "sharePct": 0.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "1/3焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "肥煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦油",
+                    "category": "煤焦油"
+                  },
+                  {
+                    "name": "焦炭",
+                    "category": "冶金焦"
+                  }
+                ],
+                "knownProducts": [
+                  "硫酸铵",
+                  "粗苯",
+                  "乙醇",
+                  "甲醇",
+                  "化工产品贸易",
+                  "焦油",
+                  "焦炭",
+                  "贫煤"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "淮北矿业的煤炭产品（26.05%）、电力销售（2.02%）覆盖范围较宽，其中能够承载1/3焦煤、气煤、焦煤，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：蒙古国是焦煤进口重要来源国，罢工导致的供应收缩将利好国内焦煤企业，公司作为重点焦煤标的将受益。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 8692,
+            "stockCode": "300191.SZ",
+            "stockName": "潜能恒信",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司在蒙古国拥有石油区块权益，罢工可能对蒙古国能源行业的整体运营环境造成影响。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300191.SZ",
+              "companyName": "潜能恒信",
+              "companyProfile": "公司是一家集高端勘探开发技术服务与油气投资管理生产于一身的国际化能源企业。主营业务涉及石油天然气、地热能勘探开发、城市勘查，涵盖地下三维地震数据采集、成像处理解释、综合地球物理地质研究、区块资源评价、钻完井服务、水平井压裂设计及施工，及其地下三维空间大数据人工智能平台等相关软件开发等技术服务。作为高新技术企业，在软件方面，公司拥有自主知识产权的三大核心技术，WEFOX三维叠前成像技术、GEOSTAR储层预测技术、AVO-MAVORICK三维油气预测技术；60多个专利软件著作权及400多项工业化勘探开发技术工艺。硬件装备方面，拥有2000多节点并行计算机群大型计算中心；多个三维地震采集队伍及其可扩展到几十万道的地震采集系统；可控震源20余台，地下三维地震数据采集能力可达每年3000平方公里。油气资产方面，拥有八个区块具有巨大价值的油气区块，其中中国渤海05/31区块，4口探井和1口评价井获得高产工业油流；中国渤海09/17区块；美国Reinecke油田勘探开发；蒙古国Ergel-12区块；中国南海北部湾涠洲103西油田开发和22/04涠洲勘探项目；中国准噶尔盆地九1-九5区块。",
+              "profileSummary": "公司是一家集高端勘探开发技术服务与油气投资管理生产于一身的国际化能源企业。主营业务涉及石油天然气、地热能勘探开发、城市勘查，涵盖地下三维地震数据采集、成像处理解释、综合地球物理地质研究、区块资源评价、钻完井服务、水平井压裂设计及施工，及其地下三维空间大数据人工智能平台等相关软件开发等技术服务。",
+              "majorProducts": "MAVORICK三维AVO油气预测技术、SINO-GEOSTAR储层预测技术、高保真WEFOX双向聚焦的三维叠前成像技术",
+              "revenueComposition": "油气开采:96.48%;石油勘探技术:2.55%;租赁:0.97%",
+              "revenueSegments": [
+                {
+                  "name": "油气开采",
+                  "sharePct": 96.48,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "石油勘探技术",
+                  "sharePct": 2.55,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "租赁",
+                  "sharePct": 0.97,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "油气开采业务",
+                    "category": "天然原油"
+                  },
+                  {
+                    "name": "石油设备租赁",
+                    "category": "工程机械租赁服务"
+                  }
+                ],
+                "knownProducts": [
+                  "石油设备租赁",
+                  "地震数据处理解释服务",
+                  "油气开采业务"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "潜能恒信的相关业务已决定公司大部分经营表现：油气开采（96.48%）、租赁（0.97%）合计约占收入的97.45%。公司与事件的直接业务联系是：公司在蒙古国拥有石油区块权益，罢工可能对蒙古国能源行业的整体运营环境造成影响，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 8694,
+            "stockCode": "000065.SZ",
+            "stockName": "北方国际",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司与蒙古国ETT公司在智慧口岸建设、提升煤炭通关效率等方面有业务合作，罢工将影响相关业务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000065.SZ",
+              "companyName": "北方国际",
+              "companyProfile": "公司是服务“一带一路”建设的骨干先锋企业，先后打造了巴基斯坦橙线地铁、克罗地亚塞尼风电等一批明珠项目。公司具有强大的国际化经营能力和投融资能力，始终专注于国际市场的经营，建立了遍布全球的营销网络，实现了国际工程与专业化产品贸易的有机融合。公司充分发挥投资驱动作用，总承包和投资建设了多个“一带一路”标志性项目，在轨道交通、电力工程、石油矿产设施建设、市政房建、农业民生、车辆与装备贸易、包装容器研发与生产、物流服务等方面具有优秀业绩与较强竞争力。公司业务范围广泛、专业能力突出，并具有强大的系统集成能力，可以为业主提供一体化和全方位的服务。“传承卓越、共铸价值、分享成功”是公司一直秉承的价值理念，我们致力成为创造卓越社会价值的标杆企业。展望未来，我们将坚持可持续健康发展理念，加强同海内外各界的业务联系与合作，持续推进国际化经营，为全球可持续发展传递持久动力，不断提升员工福利和关怀，践行社会责任，用优良的业绩回报股东，以优质的服务奉献社会。",
+              "profileSummary": "公司具有强大的国际化经营能力和投融资能力，始终专注于国际市场的经营，建立了遍布全球的营销网络，实现了国际工程与专业化产品贸易的有机融合。公司业务范围广泛、专业能力突出，并具有强大的系统集成能力，可以为业主提供一体化和全方位的服务。",
+              "majorProducts": "电站运营、国际工程承包、国内建筑工程、货物贸易、金属包装容器、物流服务",
+              "revenueComposition": "工程建设与服务:46.63%;资源设备供应链:40.17%;工业制造:9.1%;电力运营:3.71%;其他业务:0.39%",
+              "revenueSegments": [
+                {
+                  "name": "工程建设与服务",
+                  "sharePct": 46.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "资源设备供应链",
+                  "sharePct": 40.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业制造",
+                  "sharePct": 9.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力运营",
+                  "sharePct": 3.71,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "跨境物流",
+                    "category": "跨境物流"
+                  },
+                  {
+                    "name": "光伏发电",
+                    "category": "太阳能发电"
+                  },
+                  {
+                    "name": "光伏电站工程",
+                    "category": "发电工程"
+                  },
+                  {
+                    "name": "石油装备出口贸易",
+                    "category": "机械设备贸易"
+                  }
+                ],
+                "knownProducts": [
+                  "跨境物流",
+                  "光伏发电",
+                  "太阳能灯具出口贸易",
+                  "工程机械出口贸易",
+                  "石油装备出口贸易",
+                  "重型卡车出口贸易",
+                  "国际工程",
+                  "光伏电站工程"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "北方国际已经具备跨境物流、光伏发电、光伏电站工程等业务能力，公司与蒙古国ETT公司在智慧口岸建设、提升煤炭通关效率等方面有业务合作，罢工将影响相关业务并非单纯概念映射。当前对应的收入被归入电力运营（3.71%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，并最终反映在客户认证、新增订单、交付节奏、相关业务收入和毛利率上；客户验证或交付节奏低于预期，订单停留在小批量阶段会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 8695,
+            "stockCode": "600010.SH",
+            "stockName": "包钢股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司靠近蒙煤产地，常规配煤中蒙煤掺配比例达20%-30%，罢工将直接影响其焦煤原料供应。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600010.SH",
+              "companyName": "包钢股份",
+              "companyProfile": "公司始建于1954年，是国家在“一五”期间建设的重点项目之一，也是周恩来总理唯一为其投产剪彩的钢铁企业。“齐心协力建包钢”的历史佳话从这里诞生，其发展备受瞩目、影响深远。1999年，为打造钢铁上市公司，公司以轧钢资产为主设立了内蒙古包钢钢联股份有限公司，并于2001年在上海证券交易所正式挂牌上市。上市二十多年来，公司资产总额大幅增加，股权融资规模显著，总市值大幅增长，已成为我国重要的钢铁工业基地。公司依托白云鄂博铁和稀土共生的资源禀赋，造就了独有的“稀土钢”特色。其产品拥有良好的延展性、耐磨性、耐腐蚀性、耐低温性、韧性及抗拉拔性，广受下游用户的认可和好评。产品广泛应用于京沪高铁、青藏铁路、三峡工程、北京大兴国际机场、中俄东线天然气管道等国家重点工程项目，并远销欧美等60个国家和地区。经过多年的发展，公司获评内蒙古品牌建设标杆企业，实现连续多年上榜。稀土钢品牌跻身全国前列，品牌价值持续提升，多项产品获评中钢协“金杯”系列奖项，入选“中国卓越钢铁企业品牌”。目前，公司具备千万吨级粗钢生产能力，可生产重轨、风电板、耐磨钢、锌铝镁镀层钢板、管线钢、家电钢等多种高端钢材产品，持续为国家重大工程和全球市场提供高质量材料支撑。",
+              "profileSummary": "稀土钢品牌跻身全国前列，品牌价值持续提升，多项产品获评中钢协“金杯”系列奖项，入选“中国卓越钢铁企业品牌”。目前，公司具备千万吨级粗钢生产能力，可生产重轨、风电板、耐磨钢、锌铝镁镀层钢板、管线钢、家电钢等多种高端钢材产品，持续为国家重大工程和全球市场提供高质量材料支撑。",
+              "majorProducts": "板材、钢管、钢轨、焦副产品、稀土钢产品、稀土精矿、线棒材、型材、萤石",
+              "revenueComposition": "板材:48.99%;其他业务:24.54%;管材:10.45%;型材:8.93%;线棒材:7.1%",
+              "revenueSegments": [
+                {
+                  "name": "板材",
+                  "sharePct": 48.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 24.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "管材",
+                  "sharePct": 10.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "型材",
+                  "sharePct": 8.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "线棒材",
+                  "sharePct": 7.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "冶金级萤石精粉",
+                  "酸级萤石精粉",
+                  "稀土精矿",
+                  "型材",
+                  "管线钢",
+                  "中厚板",
+                  "冷轧卷板",
+                  "镀锌板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "包钢股份的业务范围能够覆盖公司靠近蒙煤产地，常规配煤中蒙煤掺配比例达20%-30%，罢工将直接影响其焦煤原料供应所处的产业环节，但当前板材（48.99%）、其他业务（24.54%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”完成兑现，并在订单、收入确认、产品结构和毛利率变化上形成持续改善；若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 8699,
+            "stockCode": "601225.SH",
+            "stockName": "陕西煤业",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "蒙古煤炭供应中断将加剧国内煤炭市场紧张情绪，利好国内煤炭龙头企业。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601225.SH",
+              "companyName": "陕西煤业",
+              "companyProfile": "公司是陕西煤业化工集团公司以煤炭主业资产出资，联合三峡集团、华能开发、陕西有色、陕鼓集团于2008年12月23日共同发起设立的股份有限公司。公司具有较强的资源优势、产品优势、区位优势、政策优势和专业化管理优势。公司主营业务为煤炭开采、洗选、加工、销售以及生产服务等。主要产品为煤炭，具有低灰、低硫、低磷、高发热量等特点，是优质的动力、化工及冶金用煤。公司现有“黄灵牌”“黄灵一号”“玉华牌”“红柳林牌”等多个品牌，多次被陕西省评为“信得过产品”“优质煤炭产品”。近年来，公司深入贯彻习近平新时代中国特色社会主义思想，全面落实新发展理念，紧盯国家能源安全发展战略，坚持“创新、安全、高效、绿色、和谐”理念，全面加快煤矿智能化建设进程，煤矿智能化采煤产能超过99%，7个全国智能化示范煤矿成功通过国家验收，建成全球首个10米大采高全国产智能化综采工作面、全国首个智能化无人综采工作面、全国首个450米超长智能综采工作面、全国首个全矿井智能化示范标杆、研发应用全国首个“AI+NOSA”安全风险智能监控系统等一系列智能化技术成果，为行业智能化建设提供了实践经验和典型示范。下属黄陵矿区、神南矿区连续两届获得中国工业大奖，公司连续获得“最佳上市公司”“中国最具价值投资百强”等多项荣誉。经过十余年的快速发展，公司已成为我国煤炭行业最具竞争力的上市公司之一，蝉联地方煤炭企业和陕西省上市企业市值首位，位列煤炭行业A股上市公司市值第二，入选陕西省国资委世界一流专业领军企业创建名单，被国务院国资委列为国有重点企业管理标杆创建行动标杆企业。",
+              "profileSummary": "公司主营业务为煤炭开采、洗选、加工、销售以及生产服务等。主要产品为煤炭，具有低灰、低硫、低磷、高发热量等特点，是优质的动力、化工及冶金用煤。",
+              "majorProducts": "陕西煤业不粘煤、陕西煤业贫瘦煤、陕西煤业气煤、陕西煤业弱粘煤、陕西煤业瘦煤、陕西煤业长焰煤",
+              "revenueComposition": "原选煤:39.18%;贸易煤:32.18%;洗煤:16.39%;电力:9.83%;其他:2.24%;运输:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "原选煤",
+                  "sharePct": 39.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易煤",
+                  "sharePct": 32.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "洗煤",
+                  "sharePct": 16.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力",
+                  "sharePct": 9.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运输",
+                  "sharePct": 0.18,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "煤炭管道运输",
+                    "category": "危险品运输"
+                  },
+                  {
+                    "name": "煤炭贸易",
+                    "category": "煤炭贸易"
+                  },
+                  {
+                    "name": "煤炭铁路运输",
+                    "category": "铁路货物运输"
+                  },
+                  {
+                    "name": "燃煤发电",
+                    "category": "燃煤发电"
+                  }
+                ],
+                "knownProducts": [
+                  "煤炭管道运输",
+                  "煤炭铁路运输",
+                  "铁路专用线运输业务",
+                  "燃煤发电",
+                  "煤炭贸易",
+                  "不粘煤",
+                  "长焰煤"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "陕西煤业更接近“小基数、高弹性”的事件期权，而不是当前利润主线。运输占收入的0.18%，公司在产业链中的具体抓手是：蒙古煤炭供应中断将加剧国内煤炭市场紧张情绪，利好国内煤炭龙头企业。若事件能否转化为可确认的经营增量沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”兑现，相关业务增速可能很高，但较低的收入基数意味着短期贡献未必足以改变公司整体业绩。这类标的最重要的不是行业空间叙事，而是订单、收入确认、产品结构和毛利率变化能否证明业务开始跨越规模门槛；若事件关联停留在主题层面，未形成可持续订单或利润贡献，估值弹性往往会先于报表弹性消退。"
+          },
+          {
+            "sourceRowNumber": 8700,
+            "stockCode": "601898.SH",
+            "stockName": "中煤能源",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "蒙古煤炭供应中断将对国内煤炭供需格局产生影响，利好国内大型煤炭供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601898.SH",
+              "companyName": "中煤能源",
+              "companyProfile": "中国中煤能源股份有限公司是中国中煤能源集团有限公司于2006年8月22日独家发起设立的股份制公司。2006年12月公司在香港成功上市，2008年2月发行A股。公司总部设于中国北京。公司是集煤炭生产和贸易、煤化工、发电、煤矿装备制造四大主业于一体的大型能源企业，致力于建设具有较强国际竞争力的清洁能源供应商，成为安全绿色生产的领航者、清洁高效利用的示范者、提供优质服务的践行者，创造企业发展的经济、社会和环境综合价值。公司拥有丰富的煤炭资源、多样化的煤炭产品以及现代化煤炭开采、洗选和混配生产技术工艺。以本公司为主体开发的山西平朔矿区、内蒙古鄂尔多斯呼吉尔特矿区是中国重要的动力煤基地，山西乡宁矿区的焦煤资源是国内低硫、特低磷的优质炼焦煤资源。公司主要煤炭生产基地均配备畅通的运煤通道，并与煤炭港口连接，为公司赢得竞争优势、实现持续发展提供有利条件。",
+              "profileSummary": "公司是集煤炭生产和贸易、煤化工、发电、煤矿装备制造四大主业于一体的大型能源企业，致力于建设具有较强国际竞争力的清洁能源供应商，成为安全绿色生产的领航者、清洁高效利用的示范者、提供优质服务的践行者，创造企业发展的经济、社会和环境综合价值。公司拥有丰富的煤炭资源、多样化的煤炭产品以及现代化煤炭开采、洗选和混配生产技术工艺。",
+              "majorProducts": "金融业务、煤化工、煤矿装备、煤炭生产、煤炭销售",
+              "revenueComposition": "煤炭业务:80.96%;煤化工业务:12.51%;其他业务收入:6.7%;煤矿装备制造业务:6.16%;金融业务:1.49%;租赁收入:0.24%;其他:0.23%;销售材料:0.11%;劳务收入:0.05%;内部抵销:-8.45%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭业务",
+                  "sharePct": 80.96,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "煤化工业务",
+                  "sharePct": 12.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务收入",
+                  "sharePct": 6.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "煤矿装备制造业务",
+                  "sharePct": 6.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金融业务",
+                  "sharePct": 1.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁收入",
+                  "sharePct": 0.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "销售材料",
+                  "sharePct": 0.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "劳务收入",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -8.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "不粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "弱粘煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "长焰煤",
+                    "category": "动力煤"
+                  },
+                  {
+                    "name": "1/3焦煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "气煤",
+                    "category": "炼焦煤"
+                  },
+                  {
+                    "name": "焦煤",
+                    "category": "炼焦煤"
+                  }
+                ],
+                "knownProducts": [
+                  "燃煤发电",
+                  "农业用尿素",
+                  "硝酸铵",
+                  "甲醇",
+                  "工业用尿素",
+                  "聚丙烯(PP)",
+                  "聚乙烯",
+                  "液压支架"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中煤能源已经具备不粘煤、弱粘煤、长焰煤等业务能力，蒙古煤炭供应中断将对国内煤炭供需格局产生影响，利好国内大型煤炭供应商并非单纯概念映射。当前对应的收入被归入煤炭业务（80.96%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "1条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

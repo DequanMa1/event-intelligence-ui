@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
-  "status": "no_company_product_mapping",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
+  "status": "no_four_star_stocks",
   "event": {
     "mainId": "26928",
     "uid": "0RB7WE9BZ16WN",
@@ -9,47 +9,164 @@
     "date": "2026-07-03"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 1,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 0,
     "mappedStockCount": 0,
-    "unmappedStockCount": 1,
-    "stocks": [
-      {
-        "sourceRowNumber": 15991,
-        "stockCode": "09973.HK",
-        "stockName": "奇瑞汽车",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 15991,
-        "stockCode": "09973.HK",
-        "stockName": "奇瑞汽车",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStockCount": 0,
+    "stocks": [],
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 0,
     "selectedCoreProductCount": 0,
     "selectedCompanyCoreProductCount": 0,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 0,
-    "downstreamCandidateCount": 0,
-    "shownUpstreamCount": 0,
-    "shownDownstreamCount": 0
+    "level7ProductCount": 2,
+    "relatedIndustryCandidateCount": 1,
+    "shownRelatedIndustryCount": 1
   },
-  "chain": {
-    "upstream": [],
-    "core": [],
-    "downstream": []
+  "productIndustryMap": {
+    "coreProducts": [],
+    "relatedIndustries": [
+      {
+        "code": "1200001159",
+        "name": "新能源乘用车",
+        "description": "新能源乘用车指纯电或插混等家用汽车。因契合“双碳”战略、技术迭代快及政策强力支持，兼具高成长性与广阔市场空间，成为A股核心赛道，备受资金青睐。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "002594.SZ",
+            "stockName": "比亚迪",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140135870",
+            "name": "油电混动新能源乘用车",
+            "hierarchyPath": "汽车 > 汽车整车 > 乘用车 > 新能源乘用车 > 油电混动新能源乘用车 > 油电混动新能源乘用车",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002594.SZ",
+                "stockName": "比亚迪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140131416",
+            "name": "纯电动新能源乘用车",
+            "hierarchyPath": "汽车 > 汽车整车 > 乘用车 > 新能源乘用车 > 纯电动新能源乘用车 > 纯电动新能源乘用车",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002594.SZ",
+                "stockName": "比亚迪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 2,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 2,
+    "candidateIndustryCount": 1,
+    "relatedIndustryCount": 1,
+    "stocks": [
+      {
+        "sourceRowNumber": 15982,
+        "stockCode": "002920.SZ",
+        "stockName": "德赛西威",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 15992,
+        "stockCode": "002594.SZ",
+        "stockName": "比亚迪",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001159",
+        "name": "新能源乘用车",
+        "description": "新能源乘用车指纯电或插混等家用汽车。因契合“双碳”战略、技术迭代快及政策强力支持，兼具高成长性与广阔市场空间，成为A股核心赛道，备受资金青睐。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "002594.SZ",
+            "stockName": "比亚迪",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140135870",
+            "name": "油电混动新能源乘用车",
+            "hierarchyPath": "汽车 > 汽车整车 > 乘用车 > 新能源乘用车 > 油电混动新能源乘用车 > 油电混动新能源乘用车",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002594.SZ",
+                "stockName": "比亚迪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140131416",
+            "name": "纯电动新能源乘用车",
+            "hierarchyPath": "汽车 > 汽车整车 > 乘用车 > 新能源乘用车 > 纯电动新能源乘用车 > 纯电动新能源乘用车",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002594.SZ",
+                "stockName": "比亚迪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      }
+    ]
   },
   "industryAnalysis": {
     "status": "unavailable",
@@ -59,10 +176,167 @@
     "researchSources": [],
     "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 33,
+    "eligibleSourceRowCount": 2,
+    "totalStockCount": 2,
+    "groupCount": 1,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 18,
+    "excludedNonAShareCount": 13,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 2,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 15982,
+            "stockCode": "002920.SZ",
+            "stockName": "德赛西威",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内智驾域控制器龙头，与地平线、英伟达等芯片厂商深度合作，为理想、小鹏、长城等众多车企提供域控产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002920.SZ",
+              "companyName": "德赛西威",
+              "companyProfile": "公司是国际领先的移动出行科技公司之一，致力于实现智慧出行的全球共享。公司深度聚焦于智能座舱、组合辅助驾驶和网联服务三大领域的高效融合，持续开发高度集成的智能硬件和领先的软件算法，为全球客户提供安全、愉悦和绿色的移动出行整体解决方案和服务。凭借39年来在设计、开发、生产过程中的深厚积淀，公司不断拓展自身在研发创新、客户服务、安全验证方面的综合实力，构筑从智慧出行到智慧交通的技术链路，积极应对汽车行业在新四化趋势下的挑战，满足汽车厂商对不同产品组合及业务开发模式的多元需求。为驾乘者提供卓越的出行体验的同时，也给未来出行带来更多想象空间。公司积极响应全球碳中和战略，从经济、社会、环境三个维度出发，推动落实安全可靠、成长共赢、绿色环保三大可持续发展目标。在回馈社会的同时，尊重公司每一位员工，为雇员打造多元共生的工作环境和高能成长的发展平台。我们鼓励全球各分部之间平等开放、协同发展，公司人秉承同一使命，共赴一致目标——创领安全、愉悦和绿色的出行生活。",
+              "profileSummary": "公司深度聚焦于智能座舱、组合辅助驾驶和网联服务三大领域的高效融合，持续开发高度集成的智能硬件和领先的软件算法，为全球客户提供安全、愉悦和绿色的移动出行整体解决方案和服务。凭借39年来在设计、开发、生产过程中的深厚积淀，公司不断拓展自身在研发创新、客户服务、安全验证方面的综合实力，构筑从智慧出行到智慧交通的技术链路，积极应对汽车行业在新四化趋势下的挑战，满足汽车厂商对不同产品组合及业务开发模式的多元需求。",
+              "majorProducts": "网联服务、智能驾驶、智能座舱",
+              "revenueComposition": "智能座舱:63.23%;智能驾驶:29.79%;其他:6.98%",
+              "revenueSegments": [
+                {
+                  "name": "智能座舱",
+                  "sharePct": 63.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能驾驶",
+                  "sharePct": 29.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 6.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "座舱域控制器",
+                  "抬头显示器(HUD)",
+                  "智能驾驶域控制器(ADCU)",
+                  "毫米波汽车雷达",
+                  "汽车车身域控制器(BDC)",
+                  "车载摄像头",
+                  "高级驾驶辅助系统(ADAS)",
+                  "车载信息智能终端"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "德赛西威的主要经营内容是智能座舱（63.23%）、智能驾驶（29.79%），具体产品集中在座舱域控制器、抬头显示器(HUD)、智能驾驶域控制器(ADCU)、毫米波汽车雷达。“国内智驾域控制器龙头，与地平线、英伟达等芯片厂商深度合作，为理想、小鹏、长城等众多车企提供域控产品”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善商业化进度和订单兑现，也需要先补上产品落地和客户导入，再经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才可能影响业绩。客户认证、新增订单、交付节奏、相关业务收入和毛利率没有同步改善时，股价反应更可能来自主题交易；若客户验证或交付节奏低于预期，订单停留在小批量阶段，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 15992,
+            "stockCode": "002594.SZ",
+            "stockName": "比亚迪",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "地平线的重要客户，近期获得其大额订单突破，同时也在自研\"璇玑\"智驾芯片，形成合作与竞争关系。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002594.SZ",
+              "companyName": "比亚迪",
+              "companyProfile": "公司成立于1994年11月18日，总部位于广东省深圳市，业务横跨汽车、电子、新能源和轨道交通四大产业。公司扛起时代责任和使命，坚定拥抱汽车电动化、智能化浪潮，打造中国和全球的新能源汽车龙头，走出一条绿色创新发展之路。公司的使命是“用技术创新，满足人们对美好生活的向往”。我们把推动实现三大绿色梦想、持续改善全球生态环境、造福全人类视为最重要的社会责任。公司高度崇尚技术、鼓励创新，把技术作为公司最核心的竞争力，把创新作为推动公司持续发展的根本动力。竞争、务实、激情、创新是公司的企业文化。",
+              "profileSummary": "公司成立于1994年11月18日，总部位于广东省深圳市，业务横跨汽车、电子、新能源和轨道交通四大产业。公司扛起时代责任和使命，坚定拥抱汽车电动化、智能化浪潮，打造中国和全球的新能源汽车龙头，走出一条绿色创新发展之路。",
+              "majorProducts": "比亚迪汽车、充电器、电声产品、光电子产品、锂电池及能源产品、镍电池、手机部件及组装业务、太阳能电池、微电子",
+              "revenueComposition": "汽车:80.68%;手机部件及组装等:19.31%;其他:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "汽车",
+                  "sharePct": 80.68,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "手机部件及组装等",
+                  "sharePct": 19.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "油电混动新能源乘用车",
+                    "category": "油电混动新能源乘用车"
+                  },
+                  {
+                    "name": "纯电动新能源乘用车",
+                    "category": "纯电动新能源乘用车"
+                  }
+                ],
+                "knownProducts": [
+                  "油电混动新能源乘用车",
+                  "纯电动新能源乘用车",
+                  "手机部件组装",
+                  "户用储能一体机",
+                  "集装箱储能系统",
+                  "储能锂电池",
+                  "全固态电池",
+                  "消费类锂离子电池"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "比亚迪的汽车（80.68%）覆盖范围较宽，其中能够承载油电混动新能源乘用车、纯电动新能源乘用车，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：地平线的重要客户，近期获得其大额订单突破，同时也在自研\"璇玑\"智驾芯片，形成合作与竞争关系。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "18条低于3星的源记录已按当前关注口径排除。",
+      "13条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

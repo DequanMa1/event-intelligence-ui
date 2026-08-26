@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26552",
@@ -9,9 +9,9 @@
     "date": "2026-06-29"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 7,
-    "mappedStockCount": 5,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 5,
+    "mappedStockCount": 3,
     "unmappedStockCount": 2,
     "stocks": [
       {
@@ -20,8 +20,8 @@
         "stockName": "恒立液压",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 11
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 7255,
@@ -29,8 +29,8 @@
         "stockName": "艾迪精密",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 10
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 7260,
@@ -39,7 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 19
+        "anchorProductCount": 14
       },
       {
         "sourceRowNumber": 7261,
@@ -48,7 +48,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 21
+        "anchorProductCount": 14
       },
       {
         "sourceRowNumber": 7262,
@@ -57,41 +57,23 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
-      },
-      {
-        "sourceRowNumber": 7263,
-        "stockCode": "CAT.N",
-        "stockName": "卡特彼勒",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 7264,
-        "stockCode": "6301.T",
-        "stockName": "小松",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 11
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 7263,
-        "stockCode": "CAT.N",
-        "stockName": "卡特彼勒",
-        "rating": "★★★★",
+        "sourceRowNumber": 7254,
+        "stockCode": "601100.SH",
+        "stockName": "恒立液压",
+        "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       },
       {
-        "sourceRowNumber": 7264,
-        "stockCode": "6301.T",
-        "stockName": "小松",
+        "sourceRowNumber": 7255,
+        "stockCode": "603638.SH",
+        "stockName": "艾迪精密",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -103,278 +85,12 @@
     "candidateCoreProductCount": 50,
     "selectedCoreProductCount": 18,
     "selectedCompanyCoreProductCount": 18,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 228,
-    "downstreamCandidateCount": 176,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 75,
+    "relatedIndustryCandidateCount": 28,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140032708",
-        "name": "柴油发动机",
-        "anchorCount": 5,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032670",
-          "1140032671",
-          "1140032673",
-          "1140032675",
-          "1140032688"
-        ],
-        "linkedCoreProductNames": [
-          "内燃叉车",
-          "压路机",
-          "推土机",
-          "摊铺机",
-          "铣刨机"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140007292",
-        "name": "工程机械轮胎",
-        "anchorCount": 5,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032660",
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机",
-          "混凝土输送泵"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 5
-        }
-      },
-      {
-        "code": "1140034690",
-        "name": "汽车底盘",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032655",
-          "1140032660",
-          "1140032663",
-          "1140032666"
-        ],
-        "linkedCoreProductNames": [
-          "汽车起重机",
-          "混凝土搅拌车",
-          "混凝土输送泵",
-          "随车起重机"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140033934",
-        "name": "电铲履带板",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032664",
-          "1140032670",
-          "1140032675",
-          "1140032676"
-        ],
-        "linkedCoreProductNames": [
-          "履带起重机",
-          "挖掘机",
-          "推土机",
-          "摊铺机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
-      },
-      {
-        "code": "1140088874",
-        "name": "工程机械分动箱",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032664",
-          "1140032670",
-          "1140032688"
-        ],
-        "linkedCoreProductNames": [
-          "履带起重机",
-          "摊铺机",
-          "铣刨机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 3
-        }
-      },
-      {
-        "code": "1140122308",
-        "name": "农用机械座椅",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032675",
-          "1140032676"
-        ],
-        "linkedCoreProductNames": [
-          "挖掘机",
-          "推土机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140163259",
-        "name": "工程机械操控手柄",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032663",
-          "1140032676"
-        ],
-        "linkedCoreProductNames": [
-          "挖掘机",
-          "汽车起重机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140163261",
-        "name": "起重机遥控装置",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032663",
-          "1140032664"
-        ],
-        "linkedCoreProductNames": [
-          "履带起重机",
-          "汽车起重机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140036896",
-        "name": "中心铰接架",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032671"
-        ],
-        "linkedCoreProductNames": [
-          "压路机"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140036899",
-        "name": "刮板输送带",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032670"
-        ],
-        "linkedCoreProductNames": [
-          "摊铺机"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040514",
-        "name": "剪叉式高空作业平台举升机构",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140035918"
-        ],
-        "linkedCoreProductNames": [
-          "高空作业平台"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040516",
-        "name": "剪叉式高空作业平台传动系统",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140035918"
-        ],
-        "linkedCoreProductNames": [
-          "高空作业平台"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040517",
-        "name": "剪叉式高空作业平台保护系统",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140035918"
-        ],
-        "linkedCoreProductNames": [
-          "高空作业平台"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040519",
-        "name": "剪叉式高空作业平台延伸平台",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140035918"
-        ],
-        "linkedCoreProductNames": [
-          "高空作业平台"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140032663",
         "name": "汽车起重机",
@@ -400,142 +116,33 @@
           "name": "汽车起重机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "000157.SZ",
             "stockName": "中联重科",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "000425.SZ",
             "stockName": "徐工机械",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "000528.SZ",
             "stockName": "柳工",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 17,
-        "downstreamCount": 4,
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "工程机械",
           "机械设备",
           "汽车"
-        ]
-      },
-      {
-        "code": "1140032676",
-        "name": "挖掘机",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 挖掘机械 > 挖掘机",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "工程机械",
-          "土方机械",
-          "挖掘机械",
-          "挖掘机"
-        ],
-        "level5Industry": {
-          "code": "1200000535",
-          "name": "土方机械"
-        },
-        "level6Industry": {
-          "code": "1200003256",
-          "name": "挖掘机械"
-        },
-        "level7Product": {
-          "code": "1140032676",
-          "name": "挖掘机"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 3,
-        "stocks": [
-          {
-            "stockCode": "000157.SZ",
-            "stockName": "中联重科",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "000425.SZ",
-            "stockName": "徐工机械",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000528.SZ",
-            "stockName": "柳工",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 16,
-        "downstreamCount": 84,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工程机械",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140035918",
-        "name": "高空作业平台",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 高空作业机械 > 高空作业平台 > 高空作业平台",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "工程机械",
-          "高空作业机械",
-          "高空作业平台",
-          "高空作业平台"
-        ],
-        "level5Industry": {
-          "code": "1200000525",
-          "name": "高空作业机械"
-        },
-        "level6Industry": {
-          "code": "1200003224",
-          "name": "高空作业平台"
-        },
-        "level7Product": {
-          "code": "1140035918",
-          "name": "高空作业平台"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 3,
-        "stocks": [
-          {
-            "stockCode": "000157.SZ",
-            "stockName": "中联重科",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "000425.SZ",
-            "stockName": "徐工机械",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000528.SZ",
-            "stockName": "柳工",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 36,
-        "downstreamCount": 21,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工程机械",
-          "机械设备"
         ]
       },
       {
@@ -563,28 +170,27 @@
           "name": "压路机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "000157.SZ",
             "stockName": "中联重科",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "000425.SZ",
             "stockName": "徐工机械",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "000528.SZ",
             "stockName": "柳工",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 10,
-        "downstreamCount": 31,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -593,52 +199,51 @@
         ]
       },
       {
-        "code": "1140032856",
-        "name": "旋挖钻机",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 桩工机械 > 钻机 > 旋挖钻机",
+        "code": "1140032676",
+        "name": "挖掘机",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 挖掘机械 > 挖掘机",
         "industryPath": [
           "机械设备",
           "专用设备",
           "工程机械",
-          "桩工机械",
-          "钻机",
-          "旋挖钻机"
+          "土方机械",
+          "挖掘机械",
+          "挖掘机"
         ],
         "level5Industry": {
-          "code": "1200000536",
-          "name": "桩工机械"
+          "code": "1200000535",
+          "name": "土方机械"
         },
         "level6Industry": {
-          "code": "1200003259",
-          "name": "钻机"
+          "code": "1200003256",
+          "name": "挖掘机械"
         },
         "level7Product": {
-          "code": "1140032856",
-          "name": "旋挖钻机"
+          "code": "1140032676",
+          "name": "挖掘机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "000157.SZ",
             "stockName": "中联重科",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "000425.SZ",
             "stockName": "徐工机械",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "000528.SZ",
             "stockName": "柳工",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 15,
-        "downstreamCount": 8,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -671,28 +276,27 @@
           "name": "摊铺机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "000157.SZ",
             "stockName": "中联重科",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "000425.SZ",
             "stockName": "徐工机械",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "000528.SZ",
             "stockName": "柳工",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 14,
-        "downstreamCount": 6,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -701,47 +305,51 @@
         ]
       },
       {
-        "code": "1140032675",
-        "name": "推土机",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 推土机 > 推土机",
+        "code": "1140032856",
+        "name": "旋挖钻机",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 桩工机械 > 钻机 > 旋挖钻机",
         "industryPath": [
           "机械设备",
           "专用设备",
           "工程机械",
-          "土方机械",
-          "推土机",
-          "推土机"
+          "桩工机械",
+          "钻机",
+          "旋挖钻机"
         ],
         "level5Industry": {
-          "code": "1200000535",
-          "name": "土方机械"
+          "code": "1200000536",
+          "name": "桩工机械"
         },
         "level6Industry": {
-          "code": "1200003255",
-          "name": "推土机"
+          "code": "1200003259",
+          "name": "钻机"
         },
         "level7Product": {
-          "code": "1140032675",
-          "name": "推土机"
+          "code": "1140032856",
+          "name": "旋挖钻机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
+        "stockCount": 3,
         "stocks": [
           {
             "stockCode": "000157.SZ",
             "stockName": "中联重科",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "000528.SZ",
             "stockName": "柳工",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 13,
-        "downstreamCount": 54,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -750,341 +358,51 @@
         ]
       },
       {
-        "code": "1140032687",
-        "name": "平地机",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 路面机械 > 路面施工机械 > 平地机",
+        "code": "1140035918",
+        "name": "高空作业平台",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 高空作业机械 > 高空作业平台 > 高空作业平台",
         "industryPath": [
           "机械设备",
           "专用设备",
           "工程机械",
-          "路面机械",
-          "路面施工机械",
-          "平地机"
+          "高空作业机械",
+          "高空作业平台",
+          "高空作业平台"
         ],
         "level5Industry": {
-          "code": "1200000532",
-          "name": "路面机械"
+          "code": "1200000525",
+          "name": "高空作业机械"
         },
         "level6Industry": {
-          "code": "1200003245",
-          "name": "路面施工机械"
+          "code": "1200003224",
+          "name": "高空作业平台"
         },
         "level7Product": {
-          "code": "1140032687",
-          "name": "平地机"
+          "code": "1140035918",
+          "name": "高空作业平台"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
+        "stockCount": 3,
         "stocks": [
+          {
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
           {
             "stockCode": "000425.SZ",
             "stockName": "徐工机械",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "000528.SZ",
             "stockName": "柳工",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 11,
-        "downstreamCount": 29,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工程机械",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140032660",
-        "name": "混凝土输送泵",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土输送泵",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "工程机械",
-          "混凝土机械",
-          "混凝土输送机械",
-          "混凝土输送泵"
-        ],
-        "level5Industry": {
-          "code": "1200000530",
-          "name": "混凝土机械"
-        },
-        "level6Industry": {
-          "code": "1200003241",
-          "name": "混凝土输送机械"
-        },
-        "level7Product": {
-          "code": "1140032660",
-          "name": "混凝土输送泵"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "000157.SZ",
-            "stockName": "中联重科",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "000425.SZ",
-            "stockName": "徐工机械",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 15,
-        "downstreamCount": 7,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工程机械",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140032664",
-        "name": "履带起重机",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 港口机械 > 港口起重机械 > 履带起重机",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "工程机械",
-          "港口机械",
-          "港口起重机械",
-          "履带起重机"
-        ],
-        "level5Industry": {
-          "code": "1200000524",
-          "name": "港口机械"
-        },
-        "level6Industry": {
-          "code": "1200003220",
-          "name": "港口起重机械"
-        },
-        "level7Product": {
-          "code": "1140032664",
-          "name": "履带起重机"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "000157.SZ",
-            "stockName": "中联重科",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "000425.SZ",
-            "stockName": "徐工机械",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 12,
-        "downstreamCount": 8,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工程机械",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140032666",
-        "name": "随车起重机",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 工程起重机械 > 臂架式起重机 > 随车起重机",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "工程机械",
-          "工程起重机械",
-          "臂架式起重机",
-          "随车起重机"
-        ],
-        "level5Industry": {
-          "code": "1200000527",
-          "name": "工程起重机械"
-        },
-        "level6Industry": {
-          "code": "1200003226",
-          "name": "臂架式起重机"
-        },
-        "level7Product": {
-          "code": "1140032666",
-          "name": "随车起重机"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "000157.SZ",
-            "stockName": "中联重科",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "000425.SZ",
-            "stockName": "徐工机械",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 11,
-        "downstreamCount": 9,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工程机械",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140032688",
-        "name": "铣刨机",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 路面机械 > 路面养护机械 > 铣刨机",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "工程机械",
-          "路面机械",
-          "路面养护机械",
-          "铣刨机"
-        ],
-        "level5Industry": {
-          "code": "1200000532",
-          "name": "路面机械"
-        },
-        "level6Industry": {
-          "code": "1200003246",
-          "name": "路面养护机械"
-        },
-        "level7Product": {
-          "code": "1140032688",
-          "name": "铣刨机"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "000425.SZ",
-            "stockName": "徐工机械",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000528.SZ",
-            "stockName": "柳工",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 13,
-        "downstreamCount": 5,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工程机械",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140032655",
-        "name": "混凝土搅拌车",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土搅拌车",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "工程机械",
-          "混凝土机械",
-          "混凝土输送机械",
-          "混凝土搅拌车"
-        ],
-        "level5Industry": {
-          "code": "1200000530",
-          "name": "混凝土机械"
-        },
-        "level6Industry": {
-          "code": "1200003241",
-          "name": "混凝土输送机械"
-        },
-        "level7Product": {
-          "code": "1140032655",
-          "name": "混凝土搅拌车"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "000157.SZ",
-            "stockName": "中联重科",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "000425.SZ",
-            "stockName": "徐工机械",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 9,
-        "downstreamCount": 7,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工程机械",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140032691",
-        "name": "装载机(铲车)",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 装载机 > 装载机(铲车)",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "工程机械",
-          "土方机械",
-          "装载机",
-          "装载机(铲车)"
-        ],
-        "level5Industry": {
-          "code": "1200000535",
-          "name": "土方机械"
-        },
-        "level6Industry": {
-          "code": "1200003257",
-          "name": "装载机"
-        },
-        "level7Product": {
-          "code": "1140032691",
-          "name": "装载机(铲车)"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "000425.SZ",
-            "stockName": "徐工机械",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000528.SZ",
-            "stockName": "柳工",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 10,
-        "downstreamCount": 6,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1117,23 +435,21 @@
           "name": "塔式起重机(塔吊)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "000157.SZ",
             "stockName": "中联重科",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "000425.SZ",
             "stockName": "徐工机械",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 9,
-        "downstreamCount": 5,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1142,42 +458,186 @@
         ]
       },
       {
-        "code": "1140032661",
-        "name": "混凝土搅拌站",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土搅拌机械 > 混凝土搅拌站",
+        "code": "1140032664",
+        "name": "履带起重机",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 港口机械 > 港口起重机械 > 履带起重机",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "工程机械",
+          "港口机械",
+          "港口起重机械",
+          "履带起重机"
+        ],
+        "level5Industry": {
+          "code": "1200000524",
+          "name": "港口机械"
+        },
+        "level6Industry": {
+          "code": "1200003220",
+          "name": "港口起重机械"
+        },
+        "level7Product": {
+          "code": "1140032664",
+          "name": "履带起重机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工程机械",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140032687",
+        "name": "平地机",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 路面机械 > 路面施工机械 > 平地机",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "工程机械",
+          "路面机械",
+          "路面施工机械",
+          "平地机"
+        ],
+        "level5Industry": {
+          "code": "1200000532",
+          "name": "路面机械"
+        },
+        "level6Industry": {
+          "code": "1200003245",
+          "name": "路面施工机械"
+        },
+        "level7Product": {
+          "code": "1140032687",
+          "name": "平地机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000528.SZ",
+            "stockName": "柳工",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工程机械",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140032675",
+        "name": "推土机",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 推土机 > 推土机",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "工程机械",
+          "土方机械",
+          "推土机",
+          "推土机"
+        ],
+        "level5Industry": {
+          "code": "1200000535",
+          "name": "土方机械"
+        },
+        "level6Industry": {
+          "code": "1200003255",
+          "name": "推土机"
+        },
+        "level7Product": {
+          "code": "1140032675",
+          "name": "推土机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000528.SZ",
+            "stockName": "柳工",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工程机械",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140032655",
+        "name": "混凝土搅拌车",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土搅拌车",
         "industryPath": [
           "机械设备",
           "专用设备",
           "工程机械",
           "混凝土机械",
-          "混凝土搅拌机械",
-          "混凝土搅拌站"
+          "混凝土输送机械",
+          "混凝土搅拌车"
         ],
         "level5Industry": {
           "code": "1200000530",
           "name": "混凝土机械"
         },
         "level6Industry": {
-          "code": "1200003239",
-          "name": "混凝土搅拌机械"
+          "code": "1200003241",
+          "name": "混凝土输送机械"
         },
         "level7Product": {
-          "code": "1140032661",
-          "name": "混凝土搅拌站"
+          "code": "1140032655",
+          "name": "混凝土搅拌车"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
+        "stockCount": 2,
         "stocks": [
           {
             "stockCode": "000157.SZ",
             "stockName": "中联重科",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 16,
-        "downstreamCount": 10,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1186,42 +646,186 @@
         ]
       },
       {
-        "code": "1140032674",
-        "name": "电动叉车",
-        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 工程输送机械 > 起升车辆 > 电动叉车",
+        "code": "1140032660",
+        "name": "混凝土输送泵",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土输送泵",
         "industryPath": [
           "机械设备",
           "专用设备",
           "工程机械",
-          "工程输送机械",
-          "起升车辆",
-          "电动叉车"
+          "混凝土机械",
+          "混凝土输送机械",
+          "混凝土输送泵"
         ],
         "level5Industry": {
-          "code": "1200000528",
-          "name": "工程输送机械"
+          "code": "1200000530",
+          "name": "混凝土机械"
         },
         "level6Industry": {
-          "code": "1200003232",
-          "name": "起升车辆"
+          "code": "1200003241",
+          "name": "混凝土输送机械"
         },
         "level7Product": {
-          "code": "1140032674",
-          "name": "电动叉车"
+          "code": "1140032660",
+          "name": "混凝土输送泵"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
+        "stockCount": 2,
         "stocks": [
           {
             "stockCode": "000157.SZ",
             "stockName": "中联重科",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 12,
-        "downstreamCount": 8,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工程机械",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140032691",
+        "name": "装载机(铲车)",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 装载机 > 装载机(铲车)",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "工程机械",
+          "土方机械",
+          "装载机",
+          "装载机(铲车)"
+        ],
+        "level5Industry": {
+          "code": "1200000535",
+          "name": "土方机械"
+        },
+        "level6Industry": {
+          "code": "1200003257",
+          "name": "装载机"
+        },
+        "level7Product": {
+          "code": "1140032691",
+          "name": "装载机(铲车)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000528.SZ",
+            "stockName": "柳工",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工程机械",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140032688",
+        "name": "铣刨机",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 路面机械 > 路面养护机械 > 铣刨机",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "工程机械",
+          "路面机械",
+          "路面养护机械",
+          "铣刨机"
+        ],
+        "level5Industry": {
+          "code": "1200000532",
+          "name": "路面机械"
+        },
+        "level6Industry": {
+          "code": "1200003246",
+          "name": "路面养护机械"
+        },
+        "level7Product": {
+          "code": "1140032688",
+          "name": "铣刨机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000528.SZ",
+            "stockName": "柳工",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工程机械",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140032666",
+        "name": "随车起重机",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 工程起重机械 > 臂架式起重机 > 随车起重机",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "工程机械",
+          "工程起重机械",
+          "臂架式起重机",
+          "随车起重机"
+        ],
+        "level5Industry": {
+          "code": "1200000527",
+          "name": "工程起重机械"
+        },
+        "level6Industry": {
+          "code": "1200003226",
+          "name": "臂架式起重机"
+        },
+        "level7Product": {
+          "code": "1140032666",
+          "name": "随车起重机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1254,18 +858,97 @@
           "name": "内燃叉车"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000157.SZ",
             "stockName": "中联重科",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 8,
-        "downstreamCount": 9,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工程机械",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140088851",
+        "name": "工程机械租赁",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 工程机械租赁服务 > 工程机械租赁服务 > 工程机械租赁",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "工程机械",
+          "工程机械租赁服务",
+          "工程机械租赁服务",
+          "工程机械租赁"
+        ],
+        "level5Industry": {
+          "code": "1200000537",
+          "name": "工程机械租赁服务"
+        },
+        "level6Industry": {
+          "code": "1200003260",
+          "name": "工程机械租赁服务"
+        },
+        "level7Product": {
+          "code": "1140088851",
+          "name": "工程机械租赁"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "000528.SZ",
+            "stockName": "柳工",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工程机械",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140032667",
+        "name": "施工升降机",
+        "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 工程起重机械 > 轻小型起重机 > 施工升降机",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "工程机械",
+          "工程起重机械",
+          "轻小型起重机",
+          "施工升降机"
+        ],
+        "level5Industry": {
+          "code": "1200000527",
+          "name": "工程起重机械"
+        },
+        "level6Industry": {
+          "code": "1200003229",
+          "name": "轻小型起重机"
+        },
+        "level7Product": {
+          "code": "1140032667",
+          "name": "施工升降机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1274,346 +957,1412 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140054633",
-        "name": "施工设备",
-        "anchorCount": 9,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032655",
-          "1140032660",
-          "1140032670",
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687",
-          "1140032688",
-          "1140032856"
+        "code": "1200000535",
+        "name": "土方机械",
+        "description": "土方机械指用于挖掘、铲运土壤石料的工程机械，如挖掘机。该行业受关注因其作为基建与房地产的风向标，直接反映宏观经济景气度；同时受益于“一带一路”出海及国内设备更新政策，具备强周期性与高成长性，是观察经济复苏的重要窗口。",
+        "stockCount": 5,
+        "starWeight": 20,
+        "level7ProductCount": 3,
+        "relevanceScore": 70,
+        "stocks": [
+          {
+            "stockCode": "600031.SH",
+            "stockName": "三一重工",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000528.SZ",
+            "stockName": "柳工",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000680.SZ",
+            "stockName": "山推股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机",
-          "摊铺机",
-          "旋挖钻机",
-          "混凝土搅拌车",
-          "混凝土输送泵",
-          "铣刨机"
+        "products": [
+          {
+            "code": "1140032676",
+            "name": "挖掘机",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 挖掘机械 > 挖掘机",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600031.SH",
+                "stockName": "三一重工",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000425.SZ",
+                "stockName": "徐工机械",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000528.SZ",
+                "stockName": "柳工",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "挖掘机"
+            ]
+          },
+          {
+            "code": "1140032675",
+            "name": "推土机",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 推土机 > 推土机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000680.SZ",
+                "stockName": "山推股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "推土机"
+            ]
+          },
+          {
+            "code": "1140032691",
+            "name": "装载机(铲车)",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 装载机 > 装载机(铲车)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000425.SZ",
+                "stockName": "徐工机械",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000528.SZ",
+                "stockName": "柳工",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "装载机"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 9
-        }
+        "rank": 1
       },
       {
-        "code": "1140033691",
-        "name": "港口工程",
-        "anchorCount": 5,
+        "code": "1200000530",
+        "name": "混凝土机械",
+        "description": "混凝土机械指生产、运输及泵送混凝土的设备。该行业与基建和房地产景气度高度绑定，是观察宏观经济的重要风向标。因具备强周期性且龙头集中度高，其业绩波动常引发市场对经济复苏预期及政策导向的高度关注。",
         "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032665",
-          "1140032666",
-          "1140032673",
-          "1140032674",
-          "1140032691"
+        "starWeight": 13,
+        "level7ProductCount": 5,
+        "relevanceScore": 40,
+        "stocks": [
+          {
+            "stockCode": "600031.SH",
+            "stockName": "三一重工",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "内燃叉车",
-          "塔式起重机(塔吊)",
-          "电动叉车",
-          "装载机(铲车)",
-          "随车起重机"
+        "products": [
+          {
+            "code": "1140032655",
+            "name": "混凝土搅拌车",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土搅拌车",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600031.SH",
+                "stockName": "三一重工",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000425.SZ",
+                "stockName": "徐工机械",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140032660",
+            "name": "混凝土输送泵",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土输送泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600031.SH",
+                "stockName": "三一重工",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000425.SZ",
+                "stockName": "徐工机械",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140032661",
+            "name": "混凝土搅拌站",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土搅拌机械 > 混凝土搅拌站",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600031.SH",
+                "stockName": "三一重工",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140032662",
+            "name": "混凝土布料机",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土布料机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 8,
+    "mappedStockCount": 8,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 75,
+    "candidateIndustryCount": 28,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 7254,
+        "stockCode": "601100.SH",
+        "stockName": "恒立液压",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 11
       },
       {
-        "code": "1140058725",
-        "name": "市政工程",
-        "anchorCount": 5,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687",
-          "1140035918"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机",
-          "高空作业平台"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 4
-        }
+        "sourceRowNumber": 7255,
+        "stockCode": "603638.SH",
+        "stockName": "艾迪精密",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140042392",
-        "name": "民用建筑工程",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032661",
-          "1140032675",
-          "1140032676",
-          "1140032856"
-        ],
-        "linkedCoreProductNames": [
-          "挖掘机",
-          "推土机",
-          "旋挖钻机",
-          "混凝土搅拌站"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 3
-        }
+        "sourceRowNumber": 7256,
+        "stockCode": "000338.SZ",
+        "stockName": "潍柴动力",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 30
       },
       {
-        "code": "1140058822",
-        "name": "交通与市政工程业务",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
+        "sourceRowNumber": 7259,
+        "stockCode": "600031.SH",
+        "stockName": "三一重工",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 22
       },
       {
-        "code": "1140045024",
-        "name": "交通基础设施",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
+        "sourceRowNumber": 7260,
+        "stockCode": "000425.SZ",
+        "stockName": "徐工机械",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 19
       },
       {
-        "code": "1140058820",
-        "name": "交通基础设施建设施工",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
+        "sourceRowNumber": 7261,
+        "stockCode": "000157.SZ",
+        "stockName": "中联重科",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 21
       },
       {
-        "code": "1140058787",
-        "name": "地基处理",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
+        "sourceRowNumber": 7262,
+        "stockCode": "000528.SZ",
+        "stockName": "柳工",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140058874",
-        "name": "基建工程",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687"
+        "sourceRowNumber": 7265,
+        "stockCode": "000680.SZ",
+        "stockName": "山推股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000535",
+        "name": "土方机械",
+        "description": "土方机械指用于挖掘、铲运土壤石料的工程机械，如挖掘机。该行业受关注因其作为基建与房地产的风向标，直接反映宏观经济景气度；同时受益于“一带一路”出海及国内设备更新政策，具备强周期性与高成长性，是观察经济复苏的重要窗口。",
+        "stockCount": 5,
+        "starWeight": 20,
+        "level7ProductCount": 3,
+        "relevanceScore": 70,
+        "stocks": [
+          {
+            "stockCode": "600031.SH",
+            "stockName": "三一重工",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000528.SZ",
+            "stockName": "柳工",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000680.SZ",
+            "stockName": "山推股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机"
+        "products": [
+          {
+            "code": "1140032676",
+            "name": "挖掘机",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 挖掘机械 > 挖掘机",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600031.SH",
+                "stockName": "三一重工",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000425.SZ",
+                "stockName": "徐工机械",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000528.SZ",
+                "stockName": "柳工",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "挖掘机"
+            ]
+          },
+          {
+            "code": "1140032675",
+            "name": "推土机",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 推土机 > 推土机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000680.SZ",
+                "stockName": "山推股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "推土机"
+            ]
+          },
+          {
+            "code": "1140032691",
+            "name": "装载机(铲车)",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 土方机械 > 装载机 > 装载机(铲车)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000425.SZ",
+                "stockName": "徐工机械",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000528.SZ",
+                "stockName": "柳工",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "装载机"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
+        "rank": 1
       },
       {
-        "code": "1140141529",
-        "name": "大型地下工程",
-        "anchorCount": 4,
+        "code": "1200000530",
+        "name": "混凝土机械",
+        "description": "混凝土机械指生产、运输及泵送混凝土的设备。该行业与基建和房地产景气度高度绑定，是观察宏观经济的重要风向标。因具备强周期性且龙头集中度高，其业绩波动常引发市场对经济复苏预期及政策导向的高度关注。",
         "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032661",
-          "1140032671",
-          "1140032675",
-          "1140032676"
+        "starWeight": 13,
+        "level7ProductCount": 5,
+        "relevanceScore": 40,
+        "stocks": [
+          {
+            "stockCode": "600031.SH",
+            "stockName": "三一重工",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "挖掘机",
-          "推土机",
-          "混凝土搅拌站"
+        "products": [
+          {
+            "code": "1140032655",
+            "name": "混凝土搅拌车",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土搅拌车",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600031.SH",
+                "stockName": "三一重工",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000425.SZ",
+                "stockName": "徐工机械",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140032660",
+            "name": "混凝土输送泵",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土输送泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600031.SH",
+                "stockName": "三一重工",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000425.SZ",
+                "stockName": "徐工机械",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140032661",
+            "name": "混凝土搅拌站",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土搅拌机械 > 混凝土搅拌站",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600031.SH",
+                "stockName": "三一重工",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140032662",
+            "name": "混凝土布料机",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 混凝土机械 > 混凝土输送机械 > 混凝土布料机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000157.SZ",
+                "stockName": "中联重科",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
-      },
-      {
-        "code": "1140141512",
-        "name": "天然气发电线路工程",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032661",
-          "1140032671",
-          "1140032675",
-          "1140032676"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "挖掘机",
-          "推土机",
-          "混凝土搅拌站"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
-      },
-      {
-        "code": "1140013112",
-        "name": "工程施工",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
-      },
-      {
-        "code": "1140089325",
-        "name": "市政公用工程施工",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032670",
-          "1140032671",
-          "1140032675",
-          "1140032676"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "挖掘机",
-          "推土机",
-          "摊铺机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
-      },
-      {
-        "code": "1140069895",
-        "name": "市政工程施工",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140032671",
-          "1140032675",
-          "1140032676",
-          "1140032687"
-        ],
-        "linkedCoreProductNames": [
-          "压路机",
-          "平地机",
-          "挖掘机",
-          "推土机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 4
-        }
+        "rank": 2
       }
     ]
   },
   "industryAnalysis": {
     "status": "research_pending",
     "target": {
-      "code": "1200000532",
-      "name": "路面机械"
+      "code": "1200000527",
+      "name": "工程起重机械"
     },
-    "overview": "路面机械指铺路、压实等专用设备。与本次事件关联度较高的产品包括压路机、摊铺机、平地机等。",
+    "overview": "工程起重机械指用于吊装重物的专用设备。与本次事件关联度较高的产品包括汽车起重机、塔式起重机(塔吊)、随车起重机等。",
     "impact": null,
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 13,
+    "eligibleSourceRowCount": 8,
+    "totalStockCount": 8,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 3,
+    "excludedNonAShareCount": 2,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 8,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 7259,
+            "stockCode": "600031.SH",
+            "stockName": "三一重工",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球工程机械龙头，挖掘机是其核心产品且市场份额领先。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600031.SH",
+              "companyName": "三一重工",
+              "companyProfile": "公司是中国工程机械行业的领军企业，曾首次入围FT全球市值500强及福布斯全球企业TOP2000榜单，并成功跨国并购德国普茨迈斯特。公司产品涵盖混凝土机械、挖掘机械、起重机械、桩工机械及路面机械。其中，混凝土设备位居全球第一，挖掘机、大吨位起重机、旋挖钻机及路面成套设备等主导产品均位列中国第一。公司的业务和产业基地遍布全球，在国内北京、长沙、上海、昆山、重庆等地建有产业园，并在印度、美国、德国、印度尼西亚等地设有海外研发和制造基地。秉承“品质改变世界”的使命，公司每年将销售收入的5%以上用于研发，致力打造世界一流的产品。凭借强大的技术创新实力，公司先后四次荣获“国家科技进步奖”，两次荣获“国家技术发明奖”，成为建国以来工程机械行业获得国家级最高荣誉的企业。凭借一流的产品品质，公司设备广泛参建全球重点工程，包括迪拜塔、北京奥运场馆、伦敦奥运场馆、巴西世界杯场馆、上海中心、香港环球金融中心、港珠澳大桥、大兴国际机场、雄安新区等重大项目的施工建设。",
+              "profileSummary": "公司是中国工程机械行业的领军企业，曾首次入围FT全球市值500强及福布斯全球企业TOP2000榜单，并成功跨国并购德国普茨迈斯特。凭借强大的技术创新实力，公司先后四次荣获“国家科技进步奖”，两次荣获“国家技术发明奖”，成为建国以来工程机械行业获得国家级最高荣誉的企业。",
+              "majorProducts": "三一泵车、三一车载式混凝土输送泵、三一混凝土搅拌站、三一机械传动振动压路机、三一搅拌运输车、三一沥青混合料转运车、三一沥青搅拌站、三一履带吊、三一汽车起重机、三一全液压轮胎式压路机、三一摊铺机、三一推土机、三一拖泵、三一挖掘机、三一液力机械传动平地机、三一液压传动振动压路机、三一正面吊",
+              "revenueComposition": "挖掘机械:38.51%;其他:18.74%;混凝土机械:17.55%;起重机械:17.35%;路面机械:4.19%;桩工机械类:3.14%;其他业务:0.52%",
+              "revenueSegments": [
+                {
+                  "name": "挖掘机械",
+                  "sharePct": 38.51,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 18.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "混凝土机械",
+                  "sharePct": 17.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "起重机械",
+                  "sharePct": 17.35,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "路面机械",
+                  "sharePct": 4.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "桩工机械类",
+                  "sharePct": 3.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "挖掘机",
+                    "category": "挖掘机械"
+                  },
+                  {
+                    "name": "压路机",
+                    "category": "压实机械"
+                  },
+                  {
+                    "name": "塔式起重机(塔吊)",
+                    "category": "臂架式起重机"
+                  },
+                  {
+                    "name": "履带起重机",
+                    "category": "港口起重机械"
+                  },
+                  {
+                    "name": "岸边集装箱起重机(岸桥)",
+                    "category": "港口起重机械"
+                  },
+                  {
+                    "name": "工程自卸车",
+                    "category": "工程自卸车"
+                  }
+                ],
+                "knownProducts": [
+                  "矿用自卸车",
+                  "挖掘机",
+                  "工程自卸车",
+                  "塔式起重机(塔吊)",
+                  "汽车起重机",
+                  "电动起重机",
+                  "随车起重机",
+                  "旋挖钻机"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三一重工与事件的关系已经落在存量主业，而非远期概念：挖掘机械（38.51%）、起重机械（17.35%）合计约占收入的55.86%。公司在产业链中的具体抓手是：全球工程机械龙头，挖掘机是其核心产品且市场份额领先。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 7254,
+            "stockCode": "601100.SH",
+            "stockName": "恒立液压",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内液压件龙头，深度配套国内外主流工程机械主机厂，直接受益于挖机等设备放量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601100.SH",
+              "companyName": "恒立液压",
+              "companyProfile": "公司是一家集高压液压油缸、液压泵、液压阀、液压系统和高精密液压铸件、气动元件等系列产品研发、生产和销售为一体的龙头企业。公司是工信部单项冠军示范企业、工信部强基工程“一条龙”应用计划示范企业、国家高新技术企业、国家知识产权示范企业、中国绿色铸造示范企业、国家和行业标准制定单位。恒立液压在全球范围内设立了七大研发中心，包括恒立国际研发中心(中国常州)、恒立美国芝加哥研发中心、恒立德国柏林研发中心、恒立中国上海研发中心、恒立法国研发中心等。公司建有亚洲最大的液压油缸研发中心并建有江苏省唯一的“江苏省超高压油缸小型化轻量化设计工程技术研究中心”，还设有江苏省高压油缸工程中心、江苏省企业技术中心以及江苏省博士后工作站、江苏省研究生工作站、江苏省外国专家工作室等科技创新平台。",
+              "profileSummary": "公司是一家集高压液压油缸、液压泵、液压阀、液压系统和高精密液压铸件、气动元件等系列产品研发、生产和销售为一体的龙头企业。恒立液压在全球范围内设立了七大研发中心，包括恒立国际研发中心(中国常州)、恒立美国芝加哥研发中心、恒立德国柏林研发中心、恒立中国上海研发中心、恒立法国研发中心等。",
+              "majorProducts": "叉车油缸、车辆油缸、大型油缸、多级液压缸、工程油缸、工业拉杆油缸、海事油缸、千斤顶油缸、挖掘机油缸、冶金油缸",
+              "revenueComposition": "液压油缸:48.02%;液压泵阀:39.53%;铸件及配件等:8.15%;液压系统:3.52%;其他业务:0.77%",
+              "revenueSegments": [
+                {
+                  "name": "液压油缸",
+                  "sharePct": 48.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液压泵阀",
+                  "sharePct": 39.53,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铸件及配件等",
+                  "sharePct": 8.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液压系统",
+                  "sharePct": 3.52,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "工业阀",
+                    "category": "其他阀门"
+                  },
+                  {
+                    "name": "液压多路阀",
+                    "category": "其他阀门"
+                  },
+                  {
+                    "name": "液压泵阀",
+                    "category": "泵阀"
+                  },
+                  {
+                    "name": "液压测试台",
+                    "category": "其他试验机"
+                  },
+                  {
+                    "name": "液压系统",
+                    "category": "液压系统"
+                  },
+                  {
+                    "name": "滚珠丝杠",
+                    "category": "通用金属零部件"
+                  }
+                ],
+                "knownProducts": [
+                  "液压测试台",
+                  "高压柱塞泵",
+                  "重型液压油缸",
+                  "高压油缸",
+                  "液压系统",
+                  "高精密液压铸件",
+                  "工业阀",
+                  "液压多路阀"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对恒立液压而言，国内液压件龙头，深度配套国内外主流工程机械主机厂，直接受益于挖机等设备放量并非纯概念映射，因为液压泵阀（39.53%）、液压系统（3.52%）合计约占收入的43.05%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是终端需求与渗透率变化，传导效率取决于“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由终端销量、客户采购量、公司出货和相关产品收入增速来区分；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 7255,
+            "stockCode": "603638.SH",
+            "stockName": "艾迪精密",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内领先的液压技术企业，产品广泛应用于挖掘机等工程机械。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603638.SH",
+              "companyName": "艾迪精密",
+              "companyProfile": "公司创立于2003年8月，并于2017年1月在上海证券交易所主板上市。公司是一家综合性的高端装备制造企业，业务涵盖液压属具、高端液压件、工业机器人、硬质合金刀具、智慧储能系统、丝杠导轨及非道路机械三电系统等六大业务板块，目前已发展为国内工程机械液压行业的领军企业。近年来，公司先后获评国家高新技术企业、山东省制造业单项冠军企业、烟台市创新驱动领军企业、烟台市绿色工厂、履行社会责任优秀企业等荣誉称号。同时，作为公司的长期战略发展规划，公司坚持走国际化发展道路，公司开展国际业务已经17年，出口到了95个国家和地区，并逐步在全球热点市场建立海外办事处、仓库和维修服务中心，为当地经销商提供服务，从而建立和完善全球销售网络，拓展国际市场，提高产品在全球的覆盖率和市场份额。公司不断的加强研发投入，持续进行技术创新和产品升级，确保公司的技术和产品在全球市场上具有竞争力。同时，公司一直致力于培养和引进国际化人才，建立一支具备全球视野和跨文化沟通能力的团队，为公司国际化发展提供人才保障。培育具有包容性和开放性的企业文化，吸引和留住来自不同文化背景的国际人才，提高企业的凝聚力和竞争力，稳步推进国际化进程。",
+              "profileSummary": "公司是一家综合性的高端装备制造企业，业务涵盖液压属具、高端液压件、工业机器人、硬质合金刀具、智慧储能系统、丝杠导轨及非道路机械三电系统等六大业务板块，目前已发展为国内工程机械液压行业的领军企业。同时，作为公司的长期战略发展规划，公司坚持走国际化发展道路，公司开展国际业务已经17年，出口到了95个国家和地区，并逐步在全球热点市场建立海外办事处、仓库和维修服务中心，为当地经销商提供服务，从而建立和完善全球销售网络，拓展国际市场，提高产品在…",
+              "majorProducts": "多路控制阀、非挖用回转马达、非挖用液压泵、高频震动破碎锤、行走马达、回转马达、快速连接器、破碎锤、液压泵、液压剪、液压马达、液压破碎锤、液压钳、震动夯、抓木器、抓石器、自动黄油加注装置",
+              "revenueComposition": "液压件:65.1%;液压破碎锤:26.62%;其他产品:6.28%;其他业务:2%",
+              "revenueSegments": [
+                {
+                  "name": "液压件",
+                  "sharePct": 65.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液压破碎锤",
+                  "sharePct": 26.62,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 6.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "多路控制阀",
+                    "category": "多路控制阀"
+                  },
+                  {
+                    "name": "工业机器人",
+                    "category": "工业机器人"
+                  },
+                  {
+                    "name": "数控刀片",
+                    "category": "机床刀具"
+                  },
+                  {
+                    "name": "液压泵",
+                    "category": "其他泵"
+                  },
+                  {
+                    "name": "液压破碎锤",
+                    "category": "破碎机械"
+                  },
+                  {
+                    "name": "液压马达",
+                    "category": "液压马达"
+                  }
+                ],
+                "knownProducts": [
+                  "液压破碎锤",
+                  "工业机器人",
+                  "数控刀片",
+                  "液压泵",
+                  "液压马达",
+                  "多路控制阀",
+                  "滚珠丝杠",
+                  "行星滚柱丝杠"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "艾迪精密的事件逻辑具备真实业务底座，但尚不足以代表全部公司：液压破碎锤占收入的26.62%。公司与事件的具体联系在于：国内领先的液压技术企业，产品广泛应用于挖掘机等工程机械，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 7260,
+            "stockCode": "000425.SZ",
+            "stockName": "徐工机械",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内工程机械产品线最全的龙头企业之一，挖掘机业务占比较高。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000425.SZ",
+              "companyName": "徐工机械",
+              "companyProfile": "公司创建于1993年12月，1996年8月在深圳证券交易所上市，为徐工集团核心成员企业，是我国工程机械行业规模宏大、产品品种与系列齐全、极具竞争力、影响力和国家战略地位的企业。公司主要指标稳居国内行业第1位，连续多年保持全球行业领先、位列“世界品牌500强”，跻身《财富》中国企业500强、福布斯出海企业30强，均排名国内行业第一。公司产品中汽车起重机、随车起重机、压路机等16类主机位居国内行业第一；公司起重机械、移动式起重机、水平定向钻持续保持全球第一，桩工机械、混凝土机械稳居全球第一阵营，道路机械、随车起重机、塔式起重机、高空作业平台保持全球第三，矿山露天挖运设备进位至全球第四，挖掘机位居全球第六、国内第二，装载机跃居国内第一，新能源装载机全球第一。公司形成了工程机械、矿山机械、农业机械、环卫机械、救援保障机械、现代服务业等“5+1”现代化产业体系。",
+              "profileSummary": "公司创建于1993年12月，1996年8月在深圳证券交易所上市，为徐工集团核心成员企业，是我国工程机械行业规模宏大、产品品种与系列齐全、极具竞争力、影响力和国家战略地位的企业。公司形成了工程机械、矿山机械、农业机械、环卫机械、救援保障机械、现代服务业等“5+1”现代化产业体系。",
+              "majorProducts": "徐工厂拌设备、徐工大型多功能沥青混凝土摊铺机、徐工混凝土泵车、徐工机械驱动单钢轮振动压路机、徐工铰接式自卸车、徐工静碾光轮压路机、徐工沥青混凝土搅拌设备、徐工沥青混凝土转运车、徐工路面冷铣刨机、徐工轮胎驱动单钢轮振动压路机、徐工轮胎式多功能沥青混凝土摊铺机、徐工轮胎挖掘机、徐工轮胎压路机、徐工平地机、徐工桥梁检测作业车、徐工全地面汽车起重机、徐工全液压轮胎起重机、徐工全液压汽车起重机、徐工双钢轮串联振动压路机、徐工水平定向钻机、徐工塔式起重机、徐工推土机、徐工拖式混凝土输送泵、徐工稳定材料摊铺机、徐工稳定土拌和机、徐工稀浆封层机、徐工新型双钢轮振动压路机、徐工旋挖钻机、徐工智能化摊铺机、徐工中型多功能沥青混凝土摊铺机、徐工装载机",
+              "revenueComposition": "土方机械:29.88%;其他工程机械、备件及其他:24.04%;起重机械:20.81%;矿业机械:9.3%;高空作业机械:7.12%;桩工机械:4.67%;道路机械:4.18%",
+              "revenueSegments": [
+                {
+                  "name": "土方机械",
+                  "sharePct": 29.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他工程机械、备件及其他",
+                  "sharePct": 24.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "起重机械",
+                  "sharePct": 20.81,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "矿业机械",
+                  "sharePct": 9.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高空作业机械",
+                  "sharePct": 7.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "桩工机械",
+                  "sharePct": 4.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "道路机械",
+                  "sharePct": 4.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "挖掘机",
+                    "category": "挖掘机械"
+                  },
+                  {
+                    "name": "压路机",
+                    "category": "压实机械"
+                  },
+                  {
+                    "name": "垃圾车",
+                    "category": "环卫车"
+                  },
+                  {
+                    "name": "塔式起重机(塔吊)",
+                    "category": "臂架式起重机"
+                  },
+                  {
+                    "name": "履带起重机",
+                    "category": "港口起重机械"
+                  },
+                  {
+                    "name": "平地机",
+                    "category": "路面施工机械"
+                  }
+                ],
+                "knownProducts": [
+                  "消防车",
+                  "垃圾车",
+                  "清洗车",
+                  "挖掘机",
+                  "装载机(铲车)",
+                  "塔式起重机(塔吊)",
+                  "汽车起重机",
+                  "随车起重机"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "徐工机械的事件逻辑具备真实业务底座，但尚不足以代表全部公司：起重机械占收入的20.81%。公司与事件的具体联系在于：国内工程机械产品线最全的龙头企业之一，挖掘机业务占比较高，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 7261,
+            "stockCode": "000157.SZ",
+            "stockName": "中联重科",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球领先的工程机械制造商，土方机械是其核心业务板块之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000157.SZ",
+              "companyName": "中联重科",
+              "companyProfile": "公司是一家装备制造企业，创立于1992年，主要从事工程机械、环境产业、农业机械等高新技术装备的研发制造，是业内首家A+H股上市公司。公司已覆盖全球多个国家和地区，在“一带一路”沿线均有市场布局。产品远销中东、南美、非洲、东南亚、俄罗斯以及欧美、澳大利亚等高端市场。公司在东亚、东南亚、欧洲等全球多个国家建有分子公司，在意大利、德国、巴西、印度、白俄罗斯投资建有工业园，并在全球设立多个常驻机构。以阿联酋、巴西为中心，正逐步建立全球物流网络和零配件供应体系。公司积极推进战略转型，打造集工程机械、农业机械和金融服务多位一体的高端装备制造企业。",
+              "profileSummary": "公司是一家装备制造企业，创立于1992年，主要从事工程机械、环境产业、农业机械等高新技术装备的研发制造，是业内首家A+H股上市公司。公司积极推进战略转型，打造集工程机械、农业机械和金融服务多位一体的高端装备制造企业。",
+              "majorProducts": "叉车、高空作业机械、耕作机械、工程机械、烘干机械、混凝土机械、矿山机械、农业机具、农业机械、起重机械、收获机械、土石方施工机械、应急救援装备、桩工机械",
+              "revenueComposition": "起重机械:31.93%;混凝土机械:19.3%;土方机械:18.56%;高空机械:11.46%;其他机械及产品:11.1%;农业机械:6.8%;金融服务:0.86%",
+              "revenueSegments": [
+                {
+                  "name": "起重机械",
+                  "sharePct": 31.93,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "混凝土机械",
+                  "sharePct": 19.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "土方机械",
+                  "sharePct": 18.56,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "高空机械",
+                  "sharePct": 11.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他机械及产品",
+                  "sharePct": 11.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "农业机械",
+                  "sharePct": 6.8,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "金融服务",
+                  "sharePct": 0.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "内燃叉车",
+                    "category": "起升车辆"
+                  },
+                  {
+                    "name": "压路机",
+                    "category": "压实机械"
+                  },
+                  {
+                    "name": "塔式起重机(塔吊)",
+                    "category": "臂架式起重机"
+                  },
+                  {
+                    "name": "履带起重机",
+                    "category": "港口起重机械"
+                  },
+                  {
+                    "name": "打捆机",
+                    "category": "收获机械"
+                  },
+                  {
+                    "name": "挖掘机",
+                    "category": "挖掘机械"
+                  }
+                ],
+                "knownProducts": [
+                  "轮式拖拉机",
+                  "打捆机",
+                  "联合收割机",
+                  "谷物烘干机",
+                  "挖掘机",
+                  "推土机",
+                  "塔式起重机(塔吊)",
+                  "汽车起重机"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中联重科的相关业务已决定公司大部分经营表现：起重机械（31.93%）、土方机械（18.56%）合计约占收入的50.49%。公司与事件的直接业务联系是：全球领先的工程机械制造商，土方机械是其核心业务板块之一，真正的增量取决于终端需求与渗透率变化，并需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，终端销量、客户采购量、公司出货和相关产品收入增速需要显示公司获得超越行业的增量。终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 7262,
+            "stockCode": "000528.SZ",
+            "stockName": "柳工",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内装载机龙头，挖掘机业务近年来快速发展，海外市场布局完善。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000528.SZ",
+              "companyName": "柳工",
+              "companyProfile": "公司是广西柳工集团有限公司核心子企业。1958年，500多名创业者从上海和其他地区来到柳州，在城市西郊“龙腾背”的荒野之地开启了创业的漫漫征程！从1966年推出第一台现代化轮式装载机开始，经过66年来的努力和创新，如今已成长为一个拥有挖掘机械、铲土运输机械、起重机械、工业车辆、压实机械、路面施工与养护机械、混凝土机械、桩工机械、高空作业机械、矿山设备、钢筋和预应力机械、压缩机、经济作物机械化设备、气动工具、工程机械配套件等产品品种的企业。多年来，我们始终把每一个艰难的挑战，视作发展的良机。无论是炎热的撒哈拉沙漠，还是寒冷的南极，都被我们打造的强悍设备逐一征服。此外，我们也深知：一切卓越设备，都只为客户的需求而存在。所以，在保障出色性能的同时，我们的产品亦秉承人性、易用的设计理念，使您的工程项目可以快速、顺利的开展。对可靠品质的不懈追求，是的立信之本，也是的发展壮大之钥。如今，在全球拥有20多个制造基地，产品遍布180多个国家和地区。想要赢得客户的满意，值得信赖的服务与优秀的产品一样不可或缺。作为行业内具备最完整全球经销网络的企业之一，拥有遍布130多个国家的500多家经销商，随时为全球客户提供便捷、专业的服务支持。未来，会一如既往地倾力打造与客户的长期伙伴关系。无论您身在何处，无论您面对何种难题，我们卓越的工程机械产品与服务，都将助您轻松化解难题，创造非凡价值！",
+              "profileSummary": "从1966年推出第一台现代化轮式装载机开始，经过66年来的努力和创新，如今已成长为一个拥有挖掘机械、铲土运输机械、起重机械、工业车辆、压实机械、路面施工与养护机械、混凝土机械、桩工机械、高空作业机械、矿山设备、钢筋和预应力机械、压缩机、经济作物机械化设备、气动工具、工程机械配套件等产品品种的企业。无论您身在何处，无论您面对何种难题，我们卓越的工程机械产品与服务，都将助您轻松化解难题，创造非凡价值！",
+              "majorProducts": "工程车辆、工程机械、建筑机械、建筑预应力、矿山机械、路面机械、农业机械、起重机械、土方机械、挖掘机械",
+              "revenueComposition": "土石方机械:61.7%;其他工程机械及零部件:29%;预应力机械:7.61%;租赁业务:1.69%",
+              "revenueSegments": [
+                {
+                  "name": "土石方机械",
+                  "sharePct": 61.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他工程机械及零部件",
+                  "sharePct": 29.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "预应力机械",
+                  "sharePct": 7.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁业务",
+                  "sharePct": 1.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "挖掘机",
+                    "category": "挖掘机械"
+                  },
+                  {
+                    "name": "装载机(铲车)",
+                    "category": "装载机"
+                  }
+                ],
+                "knownProducts": [
+                  "挖掘机",
+                  "推土机",
+                  "装载机(铲车)",
+                  "工程机械租赁",
+                  "汽车起重机",
+                  "旋挖钻机",
+                  "压路机",
+                  "铣刨机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "柳工与新闻之间有明确产品抓手：挖掘机、装载机(铲车)，对应国内装载机龙头，挖掘机业务近年来快速发展，海外市场布局完善。收入主体目前是土石方机械（61.7%）、其他工程机械及零部件（29%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 7256,
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "全球领先的发动机制造商，为工程机械、重卡等提供动力总成系统。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000338.SZ",
+              "companyName": "潍柴动力",
+              "companyProfile": "公司成立于2002年，由原潍坊柴油机厂作为主发起人、联合境内外投资者发起设立，是中国内燃机行业首家在中国香港H股上市的企业，也是首家通过换股吸收合并方式实现“HtoA”两地上市的企业。公司主营业务涵盖动力系统、商用车、农业装备、智慧物流等业务板块，分子公司遍及欧洲、北美、亚洲等地区，产品远销150多个国家和地区。重型发动机、重型变速器销量全球第一，工业叉车全球领先，农业装备销量中国第一，重型卡车中国领先。公司始终将技术创新作为核心驱动力，公司拥有内燃机与动力系统全国重点实验室、国家燃料电池技术创新中心、国家商用汽车动力系统总成工程技术研究中心、国家级工业设计中心、国家内燃机产品质量检验检测中心、国家内燃机产业计量测试中心、国家认定企业技术中心等国家创新平台，设有“博士后工作站”等研究基地，在全球多地设立十大前沿创新中心，建立了全球协同研发体系。先后荣获国家级科技奖励9项，其中国家科技进步一等奖1项(2018年度)。公司以“绿色动力，国际潍柴”为使命，不断提升自身的核心竞争力，推动全球动力行业的绿色转型和可持续发展。",
+              "profileSummary": "公司主营业务涵盖动力系统、商用车、农业装备、智慧物流等业务板块，分子公司遍及欧洲、北美、亚洲等地区，产品远销150多个国家和地区。公司始终将技术创新作为核心驱动力，公司拥有内燃机与动力系统全国重点实验室、国家燃料电池技术创新中心、国家商用汽车动力系统总成工程技术研究中心、国家级工业设计中心、国家内燃机产品质量检验检测中心、国家内燃机产业计量测试中心、国家认定企业技术中心等国家创新平台，设有“博士后工作站”等研究基地，在全球多地设立十大…",
+              "majorProducts": "变速箱、叉车、车桥、供应链解决方案、农业装备、汽车电子及零部件、全系列发动机、燃料电池系统及零部件、液压产品、重型汽车",
+              "revenueComposition": "动力总成、整车整机及关键零部件:43.32%;智慧物流:39.29%;农业装备:8.11%;其他零部件:5.12%;其他:4.17%",
+              "revenueSegments": [
+                {
+                  "name": "动力总成、整车整机及关键零部件",
+                  "sharePct": 43.32,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "智慧物流",
+                  "sharePct": 39.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "农业装备",
+                  "sharePct": 8.11,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他零部件",
+                  "sharePct": 5.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "柴油发动机",
+                    "category": "柴油发动机"
+                  },
+                  {
+                    "name": "内燃叉车",
+                    "category": "起升车辆"
+                  },
+                  {
+                    "name": "垃圾车",
+                    "category": "环卫车"
+                  },
+                  {
+                    "name": "客车车桥",
+                    "category": "汽车底盘传动系统"
+                  },
+                  {
+                    "name": "小麦收获机",
+                    "category": "收获机械"
+                  },
+                  {
+                    "name": "工程自卸车",
+                    "category": "工程自卸车"
+                  }
+                ],
+                "knownProducts": [
+                  "垃圾车",
+                  "扫路车",
+                  "洒水车",
+                  "洗扫车",
+                  "清洗车",
+                  "轮式拖拉机",
+                  "小麦收获机",
+                  "玉米收获机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "潍柴动力已经具备柴油发动机、内燃叉车、垃圾车等业务能力，全球领先的发动机制造商，为工程机械、重卡等提供动力总成系统并非单纯概念映射。当前对应的收入被归入动力总成、整车整机及关键零部件（43.32%）、农业装备（8.11%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 7265,
+            "stockCode": "000680.SZ",
+            "stockName": "山推股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "全球推土机产销量第一，并积极拓展挖掘机等全系列土方机械产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000680.SZ",
+              "companyName": "山推股份",
+              "companyProfile": "公司的前身是成立于1952年的烟台机器厂，1966年烟台机器厂迁址济宁市改名济宁机器厂；1980年济宁机器厂、济宁通用机械厂和济宁动力机械厂三家企业合并组建山东推土机总厂。1993年成立山推工程机械股份有限公司，并于1997年1月在深交所挂牌上市，唯有专注，才能专业。山推股份从1962年推出首台T1-54推土机，多年来一直心无旁骛，扎扎实实做事，久久为功。如今连续推出国内首台无人驾驶推土机、5G远程遥控推土机、新能源电动推土机，特别是900马力推土机整车重量达到106吨，被誉为开天神推，打破了国外品牌超大功率推土机市场垄断地位，向世界展示出中国工程机械超高技术水平。公司先后荣获山东省高端品牌培育企业、山东省省长质量奖，获得行业内唯一国家金质奖章，国家级制造业单项冠军。围绕国内市场，山推将不断优化培育优势渠道，抢占客户资源，提高销售覆盖率、成功率；海外市场做好渠道布局、产品布局、服务布局，打造工程机械海外业务平台2024年，山推股份坚持“客户满意是我们的宗旨”核心价值观，加快结构调整，两聚焦，两抢抓，持续向上突破，在工程机械领域成为新能源、智能装备的领航者，成为“最关注客户个性化需求”“最关注服务”的企业。",
+              "profileSummary": "1993年成立山推工程机械股份有限公司，并于1997年1月在深交所挂牌上市，唯有专注，才能专业。围绕国内市场，山推将不断优化培育优势渠道，抢占客户资源，提高销售覆盖率、成功率；海外市场做好渠道布局、产品布局、服务布局，打造工程机械海外业务平台2024年，山推股份坚持“客户满意是我们的宗旨”核心价值观，加快结构调整，两聚焦，两抢抓，持续向上突破，在工程机械领域成为新能源、智能装备的领航者，成为“最关注客户个性化需求”“最关注服务”的企业。",
+              "majorProducts": "混凝土机械、山推吊管机、山推履带、山推平地机、山推推耙机、山推推土机、山推托带轮、山推挖掘机、山推雪地车、山推压路机、山推液力变矩器、山推液压拖式铲运机、山推支重轮、摊铺机、铣刨机、装载机",
+              "revenueComposition": "工程机械主机:74.9%;工程机械配件及其他:18.25%;其他业务:6.86%",
+              "revenueSegments": [
+                {
+                  "name": "工程机械主机",
+                  "sharePct": 74.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程机械配件及其他",
+                  "sharePct": 18.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 6.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "推土机",
+                    "category": "推土机"
+                  }
+                ],
+                "knownProducts": [
+                  "推土机",
+                  "装载机(铲车)",
+                  "工程机械履带总成",
+                  "工程机械链轨总成",
+                  "起重机",
+                  "混凝土搅拌站",
+                  "混凝土搅拌车",
+                  "压路机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "山推股份实际经营中已有推土机，与事件指向的全球推土机产销量第一，并积极拓展挖掘机等全系列土方机械产品能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在工程机械主机（74.9%）、工程机械配件及其他（18.25%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "3条低于3星的源记录已按当前关注口径排除。",
+      "2条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

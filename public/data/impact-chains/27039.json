@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27039",
@@ -9,20 +9,11 @@
     "date": "2026-07-06"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 3,
-    "mappedStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 2,
+    "mappedStockCount": 1,
     "unmappedStockCount": 1,
     "stocks": [
-      {
-        "sourceRowNumber": 18599,
-        "stockCode": "未上市",
-        "stockName": "英飞源",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 18600,
         "stockCode": "300693.SZ",
@@ -30,7 +21,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 18601,
@@ -38,16 +29,16 @@
         "stockName": "英可瑞",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 18599,
-        "stockCode": "未上市",
-        "stockName": "英飞源",
-        "rating": "★★★★☆",
+        "sourceRowNumber": 18601,
+        "stockCode": "300713.SZ",
+        "stockName": "英可瑞",
+        "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
@@ -58,204 +49,12 @@
     "candidateCoreProductCount": 17,
     "selectedCoreProductCount": 2,
     "selectedCompanyCoreProductCount": 2,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 9,
-    "downstreamCandidateCount": 18,
-    "shownUpstreamCount": 9,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 25,
+    "relatedIndustryCandidateCount": 11,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140168929",
-        "name": "SPC模块",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140030207"
-        ],
-        "linkedCoreProductNames": [
-          "三相不平衡调节装置(SPC)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030539",
-        "name": "塑壳断路器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140030207"
-        ],
-        "linkedCoreProductNames": [
-          "三相不平衡调节装置(SPC)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140016969",
-        "name": "控制系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140011306",
-        "name": "机箱",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140030207"
-        ],
-        "linkedCoreProductNames": [
-          "三相不平衡调节装置(SPC)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030538",
-        "name": "浪涌保护器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140030207"
-        ],
-        "linkedCoreProductNames": [
-          "三相不平衡调节装置(SPC)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140085883",
-        "name": "温控",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140030207"
-        ],
-        "linkedCoreProductNames": [
-          "三相不平衡调节装置(SPC)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140167876",
-        "name": "电流运算电路",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030906",
-        "name": "补偿电流发生电路",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140010755",
-        "name": "风扇",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140030207"
-        ],
-        "linkedCoreProductNames": [
-          "三相不平衡调节装置(SPC)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140166317",
-        "name": "有源电力滤波器(APF)",
-        "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 电能质量治理设备 > 电能质量治理设备 > 有源电力滤波器(APF)",
-        "industryPath": [
-          "电气设备",
-          "电网设备",
-          "输变电设备",
-          "电能质量治理设备",
-          "电能质量治理设备",
-          "有源电力滤波器(APF)"
-        ],
-        "level5Industry": {
-          "code": "1210000341",
-          "name": "电能质量治理设备"
-        },
-        "level6Industry": {
-          "code": "1210000561",
-          "name": "电能质量治理设备"
-        },
-        "level7Product": {
-          "code": "1140166317",
-          "name": "有源电力滤波器(APF)"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300693.SZ",
-            "stockName": "盛弘股份",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 16,
-        "relevanceScore": 5,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "输变电设备",
-          "电网设备"
-        ]
-      },
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140030207",
         "name": "三相不平衡调节装置(SPC)",
@@ -281,18 +80,56 @@
           "name": "三相不平衡调节装置(SPC)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300693.SZ",
             "stockName": "盛弘股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 6,
-        "downstreamCount": 2,
+        "relevanceScore": 5,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "输变电设备",
+          "电网设备"
+        ]
+      },
+      {
+        "code": "1140166317",
+        "name": "有源电力滤波器(APF)",
+        "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 电能质量治理设备 > 电能质量治理设备 > 有源电力滤波器(APF)",
+        "industryPath": [
+          "电气设备",
+          "电网设备",
+          "输变电设备",
+          "电能质量治理设备",
+          "电能质量治理设备",
+          "有源电力滤波器(APF)"
+        ],
+        "level5Industry": {
+          "code": "1210000341",
+          "name": "电能质量治理设备"
+        },
+        "level6Industry": {
+          "code": "1210000561",
+          "name": "电能质量治理设备"
+        },
+        "level7Product": {
+          "code": "1140166317",
+          "name": "有源电力滤波器(APF)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "300693.SZ",
+            "stockName": "盛弘股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -301,230 +138,523 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140169928",
-        "name": "低压配电用户侧",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140030207"
+        "code": "1200000347",
+        "name": "新能源电力设备",
+        "description": "新能源电力设备指光伏、风电及储能等发电与传输设施。因契合“双碳”战略，兼具高成长性与政策红利，且技术迭代快、出海潜力大，成为A股核心赛道，备受资金青睐。",
+        "stockCount": 5,
+        "starWeight": 18,
+        "level7ProductCount": 8,
+        "relevanceScore": 136,
+        "stocks": [
+          {
+            "stockCode": "300491.SZ",
+            "stockName": "通合科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300693.SZ",
+            "stockName": "盛弘股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688612.SH",
+            "stockName": "威迈斯",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301607.SZ",
+            "stockName": "富特科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300001.SZ",
+            "stockName": "特锐德",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "三相不平衡调节装置(SPC)"
+        "products": [
+          {
+            "code": "1140173819",
+            "name": "充电桩电源模块",
+            "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 充电桩电源模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301607.SZ",
+                "stockName": "富特科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "充电桩",
+              "充电模块"
+            ]
+          },
+          {
+            "code": "1140029279",
+            "name": "交流充电桩",
+            "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 交流充电桩",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300693.SZ",
+                "stockName": "盛弘股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300001.SZ",
+                "stockName": "特锐德",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "充电桩"
+            ]
+          },
+          {
+            "code": "1140029278",
+            "name": "直流充电桩",
+            "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 直流充电桩",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300693.SZ",
+                "stockName": "盛弘股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300001.SZ",
+                "stockName": "特锐德",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "充电桩"
+            ]
+          },
+          {
+            "code": "1140173730",
+            "name": "交直流一体充电桩",
+            "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 交直流一体充电桩",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300001.SZ",
+                "stockName": "特锐德",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "充电桩"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140149120",
-        "name": "冶金厂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
+        "code": "1200005627",
+        "name": "新能源汽车车身系统",
+        "description": "该行业指制造新能源车轻量化车身（如铝镁合金、一体化压铸）的领域。因直接影响车辆续航与安全，且受益于轻量化趋势及特斯拉等巨头技术革新，成为提升能效的关键环节，故备受资本市场关注。",
+        "stockCount": 3,
+        "starWeight": 11,
+        "level7ProductCount": 2,
+        "relevanceScore": 16,
+        "stocks": [
+          {
+            "stockCode": "301590.SZ",
+            "stockName": "优优绿能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688612.SH",
+            "stockName": "威迈斯",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301607.SZ",
+            "stockName": "富特科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
+        "products": [
+          {
+            "code": "1140022907",
+            "name": "车载充电模块",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 新能源汽车车身系统 > 新能源汽车车身系统 > 车载充电模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301590.SZ",
+                "stockName": "优优绿能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "充电模块"
+            ]
+          },
+          {
+            "code": "1140077136",
+            "name": "车载充电机",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 新能源汽车车身系统 > 新能源汽车车身系统 > 车载充电机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688612.SH",
+                "stockName": "威迈斯",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301607.SZ",
+                "stockName": "富特科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 10,
+    "mappedStockCount": 8,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 25,
+    "candidateIndustryCount": 11,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 18595,
+        "stockCode": "301590.SZ",
+        "stockName": "优优绿能",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140095359",
-        "name": "办公大楼",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 18596,
+        "stockCode": "300491.SZ",
+        "stockName": "通合科技",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1119001546",
-        "name": "医院",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 18600,
+        "stockCode": "300693.SZ",
+        "stockName": "盛弘股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140077776",
-        "name": "发电厂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 18601,
+        "stockCode": "300713.SZ",
+        "stockName": "英可瑞",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140042307",
-        "name": "地铁站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 18602,
+        "stockCode": "300001.SZ",
+        "stockName": "特锐德",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140169698",
-        "name": "大型商业区",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 18603,
+        "stockCode": "688208.SH",
+        "stockName": "道通科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140077179",
-        "name": "数据中心",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 18604,
+        "stockCode": "301607.SZ",
+        "stockName": "富特科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140169696",
-        "name": "港口机器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 18605,
+        "stockCode": "688612.SH",
+        "stockName": "威迈斯",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 9
       },
       {
-        "code": "1140039881",
-        "name": "电弧炉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 18606,
+        "stockCode": "300745.SZ",
+        "stockName": "欣锐科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140032009",
-        "name": "电气化铁路",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
+        "sourceRowNumber": 18607,
+        "stockCode": "002364.SZ",
+        "stockName": "中恒电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000347",
+        "name": "新能源电力设备",
+        "description": "新能源电力设备指光伏、风电及储能等发电与传输设施。因契合“双碳”战略，兼具高成长性与政策红利，且技术迭代快、出海潜力大，成为A股核心赛道，备受资金青睐。",
+        "stockCount": 5,
+        "starWeight": 18,
+        "level7ProductCount": 8,
+        "relevanceScore": 136,
+        "stocks": [
+          {
+            "stockCode": "300491.SZ",
+            "stockName": "通合科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300693.SZ",
+            "stockName": "盛弘股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688612.SH",
+            "stockName": "威迈斯",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301607.SZ",
+            "stockName": "富特科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300001.SZ",
+            "stockName": "特锐德",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
+        "products": [
+          {
+            "code": "1140173819",
+            "name": "充电桩电源模块",
+            "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 充电桩电源模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301607.SZ",
+                "stockName": "富特科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "充电桩",
+              "充电模块"
+            ]
+          },
+          {
+            "code": "1140029279",
+            "name": "交流充电桩",
+            "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 交流充电桩",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300693.SZ",
+                "stockName": "盛弘股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300001.SZ",
+                "stockName": "特锐德",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "充电桩"
+            ]
+          },
+          {
+            "code": "1140029278",
+            "name": "直流充电桩",
+            "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 直流充电桩",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300693.SZ",
+                "stockName": "盛弘股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300001.SZ",
+                "stockName": "特锐德",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "充电桩"
+            ]
+          },
+          {
+            "code": "1140173730",
+            "name": "交直流一体充电桩",
+            "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 交直流一体充电桩",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300001.SZ",
+                "stockName": "特锐德",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "充电桩"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140010203",
-        "name": "电网",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
+        "code": "1200005627",
+        "name": "新能源汽车车身系统",
+        "description": "该行业指制造新能源车轻量化车身（如铝镁合金、一体化压铸）的领域。因直接影响车辆续航与安全，且受益于轻量化趋势及特斯拉等巨头技术革新，成为提升能效的关键环节，故备受资本市场关注。",
+        "stockCount": 3,
+        "starWeight": 11,
+        "level7ProductCount": 2,
+        "relevanceScore": 16,
+        "stocks": [
+          {
+            "stockCode": "301590.SZ",
+            "stockName": "优优绿能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688612.SH",
+            "stockName": "威迈斯",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301607.SZ",
+            "stockName": "富特科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
+        "products": [
+          {
+            "code": "1140022907",
+            "name": "车载充电模块",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 新能源汽车车身系统 > 新能源汽车车身系统 > 车载充电模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301590.SZ",
+                "stockName": "优优绿能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "充电模块"
+            ]
+          },
+          {
+            "code": "1140077136",
+            "name": "车载充电机",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 新能源汽车车身系统 > 新能源汽车车身系统 > 车载充电机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688612.SH",
+                "stockName": "威迈斯",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301607.SZ",
+                "stockName": "富特科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140010608",
-        "name": "箱式变电站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140032229",
-        "name": "轧钢机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166317"
-        ],
-        "linkedCoreProductNames": [
-          "有源电力滤波器(APF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -539,10 +669,826 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 25,
+    "eligibleSourceRowCount": 10,
+    "totalStockCount": 10,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 12,
+    "excludedNonAShareCount": 3,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 10,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 18595,
+            "stockCode": "301590.SZ",
+            "stockName": "优优绿能",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "作为充电模块龙头企业之一，发布涨价函，宣布自2026年7月1日起对全系产品涨价15%。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301590.SZ",
+              "companyName": "优优绿能",
+              "companyProfile": "公司成立于2015年，专注于充换电及储能领域，是行业知名的电动汽车高质量全场景直流快充解决方案和储充核心部件供应商，致力于成为全球领先的智慧能源科技公司。作为国家级高新技术企业，公司集研发、生产、销售、售后于一体，拥有强大的技术研发和产品开发生态体系。公司以技术创新为核心、以客户价值为根本，通过对“直通风+独立风道+液冷超充”三大充电技术路线的成熟应用，为全球行业客户提供大功率直流快充、目的地小直流充电、V2G车网互动、储能充电及光储充放一体化解决方案，推动高质量充电基础设施建设，助力新能源产业快速发展。集团总部位于广东深圳，海外业务覆盖欧美、日韩、东南亚、中东、非洲、南美、澳洲等众多海外地区，并在美国、马来西亚、韩国、荷兰、德国等地设立制造基地及运维中心，为全球客户提供优质的产品和服务。",
+              "profileSummary": "作为国家级高新技术企业，公司集研发、生产、销售、售后于一体，拥有强大的技术研发和产品开发生态体系。集团总部位于广东深圳，海外业务覆盖欧美、日韩、东南亚、中东、非洲、南美、澳洲等众多海外地区，并在美国、马来西亚、韩国、荷兰、德国等地设立制造基地及运维中心，为全球客户提供优质的产品和服务。",
+              "majorProducts": "15KW充电模块、20KW充电模块、30KW充电模块、40KW充电模块、端子、线缆、智能监控器",
+              "revenueComposition": "新能源充电产品:97.22%;配件:2.47%;其他业务:0.31%",
+              "revenueSegments": [
+                {
+                  "name": "新能源充电产品",
+                  "sharePct": 97.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配件",
+                  "sharePct": 2.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "车载充电模块",
+                    "category": "新能源汽车车身系统"
+                  }
+                ],
+                "knownProducts": [
+                  "车载充电模块"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "优优绿能与新闻之间有明确产品抓手：车载充电模块，对应作为充电模块龙头企业之一，发布涨价函，宣布自2026年7月1日起对全系产品涨价15%。收入主体目前是新能源充电产品（97.22%）、配件（2.47%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 18596,
+            "stockCode": "300491.SZ",
+            "stockName": "通合科技",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "作为充电模块主要供应商之一，发布涨价函，宣布自2026年7月1日起对全系产品涨价15%。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300491.SZ",
+              "companyName": "通合科技",
+              "companyProfile": "公司主要从事电力电子行业产品的研发、生产、销售和服务。2019年2月，公司通过发行股份购买资产的方式收购了军工电源制造商西安霍威电源有限公司，形成了智能电网、新能源汽车及军工装备三大业务领域的产业格局。在智能电网领域，主要产品包括电力操作电源和配网自动化电源。在新能源汽车领域，主要产品包括充换电站充电电源系统(充电桩)及其核心的充电模块、车载电源等产品。在军工装备领域，主要产品包括电源模块、电源组件及定制电源，同时开展军工装备检测服务，为军工客户提供更为丰富的产品、服务以及整体解决方案。",
+              "profileSummary": "在新能源汽车领域，主要产品包括充换电站充电电源系统(充电桩)及其核心的充电模块、车载电源等产品。在军工装备领域，主要产品包括电源模块、电源组件及定制电源，同时开展军工装备检测服务，为军工客户提供更为丰富的产品、服务以及整体解决方案。",
+              "majorProducts": "充换电站充电电源、电力操作电源、电力用UPS/逆变电源、电源组件、定制电源、配电自动化终端电源管理模块、热管理电源、中小功率电源模块",
+              "revenueComposition": "新能源功率变换产品:70.04%;智能电网电源产品:16.53%;定制类电源及检测业务:12.2%;其他业务:1.23%",
+              "revenueSegments": [
+                {
+                  "name": "新能源功率变换产品",
+                  "sharePct": 70.04,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "智能电网电源产品",
+                  "sharePct": 16.53,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "定制类电源及检测业务",
+                  "sharePct": 12.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "充电桩充电模块",
+                    "category": "充电桩"
+                  }
+                ],
+                "knownProducts": [
+                  "新能源重卡电池热管理电源",
+                  "充电桩充电模块",
+                  "通信电源",
+                  "军工电源",
+                  "电力操作电源"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "通合科技已经具备充电桩充电模块等业务能力，作为充电模块主要供应商之一，发布涨价函，宣布自2026年7月1日起对全系产品涨价15%并非单纯概念映射。当前对应的收入被归入新能源功率变换产品（70.04%）、智能电网电源产品（16.53%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 18600,
+            "stockCode": "300693.SZ",
+            "stockName": "盛弘股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内150kW以下充电直流模块领域出货领先，是充电桩行业核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300693.SZ",
+              "companyName": "盛弘股份",
+              "companyProfile": "公司创立于2007年，总部位于中国深圳，自成立以来便专注于电力电子技术在工业配套电源与新能源领域中的应用，为高端制造业、数据中心、能源及轨道交通等领域提供高效、安全的电能保障；为新能源领域中的储能微网系统、充换电运营、消费及动力电池制造企业提供核心设备及全面的解决方案。公司是“双高双软”(国家/深圳高新企业，软件企业/软件产品)、国家“专精特新”小巨人、深圳市南山区民营领军企业，参与国家创新基金与深圳市科技研究开发计划，获得广东省工业设计中心、广东省科技进步奖、深圳市企业技术中心等资质，并荣获“第十七届创业板上市公司价值50强”、“全球新能源企业500强”、“标普全球储能逆变器供应商TOP10”、“2024ESG典范企业奖”等荣誉。",
+              "profileSummary": "公司创立于2007年，总部位于中国深圳，自成立以来便专注于电力电子技术在工业配套电源与新能源领域中的应用，为高端制造业、数据中心、能源及轨道交通等领域提供高效、安全的电能保障；为新能源领域中的储能微网系统、充换电运营、消费及动力电池制造企业提供核心设备及全面的解决方案。公司是“双高双软”(国家/深圳高新企业，软件企业/软件产品)、国家“专精特新”小巨人、深圳市南山区民营领军企业，参与国家创新基金与深圳市科技研究开发计划，获得广东省工业…",
+              "majorProducts": "不间断电源（UPS）、单晶硅炉加热电源、低压线路调压器（LVR）、电池化成与检测设备、电动汽车充电桩、电能质量设备、动态电压调节器（AVC）、激光发生器电源、静止无功发生器（SVG）、三相不平衡调节装置（SPC）、新能源电能变换设备、有源滤波器（APF）",
+              "revenueComposition": "电动汽车充电桩:43.2%;新能源电能变换设备:23.84%;工业配套电源:20.51%;电池化成与检测设备:9.91%;其他业务:2.54%",
+              "revenueSegments": [
+                {
+                  "name": "电动汽车充电桩",
+                  "sharePct": 43.2,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "新能源电能变换设备",
+                  "sharePct": 23.84,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "工业配套电源",
+                  "sharePct": 20.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电池化成与检测设备",
+                  "sharePct": 9.91,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "交流充电桩",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "直流充电桩",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "三相不平衡调节装置(SPC)",
+                    "category": "电能质量治理设备"
+                  },
+                  {
+                    "name": "低压线路调压器(LVR)",
+                    "category": "电网设备零部件"
+                  },
+                  {
+                    "name": "储能变流器(PCS)",
+                    "category": "变流器"
+                  },
+                  {
+                    "name": "动态电压调节器(AVC)",
+                    "category": "电网设备零部件"
+                  }
+                ],
+                "knownProducts": [
+                  "交流充电桩",
+                  "直流充电桩",
+                  "不间断电源(UPS)",
+                  "DC/DC电源模块",
+                  "智能柔性充电堆",
+                  "锂电池化成分容系统",
+                  "锂电池电芯测试系统",
+                  "低压线路调压器(LVR)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "盛弘股份已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：电动汽车充电桩占收入的43.2%。公司在产业链中的位置是：国内150kW以下充电直流模块领域出货领先，是充电桩行业核心供应商，供需缺口与产品价格则决定增量大小。只有完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，相关业务的增长才可能改善公司整体盈利。产品报价、订单排期、产销率和毛利率还需与其他主业表现同时改善；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 18601,
+            "stockCode": "300713.SZ",
+            "stockName": "英可瑞",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司核心业务包括电动汽车充电电源模块及系统，是智能高频开关电源核心部件供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300713.SZ",
+              "companyName": "英可瑞",
+              "companyProfile": "公司成立于2002年，为国家高新技术企业，2017年11月1日在创业板顺利上市。专注于电力电子产品的研发、生产和销售，定位服务于中高端直流电源系统制造商，以拥有自主知识产权为基础，在经营过程中坚持走自主研发，技术创新的道路，为客户提供设备配套及其服务，实现企业价值与客户价值共同成长。公司成立十多年来，一直在努力建设高素质研发团队，积极担当电源行业技术创新的探索者和实践者，先后获得多项国家发明专利技术和软件著作权。同时我们坚持制造符合国标和欧美标准的高品质产品，锻造专业化的营销服务精英。目前公司产品广泛应用于汽车、电力、铁路、冶金、通信等领域，业绩案例遍布国内及世界各地。为了致力于新能源电动汽车的市场开拓，自2011年开始汽车直流充电模块的开发，目前有3.5KW、7.5KW、10KW、15KW、20KW系列共计40余款型号的产品；充电桩标准系统从21KW到450KW多个功率等级的覆盖。目前参与典型的项目有北京APEC会议中心充电站，首都国际机场充电站，上海交投公交充电站，南京公交充电站，苏州大型充电站等项目，在新能源汽车充电桩领域享有很高的美誉度。",
+              "profileSummary": "专注于电力电子产品的研发、生产和销售，定位服务于中高端直流电源系统制造商，以拥有自主知识产权为基础，在经营过程中坚持走自主研发，技术创新的道路，为客户提供设备配套及其服务，实现企业价值与客户价值共同成长。为了致力于新能源电动汽车的市场开拓，自2011年开始汽车直流充电模块的开发，目前有3.5KW、7.5KW、10KW、15KW、20KW系列共计40余款型号的产品；充电桩标准系统从21KW到450KW多个功率等级的覆盖。",
+              "majorProducts": "电动汽车车载电源模块、电动汽车充电电源模块、电动汽车充电电源系统、电动汽车充电监控模块、电力操作电源监控模块、电力操作电源系统、电力操作电源整流模块、逆变器电源、通信电源",
+              "revenueComposition": "电动汽车充电电源:63.1%;其他电源:25.6%;电力操作电源:11.31%",
+              "revenueSegments": [
+                {
+                  "name": "电动汽车充电电源",
+                  "sharePct": 63.1,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他电源",
+                  "sharePct": 25.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力操作电源",
+                  "sharePct": 11.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电动汽车充电电源",
+                    "category": "特种电源设备"
+                  }
+                ],
+                "knownProducts": [
+                  "通信电源",
+                  "电力操作电源",
+                  "电动汽车充电电源",
+                  "逆变器电源",
+                  "轨道交通辅助变流器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "英可瑞与事件的关系已经落在存量主业，而非远期概念：电动汽车充电电源占收入的63.1%。公司在产业链中的具体抓手是：公司核心业务包括电动汽车充电电源模块及系统，是智能高频开关电源核心部件供应商。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 18602,
+            "stockCode": "300001.SZ",
+            "stockName": "特锐德",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是充电桩运营龙头，并具备充电模块的自研自产能力，推出了融合AI技术的\"特来劲2代\"全国产化充电模块。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300001.SZ",
+              "companyName": "特锐德",
+              "companyProfile": "公司主要从事以智能箱式电力设备为主的“智能制造+集成服务”业务。坚持“一机两翼、双轮驱动”的全球化发展战略，深耕能源领域，凭借技术壁垒、生态化布局及国际化战略，在电力设备领域均处于龙头地位，多项成果被鉴定为“产品国际首创、技术水平世界领先”。自2004年成立以来，高度专注于户外箱式电力产品的集成设计与研发生产，坚持“一步领先，步步领先”的发展理念，在电力设备领域不断创新突破，引领行业发展。拥有世界首创的220kV及以下模块化智能预制舱式变电站的完整技术体系和知识产权，面对高寒、高热、高海拔、高盐雾等特殊工况及场景均有创新的集成技术与方案，为秦山核电站、西昌卫星发射基地、北京大兴国际机场、长征火箭、“嫦娥五号”等国家重点工程提供电力设备，是工信部第一批制造业单项冠军培育企业，2024年凭借智能预制舱式模块化变电站产品获得工信部制造业单项冠军企业。作为中国领先的户外箱式电力设备集成服务商，高压预制舱式模块化变电站产品和新能源箱变产品在新能源发电领域的中标份额均位居行业第一。同时，中高端箱式电力设备产品已经取得了中国铁路市场占有率第一、局部电力市场第一的领先地位。",
+              "profileSummary": "公司主要从事以智能箱式电力设备为主的“智能制造+集成服务”业务。坚持“一机两翼、双轮驱动”的全球化发展战略，深耕能源领域，凭借技术壁垒、生态化布局及国际化战略，在电力设备领域均处于龙头地位，多项成果被鉴定为“产品国际首创、技术水平世界领先”。",
+              "majorProducts": "10/0.4kV智能箱式变电站、10kV智能箱式环网柜、10kV智能箱式开闭所、35/10kV移动箱式变电站、35/10kV智能箱式变电站、电缆分接箱、户内10kV高压开关柜、户内35kV高压开关柜、户外箱式变电站、户外箱式开关站、配电防火墙、牵引供电智能箱式分区所、铁路电力远动箱变、铁路客运专线电力远动箱变、箱式开关站",
+              "revenueComposition": "中压预制舱变电站:28.33%;电动汽车充电设备:21.5%;变配电核心设备:20.54%;高压预制舱变电站:19.68%;电动汽车充电网运营服务:9.96%",
+              "revenueSegments": [
+                {
+                  "name": "中压预制舱变电站",
+                  "sharePct": 28.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电动汽车充电设备",
+                  "sharePct": 21.5,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "变配电核心设备",
+                  "sharePct": 20.54,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "高压预制舱变电站",
+                  "sharePct": 19.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电动汽车充电网运营服务",
+                  "sharePct": 9.96,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "交流充电桩",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "交直流一体充电桩",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "新能源汽车充电网运营",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "智能柔性充电弓",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "直流充电桩",
+                    "category": "充电桩"
+                  }
+                ],
+                "knownProducts": [
+                  "交流充电桩",
+                  "交直流一体充电桩",
+                  "新能源汽车充电网运营",
+                  "智能柔性充电弓",
+                  "直流充电桩",
+                  "非晶变压器",
+                  "干式变压器",
+                  "油浸式变压器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "特锐德与事件存在真实业务交集：公司已有交流充电桩、交直流一体充电桩、新能源汽车充电网运营，与公司是充电桩运营龙头，并具备充电模块的自研自产能力，推出了融合AI技术的\"特来劲2代\"全国产化充电模块所处的产业环节一致。电动汽车充电设备（21.5%）、变配电核心设备（20.54%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 18603,
+            "stockCode": "688208.SH",
+            "stockName": "道通科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司新能源充电业务高速增长，并推出自研的液冷和风冷充电模块以提升产品毛利率。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688208.SH",
+              "companyName": "道通科技",
+              "companyProfile": "公司成立于2004年，于2020年2月成功登陆上海证券交易所科创板。公司专注于汽车智能分析、检测分析系统及汽车电子零部件的研发、生产、销售和服务，产品主销美国、德国、英国、澳大利亚等70多个国家和地区，是专业的汽车智能分析、检测和TPMS(胎压监测系统)产品及服务综合方案提供商。公司紧紧围绕汽车产业智能化、网联化和新能源化的趋势，运用云平台、大数据、AI等核心技术正在向更多专业智能分析检测综合解决方案、智能汽车电子零部件以及新能源电池分析系统等领域拓展。公司在全球汽车智能分析、检测领域深耕十多年，通过紧跟汽车发展趋势、持续进行产品创新，目前已构建了包括汽车综合诊断产品、针对汽车胎压监测系统的TPMS系列和针对汽车智能辅助驾驶系统的ADAS系列在内的三大产品线。同时基于多年积累的诊断数据，开始提供一体化的智能维修云服务。汽车综合诊断产品主要为汽车智能分析电脑产品，该产品具备全自动读取汽车各电控系统故障码、读取汽车动态数据流和动作测试、显示传感器波形、控制电脑编码等各项综合型集成功能，是用计算机技术对汽车内部电控系统进行全自动化检测，使用者可根据显示的信息了解汽车故障的类型、产生原因、发生故障的位置从而检修汽车。产品全面支持主流品牌不同车型、不同诊断接头、不同协议的故障诊断功能，无需依靠原厂复杂的检修仪器就可以为客户提供全面的诊断服务，主要服务于大中型独立维修机构。",
+              "profileSummary": "公司专注于汽车智能分析、检测分析系统及汽车电子零部件的研发、生产、销售和服务，产品主销美国、德国、英国、澳大利亚等70多个国家和地区，是专业的汽车智能分析、检测和TPMS(胎压监测系统)产品及服务综合方案提供商。产品全面支持主流品牌不同车型、不同诊断接头、不同协议的故障诊断功能，无需依靠原厂复杂的检修仪器就可以为客户提供全面的诊断服务，主要服务于大中型独立维修机构。",
+              "majorProducts": "ADAS检测标定工具、ADAS智能检测标定工具、TPMS Sensor（胎压传感器）、TPMSSensor（胎压传感器）、TPMS系统诊断匹配工具、乘用车&商用车综合诊断产品、工业视频内窥镜、简易诊断仪—读码卡、交流充电桩、汽车电路测试仪、汽车诊断特殊功能检测仪、汽车智能维修云服务、汽车智能诊断电脑二代、汽车智能诊断电脑一代、商用车智能综合诊断电脑、胎压检测智能诊断电脑系列、直流充电桩",
+              "revenueComposition": "汽车综合诊断产品:28.8%;新能源充电桩:25.7%;TPMS产品:20.84%;AI及软件:11.42%;ADAS产品:7.89%;其他:4.12%;其他业务:1.23%",
+              "revenueSegments": [
+                {
+                  "name": "汽车综合诊断产品",
+                  "sharePct": 28.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源充电桩",
+                  "sharePct": 25.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "TPMS产品",
+                  "sharePct": 20.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "AI及软件",
+                  "sharePct": 11.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "ADAS产品",
+                  "sharePct": 7.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "工业视频内窥镜",
+                  "汽车智能维修云服务",
+                  "胎压传感器",
+                  "汽车智能诊断电脑",
+                  "汽车简易诊断仪",
+                  "汽车诊断特殊功能检测仪",
+                  "胎压系统诊断匹配工具",
+                  "高级驾驶辅助系统(ADAS)校准设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "道通科技目前更依赖汽车综合诊断产品（28.8%）、新能源充电桩（25.7%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：公司新能源充电业务高速增长，并推出自研的液冷和风冷充电模块以提升产品毛利率，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变供需缺口与产品价格；公司的产业链位置只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能转化为收入。现阶段可以用产品报价、订单排期、产销率和毛利率判断预期差方向；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 18604,
+            "stockCode": "301607.SZ",
+            "stockName": "富特科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司在车载电源领域为头部供应商，同时布局充电桩模块业务，包括液冷超充桩电源模块。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301607.SZ",
+              "companyName": "富特科技",
+              "companyProfile": "公司成立于2011年8月，生产基地位于湖州市安吉县，研发中心分别位于杭州市西湖区及西安市高新区。公司是一家专注于新能源汽车核心零部件的国家级高新技术企业，也是国内新能源汽车车载充电机及车载DC/DC转换器的主要供应商。",
+              "profileSummary": "公司是一家专注于新能源汽车核心零部件的国家级高新技术企业，也是国内新能源汽车车载充电机及车载DC/DC转换器的主要供应商。",
+              "majorProducts": "0",
+              "revenueComposition": "车载高压电源系统:97.29%;技术服务:1.41%;非车载高压电源系统:1.14%;其他业务收入:0.16%",
+              "revenueSegments": [
+                {
+                  "name": "车载高压电源系统",
+                  "sharePct": 97.29,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 1.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "非车载高压电源系统",
+                  "sharePct": 1.14,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务收入",
+                  "sharePct": 0.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "充电桩电源模块",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "电动汽车车载电源",
+                    "category": "特种电源设备"
+                  },
+                  {
+                    "name": "车载DC/DC转换器",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "车载充电机",
+                    "category": "新能源汽车车身系统"
+                  }
+                ],
+                "knownProducts": [
+                  "车载充电机",
+                  "车载DC/DC转换器",
+                  "充电桩电源模块",
+                  "电动汽车车载电源"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "富特科技与事件存在真实业务交集：公司已有充电桩电源模块、电动汽车车载电源、车载DC/DC转换器，与公司在车载电源领域为头部供应商，同时布局充电桩模块业务，包括液冷超充桩电源模块所处的产业环节一致。车载高压电源系统（97.29%）、非车载高压电源系统（1.14%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 18605,
+            "stockCode": "688612.SH",
+            "stockName": "威迈斯",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是车载电源第三方供应商龙头，同时在液冷充电模块等领域有技术和业务布局。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688612.SH",
+              "companyName": "威迈斯",
+              "companyProfile": "公司成立于2005年，总部位于中国深圳，致力于电力电子与电力传动产品的研发、生产和销售。公司与众多汽车制造商合作，为客户提供优良的汽车动力域产品和高效的解决方案，主要产品包括车载电源的车载充电机、车载DC/DC变换器、车载电源集成产品、电驱系统的电机控制器、电驱总成以及液冷充电桩模块等。公司以自主知识产权的电力电子技术为基础，以快速响应客户的定制需求为主要经营模式，实现企业价值与客户价值共同成长。本着以客户需求和客户利益为中心，满足全球客户差异化的需求以及快速的创新追求，公司已获得了行业内的普遍认可。公司获批国家高新技术企业(GR201744202135)，在深圳和上海、大连建立了国内优良的研发中心，拥有高端的电力电子变换技术、电源结构工艺技术，高质量的产品设计能力和高水平的技术研究能力。同时公司有着业界优良的研发团队、完善的企业流程体系、高效的管理结构和先进的软硬件系统，具备行业优良的研发设计技术和测试能力。公司专注于快速响应定制化的需求，为客户提供灵活的电源解决方案，目前已成为国内外众多知名企业的电源解决方案的主流供应商。未来，公司的愿景是致力于成为全球汽车制造商最具价值的合作伙伴。",
+              "profileSummary": "公司成立于2005年，总部位于中国深圳，致力于电力电子与电力传动产品的研发、生产和销售。公司与众多汽车制造商合作，为客户提供优良的汽车动力域产品和高效的解决方案，主要产品包括车载电源的车载充电机、车载DC/DC变换器、车载电源集成产品、电驱系统的电机控制器、电驱总成以及液冷充电桩模块等。",
+              "majorProducts": "车载DC/DC变换器、车载充电机、车载电源集成产品、电动汽车通信控制器、电机控制器、电驱系统集成产品、电驱总成、动力电池、减速器、交流电充电、驱动电机、液冷充电桩模块、直流电充电",
+              "revenueComposition": "车载电源集成产品:80.15%;电驱系统:12.69%;其他车载电源:3.83%;其他:0.72%",
+              "revenueSegments": [
+                {
+                  "name": "车载电源集成产品",
+                  "sharePct": 80.15,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电驱系统",
+                  "sharePct": 12.69,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他车载电源",
+                  "sharePct": 3.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "液冷充电桩模块",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "新能源汽车减速器",
+                    "category": "新能源汽车底盘传动系统"
+                  },
+                  {
+                    "name": "新能源汽车电驱动系统",
+                    "category": "新能源汽车驱动电机系统"
+                  },
+                  {
+                    "name": "新能源汽车驱动电机",
+                    "category": "新能源汽车驱动电机系统"
+                  },
+                  {
+                    "name": "新能源汽车驱动电机控制器",
+                    "category": "新能源汽车驱动电机系统"
+                  },
+                  {
+                    "name": "电动汽车车载电源",
+                    "category": "特种电源设备"
+                  }
+                ],
+                "knownProducts": [
+                  "新能源汽车减速器",
+                  "电动汽车通信控制器(EVCC)",
+                  "车载充电机",
+                  "新能源汽车电驱动系统",
+                  "新能源汽车驱动电机",
+                  "新能源汽车驱动电机控制器",
+                  "车载DC/DC转换器",
+                  "液冷充电桩模块"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "威迈斯已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：电驱系统占收入的12.69%。公司在产业链中的位置是：公司是车载电源第三方供应商龙头，同时在液冷充电模块等领域有技术和业务布局，供需缺口与产品价格则决定增量大小。只有完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，相关业务的增长才可能改善公司整体盈利。产品报价、订单排期、产销率和毛利率还需与其他主业表现同时改善；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 18606,
+            "stockCode": "300745.SZ",
+            "stockName": "欣锐科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是大功率SCM超级快充模块供应商，适配兆瓦级闪充高压平台。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300745.SZ",
+              "companyName": "欣锐科技",
+              "companyProfile": "公司是专注于新能源汽车车载电源的研发、生产、销售和技术服务的国家高新技术企业。目前公司主要为新能源汽车行业提供车载电源整体解决方案，产品包括车载DC/DC变换器、车载充电机及以车载DC/DC变换器、车载充电机为核心的车载电源集成产品等。公司车载电源产品可广泛应用于乘用车、客车、专用车等各类新能源汽车领域。公司具有较强的自主研发能力。公司自2006年初进入新能源汽车产业，专注新能源汽车高压“电控”解决方案(其主要技术集中在车载DC/DC变换器和车载充电机，统称为车载电源)，欣锐科技拥有车载电源原创性核心技术的全部自主知识产权，在车载电源和大功率充电领域积累了丰富的研发及产业经验，拥有业界领先的研发创新能力及工程制造能力，产品技术水平居行业前列。欣锐科技的车载电源配套了国内外众多主流车型，是车载电源细分领域的龙头企业，促进国内新能源汽车朝产业化方向发展。",
+              "profileSummary": "公司是专注于新能源汽车车载电源的研发、生产、销售和技术服务的国家高新技术企业。目前公司主要为新能源汽车行业提供车载电源整体解决方案，产品包括车载DC/DC变换器、车载充电机及以车载DC/DC变换器、车载充电机为核心的车载电源集成产品等。",
+              "majorProducts": "车载 DC/DC 变换器、车载充电机、大功率充电产品、高压“电控”总成、氢能与燃料电池汽车专用产品DCF",
+              "revenueComposition": "车载电源集成产品:92.31%;车载DC/DC变换器:2.9%;燃料电池相关产品:2.65%;技术开发收入:1.46%;材料收入及其他:0.48%;车载充电机:0.2%",
+              "revenueSegments": [
+                {
+                  "name": "车载电源集成产品",
+                  "sharePct": 92.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "车载DC/DC变换器",
+                  "sharePct": 2.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "燃料电池相关产品",
+                  "sharePct": 2.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术开发收入",
+                  "sharePct": 1.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "材料收入及其他",
+                  "sharePct": 0.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "车载充电机",
+                  "sharePct": 0.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "车载充电机",
+                  "燃料电池用DC/DC转换器",
+                  "车载DC/DC转换器",
+                  "直流充电桩",
+                  "电动汽车车载电源"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "欣锐科技目前更依赖车载电源集成产品（92.31%）、车载DC/DC变换器（2.9%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：公司是大功率SCM超级快充模块供应商，适配兆瓦级闪充高压平台，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变供需缺口与产品价格；公司的产业链位置只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能转化为收入。现阶段可以用产品报价、订单排期、产销率和毛利率判断预期差方向；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 18607,
+            "stockCode": "002364.SZ",
+            "stockName": "中恒电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是国内HVDC供电系统龙头，其技术与充电模块同源，并与宁德时代战略合作共同布局充电桩模块等业务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002364.SZ",
+              "companyName": "中恒电气",
+              "companyProfile": "公司创立于1996年，2010年3月在深圳证券交易所上市，是一家专注于零碳智能社会建设的数字能源公司。公司总部位于中国杭州高新技术产业开发区，设有“国家级博士后科研工作站”“浙江省重点新能源用电力电子技术科技创新团队”“浙江省能源互联网重点研究院”和现代化生产制造基地，并在杭州、北京等地设立了研发中心。公司坚持把“掌握数字能源的前沿技术和研发具有国际竞争力的产品”作为发展的战略支撑，在“电力电子技术”“电力数字化技术”“能源云平台技术”等关键技术饱和投入，聚焦绿色ICT基础设施、低碳交通、新型电力系统及综合能源服务等四大领域构筑数字世界与能源世界的孪生系统，提供能源减碳的全链路产品和解决方案。",
+              "profileSummary": "公司坚持把“掌握数字能源的前沿技术和研发具有国际竞争力的产品”作为发展的战略支撑，在“电力电子技术”“电力数字化技术”“能源云平台技术”等关键技术饱和投入，聚焦绿色ICT基础设施、低碳交通、新型电力系统及综合能源服务等四大领域构筑数字世界与能源世界的孪生系统，提供能源减碳的全链路产品和解决方案。",
+              "majorProducts": "240V/336V 直流关键电源、5G-Smart模块化电源系统、5G站点一体化能源柜、5G智慧储能系统、HVDC、UPS、大功率充电系统、大功率电源系统、电力模组-AC 系列、电力模组-H 系列、电力模组-P 系列、电力通信电源、二轮換电、国内直流电源产品、国外直流电源产品、交流供配电源、精密配电、室外小型一体化电源、算力电源、有序交流充电系统、直流一体式充电系统、智能光伏、智能锂电、智能微模块、智能液冷整机柜、智能一体化电源",
+              "revenueComposition": "数据中心电源:36.3%;电力操作电源系统:22.16%;软件开发、销售及技术服务:19.6%;通信电源系统:17.98%;其他:3.38%;电力管理服务及工程收入(服务收入):0.58%",
+              "revenueSegments": [
+                {
+                  "name": "数据中心电源",
+                  "sharePct": 36.3,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电力操作电源系统",
+                  "sharePct": 22.16,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "软件开发、销售及技术服务",
+                  "sharePct": 19.6,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "通信电源系统",
+                  "sharePct": 17.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力管理服务及工程收入(服务收入)",
+                  "sharePct": 0.58,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "数字电网软件",
+                    "category": "电力IT"
+                  },
+                  {
+                    "name": "数据中心配电柜",
+                    "category": "配电柜"
+                  }
+                ],
+                "knownProducts": [
+                  "通信电源",
+                  "电力操作电源",
+                  "数据中心配电柜",
+                  "数字电网软件",
+                  "能源管理系统(EMS)",
+                  "IDC液冷机柜",
+                  "IDC高压直流电源系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 4
+              }
+            },
+            "analysis": "中恒电气已经具备数字电网软件、数据中心配电柜等业务能力，公司是国内HVDC供电系统龙头，其技术与充电模块同源，并与宁德时代战略合作共同布局充电桩模块等业务并非单纯概念映射。当前对应的收入被归入数据中心电源（36.3%）、电力操作电源系统（22.16%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "12条低于3星的源记录已按当前关注口径排除。",
+      "3条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

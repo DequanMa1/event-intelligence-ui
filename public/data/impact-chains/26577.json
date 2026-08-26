@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26577",
@@ -9,10 +9,10 @@
     "date": "2026-06-29"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 3,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 2,
     "mappedStockCount": 2,
-    "unmappedStockCount": 1,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 8040,
@@ -21,16 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 20
-      },
-      {
-        "sourceRowNumber": 8041,
-        "stockCode": "02367.HK",
-        "stockName": "巨子生物",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 15
       },
       {
         "sourceRowNumber": 8042,
@@ -39,337 +30,61 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 15
+        "anchorProductCount": 10
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 8041,
-        "stockCode": "02367.HK",
-        "stockName": "巨子生物",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 28,
     "selectedCoreProductCount": 18,
     "selectedCompanyCoreProductCount": 18,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 140,
-    "downstreamCandidateCount": 14,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 4,
+    "relatedIndustryCandidateCount": 1,
+    "shownRelatedIndustryCount": 1
   },
-  "chain": {
-    "upstream": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
-        "code": "1140046160",
-        "name": "甘油",
-        "anchorCount": 5,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046216",
-          "1140046597",
-          "1140071846",
-          "1140147440",
-          "1140147442"
-        ],
-        "linkedCoreProductNames": [
-          "卸妆水",
-          "洗面奶",
-          "爽肤水",
-          "隔离霜",
-          "面霜"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140004777",
-        "name": "日用香精",
-        "anchorCount": 3,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046215",
-          "1140046596",
-          "1140046597"
-        ],
-        "linkedCoreProductNames": [
-          "洗面奶",
-          "精华液",
-          "防晒霜"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 3
-        }
-      },
-      {
-        "code": "1140007693",
-        "name": "丙二醇",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046593",
-          "1140046597"
-        ],
-        "linkedCoreProductNames": [
-          "洗面奶",
-          "粉底液"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140028059",
-        "name": "二氧化钛",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046596",
-          "1140147440"
-        ],
-        "linkedCoreProductNames": [
-          "防晒霜",
-          "隔离霜"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140049888",
-        "name": "凡士林",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046593",
-          "1140075807"
-        ],
-        "linkedCoreProductNames": [
-          "润唇膏",
-          "粉底液"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140049319",
-        "name": "海藻",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046215",
-          "1140056629"
-        ],
-        "linkedCoreProductNames": [
-          "眼霜",
-          "精华液"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140049317",
-        "name": "玻尿酸",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046215",
-          "1140071846"
-        ],
-        "linkedCoreProductNames": [
-          "精华液",
-          "面霜"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1119001293",
-        "name": "维生素E",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140056629",
-          "1140075807"
-        ],
-        "linkedCoreProductNames": [
-          "润唇膏",
-          "眼霜"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1119001874",
-        "name": "羊毛脂",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046593",
-          "1140075807"
-        ],
-        "linkedCoreProductNames": [
-          "润唇膏",
-          "粉底液"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140049318",
-        "name": "胜肽",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046215",
-          "1140071846"
-        ],
-        "linkedCoreProductNames": [
-          "精华液",
-          "面霜"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1119000619",
-        "name": "胶原蛋白",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140056629",
-          "1140071846"
-        ],
-        "linkedCoreProductNames": [
-          "眼霜",
-          "面霜"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140063897",
-        "name": "芦荟",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140056629",
-          "1140075807"
-        ],
-        "linkedCoreProductNames": [
-          "润唇膏",
-          "眼霜"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140007626",
-        "name": "表面活性剂",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046211",
-          "1140046216"
-        ],
-        "linkedCoreProductNames": [
-          "护发素",
-          "爽肤水"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1131000421",
-        "name": "香精",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046211",
-          "1140046216"
-        ],
-        "linkedCoreProductNames": [
-          "护发素",
-          "爽肤水"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140046596",
-        "name": "防晒霜",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护肤用化妆品 > 防晒霜",
+        "code": "1140213700",
+        "name": "散粉",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 美容修饰类化妆品 > 散粉",
         "industryPath": [
           "化工",
           "化学制品",
           "日用化学产品",
           "化妆品",
-          "护肤用化妆品",
-          "防晒霜"
+          "美容修饰类化妆品",
+          "散粉"
         ],
         "level5Industry": {
           "code": "1200000958",
           "name": "化妆品"
         },
         "level6Industry": {
-          "code": "1200004200",
-          "name": "护肤用化妆品"
+          "code": "1200004202",
+          "name": "美容修饰类化妆品"
         },
         "level7Product": {
-          "code": "1140046596",
-          "name": "防晒霜"
+          "code": "1140213700",
+          "name": "散粉"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "603605.SH",
             "stockName": "珀莱雅",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "300957.SZ",
             "stockName": "贝泰妮",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 15,
-        "downstreamCount": 4,
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -401,23 +116,21 @@
           "name": "洗面奶"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "603605.SH",
             "stockName": "珀莱雅",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "300957.SZ",
             "stockName": "贝泰妮",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 13,
-        "downstreamCount": 4,
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -449,23 +162,21 @@
           "name": "爽肤水"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "603605.SH",
             "stockName": "珀莱雅",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "300957.SZ",
             "stockName": "贝泰妮",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 12,
-        "downstreamCount": 5,
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -497,119 +208,21 @@
           "name": "精华液"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "603605.SH",
             "stockName": "珀莱雅",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "300957.SZ",
             "stockName": "贝泰妮",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 13,
-        "downstreamCount": 4,
-        "relevanceScore": 2,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "化妆品"
-        ]
-      },
-      {
-        "code": "1140071846",
-        "name": "面霜",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护肤用化妆品 > 面霜",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "日用化学产品",
-          "化妆品",
-          "护肤用化妆品",
-          "面霜"
-        ],
-        "level5Industry": {
-          "code": "1200000958",
-          "name": "化妆品"
-        },
-        "level6Industry": {
-          "code": "1200004200",
-          "name": "护肤用化妆品"
-        },
-        "level7Product": {
-          "code": "1140071846",
-          "name": "面霜"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "603605.SH",
-            "stockName": "珀莱雅",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "300957.SZ",
-            "stockName": "贝泰妮",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 12,
-        "downstreamCount": 1,
-        "relevanceScore": 2,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "化妆品"
-        ]
-      },
-      {
-        "code": "1140213700",
-        "name": "散粉",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 美容修饰类化妆品 > 散粉",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "日用化学产品",
-          "化妆品",
-          "美容修饰类化妆品",
-          "散粉"
-        ],
-        "level5Industry": {
-          "code": "1200000958",
-          "name": "化妆品"
-        },
-        "level6Industry": {
-          "code": "1200004202",
-          "name": "美容修饰类化妆品"
-        },
-        "level7Product": {
-          "code": "1140213700",
-          "name": "散粉"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "603605.SH",
-            "stockName": "珀莱雅",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "300957.SZ",
-            "stockName": "贝泰妮",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -641,23 +254,21 @@
           "name": "贴式面膜"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "603605.SH",
             "stockName": "珀莱雅",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "300957.SZ",
             "stockName": "贝泰妮",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -665,59 +276,16 @@
         ]
       },
       {
-        "code": "1140147440",
-        "name": "隔离霜",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 美容修饰类化妆品 > 隔离霜",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "日用化学产品",
-          "化妆品",
-          "美容修饰类化妆品",
-          "隔离霜"
-        ],
-        "level5Industry": {
-          "code": "1200000958",
-          "name": "化妆品"
-        },
-        "level6Industry": {
-          "code": "1200004202",
-          "name": "美容修饰类化妆品"
-        },
-        "level7Product": {
-          "code": "1140147440",
-          "name": "隔离霜"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300957.SZ",
-            "stockName": "贝泰妮",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 25,
-        "downstreamCount": 5,
-        "relevanceScore": 2,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "化妆品"
-        ]
-      },
-      {
-        "code": "1140056629",
-        "name": "眼霜",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护肤用化妆品 > 眼霜",
+        "code": "1140046596",
+        "name": "防晒霜",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护肤用化妆品 > 防晒霜",
         "industryPath": [
           "化工",
           "化学制品",
           "日用化学产品",
           "化妆品",
           "护肤用化妆品",
-          "眼霜"
+          "防晒霜"
         ],
         "level5Industry": {
           "code": "1200000958",
@@ -728,108 +296,25 @@
           "name": "护肤用化妆品"
         },
         "level7Product": {
-          "code": "1140056629",
-          "name": "眼霜"
+          "code": "1140046596",
+          "name": "防晒霜"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
+        "stockCount": 2,
         "stocks": [
           {
             "stockCode": "603605.SH",
             "stockName": "珀莱雅",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 21,
-        "downstreamCount": 1,
-        "relevanceScore": 2,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "化妆品"
-        ]
-      },
-      {
-        "code": "1140046593",
-        "name": "粉底液",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 美容修饰类化妆品 > 粉底液",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "日用化学产品",
-          "化妆品",
-          "美容修饰类化妆品",
-          "粉底液"
-        ],
-        "level5Industry": {
-          "code": "1200000958",
-          "name": "化妆品"
-        },
-        "level6Industry": {
-          "code": "1200004202",
-          "name": "美容修饰类化妆品"
-        },
-        "level7Product": {
-          "code": "1140046593",
-          "name": "粉底液"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "603605.SH",
-            "stockName": "珀莱雅",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 17,
-        "downstreamCount": 5,
-        "relevanceScore": 2,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "化妆品"
-        ]
-      },
-      {
-        "code": "1140147442",
-        "name": "卸妆水",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 清洁类化妆品 > 卸妆水",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "日用化学产品",
-          "化妆品",
-          "清洁类化妆品",
-          "卸妆水"
-        ],
-        "level5Industry": {
-          "code": "1200000958",
-          "name": "化妆品"
-        },
-        "level6Industry": {
-          "code": "1200004199",
-          "name": "清洁类化妆品"
-        },
-        "level7Product": {
-          "code": "1140147442",
-          "name": "卸妆水"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
           {
             "stockCode": "300957.SZ",
             "stockName": "贝泰妮",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 15,
-        "downstreamCount": 5,
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -837,59 +322,16 @@
         ]
       },
       {
-        "code": "1140046211",
-        "name": "护发素",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护发美发类用品 > 护发素",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "日用化学产品",
-          "化妆品",
-          "护发美发类用品",
-          "护发素"
-        ],
-        "level5Industry": {
-          "code": "1200000958",
-          "name": "化妆品"
-        },
-        "level6Industry": {
-          "code": "1200004201",
-          "name": "护发美发类用品"
-        },
-        "level7Product": {
-          "code": "1140046211",
-          "name": "护发素"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "603605.SH",
-            "stockName": "珀莱雅",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 10,
-        "downstreamCount": 5,
-        "relevanceScore": 2,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "化妆品"
-        ]
-      },
-      {
-        "code": "1140075807",
-        "name": "润唇膏",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护肤用化妆品 > 润唇膏",
+        "code": "1140071846",
+        "name": "面霜",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护肤用化妆品 > 面霜",
         "industryPath": [
           "化工",
           "化学制品",
           "日用化学产品",
           "化妆品",
           "护肤用化妆品",
-          "润唇膏"
+          "面霜"
         ],
         "level5Industry": {
           "code": "1200000958",
@@ -900,22 +342,25 @@
           "name": "护肤用化妆品"
         },
         "level7Product": {
-          "code": "1140075807",
-          "name": "润唇膏"
+          "code": "1140071846",
+          "name": "面霜"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
+        "stockCount": 2,
         "stocks": [
+          {
+            "stockCode": "603605.SH",
+            "stockName": "珀莱雅",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
           {
             "stockCode": "300957.SZ",
             "stockName": "贝泰妮",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 10,
-        "downstreamCount": 5,
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -947,61 +392,15 @@
           "name": "乳液"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300957.SZ",
             "stockName": "贝泰妮",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 2,
-        "relevanceScore": 2,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "化妆品"
-        ]
-      },
-      {
-        "code": "1140084943",
-        "name": "气垫",
-        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 美容修饰类化妆品 > 气垫",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "日用化学产品",
-          "化妆品",
-          "美容修饰类化妆品",
-          "气垫"
-        ],
-        "level5Industry": {
-          "code": "1200000958",
-          "name": "化妆品"
-        },
-        "level6Industry": {
-          "code": "1200004202",
-          "name": "美容修饰类化妆品"
-        },
-        "level7Product": {
-          "code": "1140084943",
-          "name": "气垫"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "603605.SH",
-            "stockName": "珀莱雅",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 1,
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1033,18 +432,55 @@
           "name": "修容盘"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603605.SH",
             "stockName": "珀莱雅",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 2,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "化妆品"
+        ]
+      },
+      {
+        "code": "1140147442",
+        "name": "卸妆水",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 清洁类化妆品 > 卸妆水",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "日用化学产品",
+          "化妆品",
+          "清洁类化妆品",
+          "卸妆水"
+        ],
+        "level5Industry": {
+          "code": "1200000958",
+          "name": "化妆品"
+        },
+        "level6Industry": {
+          "code": "1200004199",
+          "name": "清洁类化妆品"
+        },
+        "level7Product": {
+          "code": "1140147442",
+          "name": "卸妆水"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "300957.SZ",
+            "stockName": "贝泰妮",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1076,18 +512,15 @@
           "name": "发膜"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603605.SH",
             "stockName": "珀莱雅",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1119,18 +552,255 @@
           "name": "妆前乳"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603605.SH",
             "stockName": "珀莱雅",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 2,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "化妆品"
+        ]
+      },
+      {
+        "code": "1140209829",
+        "name": "婴幼儿身体乳",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护肤用化妆品 > 婴幼儿身体乳",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "日用化学产品",
+          "化妆品",
+          "护肤用化妆品",
+          "婴幼儿身体乳"
+        ],
+        "level5Industry": {
+          "code": "1200000958",
+          "name": "化妆品"
+        },
+        "level6Industry": {
+          "code": "1200004200",
+          "name": "护肤用化妆品"
+        },
+        "level7Product": {
+          "code": "1140209829",
+          "name": "婴幼儿身体乳"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "300957.SZ",
+            "stockName": "贝泰妮",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 2,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "化妆品"
+        ]
+      },
+      {
+        "code": "1140213701",
+        "name": "定妆喷雾",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 美容修饰类化妆品 > 定妆喷雾",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "日用化学产品",
+          "化妆品",
+          "美容修饰类化妆品",
+          "定妆喷雾"
+        ],
+        "level5Industry": {
+          "code": "1200000958",
+          "name": "化妆品"
+        },
+        "level6Industry": {
+          "code": "1200004202",
+          "name": "美容修饰类化妆品"
+        },
+        "level7Product": {
+          "code": "1140213701",
+          "name": "定妆喷雾"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "603605.SH",
+            "stockName": "珀莱雅",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 2,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "化妆品"
+        ]
+      },
+      {
+        "code": "1140213703",
+        "name": "护发精油",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护发美发类用品 > 护发精油",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "日用化学产品",
+          "化妆品",
+          "护发美发类用品",
+          "护发精油"
+        ],
+        "level5Industry": {
+          "code": "1200000958",
+          "name": "化妆品"
+        },
+        "level6Industry": {
+          "code": "1200004201",
+          "name": "护发美发类用品"
+        },
+        "level7Product": {
+          "code": "1140213703",
+          "name": "护发精油"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "603605.SH",
+            "stockName": "珀莱雅",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 2,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "化妆品"
+        ]
+      },
+      {
+        "code": "1140046211",
+        "name": "护发素",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护发美发类用品 > 护发素",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "日用化学产品",
+          "化妆品",
+          "护发美发类用品",
+          "护发素"
+        ],
+        "level5Industry": {
+          "code": "1200000958",
+          "name": "化妆品"
+        },
+        "level6Industry": {
+          "code": "1200004201",
+          "name": "护发美发类用品"
+        },
+        "level7Product": {
+          "code": "1140046211",
+          "name": "护发素"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "603605.SH",
+            "stockName": "珀莱雅",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 2,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "化妆品"
+        ]
+      },
+      {
+        "code": "1140084943",
+        "name": "气垫",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 美容修饰类化妆品 > 气垫",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "日用化学产品",
+          "化妆品",
+          "美容修饰类化妆品",
+          "气垫"
+        ],
+        "level5Industry": {
+          "code": "1200000958",
+          "name": "化妆品"
+        },
+        "level6Industry": {
+          "code": "1200004202",
+          "name": "美容修饰类化妆品"
+        },
+        "level7Product": {
+          "code": "1140084943",
+          "name": "气垫"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "603605.SH",
+            "stockName": "珀莱雅",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 2,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "化妆品"
+        ]
+      },
+      {
+        "code": "1140046416",
+        "name": "涂抹式面膜",
+        "hierarchyPath": "化工 > 化学制品 > 日用化学产品 > 化妆品 > 护肤用化妆品 > 涂抹式面膜",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "日用化学产品",
+          "化妆品",
+          "护肤用化妆品",
+          "涂抹式面膜"
+        ],
+        "level5Industry": {
+          "code": "1200000958",
+          "name": "化妆品"
+        },
+        "level6Industry": {
+          "code": "1200004200",
+          "name": "护肤用化妆品"
+        },
+        "level7Product": {
+          "code": "1140046416",
+          "name": "涂抹式面膜"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "603605.SH",
+            "stockName": "珀莱雅",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 2,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1138,296 +808,297 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140004992",
-        "name": "电商平台",
-        "anchorCount": 9,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046211",
-          "1140046215",
-          "1140046216",
-          "1140046593",
-          "1140046596",
-          "1140046597",
-          "1140075807",
-          "1140147440",
-          "1140147442"
-        ],
-        "linkedCoreProductNames": [
-          "卸妆水",
-          "护发素",
-          "洗面奶",
-          "润唇膏",
-          "爽肤水",
-          "粉底液",
-          "精华液",
-          "防晒霜",
-          "隔离霜"
-        ],
-        "evidence": {
-          "original": 9,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140044025",
-        "name": "美容院",
-        "anchorCount": 8,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046215",
-          "1140046216",
-          "1140046593",
-          "1140046596",
-          "1140046597",
-          "1140075807",
-          "1140147440",
-          "1140147442"
-        ],
-        "linkedCoreProductNames": [
-          "卸妆水",
-          "洗面奶",
-          "润唇膏",
-          "爽肤水",
-          "粉底液",
-          "精华液",
-          "防晒霜",
-          "隔离霜"
-        ],
-        "evidence": {
-          "original": 8,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140042259",
-        "name": "便利店",
-        "anchorCount": 6,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046211",
-          "1140046216",
-          "1140046593",
-          "1140075807",
-          "1140147440",
-          "1140147442"
-        ],
-        "linkedCoreProductNames": [
-          "卸妆水",
-          "护发素",
-          "润唇膏",
-          "爽肤水",
-          "粉底液",
-          "隔离霜"
-        ],
-        "evidence": {
-          "original": 6,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140047166",
-        "name": "药妆店",
-        "anchorCount": 6,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046211",
-          "1140046216",
-          "1140046593",
-          "1140075807",
-          "1140147440",
-          "1140147442"
-        ],
-        "linkedCoreProductNames": [
-          "卸妆水",
-          "护发素",
-          "润唇膏",
-          "爽肤水",
-          "粉底液",
-          "隔离霜"
-        ],
-        "evidence": {
-          "original": 6,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140052319",
-        "name": "商场专柜",
-        "anchorCount": 5,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046216",
-          "1140046593",
-          "1140075807",
-          "1140147440",
-          "1140147442"
-        ],
-        "linkedCoreProductNames": [
-          "卸妆水",
-          "润唇膏",
-          "爽肤水",
-          "粉底液",
-          "隔离霜"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140028845",
-        "name": "专卖店",
-        "anchorCount": 3,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046215",
-          "1140046596",
-          "1140046597"
-        ],
-        "linkedCoreProductNames": [
-          "洗面奶",
-          "精华液",
-          "防晒霜"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140027345",
-        "name": "超市",
-        "anchorCount": 3,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046215",
-          "1140046596",
-          "1140046597"
-        ],
-        "linkedCoreProductNames": [
-          "洗面奶",
-          "精华液",
-          "防晒霜"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140013664",
-        "name": "消费者",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140071846"
-        ],
-        "linkedCoreProductNames": [
-          "面霜"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1131000602",
-        "name": "商场",
-        "anchorCount": 1,
+        "code": "1210000079",
+        "name": "电商服务",
+        "description": "电商服务指为电商平台及商家提供代运营、营销、物流等支持的企业。因受益于线上消费增长及品牌数字化转型需求，具备轻资产、高成长特性，且业绩与消费景气度紧密挂钩，故受资本市场重点关注。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046211"
+        "starWeight": 3,
+        "level7ProductCount": 4,
+        "relevanceScore": 160,
+        "stocks": [
+          {
+            "stockCode": "003010.SZ",
+            "stockName": "若羽臣",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "护发素"
+        "products": [
+          {
+            "code": "1140194448",
+            "name": "保健品品牌电商代运营",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 电商服务 > 品牌电商代运营 > 保健品品牌电商代运营",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "003010.SZ",
+                "stockName": "若羽臣",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "代运营",
+              "代运营服务",
+              "代运营服务商",
+              "服务",
+              "服务商"
+            ]
+          },
+          {
+            "code": "1140194447",
+            "name": "化妆品品牌电商代运营",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 电商服务 > 品牌电商代运营 > 化妆品品牌电商代运营",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "003010.SZ",
+                "stockName": "若羽臣",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "代运营",
+              "代运营服务",
+              "代运营服务商",
+              "服务",
+              "服务商"
+            ]
+          },
+          {
+            "code": "1140194446",
+            "name": "护肤品品牌电商代运营",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 电商服务 > 品牌电商代运营 > 护肤品品牌电商代运营",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "003010.SZ",
+                "stockName": "若羽臣",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "代运营",
+              "代运营服务",
+              "代运营服务商",
+              "服务",
+              "服务商"
+            ]
+          },
+          {
+            "code": "1140194445",
+            "name": "母婴用品品牌电商代运营",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 电商服务 > 品牌电商代运营 > 母婴用品品牌电商代运营",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "003010.SZ",
+                "stockName": "若羽臣",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "代运营",
+              "代运营服务",
+              "代运营服务商",
+              "服务",
+              "服务商"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 6,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 5,
+    "level7ProductCount": 4,
+    "candidateIndustryCount": 1,
+    "relatedIndustryCount": 1,
+    "stocks": [
+      {
+        "sourceRowNumber": 8040,
+        "stockCode": "603605.SH",
+        "stockName": "珀莱雅",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140049442",
-        "name": "理发店",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046211"
-        ],
-        "linkedCoreProductNames": [
-          "护发素"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 8042,
+        "stockCode": "300957.SZ",
+        "stockName": "贝泰妮",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140056936",
-        "name": "美肤",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140056629"
-        ],
-        "linkedCoreProductNames": [
-          "眼霜"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 8044,
+        "stockCode": "600223.SH",
+        "stockName": "福瑞达",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140166116",
-        "name": "内墙乳胶漆",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140048079"
-        ],
-        "linkedCoreProductNames": [
-          "乳液"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8045,
+        "stockCode": "603193.SH",
+        "stockName": "润本股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140007606",
-        "name": "涂料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140048079"
-        ],
-        "linkedCoreProductNames": [
-          "乳液"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8046,
+        "stockCode": "600315.SH",
+        "stockName": "上海家化",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140084947",
-        "name": "鞋底材料",
-        "anchorCount": 1,
+        "sourceRowNumber": 8048,
+        "stockCode": "003010.SZ",
+        "stockName": "若羽臣",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210000079",
+        "name": "电商服务",
+        "description": "电商服务指为电商平台及商家提供代运营、营销、物流等支持的企业。因受益于线上消费增长及品牌数字化转型需求，具备轻资产、高成长特性，且业绩与消费景气度紧密挂钩，故受资本市场重点关注。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140084943"
+        "starWeight": 3,
+        "level7ProductCount": 4,
+        "relevanceScore": 160,
+        "stocks": [
+          {
+            "stockCode": "003010.SZ",
+            "stockName": "若羽臣",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "气垫"
+        "products": [
+          {
+            "code": "1140194448",
+            "name": "保健品品牌电商代运营",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 电商服务 > 品牌电商代运营 > 保健品品牌电商代运营",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "003010.SZ",
+                "stockName": "若羽臣",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "代运营",
+              "代运营服务",
+              "代运营服务商",
+              "服务",
+              "服务商"
+            ]
+          },
+          {
+            "code": "1140194447",
+            "name": "化妆品品牌电商代运营",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 电商服务 > 品牌电商代运营 > 化妆品品牌电商代运营",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "003010.SZ",
+                "stockName": "若羽臣",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "代运营",
+              "代运营服务",
+              "代运营服务商",
+              "服务",
+              "服务商"
+            ]
+          },
+          {
+            "code": "1140194446",
+            "name": "护肤品品牌电商代运营",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 电商服务 > 品牌电商代运营 > 护肤品品牌电商代运营",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "003010.SZ",
+                "stockName": "若羽臣",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "代运营",
+              "代运营服务",
+              "代运营服务商",
+              "服务",
+              "服务商"
+            ]
+          },
+          {
+            "code": "1140194445",
+            "name": "母婴用品品牌电商代运营",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 电商服务 > 品牌电商代运营 > 母婴用品品牌电商代运营",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "003010.SZ",
+                "stockName": "若羽臣",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "代运营",
+              "代运营服务",
+              "代运营服务商",
+              "服务",
+              "服务商"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       }
     ]
   },
@@ -1442,10 +1113,478 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 11,
+    "eligibleSourceRowCount": 6,
+    "totalStockCount": 6,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 1,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 6,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 8040,
+            "stockCode": "603605.SH",
+            "stockName": "珀莱雅",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内美妆龙头，618期间多品牌、多平台表现优异，增长确定性强。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603605.SH",
+              "companyName": "珀莱雅",
+              "companyProfile": "公司致力于构建新国货化妆品产业平台，主要从事化妆品类产品的研发、生产和销售。旗下主要拥有“珀莱雅”、“彩棠”、“Off&Relax”、“悦芙媞”、“CORRECTORS”、“INSBAHA原色波塔”、“惊时”、“优资莱”、“韩雅”等品牌。公司自有品牌已覆盖大众精致护肤、彩妆、洗护、高功效护肤等美妆领域：1、大众精致护肤品牌：(1)珀莱雅，专注科技护肤，针对年轻白领女性群体，主价格区间200-500元，线上线下全渠道协同销售。(2)悦芙媞，定位“油皮护肤专家”，针对大学生等年轻女性群体，主价格区间50-200元，以线上为主要销售渠道。2、彩妆品牌：彩棠，专为中国面孔定制的专业化妆师品牌，主价格区间150-300元，以线上为主要销售渠道。原色波塔，定位眼部彩妆专家，针对Z世代年轻人群，主价格区间40-130元，以线上为主要销售渠道。3、洗护品牌：Off&Relax，定位“亚洲头皮健康养护专家”的洗护品牌，主价格区间150-200元，以线上为主要销售渠道。4、高功效护肤品牌：CORRECTORS，高功效型护肤品牌，主价格区间260-600元，线上渠道销售。",
+              "profileSummary": "公司致力于构建新国货化妆品产业平台，主要从事化妆品类产品的研发、生产和销售。公司自有品牌已覆盖大众精致护肤、彩妆、洗护、高功效护肤等美妆领域：1、大众精致护肤品牌：(1)珀莱雅，专注科技护肤，针对年轻白领女性群体，主价格区间200-500元，线上线下全渠道协同销售。",
+              "majorProducts": "韩雅、猫语玫瑰、珀莱雅、优资莱、悠雅、悦芙媞",
+              "revenueComposition": "护肤类:77.2%;美容彩妆类:14.75%;洗护类:7.93%;其他业务:0.11%",
+              "revenueSegments": [
+                {
+                  "name": "护肤类",
+                  "sharePct": 77.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "美容彩妆类",
+                  "sharePct": 14.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "洗护类",
+                  "sharePct": 7.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "发膜",
+                  "护发精油",
+                  "护发素",
+                  "涂抹式面膜",
+                  "爽肤水",
+                  "眼霜",
+                  "精华液",
+                  "贴式面膜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "珀莱雅目前更依赖护肤类（77.2%）、美容彩妆类（14.75%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：国内美妆龙头，618期间多品牌、多平台表现优异，增长确定性强，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变终端需求与渗透率变化；公司的产业链位置只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能转化为收入。现阶段可以用终端销量、客户采购量、公司出货和相关产品收入增速判断预期差方向；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 8042,
+            "stockCode": "300957.SZ",
+            "stockName": "贝泰妮",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "敏感肌护肤龙头，618期间核心单品热销，运营改善带动业绩修复。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300957.SZ",
+              "companyName": "贝泰妮",
+              "companyProfile": "公司成立于2010年，是一家集研发、生产和营销为一体，定位于皮肤健康互联网+的大健康产业集团。致力于打造中国皮肤健康生态，推动中国皮肤大健康事业的发展。云南贝泰妮被认定为国家高新技术企业及国家技术创新示范企业，公司研发中心开拓创新，实施产学研医结合，紧密融合植物学、生物学、皮肤学等前沿科技，充分挖掘云南特色植物的有效活性成分，开创一系列专利科技，研发新一代功效性护肤品。公司旗下护肤品牌“薇诺娜”自诞生以来，运用多项专利技术，采用基于皮肤学级的温和配方，以符合美国、欧盟化妆品要求的GMPC标准进行生产，产品的安全性、有效性得到皮肤学界专业人士及消费者的广泛认可。通过线下医药渠道打基础、线上全网覆盖的渠道策略，借助互联网和人工智能新技术，云南贝泰妮打造了新零售全触点系统，成功跨界实现OMO营销，成为中国大健康产业互联网+的领先企业。基于公司卓越的研发实力及差异化的运作模式，凭借多年皮肤护理的专业态度，以无限拥抱互联网的胸襟胆略，云南贝泰妮厚积薄发，专注打造皮肤健康生态的崭新未来。",
+              "profileSummary": "公司旗下护肤品牌“薇诺娜”自诞生以来，运用多项专利技术，采用基于皮肤学级的温和配方，以符合美国、欧盟化妆品要求的GMPC标准进行生产，产品的安全性、有效性得到皮肤学界专业人士及消费者的广泛认可。通过线下医药渠道打基础、线上全网覆盖的渠道策略，借助互联网和人工智能新技术，云南贝泰妮打造了新零售全触点系统，成功跨界实现OMO营销，成为中国大健康产业互联网+的领先企业。",
+              "majorProducts": "瑷科缦（AOXMED）、贝芙汀（Beforteen）、姬芮（Za）、泊美（PURE＆MILD）、薇诺娜（Winona）、薇诺娜宝贝（Winona Baby）",
+              "revenueComposition": "护肤品:85.38%;彩妆:8.8%;医疗器械:4.94%;服务及其他:0.88%",
+              "revenueSegments": [
+                {
+                  "name": "护肤品",
+                  "sharePct": 85.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "彩妆",
+                  "sharePct": 8.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医疗器械",
+                  "sharePct": 4.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "服务及其他",
+                  "sharePct": 0.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "乳液",
+                  "婴幼儿身体乳",
+                  "润唇膏",
+                  "爽肤水",
+                  "精华液",
+                  "贴式面膜",
+                  "防晒霜",
+                  "面霜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "贝泰妮的事件主线是：敏感肌护肤龙头，618期间核心单品热销，运营改善带动业绩修复，但当前收入结构尚未体现其重要性，收入重心仍是护肤品（85.38%）、彩妆（8.8%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，并在订单、收入确认、产品结构和毛利率变化上留下可核验痕迹。若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 8044,
+            "stockCode": "600223.SH",
+            "stockName": "福瑞达",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "旗下品牌在618大促中表现分化但整体向好，出现边际改善拐点。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600223.SH",
+              "companyName": "福瑞达",
+              "companyProfile": "公司是以医药和化妆品为核心业务，产学研相结合、科工贸一体化的医药健康产业集团，是中国透明质酸产业的缔造者与领跑者，所属行业涉及原料药、药品、医疗器械、保健食品、食品、化妆品等。建有生物发酵原料、植物提取原料、化学合成原料药、药物制剂、肌肤及香氛护理化妆品7个生产基地。建立了与ICH、FDA、EDQM、PMDA等国际质量监管理念接轨的质量保证体系，所有制剂和品种都通过国家新版GMP认证，凭借过硬的产品质量和客户至上的服务理念，在医药健康领域树立了“福瑞达”品牌形象，打造了“润舒”“润洁”“施沛特”“明仁”“颐莲”“瑷尔博士”等多个知名品牌，产品远销北美、欧盟、日韩、东南亚等70多个国家和地区。未来，福瑞达坚持“科技创造健康生态”的企业使命，加快推进“战略、业务、组织、文化”价值重塑，实施“1234”高质量创新发展战略，即：夯实透明质酸领先优势，聚焦二大主业，做特做大医药板块、做强做优化妆品板块，推进“三化”发展，走差异化、生态化、国际化发展之路，实施四大工程，持续推进研发驱动、人才引领、品牌带动、数智赋能，致力于成为社会信赖国际知名的医药健康领军企业。",
+              "profileSummary": "建立了与ICH、FDA、EDQM、PMDA等国际质量监管理念接轨的质量保证体系，所有制剂和品种都通过国家新版GMP认证，凭借过硬的产品质量和客户至上的服务理念，在医药健康领域树立了“福瑞达”品牌形象，打造了“润舒”“润洁”“施沛特”“明仁”“颐莲”“瑷尔博士”等多个知名品牌，产品远销北美、欧盟、日韩、东南亚等70多个国家和地区。未来，福瑞达坚持“科技创造健康生态”的企业使命，加快推进“战略、业务、组织、文化”价值重塑，实施“1234”…",
+              "majorProducts": "东方活血膏、感冒止咳合剂、化妆品板块、颈痛颗粒（片/胶囊）、灵芝双参口服液、盆炎净片、润洁滴眼液、润舒滴眼液、麝香壮骨膏、关节止痛膏、消炎镇痛膏、伤湿祛痛膏、施沛特玻璃酸钠注射液、舒腹贴膏、双唑泰阴道凝胶、四季感冒片/胶囊、他达拉非片、通宣理肺胶囊、小儿解感颗粒、雪莲归芪口服液、盐酸二甲双胍缓释片",
+              "revenueComposition": "化妆品:61.51%;物业管理:15.65%;医药:11.29%;原料及衍生产品、添加剂:10.39%;其他业务:1.16%",
+              "revenueSegments": [
+                {
+                  "name": "化妆品",
+                  "sharePct": 61.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物业管理",
+                  "sharePct": 15.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医药",
+                  "sharePct": 11.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "原料及衍生产品、添加剂",
+                  "sharePct": 10.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "普鲁兰多糖",
+                  "乳液",
+                  "次抛精华液",
+                  "精华液",
+                  "补水喷雾",
+                  "贴式面膜",
+                  "防晒霜",
+                  "面霜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "福瑞达当前收入集中在化妆品（61.51%）、物业管理（15.65%），而旗下品牌在618大促中表现分化但整体向好，出现边际改善拐点所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响事件能否转化为可确认的经营增量预期，业务端仍需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导后才能确认。订单、收入确认、产品结构和毛利率变化如果持续改善，相关业务可能从产业布局转为实际增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 8045,
+            "stockCode": "603193.SH",
+            "stockName": "润本股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "婴童护理龙头，618大促增长稳健，业绩有望超预期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603193.SH",
+              "companyName": "润本股份",
+              "companyProfile": "公司秉承“为消费者美好健康生活创造价值”的企业使命，深耕家居个人生活领域，坚持“大品牌、小品类”的研产销一体化战略，以新一代驱蚊产品切入消费者生活，不断发现消费者未被满足的需求与痛点，丰富品类，目前已形成驱蚊产品、婴童护理产品、精油产品三大核心产品系列。公司主要通过与天猫、京东、抖音、唯品会、拼多多等大型电商平台合作，采用线上直销、线上平台经销、线上平台代销等互联网销售模式为消费者提供优质产品。凭借线上销售的优异表现，公司产品在天猫、京东、抖音等平台保持较高的市场占有率。公司抓住了新零售时代的机遇，发挥研产销一体化优势，成功在驱蚊、个人护理领域形成核心市场竞争力，筑起品牌的护城河,“润本”品牌已快速成长为优质国货的知名品牌。",
+              "profileSummary": "公司秉承“为消费者美好健康生活创造价值”的企业使命，深耕家居个人生活领域，坚持“大品牌、小品类”的研产销一体化战略，以新一代驱蚊产品切入消费者生活，不断发现消费者未被满足的需求与痛点，丰富品类，目前已形成驱蚊产品、婴童护理产品、精油产品三大核心产品系列。公司主要通过与天猫、京东、抖音、唯品会、拼多多等大型电商平台合作，采用线上直销、线上平台经销、线上平台代销等互联网销售模式为消费者提供优质产品。",
+              "majorProducts": "避蚊胺驱蚊液、电热蚊香液、蓝牙智能加热器套装、儿童保湿面膜、儿童洁面泡泡、积雪草舒缓冰沙露、经典款电热蚊香液、羟哌酯驱蚊液、驱蚊酯驱蚊液、润本叮叮舒缓棒、润本叮叮舒缓走珠冰露、香茅香薰盒、小黄柚倍护润肤乳、小桃喜透润保湿霜、婴儿润唇膏、婴儿舒缓霜、婴儿爽身露、婴儿滋润防皴霜、婴童手口湿巾、植物精油香圈、植物润唇膏、紫草舒缓膏",
+              "revenueComposition": "婴童护理系列产品:52.66%;驱蚊系列产品:34.45%;精油系列产品:9.06%;其他:3.76%;其他业务:0.06%",
+              "revenueSegments": [
+                {
+                  "name": "婴童护理系列产品",
+                  "sharePct": 52.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "驱蚊系列产品",
+                  "sharePct": 34.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精油系列产品",
+                  "sharePct": 9.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "婴幼儿润唇膏",
+                  "婴幼儿身体乳",
+                  "婴幼儿防晒霜",
+                  "婴幼儿面霜",
+                  "润唇膏",
+                  "婴幼儿沐浴露",
+                  "植物精油香圈",
+                  "电热蚊香液"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "润本股份的事件主线是：婴童护理龙头，618大促增长稳健，业绩有望超预期，但当前收入结构尚未体现其重要性，收入重心仍是婴童护理系列产品（52.66%）、驱蚊系列产品（34.45%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，并在终端销量、客户采购量、公司出货和相关产品收入增速上留下可核验痕迹。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 8046,
+            "stockCode": "600315.SH",
+            "stockName": "上海家化",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "旗下多品牌618期间线上数据表现较好，业绩出现反转迹象。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600315.SH",
+              "companyName": "上海家化",
+              "companyProfile": "公司是中国日用化妆品行业历史悠久的民族企业之一，前身是成立于1898年的香港广生行，于2001年在上海证券交易所上市，是国内行业中首家上市企业。2011年，公司在上海国企中率先实现股份制改革，转变成一家混合所有制企业，中国平安保险(集团)股份有限公司成为了控股股东。经过多年发展，公司现已成为一家总部注册在上海的跨国日用化妆品企业。2024年，公司实现营业收入近57亿元，在全球范围内拥有四千余名员工，设有两大科创中心和五大工厂，拥有全球领先的研发和制造能力，销售网络遍及亚洲、欧洲、非洲、北美洲和大洋洲。2021年，公司在行业内率先引入了ESG(环境、社会及公司治理)管理模式，我们始终坚定践行“因美而生、向善而行”的理念。作为行业ESG标杆，公司获得了外部的高度认可，公司在国际知名ESG评级机构MSCI的评级中达到了A级，WindESG评级达到AA级，在CDP的气候变化评级中获得B级，公司ESG评级达到国内行业领先水平，引领行业可持续发展。公司还积极响应国家政策，发布了《ESG中长期规划白皮书》，搭建可持续发展治理体系。作为中国日用化妆品行业的领先企业，未来，公司将通过经典的品牌、高品质的产品，为消费者创造美丽和健康的生活，成为立足国内、辐射海外的一流日用化妆品公司。",
+              "profileSummary": "经过多年发展，公司现已成为一家总部注册在上海的跨国日用化妆品企业。作为中国日用化妆品行业的领先企业，未来，公司将通过经典的品牌、高品质的产品，为消费者创造美丽和健康的生活，成为立足国内、辐射海外的一流日用化妆品公司。",
+              "majorProducts": "adidas个人护理用品及香水销售、COCOOL彩妆系列、佰草集唇彩、佰草集洁面乳、佰草集美白霜、佰草集沐浴露、佰草集洗发露、佰草集香精油、佰草集眼部保湿精华、佰草集浴盐、高夫保湿润肤露、高夫冰凉润唇膏、高夫古龙水、高夫沐浴露、高夫剃须泡、高夫自然整发摩丝、家安除菌洗手液、家安空气洁净剂、家安空调除菌清洗剂、家安免洗净手凝露、可采面贴膜、霖碧天然矿泉水、六神花露水、六神沐浴露、六神洗发水、六神香皂、美加净CQ活肤系列、美加净护肤霜、美加净全心护手霜、清妃橙彩惊艳彩妆系列、清妃赋活更新系列、清妃抗紫外系列、清妃柔白系列、舒欣动感保湿香氛、舒欣防晒润肤露、舒欣沐浴露、舒欣柔肤润体露",
+              "revenueComposition": "个人护理:38.28%;美妆:25.54%;海外:23.28%;创新:12.84%;提供劳务:0.02%;销售材料:0.02%;租赁:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "个人护理",
+                  "sharePct": 38.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "美妆",
+                  "sharePct": 25.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "海外",
+                  "sharePct": 23.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "创新",
+                  "sharePct": 12.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "提供劳务",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "销售材料",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "冰箱除菌剂",
+                  "乳液",
+                  "婴幼儿身体乳",
+                  "婴幼儿面霜",
+                  "护手霜",
+                  "涂抹式面膜",
+                  "爽肤水",
+                  "男士乳液"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "上海家化的事件主线是：旗下多品牌618期间线上数据表现较好，业绩出现反转迹象，但当前收入结构尚未体现其重要性，收入重心仍是个人护理（38.28%）、美妆（25.54%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，并在订单、收入确认、产品结构和毛利率变化上留下可核验痕迹。若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 8048,
+            "stockCode": "003010.SZ",
+            "stockName": "若羽臣",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "自有品牌增长强劲，同时为多个合作品牌提供代运营服务，双轮驱动。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "003010.SZ",
+              "companyName": "若羽臣",
+              "companyProfile": "公司是一家面向全球的消费品品牌数字化管理公司，以“为全球优质消费品牌链接每个中国消费者”为使命，致力于通过全链路、全渠道的数字化能力，赋能品牌业务的全生命周期增长。公司主要业务包括品牌管理、自有品牌及代运营业务，从全局视角出发，以前瞻性的品牌战略发展为核心，全链路赋能品牌成长，涵盖品牌定位、产品设计、精准数据洞察、营销推广策略、全渠道销售布局以及精细化用户运营在内的体系化管理。公司作为国内领先的全球消费品品牌数字化管理公司，业务半径已遍及全球多个国家和地区，高质量地为宝洁、拜耳、强生、赛诺菲等超百个国际国内知名企业及品牌提供了数字化服务，成为全球众多消费品品牌生意增长的紧密合作伙伴。目前已在大健康、美妆个护、母婴、食品饮料等多个领域建立起头部竞争优势，以“为全球优质消费品牌链接每个中国消费者”为使命，致力于通过全链路、全渠道的数字化能力，赋能品牌业务的全生命周期增长。凭借卓越的品牌数字化管理能力，公司获得了多方殊荣和肯定。公司获得国家高新技术企业认定、国家级电子商务示范企业、天猫国际紫星服务商、天猫首届AIGC数藏创作奖等多个奖项。自有品牌“绽家”自2020年正式上线以来，实现了连续高速增长，多款产品长期领跑天猫等细分品类市场排名，凭借对市场细分需求的深刻洞察和产品极致打磨，连续荣获“金麦品质奖”及“金麦品质Pro大奖”双奖以及天猫、抖音等多个生态平台的荣誉认可，成为新消费领域的“黑马”。",
+              "profileSummary": "公司主要业务包括品牌管理、自有品牌及代运营业务，从全局视角出发，以前瞻性的品牌战略发展为核心，全链路赋能品牌成长，涵盖品牌定位、产品设计、精准数据洞察、营销推广策略、全渠道销售布局以及精细化用户运营在内的体系化管理。公司作为国内领先的全球消费品品牌数字化管理公司，业务半径已遍及全球多个国家和地区，高质量地为宝洁、拜耳、强生、赛诺菲等超百个国际国内知名企业及品牌提供了数字化服务，成为全球众多消费品品牌生意增长的紧密合作伙伴。",
+              "majorProducts": "供应链管理、客服管理、内容种草、渠道分销、全渠道运营、视觉设计、数字化能力、数字营销、用户运营、直播服务",
+              "revenueComposition": "零售收入:72.25%;渠道分销:22.95%;运营服务收入:4.67%;品牌策划服务收入:0.13%",
+              "revenueSegments": [
+                {
+                  "name": "零售收入",
+                  "sharePct": 72.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "渠道分销",
+                  "sharePct": 22.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运营服务收入",
+                  "sharePct": 4.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "品牌策划服务收入",
+                  "sharePct": 0.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "保健品品牌电商代运营",
+                    "category": "品牌电商代运营"
+                  },
+                  {
+                    "name": "化妆品品牌电商代运营",
+                    "category": "品牌电商代运营"
+                  },
+                  {
+                    "name": "护肤品品牌电商代运营",
+                    "category": "品牌电商代运营"
+                  },
+                  {
+                    "name": "母婴用品品牌电商代运营",
+                    "category": "品牌电商代运营"
+                  }
+                ],
+                "knownProducts": [
+                  "保健品品牌电商代运营",
+                  "化妆品品牌电商代运营",
+                  "护肤品品牌电商代运营",
+                  "母婴用品品牌电商代运营",
+                  "护肤品品牌代理",
+                  "母婴用品品牌代理",
+                  "化妆品品牌代理",
+                  "地面清洁剂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "若羽臣与新闻之间有明确产品抓手：保健品品牌电商代运营、化妆品品牌电商代运营、护肤品品牌电商代运营，对应自有品牌增长强劲，同时为多个合作品牌提供代运营服务，双轮驱动。收入主体目前是零售收入（72.25%）、渠道分销（22.95%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变商业化进度和订单兑现预期，随后要经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才能进入利润表。客户认证、新增订单、交付节奏、相关业务收入和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若客户验证或交付节奏低于预期，订单停留在小批量阶段，事件影响更可能停留在产品布局层面。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "1条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

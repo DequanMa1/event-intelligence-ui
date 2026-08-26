@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27014",
@@ -9,10 +9,10 @@
     "date": "2026-07-06"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 4,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 2,
     "mappedStockCount": 2,
-    "unmappedStockCount": 2,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 17808,
@@ -21,25 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 11
-      },
-      {
-        "sourceRowNumber": 17809,
-        "stockCode": "00688.HK",
-        "stockName": "中国海外发展",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 17810,
-        "stockCode": "01109.HK",
-        "stockName": "华润置地",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 8
       },
       {
         "sourceRowNumber": 17811,
@@ -48,190 +30,21 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 22
+        "anchorProductCount": 12
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 17809,
-        "stockCode": "00688.HK",
-        "stockName": "中国海外发展",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 17810,
-        "stockCode": "01109.HK",
-        "stockName": "华润置地",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 24,
     "selectedCoreProductCount": 14,
     "selectedCompanyCoreProductCount": 14,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 3,
-    "downstreamCandidateCount": 22,
-    "shownUpstreamCount": 3,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 57,
+    "relatedIndustryCandidateCount": 17,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140061014",
-        "name": "商品房开发",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140027515"
-        ],
-        "linkedCoreProductNames": [
-          "长租公寓"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140065657",
-        "name": "室内装饰工程",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140027515"
-        ],
-        "linkedCoreProductNames": [
-          "长租公寓"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140098131",
-        "name": "长租公寓批量精装修",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140027515"
-        ],
-        "linkedCoreProductNames": [
-          "长租公寓"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140029115",
-        "name": "商铺租赁",
-        "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 商业租赁 > 商铺租赁",
-        "industryPath": [
-          "房地产",
-          "房地产开发",
-          "房地产开发",
-          "物业租赁",
-          "商业租赁",
-          "商铺租赁"
-        ],
-        "level5Industry": {
-          "code": "1200001102",
-          "name": "物业租赁"
-        },
-        "level6Industry": {
-          "code": "1200004508",
-          "name": "商业租赁"
-        },
-        "level7Product": {
-          "code": "1140029115",
-          "name": "商铺租赁"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "600048.SH",
-            "stockName": "保利发展",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "001979.SZ",
-            "stockName": "招商蛇口",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 21,
-        "relevanceScore": 6,
-        "strongRelevanceScore": 5,
-        "matchedTerms": [
-          "房地产开发",
-          "房地产"
-        ]
-      },
-      {
-        "code": "1140027515",
-        "name": "长租公寓",
-        "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 住宅租赁 > 长租公寓",
-        "industryPath": [
-          "房地产",
-          "房地产开发",
-          "房地产开发",
-          "物业租赁",
-          "住宅租赁",
-          "长租公寓"
-        ],
-        "level5Industry": {
-          "code": "1200001102",
-          "name": "物业租赁"
-        },
-        "level6Industry": {
-          "code": "1200004507",
-          "name": "住宅租赁"
-        },
-        "level7Product": {
-          "code": "1140027515",
-          "name": "长租公寓"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "600048.SH",
-            "stockName": "保利发展",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "001979.SZ",
-            "stockName": "招商蛇口",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 1,
-        "relevanceScore": 6,
-        "strongRelevanceScore": 5,
-        "matchedTerms": [
-          "房地产开发",
-          "房地产"
-        ]
-      },
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140131389",
         "name": "办公楼租赁",
@@ -257,23 +70,68 @@
           "name": "办公楼租赁"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600048.SH",
             "stockName": "保利发展",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 5,
+        "matchedTerms": [
+          "房地产开发",
+          "房地产"
+        ]
+      },
+      {
+        "code": "1140029115",
+        "name": "商铺租赁",
+        "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 商业租赁 > 商铺租赁",
+        "industryPath": [
+          "房地产",
+          "房地产开发",
+          "房地产开发",
+          "物业租赁",
+          "商业租赁",
+          "商铺租赁"
+        ],
+        "level5Industry": {
+          "code": "1200001102",
+          "name": "物业租赁"
+        },
+        "level6Industry": {
+          "code": "1200004508",
+          "name": "商业租赁"
+        },
+        "level7Product": {
+          "code": "1140029115",
+          "name": "商铺租赁"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "600048.SH",
+            "stockName": "保利发展",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "001979.SZ",
+            "stockName": "招商蛇口",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -306,23 +164,21 @@
           "name": "房地产开发(住宅-全国)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600048.SH",
             "stockName": "保利发展",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -355,23 +211,21 @@
           "name": "房地产开发(办公楼-全国)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600048.SH",
             "stockName": "保利发展",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -404,23 +258,68 @@
           "name": "房地产开发(商业-全国)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600048.SH",
             "stockName": "保利发展",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 5,
+        "matchedTerms": [
+          "房地产开发",
+          "房地产"
+        ]
+      },
+      {
+        "code": "1140027515",
+        "name": "长租公寓",
+        "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 住宅租赁 > 长租公寓",
+        "industryPath": [
+          "房地产",
+          "房地产开发",
+          "房地产开发",
+          "物业租赁",
+          "住宅租赁",
+          "长租公寓"
+        ],
+        "level5Industry": {
+          "code": "1200001102",
+          "name": "物业租赁"
+        },
+        "level6Industry": {
+          "code": "1200004507",
+          "name": "住宅租赁"
+        },
+        "level7Product": {
+          "code": "1140027515",
+          "name": "长租公寓"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "600048.SH",
+            "stockName": "保利发展",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "001979.SZ",
+            "stockName": "招商蛇口",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -453,18 +352,15 @@
           "name": "厂房租赁"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -497,18 +393,15 @@
           "name": "房地产(土地一级开发-常熟)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -541,18 +434,15 @@
           "name": "房地产(土地一级开发-福建)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -585,18 +475,15 @@
           "name": "房地产(旧城区改造-上海)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -629,18 +516,15 @@
           "name": "房地产(旧城区改造-全国)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600048.SH",
             "stockName": "保利发展",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -673,18 +557,15 @@
           "name": "房地产(旧城区改造-深圳)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -717,18 +598,15 @@
           "name": "房地产(旧城区改造-温州)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001979.SZ",
             "stockName": "招商蛇口",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -761,18 +639,15 @@
           "name": "房地产开发(住宅-海外)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600048.SH",
             "stockName": "保利发展",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -781,230 +656,505 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140004469",
-        "name": "产业地产",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140027515"
+        "code": "1200001102",
+        "name": "物业租赁",
+        "description": "物业租赁指通过出租商业或办公地产获取租金收益。其受关注因具备现金流稳定、抗周期性强及高分红潜力，是防御性配置优选。在利率下行背景下，优质资产的重估价值与稳健回报特性，使其成为资金青睐的避险板块。",
+        "stockCount": 4,
+        "starWeight": 16,
+        "level7ProductCount": 4,
+        "relevanceScore": 112,
+        "stocks": [
+          {
+            "stockCode": "000560.SZ",
+            "stockName": "我爱我家",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600048.SH",
+            "stockName": "保利发展",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "001979.SZ",
+            "stockName": "招商蛇口",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002244.SZ",
+            "stockName": "滨江集团",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "长租公寓"
+        "products": [
+          {
+            "code": "1140131389",
+            "name": "办公楼租赁",
+            "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 办公楼租赁 > 办公楼租赁",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600048.SH",
+                "stockName": "保利发展",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002244.SZ",
+                "stockName": "滨江集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "房地产开发"
+            ]
+          },
+          {
+            "code": "1140029115",
+            "name": "商铺租赁",
+            "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 商业租赁 > 商铺租赁",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600048.SH",
+                "stockName": "保利发展",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002244.SZ",
+                "stockName": "滨江集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "房地产开发"
+            ]
+          },
+          {
+            "code": "1140027515",
+            "name": "长租公寓",
+            "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 住宅租赁 > 长租公寓",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "000560.SZ",
+                "stockName": "我爱我家",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600048.SH",
+                "stockName": "保利发展",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "房地产开发"
+            ]
+          },
+          {
+            "code": "1140200636",
+            "name": "厂房租赁",
+            "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 商业租赁 > 厂房租赁",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "房地产开发"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140127737",
-        "name": "便利店零售",
-        "anchorCount": 1,
+        "code": "1200001168",
+        "name": "物业管理",
+        "description": "A股物业指提供小区及商业设施管理服务的行业。因具备现金流稳定、抗周期性强及轻资产扩张潜力，被视为防御性优质赛道。随着存量市场扩大及服务多元化，其持续盈利能力受投资者高度关注。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
+        "starWeight": 8,
+        "level7ProductCount": 2,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "600048.SH",
+            "stockName": "保利发展",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "001979.SZ",
+            "stockName": "招商蛇口",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
+        "products": [
+          {
+            "code": "1140172446",
+            "name": "自有物业管理服务",
+            "hierarchyPath": "商业贸易 > 商业物业经营 > 一般物业经营 > 物业管理 > 物业管理 > 自有物业管理服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600048.SH",
+                "stockName": "保利发展",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140172447",
+            "name": "物业管理服务承包",
+            "hierarchyPath": "商业贸易 > 商业物业经营 > 一般物业经营 > 物业管理 > 物业管理 > 物业管理服务承包",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 6,
+    "mappedStockCount": 6,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 57,
+    "candidateIndustryCount": 17,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 17806,
+        "stockCode": "000560.SZ",
+        "stockName": "我爱我家",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140003739",
-        "name": "医药零售",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 17808,
+        "stockCode": "600048.SH",
+        "stockName": "保利发展",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 10
       },
       {
-        "code": "1140157836",
-        "name": "商场儿童游乐项目",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 17811,
+        "stockCode": "001979.SZ",
+        "stockName": "招商蛇口",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 17
       },
       {
-        "code": "1140127736",
-        "name": "商贸物流产业园",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 17815,
+        "stockCode": "002244.SZ",
+        "stockName": "滨江集团",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140127770",
-        "name": "太阳镜连锁零售",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 17816,
+        "stockCode": "002271.SZ",
+        "stockName": "东方雨虹",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 21
       },
       {
-        "code": "1140028500",
-        "name": "家具零售",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
+        "sourceRowNumber": 17817,
+        "stockCode": "603737.SH",
+        "stockName": "三棵树",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 14
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001102",
+        "name": "物业租赁",
+        "description": "物业租赁指通过出租商业或办公地产获取租金收益。其受关注因具备现金流稳定、抗周期性强及高分红潜力，是防御性配置优选。在利率下行背景下，优质资产的重估价值与稳健回报特性，使其成为资金青睐的避险板块。",
+        "stockCount": 4,
+        "starWeight": 16,
+        "level7ProductCount": 4,
+        "relevanceScore": 112,
+        "stocks": [
+          {
+            "stockCode": "000560.SZ",
+            "stockName": "我爱我家",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600048.SH",
+            "stockName": "保利发展",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "001979.SZ",
+            "stockName": "招商蛇口",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002244.SZ",
+            "stockName": "滨江集团",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
+        "products": [
+          {
+            "code": "1140131389",
+            "name": "办公楼租赁",
+            "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 办公楼租赁 > 办公楼租赁",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600048.SH",
+                "stockName": "保利发展",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002244.SZ",
+                "stockName": "滨江集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "房地产开发"
+            ]
+          },
+          {
+            "code": "1140029115",
+            "name": "商铺租赁",
+            "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 商业租赁 > 商铺租赁",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600048.SH",
+                "stockName": "保利发展",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002244.SZ",
+                "stockName": "滨江集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "房地产开发"
+            ]
+          },
+          {
+            "code": "1140027515",
+            "name": "长租公寓",
+            "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 住宅租赁 > 长租公寓",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "000560.SZ",
+                "stockName": "我爱我家",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600048.SH",
+                "stockName": "保利发展",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "房地产开发"
+            ]
+          },
+          {
+            "code": "1140200636",
+            "name": "厂房租赁",
+            "hierarchyPath": "房地产 > 房地产开发 > 房地产开发 > 物业租赁 > 商业租赁 > 厂房租赁",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "房地产开发"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140127788",
-        "name": "小商品零售",
-        "anchorCount": 1,
+        "code": "1200001168",
+        "name": "物业管理",
+        "description": "A股物业指提供小区及商业设施管理服务的行业。因具备现金流稳定、抗周期性强及轻资产扩张潜力，被视为防御性优质赛道。随着存量市场扩大及服务多元化，其持续盈利能力受投资者高度关注。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
+        "starWeight": 8,
+        "level7ProductCount": 2,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "600048.SH",
+            "stockName": "保利发展",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "001979.SZ",
+            "stockName": "招商蛇口",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
+        "products": [
+          {
+            "code": "1140172446",
+            "name": "自有物业管理服务",
+            "hierarchyPath": "商业贸易 > 商业物业经营 > 一般物业经营 > 物业管理 > 物业管理 > 自有物业管理服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600048.SH",
+                "stockName": "保利发展",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140172447",
+            "name": "物业管理服务承包",
+            "hierarchyPath": "商业贸易 > 商业物业经营 > 一般物业经营 > 物业管理 > 物业管理 > 物业管理服务承包",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "001979.SZ",
+                "stockName": "招商蛇口",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140127775",
-        "name": "手机连锁零售",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140154721",
-        "name": "母婴用品连锁销售",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140127817",
-        "name": "母婴用品连锁零售",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140127725",
-        "name": "消费电子产品连锁零售",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140127764",
-        "name": "烟酒零售",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140127743",
-        "name": "生鲜零售",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140029115"
-        ],
-        "linkedCoreProductNames": [
-          "商铺租赁"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -1019,10 +1169,602 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 16,
+    "eligibleSourceRowCount": 6,
+    "totalStockCount": 6,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 4,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 6,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 17806,
+            "stockCode": "000560.SZ",
+            "stockName": "我爱我家",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内领先的房地产综合服务机构，二手房成交量回暖直接提升其经纪业务收入。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000560.SZ",
+              "companyName": "我爱我家",
+              "companyProfile": "公司是中国最早成立的全国性住房经纪服务企业之一，随着互联网和数字化技术的不断发展，公司已经逐步进化为一家以居住交易服务为核心的互联网人居生活服务平台运营商，专注于提供数字化产业解决方案和一体化的运营服务。公司聚焦于居住服务场景，主要围绕住宅这一居住核心资产的交易与租赁运营管理需求，提供专业化服务，坚持以用户价值为导向，致力于服务国内广大城市家庭、租客、社区与产业合作伙伴，构建舒适个性化的生活环境与多元共赢的人居服务生态体系。公司以“三个一工程”为目标，形成数据与技术驱动的线上平台运营能力，利用多年积累的行业经验，从消费者旅程出发，聚焦业务底层平台支撑能力提升，聚合数字化智能能力，有效赋能CEN(经纪人合作生态网络)核心运营网络。公司始终“以一流标准重塑品牌”的战略目标为牵引，确定了中国最亲民的大众房产服务平台的定位，重塑了以消费者满意度为指标的品牌评价体系。",
+              "profileSummary": "公司聚焦于居住服务场景，主要围绕住宅这一居住核心资产的交易与租赁运营管理需求，提供专业化服务，坚持以用户价值为导向，致力于服务国内广大城市家庭、租客、社区与产业合作伙伴，构建舒适个性化的生活环境与多元共赢的人居服务生态体系。公司以“三个一工程”为目标，形成数据与技术驱动的线上平台运营能力，利用多年积累的行业经验，从消费者旅程出发，聚焦业务底层平台支撑能力提升，聚合数字化智能能力，有效赋能CEN(经纪人合作生态网络)核心运营网络。",
+              "majorProducts": "经纪业务、商业租赁及服务、新房业务、资产管理业务",
+              "revenueComposition": "资产管理:47.83%;经纪业务:34.67%;新房业务:8.6%;其他产品:5.39%;商业租赁及服务:3.5%",
+              "revenueSegments": [
+                {
+                  "name": "资产管理",
+                  "sharePct": 47.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "经纪业务",
+                  "sharePct": 34.67,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "新房业务",
+                  "sharePct": 8.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 5.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "商业租赁及服务",
+                  "sharePct": 3.5,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "住房买卖中介",
+                    "category": "房地产经纪业务"
+                  },
+                  {
+                    "name": "住房租赁中介",
+                    "category": "房地产经纪业务"
+                  },
+                  {
+                    "name": "商铺买卖中介",
+                    "category": "房地产经纪业务"
+                  },
+                  {
+                    "name": "长租公寓",
+                    "category": "住宅租赁"
+                  }
+                ],
+                "knownProducts": [
+                  "百货零售",
+                  "住房买卖中介",
+                  "住房租赁中介",
+                  "商铺买卖中介",
+                  "长租公寓"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "我爱我家的事件逻辑具备真实业务底座，但尚不足以代表全部公司：经纪业务占收入的34.67%。公司与事件的具体联系在于：国内领先的房地产综合服务机构，二手房成交量回暖直接提升其经纪业务收入，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 17808,
+            "stockCode": "600048.SH",
+            "stockName": "保利发展",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "头部央企开发商，受益于市场信心修复和\"卖一买一\"置换链条带来的新房需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600048.SH",
+              "companyName": "保利发展",
+              "companyProfile": "公司成立于1992年，是中国保利集团控股的大型上市公司。公司深耕不动产行业，提供不动产投资开发、不动产经营、不动产综合服务等综合性服务，持续打造具有卓越竞争力的不动产生态平台。公司以“和者筑善”为品牌理念，以“保国利民，追求卓越”为企业使命；旗下业务布局全国百余城，地产开发、物业服务长年稳居央企龙头，商业运营、经纪服务、金融服务连续多年被评为行业TOP10。凭借出色的建设、运营、服务实力，保利发展积极践行国家战略，为推动行业创新、城市发展、人民美好生活做出长足贡献。",
+              "profileSummary": "公司深耕不动产行业，提供不动产投资开发、不动产经营、不动产综合服务等综合性服务，持续打造具有卓越竞争力的不动产生态平台。公司以“和者筑善”为品牌理念，以“保国利民，追求卓越”为企业使命；旗下业务布局全国百余城，地产开发、物业服务长年稳居央企龙头，商业运营、经纪服务、金融服务连续多年被评为行业TOP10。",
+              "majorProducts": "包头保利花园、保利V座、保利百合花园、保利包头百合花园、保利宝山项目、保利北京保利大厦、保利北京西山林语、保利北京新保利大厦、保利广州世贸中心、保利国宾上院、保利国际高尔夫花园、保利花园二期、保利金泉广场、保利康桥、保利丽京花园别墅、保利林海山庄、保利林语山庄、保利垄上别墅、保利蔷薇苑、保利上海广场、保利上海海上五月花、保利上海金利公寓、保利上林湾、保利沈阳保利花园、保利沈阳海棠花园、保利水城、保利西山项目、保利西子湾、保利香槟花园、保利香雪山、保利心语花园、保利欣苑、北京新保利大厦、佛山保利花园、上海保利十二橡树庄园、通州光机电项目、武汉保利花园、重庆保利花园",
+              "revenueComposition": "房地产:92.14%;其他:7.63%;其他业务:0.23%",
+              "revenueSegments": [
+                {
+                  "name": "房地产",
+                  "sharePct": 92.14,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 7.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "办公楼租赁",
+                    "category": "办公楼租赁"
+                  },
+                  {
+                    "name": "商铺租赁",
+                    "category": "商业租赁"
+                  },
+                  {
+                    "name": "房地产(旧城区改造-全国)",
+                    "category": "房地产开发-住宅"
+                  },
+                  {
+                    "name": "房地产开发(住宅-全国)",
+                    "category": "房地产开发-住宅"
+                  },
+                  {
+                    "name": "房地产开发(住宅-海外)",
+                    "category": "房地产开发-住宅"
+                  },
+                  {
+                    "name": "房地产开发(办公楼-全国)",
+                    "category": "房地产开发-办公楼"
+                  }
+                ],
+                "knownProducts": [
+                  "会展场地租赁",
+                  "高端酒店",
+                  "自有物业管理服务",
+                  "房地产(旧城区改造-全国)",
+                  "房地产开发(住宅-全国)",
+                  "房地产开发(住宅-海外)",
+                  "房地产开发(办公楼-全国)",
+                  "房地产开发(商业-全国)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "保利发展的相关业务已决定公司大部分经营表现：房地产占收入的92.14%。公司与事件的直接业务联系是：头部央企开发商，受益于市场信心修复和\"卖一买一\"置换链条带来的新房需求，真正的增量取决于终端需求与渗透率变化，并需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，终端销量、客户采购量、公司出货和相关产品收入增速需要显示公司获得超越行业的增量。终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 17811,
+            "stockCode": "001979.SZ",
+            "stockName": "招商蛇口",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "头部央企开发商，销售表现突出，将受益于市场回暖和置换需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "001979.SZ",
+              "companyName": "招商蛇口",
+              "companyProfile": "公司创立于1979年，是中国领先的城市和园区综合开发运营服务商。作为招商局集团旗下地产园区板块的旗舰企业，公司坚持以“产融创新，低碳先锋，经营稳健”为特色，为城市发展与产业升级提供综合性的解决方案，致力于成为“美好生活承载者”。公司是综合开发专家，是绿色人居的探路者、实践者和领跑者。公司打造“玺系”“揽阅系”“启序系”“天青系”等住宅产品，以品质升级每一位居住者的生活体验；公司旗下招商建管统筹全国代建业务，业态涵盖住宅公寓、产业商办、文体艺术等九大业态，依托公司开发业务的高效运营管理体系，与公司各业务板块资源联动、协同发展，致力于成为代建领域领军企业。公司持有物业运营与资产管理，业态包括园区会展、商业办公、公寓酒店、邮轮业务。公司从事基础物业管理、平台增值服务、专业增值服务，积极探索“物业+康养”社区居家业务。",
+              "profileSummary": "公司打造“玺系”“揽阅系”“启序系”“天青系”等住宅产品，以品质升级每一位居住者的生活体验；公司旗下招商建管统筹全国代建业务，业态涵盖住宅公寓、产业商办、文体艺术等九大业态，依托公司开发业务的高效运营管理体系，与公司各业务板块资源联动、协同发展，致力于成为代建领域领军企业。公司从事基础物业管理、平台增值服务、专业增值服务，积极探索“物业+康养”社区居家业务。",
+              "majorProducts": "城市服务、开发业务、资产运营",
+              "revenueComposition": "开发业务:84.55%;物业服务:10.81%;资产运营:4.64%",
+              "revenueSegments": [
+                {
+                  "name": "开发业务",
+                  "sharePct": 84.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物业服务",
+                  "sharePct": 10.81,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "资产运营",
+                  "sharePct": 4.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "产业园区开发",
+                    "category": "工业园区开发"
+                  },
+                  {
+                    "name": "产业园区运营",
+                    "category": "园区综合服务"
+                  },
+                  {
+                    "name": "办公楼租赁",
+                    "category": "办公楼租赁"
+                  },
+                  {
+                    "name": "厂房租赁",
+                    "category": "商业租赁"
+                  },
+                  {
+                    "name": "商铺租赁",
+                    "category": "商业租赁"
+                  },
+                  {
+                    "name": "房地产(土地一级开发-常熟)",
+                    "category": "土地一级开发"
+                  }
+                ],
+                "knownProducts": [
+                  "港口客运",
+                  "邮轮经营",
+                  "养老机构经营",
+                  "会展场地租赁",
+                  "高端酒店",
+                  "物业管理服务承包",
+                  "自有物业管理服务",
+                  "产业园区开发"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "招商蛇口已经具备产业园区开发、产业园区运营、办公楼租赁等业务能力，头部央企开发商，销售表现突出，将受益于市场回暖和置换需求并非单纯概念映射。当前对应的收入被归入物业服务（10.81%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 17815,
+            "stockCode": "002244.SZ",
+            "stockName": "滨江集团",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "区域深耕型民企龙头，在杭州市场具备强大品牌和产品优势，受益于区域市场回暖。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002244.SZ",
+              "companyName": "滨江集团",
+              "companyProfile": "公司成立于1992年8月，具有建设部一级开发资质，位列全国民营企业500强，中国房地产企业50强，长三角房地产领军企业。2008年5月29日在深圳证券交易所成功上市，成为该年度唯一一家国内A股IPO上市的房地产企业。公司秉承“让老百姓都能住上一套好房子”的理念，目前已建立一套完善的标准化体系，涵盖“A+定制、A+豪华、A+经典、A豪华、A经典、A舒适、B豪华、B经典、B舒适、C豪华、C经典、C舒适、D定制、D尊贵、D经典、D舒适”共四大产品体系十六个版本，并将标准化体系进一步延伸到物业服务、小区配套及专业服务等房产各相关行业。在行业竞争中，公司根据自身特点，在发展中逐渐形成了人员优势、品牌优势、融资优势、合作优势、经营决策优势和公益影响力优势等六大核心竞争力。2024年位列中国房地产综合实力百强企业第12位，荣获“中国服务业民营企业100强”、“中国民营企业500强”等品牌荣誉。2024年公司以1116.3亿销售额位列克而瑞全国房企排行榜第9位，较上年提升2位。",
+              "profileSummary": "公司秉承“让老百姓都能住上一套好房子”的理念，目前已建立一套完善的标准化体系，涵盖“A+定制、A+豪华、A+经典、A豪华、A经典、A舒适、B豪华、B经典、B舒适、C豪华、C经典、C舒适、D定制、D尊贵、D经典、D舒适”共四大产品体系十六个版本，并将标准化体系进一步延伸到物业服务、小区配套及专业服务等房产各相关行业。2024年位列中国房地产综合实力百强企业第12位，荣获“中国服务业民营企业100强”、“中国民营企业500强”等品牌荣誉。",
+              "majorProducts": "房产项目管理服务、房产销售、房产租赁、酒店管理服务",
+              "revenueComposition": "房地产:98.67%;房产租赁:0.53%;房产项目管理服务:0.46%;酒店服务:0.32%;其他业务:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "房地产",
+                  "sharePct": 98.67,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "房产租赁",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "房产项目管理服务",
+                  "sharePct": 0.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "酒店服务",
+                  "sharePct": 0.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "办公楼租赁",
+                    "category": "办公楼租赁"
+                  },
+                  {
+                    "name": "商铺租赁",
+                    "category": "商业租赁"
+                  },
+                  {
+                    "name": "房地产(旧城区改造-杭州)",
+                    "category": "房地产开发-住宅"
+                  },
+                  {
+                    "name": "房地产开发(住宅-浙江)",
+                    "category": "房地产开发-住宅"
+                  },
+                  {
+                    "name": "房地产开发(住宅-深圳)",
+                    "category": "房地产开发-住宅"
+                  },
+                  {
+                    "name": "房地产开发(商业-浙江)",
+                    "category": "房地产开发-商业"
+                  }
+                ],
+                "knownProducts": [
+                  "房地产(旧城区改造-杭州)",
+                  "房地产开发(住宅-浙江)",
+                  "房地产开发(住宅-深圳)",
+                  "房地产开发(商业-浙江)",
+                  "房地产开发(商业-深圳)",
+                  "办公楼租赁",
+                  "商铺租赁"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "滨江集团的事件暴露较为直接：房地产占收入的98.67%，相关业务不是边缘尝试；具体业务抓手是：区域深耕型民企龙头，在杭州市场具备强大品牌和产品优势，受益于区域市场回暖。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，尤其需要用终端销量、客户采购量、公司出货和相关产品收入增速区分行业普涨与公司自身竞争力。如果终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 17816,
+            "stockCode": "002271.SZ",
+            "stockName": "东方雨虹",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "防水材料龙头，受益于二手房翻新及新房装修需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002271.SZ",
+              "companyName": "东方雨虹",
+              "companyProfile": "公司成立于1995年，总部位于中国北京。公司追求高质量稳健发展，目前已形成以主营防水业务为核心，民用建材、砂浆粉料、建筑涂料、节能保温、胶粘剂、管业、建筑修缮、新能源、非织造布、特种薄膜、乳液等多元业务为延伸的建筑建材系统服务商。自成立以来，公司坚持以科技创新推动绿色低碳可持续发展，搭建高质量科研创新体系，依托先进防水材料全国重点实验室、国家认定企业技术中心、博士后科研工作站、北美研发中心等平台，加强关键核心技术攻关和产业升级，持续为客户提供环保、高效、节能、低碳、安全的优质产品。公司已将优质的产品及专业的系统服务成功应用于房屋建筑、高速公路、城市道桥、地铁及城市轨道、高速铁路、机场和水利设施、综合管廊等众多领域，为全球数以万计的重大基础设施建设、工业建筑和民用、商用建筑提供高品质、完备的系统解决方案，其中包括人民大会堂及鸟巢、北京奥运场馆等中国标志性建筑，京沪高铁、北京地铁等国家重大基础设施建设项目，以及“一带一路”海外标志性项目，以高质高效的产品和服务，打造行业建筑建材系统服务“专业名片”。",
+              "profileSummary": "公司追求高质量稳健发展，目前已形成以主营防水业务为核心，民用建材、砂浆粉料、建筑涂料、节能保温、胶粘剂、管业、建筑修缮、新能源、非织造布、特种薄膜、乳液等多元业务为延伸的建筑建材系统服务商。自成立以来，公司坚持以科技创新推动绿色低碳可持续发展，搭建高质量科研创新体系，依托先进防水材料全国重点实验室、国家认定企业技术中心、博士后科研工作站、北美研发中心等平台，加强关键核心技术攻关和产业升级，持续为客户提供环保、高效、节能、低碳、安全的优…",
+              "majorProducts": "APP改性沥青卷材、SBS改性沥青卷材、丙烯酸酯涂料、东方雨虹防水工程施工、非织造布、改性沥青涂料、管业、建筑节能材料、胶粘剂、聚合物水泥涂料、乳液、砂浆粉料、特种薄膜、特种工程专用卷材、自粘防水卷材",
+              "revenueComposition": "防水卷材:41.2%;防水涂料:28.32%;砂浆粉料:15.33%;其他:7.45%;防水工程施工:6.74%;其他业务:0.97%",
+              "revenueSegments": [
+                {
+                  "name": "防水卷材",
+                  "sharePct": 41.2,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "防水涂料",
+                  "sharePct": 28.32,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "砂浆粉料",
+                  "sharePct": 15.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 7.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "防水工程施工",
+                  "sharePct": 6.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "SBS改性沥青防水卷材",
+                    "category": "防水卷材"
+                  },
+                  {
+                    "name": "丙烯酸酯弹性防水材料",
+                    "category": "其他防水材料"
+                  },
+                  {
+                    "name": "土工布",
+                    "category": "其他建材"
+                  },
+                  {
+                    "name": "塑性体(APP)改性沥青防水卷材",
+                    "category": "防水卷材"
+                  },
+                  {
+                    "name": "干粉砂浆",
+                    "category": "水泥砂浆"
+                  },
+                  {
+                    "name": "橡胶沥青防水涂料",
+                    "category": "防水涂料"
+                  }
+                ],
+                "knownProducts": [
+                  "VAE乳液",
+                  "腻子粉",
+                  "双向拉伸聚丙烯薄膜(BOPP膜)",
+                  "干粉砂浆",
+                  "土工布",
+                  "瓷砖胶",
+                  "丙烯酸酯弹性防水材料",
+                  "SBS改性沥青防水卷材"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东方雨虹与事件的关系已经落在存量主业，而非远期概念：防水卷材（41.2%）、防水涂料（28.32%）合计约占收入的69.52%。公司在产业链中的具体抓手是：防水材料龙头，受益于二手房翻新及新房装修需求。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 17817,
+            "stockCode": "603737.SH",
+            "stockName": "三棵树",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "涂料行业龙头，二手房翻新和老旧小区改造将直接拉动其产品需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603737.SH",
+              "companyName": "三棵树",
+              "companyProfile": "公司创立于2002年，始终关注人类美好生活和家居健康，致力于在零售领域打造乳胶漆、艺术漆、仿石漆、胶黏剂、基辅材、防水涂料、小森板“七位一体”产品和马上住服务的美好生活解决方案，在工程领域打造内外墙涂料、防水、保温、工业涂料、地坪、家居新材料、基辅材、施工服务为一体的绿色建材一站式集成系统。公司于2016年登陆上海证券交易所在A股主板上市，公司总部位于福建莆田，在上海、广州、北京成立中心，并在福建、四川、河南、天津、安徽、河北、广东、湖北、江西等设有及在建14个生产基地，莆田生态工业园、四川生态工业园、安徽生态工业园被评为国家级“绿色工厂”。公司现有员工近万名，现已成为全资及控股60家公司的企业集团。公司是国家知识产权示范企业，由诺贝尔化学奖得主杰马里•莱恩教授担任首席技术顾问。承担了国家“863”计划、省市科技计划项目等多项重要前沿科研课题，并与中科院、清华大学、复旦大学、厦门大学、华东理工大学等科研院所建立了产学研合作，取得了多项行业领先的科研成果。公司已研发上万支产品，满足用户全屋一站式绿色建材需求。公司提出“敬天爱人”的社会责任理念，履行社会责任。公司坚持公益，对各类社会公益事业、阳光工程倾注了巨大热忱。公司成立用于人才培养的“莆田市人才发展基金会”，与“公司公益基金会”、为员工与合作伙伴排忧解难的“无忧基金”及洪杰个人发起的用于捐资助教、帮扶贫困孤寡的“金淼基金”等。",
+              "profileSummary": "公司创立于2002年，始终关注人类美好生活和家居健康，致力于在零售领域打造乳胶漆、艺术漆、仿石漆、胶黏剂、基辅材、防水涂料、小森板“七位一体”产品和马上住服务的美好生活解决方案，在工程领域打造内外墙涂料、防水、保温、工业涂料、地坪、家居新材料、基辅材、施工服务为一体的绿色建材一站式集成系统。公司已研发上万支产品，满足用户全屋一站式绿色建材需求。",
+              "majorProducts": "MS胶、白胶、保温结构一体化系统、丙烯酸聚氨酯地坪、瓷砖胶、导静电/防静电地坪、发泡胶、防水涂料、改性沥青防水卷材、干挂胶、高分子防水卷材、工程墙面漆、工业涂料、硅酮胶、户外铁木防护漆、护角条、环氧彩砂地坪、环氧磨石地坪、加固剂、家装木器漆、家装墙面漆、接缝材料、接缝纸带、界面剂、净味360耐划伤双组份水性木器漆、净味PU、净味水性户外通用防护漆、聚氨酯超耐磨地坪、聚合物水泥防水涂料、美缝剂、免钉胶、耐磨骨料地坪、腻子粉、强力胶、热熔胶、溶剂型环氧地坪、砂浆、施工工具、施工设备、施工遮蔽材料、水性防水涂料、水性环氧地坪、水性聚氨酯地坪、水性木器涂料、填缝密封材料、外墙保温装饰一体板系统、外墙内保温系统、外墙外保温薄抹灰系统、网格布、无溶剂环氧地坪、无溶剂聚氨酯地坪、鲜呼吸臻钻水性木器漆、液态硬化剂地坪、优威（UV）涂料、植物油聚氨酯系列防水涂料、自粘防水卷材",
+              "revenueComposition": "墙面涂料-工程墙面漆:31.05%;基材与辅材:29.24%;墙面涂料-家装墙面漆:27.16%;防水卷材:7.95%;装饰施工:2.33%;其他业务:2.27%",
+              "revenueSegments": [
+                {
+                  "name": "墙面涂料-工程墙面漆",
+                  "sharePct": 31.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "基材与辅材",
+                  "sharePct": 29.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "墙面涂料-家装墙面漆",
+                  "sharePct": 27.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "防水卷材",
+                  "sharePct": 7.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "装饰施工",
+                  "sharePct": 2.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "优威(UV)涂料",
+                    "category": "木器漆"
+                  },
+                  {
+                    "name": "外墙弹性涂料",
+                    "category": "外墙涂料"
+                  },
+                  {
+                    "name": "多彩涂料",
+                    "category": "内墙涂料"
+                  },
+                  {
+                    "name": "瓷砖胶",
+                    "category": "其他建材"
+                  },
+                  {
+                    "name": "美缝剂",
+                    "category": "玻璃腻子、接缝用腻子、填缝胶、其他原浆涂料"
+                  },
+                  {
+                    "name": "聚乙烯PE漆",
+                    "category": "木器漆"
+                  }
+                ],
+                "knownProducts": [
+                  "美缝剂",
+                  "腻子粉",
+                  "氯丁强力胶",
+                  "白胶",
+                  "外墙外保温集成系统",
+                  "瓷砖胶",
+                  "多彩涂料",
+                  "外墙弹性涂料"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三棵树与新闻之间有明确产品抓手：优威(UV)涂料、外墙弹性涂料、多彩涂料，对应涂料行业龙头，二手房翻新和老旧小区改造将直接拉动其产品需求。收入主体目前是墙面涂料-工程墙面漆（31.05%）、基材与辅材（29.24%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "4条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

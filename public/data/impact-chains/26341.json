@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26341",
@@ -9,9 +9,9 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 6,
-    "mappedStockCount": 4,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 4,
+    "mappedStockCount": 2,
     "unmappedStockCount": 2,
     "stocks": [
       {
@@ -20,8 +20,8 @@
         "stockName": "海星股份",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 1
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 1584,
@@ -29,8 +29,8 @@
         "stockName": "钢研高纳",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 10
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 1597,
@@ -39,25 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 3
-      },
-      {
-        "sourceRowNumber": 1599,
-        "stockCode": "未上市",
-        "stockName": "尼吉康",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1600,
-        "stockCode": "未上市",
-        "stockName": "日本贵弥功",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 1605,
@@ -66,23 +48,23 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 4
+        "anchorProductCount": 1
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 1599,
-        "stockCode": "未上市",
-        "stockName": "尼吉康",
+        "sourceRowNumber": 1577,
+        "stockCode": "603115.SH",
+        "stockName": "海星股份",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       },
       {
-        "sourceRowNumber": 1600,
-        "stockCode": "未上市",
-        "stockName": "日本贵弥功",
+        "sourceRowNumber": 1584,
+        "stockCode": "300034.SZ",
+        "stockName": "钢研高纳",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -92,242 +74,14 @@
   },
   "totals": {
     "candidateCoreProductCount": 16,
-    "selectedCoreProductCount": 2,
+    "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 29,
-    "downstreamCandidateCount": 143,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 34,
+    "relatedIndustryCandidateCount": 15,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140030668",
-        "name": "二氧噻吩",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140009112",
-        "name": "内电极浆料",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140008494",
-        "name": "电容器薄膜",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140009111",
-        "name": "磁料",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023498",
-        "name": "磁粉",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030673",
-        "name": "端电极浆料",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030667",
-        "name": "钽丝",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140009109",
-        "name": "钽外壳",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030666",
-        "name": "钽粉",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140005138",
-        "name": "单零箔毛料",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140005139",
-        "name": "双零箔毛料",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140067042",
-        "name": "基础化工材料",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140030998",
-        "name": "封装",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140166390",
-        "name": "局部放电检测仪",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140005722",
         "name": "薄膜电容器",
@@ -353,23 +107,21 @@
           "name": "薄膜电容器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600563.SH",
             "stockName": "法拉电子",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "603989.SH",
             "stockName": "艾华集团",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 1,
         "relevanceScore": 18,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -379,281 +131,468 @@
           "元件",
           "电子"
         ]
-      },
+      }
+    ],
+    "relatedIndustries": [
       {
-        "code": "1140010936",
-        "name": "电容器",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "event_title",
-        "stockCount": 4,
+        "code": "1200001047",
+        "name": "铝压延加工",
+        "description": "铝压延加工指将铝锭轧制成板、带、箔材。A股关注该行业，主要因新能源汽车轻量化、光伏及消费电子需求爆发，带动高端铝材量价齐升。具备技术壁垒和产能优势的企业，受益于绿色转型红利，业绩增长预期强劲。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 1,
+        "relevanceScore": 20,
         "stocks": [
-          {
-            "stockCode": "600563.SH",
-            "stockName": "法拉电子",
-            "rating": "★★★★☆"
-          },
           {
             "stockCode": "603115.SH",
             "stockName": "海星股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
-            "stockCode": "603989.SH",
-            "stockName": "艾华集团",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "300034.SZ",
-            "stockName": "钢研高纳",
-            "rating": "★★★★"
+            "stockCode": "600888.SH",
+            "stockName": "新疆众和",
+            "rating": "★★★☆",
+            "filledStars": 3
           }
         ],
-        "upstreamCount": 29,
-        "downstreamCount": 142,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
+        "products": [
+          {
+            "code": "1140166155",
+            "name": "电极铝箔",
+            "hierarchyPath": "有色金属 > 工业金属 > 铝 > 铝压延加工 > 铝压延加工 > 电极铝箔",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603115.SH",
+                "stockName": "海星股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600888.SH",
+                "stockName": "新疆众和",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "电极箔"
+            ]
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1210000370",
+        "name": "电解液",
+        "description": "电解液是锂电池的“血液”，负责离子传导。作为新能源车核心材料，其需求随电动车普及激增。因技术壁垒高、产能扩张快且受上游锂价波动影响大，成为A股关注焦点，兼具高成长性与周期性特征。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 4,
+        "relevanceScore": 104,
+        "stocks": [
+          {
+            "stockCode": "301238.SZ",
+            "stockName": "瑞泰新材",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140156463",
+            "name": "三氟甲磺酸锂",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解液 > 电解液 > 三氟甲磺酸锂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301238.SZ",
+                "stockName": "瑞泰新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "电解液"
+            ]
+          },
+          {
+            "code": "1140165218",
+            "name": "二氟草酸硼酸锂",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解液 > 电解液 > 二氟草酸硼酸锂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301238.SZ",
+                "stockName": "瑞泰新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "电解液"
+            ]
+          },
+          {
+            "code": "1140165217",
+            "name": "双三氟甲基磺酰亚胺锂",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解液 > 电解液 > 双三氟甲基磺酰亚胺锂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301238.SZ",
+                "stockName": "瑞泰新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "电解液"
+            ]
+          },
+          {
+            "code": "1140077164",
+            "name": "锂离子电池电解液",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解液 > 电解液 > 锂离子电池电解液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301238.SZ",
+                "stockName": "瑞泰新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "电解液"
+            ]
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 17,
+    "mappedStockCount": 14,
+    "unmappedStockCount": 3,
+    "level7ProductCount": 34,
+    "candidateIndustryCount": 15,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 1577,
+        "stockCode": "603115.SH",
+        "stockName": "海星股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 1578,
+        "stockCode": "600888.SH",
+        "stockName": "新疆众和",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 1582,
+        "stockCode": "301565.SZ",
+        "stockName": "中仑新材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 1584,
+        "stockCode": "300034.SZ",
+        "stockName": "钢研高纳",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 1585,
+        "stockCode": "301238.SZ",
+        "stockName": "瑞泰新材",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 1587,
+        "stockCode": "300174.SZ",
+        "stockName": "元力股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 1588,
+        "stockCode": "002068.SZ",
+        "stockName": "黑猫股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 1591,
+        "stockCode": "600458.SH",
+        "stockName": "时代新材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 1595,
+        "stockCode": "603500.SH",
+        "stockName": "祥和实业",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 1596,
+        "stockCode": "002484.SZ",
+        "stockName": "江海股份",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 1597,
+        "stockCode": "603989.SH",
+        "stockName": "艾华集团",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 1598,
+        "stockCode": "300344.SZ",
+        "stockName": "火炬电子",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 1601,
+        "stockCode": "600673.SH",
+        "stockName": "东阳光",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 1605,
+        "stockCode": "600563.SH",
+        "stockName": "法拉电子",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 1606,
+        "stockCode": "600237.SH",
+        "stockName": "铜峰电子",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 1607,
+        "stockCode": "002735.SZ",
+        "stockName": "王子新材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 1608,
+        "stockCode": "002028.SZ",
+        "stockName": "思源电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140004001",
-        "name": "安防产品",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
+        "code": "1200001047",
+        "name": "铝压延加工",
+        "description": "铝压延加工指将铝锭轧制成板、带、箔材。A股关注该行业，主要因新能源汽车轻量化、光伏及消费电子需求爆发，带动高端铝材量价齐升。具备技术壁垒和产能优势的企业，受益于绿色转型红利，业绩增长预期强劲。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 1,
+        "relevanceScore": 20,
+        "stocks": [
+          {
+            "stockCode": "603115.SH",
+            "stockName": "海星股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600888.SH",
+            "stockName": "新疆众和",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "电容器"
+        "products": [
+          {
+            "code": "1140166155",
+            "name": "电极铝箔",
+            "hierarchyPath": "有色金属 > 工业金属 > 铝 > 铝压延加工 > 铝压延加工 > 电极铝箔",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603115.SH",
+                "stockName": "海星股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600888.SH",
+                "stockName": "新疆众和",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "电极箔"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140009786",
-        "name": "家电",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
+        "code": "1210000370",
+        "name": "电解液",
+        "description": "电解液是锂电池的“血液”，负责离子传导。作为新能源车核心材料，其需求随电动车普及激增。因技术壁垒高、产能扩张快且受上游锂价波动影响大，成为A股关注焦点，兼具高成长性与周期性特征。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 4,
+        "relevanceScore": 104,
+        "stocks": [
+          {
+            "stockCode": "301238.SZ",
+            "stockName": "瑞泰新材",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "电容器"
+        "products": [
+          {
+            "code": "1140156463",
+            "name": "三氟甲磺酸锂",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解液 > 电解液 > 三氟甲磺酸锂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301238.SZ",
+                "stockName": "瑞泰新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "电解液"
+            ]
+          },
+          {
+            "code": "1140165218",
+            "name": "二氟草酸硼酸锂",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解液 > 电解液 > 二氟草酸硼酸锂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301238.SZ",
+                "stockName": "瑞泰新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "电解液"
+            ]
+          },
+          {
+            "code": "1140165217",
+            "name": "双三氟甲基磺酰亚胺锂",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解液 > 电解液 > 双三氟甲基磺酰亚胺锂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301238.SZ",
+                "stockName": "瑞泰新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "电解液"
+            ]
+          },
+          {
+            "code": "1140077164",
+            "name": "锂离子电池电解液",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解液 > 电解液 > 锂离子电池电解液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301238.SZ",
+                "stockName": "瑞泰新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "电解液"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140009971",
-        "name": "工控",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140010272",
-        "name": "智能电网",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140014916",
-        "name": "汽车",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140005802",
-        "name": "4G无线通信模组",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140135779",
-        "name": "CT设备控制板",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140158798",
-        "name": "DC/DC电源转换器",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140023321",
-        "name": "DC/DC转换器",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140022851",
-        "name": "IC封装",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140115967",
-        "name": "LED显示单元",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140023039",
-        "name": "LED显示模块",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140154505",
-        "name": "LED泛光灯",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140081943",
-        "name": "LED照明驱动电路",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140010936"
-        ],
-        "linkedCoreProductNames": [
-          "电容器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -668,11 +607,1389 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 34,
+    "eligibleSourceRowCount": 17,
+    "totalStockCount": 17,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 14,
+    "excludedNonAShareCount": 3,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 17,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 1596,
+            "stockCode": "002484.SZ",
+            "stockName": "江海股份",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "本轮全品类电容器涨价的发起者，是国内电容器平台型龙头企业",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002484.SZ",
+              "companyName": "江海股份",
+              "companyProfile": "公司总部位于江苏省南通市，所属行业为电子元器件制造业，是从事电容器及其材料、仪器的研究开发、生产和销售的高新技术企业。公司拥有超过50年的电容器生产经验，通过为客户提供铝电解、薄膜、和超级电容器“一站式”的服务，持续开拓新的应用的市场，致力于成为全球电容器行业的领先者。江海牌电容器是中国电子元器件行业拥有自主知识产权、自有品牌，通过自己的渠道真正进入国际高端主流市场的民族品牌之一，是江苏省名牌产品，中国驰名商标。公司是中国电子元件行业副理事长单位、中国超级电容器标准工作副组长单位、高分子固体电容器国家标准主要起草单位，连续三十一年主要指标在全国电容器行业名列前茅。公司是全球在电力电子领域少数几家同时在铝电解电容器、薄膜电容器、超级电容器这三大类电容器进行研发、制造和销售的企业之一，产品广泛应用于工业自动化、机器人、消费电子、轨道交通、5G通讯设备、数据中心、新能源和储能、电动汽车、智能电网、军工等多个领域。同时，公司积极布局三大电容器用关键材料的技术工艺研究攻关和产业化，向铝电解电容器产业链上游延伸，开发出国内高比容、高强度、高一致性的电极箔(腐蚀箔和化成箔)，有效保障了材料性能、品质和供给，进一步提升了行业竞争优势。目前，公司已成为全球电力电子应用领域品种最齐全、产业链最完整的电容器公司。",
+              "profileSummary": "公司总部位于江苏省南通市，所属行业为电子元器件制造业，是从事电容器及其材料、仪器的研究开发、生产和销售的高新技术企业。目前，公司已成为全球电力电子应用领域品种最齐全、产业链最完整的电容器公司。",
+              "majorProducts": "薄膜电容器、超级电容器、铝电解电容器（及核心材料）",
+              "revenueComposition": "铝电解电容:80.55%;薄膜电容:10.49%;超级电容:6.42%;电极箔:2.19%;其他业务:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "铝电解电容",
+                  "sharePct": 80.55,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "薄膜电容",
+                  "sharePct": 10.49,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "超级电容",
+                  "sharePct": 6.42,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电极箔",
+                  "sharePct": 2.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电力电子电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "薄膜电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "超级电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "铝电解电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "电极铝箔",
+                  "电力电子电容器",
+                  "薄膜电容器",
+                  "超级电容器",
+                  "铝电解电容器"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "江海股份的相关业务已决定公司大部分经营表现：铝电解电容（80.55%）、薄膜电容（10.49%）合计约占收入的97.46%。公司与事件的直接业务联系是：本轮全品类电容器涨价的发起者，是国内电容器平台型龙头企业，真正的增量取决于供需缺口与产品价格，并需经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，产品报价、订单排期、产销率和毛利率需要显示公司获得超越行业的增量。供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是这条逻辑最主要的反向约束。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 1577,
+            "stockCode": "603115.SH",
+            "stockName": "海星股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "电解电容器核心原材料电极箔龙头，受益于AI服务器需求及日系产能外移",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603115.SH",
+              "companyName": "海星股份",
+              "companyProfile": "公司成立于1998年,是电子储能材料行业的重要参与者和推动者。20余年精耕细作,海星股份已建有江苏南通,四川雅安,宁夏石嘴山三大生产基地,产销规模、技术水平、产品品质、市场份额、人均效率位列国内同行前列,客户遍及包括中国大陆,台湾地区,日本,韩国在内的全球各大主流市场的一流厂家。",
+              "profileSummary": "20余年精耕细作,海星股份已建有江苏南通,四川雅安,宁夏石嘴山三大生产基地,产销规模、技术水平、产品品质、市场份额、人均效率位列国内同行前列,客户遍及包括中国大陆,台湾地区,日本,韩国在内的全球各大主流市场的一流厂家。",
+              "majorProducts": "低压化成箔、腐蚀箔、中高压化成箔",
+              "revenueComposition": "化成箔:95.66%;腐蚀箔:3.99%;其他业务:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "化成箔",
+                  "sharePct": 95.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "腐蚀箔",
+                  "sharePct": 3.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "电极铝箔",
+                    "category": "铝压延加工"
+                  }
+                ],
+                "knownProducts": [
+                  "电极铝箔"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "海星股份实际经营中已有电极铝箔，与事件指向的电解电容器核心原材料电极箔龙头，受益于AI服务器需求及日系产能外移能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在化成箔（95.66%）、腐蚀箔（3.99%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善供需缺口与产品价格，需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。产品报价、订单排期、产销率和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 1584,
+            "stockCode": "300034.SZ",
+            "stockName": "钢研高纳",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球电容器化学品龙头，市占率约50%，是产业链中议价能力极强的核心材料供应商",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300034.SZ",
+              "companyName": "钢研高纳",
+              "companyProfile": "公司聚焦服务国家战略需求，已形成北京为总部的“七市十厂”产业布局。承担着国家多项重点型号亟需金属材料的研发攻关任务，着力解决关键核心材料“卡脖子”问题，现主要从事高温合金、铝镁钛轻质合金、耐蚀合金和金属间化合物等高端金属材料的研发、生产和销售，产品广泛用于航空、航天、舰船、核电、燃气轮机、石化、冶金建材等行业，制备工艺涵盖精密铸造、模锻与环轧、粉末冶金、精细制造、机械合金化、离心铸造、增材制造、盘轴零件精密加工等领域，是推动国家高温合金领域重要战略使命任务落地的“主力军”“国家队”。公司始终坚持“以客户为中心”的经营理念，致力于成为世界一流的高端装备制造业所需金属新材料与制品供应商，全面助力高端装备新材料产业的高质量发展。",
+              "profileSummary": "公司聚焦服务国家战略需求，已形成北京为总部的“七市十厂”产业布局。承担着国家多项重点型号亟需金属材料的研发攻关任务，着力解决关键核心材料“卡脖子”问题，现主要从事高温合金、铝镁钛轻质合金、耐蚀合金和金属间化合物等高端金属材料的研发、生产和销售，产品广泛用于航空、航天、舰船、核电、燃气轮机、石化、冶金建材等行业，制备工艺涵盖精密铸造、模锻与环轧、粉末冶金、精细制造、机械合金化、离心铸造、增材制造、盘轴零件精密加工等领域，是推动国家高温合…",
+              "majorProducts": "GH4169等合金系列产品、Ti-Al系金属间化合物制品、单晶高温合金制品、等轴晶精密铸造高温合金制品、定向凝固高温合金制品、多孔泡沫材料制品、粉末高温合金制品、高速钢必硬(MBH)系列、高温合金板、带材、高温合金锻制、热轧、冷拉棒材、高温合金管材、高温合金母合金、高温合金盘锻件、高温合金丝材、高温合金叶片、高温金属基自润滑材料及制品、核用镍基合金制品、精密铸造合金制品、耐玻璃腐蚀制品、燃烧室用高温合金环件、热障涂层用MCrAlY型电弧镀靶材、热作模具钢无硫(NOS)系列制品、司太立合金制品、塑料模具钢超洁镜(GY)系列制品、氧化物弥散强化(ODS)合金制品、液压泵密封件",
+              "revenueComposition": "铸造高温合金制品:67.09%;变形高温合金制品:25.84%;新型高温合金材料及制品:6.46%;其他业务:0.61%",
+              "revenueSegments": [
+                {
+                  "name": "铸造高温合金制品",
+                  "sharePct": 67.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "变形高温合金制品",
+                  "sharePct": 25.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新型高温合金材料及制品",
+                  "sharePct": 6.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "钛合金粉末",
+                  "变形高温合金",
+                  "涡轮盘锻件",
+                  "热障涂层用MCrAlY型电弧镀靶材",
+                  "粉末高温合金锻件",
+                  "铸造高温合金",
+                  "高温合金叶片",
+                  "高温合金盘锻件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "钢研高纳当前收入集中在铸造高温合金制品（67.09%）、变形高温合金制品（25.84%），现有产品以钛合金粉末、变形高温合金、涡轮盘锻件、热障涂层用MCrAlY型电弧镀靶材为主，与新闻所指的“全球电容器化学品龙头，市占率约50%，是产业链中议价能力极强的核心材料供应商”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，供需缺口与产品价格才可能沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。在此之前，产品报价、订单排期、产销率和毛利率若没有出现，事件对公司基本面的影响应按较弱处理；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会进一步压低相关性。"
+          },
+          {
+            "sourceRowNumber": 1597,
+            "stockCode": "603989.SH",
+            "stockName": "艾华集团",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内铝电解电容器龙头，与江海股份并列，同时布局MLPC和超级电容，充分受益于AI服务器需求和涨价周期",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603989.SH",
+              "companyName": "艾华集团",
+              "companyProfile": "公司位于湖南省益阳市，成立于1985年，是一家以设计、开发、制造及销售铝电解电容器、薄膜电容器为主，集电极箔、金属化膜与设备制造于一体的科技型企业集团。2015年成功上市。产品被广泛应用于工业控制、光伏、车载、智能机器人、5G通讯、数据处理中心、电源、照明等多维度应用市场。公司建有“国家认定企业技术中心”，2014年公司由工信部认定为“国家技术创新示范企业”，2016年由工信部认定为“全国工业品牌培育示范企业”，2019年由国家知识产权局认定为“国家知识产权示范企业”，2020年荣获了“第六届湖南省省长质量奖”。先后承担了国家创新基金、国家火炬计划、国家工信部强基工程、湖南省地州市引导项目、湖南省火炬计划等多个项目，并已取得了多项科研成果。艾华集团自主研发的铝电解电容器在耐高温、耐高纹波、长寿命、高频低阻、阻燃、缩体等技术上达到国际领先水平。",
+              "profileSummary": "产品被广泛应用于工业控制、光伏、车载、智能机器人、5G通讯、数据处理中心、电源、照明等多维度应用市场。",
+              "majorProducts": "垂直片固态铝电解电容器、垂直片式液态铝电解电容器、叠层片式固态铝电解电容器、焊片式液态铝电解电容器、焊针式液态铝电解电容器、螺栓式液态铝电解电容器、铝电解电容、引线式固态铝电解电容器、引线式液态铝电解电容器",
+              "revenueComposition": "工控类:49.98%;电源/电子类:32.55%;照明类:11.49%;其他业务:3.7%;化成箔:2.28%",
+              "revenueSegments": [
+                {
+                  "name": "工控类",
+                  "sharePct": 49.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电源/电子类",
+                  "sharePct": 32.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "照明类",
+                  "sharePct": 11.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "化成箔",
+                  "sharePct": 2.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "铝电解电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "薄膜电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "电极铝箔",
+                  "薄膜电容器",
+                  "铝电解电容器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "艾华集团实际经营中已有铝电解电容器、薄膜电容器，与事件指向的国内铝电解电容器龙头，与江海股份并列，同时布局MLPC和超级电容，充分受益于AI服务器需求和涨价周期能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在工控类（49.98%）、电源/电子类（32.55%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善供需缺口与产品价格，需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。产品报价、订单排期、产销率和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 1605,
+            "stockCode": "600563.SH",
+            "stockName": "法拉电子",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内薄膜电容器龙头企业，产品广泛应用于新能源、数据中心等高景气领域",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600563.SH",
+              "companyName": "法拉电子",
+              "companyProfile": "公司是世界领先的专业薄膜电容器制造商。公司创建于1955年，一直专注于薄膜电容器的研发和制造，在技术、质量、管理等方面全方位打造并形成了自己的核心竞争力。公司坚持推行“中高端市场战略”，现已成为全球工业控制、光伏、风电、新能源汽车、轨道交通、智能电网、家电、照明等行业龙头企业的核心供应商，全球市场占有率第一。",
+              "profileSummary": "公司是世界领先的专业薄膜电容器制造商。公司创建于1955年，一直专注于薄膜电容器的研发和制造，在技术、质量、管理等方面全方位打造并形成了自己的核心竞争力。",
+              "majorProducts": "法拉变压器、法拉交流电容器、法拉金属化膜、法拉精密电容器、法拉聚丙烯膜电容器、法拉聚酯膜电容器、法拉直流电容器",
+              "revenueComposition": "薄膜电容:95.09%;其他业务:2.88%;电子变压器:2.03%",
+              "revenueSegments": [
+                {
+                  "name": "薄膜电容",
+                  "sharePct": 95.09,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子变压器",
+                  "sharePct": 2.03,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "薄膜电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "电力电子电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "电子变压器",
+                    "category": "电子变压器"
+                  },
+                  {
+                    "name": "金属化膜",
+                    "category": "电路类器件材料"
+                  }
+                ],
+                "knownProducts": [
+                  "电子变压器",
+                  "电力电子电容器",
+                  "薄膜电容器",
+                  "金属化膜"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "法拉电子的相关业务已决定公司大部分经营表现：薄膜电容（95.09%）、电子变压器（2.03%）合计约占收入的97.12%。公司与事件的直接业务联系是：国内薄膜电容器龙头企业，产品广泛应用于新能源、数据中心等高景气领域，真正的增量取决于供需缺口与产品价格，并需经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，产品报价、订单排期、产销率和毛利率需要显示公司获得超越行业的增量。供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是这条逻辑最主要的反向约束。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 12,
+        "stocks": [
+          {
+            "sourceRowNumber": 1578,
+            "stockCode": "600888.SH",
+            "stockName": "新疆众和",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "铝电解电容器核心原材料电极箔供应商",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600888.SH",
+              "companyName": "新疆众和",
+              "companyProfile": "公司成立于1958年，是铝电子新材料国家战略性新兴产业在新疆的研制出口基地。于1996年在上海证券交易所上市，是新疆第一家上市的工业企业。历经五十多年的发展，现已成为中国战略性新材料产业的核心骨干企业，中国电子材料百强企业。近年来，公司以绿色、科技、节能、环保的铝电子新材料产业为发展方向，构建起以乌鲁木齐高新北区产业园和甘泉堡新材料产业园互为支撑，以“煤-电-高纯铝-电子铝箔-电极箔”新材料循环经济产业链为主体，冶金技术服务、矿产资源开发、能源及电力运营、金融物流贸易共同发展的“1+4”产业战略格局。公司依托新疆丰富的资源，实现了新疆优势资源就地转换，按照零污染、低能耗、全循环经济的发展模式，实现了新型工业技术的更新换代，为环保型社会提供了“绿色”原材料保障及解决方案。",
+              "profileSummary": "近年来，公司以绿色、科技、节能、环保的铝电子新材料产业为发展方向，构建起以乌鲁木齐高新北区产业园和甘泉堡新材料产业园互为支撑，以“煤-电-高纯铝-电子铝箔-电极箔”新材料循环经济产业链为主体，冶金技术服务、矿产资源开发、能源及电力运营、金融物流贸易共同发展的“1+4”产业战略格局。公司依托新疆丰富的资源，实现了新疆优势资源就地转换，按照零污染、低能耗、全循环经济的发展模式，实现了新型工业技术的更新换代，为环保型社会提供了“绿色”原材料…",
+              "majorProducts": "新疆众和电极箔、新疆众和电子铝箔、新疆众和高纯铝棒、新疆众和高纯铝锭、新疆众和高纯铝丝、新疆众和高纯圆铝杆、新疆众和铝锭、新疆众和重熔用高纯铝锭",
+              "revenueComposition": "合金产品:37.58%;高纯铝:17.89%;电极箔:14.59%;电子铝箔:10.79%;其他:8.98%;铝制品:8.84%;其他业务:1.35%",
+              "revenueSegments": [
+                {
+                  "name": "合金产品",
+                  "sharePct": 37.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高纯铝",
+                  "sharePct": 17.89,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电极箔",
+                  "sharePct": 14.59,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电子铝箔",
+                  "sharePct": 10.79,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铝制品",
+                  "sharePct": 8.84,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电极铝箔",
+                    "category": "铝压延加工"
+                  }
+                ],
+                "knownProducts": [
+                  "电解铝",
+                  "电子铝箔",
+                  "电极铝箔",
+                  "铝合金",
+                  "铝杆",
+                  "铝合金门窗"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "新疆众和已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：电极箔占收入的14.59%。公司在产业链中的位置是：铝电解电容器核心原材料电极箔供应商，供需缺口与产品价格则决定增量大小。只有完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，相关业务的增长才可能改善公司整体盈利。产品报价、订单排期、产销率和毛利率还需与其他主业表现同时改善；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 1582,
+            "stockCode": "301565.SZ",
+            "stockName": "中仑新材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司BOPP新能源膜材是薄膜电容器的核心基膜，是产业链关键上游材料",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301565.SZ",
+              "companyName": "中仑新材",
+              "companyProfile": "公司以产业化运营为核心，秉持“多矩阵、高精尖、全球化”的发展理念，聚焦关键前沿技术，持续拓展新材料产业生态。现阶段，公司产品涵盖新能源膜材、生物基可降解膜材、功能性膜材及高性能聚酰胺等高端材料。公司将“产业化运营+可持续创新”作为驱动发展的双引擎。依托深耕行业数十年的专业运营团队与具备前沿视野的技术研发人才，公司积累了海量数据库，构建了从实验室到市场端的闭环创新体系，具备前瞻研发和快速产业化落地能力。同时，公司与全球顶尖院校、科研机构开展“产学研用”深度协作，并通过产业资本链接最具活力的前沿技术，深度融入全球创新网络，不断为产业创造新价值。",
+              "profileSummary": "公司以产业化运营为核心，秉持“多矩阵、高精尖、全球化”的发展理念，聚焦关键前沿技术，持续拓展新材料产业生态。现阶段，公司产品涵盖新能源膜材、生物基可降解膜材、功能性膜材及高性能聚酰胺等高端材料。",
+              "majorProducts": "0",
+              "revenueComposition": "通用型BOPA薄膜:73%;聚酰胺6(PA6):14.95%;新型BOPA薄膜:8.43%;其他业务:2.04%;生物降解BOPLA薄膜:1.35%;BOPP新能源膜材:0.23%",
+              "revenueSegments": [
+                {
+                  "name": "通用型BOPA薄膜",
+                  "sharePct": 73.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "聚酰胺6(PA6)",
+                  "sharePct": 14.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新型BOPA薄膜",
+                  "sharePct": 8.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生物降解BOPLA薄膜",
+                  "sharePct": 1.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "BOPP新能源膜材",
+                  "sharePct": 0.23,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "双向拉伸尼龙薄膜(BOPA膜)",
+                    "category": "BOPA包装"
+                  },
+                  {
+                    "name": "双向拉伸聚乳酸薄膜(BOPLA)",
+                    "category": "其他膜材料"
+                  },
+                  {
+                    "name": "锂电膜(BOPA)",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "食品包装用薄膜(BOPA)",
+                    "category": "BOPA包装"
+                  }
+                ],
+                "knownProducts": [
+                  "尼龙6",
+                  "双向拉伸聚乳酸薄膜(BOPLA)",
+                  "锂电膜(BOPA)",
+                  "双向拉伸尼龙薄膜(BOPA膜)",
+                  "食品包装用薄膜(BOPA)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中仑新材与事件存在真实业务交集：公司已有双向拉伸尼龙薄膜(BOPA膜)、双向拉伸聚乳酸薄膜(BOPLA)、锂电膜(BOPA)，与公司BOPP新能源膜材是薄膜电容器的核心基膜，是产业链关键上游材料所处的产业环节一致。BOPP新能源膜材（0.23%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 1585,
+            "stockCode": "301238.SZ",
+            "stockName": "瑞泰新材",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "子公司超威新材是国内超级电容器电解液头部供应商，是超级电容产业链核心环节",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301238.SZ",
+              "companyName": "瑞泰新材",
+              "companyProfile": "公司主要从事锂离子电池材料以及硅烷偶联剂等化工新材料的研发、生产和销售。公司一直专注于锂离子电池材料以及硅烷偶联剂等业务，主营业务和主要产品未发生变化。未来公司将在稳定发展现有产品的基础上，积极拓展产品的种类，优化和完善技术服务和技术解决方案，以全球化的视野拓展国内外业务，加强与国内外客户、供应商的合作，致力于成为具备国际竞争力的化工新材料供应商。公司坚持创新驱动发展的理念，持续加大研发投入。公司通过在行业内多年的技术积累，掌握了锂离子电池材料以及有机硅材料等所需的主要核心技术，从而与下游客户建立了良好的合作关系，为企业的长远稳步发展奠定坚实的基础。基于多年的行业从业经验，公司的技术团队掌握了丰富的锂离子电池材料以及有机硅材料的制造和工艺知识，深刻理解制造过程中所面临的技术需求和研发挑战。公司及子公司相继获评2016年度江苏省科学技术奖、苏州市科学技术奖、中国轻工业联合会科学技术进步奖、中国轻工业新能源电池行业十强企业、2018年苏州市“专精特新”培育企业、“十二五”轻工业科技创新先进集体等荣誉。",
+              "profileSummary": "公司一直专注于锂离子电池材料以及硅烷偶联剂等业务，主营业务和主要产品未发生变化。未来公司将在稳定发展现有产品的基础上，积极拓展产品的种类，优化和完善技术服务和技术解决方案，以全球化的视野拓展国内外业务，加强与国内外客户、供应商的合作，致力于成为具备国际竞争力的化工新材料供应商。",
+              "majorProducts": "氨基硅烷偶联剂、超级电容器电解液、储能电池电解液、动力电池电解液、环氧烃基硅烷、锂离子电池电解液添加剂、酰氧基硅烷、消费电池电解液",
+              "revenueComposition": "电子化学品:94.96%;有机硅橡胶材料产品:4.66%;其他:0.38%",
+              "revenueSegments": [
+                {
+                  "name": "电子化学品",
+                  "sharePct": 94.96,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "有机硅橡胶材料产品",
+                  "sharePct": 4.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "三氟甲磺酸锂",
+                    "category": "电解液"
+                  },
+                  {
+                    "name": "二氟草酸硼酸锂",
+                    "category": "电解液"
+                  },
+                  {
+                    "name": "双三氟甲基磺酰亚胺锂",
+                    "category": "电解液"
+                  },
+                  {
+                    "name": "锂离子电池电解液",
+                    "category": "电解液"
+                  },
+                  {
+                    "name": "氨基硅烷",
+                    "category": "硅烷偶联剂"
+                  },
+                  {
+                    "name": "环氧烃基硅烷",
+                    "category": "硅烷偶联剂"
+                  }
+                ],
+                "knownProducts": [
+                  "氨基硅烷",
+                  "环氧烃基硅烷",
+                  "酰氧基硅烷",
+                  "硫化锂",
+                  "三氟甲磺酸锂",
+                  "二氟草酸硼酸锂",
+                  "双三氟甲基磺酰亚胺锂",
+                  "锂离子电池电解液"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "瑞泰新材的电子化学品（94.96%）覆盖范围较宽，其中能够承载三氟甲磺酸锂、二氟草酸硼酸锂、双三氟甲基磺酰亚胺锂，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：子公司超威新材是国内超级电容器电解液头部供应商，是超级电容产业链核心环节。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 1587,
+            "stockCode": "300174.SZ",
+            "stockName": "元力股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "A股纯正的电容炭核心标的，是超级电容器关键上游材料供应商",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300174.SZ",
+              "companyName": "元力股份",
+              "companyProfile": "公司属于高新技术企业、知识产权优势企业、国家林业重点龙头企业、中国木质活性炭产业基地领军企业、国家林业标准化示范企业。主要从事活性炭、白炭黑、硅酸钠的研发、生产、销售以及开展环境工程业务的集团化公司。公司通过进入VOCs治理市场，为活性炭的环境工程应用带来历史性的发展机遇。同时开展活性炭再生循环利用业务，再生循环使用的CO2排放量较新生产活性炭CO2排放量大幅降低，可以带来巨大的成本优势和社会效益。公司还将开展污水治理业务，通过与专业污水处理公司开展全方位合作，逐步发展成为集工业废水处理、特种化学污水净化、生活污水处理业务于一体的专业污水治理工程整体解决方案服务商，将公司从纯产品生产向环保工程应用领域扩展。",
+              "profileSummary": "主要从事活性炭、白炭黑、硅酸钠的研发、生产、销售以及开展环境工程业务的集团化公司。公司还将开展污水治理业务，通过与专业污水处理公司开展全方位合作，逐步发展成为集工业废水处理、特种化学污水净化、生活污水处理业务于一体的专业污水治理工程整体解决方案服务商，将公司从纯产品生产向环保工程应用领域扩展。",
+              "majorProducts": "化工用木质活性炭、食品用木质活性炭、水处理用木质活性炭、糖用木质活性炭、网络游戏、味精用木质活性炭、针剂、药用木质活性炭",
+              "revenueComposition": "木质活性炭:78.59%;硅酸钠(水玻璃):12.58%;硅胶:8.48%;其他:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "木质活性炭",
+                  "sharePct": 78.59,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "硅酸钠(水玻璃)",
+                  "sharePct": 12.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硅胶",
+                  "sharePct": 8.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "活性炭",
+                    "category": "多孔炭"
+                  }
+                ],
+                "knownProducts": [
+                  "硅胶",
+                  "沉淀白炭黑",
+                  "硅酸钠",
+                  "活性炭"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "元力股份与事件的关系已经落在存量主业，而非远期概念：木质活性炭占收入的78.59%。公司在产业链中的具体抓手是：A股纯正的电容炭核心标的，是超级电容器关键上游材料供应商。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 1588,
+            "stockCode": "002068.SZ",
+            "stockName": "黑猫股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司介孔炭及超导炭黑产品可用于电容器领域，是上游碳材料供应商",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002068.SZ",
+              "companyName": "黑猫股份",
+              "companyProfile": "公司于2001年7月组建，2006年9月在深圳证券交易所上市。公司产品广泛应用于橡胶、塑料、油墨、涂料、绝缘材料、饲料等多个领域。现有橡胶用炭黑、特种炭黑、白炭黑、精细化工和新材料产品。拥有九个大型炭黑生产基地、一家特种炭黑企业、四家新材料公司、两个贸易服务公司、一家环保节能公司、三个研发中心和两个省级创新平台。目前公司主营产品炭黑的产销量连续二十年位居中国行业首位，世界排名前四位，成为国内规模领先、技术先进、布局完善、综合利用水平较高的炭黑行业领军企业。多年来，通过不断开发和自主创新，公司目前综合技术水平达到国际先进水平，在国内技术处于领先地位。先后获得发明专利、实用新型专利400余项。先后荣获“中国化工500强称号”“年度十大领军企业”“中国精细化工百强”等荣誉称号；入围并获得国家工信部、中国工业经济联合会颁发的第一批“制造业单项冠军培育企业”称号；获得由工业和信息化部授予的第七批国家级“绿色工厂”称号；入选国务院国资委“科改企业”名单。",
+              "profileSummary": "现有橡胶用炭黑、特种炭黑、白炭黑、精细化工和新材料产品。目前公司主营产品炭黑的产销量连续二十年位居中国行业首位，世界排名前四位，成为国内规模领先、技术先进、布局完善、综合利用水平较高的炭黑行业领军企业。",
+              "majorProducts": "白炭黑、焦油精制、炭黑",
+              "revenueComposition": "炭黑:79.23%;焦油精制产品:14.18%;其他:4.52%;白炭黑:2.07%",
+              "revenueSegments": [
+                {
+                  "name": "炭黑",
+                  "sharePct": 79.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "焦油精制产品",
+                  "sharePct": 14.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "白炭黑",
+                  "sharePct": 2.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "工业萘",
+                  "气相白炭黑",
+                  "沉淀白炭黑",
+                  "导电用炭黑",
+                  "橡胶用炭黑",
+                  "色素用炭黑",
+                  "蒽油"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "黑猫股份现有收入由炭黑（79.23%）、焦油精制产品（14.18%）贡献，主营产品为工业萘、气相白炭黑、沉淀白炭黑、导电用炭黑，与公司介孔炭及超导炭黑产品可用于电容器领域，是上游碳材料供应商指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，供需缺口与产品价格才会通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”产生财务影响。现阶段产品报价、订单排期、产销率和毛利率比概念标签更重要；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 1591,
+            "stockCode": "600458.SH",
+            "stockName": "时代新材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内唯一通过龙头认证的超级电容隔膜企业，技术领先，受益于上游材料紧缺",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600458.SH",
+              "companyName": "时代新材",
+              "companyProfile": "公司创立于1984年，前身为原铁道部株洲电力机车研究所橡胶试验室，现为中国中车股份有限公司核心一级子公司及A股上市企业。历经四十年发展，公司始终秉持“面向新兴产业、面向高端产品、面向全球整合”的战略导向，深度融入全球产业链，构建了覆盖德国、法国、斯洛伐克、墨西哥、澳大利亚、巴西等国家的国际化研发与生产网络，成长为高科技跨国制造企业。未来，公司将深耕全球化资源配置，加速新材料技术迭代与场景化应用，为全球客户提供更具竞争力的可持续产品与服务，践行“科技赋能绿色制造”的长期使命。",
+              "profileSummary": "历经四十年发展，公司始终秉持“面向新兴产业、面向高端产品、面向全球整合”的战略导向，深度融入全球产业链，构建了覆盖德国、法国、斯洛伐克、墨西哥、澳大利亚、巴西等国家的国际化研发与生产网络，成长为高科技跨国制造企业。未来，公司将深耕全球化资源配置，加速新材料技术迭代与场景化应用，为全球客户提供更具竞争力的可持续产品与服务，践行“科技赋能绿色制造”的长期使命。",
+              "majorProducts": "时代新材CA砂浆、时代新材船舶码头减振产品、时代新材弹性胶泥车挡缓冲器、时代新材地铁轻轨减振产品、时代新材电磁线、时代新材防水涂料、时代新材风电减振器、时代新材工程机械减振产品、时代新材公路汽车减振产品、时代新材建筑桥梁减振产品、时代新材其他领域减振产品、时代新材桥梁支座、时代新材铁路工矿车减振产品、时代新材铁路轨道减振产品、时代新材铁路货车减振产品、时代新材铁路机车减振产品、时代新材铁路客车减振产品、时代新材铁路扣件",
+              "revenueComposition": "风力发电:47.83%;汽车:31.96%;轨道交通:9.71%;工业与民用工程:8.09%;其他:2.41%",
+              "revenueSegments": [
+                {
+                  "name": "风力发电",
+                  "sharePct": 47.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车",
+                  "sharePct": 31.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "轨道交通",
+                  "sharePct": 9.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业与民用工程",
+                  "sharePct": 8.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "间位芳纶",
+                  "聚酰亚胺(PI)浆料",
+                  "LNG储罐隔震橡胶支座",
+                  "建筑隔震橡胶支座",
+                  "轨道交通用层式弹簧",
+                  "轨道交通用空气弹簧",
+                  "动车地板",
+                  "动车车顶板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "时代新材现有收入由风力发电（47.83%）、汽车（31.96%）贡献，主营产品为间位芳纶、聚酰亚胺(PI)浆料、LNG储罐隔震橡胶支座、建筑隔震橡胶支座，与国内唯一通过龙头认证的超级电容隔膜企业，技术领先，受益于上游材料紧缺指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，供需缺口与产品价格才会通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”产生财务影响。现阶段产品报价、订单排期、产销率和毛利率比概念标签更重要；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 1595,
+            "stockCode": "603500.SH",
+            "stockName": "祥和实业",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "铝电解电容器核心配件供应商，客户覆盖江海、艾华、尼吉康等全球龙头",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603500.SH",
+              "companyName": "祥和实业",
+              "companyProfile": "公司主要研发、生产和销售电子元器件配件、轨道交通相关产品、高分子改性材料、无人机配套产品等产品。公司是国家级高新技术企业，建有省级轨道扣件研究院和省级企业技术中心。电子元器件配件以铝电解电容器用橡胶密封塞、盖板、底座为主，是该类产品行业标准和中电元协团体标准的牵头起草单位。与尼吉康(日资)、三莹(韩资)、立隆(台资)、艾华集团、江海股份等全球知名电容器公司建立长期稳定合作，产品广泛应用到航天、军工、新能源汽车、智能电子等领域。公司参与了国家高速铁路轨道扣件研发，承担非金属部件子课题研发试制任务。轨道扣件种类完整，应用于高速铁路、重载铁路、客货共线及城市轨道交通。高分子改性材料以尼龙PA66、EVA改性材料为主，产品广泛应用于高端鞋材、公路项目、医疗辅助器材、汽车零部件、轨道交通等领域。铁路轨道综合检查仪是一款为铁路轨道和道岔检测设计的高精度智能化检测设备。其集成了多种传感器和智能算法，能够实现轨道的几何尺寸及钢轨廓形检查，同时兼具不同类型道岔的框架尺寸、尖轨和心轨检测、轨道巡检等多种检测功能。具有代替人工，检测功能多，效率高，精度高等特点。无人机配套产品具有轻质、高强度、耐高温等特点，是高端无人机的首选材料，能够有效提升无人机的飞行效率和续航时间。公司经营管理层围绕以技术和人才为核心的“同心多元”发展战略以及年度经营计划，抓住各业务板块发展的新机遇，整体运转健康有序，各项管理卓有成效，公司获评专精特新“小巨人”企业、浙江省绿色工厂等多项荣誉，高速铁路扣件取得专利密集型产品认证，公司竞争力进一步提高。",
+              "profileSummary": "公司主要研发、生产和销售电子元器件配件、轨道交通相关产品、高分子改性材料、无人机配套产品等产品。公司经营管理层围绕以技术和人才为核心的“同心多元”发展战略以及年度经营计划，抓住各业务板块发展的新机遇，整体运转健康有序，各项管理卓有成效，公司获评专精特新“小巨人”企业、浙江省绿色工厂等多项荣誉，高速铁路扣件取得专利密集型产品认证，公司竞争力进一步提高。",
+              "majorProducts": "WJ8 铁垫板下弹性垫板、表面贴装铝电解电容器用底座、底座、电容器盖板、端子（牛角）、高铁扣件系统用尼龙件、高铁扣件系统用塑料件、高铁扣件系统用橡胶件、空调压缩机过电保护器用电子底座、汽车专用贴片电容耐振动底座、橡胶密封塞",
+              "revenueComposition": "轨道交通相关产品及零部件:47.48%;电子元器件配件:27.05%;高分子改性材料:24.42%;其他主营业务:0.76%;无人机配套产品:0.29%",
+              "revenueSegments": [
+                {
+                  "name": "轨道交通相关产品及零部件",
+                  "sharePct": 47.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子元器件配件",
+                  "sharePct": 27.05,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "高分子改性材料",
+                  "sharePct": 24.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他主营业务",
+                  "sharePct": 0.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "无人机配套产品",
+                  "sharePct": 0.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "铝电解电容器用底座",
+                    "category": "电子元件配件"
+                  },
+                  {
+                    "name": "铝电解电容器用橡胶密封塞",
+                    "category": "橡胶密封件"
+                  },
+                  {
+                    "name": "铝电解电容器用端子盖板",
+                    "category": "电子元件配件"
+                  }
+                ],
+                "knownProducts": [
+                  "乙烯-醋酸乙烯共聚物(EVA)",
+                  "铝电解电容器用橡胶密封塞",
+                  "空调压缩机保护器用电子底座",
+                  "尼龙挡板座",
+                  "绝缘轨距块",
+                  "轨下塑料垫板",
+                  "轨下橡胶垫板",
+                  "铁垫板下弹性垫板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "祥和实业的电子元器件配件（27.05%）覆盖范围较宽，其中能够承载铝电解电容器用底座、铝电解电容器用橡胶密封塞、铝电解电容器用端子盖板，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：铝电解电容器核心配件供应商，客户覆盖江海、艾华、尼吉康等全球龙头。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 1598,
+            "stockCode": "300344.SZ",
+            "stockName": "火炬电子",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "业务覆盖薄膜电容和超级电容，直接受益于本轮涨价，且代理业务受益于MLCC涨价",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300344.SZ",
+              "companyName": "立方退",
+              "companyProfile": "公司是一家专注于新型数字基础建设的数字科技云服务商，公司基于自身领先的BIM技术、丰富的项目经验以及运维数据，结合大数据、5G、物联网、云计算、人工智能等前沿科技信息技术，为打通现实世界与数字世界的层级边界，以建筑数字化为切入点为数字世界的加速落地贡献己力。多年以来，公司聚力自主研发，加速创新技术与场景应用的深度融合，凭借着专业咨询服务和强大的平台研发实力，已稳定支撑多个关键行业的工程智能建造和信息化应用，为城市的“数字孪生”打造坚实基础的建设底座。",
+              "profileSummary": "公司是一家专注于新型数字基础建设的数字科技云服务商，公司基于自身领先的BIM技术、丰富的项目经验以及运维数据，结合大数据、5G、物联网、云计算、人工智能等前沿科技信息技术，为打通现实世界与数字世界的层级边界，以建筑数字化为切入点为数字世界的加速落地贡献己力。多年以来，公司聚力自主研发，加速创新技术与场景应用的深度融合，凭借着专业咨询服务和强大的平台研发实力，已稳定支撑多个关键行业的工程智能建造和信息化应用，为城市的“数字孪生”打造坚实…",
+              "majorProducts": "数字化智能服务、数字云基建",
+              "revenueComposition": "移动信息服务:80.42%;软件销售:15.08%;BIM数字智能服务:1.5%;硬件销售:1.42%;工程数字化服务:1.4%;其他技术服务:0.18%;其他业务:0.02%;太空板销售安装业务:-0.01%",
+              "revenueSegments": [
+                {
+                  "name": "移动信息服务",
+                  "sharePct": 80.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "软件销售",
+                  "sharePct": 15.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "BIM数字智能服务",
+                  "sharePct": 1.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硬件销售",
+                  "sharePct": 1.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程数字化服务",
+                  "sharePct": 1.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他技术服务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "太空板销售安装业务",
+                  "sharePct": -0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "单层陶瓷电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "超级电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "钽电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "微波天线",
+                    "category": "天线"
+                  },
+                  {
+                    "name": "电子元器件贸易",
+                    "category": "电子元件销售"
+                  }
+                ],
+                "knownProducts": [
+                  "聚碳硅烷",
+                  "电子元器件贸易",
+                  "单层陶瓷电容器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "超级电容器",
+                  "钽电容器",
+                  "射频薄膜无源集成器件",
+                  "微波天线"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "火炬电子拥有多层片式陶瓷电容器(MLCC)、单层陶瓷电容器、超级电容器，其产业链位置与业务覆盖薄膜电容和超级电容，直接受益于本轮涨价，且代理业务受益于MLCC涨价一致；当前的移动信息服务（80.42%）、软件销售（15.08%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 1601,
+            "stockCode": "600673.SH",
+            "stockName": "东阳光",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "拥有“铝锭-电极箔-电容器”全产业链，并切入超级电容赛道，深度受益",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600673.SH",
+              "companyName": "东阳光",
+              "companyProfile": "公司成立于1997年，围绕电容器产业链和电池材料产业集群发展核心产业，已打造电子元器件、化工新材料、高端铝箔、能源材料、液冷科技五大事业部。凭借完整的产业链及技术创新优势，积极响应国家“双碳”政策，紧紧围绕市场需求，不断完善产业布局，致力于建成国际领先的新材料科技公司。",
+              "profileSummary": "凭借完整的产业链及技术创新优势，积极响应国家“双碳”政策，紧紧围绕市场需求，不断完善产业布局，致力于建成国际领先的新材料科技公司。",
+              "majorProducts": "电池铝箔、电子光箔、积层箔、磷酸铁锂、铝电解电容器、铝电解电容器用电极箔(包含腐蚀箔和化成箔)、氯碱化工产品、钎焊箔、亲水箔、软磁材料、三元材料、新型环保制冷剂",
+              "revenueComposition": "高端铝箔类:39.65%;化工产品:27.18%;电子元器件类:23.86%;能源材料类:4.22%;其他业务:4.03%;其他类:1.07%",
+              "revenueSegments": [
+                {
+                  "name": "高端铝箔类",
+                  "sharePct": 39.65,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "化工产品",
+                  "sharePct": 27.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子元器件类",
+                  "sharePct": 23.86,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "能源材料类",
+                  "sharePct": 4.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 4.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他类",
+                  "sharePct": 1.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "铝电解电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "R32制冷剂",
+                  "高纯盐酸",
+                  "液碱",
+                  "电子铝箔",
+                  "电极铝箔",
+                  "空调铝箔",
+                  "铝板带",
+                  "锰锌铁氧体"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "东阳光已经具备铝电解电容器等业务能力，拥有“铝锭-电极箔-电容器”全产业链，并切入超级电容赛道，深度受益并非单纯概念映射。当前对应的收入被归入高端铝箔类（39.65%）、电子元器件类（23.86%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 1606,
+            "stockCode": "600237.SH",
+            "stockName": "铜峰电子",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是国内老牌薄膜电容器及材料生产商",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600237.SH",
+              "companyName": "铜峰电子",
+              "companyProfile": "公司是国家重点高新技术企业，现已发展成为国内外同行业中知名的电工薄膜、金属化薄膜、薄膜电容器及相关电子元器件的研发、制造基地，同时发展电子连接器、石英晶体谐振器等产业。公司产品涵盖新能源、轨道交通、电力输送、船舶推进、汽车电子、家用电器、电子照明、电子电路、电子显示、节能应用、现代印刷等应用领域的配套元器件及原材料的生产和销售，为全球诸多知名企业配套，产品出口到欧盟、美国、墨西哥、巴西、澳大利亚、印度、韩国、日本、东南亚等市场。公司通过ISO9001、ISO14001、ISO10012、IATF16949、TS22163:2017、EN15085CL2等体系认证，主导或参与制订数十项电工薄膜、薄膜电容器国家及行业标准，现为IEC薄膜电容器标准工作组成员。主要产品相继通过了CQC、UL、VDE、CB、TUV等多项产品认证。公司建设有高储能电容器及高性能介质薄膜材料安徽省重点实验室、博士后科研工作站、省级企业技术中心等多个技术创新平台，多次获安徽省、铜陵市科学技术进步奖。",
+              "profileSummary": "公司是国家重点高新技术企业，现已发展成为国内外同行业中知名的电工薄膜、金属化薄膜、薄膜电容器及相关电子元器件的研发、制造基地，同时发展电子连接器、石英晶体谐振器等产业。公司通过ISO9001、ISO14001、ISO10012、IATF16949、TS22163:2017、EN15085CL2等体系认证，主导或参与制订数十项电工薄膜、薄膜电容器国家及行业标准，现为IEC薄膜电容器标准工作组成员。",
+              "majorProducts": "铜峰安全防爆膜、铜峰大功率节能灯具电容器、铜峰电力电容器、铜峰干式高频串联谐振电容器、铜峰机车电容器、铜峰交流电动机电容器、铜峰聚丙烯薄膜、铜峰聚丙烯膜电容器、铜峰聚酯膜电容器、铜峰铝金属化膜、铜峰铝锌金属化膜、铜峰脉冲电容器、铜峰人造石英晶体、铜峰石英晶体谐振器、铜峰吸收电容器、铜峰抑制电磁干扰用金属化聚丙烯膜电容器、铜峰直流电容器",
+              "revenueComposition": "电容器:47.43%;电子级薄膜材料:40.25%;连接器:4.56%;其他:2.84%;再生树脂:2.49%;晶体器件:2.43%",
+              "revenueSegments": [
+                {
+                  "name": "电容器",
+                  "sharePct": 47.43,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电子级薄膜材料",
+                  "sharePct": 40.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "连接器",
+                  "sharePct": 4.56,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "再生树脂",
+                  "sharePct": 2.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "晶体器件",
+                  "sharePct": 2.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "薄膜电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "电力电子电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "电容器薄膜",
+                    "category": "电路类器件材料"
+                  },
+                  {
+                    "name": "SIM卡连接器",
+                    "category": "消费电子连接器"
+                  },
+                  {
+                    "name": "USB连接器",
+                    "category": "消费电子连接器"
+                  },
+                  {
+                    "name": "射频连接器",
+                    "category": "通信连接器"
+                  }
+                ],
+                "knownProducts": [
+                  "再生PP切片",
+                  "热转印碳带膜(TTR)",
+                  "石英晶体谐振器",
+                  "电力电子电容器",
+                  "薄膜电容器",
+                  "电容器薄膜",
+                  "金属化膜",
+                  "SIM卡连接器"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "铜峰电子与事件的关系已经落在存量主业，而非远期概念：电容器（47.43%）、连接器（4.56%）合计约占收入的51.99%。公司在产业链中的具体抓手是：公司是国内老牌薄膜电容器及材料生产商。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 1607,
+            "stockCode": "002735.SZ",
+            "stockName": "王子新材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "控股子公司宁波新容生产薄膜电容器，应用于新能源等领域",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002735.SZ",
+              "companyName": "王子新材",
+              "companyProfile": "公司目前主要涉足塑料包装业务、军工电子业务、薄膜电容业务，其中塑料包装业务是公司目前主要收入来源。公司包装业务主要集中在智能电子产品塑料包装、家用电器包装及缓冲产品领域。公司目前以塑料包装为依托，根据服务的主要客户群体划分属于智能电子产品、家用电器包装及缓冲产品，行业主要受下游电子信息制造业和家电行业影响。公司自设立以来重视产品质量，是塑料包装行业内率先通过ISO9001:2000质量管理体系、ISO14001:2004环境管理体系双认证的企业，是行业内首批执行欧盟RoHS标准的企业。目前公司在塑料包装行业的产品类型丰富，覆盖塑料包装膜、塑料托盘、塑料缓冲材料、泡沫包装材料、纸质包装材料五大系列产品，能够向客户提供丰富的产品，同时参与起草了多项国家和行业的包装产品标准，获评“中国包装百强企业”、“中国塑料包装行业30强企业”。经过二十余年的发展和积累，公司在塑料包装领域积累了丰富的客户资源，与富士康、海尔、海信、华星集团、广达、WWT、英业达、华硕、京东方、光宝、爱普生等国内外行业知名客户建立了良好的长期合作关系，并成为众多知名客户的重要供应商，如公司获海尔授予“模块商共创共赢金魔方奖”、“优秀模块商”等称号，获富士康授予“战略供应商”、“金牌供应商”、“最佳战略供应商”等称号。",
+              "profileSummary": "公司包装业务主要集中在智能电子产品塑料包装、家用电器包装及缓冲产品领域。目前公司在塑料包装行业的产品类型丰富，覆盖塑料包装膜、塑料托盘、塑料缓冲材料、泡沫包装材料、纸质包装材料五大系列产品，能够向客户提供丰富的产品，同时参与起草了多项国家和行业的包装产品标准，获评“中国包装百强企业”、“中国塑料包装行业30强企业”。",
+              "majorProducts": "薄膜电容器、高效射频功放、光电设备、集中控制设备、加固计算机与外设、聚苯乙烯泡沫（EPS）、聚合发泡材料（EPO）、软件定制开发、特种方舱、王子新材塑料包装膜、王子新材塑料缓冲材料、王子新材塑料托盘、信号处理设备、移动电源类产品和储能电源产品、纸质包装材料",
+              "revenueComposition": "包装类:58.87%;薄膜电容产品:24.68%;军工电子产品:9.55%;其他:6.9%",
+              "revenueSegments": [
+                {
+                  "name": "包装类",
+                  "sharePct": 58.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "薄膜电容产品",
+                  "sharePct": 24.68,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "军工电子产品",
+                  "sharePct": 9.55,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 6.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "薄膜电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "电力电子电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "生物降解地膜材料",
+                  "电力电子电容器",
+                  "薄膜电容器",
+                  "射频功率放大器",
+                  "移动电源",
+                  "无线充电器",
+                  "户外电源",
+                  "储能锂电池"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "王子新材的事件逻辑具备真实业务底座，但尚不足以代表全部公司：薄膜电容产品占收入的24.68%。公司与事件的具体联系在于：控股子公司宁波新容生产薄膜电容器，应用于新能源等领域，对应的核心变量是供需缺口与产品价格。若这一变量沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，产品报价、订单排期、产销率和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 1608,
+            "stockCode": "002028.SZ",
+            "stockName": "思源电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "间接控股子公司烯晶碳能专注于超级电容器研发制造，是产业链重要参与者",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002028.SZ",
+              "companyName": "思源电气",
+              "companyProfile": "公司主营业务为输配电设备的研发、生产、销售及服务。公司是目前输配电设备行业中少数几家具备电力系统一次设备(传统机械类电力设备)、二次设备(控制类电力设备)、电力电子设备等产品的研发、制造和解决方案能力的厂家之一。同时，公司大力发展数字电网与电力电子融合技术，积极拓展静止同步调相机(SSC)、构网型SVG和储能成套系统、宽频振荡抑制、高压有源滤波等相关业务；公司积极探索交直流混合配用电领域应用，积极发展分布式新能源多功能融合一体化解决方案、低压直流开关元件、户用光储充一体化系统等相关业务；公司坚持探索功率型储能元件的应用，积极发展汽车电子电器、配网后备电源、混合调频成套系统等相关业务。公司有着二十多年的行业经验，积累了丰富且成熟的产品开发和制造经验，对行业的现状和发展有着深刻的理解和把握，参与了多项国家标准和行业标准的制定，拥有多项行业领先的核心技术，并积极开展自主可控国产化设备的研发工作，目前在同行业处于领先地位。",
+              "profileSummary": "公司主营业务为输配电设备的研发、生产、销售及服务。公司是目前输配电设备行业中少数几家具备电力系统一次设备(传统机械类电力设备)、二次设备(控制类电力设备)、电力电子设备等产品的研发、制造和解决方案能力的厂家之一。",
+              "majorProducts": "110kV-500kVGIS及SF6开关耐压试验系统、110kV-500kV交联电缆耐压试验系统、BKSC系列环氧浇注铁心并联电抗器、BKS系列油浸式铁心并联电抗器、CI—2000型电容电流测试仪、CKSC系列环氧浇注铁心串联电抗器、DWKN—I型动态无功补偿及电能质量监控装置、GZF-I型GIS工频耐压及局放测试系统、JC1MOA在线监测仪、LP—I移频线路参数测试仪、M—8000I型变频介质测试仪、OSM—1000高压设备绝缘在线监测系统、TROM—600变压器油色谱在线监测系统、磁控电抗器(MCR)型SVC、高压隔离开关、高压交直流互感器、光电互感器、思源电气变频串联谐振成套试验装置、思源电气变压器感应耐压及局放测试系统、思源电气便携式高电压变频谐振耐压试验装置、思源电气电容式电压互感器、思源电气干式互感器、思源电气高压并联电容器、思源电气户外高压交流隔离开关、思源电气户外高压交流接地开关、思源电气户外高压交流中性点隔离开关、思源电气集合式高压并联电容器、思源电气交流高压六氟化硫断路器、思源电气交流高压真空断路器、思源电气接地变压器、思源电气耦合电容器、思源电气微机小电流接地选线成套设备、思源电气消弧线圈自动调谐及接地选线成套装置、思源电气自能式高压六氟化硫断路器",
+              "revenueComposition": "开关类业务:41.48%;变压器类业务:21.51%;保护及自动化类业务:11.8%;EPC类业务:10.83%;储能系统及元件类业务:7.11%;电力电子类业务:7.08%;租赁业务:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "开关类业务",
+                  "sharePct": 41.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "变压器类业务",
+                  "sharePct": 21.51,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "保护及自动化类业务",
+                  "sharePct": 11.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "EPC类业务",
+                  "sharePct": 10.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "储能系统及元件类业务",
+                  "sharePct": 7.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力电子类业务",
+                  "sharePct": 7.08,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "租赁业务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电力电容器",
+                    "category": "电力电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "变电站工程",
+                  "直流充电机",
+                  "直流充电桩",
+                  "中性点接地成套装置",
+                  "互感器",
+                  "油色谱在线监测装置",
+                  "消弧线圈",
+                  "罐式断路器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "思源电气已经具备电力电容器等业务能力，间接控股子公司烯晶碳能专注于超级电容器研发制造，是产业链重要参与者并非单纯概念映射。当前对应的收入被归入变压器类业务（21.51%）、电力电子类业务（7.08%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "14条低于3星的源记录已按当前关注口径排除。",
+      "3条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

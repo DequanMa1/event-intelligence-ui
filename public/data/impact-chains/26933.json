@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26933",
@@ -9,10 +9,10 @@
     "date": "2026-07-04"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 7,
-    "mappedStockCount": 7,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 3,
     "stocks": [
       {
         "sourceRowNumber": 16094,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 10
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 16095,
@@ -30,7 +30,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 13
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 16096,
@@ -39,7 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 16097,
@@ -47,8 +47,8 @@
         "stockName": "兆易创新",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 17
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 16098,
@@ -57,7 +57,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 16099,
@@ -65,8 +65,8 @@
         "stockName": "澜起科技",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 13
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 16106,
@@ -74,58 +74,50 @@
         "stockName": "艾力斯",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 3
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 16097,
+        "stockCode": "603986.SH",
+        "stockName": "兆易创新",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 16099,
+        "stockCode": "688008.SH",
+        "stockName": "澜起科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 16106,
+        "stockCode": "688578.SH",
+        "stockName": "艾力斯",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 60,
-    "selectedCoreProductCount": 3,
+    "selectedCoreProductCount": 2,
     "selectedCompanyCoreProductCount": 2,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 2,
-    "downstreamCandidateCount": 2,
-    "shownUpstreamCount": 2,
-    "shownDownstreamCount": 2
+    "level7ProductCount": 81,
+    "relatedIndustryCandidateCount": 10,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140161018",
-        "name": "TEBO单片清洗设备",
-        "anchorCount": 1,
-        "stockCount": 7,
-        "linkedCoreProductCodes": [
-          "1140007949"
-        ],
-        "linkedCoreProductNames": [
-          "DRAM"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140007884",
-        "name": "内存接口芯片",
-        "anchorCount": 1,
-        "stockCount": 7,
-        "linkedCoreProductCodes": [
-          "1140007949"
-        ],
-        "linkedCoreProductNames": [
-          "DRAM"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140215416",
         "name": "LPDDR SDRAM存储器芯片",
@@ -151,33 +143,33 @@
           "name": "LPDDR SDRAM存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 4,
         "stocks": [
           {
             "stockCode": "688525.SH",
             "stockName": "佰维存储",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "300223.SZ",
             "stockName": "北京君正",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "001309.SZ",
             "stockName": "德明利",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "301308.SZ",
             "stockName": "江波龙",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -211,18 +203,15 @@
           "name": "DDR SDRAM存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300223.SZ",
             "stockName": "北京君正",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -230,104 +219,710 @@
           "半导体",
           "电子"
         ]
-      },
-      {
-        "code": "1140007949",
-        "name": "DRAM",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "event_title",
-        "stockCount": 7,
-        "stocks": [
-          {
-            "stockCode": "688525.SH",
-            "stockName": "佰维存储",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "603986.SH",
-            "stockName": "兆易创新",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "300223.SZ",
-            "stockName": "北京君正",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "001309.SZ",
-            "stockName": "德明利",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "301308.SZ",
-            "stockName": "江波龙",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "688008.SH",
-            "stockName": "澜起科技",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "688578.SH",
-            "stockName": "艾力斯",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 2,
-        "downstreamCount": 2,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140161165",
-        "name": "MCP",
-        "anchorCount": 1,
-        "stockCount": 7,
-        "linkedCoreProductCodes": [
-          "1140007949"
+        "code": "1200000577",
+        "name": "半导体设备",
+        "description": "半导体设备指芯片制造所需的关键机械。因国产替代加速、政策强力支持及AI需求爆发，该行业成A股焦点。它关乎供应链安全与技术自主，具备高成长性和战略价值，是科技投资的核心赛道。",
+        "stockCount": 5,
+        "starWeight": 15,
+        "level7ProductCount": 14,
+        "relevanceScore": 458,
+        "stocks": [
+          {
+            "stockCode": "688012.SH",
+            "stockName": "中微公司",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002371.SZ",
+            "stockName": "北方华创",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688627.SH",
+            "stockName": "精智达",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300567.SZ",
+            "stockName": "精测电子",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300604.SZ",
+            "stockName": "长川科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "DRAM"
+        "products": [
+          {
+            "code": "1140008014",
+            "name": "刻蚀设备",
+            "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 半导体用硅片制造设备 > 刻蚀设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688012.SH",
+                "stockName": "中微公司",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 42,
+            "matchedTerms": [
+              "刻蚀设备",
+              "半导体设备"
+            ]
+          },
+          {
+            "code": "1140042230",
+            "name": "CVD设备",
+            "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 晶圆加工设备 > CVD设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002371.SZ",
+                "stockName": "北方华创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "半导体设备"
+            ]
+          },
+          {
+            "code": "1140216027",
+            "name": "MEMS探针卡",
+            "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 半导体测试设备 > MEMS探针卡",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688627.SH",
+                "stockName": "精智达",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "半导体设备"
+            ]
+          },
+          {
+            "code": "1140079911",
+            "name": "PVD设备",
+            "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 晶圆加工设备 > PVD设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002371.SZ",
+                "stockName": "北方华创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "半导体设备"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140088418",
-        "name": "非易失存储器",
-        "anchorCount": 1,
-        "stockCount": 7,
-        "linkedCoreProductCodes": [
-          "1140007949"
+        "code": "1200001284",
+        "name": "IC封测",
+        "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 7,
+        "relevanceScore": 84,
+        "stocks": [
+          {
+            "stockCode": "600667.SH",
+            "stockName": "太极实业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688403.SH",
+            "stockName": "汇成股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000021.SZ",
+            "stockName": "深科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "DRAM"
+        "products": [
+          {
+            "code": "1140173704",
+            "name": "存储芯片封装",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > 存储芯片封装",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600667.SH",
+                "stockName": "太极实业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000021.SZ",
+                "stockName": "深科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "存储封测"
+            ]
+          },
+          {
+            "code": "1140173705",
+            "name": "存储芯片测试",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > 存储芯片测试",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600667.SH",
+                "stockName": "太极实业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000021.SZ",
+                "stockName": "深科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "存储封测"
+            ]
+          },
+          {
+            "code": "1140173980",
+            "name": "DRAM模组测试",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > DRAM模组测试",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600667.SH",
+                "stockName": "太极实业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "dram"
+            ]
+          },
+          {
+            "code": "1140173979",
+            "name": "DRAM模组组装",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > DRAM模组组装",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600667.SH",
+                "stockName": "太极实业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "dram"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 23,
+    "mappedStockCount": 20,
+    "unmappedStockCount": 3,
+    "level7ProductCount": 81,
+    "candidateIndustryCount": 10,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 16094,
+        "stockCode": "301308.SZ",
+        "stockName": "江波龙",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 16095,
+        "stockCode": "688525.SH",
+        "stockName": "佰维存储",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 16096,
+        "stockCode": "001309.SZ",
+        "stockName": "德明利",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 16097,
+        "stockCode": "603986.SH",
+        "stockName": "兆易创新",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 17
+      },
+      {
+        "sourceRowNumber": 16098,
+        "stockCode": "300223.SZ",
+        "stockName": "北京君正",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 12
+      },
+      {
+        "sourceRowNumber": 16099,
+        "stockCode": "688008.SH",
+        "stockName": "澜起科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 13
+      },
+      {
+        "sourceRowNumber": 16100,
+        "stockCode": "688766.SH",
+        "stockName": "普冉股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 16101,
+        "stockCode": "688110.SH",
+        "stockName": "东芯股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 16102,
+        "stockCode": "600584.SH",
+        "stockName": "长电科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 16103,
+        "stockCode": "600667.SH",
+        "stockName": "太极实业",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 16104,
+        "stockCode": "000021.SZ",
+        "stockName": "深科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 16105,
+        "stockCode": "688403.SH",
+        "stockName": "汇成股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 16106,
+        "stockCode": "688578.SH",
+        "stockName": "艾力斯",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 16107,
+        "stockCode": "688556.SH",
+        "stockName": "高测股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 16108,
+        "stockCode": "600378.SH",
+        "stockName": "昊华科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 16109,
+        "stockCode": "002407.SZ",
+        "stockName": "多氟多",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 16110,
+        "stockCode": "002371.SZ",
+        "stockName": "北方华创",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 16111,
+        "stockCode": "688012.SH",
+        "stockName": "中微公司",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 16112,
+        "stockCode": "300604.SZ",
+        "stockName": "长川科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 16113,
+        "stockCode": "300567.SZ",
+        "stockName": "精测电子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 16114,
+        "stockCode": "688627.SH",
+        "stockName": "精智达",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 16115,
+        "stockCode": "601133.SH",
+        "stockName": "柏诚股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 16116,
+        "stockCode": "603929.SH",
+        "stockName": "亚翔集成",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000577",
+        "name": "半导体设备",
+        "description": "半导体设备指芯片制造所需的关键机械。因国产替代加速、政策强力支持及AI需求爆发，该行业成A股焦点。它关乎供应链安全与技术自主，具备高成长性和战略价值，是科技投资的核心赛道。",
+        "stockCount": 5,
+        "starWeight": 15,
+        "level7ProductCount": 14,
+        "relevanceScore": 458,
+        "stocks": [
+          {
+            "stockCode": "688012.SH",
+            "stockName": "中微公司",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002371.SZ",
+            "stockName": "北方华创",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688627.SH",
+            "stockName": "精智达",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300567.SZ",
+            "stockName": "精测电子",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300604.SZ",
+            "stockName": "长川科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140008014",
+            "name": "刻蚀设备",
+            "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 半导体用硅片制造设备 > 刻蚀设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688012.SH",
+                "stockName": "中微公司",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 42,
+            "matchedTerms": [
+              "刻蚀设备",
+              "半导体设备"
+            ]
+          },
+          {
+            "code": "1140042230",
+            "name": "CVD设备",
+            "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 晶圆加工设备 > CVD设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002371.SZ",
+                "stockName": "北方华创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "半导体设备"
+            ]
+          },
+          {
+            "code": "1140216027",
+            "name": "MEMS探针卡",
+            "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 半导体测试设备 > MEMS探针卡",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688627.SH",
+                "stockName": "精智达",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "半导体设备"
+            ]
+          },
+          {
+            "code": "1140079911",
+            "name": "PVD设备",
+            "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 晶圆加工设备 > PVD设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002371.SZ",
+                "stockName": "北方华创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "半导体设备"
+            ]
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001284",
+        "name": "IC封测",
+        "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 7,
+        "relevanceScore": 84,
+        "stocks": [
+          {
+            "stockCode": "600667.SH",
+            "stockName": "太极实业",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688403.SH",
+            "stockName": "汇成股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000021.SZ",
+            "stockName": "深科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140173704",
+            "name": "存储芯片封装",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > 存储芯片封装",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600667.SH",
+                "stockName": "太极实业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000021.SZ",
+                "stockName": "深科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "存储封测"
+            ]
+          },
+          {
+            "code": "1140173705",
+            "name": "存储芯片测试",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > 存储芯片测试",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600667.SH",
+                "stockName": "太极实业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000021.SZ",
+                "stockName": "深科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "存储封测"
+            ]
+          },
+          {
+            "code": "1140173980",
+            "name": "DRAM模组测试",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > DRAM模组测试",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600667.SH",
+                "stockName": "太极实业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "dram"
+            ]
+          },
+          {
+            "code": "1140173979",
+            "name": "DRAM模组组装",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > DRAM模组组装",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600667.SH",
+                "stockName": "太极实业",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "dram"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -342,10 +937,1768 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 28,
+    "eligibleSourceRowCount": 23,
+    "totalStockCount": 23,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 0,
+    "excludedNonAShareCount": 5,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 23,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 7,
+        "stocks": [
+          {
+            "sourceRowNumber": 16094,
+            "stockCode": "301308.SZ",
+            "stockName": "江波龙",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内存储模组龙头，全产业链布局，深度受益于存储涨价周期和端侧AI发展。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301308.SZ",
+              "companyName": "江波龙",
+              "companyProfile": "公司成立于1999年，于2022年在深交所挂牌上市。公司作为一家半导体存储品牌企业，主要业务为存储器和主控芯片的研发设计、封装测试、技术支持与销售。公司通过覆盖芯片设计(主控芯片及存储芯片)、固件算法开发、存储器设计、封装测试等存储关键环节的全栈式技术能力，为市场提供消费级、企业级、车规级、工规级存储器。公司拥有行业类存储品牌FORESEE、海外行业类存储品牌Zilia和国际高端消费类存储品牌Lexar(雷克沙)。公司产品广泛应用于AI服务器、端侧AI设备、数据中心、汽车电子、物联网、安防监控、工业控制等领域，以及个人消费类存储市场。",
+              "profileSummary": "公司作为一家半导体存储品牌企业，主要业务为存储器和主控芯片的研发设计、封装测试、技术支持与销售。公司产品广泛应用于AI服务器、端侧AI设备、数据中心、汽车电子、物联网、安防监控、工业控制等领域，以及个人消费类存储市场。",
+              "majorProducts": "固态硬盘、内存条、嵌入式存储、移动存储",
+              "revenueComposition": "嵌入式存储:43.98%;固态硬盘:24.46%;移动存储:21.5%;内存条:9.74%;其他:0.33%",
+              "revenueSegments": [
+                {
+                  "name": "嵌入式存储",
+                  "sharePct": 43.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "固态硬盘",
+                  "sharePct": 24.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "移动存储",
+                  "sharePct": 21.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内存条",
+                  "sharePct": 9.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "LPDDR SDRAM存储器芯片",
+                  "UFS存储器芯片",
+                  "eMCP存储器芯片",
+                  "eMMC存储器芯片",
+                  "ePOP存储器芯片",
+                  "SD存储卡",
+                  "USB存储盘(U盘)",
+                  "SLCNAND微存储器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "江波龙实际经营中已有LPDDR SDRAM存储器芯片，与事件指向的国内存储模组龙头，全产业链布局，深度受益于存储涨价周期和端侧AI发展能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在嵌入式存储（43.98%）、固态硬盘（24.46%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善供需缺口与产品价格，需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。产品报价、订单排期、产销率和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 16095,
+            "stockCode": "688525.SH",
+            "stockName": "佰维存储",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内领先的存储模组厂商，具备封测一体化能力，受益于存储涨价和国产化趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688525.SH",
+              "companyName": "佰维存储",
+              "companyProfile": "公司成立于2010年，公司专注半导体存储器的研发设计、封测、生产和销售，主要产品为半导体存储器，主要服务为先进封测服务，其中半导体存储器按照应用领域不同又分为嵌入式存储、PC存储、工车规存储、企业级存储和移动存储等。公司以“存储赋能万物智联(Memory Empowers Everything)”为使命，致力于成为全球一流的存储与先进封测厂商。公司是科创板上市公司、科创50成分股，并获国家集成电路产业投资基金二期、中国互联网投资基金、中科院投资等战略投资。公司紧紧围绕半导体存储器产业链，构筑了研发封测一体化的经营模式，在存储介质特性研究、固件算法开发、存储芯片封测、测试研发、全球品牌运营等方面具有核心竞争力，并积极布局芯片IC设计、先进封测、芯片测试设备研发等技术领域。公司存储芯片产品广泛应用于移动智能终端、PC、行业终端、数据中心、智能汽车、移动存储等信息技术领域。凭借优异的综合竞争力，公司荣获“科创50成分股”、“2024最具价值科创板上市企业”、国家级“专精特新小巨人企业”、“国家高新技术企业”、“海关AEO高级认证企业”、“十大最佳国产芯片”、“广东省复杂存储芯片研发及封装测试工程技术研究中心”、深圳市“博士后创新实践基地”、“深圳知名品牌”、深圳市南山区“专精特新企业增加值十强”等称号；产品获得“全球电子成就奖年度存储器”、“中国IC设计成就奖年度最佳存储器”、“硬核中国芯最佳存储芯片”、“中国汽车行业优秀汽车电子创新产品奖”等荣誉。",
+              "profileSummary": "公司成立于2010年，公司专注半导体存储器的研发设计、封测、生产和销售，主要产品为半导体存储器，主要服务为先进封测服务，其中半导体存储器按照应用领域不同又分为嵌入式存储、PC存储、工车规存储、企业级存储和移动存储等。公司紧紧围绕半导体存储器产业链，构筑了研发封测一体化的经营模式，在存储介质特性研究、固件算法开发、存储芯片封测、测试研发、全球品牌运营等方面具有核心竞争力，并积极布局芯片IC设计、先进封测、芯片测试设备研发等技术领域。",
+              "majorProducts": "Acer暗影骑士•龙DH100内存条、Acer暗影骑士•龙N3500固态硬盘、Acer暗影骑士•擎N5000固态硬盘、Acer暗影骑士•擎N7000固态硬盘、BGA SSD、Biwin  DDR4 ECC SODIMM 内存条、Biwin  DDR4 SODIMM  内存条、Biwin  DDR4 UDIMM  内存条、Biwin  DDR5 UDIMM  内存条、Biwin  PCIe Gen3x4  固态硬盘、Biwin  PCIe Gen3x4 固态硬盘、Biwin  PCIe Gen4x4  固态硬盘、Biwin  PCIe Gen4x4 固态硬盘、Biwin DDR4 ECC UDIMM 内存条、Biwin DDR4 RDIMM  内存条、Biwin DDR5 SODIMM  内存条、Biwin PCIe Gen3x4  固态硬盘、eMCP、eMMC、ePOP、HP  内存条V10、HP  内存条X1、HP  内存条X2、HP NM卡、HP 固态硬盘 S750 2.5”、HP 固态硬盘 S750 M.2、HP 固态硬盘EX900 plus、HP 固态硬盘FX900 Pro、HP内存条S1、HP内存条V2、HP内存条V6、HP内存条V8、HP移动固态硬盘、Lenovo LN860、Lenovo LN950、Lenovo LN960、Lenovo LS800、LPDDR、PC存储、Predator Apollo 内存条、Predator GM3500固态硬盘、Predator GM7 固态硬盘、Predator GM7000固态硬盘、Predator Hermes 内存条、Predator Pallas II 内存条、Predator Pallas 内存条、Predator Talos 内存条、Predator Vesta II 内存条、Predator Vesta 内存条、UFS、uMCP、佰维NM卡、佰维NV7200 固态硬盘、佰维PD2000、佰维WOOKONG悟空DX100内存条、佰维WOOKONG悟空NV3500固态硬盘、佰维WOOKONG悟空NV7400 HEATSINK 固态硬盘、佰维WOOKONG悟空NV7400固态硬盘、车规级 eMMC、车规级 LPDDR、车规级 NOR Flash、工车规存储、工业标准级/宽温级 BGA SSD、工业标准级/宽温级 eMMC、工业标准级/宽温级 PCIe SSD、工业标准级/宽温级 存储卡、工业标准级/宽温级 内存条、工业标准级/宽温级SATA SSD、工业宽温级 NOR Flash、工业宽温级LPDDR、宏碁CF100 CFast 2.0存储卡、宏碁CFE100存储卡（CFexpress Type-B）、宏碁MSC300 UHS-I MicroSD存储卡、宏碁SC900存储卡、宏碁UM310闪存盘、宏碁UP300闪存盘、宏碁暗影骑士•龙ASD160 USH-I存储卡、企业级2.5\"SATA SSD、企业级CXL内存扩展模组、企业级PCIe SSD、企业级存储、嵌入式存储、先进封测服务、移动存储",
+              "revenueComposition": "嵌入式存储:60.86%;PC存储产品:32.69%;其他业务:2.5%;工业级存储模组:2.45%;先进封装及测试:1.5%",
+              "revenueSegments": [
+                {
+                  "name": "嵌入式存储",
+                  "sharePct": 60.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "PC存储产品",
+                  "sharePct": 32.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业级存储模组",
+                  "sharePct": 2.45,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "先进封装及测试",
+                  "sharePct": 1.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "工业级内存模组",
+                    "category": "计算机存储器"
+                  }
+                ],
+                "knownProducts": [
+                  "车载固态硬盘",
+                  "存储芯片封装",
+                  "存储芯片测试",
+                  "系统级封装(SiP)",
+                  "LPDDR SDRAM存储器芯片",
+                  "MCP存储器芯片",
+                  "eMMC存储器芯片",
+                  "ePOP存储器芯片"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "佰维存储在事件链条中的位置是：国内领先的存储模组厂商，具备封测一体化能力，受益于存储涨价和国产化趋势；工业级存储模组占收入的2.45%，目前仍是较小的收入来源。因此，本次事件首先改变的可能是市场对业务上限的估计，随后才是供需缺口与产品价格经由“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”带来的实际利润。小基数提供增速弹性，也放大了预期与兑现之间的落差。产品报价、订单排期、产销率和毛利率若迟迟不能改善，或出现供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，这条逻辑就难以从期权走向主业。"
+          },
+          {
+            "sourceRowNumber": 16096,
+            "stockCode": "001309.SZ",
+            "stockName": "德明利",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "主营存储主控芯片和模组，受益于存储涨价周期及企业级SSD需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "001309.SZ",
+              "companyName": "德明利",
+              "companyProfile": "公司成立于2008年，是专业从事集成电路存储芯片设计、研发及产业化应用的国家高新技术企业，国家专精特新重点“小巨人”企业，是国内存储主控芯片行业第一家上市公司。自设立以来，公司的主营业务主要集中于闪存主控芯片设计、研发，存储模组产品应用方案的开发、优化，以及存储模组产品的销售。公司经过多年积累逐渐形成自主可控的主控芯片与固件方案两大核心技术平台，结合产品方案设计及量产工具开发、存储模组测试等形成完善的存储管理应用方案，高效实现对NAND Flash存储颗粒进行数据管理和应用性能提升。公司目前已经建立了完善的闪存存储产品矩阵，包括移动存储、固态硬盘、嵌入式存储，相关产品广泛应用于消费电子、工控设备、家用电器、汽车电子、智能家居、物联网、服务器及数据中心等领域。同时，公司通过聚焦应用场景，以全新品牌为智能显示、智能安防、车载应用、数据中心、网络通信、智慧医疗领域行业客户，提供完善的、高质量、高定制化的存储解决方案和存储产品。",
+              "profileSummary": "自设立以来，公司的主营业务主要集中于闪存主控芯片设计、研发，存储模组产品应用方案的开发、优化，以及存储模组产品的销售。公司经过多年积累逐渐形成自主可控的主控芯片与固件方案两大核心技术平台，结合产品方案设计及量产工具开发、存储模组测试等形成完善的存储管理应用方案，高效实现对NAND Flash存储颗粒进行数据管理和应用性能提升。",
+              "majorProducts": "触控芯片、存储晶圆销售、存储卡模组、存储盘模组、固态硬盘、固态硬盘模组、内存条、嵌入式存储、闪存主控芯片、移动存储",
+              "revenueComposition": "固态硬盘:42.46%;嵌入式存储:33.95%;移动存储:13.66%;内存条类产品:9.74%;其他:0.17%",
+              "revenueSegments": [
+                {
+                  "name": "固态硬盘",
+                  "sharePct": 42.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "嵌入式存储",
+                  "sharePct": 33.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "移动存储",
+                  "sharePct": 13.66,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "内存条类产品",
+                  "sharePct": 9.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "SD存储卡",
+                    "category": "移动存储器"
+                  },
+                  {
+                    "name": "UFS存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "eMMC存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "存储晶圆销售",
+                    "category": "集成电路销售"
+                  }
+                ],
+                "knownProducts": [
+                  "LPDDR SDRAM存储器芯片",
+                  "UFS存储器芯片",
+                  "eMMC存储器芯片",
+                  "存储晶圆销售",
+                  "SD存储卡",
+                  "USB存储盘(U盘)",
+                  "内存条",
+                  "固态硬盘"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对德明利而言，主营存储主控芯片和模组，受益于存储涨价周期及企业级SSD需求增长并非纯概念映射，因为移动存储占收入的13.66%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是供需缺口与产品价格，传导效率取决于“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由产品报价、订单排期、产销率和毛利率来区分；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 16097,
+            "stockCode": "603986.SH",
+            "stockName": "兆易创新",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内利基存储龙头，NOR Flash全球领先，并与长鑫存储深度合作DRAM业务，充分受益本轮周期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603986.SH",
+              "companyName": "兆易创新",
+              "companyProfile": "公司成立于2005年，总部设于中国北京，并于2016年8月在上海证券交易所成功上市，是一家致力于开发存储器技术、MCU、传感器和模拟产品及解决方案的领先的无晶圆厂半导体公司，在中国、美国、新加坡、日本、英国、德国等多个国家和地区均设有分支机构和办事处，营销网络遍布全球，为客户提供优质便捷的本地化支持服务。公司核心产品线为存储器(Flash、利基型DRAM)、32位通用型MCU、智能人机交互传感器、模拟产品及整体解决方案。产品以“高性能、低功耗”著称，为汽车、工业控制、物联网、网络/通信、计算机、消费电子等客户提供全方位服务。其中，SPI NOR Flash全球市场占有率排名第二，累计出货量超270亿颗；并于2021年6月推出了首颗4Gb DDR4产品GDQ2BFAA系列，标志着正式迈入利基型DRAM市场；同时，GD32MCU已经发展成为32位通用MCU市场的核心之选，并以累计超过19.8亿颗的出货数量，超过2万家客户数量，63个系列700余款产品选择所提供的广阔应用覆盖率稳居中国本土首位；并且，触控和指纹识别芯片现已广泛应用在国内外知名移动终端厂商。公司在质量管理方面有严格的标准与要求，已通过ISO26262:2018汽车功能安全最高等级ASIL D体系认证，获得IEC61508功能安全产品认证以及ISO9001、ISO14001、ISO45001等体系认证和邓白氏认证，产品检测中心还获得了CNAS(ISO/IEC17025)国家实验室认可证书。此外，公司积极推进产业整合，拓展战略布局，并与全球多家领先晶圆厂、封装测试厂达成战略合作伙伴关系，通过加强产业上下游合作、优化供应链管理，共同推进半导体领域的技术创新。",
+              "profileSummary": "公司核心产品线为存储器(Flash、利基型DRAM)、32位通用型MCU、智能人机交互传感器、模拟产品及整体解决方案。其中，SPI NOR Flash全球市场占有率排名第二，累计出货量超270亿颗；并于2021年6月推出了首颗4Gb DDR4产品GDQ2BFAA系列，标志着正式迈入利基型DRAM市场；同时，GD32MCU已经发展成为32位通用MCU市场的核心之选，并以累计超过19.8亿颗的出货数量，超过2万家客户数量，63个系列700…",
+              "majorProducts": "NAND Flash、NOR Flash、触控芯片、动态随机存取存储器（DRAM）、闪存芯片、指纹识别芯片",
+              "revenueComposition": "存储芯片销售:71.34%;微控制器:20.75%;传感器:4.23%;模拟产品:3.62%;技术服务及其他:0.06%",
+              "revenueSegments": [
+                {
+                  "name": "存储芯片销售",
+                  "sharePct": 71.34,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "微控制器",
+                  "sharePct": 20.75,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "传感器",
+                  "sharePct": 4.23,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "模拟产品",
+                  "sharePct": 3.62,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务及其他",
+                  "sharePct": 0.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "NOR Flash闪存技术服务",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "SPI NOR Flash存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "SPI NAND Flash存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "并行NAND Flash存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "BLDC电机驱动芯片",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "IoT MCU",
+                    "category": "计算控制芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "屏下光学指纹识别传感器",
+                  "电容指纹识别传感器",
+                  "模数转换器ADC",
+                  "运算放大器",
+                  "NOR Flash闪存技术服务",
+                  "SPI NAND Flash存储器芯片",
+                  "SPI NOR Flash存储器芯片",
+                  "并行NAND Flash存储器芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 4
+              }
+            },
+            "analysis": "兆易创新的存储芯片销售（71.34%）、微控制器（20.75%）覆盖范围较宽，其中能够承载NOR Flash闪存技术服务、SPI NOR Flash存储器芯片、SPI NAND Flash存储器芯片，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国内利基存储龙头，NOR Flash全球领先，并与长鑫存储深度合作DRAM业务，充分受益本轮周期。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 16098,
+            "stockCode": "300223.SZ",
+            "stockName": "北京君正",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球车规级利基存储龙头，受益于汽车智能化及存储涨价双重驱动，业绩弹性大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300223.SZ",
+              "companyName": "北京君正",
+              "companyProfile": "公司是一家集成电路设计企业，拥有全球领先的32位嵌入式CPU技术和低功耗技术。公司主营业务为微处理器芯片、智能视频芯片等ASIC芯片产品及整体解决方案的研发和销售。公司拥有较强的自主创新能力，多年来在自主创新CPU技术、视频编解码技术、图像和声音信号处理技术、SoC芯片技术、软件平台技术等多个领域形成多项核心技术。公司已形成可持续发展的梯队化产品布局，基于自主创新的XBurst CPU和视频编解码等核心技术，公司推出了一系列具有高性价比的微处理器芯片产品和智能视频芯片产品，各类别的芯片产品分别面向不同的市场领域。公司积极培养复合型人才，形成合理的人才梯队，不断加强团队凝聚力，已累计获得多项专利证书，是国内外领先的嵌入式CPU芯片及解决方案提供商之一。",
+              "profileSummary": "公司主营业务为微处理器芯片、智能视频芯片等ASIC芯片产品及整体解决方案的研发和销售。公司已形成可持续发展的梯队化产品布局，基于自主创新的XBurst CPU和视频编解码等核心技术，公司推出了一系列具有高性价比的微处理器芯片产品和智能视频芯片产品，各类别的芯片产品分别面向不同的市场领域。",
+              "majorProducts": "Android 2.2第三方开发环境、USB Boot工具、XBurst CPU、存储芯片、互联芯片、计算芯片、君正Linux系统、模拟芯片、芯片",
+              "revenueComposition": "存储芯片:61.41%;芯片:27.28%;模拟及互联芯片:10.67%;技术服务:0.45%;房租收入:0.18%;其他:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "存储芯片",
+                  "sharePct": 61.41,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "芯片",
+                  "sharePct": 27.28,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "模拟及互联芯片",
+                  "sharePct": 10.67,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 0.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "房租收入",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "DDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "IoT MCU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "LED照明驱动芯片",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "LED车灯驱动芯片",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "SPI NAND Flash存储器芯片",
+                    "category": "存储器芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "DDR SDRAM存储器芯片",
+                  "LPDDR SDRAM存储器芯片",
+                  "SPI NAND Flash存储器芯片",
+                  "SPI NOR Flash存储器芯片",
+                  "SRAM存储器芯片",
+                  "并行NOR Flash存储器芯片",
+                  "LED照明驱动芯片",
+                  "LED车灯驱动芯片"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "北京君正的相关业务已决定公司大部分经营表现：存储芯片占收入的61.41%。公司与事件的直接业务联系是：全球车规级利基存储龙头，受益于汽车智能化及存储涨价双重驱动，业绩弹性大，真正的增量取决于供需缺口与产品价格，并需经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，产品报价、订单排期、产销率和毛利率需要显示公司获得超越行业的增量。供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 16099,
+            "stockCode": "688008.SH",
+            "stockName": "澜起科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球内存接口芯片龙头，AI服务器升级带动DDR5及CXL产品需求放量，确定性高。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688008.SH",
+              "companyName": "澜起科技",
+              "companyProfile": "公司成立于2004年，是国际领先的数据处理及互连芯片设计公司，致力于为云计算和数据中心领域提供高性能、低功耗的芯片解决方案，目前公司拥有互连类芯片和津逮®服务器平台两大产品线。作为科创板首批上市企业，公司于2019年7月登陆上海证券交易所。公司总部设在上海，并在昆山、北京、西安、澳门及美国、韩国等地设有分支机构。",
+              "profileSummary": "公司成立于2004年，是国际领先的数据处理及互连芯片设计公司，致力于为云计算和数据中心领域提供高性能、低功耗的芯片解决方案，目前公司拥有互连类芯片和津逮®服务器平台两大产品线。",
+              "majorProducts": "CKD芯片、DDR2高级内存缓冲器芯片、DDR3寄存缓冲器芯片（1.5V/1.35V）、DDR3寄存缓冲器芯片（1.5V/1.35V/1.25V）、DDR3内存缓冲器芯片、MXC芯片、PCIe Retimer芯片、标准版混合安全内存模组 (HSDIMM)、第二代（Gen2）DDR4寄存时钟驱动器芯片、第二代（Gen2）DDR4数据缓冲器芯片、第二代+（Gen2 Plus）DDR4寄存时钟驱动器芯片、第二代+（Gen2 Plus）DDR4数据缓冲器芯片、第一代（Gen1）DDR4寄存时钟驱动器芯片、第一代（Gen1）DDR4数据缓冲器芯片、混合安全内存模组（HSDIMM®）、津逮®CPU、津逮服务器CPU、精简版混合安全内存模组 (HSDIMM-Lite)、内存接口芯片（含MRCD/MDB芯片）、内存模组配套芯片、消费电子芯片",
+              "revenueComposition": "内存接口芯片:94.18%;津逮服务器平台:5.65%;其他业务:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "内存接口芯片",
+                  "sharePct": 94.18,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "津逮服务器平台",
+                  "sharePct": 5.65,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "内存扩展控制器",
+                    "category": "接口芯片"
+                  },
+                  {
+                    "name": "服务器CPU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "DDR PMIC",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "PCIeRetimer芯片",
+                    "category": "信号链芯片"
+                  },
+                  {
+                    "name": "SPD Hub",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "可信计算芯片",
+                    "category": "安全芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "PCIeRetimer芯片",
+                  "多路复用寄存时钟驱动器",
+                  "多路复用数据缓冲器",
+                  "寄存时钟驱动器",
+                  "数据缓冲器",
+                  "时钟发生器",
+                  "时钟缓冲器",
+                  "时钟驱动器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "澜起科技与事件的关系已经落在存量主业，而非远期概念：内存接口芯片占收入的94.18%。公司在产业链中的具体抓手是：全球内存接口芯片龙头，AI服务器升级带动DDR5及CXL产品需求放量，确定性高。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 16106,
+            "stockCode": "688578.SH",
+            "stockName": "艾力斯",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内半导体前驱体绝对龙头，深度绑定全球存储巨头，直接受益于涨价和扩产。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688578.SH",
+              "companyName": "艾力斯",
+              "companyProfile": "公司成立于2004年，是一家专注于肿瘤治疗领域的创新驱动型生物医药企业，以提升全人类生命质量与健康水平为使命，聚焦全球未满足的临床需求，致力于研发、生产与销售具有自主知识产权、安全有效、惠及大众的首创(First-in-class)与同类最佳(Best-in-class)创新药物。公司核心产品为自主研发的国家I类新药甲磺酸伏美替尼片，专用于EGFR突变非小细胞肺癌治疗，具备“脑转强效、疗效优异、安全性佳、治疗窗宽”四大优势。其二线适应症于2021年3月、一线适应症于2022年6月先后获国家药监局批准上市，均已被纳入国家医保目录。目前，公司正在推进伏美替尼的6项新增适应症注册临床研究，涵盖辅助治疗、EGFR20外显子插入突变一线及二线治疗、PACC突变适应症、脑转移适应症及EGFR非经典突变辅助治疗。其中，EGFR20外显子插入突变一线适应症研究已获中美双突破性疗法认定，显著加速全球开发进程。凭借卓越创新实力，公司荣获“2023中国创新药上市公司价值引领TOP15”、“2023年度浦东新区科技创新突出贡献奖”、“上海市第32批市级企业技术中心”、“2024年度浦东新区先进制造业突出贡献奖”等多项荣誉。",
+              "profileSummary": "公司成立于2004年，是一家专注于肿瘤治疗领域的创新驱动型生物医药企业，以提升全人类生命质量与健康水平为使命，聚焦全球未满足的临床需求，致力于研发、生产与销售具有自主知识产权、安全有效、惠及大众的首创(First-in-class)与同类最佳(Best-in-class)创新药物。目前，公司正在推进伏美替尼的6项新增适应症注册临床研究，涵盖辅助治疗、EGFR20外显子插入突变一线及二线治疗、PACC突变适应症、脑转移适应症及EGFR非…",
+              "majorProducts": "c-MET抑制剂、EGFR外显子20插入突变抑制剂、KRAS G12C抑制剂、RET抑制剂、阿利沙坦酯、艾氟替尼、艾氟替尼 （第三代EGFR-TKI）、甲磺酸伏美替尼片、普拉替尼胶囊",
+              "revenueComposition": "药品销售收入:99.48%;药品许可授权:0.51%",
+              "revenueSegments": [
+                {
+                  "name": "药品销售收入",
+                  "sharePct": 99.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "药品许可授权",
+                  "sharePct": 0.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "伏美替尼",
+                  "戈来雷塞",
+                  "伏美替尼专利授权许可服务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "艾力斯的主要经营内容是药品销售收入（99.48%）、药品许可授权（0.51%），具体产品集中在伏美替尼、戈来雷塞、伏美替尼专利授权许可服务。“国内半导体前驱体绝对龙头，深度绑定全球存储巨头，直接受益于涨价和扩产”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善供需缺口与产品价格，也需要先补上产品落地和客户导入，再经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才可能影响业绩。产品报价、订单排期、产销率和毛利率没有同步改善时，股价反应更可能来自主题交易；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，基本面解释力会继续下降。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 16,
+        "stocks": [
+          {
+            "sourceRowNumber": 16100,
+            "stockCode": "688766.SH",
+            "stockName": "普冉股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内领先的非易失性存储器芯片设计公司，受益于海外大厂退出带来的2D NAND涨价弹性。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688766.SH",
+              "companyName": "普冉股份",
+              "companyProfile": "公司成立于2016年，总部位于上海张江高科，在成都设有分公司，深圳、韩国设有销售和现场应用服务与支持中心，同时在苏州设有研发中心；在日本、英国、德国等多地拥有代表处。2021年8月，公司在上海证券交易所科创板上市。公司目前主要产品包括NOR Flash和EEPROM两大非易失性存储器芯片、MCU微控制器芯片及模拟产品。产品广泛应用于物联网、智能手机及周边、可穿戴、服务器、光模块、工业控制、汽车电子、安防等领域。公司聚焦领先的非易失性存储器芯片，凭借超低功耗和高可靠性的产品优势，积累了良好的品牌认可度，成为全球NOR Flash和EEPROM的主要供应商之一。公司产品广泛应用于三星、OPPO、vivo、小米、联想、惠普、亚马逊、美的、海内外汽车客户等品牌厂商。基于存储器技术优势，公司于2021年推出“存储+”战略，积极拓展MCU及模拟芯片领域，依托公司在存储领域的技术优势和平台资源，实现向更高附加值领域和更多元化的市场拓展。与此同时，公司大力推进海外业务布局，坚定国际化战略路线，已经实现在日、韩、美等多家知名大客户导入，产品应用领域覆盖消费、工控、光伏及车载等，增强了在全球市场的影响力。公司以“普冉之芯，造福世界”的愿景，专注于产品创新，围绕非易失存储器领域，在继续完善和提升非易失性存储器产品线的同时，有效推进“存储+”战略，实现微控制器和模拟产品线的高速发展，不断满足客户对高性能芯片产品的需求，在持续经营中实现企业的技术积累，保障公司经营业务的可持续发展。",
+              "profileSummary": "公司聚焦领先的非易失性存储器芯片，凭借超低功耗和高可靠性的产品优势，积累了良好的品牌认可度，成为全球NOR Flash和EEPROM的主要供应商之一。与此同时，公司大力推进海外业务布局，坚定国际化战略路线，已经实现在日、韩、美等多家知名大客户导入，产品应用领域覆盖消费、工控、光伏及车载等，增强了在全球市场的影响力。",
+              "majorProducts": "EEPROM、NORFlash",
+              "revenueComposition": "NORFlash产品:100%",
+              "revenueSegments": [
+                {
+                  "name": "NORFlash产品",
+                  "sharePct": 100.0,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "EEPROM存储芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "SPI NOR Flash存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "车规级EEPROM存储芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "车规级SPI NOR Flash存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "IoT MCU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "电机控制MCU",
+                    "category": "计算控制芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "EEPROM存储芯片",
+                  "SPI NOR Flash存储器芯片",
+                  "车规级EEPROM存储芯片",
+                  "车规级SPI NOR Flash存储器芯片",
+                  "音圈马达驱动芯片",
+                  "IoT MCU",
+                  "电机控制MCU",
+                  "通用型MCU"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "普冉股份与事件的关系已经落在存量主业，而非远期概念：NORFlash产品占收入的100%。公司在产业链中的具体抓手是：国内领先的非易失性存储器芯片设计公司，受益于海外大厂退出带来的2D NAND涨价弹性。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 16101,
+            "stockCode": "688110.SH",
+            "stockName": "东芯股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内中小容量存储芯片设计公司，受益于海外大厂退出利基市场带来的国产替代机遇。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688110.SH",
+              "companyName": "东芯股份",
+              "companyProfile": "公司是一家专注于中小容量存储芯片独立研发、设计与销售的企业。公司秉持“提供可靠高效的存储产品及设计方案”的使命，并以“成为中国领先的存储芯片设计企业”为愿景，致力于通过自主研发的知识产权、稳定的供应链体系以及高可靠性产品，为客户提供优质的存储产品及解决方案。公司以存储为核心，同时在“存、算、联”一体化领域进行技术创新，拓展行业应用范围，优化业务布局，旨在为客户提供多样化的芯片解决方案。公司是目前中国大陆少数能够同时提供NAND Flash、NOR Flash、DRAM等存储芯片完整解决方案的公司，凭借产品丰富、性能可靠、能耗节省等特点，多款代表公司技术水平的核心产品获得国内外多家知名企业的认可，在工艺制程和产品性能上形成一定优势，NAND Flash已具备2xnm制程的量产能力，1xnm先进制程已进入风险量产；NOR Flash可实现48nm制程量产；DRAM可实现25nm工艺节点的量产。公司产品在网络通讯领域应用广泛，包括电信级设备、家用ONT、WiFi及随身MiFi，5G CPE等均有业务布局。工业方面，公司拓展了包括电力电子系统，电表集抄器，工业打印机等下游客户。消费电子领域，公司产品在国内头部客户的穿戴式设备中得到了应用。公司已有多款产品通过AEC-Q100的车规认证，并已进入境外知名的一级汽车供应商(Tier1)。公司将继续通过技术创新驱动、质量体系保障、供应链协同、人才战略支撑等方面，围绕“存、算、联”一体化战略方向，深化技术突破与产业布局，努力提升全球市场竞争力与可持续发展能力，为公司及公司利益相关方创造更多价值。",
+              "profileSummary": "公司是目前中国大陆少数能够同时提供NAND Flash、NOR Flash、DRAM等存储芯片完整解决方案的公司，凭借产品丰富、性能可靠、能耗节省等特点，多款代表公司技术水平的核心产品获得国内外多家知名企业的认可，在工艺制程和产品性能上形成一定优势，NAND Flash已具备2xnm制程的量产能力，1xnm先进制程已进入风险量产；NOR Flash可实现48nm制程量产；DRAM可实现25nm工艺节点的量产。公司产品在网络通讯领域应用…",
+              "majorProducts": "DRAM、MCP、NAND Flash、NOR Flash、技术服务",
+              "revenueComposition": "NAND系列产品:65.2%;MCP系列产品:25.05%;DRAM系列产品:5.84%;NOR系列产品:3.61%;技术服务:0.3%;其他业务:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "NAND系列产品",
+                  "sharePct": 65.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "MCP系列产品",
+                  "sharePct": 25.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "DRAM系列产品",
+                  "sharePct": 5.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "NOR系列产品",
+                  "sharePct": 3.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 0.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "DDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "MCP存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "SPI NAND Flash存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "SPI NOR Flash存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "并行NAND Flash存储器芯片",
+                    "category": "存储器芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "DDR SDRAM存储器芯片",
+                  "LPDDR SDRAM存储器芯片",
+                  "MCP存储器芯片",
+                  "SPI NAND Flash存储器芯片",
+                  "SPI NOR Flash存储器芯片",
+                  "并行NAND Flash存储器芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东芯股份与新闻之间有明确产品抓手：DDR SDRAM存储器芯片、LPDDR SDRAM存储器芯片、MCP存储器芯片，对应国内中小容量存储芯片设计公司，受益于海外大厂退出利基市场带来的国产替代机遇。收入主体目前是NAND系列产品（65.2%）、MCP系列产品（25.05%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 16102,
+            "stockCode": "600584.SH",
+            "stockName": "长电科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "全球领先的封测厂商，与全球存储巨头深度合作，受益于存储及先进封装扩产。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600584.SH",
+              "companyName": "长电科技",
+              "companyProfile": "公司是全球领先的集成电路制造与技术服务提供商，向全球半导体客户提供全方位、一站式芯片成品制造解决方案，涵盖微系统集成、设计仿真、晶圆中测、芯片及器件封装、成品测试、产品认证以及全球直运等服务。公司始终秉持“为智慧生活提供先进、可靠的集成电路器件成品制造技术和服务”的使命，拥有先进和全面的芯片成品制造技术，包括晶圆级封装(WLP)、2.5D/3D封装、系统级封装(SiP)、倒装芯片封装、引线键合封装及传统封装先进化解决方案，广泛应用于汽车电子、人工智能、高性能计算、高密度存储、网络通信、智能终端、工业与医疗、功率与能源等领域，在中国、韩国和新加坡设有八大生产基地和两大研发中心，并在20多个国家和地区设有业务机构，为客户提供紧密的技术合作与高效的产业链支持。",
+              "profileSummary": "公司是全球领先的集成电路制造与技术服务提供商，向全球半导体客户提供全方位、一站式芯片成品制造解决方案，涵盖微系统集成、设计仿真、晶圆中测、芯片及器件封装、成品测试、产品认证以及全球直运等服务。公司始终秉持“为智慧生活提供先进、可靠的集成电路器件成品制造技术和服务”的使命，拥有先进和全面的芯片成品制造技术，包括晶圆级封装(WLP)、2.5D/3D封装、系统级封装(SiP)、倒装芯片封装、引线键合封装及传统封装先进化解决方案，广泛应用于汽…",
+              "majorProducts": "芯片封测",
+              "revenueComposition": "芯片封测:99.6%;其他业务:0.4%",
+              "revenueSegments": [
+                {
+                  "name": "芯片封测",
+                  "sharePct": 99.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "共封装光学(CPO)封装",
+                  "晶圆测试",
+                  "芯片封装",
+                  "芯片测试"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长电科技当前收入集中在芯片封测（99.6%）、其他业务（0.4%），而全球领先的封测厂商，与全球存储巨头深度合作，受益于存储及先进封装扩产所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响供需缺口与产品价格预期，业务端仍需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导后才能确认。产品报价、订单排期、产销率和毛利率如果持续改善，相关业务可能从产业布局转为实际增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 16103,
+            "stockCode": "600667.SH",
+            "stockName": "太极实业",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "通过子公司海太半导体与SK海力士深度绑定，是SK海力士DRAM产品后工序核心服务商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600667.SH",
+              "companyName": "太极实业",
+              "companyProfile": "公司是江苏省首家上市公司，公司下属全资子公司江苏太极实业新材料有限公司、无锡太极国际贸易有限公司，控股太极半导体(苏州)有限公司、太极微电子(苏州)有限公司、信息产业电子第十一设计研究院科技工程股份有限公司、海太半导体(无锡)有限公司。目前主营业务包括半导体业务、工程技术服务业务、光伏电站投资运营业务和材料业务。半导体业务主要涉及IC芯片封装、封装测试、模组装配及测试等；工程技术业务主要服务于电子高科技与高端制造，生物医药与保健，市政与路桥，物流与民用建筑，电力，综合业务等6大业务领域；光伏电站的投资和运营业务于2014年开始逐步形成；材料业务的主要产品有涤纶工业长丝、浸胶帘子布和帆布等，现已形成年产36000吨涤纶工业长丝和年产20000吨浸胶帘子布、10000吨浸胶帆布的生产规模。",
+              "profileSummary": "目前主营业务包括半导体业务、工程技术服务业务、光伏电站投资运营业务和材料业务。半导体业务主要涉及IC芯片封装、封装测试、模组装配及测试等；工程技术业务主要服务于电子高科技与高端制造，生物医药与保健，市政与路桥，物流与民用建筑，电力，综合业务等6大业务领域；光伏电站的投资和运营业务于2014年开始逐步形成；材料业务的主要产品有涤纶工业长丝、浸胶帘子布和帆布等，现已形成年产36000吨涤纶工业长丝和年产20000吨浸胶帘子布、10000吨…",
+              "majorProducts": "宏源并条机、宏源电脑横机、宏源短纤维倍捻机、宏源高速弹力丝机、宏源高效蒸洗机、宏源花式纱高速钩编机、宏源精梳机、宏源卷染机、宏源棉纺电脑粗纱机、宏源棉纺细纱机、宏源全电脑花式纱线纺捻机、宏源烧毛碱练机、宏源丝光机、宏源显色皂洗机、宏源雪尼尔机、宏源预缩整理机、宏源长环蒸化机、太极PVC涂层织物基布、太极过滤布、太极加捻丝、太极浸胶帆布、太极浸胶聚酯V带帘子布、太极浸胶聚酯轮胎帘子布、太极聚酯工业丝",
+              "revenueComposition": "工程总包:76.47%;封装测试:9.3%;设计和咨询:7.15%;模组:5.85%;光伏发电:0.82%;其他:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "工程总包",
+                  "sharePct": 76.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "封装测试",
+                  "sharePct": 9.3,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "设计和咨询",
+                  "sharePct": 7.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "模组",
+                  "sharePct": 5.85,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "光伏发电",
+                  "sharePct": 0.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "DRAM模组测试",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "DRAM模组组装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "存储芯片封装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "存储芯片测试",
+                    "category": "芯片封装测试"
+                  }
+                ],
+                "knownProducts": [
+                  "光伏电站工程",
+                  "工程咨询",
+                  "DRAM模组测试",
+                  "DRAM模组组装",
+                  "存储芯片封装",
+                  "存储芯片测试"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "太极实业已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：封装测试（9.3%）、模组（5.85%）合计约占收入的15.15%。公司在产业链中的位置是：通过子公司海太半导体与SK海力士深度绑定，是SK海力士DRAM产品后工序核心服务商，供需缺口与产品价格则决定增量大小。只有完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，相关业务的增长才可能改善公司整体盈利。产品报价、订单排期、产销率和毛利率还需与其他主业表现同时改善；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 16104,
+            "stockCode": "000021.SZ",
+            "stockName": "深科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内最大的独立DRAM封测企业，具备\"晶圆封测-模组制造\"完整能力，深度绑定长鑫存储。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000021.SZ",
+              "companyName": "深科技",
+              "companyProfile": "公司为全球客户提供技术研发、工艺设计、生产控制、采购管理、物流支持等全产业链服务。1994年在深交所上市。深科技成立于1985年，拥有30多年丰富的产品生产制造经验。公司总部位于中国深圳，拥有深圳、苏州、惠州、东莞、成都、重庆、合肥、马来西亚等九个研发制造基地。同时公司在美国、英国、荷兰、新加坡、中国香港等十多个国家或地区设有分支机构或拥有研发团队。深科技致力于为全球客户提供数据存储、医疗器械、汽车电子、消费电子、商业与工业、新型智能产品等领域产品的制造服务以及智能计量智能终端与工业物联网系统的研发生产服务。深科技是国内唯一一家在欧洲大批量部署智能电表，并参与欧洲多个大型AMI项目的公司。深科技拥有中国国家认可委员会(CNAS)认可的专业实验室，具备优秀的可靠性、材料分析、先进机械、热仿真、表面贴装(SMT)、以及静电防护等工程技术能力，被认定为广东省工程技术中心和深圳市公共技术平台。目前，深科技正聚焦发展存储半导体、高端制造、计量智能终端领域，朝着“成为值得信赖并受人尊敬的企业”的愿景不断迈进。",
+              "profileSummary": "深科技致力于为全球客户提供数据存储、医疗器械、汽车电子、消费电子、商业与工业、新型智能产品等领域产品的制造服务以及智能计量智能终端与工业物联网系统的研发生产服务。目前，深科技正聚焦发展存储半导体、高端制造、计量智能终端领域，朝着“成为值得信赖并受人尊敬的企业”的愿景不断迈进。",
+              "majorProducts": "病毒检测仪、超级电容模组、打印机、呼吸机、扫地机器人、血糖仪、硬盘磁头、长城开发2.5英寸硬盘头堆、长城开发3.5英寸服务器头堆、长城开发3.5英寸台式电脑头堆、长城开发OEM内存条、长城开发点胶机、长城开发普通收款机、长城开发税控收款机、长城开发移动硬盘、长城开发硬盘盘片、智慧水务计量系统、智能电表、智能墨水屏平板",
+              "revenueComposition": "高端制造:54.2%;存储半导体业务:25.98%;计量智能终端:19.18%;其他业务:0.64%",
+              "revenueSegments": [
+                {
+                  "name": "高端制造",
+                  "sharePct": 54.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "存储半导体业务",
+                  "sharePct": 25.98,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "计量智能终端",
+                  "sharePct": 19.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "存储芯片封装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "存储芯片测试",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "LBS定位服务产品(人员物品跟踪管理)",
+                    "category": "位置传感器"
+                  }
+                ],
+                "knownProducts": [
+                  "流感病毒检测仪代工",
+                  "分娩仪一次性耗材",
+                  "腹膜透析液加温仪代工",
+                  "智能个人护理仪代工",
+                  "血糖仪代工",
+                  "心率检测仪代工",
+                  "血液加温仪代工",
+                  "扫地机器人代工"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "深科技与事件存在真实业务交集：公司已有存储芯片封装、存储芯片测试、LBS定位服务产品(人员物品跟踪管理)，与国内最大的独立DRAM封测企业，具备\"晶圆封测-模组制造\"完整能力，深度绑定长鑫存储所处的产业环节一致。存储半导体业务（25.98%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 16105,
+            "stockCode": "688403.SH",
+            "stockName": "汇成股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "显示驱动芯片封测龙头，切入存储封测和先进封装领域，成长空间广阔。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688403.SH",
+              "companyName": "汇成股份",
+              "companyProfile": "公司是集成电路高端先进封装测试服务商，目前聚焦于显示驱动芯片领域，具有领先的行业地位。公司主营业务以前段金凸块制造(Gold Bumping)为核心，并综合晶圆测试(CP)及后段玻璃覆晶封装(COG)和薄膜覆晶封装(COF)环节，形成显示驱动芯片全制程封装测试综合服务能力。公司的封装测试服务主要应用于LCD、AMOLED等各类主流面板的显示驱动芯片，所封装测试的芯片系日常使用的智能手机、智能穿戴、高清电视、笔记本电脑、平板电脑等各类终端产品得以实现画面显示的核心部件。公司是中国境内最早具备金凸块制造能力及最早导入12吋晶圆金凸块产线并实现量产的显示驱动芯片先进封测企业之一，具备8吋及12吋晶圆全制程封装测试能力。公司在显示驱动芯片封装测试领域深耕多年，凭借先进的封测技术、稳定的产品良率与优质的服务能力，积累了丰富的客户资源。公司服务的客户包括联咏科技、天钰科技、瑞鼎科技、奇景光电等全球知名显示驱动芯片设计企业，所封测芯片已主要应用于京东方、友达光电等知名厂商的面板。公司以成为国内领先、世界一流的高端芯片封装测试服务商为愿景，以提升中国集成电路产业的全球竞争力为使命。未来，公司将积极扩充12吋大尺寸晶圆的先进封装测试服务能力，保持行业及产品的领先地位，同时将进行持续的研发投入，不断拓宽封测服务的产品应用领域，积极拓展以CMOS影像传感器、车载电子等为代表的新兴产品领域。",
+              "profileSummary": "公司主营业务以前段金凸块制造(Gold Bumping)为核心，并综合晶圆测试(CP)及后段玻璃覆晶封装(COG)和薄膜覆晶封装(COF)环节，形成显示驱动芯片全制程封装测试综合服务能力。未来，公司将积极扩充12吋大尺寸晶圆的先进封装测试服务能力，保持行业及产品的领先地位，同时将进行持续的研发投入，不断拓宽封测服务的产品应用领域，积极拓展以CMOS影像传感器、车载电子等为代表的新兴产品领域。",
+              "majorProducts": "薄膜覆晶封装（COF）、玻璃覆晶封装（COG）、金凸块制造（Gold Bumping）、晶圆测试（CP）",
+              "revenueComposition": "显示驱动芯片封测:88.56%;其他业务:11.44%",
+              "revenueSegments": [
+                {
+                  "name": "显示驱动芯片封测",
+                  "sharePct": 88.56,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 11.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "显示驱动晶圆测试",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "显示驱动芯片封装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "显示驱动芯片测试",
+                    "category": "芯片封装测试"
+                  }
+                ],
+                "knownProducts": [
+                  "显示驱动晶圆测试",
+                  "显示驱动芯片封装",
+                  "显示驱动芯片测试"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "汇成股份的相关业务已决定公司大部分经营表现：显示驱动芯片封测占收入的88.56%。公司与事件的直接业务联系是：显示驱动芯片封测龙头，切入存储封测和先进封装领域，成长空间广阔，真正的增量取决于供需缺口与产品价格，并需经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，产品报价、订单排期、产销率和毛利率需要显示公司获得超越行业的增量。供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 16107,
+            "stockCode": "688556.SH",
+            "stockName": "高测股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内电子大宗气体龙头，核心产品六氟化钨是存储芯片关键材料，受益于供需紧张和价格上涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688556.SH",
+              "companyName": "高测股份",
+              "companyProfile": "公司成立于2006年10月，2020年8月7日，登陆科创板A股，是国内领先的高硬脆材料切割设备和切割耗材的供应商。公司产品和服务主要应用于光伏行业硅片制造环节，是光伏行业一家实现切割设备、切割耗材及硅片切割加工服务业务全覆盖的企业。公司总部坐落于青岛市高新技术产业开发区，下设全资子公司长治高测新材料科技有限公司、壶关高测新材料科技有限公司、洛阳高测精密机械有限公司、乐山高测新能源科技有限公司、盐城高测新能源科技有限公司、宜宾高测新能源科技有限公司。公司主营业务为高硬脆材料切割设备、切割耗材的研发、生产、销售及其配套服务。基于自主核心技术，公司主要面向光伏行业生产厂商提供硅棒至硅片“截断、开方、磨抛、切片”环节的系统解决方案。光伏行业全球前十名硅片制造企业均为公司客户。2018年以来，公司持续推进金刚线切割技术在半导体硅材料、碳化硅材料、蓝宝石材料、磁性材料等更多高硬脆材料加工领域的研发及产业化应用，获行业头部企业选择与认可。把握硅片代工优质赛道新机遇，公司迅速拓展硅片切割加工服务项目。公司将以科技创新为先导，持续为客户创造价值，推动行业降本增效，助力“碳中和”。",
+              "profileSummary": "公司产品和服务主要应用于光伏行业硅片制造环节，是光伏行业一家实现切割设备、切割耗材及硅片切割加工服务业务全覆盖的企业。公司主营业务为高硬脆材料切割设备、切割耗材的研发、生产、销售及其配套服务。",
+              "majorProducts": "倒角机、高测股份 技术服务、高测股份超细金刚石线、高测股份单晶截断机、高测股份多晶截断机、高测股份硅晶切片机、高测股份轮胎断面切割机、高测股份轮胎断面切割丝、高测股份轮胎高速耐久试验机、高测股份轮胎滚动阻力试验机、高测股份轮胎强度脱圈试验机、高测股份轮胎试验轮辋、高测股份轮胎水压爆破试验机、硅片、截断机、金刚线、开方机、开磨一体机、磨抛一体机、切片机",
+              "revenueComposition": "硅片及切割加工服务:51.02%;切割耗材:21.86%;其他废料收入:11.26%;其他高硬脆切割设备及耗材:7.94%;切割装备:6.63%;服务及其他:1.27%;租赁:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "硅片及切割加工服务",
+                  "sharePct": 51.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "切割耗材",
+                  "sharePct": 21.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他废料收入",
+                  "sharePct": 11.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他高硬脆切割设备及耗材",
+                  "sharePct": 7.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "切割装备",
+                  "sharePct": 6.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "服务及其他",
+                  "sharePct": 1.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "金刚线蓝宝石切片机",
+                  "硅片切割加工服务",
+                  "金刚线切割技术改造服务",
+                  "晶硅磨倒一体机",
+                  "硅切片用金刚线",
+                  "金刚线晶硅切片机",
+                  "单晶硅开方机",
+                  "单晶硅截断机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "高测股份的业务范围能够覆盖国内电子大宗气体龙头，核心产品六氟化钨是存储芯片关键材料，受益于供需紧张和价格上涨所处的产业环节，但当前硅片及切割加工服务（51.02%）、切割耗材（21.86%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。供需缺口与产品价格需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”完成兑现，并在产品报价、订单排期、产销率和毛利率上形成持续改善；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 16108,
+            "stockCode": "600378.SH",
+            "stockName": "昊华科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内氟化工龙头，含氟特气和湿电子化学品是存储制造关键材料，受益于扩产需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600378.SH",
+              "companyName": "昊华科技",
+              "companyProfile": "公司是中国中化控股有限责任公司旗下的上市公司。1999年经国家经贸委批准在成都发起设立，2001年1月在上海证券交易所挂牌上市。2018年实施重大资产重组，转型升级为先进化工材料领域科研院所集群公司，主要从事高端氟材料、电子化学品、高端制造化工材料的研发与生产，以及提供绿色低碳整体解决方案的碳减排业务。近年来，公司围绕国家发展和市场需求，聚焦化工新材料补短板，强化科技创新，不断优化结构，持续深化改革，发展成为业绩优良、竞争力强、主业突出、治理规范的上市公司。公司始终把“致力成为中国先进化工材料行业引领者，持续为人类品质生活提升和技术进步作贡献”作为公司的发展战略和发展愿景；把“科技引领，创新驱动，追求卓越”作为公司的发展理念，持续推进公司高质量发展。",
+              "profileSummary": "2018年实施重大资产重组，转型升级为先进化工材料领域科研院所集群公司，主要从事高端氟材料、电子化学品、高端制造化工材料的研发与生产，以及提供绿色低碳整体解决方案的碳减排业务。近年来，公司围绕国家发展和市场需求，聚焦化工新材料补短板，强化科技创新，不断优化结构，持续深化改革，发展成为业绩优良、竞争力强、主业突出、治理规范的上市公司。",
+              "majorProducts": "电子化学品、高端氟材料、高端制造化工材料、碳减排业务",
+              "revenueComposition": "氟材料:59.55%;高端制造:17.57%;工程技术服务:11.34%;电子化学品:6.82%;其他业务:2.87%;贸易及其他:1.85%",
+              "revenueSegments": [
+                {
+                  "name": "氟材料",
+                  "sharePct": 59.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高端制造",
+                  "sharePct": 17.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程技术服务",
+                  "sharePct": 11.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子化学品",
+                  "sharePct": 6.82,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易及其他",
+                  "sharePct": 1.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "三氟化氮",
+                    "category": "刻蚀气体"
+                  }
+                ],
+                "knownProducts": [
+                  "天然气转化(镍系)催化剂",
+                  "燃料电池催化剂",
+                  "甲醇合成(铜系)催化剂",
+                  "四氧化二氮",
+                  "氟橡胶混炼胶",
+                  "全氟丙烯",
+                  "四氟丙醇",
+                  "四氟乙烯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "昊华科技的电子化学品（6.82%）覆盖范围较宽，其中能够承载三氟化氮，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国内氟化工龙头，含氟特气和湿电子化学品是存储制造关键材料，受益于扩产需求。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 16109,
+            "stockCode": "002407.SZ",
+            "stockName": "多氟多",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司电子级氢氟酸可用于存储芯片制造，受益于行业需求增长和价格上涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002407.SZ",
+              "companyName": "多氟多",
+              "companyProfile": "公司是一家致力于氟、锂、硅、硼等元素细分领域进行材料和能源体系研究及产业化的国家高新技术企业。主营业务为氟基新材料、新能源材料、电子信息材料和新能源电池，产品广泛应用于电解铝、半导体集成电路、光伏、TFT液晶屏幕、电动汽车等领域。公司走出一条“技术专利化、专利标准化、标准国际化”的创新发展道路。是全国有色金属标准样品定点研制单位、全国化学标准化委员会无机分会氟化盐工作组召集单位、ISO铝用原材料技术委员会冶金级氟化盐工作组召集人单位、ISO锂技术委员会锂电解质分析工作组召集人单位。拥有国家企业技术中心、国家博士后科研工作站、国家认可实验室、国家技能大师工作室、河南省无机氟化学工程技术研究中心、河南省氟基新材料产业研究院、河南省氟基功能新材料创新中心等研发平台。先后承担国家“863”计划、国家增强制造业核心竞争力专项、国家工业强基工程、国家产业基础再造工程等国家级项目20余项。公司秉承“氟通四海、锂行天下、硅达五洲、硼程万里、智创未来”的发展愿景，沿着“新材料支撑新能源、新能源牵引新材料”的发展路径，不断探求氟在人类生活和工业应用中的无限可能，运用数字化技术，为推动氟化盐可持续发展、半导体高端材料国产化、新能源产业绿色发展贡献智慧。",
+              "profileSummary": "主营业务为氟基新材料、新能源材料、电子信息材料和新能源电池，产品广泛应用于电解铝、半导体集成电路、光伏、TFT液晶屏幕、电动汽车等领域。",
+              "majorProducts": "电子级硅烷、电子级氢氟酸、高分子比冰晶石、锂离子电池、六氟磷酸锂、六氟磷酸钠、钠离子电池、双氟磺酰亚胺锂、无水氟化氢",
+              "revenueComposition": "新能源材料:33.21%;新能源电池:30.21%;氟基新材料:29.56%;电子信息材料:4.33%;其他:2.68%",
+              "revenueSegments": [
+                {
+                  "name": "新能源材料",
+                  "sharePct": 33.21,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源电池",
+                  "sharePct": 30.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氟基新材料",
+                  "sharePct": 29.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子信息材料",
+                  "sharePct": 4.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电子级氢氟酸",
+                    "category": "无机氟化合物"
+                  }
+                ],
+                "knownProducts": [
+                  "无水氟化铝",
+                  "电子级氢氟酸",
+                  "高分子比冰晶石",
+                  "六氟磷酸锂",
+                  "硫化物固态电解质",
+                  "聚合物固态电解质",
+                  "钠离子电池",
+                  "三元锂电池"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "多氟多与事件存在真实业务交集：公司已有电子级氢氟酸，与公司电子级氢氟酸可用于存储芯片制造，受益于行业需求增长和价格上涨所处的产业环节一致。新能源材料（33.21%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 16110,
+            "stockCode": "002371.SZ",
+            "stockName": "北方华创",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内半导体设备平台龙头，产品线覆盖存储制造多个核心环节，深度受益于国产晶圆厂扩产。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002371.SZ",
+              "companyName": "北方华创",
+              "companyProfile": "公司成立于2001年9月，是一家以电子专用设备和电子元器件为主要产品，集研发、生产、销售及服务于一体的大型综合性高科技公司。电子专用设备方面，公司以大规模集成电路制造工艺技术为核心，研发生产了集成电路工艺设备、太阳能电池制造设备、气体质量流量控制器(MFC)、TFT设备、真空热处理设备、锂离子电池制造设备等系列产品，广泛应用于半导体、光伏、电力电子、TFT-LCD、LED、MEMS、锂电等多个新兴行业。高精密电子元器件方面，公司依托多年的元器件技术积累，建立了新产品、新工艺研发体系，产品技术等级不断提升，研发生产了电阻、电容、晶体器件、微波组件、模块电源、混合集成电路等高精密电子元器件系列产品，广泛应用于精密仪器仪表、自动控制等领域。公司为中国电子专用设备工业协会理事长和中国电子元件协会副理事长单位，是中国最大的电子装备生产基地和高端电子元器件制造基地。公司始终站在电子信息技术的前沿，技术开发坚持以自主研发为主、对外技术合作为辅的发展道路。公司依靠自主研发创造了辉煌的业绩，保持了在国内同行业中的技术领先地位。",
+              "profileSummary": "公司成立于2001年9月，是一家以电子专用设备和电子元器件为主要产品，集研发、生产、销售及服务于一体的大型综合性高科技公司。电子专用设备方面，公司以大规模集成电路制造工艺技术为核心，研发生产了集成电路工艺设备、太阳能电池制造设备、气体质量流量控制器(MFC)、TFT设备、真空热处理设备、锂离子电池制造设备等系列产品，广泛应用于半导体、光伏、电力电子、TFT-LCD、LED、MEMS、锂电等多个新兴行业。",
+              "majorProducts": "半导体装备、高可靠高稳定电阻器、固体钽电容器、混合集成电路、集成电路制造设备、模块电源、石英晶体器件、微波组件、真空及新能源锂电装备",
+              "revenueComposition": "电子工艺装备:93.34%;电子元件:6.55%;其他业务:0.11%",
+              "revenueSegments": [
+                {
+                  "name": "电子工艺装备",
+                  "sharePct": 93.34,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电子元件",
+                  "sharePct": 6.55,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "CVD设备",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "PVD设备",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "晶圆刻蚀机",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "晶圆氧化炉",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "硅片清洗机",
+                    "category": "半导体用硅片制造设备"
+                  }
+                ],
+                "knownProducts": [
+                  "高速分切机",
+                  "模块电源",
+                  "石英晶体器件",
+                  "微波组件",
+                  "钽电容器",
+                  "硅片清洗机",
+                  "CVD设备",
+                  "PVD设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "北方华创已经具备CVD设备、PVD设备、晶圆刻蚀机等业务能力，国内半导体设备平台龙头，产品线覆盖存储制造多个核心环节，深度受益于国产晶圆厂扩产并非单纯概念映射。当前对应的收入被归入电子工艺装备（93.34%）、电子元件（6.55%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 16111,
+            "stockCode": "688012.SH",
+            "stockName": "中微公司",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国产刻蚀设备龙头，技术领先，在先进存储超高深宽比刻蚀领域已实现量产，受益于技术升级和扩产。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688012.SH",
+              "companyName": "中微公司",
+              "companyProfile": "公司是一家以中国为基地、面向全球的微观加工高端设备公司，为集成电路和泛半导体行业提供极具竞争力的高端设备和高品质的服务。公司开发的等离子体刻蚀设备和化学薄膜设备是制造各种微观器件的关键设备，可加工微米级和纳米级的各种器件。这些微观器件是现代数码产业的基础，它们正在改变人类的生产方式和生活方式。公司总部位于上海，聚焦亚洲，并为全球的客户提供技术和设备的解决方案。作为制造和创新的中心，中国和亚洲具有得天独厚的优势和高速成长的市场，而这使公司有无限广阔的发展前景。在公司员工的创新激情、多年的齐心奋斗和合作共赢的精神指引下，公司已经成为一家快速成长的微观加工设备公司，在技术创新、产品优化和市场准入方面取得了重大突破，赢得了众多客户和供应厂商的信任和支持，成为国际半导体微观加工设备产业极具竞争力的一颗新星。",
+              "profileSummary": "公司是一家以中国为基地、面向全球的微观加工高端设备公司，为集成电路和泛半导体行业提供极具竞争力的高端设备和高品质的服务。在公司员工的创新激情、多年的齐心奋斗和合作共赢的精神指引下，公司已经成为一家快速成长的微观加工设备公司，在技术创新、产品优化和市场准入方面取得了重大突破，赢得了众多客户和供应厂商的信任和支持，成为国际半导体微观加工设备产业极具竞争力的一颗新星。",
+              "majorProducts": "ALD设备、CVD设备、MOCVD设备、VOC设备、电感性等离子体刻蚀设备、电容性等离子体刻蚀设备、深硅刻蚀设备",
+              "revenueComposition": "半导体设备相关产品:100%",
+              "revenueSegments": [
+                {
+                  "name": "半导体设备相关产品",
+                  "sharePct": 100.0,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "刻蚀设备",
+                    "category": "半导体用硅片制造设备"
+                  },
+                  {
+                    "name": "薄膜沉积设备",
+                    "category": "半导体用硅片制造设备"
+                  }
+                ],
+                "knownProducts": [
+                  "刻蚀设备",
+                  "薄膜沉积设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中微公司与事件存在真实业务交集：公司已有刻蚀设备、薄膜沉积设备，与国产刻蚀设备龙头，技术领先，在先进存储超高深宽比刻蚀领域已实现量产，受益于技术升级和扩产所处的产业环节一致。半导体设备相关产品（100%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 16112,
+            "stockCode": "300604.SZ",
+            "stockName": "长川科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国产测试设备龙头，产品覆盖SoC、存储等领域，受益于HBM测试需求爆发及国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300604.SZ",
+              "companyName": "长川科技",
+              "companyProfile": "公司成立于2008年4月，是一家专注于集成电路封装和晶圆测试装备的高新技术企业。公司总部坐落于浙江省杭州市滨江区创智街500号，研发人员占比50%以上。公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。公司累计拥有海内外授权专利超1,400项，其中发明专利超400项，先后被认定为国家级高新技术企业、国家知识产权优势企业、专精特新“小巨人”企业。",
+              "profileSummary": "公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。",
+              "majorProducts": "C6系列、Cfocus、D9000Soc测试机系列、HEXA、NanoX-6000、NanoX-8000、SLT系列、大功率测试机系列、老化测试机系列、三温平移式分选机系列、数模混合测试机系列、重力式分选机系列、转塔式分选机系列",
+              "revenueComposition": "测试机:60.53%;分选机:29.64%;其他:9.83%",
+              "revenueSegments": [
+                {
+                  "name": "测试机",
+                  "sharePct": 60.53,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "分选机",
+                  "sharePct": 29.64,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "数模混合测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "芯片分选机",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "AOI光学检测仪",
+                  "数模混合测试机",
+                  "芯片分选机"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长川科技与事件的关系已经落在存量主业，而非远期概念：测试机（60.53%）、分选机（29.64%）合计约占收入的90.17%。公司在产业链中的具体抓手是：国产测试设备龙头，产品覆盖SoC、存储等领域，受益于HBM测试需求爆发及国产替代。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 16113,
+            "stockCode": "300567.SZ",
+            "stockName": "精测电子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内半导体量测设备龙头，受益于先进制程和3D堆叠带来的检测步骤增加。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300567.SZ",
+              "companyName": "精测电子",
+              "companyProfile": "公司以测试设备为核心，致力于成为半导体、显示、新能源行业中客户首选的综合服务提供商。公司总部位于武汉，逐步建立起包含美国、日本、韩国和中国(台湾/武汉/上海/北京)四大研发中心以及武汉、苏州、上海、常州、深圳、北京、江门七大智造基地，拥有全球化的技术研发、客户响应与服务覆盖能力。公司坚持以自主创新为核心、以产学研合作为两翼，持续加大战略研发投入，不断强化产品技术创新，现已形成较为完善的研发创新体系和牢固的知识产权保护体系。公司与华中科技大学、复旦大学等高校成立校企联合实验室，并依托国家级企业技术中心和博士后科研工作站积极承担国家部委相关技术产业攻坚项目，先后牵头发布多项国家标准、行业标准及产业白皮书，持续引领工业智能检测行业发展。",
+              "profileSummary": "公司以测试设备为核心，致力于成为半导体、显示、新能源行业中客户首选的综合服务提供商。公司总部位于武汉，逐步建立起包含美国、日本、韩国和中国(台湾/武汉/上海/北京)四大研发中心以及武汉、苏州、上海、常州、深圳、北京、江门七大智造基地，拥有全球化的技术研发、客户响应与服务覆盖能力。",
+              "majorProducts": "AOI光学检测系统、Memory晶圆探测自动测试设备（CPATE）、Memory老化（Burn-In）测试设备、Memory最终测试自动测试设备（FTATE）、OLED调测系统、电子束缺陷检测系统、光学关键尺寸量测系统、光学缺陷检测系统、锂电池检测和生产设备、膜厚量测系统、平板显示自动化设备、切叠一体机、信号检测系统",
+              "revenueComposition": "显示:52.42%;半导体:39.36%;新能源:5.04%;其他业务:3.17%",
+              "revenueSegments": [
+                {
+                  "name": "显示",
+                  "sharePct": 52.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半导体",
+                  "sharePct": 39.36,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源",
+                  "sharePct": 5.04,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "半导体膜厚量测设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "晶圆测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "锂电池化成分容系统",
+                    "category": "锂电池电芯检测设备"
+                  }
+                ],
+                "knownProducts": [
+                  "平板显示自动化设备",
+                  "AOI光学检测仪",
+                  "OLED检测仪",
+                  "模组检测仪",
+                  "半导体膜厚量测设备",
+                  "晶圆测试机",
+                  "锂电池组BMS检测系统",
+                  "锂电池视觉检测系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "精测电子已经具备半导体膜厚量测设备、晶圆测试机、锂电池化成分容系统等业务能力，国内半导体量测设备龙头，受益于先进制程和3D堆叠带来的检测步骤增加并非单纯概念映射。当前对应的收入被归入半导体（39.36%）、新能源（5.04%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 16114,
+            "stockCode": "688627.SH",
+            "stockName": "精智达",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国产存储测试设备龙头，深度绑定长鑫存储，受益于DRAM国产化及HBM测试需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688627.SH",
+              "companyName": "精智达",
+              "companyProfile": "公司成立于2011年，2023年成功登陆科创板。公司是国内领先的半导体测试检测设备创新型企业，专注于半导体存储器测试与新型显示器件检测，为全球客户提供系统化、全站点的测试检测解决方案。依托深圳、合肥、南京、苏州、长沙等境内研发制造基地，以及中国香港、日本、韩国研发中心，精智达构建“技术全栈化、服务本地化、资源国际化”的业务生态，持续赋能半导体产业高质量发展，打造具有国际竞争力的半导体测试检测设备平台。",
+              "profileSummary": "公司是国内领先的半导体测试检测设备创新型企业，专注于半导体存储器测试与新型显示器件检测，为全球客户提供系统化、全站点的测试检测解决方案。依托深圳、合肥、南京、苏州、长沙等境内研发制造基地，以及中国香港、日本、韩国研发中心，精智达构建“技术全栈化、服务本地化、资源国际化”的业务生态，持续赋能半导体产业高质量发展，打造具有国际竞争力的半导体测试检测设备平台。",
+              "majorProducts": "Cell光学检测设备、Cell老化设备、Cell信号发生器、DRAM FT测试机、DRAM老化修复设备、Gamma调节设备、Module光学检测设备、Module老化设备、Module信号发生器、Mura补偿设备、Sensor测试机、精智达RTP模组自动电性测试机SC-TPRT系列、精智达Sensor电气特性测试机SC-TPST系列、精智达触控显示Cell自动测试机SC-LCET系列、精智达触控显示模组自动测试机SC-LCMT系列、精智达多功能触摸屏测试机SC-TPT系列、探针卡、线性测试机",
+              "revenueComposition": "半导体存储器件测试:55.57%;新型显示器件检测产品:44.43%",
+              "revenueSegments": [
+                {
+                  "name": "半导体存储器件测试",
+                  "sharePct": 55.57,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新型显示器件检测产品",
+                  "sharePct": 44.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "MEMS探针卡",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "半导体存储器封装测试设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "半导体存储器老化修复设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "显示器Gamma调节设备",
+                    "category": "消费电子检测设备"
+                  },
+                  {
+                    "name": "显示器Mura补偿设备",
+                    "category": "消费电子检测设备"
+                  },
+                  {
+                    "name": "显示器光学检测设备",
+                    "category": "消费电子检测设备"
+                  }
+                ],
+                "knownProducts": [
+                  "触摸屏触控测试机",
+                  "显示器Gamma调节设备",
+                  "显示器Mura补偿设备",
+                  "显示器光学检测设备",
+                  "显示器老化设备",
+                  "MEMS探针卡",
+                  "半导体存储器封装测试设备",
+                  "半导体存储器老化修复设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "精智达的半导体存储器件测试（55.57%）覆盖范围较宽，其中能够承载MEMS探针卡、半导体存储器封装测试设备、半导体存储器老化修复设备，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国产存储测试设备龙头，深度绑定长鑫存储，受益于DRAM国产化及HBM测试需求增长。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 16115,
+            "stockCode": "601133.SH",
+            "stockName": "柏诚股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内洁净室龙头，深度绑定长鑫、长存，是两大存储厂扩产周期中弹性最大的受益标的之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601133.SH",
+              "companyName": "柏诚股份",
+              "companyProfile": "公司是一家面向全球高科技产业的洁净系统集成解决方案高价值服务提供商。经过30余年的发展沉淀，公司在跨行业、超大洁净面积、超高洁净度控制等关键技术和标杆项目实施方面拥有领先优势。公司总部位于中国无锡，拥有建筑行业设计甲级、建筑施工总承包壹级、机电施工总承包壹级等顶级资质，设有两大事业群及食药事业部。在越南、泰国、马来西亚、新加坡等多个国家和地区设有海外子公司，配套自主专业设计院、智能制造中心和过滤产品生产基地，构建起覆盖设计、采购、制造、施工、调试及系统验证的EPFC整体交付能力。公司聚焦半导体、新型显示、电子与能源技术、数据中心等高科技产业，以及生命科学、生物医药、食品营养品等生命健康产业领域，致力于为最具技术要求的客户提供从概念设计、项目实施到整体交付的全生命周期服务。依托精细化管理体系与良好的客户口碑，公司与国内外各领域领先企业建立长期稳定合作关系，累计交付超800个中高端项目，洁净生产面积超1000万㎡，多次荣获鲁班奖、国家优质工程奖、詹天佑奖等国家级荣誉。公司致力于推动行业转型与创新突破，获评“无锡市洁净室工程技术研发中心”，拥有各项专利、工法100余项；同时，广泛运用BIM技术、3D/4D可视化设计、模块化、数字化管理系统等工具，确保项目实施的精度、效率与安全。展望未来，公司将始终坚守“成就客户，为客户创造价值”的经营理念，秉持“以客户为本、以信用为本、多元包容、创造价值”的核心价值观，致力于可持续发展的实践。",
+              "profileSummary": "公司是一家面向全球高科技产业的洁净系统集成解决方案高价值服务提供商。公司聚焦半导体、新型显示、电子与能源技术、数据中心等高科技产业，以及生命科学、生物医药、食品营养品等生命健康产业领域，致力于为最具技术要求的客户提供从概念设计、项目实施到整体交付的全生命周期服务。",
+              "majorProducts": "二次配、机电工艺系统、洁净室系统集成、设计咨询",
+              "revenueComposition": "洁净室系统集成:42.53%;机电工艺系统:29.52%;二次配:27.67%;产品销售:0.14%;设计咨询:0.13%;其他业务:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "洁净室系统集成",
+                  "sharePct": 42.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "机电工艺系统",
+                  "sharePct": 29.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "二次配",
+                  "sharePct": 27.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "产品销售",
+                  "sharePct": 0.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设计咨询",
+                  "sharePct": 0.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "洁净室工程",
+                    "category": "无尘室工程"
+                  }
+                ],
+                "knownProducts": [
+                  "洁净室二次配系统工程",
+                  "洁净室工程",
+                  "洁净室工艺系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "柏诚股份实际经营中已有洁净室工程，与事件指向的国内洁净室龙头，深度绑定长鑫、长存，是两大存储厂扩产周期中弹性最大的受益标的之一能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在洁净室系统集成（42.53%）、机电工艺系统（29.52%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善供需缺口与产品价格，需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。产品报价、订单排期、产销率和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 16116,
+            "stockCode": "603929.SH",
+            "stockName": "亚翔集成",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "洁净室工程龙头，深度绑定美光等海外大厂，直接受益于全球存储巨头在新加坡等地的扩产。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603929.SH",
+              "companyName": "亚翔集成",
+              "companyProfile": "公司成立于2002年，2016年12月30日于上海证券交易所挂牌上市。公司以苏州为中国大陆总部，先后在中国上海、厦门、深圳、成都、重庆、武汉、新加坡分别设立分公司。公司遵循“专业、创新、领导、减废、责任”的经营理念，崇尚“人本管理，以人为本”的发展方针，倡导“专业化、职业化、国际化”的人才发展战略，已培养并形成了一支具有国际视野和较强专业知识技能的高素质人才队伍。公司拥有机电工程施工总承包一级资质，建筑机电安装工程专业承包一级资质，消防设施工程专业承包一级资质，压力管道的安装GC2级资质，压力容器的安装一级资质，电子与智能化工程专业承包二级资质，建筑装修装饰工程专业承包二级资质，钢结构工程专业承包三级资质，环保工程专业承包三级资质。公司以多年在半导体、光电、太阳能、生物制药、食品、医院、商用建筑等不同领域建造的成功经验和雄厚实力，为客户提供了专业化的工程技术服务。作为业界的领导厂商，公司不断实现在工程技术领域新的突破与发展。一直以来，公司拥有行业内领先的研发中心，具有丰富设计经验的实力型研发团队，依据客户需求推陈出新，主动为客户着想、降低建厂成本、缩短试产时间、为客户提高产品良率、防止交叉污染、提高生产环境稳定性和安全性、降低厂房运转成本等很多方面填补了传统工程服务中的真空地带，在业内率先引入CFD计算流体力学分析应用和AMC等先进技术，为客户提供了最佳解决方案，让客户工程的多重价值再生，实现了公司经营的永续发展。",
+              "profileSummary": "公司以多年在半导体、光电、太阳能、生物制药、食品、医院、商用建筑等不同领域建造的成功经验和雄厚实力，为客户提供了专业化的工程技术服务。一直以来，公司拥有行业内领先的研发中心，具有丰富设计经验的实力型研发团队，依据客户需求推陈出新，主动为客户着想、降低建厂成本、缩短试产时间、为客户提高产品良率、防止交叉污染、提高生产环境稳定性和安全性、降低厂房运转成本等很多方面填补了传统工程服务中的真空地带，在业内率先引入CFD计算流体力学分析应用和A…",
+              "majorProducts": "清洁技术厂房",
+              "revenueComposition": "洁净室系统集成工程施工收入:95.62%;设备销售:2.55%;其他工程施工收入:1.12%;其他业务:0.71%",
+              "revenueSegments": [
+                {
+                  "name": "洁净室系统集成工程施工收入",
+                  "sharePct": 95.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备销售",
+                  "sharePct": 2.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他工程施工收入",
+                  "sharePct": 1.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "洁净室工程",
+                    "category": "无尘室工程"
+                  }
+                ],
+                "knownProducts": [
+                  "低释气库板",
+                  "洁净室工程"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "亚翔集成拥有洁净室工程，其产业链位置与洁净室工程龙头，深度绑定美光等海外大厂，直接受益于全球存储巨头在新加坡等地的扩产一致；当前的洁净室系统集成工程施工收入（95.62%）、设备销售（2.55%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "5条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "3只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

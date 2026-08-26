@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26741",
@@ -9,10 +9,10 @@
     "date": "2026-07-01"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 6,
-    "mappedStockCount": 4,
-    "unmappedStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 4,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 3,
     "stocks": [
       {
         "sourceRowNumber": 11708,
@@ -20,8 +20,8 @@
         "stockName": "长电科技",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 4
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 11709,
@@ -29,31 +29,13 @@
         "stockName": "通富微电",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 4
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 11710,
         "stockCode": "002185.SZ",
         "stockName": "华天科技",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 4
-      },
-      {
-        "sourceRowNumber": 11711,
-        "stockCode": "00522.HK",
-        "stockName": "ASMPT",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 11712,
-        "stockCode": "ASX.N",
-        "stockName": "日月光",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -66,23 +48,32 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 3
+        "anchorProductCount": 2
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 11711,
-        "stockCode": "00522.HK",
-        "stockName": "ASMPT",
-        "rating": "★★★★",
+        "sourceRowNumber": 11708,
+        "stockCode": "600584.SH",
+        "stockName": "长电科技",
+        "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       },
       {
-        "sourceRowNumber": 11712,
-        "stockCode": "ASX.N",
-        "stockName": "日月光",
+        "sourceRowNumber": 11709,
+        "stockCode": "002156.SZ",
+        "stockName": "通富微电",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 11710,
+        "stockCode": "002185.SZ",
+        "stockName": "华天科技",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -94,109 +85,12 @@
     "candidateCoreProductCount": 8,
     "selectedCoreProductCount": 2,
     "selectedCompanyCoreProductCount": 2,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 3,
-    "downstreamCandidateCount": 3,
-    "shownUpstreamCount": 3,
-    "shownDownstreamCount": 3
+    "level7ProductCount": 31,
+    "relatedIndustryCandidateCount": 6,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140034108",
-        "name": "气缸",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033592"
-        ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140008574",
-        "name": "电机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033592"
-        ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140041932",
-        "name": "电气安装板",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033592"
-        ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140033592",
-        "name": "芯片分选机",
-        "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 半导体测试设备 > 芯片分选机",
-        "industryPath": [
-          "电子",
-          "半导体",
-          "半导体设备",
-          "半导体设备",
-          "半导体测试设备",
-          "芯片分选机"
-        ],
-        "level5Industry": {
-          "code": "1200000577",
-          "name": "半导体设备"
-        },
-        "level6Industry": {
-          "code": "1200003333",
-          "name": "半导体测试设备"
-        },
-        "level7Product": {
-          "code": "1140033592",
-          "name": "芯片分选机"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300604.SZ",
-            "stockName": "长川科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 3,
-        "relevanceScore": 8,
-        "strongRelevanceScore": 5,
-        "matchedTerms": [
-          "半导体设备",
-          "半导体",
-          "电子"
-        ]
-      },
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140200855",
         "name": "数模混合测试机",
@@ -222,18 +116,57 @@
           "name": "数模混合测试机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300604.SZ",
             "stockName": "长川科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 8,
+        "strongRelevanceScore": 5,
+        "matchedTerms": [
+          "半导体设备",
+          "半导体",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140033592",
+        "name": "芯片分选机",
+        "hierarchyPath": "电子 > 半导体 > 半导体设备 > 半导体设备 > 半导体测试设备 > 芯片分选机",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "半导体设备",
+          "半导体设备",
+          "半导体测试设备",
+          "芯片分选机"
+        ],
+        "level5Industry": {
+          "code": "1200000577",
+          "name": "半导体设备"
+        },
+        "level6Industry": {
+          "code": "1200003333",
+          "name": "半导体测试设备"
+        },
+        "level7Product": {
+          "code": "1140033592",
+          "name": "芯片分选机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "300604.SZ",
+            "stockName": "长川科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 8,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -243,54 +176,546 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140008622",
-        "name": "芯片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033592"
+        "code": "1200001284",
+        "name": "IC封测",
+        "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 9,
+        "relevanceScore": 46,
+        "stocks": [
+          {
+            "stockCode": "688372.SH",
+            "stockName": "伟测科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603005.SH",
+            "stockName": "晶方科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688403.SH",
+            "stockName": "汇成股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
+        "products": [
+          {
+            "code": "1140024047",
+            "name": "芯片测试",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > 芯片测试",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688372.SH",
+                "stockName": "伟测科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "芯片测试"
+            ]
+          },
+          {
+            "code": "1140174015",
+            "name": "MEMS传感器芯片封装",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > MEMS传感器芯片封装",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603005.SH",
+                "stockName": "晶方科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140174016",
+            "name": "MEMS传感器芯片测试",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > MEMS传感器芯片测试",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603005.SH",
+                "stockName": "晶方科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140174014",
+            "name": "传感器芯片封装",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > 传感器芯片封装",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603005.SH",
+                "stockName": "晶方科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140024044",
-        "name": "芯片设计",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033592"
+        "code": "1200000556",
+        "name": "激光专用设备",
+        "description": "激光专用设备指利用激光进行切割、焊接等加工的设备。因契合制造业升级与国产替代趋势，兼具高精度、高效率优势，且下游覆盖新能源、半导体等高景气领域，业绩增长潜力大，故备受A股市场关注。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 8,
+        "relevanceScore": 94,
+        "stocks": [
+          {
+            "stockCode": "688170.SH",
+            "stockName": "德龙激光",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688630.SH",
+            "stockName": "芯碁微装",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
+        "products": [
+          {
+            "code": "1140165070",
+            "name": "半导体晶圆激光设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > 半导体晶圆激光设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688170.SH",
+                "stockName": "德龙激光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "半导体设备",
+              "激光加工设备"
+            ]
+          },
+          {
+            "code": "1140165069",
+            "name": "LED晶圆激光设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > LED晶圆激光设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688170.SH",
+                "stockName": "德龙激光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "激光加工设备"
+            ]
+          },
+          {
+            "code": "1140165071",
+            "name": "LCD激光加工设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > LCD激光加工设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688170.SH",
+                "stockName": "德龙激光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "激光加工设备"
+            ]
+          },
+          {
+            "code": "1140165072",
+            "name": "OLED激光加工设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > OLED激光加工设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688170.SH",
+                "stockName": "德龙激光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "激光加工设备"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 13,
+    "mappedStockCount": 9,
+    "unmappedStockCount": 4,
+    "level7ProductCount": 31,
+    "candidateIndustryCount": 6,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 11707,
+        "stockCode": "688362.SH",
+        "stockName": "甬矽电子",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140033740",
-        "name": "半导体自动封装系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033592"
+        "sourceRowNumber": 11708,
+        "stockCode": "600584.SH",
+        "stockName": "长电科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 11709,
+        "stockCode": "002156.SZ",
+        "stockName": "通富微电",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 11710,
+        "stockCode": "002185.SZ",
+        "stockName": "华天科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 11713,
+        "stockCode": "688403.SH",
+        "stockName": "汇成股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 11714,
+        "stockCode": "688372.SH",
+        "stockName": "伟测科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 11715,
+        "stockCode": "603005.SH",
+        "stockName": "晶方科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 11716,
+        "stockCode": "300604.SZ",
+        "stockName": "长川科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 11717,
+        "stockCode": "688630.SH",
+        "stockName": "芯碁微装",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 11718,
+        "stockCode": "688170.SH",
+        "stockName": "德龙激光",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 11719,
+        "stockCode": "688200.SH",
+        "stockName": "华峰测控",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 11720,
+        "stockCode": "603061.SH",
+        "stockName": "金海通",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 11721,
+        "stockCode": "603203.SH",
+        "stockName": "快克智能",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001284",
+        "name": "IC封测",
+        "description": "IC封测指芯片封装与测试，是半导体制造后端关键环节。因AI算力需求爆发及国产替代加速，行业景气度回升；加上先进封装技术突破，成为提升芯片性能的核心手段，故备受资本市场关注。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 9,
+        "relevanceScore": 46,
+        "stocks": [
+          {
+            "stockCode": "688372.SH",
+            "stockName": "伟测科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603005.SH",
+            "stockName": "晶方科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688403.SH",
+            "stockName": "汇成股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
+        "products": [
+          {
+            "code": "1140024047",
+            "name": "芯片测试",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > 芯片测试",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688372.SH",
+                "stockName": "伟测科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "芯片测试"
+            ]
+          },
+          {
+            "code": "1140174015",
+            "name": "MEMS传感器芯片封装",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > MEMS传感器芯片封装",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603005.SH",
+                "stockName": "晶方科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140174016",
+            "name": "MEMS传感器芯片测试",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > MEMS传感器芯片测试",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603005.SH",
+                "stockName": "晶方科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140174014",
+            "name": "传感器芯片封装",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC封测 > 芯片封装测试 > 传感器芯片封装",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603005.SH",
+                "stockName": "晶方科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000556",
+        "name": "激光专用设备",
+        "description": "激光专用设备指利用激光进行切割、焊接等加工的设备。因契合制造业升级与国产替代趋势，兼具高精度、高效率优势，且下游覆盖新能源、半导体等高景气领域，业绩增长潜力大，故备受A股市场关注。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 8,
+        "relevanceScore": 94,
+        "stocks": [
+          {
+            "stockCode": "688170.SH",
+            "stockName": "德龙激光",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688630.SH",
+            "stockName": "芯碁微装",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140165070",
+            "name": "半导体晶圆激光设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > 半导体晶圆激光设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688170.SH",
+                "stockName": "德龙激光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "半导体设备",
+              "激光加工设备"
+            ]
+          },
+          {
+            "code": "1140165069",
+            "name": "LED晶圆激光设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > LED晶圆激光设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688170.SH",
+                "stockName": "德龙激光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "激光加工设备"
+            ]
+          },
+          {
+            "code": "1140165071",
+            "name": "LCD激光加工设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > LCD激光加工设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688170.SH",
+                "stockName": "德龙激光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "激光加工设备"
+            ]
+          },
+          {
+            "code": "1140165072",
+            "name": "OLED激光加工设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > OLED激光加工设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688170.SH",
+                "stockName": "德龙激光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "激光加工设备"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -305,10 +730,917 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 15,
+    "eligibleSourceRowCount": 13,
+    "totalStockCount": 13,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 0,
+    "excludedNonAShareCount": 2,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 13,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 11707,
+            "stockCode": "688362.SH",
+            "stockName": "甬矽电子",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内先进封装核心厂商，公告拟投资103亿元加码高端封装，是本次用户问题的核心标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688362.SH",
+              "companyName": "甬矽电子",
+              "companyProfile": "公司于2022年11月在上交所科创板上市。公司成立于2017年11月，主要从事集成电路封装和测试方案开发、不同种类集成电路芯片的封装加工和测试。公司以中高端封装及先进封装技术和产品为主，一期厂区占地面积约126亩，总投资约45亿元，主要生产QFN/DFN、WBLGA、WBBGA等中高端先进封装形式产品。二期总占地500亩，总投资111亿，以先进晶圆级封装为主，技术涉及Fan-in WLCSP、Fan-out WLP、FCCSP、FCBGA、2D堆叠POP及2.5D/3D先进封装等。作为专业从事集成电路封测的高新技术企业，注重新技术的开发，重视研发投入。核心团队均有国内外行业龙头封测企业从业经历，具备丰富的行业经验。工厂具备完善的IT系统及生产自动化能力，公司产品结构优良，已成功进入国内外行业知名设计公司供应链。",
+              "profileSummary": "公司以中高端封装及先进封装技术和产品为主，一期厂区占地面积约126亩，总投资约45亿元，主要生产QFN/DFN、WBLGA、WBBGA等中高端先进封装形式产品。作为专业从事集成电路封测的高新技术企业，注重新技术的开发，重视研发投入。",
+              "majorProducts": "扁平无引脚封装产品（QFN/DFN）、高密度细间距凸点倒装产品（FC类产品）、微机电系统传感器（MEMS）、系统级封装产品（SiP）",
+              "revenueComposition": "系统级封装产品:39.23%;扁平无引脚封装产品:38.12%;高密度细间距凸点倒装产品:16.12%;晶圆级封测产品:4.44%;其他业务:1.61%;其他产品:0.47%",
+              "revenueSegments": [
+                {
+                  "name": "系统级封装产品",
+                  "sharePct": 39.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "扁平无引脚封装产品",
+                  "sharePct": 38.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高密度细间距凸点倒装产品",
+                  "sharePct": 16.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "晶圆级封测产品",
+                  "sharePct": 4.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 0.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "微机电系统传感器(MEMS)",
+                  "凸块加工",
+                  "扁平无引脚封装(QFN/DFN)",
+                  "系统级封装(SiP)",
+                  "高密度细间距凸点倒装(FC类产品)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "甬矽电子的事件主线是：国内先进封装核心厂商，公告拟投资103亿元加码高端封装，是本次用户问题的核心标的，但当前收入结构尚未体现其重要性，收入重心仍是系统级封装产品（39.23%）、扁平无引脚封装产品（38.12%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，并在订单、收入确认、产品结构和毛利率变化上留下可核验痕迹。若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 11708,
+            "stockCode": "600584.SH",
+            "stockName": "长电科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内封测龙头，拟投资78亿元建设高端先进封测工厂，与甬矽电子形成行业扩产共振。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600584.SH",
+              "companyName": "长电科技",
+              "companyProfile": "公司是全球领先的集成电路制造与技术服务提供商，向全球半导体客户提供全方位、一站式芯片成品制造解决方案，涵盖微系统集成、设计仿真、晶圆中测、芯片及器件封装、成品测试、产品认证以及全球直运等服务。公司始终秉持“为智慧生活提供先进、可靠的集成电路器件成品制造技术和服务”的使命，拥有先进和全面的芯片成品制造技术，包括晶圆级封装(WLP)、2.5D/3D封装、系统级封装(SiP)、倒装芯片封装、引线键合封装及传统封装先进化解决方案，广泛应用于汽车电子、人工智能、高性能计算、高密度存储、网络通信、智能终端、工业与医疗、功率与能源等领域，在中国、韩国和新加坡设有八大生产基地和两大研发中心，并在20多个国家和地区设有业务机构，为客户提供紧密的技术合作与高效的产业链支持。",
+              "profileSummary": "公司是全球领先的集成电路制造与技术服务提供商，向全球半导体客户提供全方位、一站式芯片成品制造解决方案，涵盖微系统集成、设计仿真、晶圆中测、芯片及器件封装、成品测试、产品认证以及全球直运等服务。公司始终秉持“为智慧生活提供先进、可靠的集成电路器件成品制造技术和服务”的使命，拥有先进和全面的芯片成品制造技术，包括晶圆级封装(WLP)、2.5D/3D封装、系统级封装(SiP)、倒装芯片封装、引线键合封装及传统封装先进化解决方案，广泛应用于汽…",
+              "majorProducts": "芯片封测",
+              "revenueComposition": "芯片封测:99.6%;其他业务:0.4%",
+              "revenueSegments": [
+                {
+                  "name": "芯片封测",
+                  "sharePct": 99.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "共封装光学(CPO)封装",
+                  "晶圆测试",
+                  "芯片封装",
+                  "芯片测试"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长电科技当前收入集中在芯片封测（99.6%）、其他业务（0.4%），而国内封测龙头，拟投资78亿元建设高端先进封测工厂，与甬矽电子形成行业扩产共振所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响产能释放与行业供给变化预期，业务端仍需沿“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”传导后才能确认。在建工程转固、产能利用率、产销率、库存和产品价格如果持续改善，相关业务可能从产业布局转为实际增量；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 11709,
+            "stockCode": "002156.SZ",
+            "stockName": "通富微电",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内封测头部企业，积极布局Chiplet、2.5D/3D等顶尖封装技术，受益于AI及HPC需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002156.SZ",
+              "companyName": "通富微电",
+              "companyProfile": "公司自1997年10月创立以来，便凭借卓越的技术实力和深厚的行业经验，在半导体封装测试领域崭露头角。2007年8月，公司成功在深圳证券交易所上市，标志着其资本市场之旅的辉煌开端。经过多年的稳健发展与战略并购，公司已成长为一家具有全球影响力的本土半导体跨国企业，不仅稳居中国集成电路封装测试行业的领先地位，更在全球范围内布局了九大生产基地，覆盖中国南通、合肥、厦门、苏州以及马来西亚槟城等地。值得一提的是，国家集成电路产业基金对公司的发展给予了高度认可与支持。自2018年成为公司股东以来，一直稳居第二大股东之位。而在2022年，国家集成电路二期基金更是积极参与公司定增，进一步彰显了公司在业界的独特地位和广阔前景。至此，公司成为A股上市公司中唯一一家同时获得国家集成电路一期和二期基金共同投资的封测公司，这无疑为公司未来的快速发展注入了强劲动力。在产品应用方面，公司产品广泛应用于人工智能、高性能计算、大数据存储、显示驱动、5G等网络通讯、信息终端、消费终端、物联网、汽车电子、工业控制等领域，为全球客户提供了高效、可靠的封装测试解决方案。凭借卓越的产品品质和服务质量，公司在同行业排名中稳居前列，彰显了其在全球半导体产业链中的核心竞争力和重要地位。",
+              "profileSummary": "经过多年的稳健发展与战略并购，公司已成长为一家具有全球影响力的本土半导体跨国企业，不仅稳居中国集成电路封装测试行业的领先地位，更在全球范围内布局了九大生产基地，覆盖中国南通、合肥、厦门、苏州以及马来西亚槟城等地。凭借卓越的产品品质和服务质量，公司在同行业排名中稳居前列，彰显了其在全球半导体产业链中的核心竞争力和重要地位。",
+              "majorProducts": "5G 等网络通讯、大数据存储、高性能计算、工业控制、汽车电子、人工智能、物联网、显示驱动、消费终端、信息终端",
+              "revenueComposition": "集成电路封装测试:97.59%;模具及材料销售:2.41%",
+              "revenueSegments": [
+                {
+                  "name": "集成电路封装测试",
+                  "sharePct": 97.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "模具及材料销售",
+                  "sharePct": 2.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "半导体封装模具",
+                  "晶圆测试",
+                  "芯片封装",
+                  "芯片测试"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "通富微电的业务范围能够覆盖国内封测头部企业，积极布局Chiplet、2.5D/3D等顶尖封装技术，受益于AI及HPC需求所处的产业环节，但当前集成电路封装测试（97.59%）、模具及材料销售（2.41%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”完成兑现，并在终端销量、客户采购量、公司出货和相关产品收入增速上形成持续改善；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 11710,
+            "stockCode": "002185.SZ",
+            "stockName": "华天科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内主要封测厂商，拥有FC、TSV、Fan-Out、3D等先进封装技术，积极扩产应对市场需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002185.SZ",
+              "companyName": "华天科技",
+              "companyProfile": "公司的主营业务为集成电路封装测试，目前公司集成电路封装产品主要有DIP/SDIP、SOT、SOP、SSOP、TSSOP/ETSSOP、QFP/LQFP/TQFP、QFN/DFN、BGA/LGA、FC、MCM(MCP)、SiP、WLP、TSV、Bumping、MEMS、Fan-Out等多个系列。产品主要应用于计算机、网络通讯、消费电子及智能移动终端、物联网、工业自动化控制、汽车电子等电子整机和智能化领域。公司为专业的集成电路封装测试代工企业，经营模式为根据客户要求及行业技术标准和规范，为客户提供专业的集成电路封装测试服务。公司不断加强先进封装技术和产品的研发力度，加大研发投入，完善以华天西安为主体的研发仿真平台建设，依托国家级企业技术中心、甘肃省微电子工程技术研究中心、甘肃省微电子工程实验室等研发验证平台，通过实施国家科技重大专项02专项等科技创新项目以及新产品、新技术、新工艺的不断研究开发，随着公司进一步加大技术创新力度，公司的技术竞争优势将不断提升。",
+              "profileSummary": "公司的主营业务为集成电路封装测试，目前公司集成电路封装产品主要有DIP/SDIP、SOT、SOP、SSOP、TSSOP/ETSSOP、QFP/LQFP/TQFP、QFN/DFN、BGA/LGA、FC、MCM(MCP)、SiP、WLP、TSV、Bumping、MEMS、Fan-Out等多个系列。公司不断加强先进封装技术和产品的研发力度，加大研发投入，完善以华天西安为主体的研发仿真平台建设，依托国家级企业技术中心、甘肃省微电子工程技术研究…",
+              "majorProducts": "倒装芯片封装、基板封装、晶圆级封装、凸块封装、微机电系统及传感器、系统级封装、引线框封装",
+              "revenueComposition": "集成电路产品:99.98%;LED:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "集成电路产品",
+                  "sharePct": 99.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "LED",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "共封装光学(CPO)封装",
+                  "晶圆测试",
+                  "芯片封装",
+                  "芯片测试"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华天科技的事件主线是：国内主要封测厂商，拥有FC、TSV、Fan-Out、3D等先进封装技术，积极扩产应对市场需求，但当前收入结构尚未体现其重要性，收入重心仍是集成电路产品（99.98%）、LED（0.02%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，产能释放与行业供给变化需要沿“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”传导，并在在建工程转固、产能利用率、产销率、库存和产品价格上留下可核验痕迹。若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 11716,
+            "stockCode": "300604.SZ",
+            "stockName": "长川科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国产半导体测试设备龙头，受益于AI芯片复杂度提升带来的测试设备需求爆发。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300604.SZ",
+              "companyName": "长川科技",
+              "companyProfile": "公司成立于2008年4月，是一家专注于集成电路封装和晶圆测试装备的高新技术企业。公司总部坐落于浙江省杭州市滨江区创智街500号，研发人员占比50%以上。公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。公司累计拥有海内外授权专利超1,400项，其中发明专利超400项，先后被认定为国家级高新技术企业、国家知识产权优势企业、专精特新“小巨人”企业。",
+              "profileSummary": "公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。",
+              "majorProducts": "C6系列、Cfocus、D9000Soc测试机系列、HEXA、NanoX-6000、NanoX-8000、SLT系列、大功率测试机系列、老化测试机系列、三温平移式分选机系列、数模混合测试机系列、重力式分选机系列、转塔式分选机系列",
+              "revenueComposition": "测试机:60.53%;分选机:29.64%;其他:9.83%",
+              "revenueSegments": [
+                {
+                  "name": "测试机",
+                  "sharePct": 60.53,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "分选机",
+                  "sharePct": 29.64,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "数模混合测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "芯片分选机",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "AOI光学检测仪",
+                  "数模混合测试机",
+                  "芯片分选机"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长川科技与事件的关系已经落在存量主业，而非远期概念：测试机（60.53%）、分选机（29.64%）合计约占收入的90.17%。公司在产业链中的具体抓手是：国产半导体测试设备龙头，受益于AI芯片复杂度提升带来的测试设备需求爆发。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 8,
+        "stocks": [
+          {
+            "sourceRowNumber": 11713,
+            "stockCode": "688403.SH",
+            "stockName": "汇成股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内显示驱动芯片封测龙头，积极布局2.5D/3D先进封装，是国产算力CoWoS封装环节的重要参与者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688403.SH",
+              "companyName": "汇成股份",
+              "companyProfile": "公司是集成电路高端先进封装测试服务商，目前聚焦于显示驱动芯片领域，具有领先的行业地位。公司主营业务以前段金凸块制造(Gold Bumping)为核心，并综合晶圆测试(CP)及后段玻璃覆晶封装(COG)和薄膜覆晶封装(COF)环节，形成显示驱动芯片全制程封装测试综合服务能力。公司的封装测试服务主要应用于LCD、AMOLED等各类主流面板的显示驱动芯片，所封装测试的芯片系日常使用的智能手机、智能穿戴、高清电视、笔记本电脑、平板电脑等各类终端产品得以实现画面显示的核心部件。公司是中国境内最早具备金凸块制造能力及最早导入12吋晶圆金凸块产线并实现量产的显示驱动芯片先进封测企业之一，具备8吋及12吋晶圆全制程封装测试能力。公司在显示驱动芯片封装测试领域深耕多年，凭借先进的封测技术、稳定的产品良率与优质的服务能力，积累了丰富的客户资源。公司服务的客户包括联咏科技、天钰科技、瑞鼎科技、奇景光电等全球知名显示驱动芯片设计企业，所封测芯片已主要应用于京东方、友达光电等知名厂商的面板。公司以成为国内领先、世界一流的高端芯片封装测试服务商为愿景，以提升中国集成电路产业的全球竞争力为使命。未来，公司将积极扩充12吋大尺寸晶圆的先进封装测试服务能力，保持行业及产品的领先地位，同时将进行持续的研发投入，不断拓宽封测服务的产品应用领域，积极拓展以CMOS影像传感器、车载电子等为代表的新兴产品领域。",
+              "profileSummary": "公司主营业务以前段金凸块制造(Gold Bumping)为核心，并综合晶圆测试(CP)及后段玻璃覆晶封装(COG)和薄膜覆晶封装(COF)环节，形成显示驱动芯片全制程封装测试综合服务能力。未来，公司将积极扩充12吋大尺寸晶圆的先进封装测试服务能力，保持行业及产品的领先地位，同时将进行持续的研发投入，不断拓宽封测服务的产品应用领域，积极拓展以CMOS影像传感器、车载电子等为代表的新兴产品领域。",
+              "majorProducts": "薄膜覆晶封装（COF）、玻璃覆晶封装（COG）、金凸块制造（Gold Bumping）、晶圆测试（CP）",
+              "revenueComposition": "显示驱动芯片封测:88.56%;其他业务:11.44%",
+              "revenueSegments": [
+                {
+                  "name": "显示驱动芯片封测",
+                  "sharePct": 88.56,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 11.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "显示驱动晶圆测试",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "显示驱动芯片封装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "显示驱动芯片测试",
+                    "category": "芯片封装测试"
+                  }
+                ],
+                "knownProducts": [
+                  "显示驱动晶圆测试",
+                  "显示驱动芯片封装",
+                  "显示驱动芯片测试"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "汇成股份的相关业务已决定公司大部分经营表现：显示驱动芯片封测占收入的88.56%。公司与事件的直接业务联系是：国内显示驱动芯片封测龙头，积极布局2.5D/3D先进封装，是国产算力CoWoS封装环节的重要参与者，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 11714,
+            "stockCode": "688372.SH",
+            "stockName": "伟测科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内领先的第三方芯片测试企业，受益于先进封装带来的测试需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688372.SH",
+              "companyName": "伟测科技",
+              "companyProfile": "公司成立于2016年，2022年10月在上海证券交易所科创板上市。公司总部位于上海市浦东新区，拥有上海、无锡、南京和深圳四大测试基地，上海和天津两个研发中心。公司先后被评为国家级高新技术企业、国家级“专精特新”小巨人企业、浦东新区企业研发机构。公司是第三方集成电路测试行业中规模最大的内资企业之一，主营业务包括晶圆测试、芯片成品测试以及与集成电路测试相关的配套服务。公司坚持“以中高端晶圆及成品测试为核心，积极拓展工业级、车规级及高算力产品测试”的发展策略，聚焦高算力芯片(CPU、GPU、AI、FPGA)、先进架构及先进封装芯片(SoC、Chiplet、SiP)、高可靠性芯片(车规级、工业级)的测试需求，重点服务于我国的人工智能、云计算、物联网、5G、高端装备、新能源电动车、自动驾驶、高端消费电子等战略新兴行业的发展。公司的技术实力、服务品质、产能规模获得了行业的高度认可，积累了广泛的客户资源。公司客户涵盖芯片设计、制造、封装、IDM等类型的企业，其中不乏紫光展锐、中兴微、晶晨股份、兆易创新、复旦微电、比特大陆、安路科技、甬矽电子、卓胜微、普冉股份、中芯国际、瑞芯微、纳芯微、集创北方、翱捷科技等国内外知名厂商。",
+              "profileSummary": "公司是第三方集成电路测试行业中规模最大的内资企业之一，主营业务包括晶圆测试、芯片成品测试以及与集成电路测试相关的配套服务。公司坚持“以中高端晶圆及成品测试为核心，积极拓展工业级、车规级及高算力产品测试”的发展策略，聚焦高算力芯片(CPU、GPU、AI、FPGA)、先进架构及先进封装芯片(SoC、Chiplet、SiP)、高可靠性芯片(车规级、工业级)的测试需求，重点服务于我国的人工智能、云计算、物联网、5G、高端装备、新能源电动车、自…",
+              "majorProducts": "晶圆测试、其他服务、芯片成品测试",
+              "revenueComposition": "晶圆测试:54.7%;芯片成品测试:40.22%;其他业务:5.09%",
+              "revenueSegments": [
+                {
+                  "name": "晶圆测试",
+                  "sharePct": 54.7,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "芯片成品测试",
+                  "sharePct": 40.22,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "芯片测试",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "晶圆测试",
+                    "category": "芯片封装测试"
+                  }
+                ],
+                "knownProducts": [
+                  "晶圆测试",
+                  "芯片测试"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "伟测科技的相关业务已决定公司大部分经营表现：晶圆测试占收入的54.7%。公司与事件的直接业务联系是：国内领先的第三方芯片测试企业，受益于先进封装带来的测试需求增长，真正的增量取决于终端需求与渗透率变化，并需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，终端销量、客户采购量、公司出货和相关产品收入增速需要显示公司获得超越行业的增量。终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 11715,
+            "stockCode": "603005.SH",
+            "stockName": "晶方科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是全球晶圆级TSV封装技术的领先者，技术可应用于3D堆叠、异质集成等先进封装领域。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603005.SH",
+              "companyName": "晶方科技",
+              "companyProfile": "公司2005年6月成立于苏州，是一家致力于开发与创新新技术，为客户提供可靠的，小型化，高性能和高性价比的半导体封装量产服务商。公司的CMOS影像传感器晶圆级封装技术，彻底改变了封装的世界，使高性能，小型化的手机相机模块成为可能。这一价值已经使之成为有史以来应用最广泛的封装技术，现今已有近50％的影像传感器芯片可使用此技术，大量应用于智能电话，平板电脑，可穿戴电子等各类电子产品。公司及子公司Optiz Inc.将持续专注于技术创新。近十年来，公司已经成为技术开发与创新、提供优质量产服务的领导者。随着公司不断发展壮大，公司设立美国子公司Optiz Inc.，是在影像传感器微型化的增强与分析领域的领导者；公司购买智瑞达资产，是新一代半导体封装技术的创新者。公司的使命是创新和发展半导体的互连和成像技术，为我们的客户、合作伙伴、员工和股东创造价值。",
+              "profileSummary": "公司2005年6月成立于苏州，是一家致力于开发与创新新技术，为客户提供可靠的，小型化，高性能和高性价比的半导体封装量产服务商。这一价值已经使之成为有史以来应用最广泛的封装技术，现今已有近50％的影像传感器芯片可使用此技术，大量应用于智能电话，平板电脑，可穿戴电子等各类电子产品。",
+              "majorProducts": "发光芯片(LED)、射频识别芯片(RFID)、微机电系统(MEMS)、影像传感器(CIS)",
+              "revenueComposition": "芯片封装:77.02%;光学器件:21.96%;设计:0.78%;其他业务:0.24%",
+              "revenueSegments": [
+                {
+                  "name": "芯片封装",
+                  "sharePct": 77.02,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "光学器件",
+                  "sharePct": 21.96,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "设计",
+                  "sharePct": 0.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "MEMS传感器芯片封装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "MEMS传感器芯片测试",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "传感器芯片封装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "传感器芯片测试",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "晶圆级微型光学器件(WLO)",
+                    "category": "其他光电子器件"
+                  }
+                ],
+                "knownProducts": [
+                  "晶圆级微型光学器件(WLO)",
+                  "MEMS传感器芯片封装",
+                  "MEMS传感器芯片测试",
+                  "传感器芯片封装",
+                  "传感器芯片测试"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "晶方科技与事件的关系已经落在存量主业，而非远期概念：芯片封装（77.02%）、光学器件（21.96%）合计约占收入的98.98%。公司在产业链中的具体抓手是：公司是全球晶圆级TSV封装技术的领先者，技术可应用于3D堆叠、异质集成等先进封装领域。本次事件若改变技术商业化与产品迭代速度，影响会沿着“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；客户认证、量产良率、订单规模、产品收入占比和毛利率比主题热度更有解释力。若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 11717,
+            "stockCode": "688630.SH",
+            "stockName": "芯碁微装",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "PCB及泛半导体直写光刻设备龙头，其LDI设备可用于先进封装RDL等环节，受益于封测厂扩产。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688630.SH",
+              "companyName": "芯碁微装",
+              "companyProfile": "公司成立于2015年6月，坐落于安徽省合肥市高新区集成电路产业基地。公司专业从事以微纳直写光刻为技术核心的直接成像设备及直写光刻设备的研发和生产。公司坚持自主研发与创新，拥有完整的自主知识产权。凭借团队领先的研发水平，公司目前拥有知识产权两百余项，多次获得“安徽省专利金奖”，牵头起草PCB直接成像设备国家标准并发布。依托核心技术，卓越性能，科技创新等强大的核心竞争力，公司荣获“安徽省五一劳动奖”、“安徽省优秀民营企业”、“国家高新技术企业”、“工信部专精特新‘小巨人’企业”、“2023年度中国电子电路行业专用设备和仪器企业第四名”等多项殊荣，并多次承接国家、省、市级重大专项的研发项目，与多家知名高等院校建立长期产学研合作。公司建成超70000平方米的集研发、生产、办公于一体的智能化研发制造基地，我们将继续坚持战略创新、技术创新、机制创新和人才创新，用创新和技术创造更多的社会价值和商业价值。",
+              "profileSummary": "凭借团队领先的研发水平，公司目前拥有知识产权两百余项，多次获得“安徽省专利金奖”，牵头起草PCB直接成像设备国家标准并发布。依托核心技术，卓越性能，科技创新等强大的核心竞争力，公司荣获“安徽省五一劳动奖”、“安徽省优秀民营企业”、“国家高新技术企业”、“工信部专精特新‘小巨人’企业”、“2023年度中国电子电路行业专用设备和仪器企业第四名”等多项殊荣，并多次承接国家、省、市级重大专项的研发项目，与多家知名高等院校建立长期产学研合作。",
+              "majorProducts": "IC掩膜版制版、IC制造直写光刻设备、OLED直写光刻设备自动线系统、PCB直接成像设备及自动线系统、泛半导体直写光刻设备及自动线系统、激光直接成像(LDI)设备、丝网印刷激光直接制版设备、直接成像联机自动线系统、紫外LED直接成像(UVLED-DI)设备",
+              "revenueComposition": "PCB系列:76.69%;泛半导体系列:16.58%;租赁及其他:6.21%;其他业务:0.52%",
+              "revenueSegments": [
+                {
+                  "name": "PCB系列",
+                  "sharePct": 76.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "泛半导体系列",
+                  "sharePct": 16.58,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "租赁及其他",
+                  "sharePct": 6.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "泛半导体直写光刻设备",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "直接成像联机自动线系统",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "OLED直写光刻设备自动线系统",
+                    "category": "OLED制造设备"
+                  },
+                  {
+                    "name": "激光直接成像设备(LDI)",
+                    "category": "激光加工设备"
+                  },
+                  {
+                    "name": "紫外LED直接成像设备(UVLEDDI)",
+                    "category": "LED制造设备"
+                  }
+                ],
+                "knownProducts": [
+                  "OLED直写光刻设备自动线系统",
+                  "激光直接成像设备(LDI)",
+                  "紫外LED直接成像设备(UVLEDDI)",
+                  "泛半导体直写光刻设备",
+                  "直接成像联机自动线系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "芯碁微装的泛半导体系列（16.58%）覆盖范围较宽，其中能够承载泛半导体直写光刻设备、直接成像联机自动线系统、OLED直写光刻设备自动线系统，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：PCB及泛半导体直写光刻设备龙头，其LDI设备可用于先进封装RDL等环节，受益于封测厂扩产。现阶段无法用整个分部占比直接衡量受益程度，因为产能释放与行业供给变化还需沿“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。在建工程转固、产能利用率、产销率、库存和产品价格若持续增强，事件影响可以从产品层面扩散到公司盈利；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 11718,
+            "stockCode": "688170.SH",
+            "stockName": "德龙激光",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内领先的精密激光加工设备商，其激光隐切、TGV设备直接应用于先进封装。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688170.SH",
+              "companyName": "德龙激光",
+              "companyProfile": "公司成立于2005年，位于苏州工业园区，主营业务为高端工业应用精密激光加工设备及其核心器件激光器的研发、生产和销售。公司是一家技术驱动型企业，自成立以来，一直致力于新产品、新技术、新工艺的前沿研究和开发。公司专注于激光精细微加工领域，凭借先进的激光器技术、高精度运动控制技术以及深厚的激光精细微加工工艺积淀，聚焦于半导体、电子、光伏、锂电及面板显示等应用领域，为各种超薄、超硬、脆性、柔性及各种复合材料提供激光加工解决方案。同时，公司通过自主研发，目前已拥有纳秒、超快(皮秒、飞秒)及可调脉宽系列固体激光器的核心技术和工业级量产的成熟产品。公司着眼于技术含量高、应用前沿高端的方向，对各种激光应用材料及工艺进行了前沿性的研发，及时推出精密激光加工解决方案，不断拓展激光精细微加工应用领域，助力中国制造业转型升级。目前，公司产品批量应用于碳化硅、氮化镓等第三代半导体材料晶圆划片、MEMS芯片的切割、Mini LED以及5G天线等的切割、加工等。公司自设立以来，始终秉承“诚信、敬业、团队、创新”的企业精神，肩负着“用激光开创微纳世界”的使命，加强核心技术开发和市场竞争力建设，致力于成为在精细微加工领域具备全球影响力的激光公司。",
+              "profileSummary": "公司成立于2005年，位于苏州工业园区，主营业务为高端工业应用精密激光加工设备及其核心器件激光器的研发、生产和销售。目前，公司产品批量应用于碳化硅、氮化镓等第三代半导体材料晶圆划片、MEMS芯片的切割、Mini LED以及5G天线等的切割、加工等。",
+              "majorProducts": "DBC综合加工设备、FPC/PCB激光加工设备、IC On Boat激光打标设备、LED/Mini LED晶圆激光应力诱导切割设备、Micro LED剥离/巨量转移设备、Micro LED激光修复设备、Mini/Micro LED膜材切割、Mini/Micro LED三维激光刻蚀设备、OLED/LCD激光修复设备、TGV玻璃激光微孔设备、UTG玻璃切割设备、半导体晶圆激光隐形切割设备、玻璃激光加工设备、车载玻璃综合加工设备、大幅面车载FPC/覆盖膜卷对片加工应用设备、电芯返工激光解决方案产线、电致变色膜蚀刻/汽车玻璃除膜加工设备、飞秒激光器、钙钛矿薄膜太阳能激光综合加工设备、光纤激光器、辊压机激光在线清洗系统、激光解键合设备、极耳激光模切分切一体机、金属双极板激光焊接设备、金属双极板激光切割成型机、晶圆激光开槽设备（low-k）、晶圆级封装产品综合加工设备、可调脉宽激光器、模组PACK产线、纳秒激光器、皮秒激光器、汽车电子卷对卷皮秒激光微加工设备、全自动玻璃激光倒角设备、全自动晶圆ID激光打标切割一体机、全自动偏光片激光切割设备、全自动柔性OLED异形切割设备、三工位激光烘烤模切叠一体机、太阳能电池片印刷网版激光刻蚀设备、碳化硅激光退火设备、碳化硅晶锭切片设备、碳纤维切割领域应用设备、陶瓷激光加工设备、紫外皮秒精细微加工设备",
+              "revenueComposition": "精密激光加工设备:73.26%;零部件销售及维修:9.92%;激光器:7.95%;激光加工服务:5.7%;维修及其他:2.77%;其他业务:0.4%",
+              "revenueSegments": [
+                {
+                  "name": "精密激光加工设备",
+                  "sharePct": 73.26,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "零部件销售及维修",
+                  "sharePct": 9.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "激光器",
+                  "sharePct": 7.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "激光加工服务",
+                  "sharePct": 5.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "维修及其他",
+                  "sharePct": 2.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "半导体晶圆激光设备",
+                    "category": "激光加工设备"
+                  },
+                  {
+                    "name": "LED晶圆激光设备",
+                    "category": "激光加工设备"
+                  },
+                  {
+                    "name": "LCD激光加工设备",
+                    "category": "激光加工设备"
+                  },
+                  {
+                    "name": "OLED激光加工设备",
+                    "category": "激光加工设备"
+                  },
+                  {
+                    "name": "PCB激光加工设备",
+                    "category": "激光加工设备"
+                  },
+                  {
+                    "name": "激光加工设备部件",
+                    "category": "激光加工设备"
+                  }
+                ],
+                "knownProducts": [
+                  "LCD激光加工设备",
+                  "LED晶圆激光设备",
+                  "OLED激光加工设备",
+                  "PCB激光加工设备",
+                  "半导体晶圆激光设备",
+                  "激光加工设备部件",
+                  "玻璃激光加工设备",
+                  "激光器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "德龙激光与事件的关系已经落在存量主业，而非远期概念：精密激光加工设备占收入的73.26%。公司在产业链中的具体抓手是：国内领先的精密激光加工设备商，其激光隐切、TGV设备直接应用于先进封装。本次事件若改变事件能否转化为可确认的经营增量，影响会沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；订单、收入确认、产品结构和毛利率变化比主题热度更有解释力。若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 11719,
+            "stockCode": "688200.SH",
+            "stockName": "华峰测控",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内领先的模拟及混合信号测试设备供应商，受益于先进封装带动的测试需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688200.SH",
+              "companyName": "华峰测控",
+              "companyProfile": "公司作为国内最早进入半导体测试设备行业的企业之一，已在行业深耕近三十年，始终聚焦于模拟和混合信号测试设备领域。公司凭借产品的高性能、易操作和服务优势等特点，在模拟及数模混合测试设备领域多次打破了国外厂商的垄断地位，在营收和品牌优势方面均已达到了国内领先水平。公司产品不但在中国境内批量销售，还外销至中国台湾、美国、欧洲、韩国、日本及东南亚等境外半导体产业发达地区。公司目前已成为国内前三大半导体封测厂商模拟测试领域的主力测试平台供应商，拥有着上百家集成电路设计企业客户资源，同时也与超过三百家以上的集成电路设计企业保持着紧密的业务合作关系。未来，中国自主芯片产业的快速发展将为公司高速、持续的成长提供重大发展机遇。",
+              "profileSummary": "公司作为国内最早进入半导体测试设备行业的企业之一，已在行业深耕近三十年，始终聚焦于模拟和混合信号测试设备领域。公司产品不但在中国境内批量销售，还外销至中国台湾、美国、欧洲、韩国、日本及东南亚等境外半导体产业发达地区。",
+              "majorProducts": "STS8600、V/I 源表测试模块、半导体自动化测试系统STS 8200系列、半导体自动化测试系统STS 8202系列、半导体自动化测试系统STS 8203系列、半导体自动化测试系统STS 8250系列、半导体自动化测试系统STS 8300系列、继电器控制测试模块、交流V/I 源表测试模块、时间测量测试模块、数字测量测试模块",
+              "revenueComposition": "测试系统:88.19%;配件:11.34%;其他业务:0.47%",
+              "revenueSegments": [
+                {
+                  "name": "测试系统",
+                  "sharePct": 88.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配件",
+                  "sharePct": 11.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "V/I源表",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "模拟测试机",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "V/I源表",
+                  "模拟测试机",
+                  "继电控制器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华峰测控拥有V/I源表、模拟测试机，其产业链位置与国内领先的模拟及混合信号测试设备供应商，受益于先进封装带动的测试需求一致；当前的测试系统（88.19%）、配件（11.34%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由终端需求与渗透率变化决定，并需完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”。只有终端销量、客户采购量、公司出货和相关产品收入增速持续改善，产品能力才会转化为公司层面的收入和盈利提升；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 11720,
+            "stockCode": "603061.SH",
+            "stockName": "金海通",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "半导体芯片测试分选机龙头企业，受益于先进封装带来的后道测试设备需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603061.SH",
+              "companyName": "金海通",
+              "companyProfile": "公司是一家从事研发、生产并销售半导体芯片测试设备的高新技术企业，是国家级“专精特新小巨人”企业。自成立以来，公司一直专注于全球半导体芯片测试设备领域，同时致力于以高端智能装备核心技术助力我国半导体行业发展。公司为半导体封装测试企业、测试代工厂、IDM企业(半导体设计制造一体化厂商)、芯片设计公司等提供自动化测试设备中的测试分选机及相关定制化设备。公司的产品在集成电路封测行业有较高的知名度和认可度，产品遍布中国大陆、中国台湾、东南亚、欧美等全球市场。",
+              "profileSummary": "公司是一家从事研发、生产并销售半导体芯片测试设备的高新技术企业，是国家级“专精特新小巨人”企业。公司为半导体封装测试企业、测试代工厂、IDM企业(半导体设计制造一体化厂商)、芯片设计公司等提供自动化测试设备中的测试分选机及相关定制化设备。",
+              "majorProducts": "EXCEED6000系列平移式测试分选机、EXCEED8000系列平移式测试分选机、NEOCEED系列平移式测试分选机、PUPPY、COLLIE系列工程测试分选机、SUMMIT系列系统级测试分选机",
+              "revenueComposition": "测试分选机:90.64%;备品备件:9.05%;其他业务:0.31%",
+              "revenueSegments": [
+                {
+                  "name": "测试分选机",
+                  "sharePct": 90.64,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "备品备件",
+                  "sharePct": 9.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "芯片分选机",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "芯片分选机"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "金海通的事件暴露较为直接：测试分选机占收入的90.64%，相关业务不是边缘尝试；具体业务抓手是：半导体芯片测试分选机龙头企业，受益于先进封装带来的后道测试设备需求增长。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，尤其需要用终端销量、客户采购量、公司出货和相关产品收入增速区分行业普涨与公司自身竞争力。如果终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 11721,
+            "stockCode": "603203.SH",
+            "stockName": "快克智能",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "锡焊",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603203.SH",
+              "companyName": "快克智能",
+              "companyProfile": "公司创立于1993年，是一家专业的智能装备供应商，致力于为精密电子组装&半导体封装领域提供成套装备解决方案，公司的主要产品包括：智能制造成套设备、精密焊接装联设备、机器视觉制程设备、固晶键合封装设备。聚焦半导体封装、新能源汽车电动化和智能化、智能终端智能穿戴、精密电子(医疗电子、数据通信)等多个行业应用领域，持续创新为客户提供专业的解决方案，推动工业数字化、智能化升级。",
+              "profileSummary": "公司创立于1993年，是一家专业的智能装备供应商，致力于为精密电子组装&半导体封装领域提供成套装备解决方案，公司的主要产品包括：智能制造成套设备、精密焊接装联设备、机器视觉制程设备、固晶键合封装设备。聚焦半导体封装、新能源汽车电动化和智能化、智能终端智能穿戴、精密电子(医疗电子、数据通信)等多个行业应用领域，持续创新为客户提供专业的解决方案，推动工业数字化、智能化升级。",
+              "majorProducts": "点胶机器人、固晶键合封装设备、机器视觉制程设备、解焊工具、解焊设备、精密焊接装联设备、静电防护、柔性自动化生产线、锁付机器人、锡焊工具、锡焊机器人、烟雾过滤、智能制造成套装备",
+              "revenueComposition": "精密焊接装联设备:72.51%;视觉检测制程设备:15.04%;智能制造成套设备:7.86%;固晶键合封装设备:4.58%",
+              "revenueSegments": [
+                {
+                  "name": "精密焊接装联设备",
+                  "sharePct": 72.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "视觉检测制程设备",
+                  "sharePct": 15.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能制造成套设备",
+                  "sharePct": 7.86,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "固晶键合封装设备",
+                  "sharePct": 4.58,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "光子器件集成耦合设备",
+                    "category": "半导体封装设备"
+                  },
+                  {
+                    "name": "半导体固晶机",
+                    "category": "半导体封装设备"
+                  },
+                  {
+                    "name": "半导体封测激光打标机",
+                    "category": "半导体封装设备"
+                  },
+                  {
+                    "name": "光模块用AOI设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "FPC焊点AOI视觉检测设备",
+                    "category": "自动化检测设备"
+                  }
+                ],
+                "knownProducts": [
+                  "烟雾净化过滤设备",
+                  "点胶直角坐标机器人",
+                  "螺丝锁付直角坐标机器人",
+                  "锡焊直角坐标机器人",
+                  "新能源汽车PTC加热器生产线",
+                  "新能源汽车驱动电机控制器生产线",
+                  "毫米波雷达生产线",
+                  "波峰焊设备"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "快克智能已经参与事件相关业务，但收入基数仍小：固晶键合封装设备占收入的4.58%，说明公司已有业务抓手，但“锡焊”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于事件能否转化为可确认的经营增量能否驱动“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，从而推动业务跨过小规模阶段。在此之前，订单、收入确认、产品结构和毛利率变化比总收入增速更值得跟踪；若事件关联停留在主题层面，未形成可持续订单或利润贡献，市场对远期空间的定价可能缺少当期业绩支撑。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "2条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "3只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

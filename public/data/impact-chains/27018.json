@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
-  "status": "no_company_product_mapping",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
+  "status": "no_four_star_stocks",
   "event": {
     "mainId": "27018",
     "uid": "0RB7WE9CV15NM",
@@ -9,65 +9,143 @@
     "date": "2026-07-06"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 0,
     "mappedStockCount": 0,
-    "unmappedStockCount": 2,
-    "stocks": [
-      {
-        "sourceRowNumber": 17912,
-        "stockCode": "未上市",
-        "stockName": "追觅科技",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 17916,
-        "stockCode": "未上市",
-        "stockName": "云鲸智能",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 17912,
-        "stockCode": "未上市",
-        "stockName": "追觅科技",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 17916,
-        "stockCode": "未上市",
-        "stockName": "云鲸智能",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStockCount": 0,
+    "stocks": [],
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 0,
     "selectedCoreProductCount": 0,
     "selectedCompanyCoreProductCount": 0,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 0,
-    "downstreamCandidateCount": 0,
-    "shownUpstreamCount": 0,
-    "shownDownstreamCount": 0
+    "level7ProductCount": 1,
+    "relatedIndustryCandidateCount": 1,
+    "shownRelatedIndustryCount": 1
   },
-  "chain": {
-    "upstream": [],
-    "core": [],
-    "downstream": []
+  "productIndustryMap": {
+    "coreProducts": [],
+    "relatedIndustries": [
+      {
+        "code": "1200001131",
+        "name": "清洁小家电",
+        "description": "清洁小家电指扫地机、洗地机等智能家用设备。因契合“懒人经济”与消费升级，具备高成长性和技术迭代快特点，成为A股热门赛道。其智能化、自动化趋势显著，受年轻群体青睐，市场潜力巨大，备受资本关注。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 14,
+        "stocks": [
+          {
+            "stockCode": "300866.SZ",
+            "stockName": "安克创新",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140007956",
+            "name": "扫地机器人",
+            "hierarchyPath": "家用电器 > 小家电 > 清洁小家电 > 清洁小家电 > 清洁小家电 > 扫地机器人",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300866.SZ",
+                "stockName": "安克创新",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "扫地机器人"
+            ]
+          }
+        ],
+        "rank": 1
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 3,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 1,
+    "candidateIndustryCount": 1,
+    "relatedIndustryCount": 1,
+    "stocks": [
+      {
+        "sourceRowNumber": 17910,
+        "stockCode": "688169.SH",
+        "stockName": "石头科技",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 17911,
+        "stockCode": "603486.SH",
+        "stockName": "科沃斯",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 17914,
+        "stockCode": "300866.SZ",
+        "stockName": "安克创新",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001131",
+        "name": "清洁小家电",
+        "description": "清洁小家电指扫地机、洗地机等智能家用设备。因契合“懒人经济”与消费升级，具备高成长性和技术迭代快特点，成为A股热门赛道。其智能化、自动化趋势显著，受年轻群体青睐，市场潜力巨大，备受资本关注。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 14,
+        "stocks": [
+          {
+            "stockCode": "300866.SZ",
+            "stockName": "安克创新",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140007956",
+            "name": "扫地机器人",
+            "hierarchyPath": "家用电器 > 小家电 > 清洁小家电 > 清洁小家电 > 清洁小家电 > 扫地机器人",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300866.SZ",
+                "stockName": "安克创新",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "扫地机器人"
+            ]
+          }
+        ],
+        "rank": 1
+      }
+    ]
   },
   "industryAnalysis": {
     "status": "unavailable",
@@ -77,10 +155,227 @@
     "researchSources": [],
     "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 28,
+    "eligibleSourceRowCount": 3,
+    "totalStockCount": 3,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 21,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 3,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 17910,
+            "stockCode": "688169.SH",
+            "stockName": "石头科技",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球智能清洁电器龙头，Prime Day欧美销量增长是本次事件的核心",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688169.SH",
+              "companyName": "石头科技",
+              "companyProfile": "公司于2014年7月在北京成立，公司致力于用创新简化生活。公司主营业务为智能扫地机器人等智能硬件的设计、研发、生产和销售，主要产品包括智能扫地机器人、洗地机及其他智能电器。国内市场对于智能清洁家电的需求热情，推动了公司国内业务的持续高速增长；同时随着公司在海外持续推进品牌建设，完善产品全价格段布局，通过精细化渠道布局，拓展新市场，触达新用户，提升了品牌和产品的影响力，实现海外收入的稳定增长。公司业务保持持续高速增长的同时，在全球市场的领先地位也持续增强。公司在北美、北欧、德国、韩国、土耳其等重点市场持续领先，在法国、意大利、西班牙等新拓展的市场业务规模迅速增长，在日本、澳大利亚、泰国、越南等地区，市场占有率持续攀升，取得持续突破。未来，公司将继续依托技术创新和产品研发，以及全球化的商业布局，持续推进品牌建设和渠道能力，巩固和提升市场地位，争取在市场中获得更多的增长机会。",
+              "profileSummary": "公司主营业务为智能扫地机器人等智能硬件的设计、研发、生产和销售，主要产品包括智能扫地机器人、洗地机及其他智能电器。国内市场对于智能清洁家电的需求热情，推动了公司国内业务的持续高速增长；同时随着公司在海外持续推进品牌建设，完善产品全价格段布局，通过精细化渠道布局，拓展新市场，触达新用户，提升了品牌和产品的影响力，实现海外收入的稳定增长。",
+              "majorProducts": "惯性导航扫拖一体智能机器人、激光导航扫拖一体智能机器人、激光导航智能扫地机器人、手持无线吸尘器及相关配件、随机碰撞式智能扫地机器人、洗地机、洗烘一体机、智能扫地机器人",
+              "revenueComposition": "智能扫地机:81.16%;其他智能电器产品:18.76%;其他业务:0.08%",
+              "revenueSegments": [
+                {
+                  "name": "智能扫地机",
+                  "sharePct": 81.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他智能电器产品",
+                  "sharePct": 18.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "手持吸尘器代工",
+                  "扫地机器人",
+                  "扫地机器人代工",
+                  "洗地机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "石头科技当前收入集中在智能扫地机（81.16%）、其他智能电器产品（18.76%），而全球智能清洁电器龙头，Prime Day欧美销量增长是本次事件的核心所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响终端需求与渗透率变化预期，业务端仍需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导后才能确认。终端销量、客户采购量、公司出货和相关产品收入增速如果持续改善，相关业务可能从产业布局转为实际增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 17911,
+            "stockCode": "603486.SH",
+            "stockName": "科沃斯",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球智能清洁电器龙头，石头科技的主要竞争对手",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603486.SH",
+              "companyName": "科沃斯",
+              "companyProfile": "公司自1998年成立以来，始终致力于技术研发和品类创新，通过前瞻性的技术布局和敢为人先的市场探索，打造源自中国面向全球的消费科技品牌。经过20余年的发展，公司已成为全球家用服务机器人和智能生活电器行业的引领者，旗下科沃斯品牌服务机器人及添可品牌智能生活电器产品在国内外市场均取得不俗的消费者口碑和业绩表现，成功构建了科沃斯加添可双轮驱动的业务模式。此外，公司还积极投入下一代具身服务机器人的研发和定义，力争通过基于大模型的智能决策系统以及更全面的本体执行能力，拓展服务机器人全新的应用场景和用户价值。公司深耕服务机器人使用场景及体验的洞察与分析，专注于研发、设计和制造全球领先的家用、商用服务机器人解决方案，推动高品质的智能生活、生产方式。通过自主建图、移动导航、三维避障、AI环境语义识别等先进智能技术的开发应用，叠加持续的功能创新，让机器人代替人力，为消费者摆脱家务困扰，提供更加整洁美好的居住环境。公司添可高端智能生活电器品牌业务依托公司深厚的技术积累和对市场需求的敏锐洞察，通过品类创新和产品迭代取得了快速的发展。旗下芙万品牌洗地机综合公司在数字无刷电机、传感器和微控制等多方面的技术储备，创造性地在传统手持无线推杆吸尘器基础上实现扫吸拖一体及自动清洁功能，重新定义了手持地面清洁电器，一经推出即获得国内外用户的一致好评，推动了添可品牌业务的高速成长，为公司在服务机器人业务基础上打造了全新的增长引擎。",
+              "profileSummary": "经过20余年的发展，公司已成为全球家用服务机器人和智能生活电器行业的引领者，旗下科沃斯品牌服务机器人及添可品牌智能生活电器产品在国内外市场均取得不俗的消费者口碑和业绩表现，成功构建了科沃斯加添可双轮驱动的业务模式。公司添可高端智能生活电器品牌业务依托公司深厚的技术积累和对市场需求的敏锐洞察，通过品类创新和产品迭代取得了快速的发展。",
+              "majorProducts": "除螨仪、地面清洗机、家庭服务机器人、商用服务机器人、手持清洗机、卧式旋风式吸尘器、无线/充电式吸尘器、无线地面清洗机、无线无刷手持式吸尘器、旋风水过滤式吸尘器、蒸汽吸尘器/拖把、直立式吸尘器、纸袋式吸尘器",
+              "revenueComposition": "服务机器人:56.09%;智能生活电器:43.17%;其他业务:0.74%",
+              "revenueSegments": [
+                {
+                  "name": "服务机器人",
+                  "sharePct": 56.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能生活电器",
+                  "sharePct": 43.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "吸尘器",
+                  "扫地机器人",
+                  "擦窗机器人",
+                  "空气净化机器人"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "科沃斯目前更依赖服务机器人（56.09%）、智能生活电器（43.17%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：全球智能清洁电器龙头，石头科技的主要竞争对手，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变终端需求与渗透率变化；公司的产业链位置只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能转化为收入。现阶段可以用终端销量、客户采购量、公司出货和相关产品收入增速判断预期差方向；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，短期主题弹性与中期业绩贡献可能明显背离。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 17914,
+            "stockCode": "300866.SZ",
+            "stockName": "安克创新",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "旗下eufy品牌布局扫地机器人、洗地机、割草机等清洁赛道，是重要的出海品牌。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300866.SZ",
+              "companyName": "安克创新",
+              "companyProfile": "公司成立于2011年，是一家全球化的智能硬件科技企业。公司的使命是极致创新，激发可能。我们相信创造产品的本质，是以极致的创新去超越用户需求。为达成这一使命，我们的充电品牌Anker首创PowerIQ™技术，实现全面快充兼容；首次将氮化镓(GaN)应用于消费电子领域，开启全球快充时代；开创阳台光储领域，使家庭更高效利用可再生能源。我们的智能家居品牌eufy首创HomeBase本地基站存储、太阳能永久续航SolarPlus™技术，显著提升家庭安防的安全性和可靠性。我们的智能影音品牌soundcore首创ACAA™同轴圈铁声学架构，在真无线耳机上为消费者还原交响乐级现场音质。自2011年成立以来，公司不断创造出深受全球消费者喜爱的科技产品。我们自豪于超越表象，抓住本质，极致创新，将下一个人类理想的产品带给全世界。",
+              "profileSummary": "为达成这一使命，我们的充电品牌Anker首创PowerIQ™技术，实现全面快充兼容；首次将氮化镓(GaN)应用于消费电子领域，开启全球快充时代；开创阳台光储领域，使家庭更高效利用可再生能源。我们的智能家居品牌eufy首创HomeBase本地基站存储、太阳能永久续航SolarPlus™技术，显著提升家庭安防的安全性和可靠性。",
+              "majorProducts": "USB充电器及USB数据传输相关产品、保护支架类业务、充电器、充电线材、充电线材,数据线材相关产品、无线充、无线耳机、无线音箱、移动电源、移动电源及锂电相关产品、音频类产品、智能安防、智能车载、智能家居、智能家庭类产品、智能影音",
+              "revenueComposition": "充电类:50.47%;智能创新类:27.11%;智能影音类产品:22.39%;其他业务:0.03%",
+              "revenueSegments": [
+                {
+                  "name": "充电类",
+                  "sharePct": 50.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能创新类",
+                  "sharePct": 27.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能影音类产品",
+                  "sharePct": 22.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "扫地机器人",
+                    "category": "清洁小家电"
+                  }
+                ],
+                "knownProducts": [
+                  "扫地机器人",
+                  "投影仪",
+                  "数据线",
+                  "安防摄像头",
+                  "家用摄像头",
+                  "移动电源",
+                  "TWS蓝牙耳机",
+                  "头戴式蓝牙耳机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "安克创新与新闻之间有明确产品抓手：扫地机器人，对应旗下eufy品牌布局扫地机器人、洗地机、割草机等清洁赛道，是重要的出海品牌。收入主体目前是充电类（50.47%）、智能创新类（27.11%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "21条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26907",
@@ -9,10 +9,10 @@
     "date": "2026-07-03"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 1,
     "mappedStockCount": 1,
-    "unmappedStockCount": 1,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 15402,
@@ -21,140 +21,21 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 7
-      },
-      {
-        "sourceRowNumber": 15404,
-        "stockCode": "06938.HK",
-        "stockName": "瑞博生物",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 3
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 15404,
-        "stockCode": "06938.HK",
-        "stockName": "瑞博生物",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 7,
     "selectedCoreProductCount": 3,
     "selectedCompanyCoreProductCount": 3,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 6,
-    "downstreamCandidateCount": 17,
-    "shownUpstreamCount": 6,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 0,
+    "relatedIndustryCandidateCount": 0,
+    "shownRelatedIndustryCount": 0
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140026715",
-        "name": "一甲胺",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140026711",
-        "name": "氰乙酸",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140007229",
-        "name": "液碱",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140026714",
-        "name": "硫酸二甲酯",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140089274",
-        "name": "醋酐",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140005161",
-        "name": "工业硫酸",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1119000668",
         "name": "咖啡因",
@@ -180,67 +61,19 @@
           "name": "咖啡因"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300765.SZ",
             "stockName": "石药创新",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 6,
-        "downstreamCount": 16,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "化学制剂",
-          "化学制药",
-          "医药生物"
-        ]
-      },
-      {
-        "code": "1119010034",
-        "name": "阿卡波糖原料药",
-        "hierarchyPath": "医药生物 > 化学制药 > 化学原料药 > 其他医用原料药 > 其他医用原料药 > 阿卡波糖原料药",
-        "industryPath": [
-          "医药生物",
-          "化学制药",
-          "化学原料药",
-          "其他医用原料药",
-          "其他医用原料药",
-          "阿卡波糖原料药"
-        ],
-        "level5Industry": {
-          "code": "1210000187",
-          "name": "其他医用原料药"
-        },
-        "level6Industry": {
-          "code": "1210000186",
-          "name": "其他医用原料药"
-        },
-        "level7Product": {
-          "code": "1119010034",
-          "name": "阿卡波糖原料药"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300765.SZ",
-            "stockName": "石药创新",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 1,
-        "relevanceScore": 6,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "原料药",
           "化学制药",
           "医药生物"
         ]
@@ -270,18 +103,57 @@
           "name": "葡萄糖原料药"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300765.SZ",
             "stockName": "石药创新",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "原料药",
+          "化学制药",
+          "医药生物"
+        ]
+      },
+      {
+        "code": "1119010034",
+        "name": "阿卡波糖原料药",
+        "hierarchyPath": "医药生物 > 化学制药 > 化学原料药 > 其他医用原料药 > 其他医用原料药 > 阿卡波糖原料药",
+        "industryPath": [
+          "医药生物",
+          "化学制药",
+          "化学原料药",
+          "其他医用原料药",
+          "其他医用原料药",
+          "阿卡波糖原料药"
+        ],
+        "level5Industry": {
+          "code": "1210000187",
+          "name": "其他医用原料药"
+        },
+        "level6Industry": {
+          "code": "1210000186",
+          "name": "其他医用原料药"
+        },
+        "level7Product": {
+          "code": "1119010034",
+          "name": "阿卡波糖原料药"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "300765.SZ",
+            "stockName": "石药创新",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -291,232 +163,37 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": []
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 2,
+    "mappedStockCount": 0,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 0,
+    "candidateIndustryCount": 0,
+    "relatedIndustryCount": 0,
+    "stocks": [
       {
-        "code": "1140026716",
-        "name": "功能饮料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 15402,
+        "stockCode": "300765.SZ",
+        "stockName": "石药创新",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140123722",
-        "name": "功能饮料OEM代加工",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140142632",
-        "name": "可乐",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140071877",
-        "name": "复方氨酚烷胺",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140078809",
-        "name": "复方氨酚烷胺片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140062804",
-        "name": "复方氨酚苯海拉明片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140071876",
-        "name": "小儿氨酚烷胺",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140001887",
-        "name": "快克(复方氨酚烷胺胶囊)",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140119704",
-        "name": "枸橼酸咖啡因",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140046926",
-        "name": "氨咖甘片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140072097",
-        "name": "氨咖黄敏",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140095944",
-        "name": "氨咖黄敏胶囊",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140072357",
-        "name": "氨酚咖匹林",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140150169",
-        "name": "生力雄丸",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1119000668"
-        ],
-        "linkedCoreProductNames": [
-          "咖啡因"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 15407,
+        "stockCode": "688578.SH",
+        "stockName": "艾力斯",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       }
-    ]
+    ],
+    "relatedIndustries": []
   },
   "industryAnalysis": {
     "status": "research_pending",
@@ -529,10 +206,155 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 11,
+    "eligibleSourceRowCount": 2,
+    "totalStockCount": 2,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 3,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 2,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 15402,
+            "stockCode": "300765.SZ",
+            "stockName": "石药创新",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "作为石药集团的控股子公司，其子公司巨石生物是本次与阿斯利康siRNA合作的签约主体。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300765.SZ",
+              "companyName": "新诺威",
+              "companyProfile": "公司咖啡因产品作为食品添加剂广泛应用于功能饮料中，具有提神醒脑、抗疲劳、暂时驱走睡意并恢复精力的作用，产品主要销往美国、德国、爱尔兰、巴西、印度等地，是百事可乐、可口可乐、红牛三大国际饮料公司的全球供应商。公司维生素C含片具有补充维生素C的保健功能，维生素C具有提高白细胞杀菌抗病毒能力，增强人体抵抗力；可以抗氧化，消除体内自由基，从而降低血液中血脂和胆固醇，预防心脑血管疾病；促进铁、钙吸收，增强补铁、补钙效果；促进胶原蛋白合成，促进伤口愈合等作用。",
+              "profileSummary": "公司咖啡因产品作为食品添加剂广泛应用于功能饮料中，具有提神醒脑、抗疲劳、暂时驱走睡意并恢复精力的作用，产品主要销往美国、德国、爱尔兰、巴西、印度等地，是百事可乐、可口可乐、红牛三大国际饮料公司的全球供应商。",
+              "majorProducts": "B族维生素含片、阿卡波糖、果维康维生素C含片、咖啡因、无水葡萄糖",
+              "revenueComposition": "功能食品及原料:86.08%;生物制药:11.91%;其他业务:2.01%",
+              "revenueSegments": [
+                {
+                  "name": "功能食品及原料",
+                  "sharePct": 86.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生物制药",
+                  "sharePct": 11.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "食品级无水葡萄糖",
+                  "咖啡因",
+                  "葡萄糖原料药",
+                  "阿卡波糖原料药",
+                  "奥马珠单抗",
+                  "恩朗苏拜单抗",
+                  "维生素保健品"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "石药创新当前收入集中在功能食品及原料（86.08%）、生物制药（11.91%），而作为石药集团的控股子公司，其子公司巨石生物是本次与阿斯利康siRNA合作的签约主体所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响商业化进度和订单兑现预期，业务端仍需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导后才能确认。客户认证、新增订单、交付节奏、相关业务收入和毛利率如果持续改善，相关业务可能从产业布局转为实际增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 15407,
+            "stockCode": "688578.SH",
+            "stockName": "艾力斯",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "拥有独特的肾靶向小核酸递送平台，在肾脏选择性上展现出高潜力，与本次合作的肾病适应症高度相关。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688578.SH",
+              "companyName": "艾力斯",
+              "companyProfile": "公司成立于2004年，是一家专注于肿瘤治疗领域的创新驱动型生物医药企业，以提升全人类生命质量与健康水平为使命，聚焦全球未满足的临床需求，致力于研发、生产与销售具有自主知识产权、安全有效、惠及大众的首创(First-in-class)与同类最佳(Best-in-class)创新药物。公司核心产品为自主研发的国家I类新药甲磺酸伏美替尼片，专用于EGFR突变非小细胞肺癌治疗，具备“脑转强效、疗效优异、安全性佳、治疗窗宽”四大优势。其二线适应症于2021年3月、一线适应症于2022年6月先后获国家药监局批准上市，均已被纳入国家医保目录。目前，公司正在推进伏美替尼的6项新增适应症注册临床研究，涵盖辅助治疗、EGFR20外显子插入突变一线及二线治疗、PACC突变适应症、脑转移适应症及EGFR非经典突变辅助治疗。其中，EGFR20外显子插入突变一线适应症研究已获中美双突破性疗法认定，显著加速全球开发进程。凭借卓越创新实力，公司荣获“2023中国创新药上市公司价值引领TOP15”、“2023年度浦东新区科技创新突出贡献奖”、“上海市第32批市级企业技术中心”、“2024年度浦东新区先进制造业突出贡献奖”等多项荣誉。",
+              "profileSummary": "公司成立于2004年，是一家专注于肿瘤治疗领域的创新驱动型生物医药企业，以提升全人类生命质量与健康水平为使命，聚焦全球未满足的临床需求，致力于研发、生产与销售具有自主知识产权、安全有效、惠及大众的首创(First-in-class)与同类最佳(Best-in-class)创新药物。目前，公司正在推进伏美替尼的6项新增适应症注册临床研究，涵盖辅助治疗、EGFR20外显子插入突变一线及二线治疗、PACC突变适应症、脑转移适应症及EGFR非…",
+              "majorProducts": "c-MET抑制剂、EGFR外显子20插入突变抑制剂、KRAS G12C抑制剂、RET抑制剂、阿利沙坦酯、艾氟替尼、艾氟替尼 （第三代EGFR-TKI）、甲磺酸伏美替尼片、普拉替尼胶囊",
+              "revenueComposition": "药品销售收入:99.48%;药品许可授权:0.51%",
+              "revenueSegments": [
+                {
+                  "name": "药品销售收入",
+                  "sharePct": 99.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "药品许可授权",
+                  "sharePct": 0.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "伏美替尼",
+                  "戈来雷塞",
+                  "伏美替尼专利授权许可服务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "艾力斯的事件主线是：拥有独特的肾靶向小核酸递送平台，在肾脏选择性上展现出高潜力，与本次合作的肾病适应症高度相关，但当前收入结构尚未体现其重要性，收入重心仍是药品销售收入（99.48%）、药品许可授权（0.51%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，研发里程碑与商业化成功概率需要沿“研发或授权进展改变项目成功率和未来现金流预期，再通过里程碑收入、销售分成或费用投入影响利润”传导，并在临床数据、监管节点、首付款及里程碑确认和销售放量上留下可核验痕迹。若研发、审批或商业化进度不及预期，且前期投入难以形成对应回报，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "3条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

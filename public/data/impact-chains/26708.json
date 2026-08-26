@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26708",
@@ -9,10 +9,10 @@
     "date": "2026-07-01"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 5,
-    "mappedStockCount": 5,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 3,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 10641,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 7
       },
       {
         "sourceRowNumber": 10642,
@@ -29,8 +29,8 @@
         "stockName": "昊志机电",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 10
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 10643,
@@ -47,8 +47,8 @@
         "stockName": "广联航空",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 17
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 10664,
@@ -57,121 +57,40 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 7
+        "anchorProductCount": 2
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 10642,
+        "stockCode": "300503.SZ",
+        "stockName": "昊志机电",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 10644,
+        "stockCode": "300900.SZ",
+        "stockName": "广联航空",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 52,
     "selectedCoreProductCount": 15,
     "selectedCompanyCoreProductCount": 15,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 6,
-    "downstreamCandidateCount": 20,
-    "shownUpstreamCount": 6,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 52,
+    "relatedIndustryCandidateCount": 15,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140096214",
-        "name": "惰性气体",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
-        ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1130000603",
-        "name": "电解铜",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
-        ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1114000242",
-        "name": "稀土金属",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166282"
-        ],
-        "linkedCoreProductNames": [
-          "铜铁合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1120000117",
-        "name": "铁粉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166282"
-        ],
-        "linkedCoreProductNames": [
-          "铜铁合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1114000161",
-        "name": "铜粉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166282"
-        ],
-        "linkedCoreProductNames": [
-          "铜铁合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140167153",
-        "name": "铬铅矿",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
-        ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140206208",
         "name": "电触头",
@@ -197,18 +116,15 @@
           "name": "电触头"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688102.SH",
             "stockName": "斯瑞新材",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 8,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -243,18 +159,15 @@
           "name": "铬粉"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688102.SH",
             "stockName": "斯瑞新材",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 3,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -288,18 +201,15 @@
           "name": "海上风电机组"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002202.SZ",
             "stockName": "金风科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 1,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -332,18 +242,15 @@
           "name": "陆上风电机组"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002202.SZ",
             "stockName": "金风科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -376,18 +283,15 @@
           "name": "风电主机螺栓"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301232.SZ",
             "stockName": "飞沃科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -420,18 +324,15 @@
           "name": "风电叶片双头螺栓"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301232.SZ",
             "stockName": "飞沃科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -464,18 +365,15 @@
           "name": "风电叶片预埋螺套"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301232.SZ",
             "stockName": "飞沃科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -508,18 +406,15 @@
           "name": "风电塔筒螺栓"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301232.SZ",
             "stockName": "飞沃科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -552,18 +447,15 @@
           "name": "风电机锚栓"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301232.SZ",
             "stockName": "飞沃科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -596,111 +488,20 @@
           "name": "风电锚板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301232.SZ",
             "stockName": "飞沃科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "风电零部件",
           "风电设备"
-        ]
-      },
-      {
-        "code": "1140139897",
-        "name": "铜铬合金",
-        "hierarchyPath": "有色金属 > 工业金属 > 铜 > 铜合金及制品 > 铜合金 > 铜铬合金",
-        "industryPath": [
-          "有色金属",
-          "工业金属",
-          "铜",
-          "铜合金及制品",
-          "铜合金",
-          "铜铬合金"
-        ],
-        "level5Industry": {
-          "code": "1210000304",
-          "name": "铜合金及制品"
-        },
-        "level6Industry": {
-          "code": "1210000510",
-          "name": "铜合金"
-        },
-        "level7Product": {
-          "code": "1140139897",
-          "name": "铜铬合金"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688102.SH",
-            "stockName": "斯瑞新材",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 9,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工业金属",
-          "有色金属"
-        ]
-      },
-      {
-        "code": "1140166282",
-        "name": "铜铁合金",
-        "hierarchyPath": "有色金属 > 工业金属 > 铜 > 铜合金及制品 > 铜合金 > 铜铁合金",
-        "industryPath": [
-          "有色金属",
-          "工业金属",
-          "铜",
-          "铜合金及制品",
-          "铜合金",
-          "铜铁合金"
-        ],
-        "level5Industry": {
-          "code": "1210000304",
-          "name": "铜合金及制品"
-        },
-        "level6Industry": {
-          "code": "1210000510",
-          "name": "铜合金"
-        },
-        "level7Product": {
-          "code": "1140166282",
-          "name": "铜铁合金"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688102.SH",
-            "stockName": "斯瑞新材",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 8,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工业金属",
-          "有色金属"
         ]
       },
       {
@@ -728,18 +529,15 @@
           "name": "光模块壳体"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688102.SH",
             "stockName": "斯瑞新材",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -772,18 +570,15 @@
           "name": "光模块芯片基座"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688102.SH",
             "stockName": "斯瑞新材",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -816,252 +611,723 @@
           "name": "光芯片封装用金属壳体"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688102.SH",
             "stockName": "斯瑞新材",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "通信设备",
           "通信"
         ]
+      },
+      {
+        "code": "1140166282",
+        "name": "铜铁合金",
+        "hierarchyPath": "有色金属 > 工业金属 > 铜 > 铜合金及制品 > 铜合金 > 铜铁合金",
+        "industryPath": [
+          "有色金属",
+          "工业金属",
+          "铜",
+          "铜合金及制品",
+          "铜合金",
+          "铜铁合金"
+        ],
+        "level5Industry": {
+          "code": "1210000304",
+          "name": "铜合金及制品"
+        },
+        "level6Industry": {
+          "code": "1210000510",
+          "name": "铜合金"
+        },
+        "level7Product": {
+          "code": "1140166282",
+          "name": "铜铁合金"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688102.SH",
+            "stockName": "斯瑞新材",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工业金属",
+          "有色金属"
+        ]
+      },
+      {
+        "code": "1140139897",
+        "name": "铜铬合金",
+        "hierarchyPath": "有色金属 > 工业金属 > 铜 > 铜合金及制品 > 铜合金 > 铜铬合金",
+        "industryPath": [
+          "有色金属",
+          "工业金属",
+          "铜",
+          "铜合金及制品",
+          "铜合金",
+          "铜铬合金"
+        ],
+        "level5Industry": {
+          "code": "1210000304",
+          "name": "铜合金及制品"
+        },
+        "level6Industry": {
+          "code": "1210000510",
+          "name": "铜合金"
+        },
+        "level7Product": {
+          "code": "1140139897",
+          "name": "铜铬合金"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688102.SH",
+            "stockName": "斯瑞新材",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工业金属",
+          "有色金属"
+        ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140077420",
-        "name": "航空航天",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897",
-          "1140166282"
+        "code": "1200001353",
+        "name": "飞行器",
+        "description": "飞行器指航空与航天器。投资者关注因其代表高端制造与低空经济风口，兼具技术壁垒广阔市场潜力。相关公司受益政策红利及商业化加速如eVTOL兴起，具备高成长预期，成为资本追逐热点。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 6,
+        "relevanceScore": 86,
+        "stocks": [
+          {
+            "stockCode": "688102.SH",
+            "stockName": "斯瑞新材",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600879.SH",
+            "stockName": "航天电子",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301005.SZ",
+            "stockName": "超捷股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "铜铁合金",
-          "铜铬合金"
+        "products": [
+          {
+            "code": "1140216007",
+            "name": "液体火箭发动机推力室内壁",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞行器 > 火箭 > 液体火箭发动机推力室内壁",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688102.SH",
+                "stockName": "斯瑞新材",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "液体火箭发动机推力室内壁"
+            ]
+          },
+          {
+            "code": "1140033265",
+            "name": "导弹制导系统",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞行器 > 飞行器零部件 > 导弹制导系统",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600879.SH",
+                "stockName": "航天电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140122286",
+            "name": "小型制导火箭",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞行器 > 火箭 > 小型制导火箭",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600879.SH",
+                "stockName": "航天电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140213518",
+            "name": "火箭壳段",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞行器 > 火箭 > 火箭壳段",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301005.SZ",
+                "stockName": "超捷股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140080556",
-        "name": "医疗器械",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
+        "code": "1200000400",
+        "name": "无人机",
+        "description": "无人机指无人驾驶航空器。投资者关注相关公司，因其涵盖研发制造、飞控及场景应用全产业链，受益于低空经济政策红利与物流、安防等广阔市场需求，具备高成长潜力和技术壁垒，是新兴科技投资热点。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 5,
+        "relevanceScore": 72,
+        "stocks": [
+          {
+            "stockCode": "300900.SZ",
+            "stockName": "广联航空",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300342.SZ",
+            "stockName": "天银机电",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600879.SH",
+            "stockName": "航天电子",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
+        "products": [
+          {
+            "code": "1140203936",
+            "name": "察打一体无人机",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机 > 军用无人机 > 察打一体无人机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300900.SZ",
+                "stockName": "广联航空",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600879.SH",
+                "stockName": "航天电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140124825",
+            "name": "多旋翼无人机",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机 > 民用无人机 > 多旋翼无人机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300900.SZ",
+                "stockName": "广联航空",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140124823",
+            "name": "大型隐身无人机",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机 > 军用无人机 > 大型隐身无人机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300900.SZ",
+                "stockName": "广联航空",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140129983",
+            "name": "电子战无人机",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机 > 军用无人机 > 电子战无人机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300342.SZ",
+                "stockName": "天银机电",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 21,
+    "mappedStockCount": 10,
+    "unmappedStockCount": 11,
+    "level7ProductCount": 52,
+    "candidateIndustryCount": 15,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 10641,
+        "stockCode": "688102.SH",
+        "stockName": "斯瑞新材",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140008914",
-        "name": "半导体",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166282"
-        ],
-        "linkedCoreProductNames": [
-          "铜铁合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10642,
+        "stockCode": "300503.SZ",
+        "stockName": "昊志机电",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140031700",
-        "name": "半导体器件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
-        ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10643,
+        "stockCode": "301232.SZ",
+        "stockName": "飞沃科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140006141",
-        "name": "工业机器人",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166282"
-        ],
-        "linkedCoreProductNames": [
-          "铜铁合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10644,
+        "stockCode": "300900.SZ",
+        "stockName": "广联航空",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 17
       },
       {
-        "code": "1140169488",
-        "name": "接触焊机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
-        ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10645,
+        "stockCode": "600343.SH",
+        "stockName": "航天动力",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140169490",
-        "name": "携带电话",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
-        ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10646,
+        "stockCode": "002179.SZ",
+        "stockName": "中航光电",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140014916",
-        "name": "汽车",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166282"
-        ],
-        "linkedCoreProductNames": [
-          "铜铁合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10647,
+        "stockCode": "002025.SZ",
+        "stockName": "航天电器",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140169489",
-        "name": "汽车电控器件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
-        ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10648,
+        "stockCode": "688333.SH",
+        "stockName": "铂力特",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140023933",
-        "name": "电子零件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166282"
-        ],
-        "linkedCoreProductNames": [
-          "铜铁合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10649,
+        "stockCode": "688539.SH",
+        "stockName": "高华科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140169491",
-        "name": "电极产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
-        ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10650,
+        "stockCode": "301005.SZ",
+        "stockName": "超捷股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140169487",
-        "name": "连续结晶器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140139897"
-        ],
-        "linkedCoreProductNames": [
-          "铜铬合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10656,
+        "stockCode": "002167.SZ",
+        "stockName": "东方锆业",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140017451",
-        "name": "通讯",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166282"
-        ],
-        "linkedCoreProductNames": [
-          "铜铁合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10664,
+        "stockCode": "002202.SZ",
+        "stockName": "金风科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140013636",
-        "name": "金属铸造",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166282"
+        "sourceRowNumber": 10665,
+        "stockCode": "600783.SH",
+        "stockName": "鲁信创投",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 10669,
+        "stockCode": "688818.SH",
+        "stockName": "电科蓝天",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 10670,
+        "stockCode": "600879.SH",
+        "stockName": "航天电子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
+      },
+      {
+        "sourceRowNumber": 10671,
+        "stockCode": "688375.SH",
+        "stockName": "国博电子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 10672,
+        "stockCode": "001270.SZ",
+        "stockName": "铖昌科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 10673,
+        "stockCode": "688270.SH",
+        "stockName": "ST臻镭",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 10674,
+        "stockCode": "300342.SZ",
+        "stockName": "天银机电",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 10678,
+        "stockCode": "688387.SH",
+        "stockName": "信科移动",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 10679,
+        "stockCode": "300762.SZ",
+        "stockName": "上海瀚讯",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001353",
+        "name": "飞行器",
+        "description": "飞行器指航空与航天器。投资者关注因其代表高端制造与低空经济风口，兼具技术壁垒广阔市场潜力。相关公司受益政策红利及商业化加速如eVTOL兴起，具备高成长预期，成为资本追逐热点。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 6,
+        "relevanceScore": 86,
+        "stocks": [
+          {
+            "stockCode": "688102.SH",
+            "stockName": "斯瑞新材",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600879.SH",
+            "stockName": "航天电子",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301005.SZ",
+            "stockName": "超捷股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "铜铁合金"
+        "products": [
+          {
+            "code": "1140216007",
+            "name": "液体火箭发动机推力室内壁",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞行器 > 火箭 > 液体火箭发动机推力室内壁",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688102.SH",
+                "stockName": "斯瑞新材",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "液体火箭发动机推力室内壁"
+            ]
+          },
+          {
+            "code": "1140033265",
+            "name": "导弹制导系统",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞行器 > 飞行器零部件 > 导弹制导系统",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600879.SH",
+                "stockName": "航天电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140122286",
+            "name": "小型制导火箭",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞行器 > 火箭 > 小型制导火箭",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600879.SH",
+                "stockName": "航天电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140213518",
+            "name": "火箭壳段",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞行器 > 火箭 > 火箭壳段",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301005.SZ",
+                "stockName": "超捷股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000400",
+        "name": "无人机",
+        "description": "无人机指无人驾驶航空器。投资者关注相关公司，因其涵盖研发制造、飞控及场景应用全产业链，受益于低空经济政策红利与物流、安防等广阔市场需求，具备高成长潜力和技术壁垒，是新兴科技投资热点。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 5,
+        "relevanceScore": 72,
+        "stocks": [
+          {
+            "stockCode": "300900.SZ",
+            "stockName": "广联航空",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300342.SZ",
+            "stockName": "天银机电",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600879.SH",
+            "stockName": "航天电子",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140203936",
+            "name": "察打一体无人机",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机 > 军用无人机 > 察打一体无人机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300900.SZ",
+                "stockName": "广联航空",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600879.SH",
+                "stockName": "航天电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140124825",
+            "name": "多旋翼无人机",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机 > 民用无人机 > 多旋翼无人机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300900.SZ",
+                "stockName": "广联航空",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140124823",
+            "name": "大型隐身无人机",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机 > 军用无人机 > 大型隐身无人机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300900.SZ",
+                "stockName": "广联航空",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140129983",
+            "name": "电子战无人机",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机 > 军用无人机 > 电子战无人机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300342.SZ",
+                "stockName": "天银机电",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -1076,9 +1342,1555 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 46,
+    "eligibleSourceRowCount": 21,
+    "totalStockCount": 21,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 21,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 21,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 10641,
+            "stockCode": "688102.SH",
+            "stockName": "斯瑞新材",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内液体火箭发动机推力室内壁核心供应商，深度绑定蓝箭航天等头部客户。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688102.SH",
+              "companyName": "斯瑞新材",
+              "companyProfile": "公司成立于1995年，位于西安高新技术产业开发区，拥有三个制造基地，多个全资子公司以及控、参股公司。公司专注于高性能铜合金材料、制品及其它特殊铜合金系列材料的研发和制造。公司拥有核心发明专利超270项。建有铜铬系列触头材料、铜钨系列触头材料生产线、铜铬锆合金材料生产线、医疗影像零组件用铜合金材料生产线。公司产品广泛服务于中高压电力开关、轨道交通电机、新能源汽车、高端医疗设备、模具制造、钢铁冶金结晶器、新一代电子信息产业等领域。公司服务的客户主要有西门子电力、ABB、施耐德、东芝、伊顿、美国GE交通、法国阿尔斯通、中车、国家电网、西门子医疗等世界五百强企业。公司拥有健全的管理体系，覆盖了质量管理、环境管理、职业健康安全管理、能源管理、信息安全、知识产权等多个领域。我们将始终秉持创新驱动发展，新材料引领未来的使命，为人类贡献更友好的材料！",
+              "profileSummary": "公司产品广泛服务于中高压电力开关、轨道交通电机、新能源汽车、高端医疗设备、模具制造、钢铁冶金结晶器、新一代电子信息产业等领域。公司服务的客户主要有西门子电力、ABB、施耐德、东芝、伊顿、美国GE交通、法国阿尔斯通、中车、国家电网、西门子医疗等世界五百强企业。",
+              "majorProducts": "CT和DR球管零组件、高强高导铜合金材料及制品、高性能金属铬粉、光模块芯片基座/壳体、液体火箭发动机推力室内壁、中高压电接触材料及制品",
+              "revenueComposition": "高强高导铜合金材料及制品:44.46%;中高压电接触材料及制品:23.32%;主营其他:10.52%;其他业务:6.71%;医疗影像零组件:5.61%;光模块芯片基座/壳体:4.7%;高性能金属铬粉:4.69%",
+              "revenueSegments": [
+                {
+                  "name": "高强高导铜合金材料及制品",
+                  "sharePct": 44.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "中高压电接触材料及制品",
+                  "sharePct": 23.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "主营其他",
+                  "sharePct": 10.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 6.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医疗影像零组件",
+                  "sharePct": 5.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光模块芯片基座/壳体",
+                  "sharePct": 4.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高性能金属铬粉",
+                  "sharePct": 4.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "液体火箭发动机推力室内壁",
+                    "category": "火箭"
+                  }
+                ],
+                "knownProducts": [
+                  "CT机管壳组件",
+                  "CT机转子组件",
+                  "液体火箭发动机推力室内壁",
+                  "铬粉",
+                  "铜铁合金",
+                  "铜铬合金",
+                  "电触头",
+                  "电机导条"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "斯瑞新材拥有液体火箭发动机推力室内壁，其产业链位置与国内液体火箭发动机推力室内壁核心供应商，深度绑定蓝箭航天等头部客户一致；当前的高强高导铜合金材料及制品（44.46%）、中高压电接触材料及制品（23.32%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由事件能否转化为可确认的经营增量决定，并需完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。只有订单、收入确认、产品结构和毛利率变化持续改善，产品能力才会转化为公司层面的收入和盈利提升；事件关联停留在主题层面，未形成可持续订单或利润贡献则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 10642,
+            "stockCode": "300503.SZ",
+            "stockName": "昊志机电",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "为蓝箭航天\"天鹊\"系列大推力火箭发动机提供配套产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300503.SZ",
+              "companyName": "昊志机电",
+              "companyProfile": "公司成立于2006年12月，于2016年3月在深圳证券交易所创业板上市。作为国家高新技术企业及专精特新“小巨人”企业，公司长期深耕高端装备核心功能部件领域，业务广泛覆盖中高端数控机床、机器人、新能源汽车及商业航天等战略性新兴产业。在数控机床领域，公司产品涵盖主轴、转台、直线电机、数控系统及编码器等关键部件；在机器人领域，提供谐波减速器、DD电机、低压伺服驱动、刹车机构、编码器、末端执行器及力矩传感器等核心组件；在新能源汽车领域，专注于氢燃料电池空压机和曝气鼓风机的研发与生产；在商业航天领域，则涉及火箭控制系统功能部件、卫星姿控系统与推进系统功能部件等高端装备的研发与应用。",
+              "profileSummary": "作为国家高新技术企业及专精特新“小巨人”企业，公司长期深耕高端装备核心功能部件领域，业务广泛覆盖中高端数控机床、机器人、新能源汽车及商业航天等战略性新兴产业。在数控机床领域，公司产品涵盖主轴、转台、直线电机、数控系统及编码器等关键部件；在机器人领域，提供谐波减速器、DD电机、低压伺服驱动、刹车机构、编码器、末端执行器及力矩传感器等核心组件；在新能源汽车领域，专注于氢燃料电池空压机和曝气鼓风机的研发与生产；在商业航天领域，则涉及火箭控制…",
+              "majorProducts": "DD电机、PCB钻孔机和成型机电主轴、车床主轴、高速加工中心主轴、划片机电主轴、机器人关节模组、力矩电机转台、磨床主轴、末端执行功能部件、木工主轴、数控雕铣机主轴、谐波减速器、谐波转台、牙雕机电主轴、永磁同步直线电机、钻攻中心主轴",
+              "revenueComposition": "主轴:66.78%;运动控制产品:17.89%;转台、直线电机、减速器等功能部件:13.79%;其他业务:1.55%",
+              "revenueSegments": [
+                {
+                  "name": "主轴",
+                  "sharePct": 66.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运动控制产品",
+                  "sharePct": 17.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "转台、直线电机、减速器等功能部件",
+                  "sharePct": 13.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "人形机器人关节模组",
+                  "六维力矩传感器",
+                  "无框力矩电机",
+                  "谐波减速器",
+                  "运动控制器",
+                  "主轴",
+                  "转台",
+                  "伺服电机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "昊志机电现有业务与为蓝箭航天\"天鹊\"系列大推力火箭发动机提供配套产品处于同一产业方向，收入主体为主轴（66.78%）、运动控制产品（17.89%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变事件能否转化为可确认的经营增量，只有经由“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，业务交集才会转化为业绩增量。订单、收入确认、产品结构和毛利率变化若逐步增强，相关业务的重要性会提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 10643,
+            "stockCode": "301232.SZ",
+            "stockName": "飞沃科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "通过收购多家公司形成从发动机3D打印到箭体结构件的完整代工体系，深度绑定多家头部火箭公司。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301232.SZ",
+              "companyName": "飞沃科技",
+              "companyProfile": "公司成立于2012年，2023年6月登陆深交所创业板。公司是风电紧固件细分市场龙头企业，风电产品包括风机叶片预埋螺套、机舱螺栓、塔筒螺栓、锚栓组件等风电全系列紧固件，以及塔筒制造，风场开发与运维。同时，公司瞄准航空、航天、燃气轮机、深海石油、核电等高端市场，积极打造第二增长曲线，提供紧固件、金属密封件、发动机精密结构零部件、精密钣金及管路零部件等多样化产品的研发与生产。公司拥有完整的技术研发和生产制造体系，现建有“湖南省高强度紧固件智能制造工程技术研究中心”，“省级创新创业团队”。公司获得国家各类专利80余项，著作权25项，国内科技领先成果4项，参与制订国家标准10项。公司获得国家工信部“智能制造试点示范企业”、首批专精特新“小巨人”企业、“制造业单项冠军企业”以及“湖南省第七届省长质量奖”等诸多荣誉。公司以科技创新为引领，以“激情与梦想，驱动人类能源与空天未来”为企业使命，致力于成为全球领先的能源与空天核心部件智造平台。",
+              "profileSummary": "公司是风电紧固件细分市场龙头企业，风电产品包括风机叶片预埋螺套、机舱螺栓、塔筒螺栓、锚栓组件等风电全系列紧固件，以及塔筒制造，风场开发与运维。同时，公司瞄准航空、航天、燃气轮机、深海石油、核电等高端市场，积极打造第二增长曲线，提供紧固件、金属密封件、发动机精密结构零部件、精密钣金及管路零部件等多样化产品的研发与生产。",
+              "majorProducts": "风电行业全系列高强度紧固件、锚栓组件、石油装备等高强度紧固件、预埋螺套、整机螺栓",
+              "revenueComposition": "紧固件:85.4%;零部件:7.59%;其他业务:7.02%",
+              "revenueSegments": [
+                {
+                  "name": "紧固件",
+                  "sharePct": 85.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "零部件",
+                  "sharePct": 7.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 7.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "风电主机螺栓",
+                  "风电叶片双头螺栓",
+                  "风电叶片预埋螺套",
+                  "风电机锚栓",
+                  "风电锚板",
+                  "风电塔筒螺栓"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "飞沃科技与新闻存在业务方向上的交集：通过收购多家公司形成从发动机3D打印到箭体结构件的完整代工体系，深度绑定多家头部火箭公司；公司当前收入主要来自紧固件（85.4%）、零部件（7.59%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对事件能否转化为可确认的经营增量的推动只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能进入报表，订单、收入确认、产品结构和毛利率变化决定这一交集能否升级为实际增量；事件关联停留在主题层面，未形成可持续订单或利润贡献是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 10644,
+            "stockCode": "300900.SZ",
+            "stockName": "广联航空",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "为蓝箭航天等商业火箭客户提供箭体结构件等产品，并与天津跃峰整合资源，深化与头部客户合作。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300900.SZ",
+              "companyName": "广联航空",
+              "companyProfile": "公司是专业从事航空工业相关产品设计、研发、制造的国家级高新技术企业。公司以具有突出优势的航空工装业务为基础，积极开拓了航空零部件和部段、无人机等业务，产品覆盖军用和民用航空工业各领域，成为专业化程度高、技术积累丰富、广受认可的航空工业相关产品供应商。公司的客户主要为中航工业、中国商飞等国内航空工业核心制造商旗下的各飞机主机制造厂商，航天科工、中国兵装等军工央企集团下属科研院所及科研生产单位，军队研究所等军方单位。目前，公司已获得开展业务所需的航空、军工相关资质，包括AS9100航空航天质量管理体系认证、ISO9001:2015质量管理体系认证以及GJB9001C-2017国军标质量管理体系认证证书、武器装备科研生产单位三级保密资格证书、装备承制单位注册证书等。",
+              "profileSummary": "公司以具有突出优势的航空工装业务为基础，积极开拓了航空零部件和部段、无人机等业务，产品覆盖军用和民用航空工业各领域，成为专业化程度高、技术积累丰富、广受认可的航空工业相关产品供应商。目前，公司已获得开展业务所需的航空、军工相关资质，包括AS9100航空航天质量管理体系认证、ISO9001:2015质量管理体系认证以及GJB9001C-2017国军标质量管理体系认证证书、武器装备科研生产单位三级保密资格证书、装备承制单位注册证书等。",
+              "majorProducts": "成型工装、复合材料零部件、金属零部件、无人机相关产品、装配工装",
+              "revenueComposition": "航空航天零部件及无人机:58.44%;航空工装:38.72%;航空辅助工具及其他:2.84%",
+              "revenueSegments": [
+                {
+                  "name": "航空航天零部件及无人机",
+                  "sharePct": 58.44,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "航空工装",
+                  "sharePct": 38.72,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "航空辅助工具及其他",
+                  "sharePct": 2.84,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "复合材料飞机整体油箱",
+                    "category": "飞机零部件"
+                  },
+                  {
+                    "name": "多旋翼无人机",
+                    "category": "民用无人机"
+                  },
+                  {
+                    "name": "大型隐身无人机",
+                    "category": "军用无人机"
+                  },
+                  {
+                    "name": "察打一体无人机",
+                    "category": "军用无人机"
+                  },
+                  {
+                    "name": "无人机复合材料中央翼部段",
+                    "category": "无人机主体框架"
+                  },
+                  {
+                    "name": "无人机尾部机身",
+                    "category": "无人机主体框架"
+                  }
+                ],
+                "knownProducts": [
+                  "大型隐身无人机",
+                  "察打一体无人机",
+                  "多旋翼无人机",
+                  "无人机复合材料中央翼部段",
+                  "无人机尾部机身",
+                  "无人机机翼部段",
+                  "柔性自动化水陆两栖飞机总装配生产线",
+                  "航空工装"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "广联航空与事件存在真实业务交集：公司已有复合材料飞机整体油箱、多旋翼无人机、大型隐身无人机，与为蓝箭航天等商业火箭客户提供箭体结构件等产品，并与天津跃峰整合资源，深化与头部客户合作所处的产业环节一致。航空航天零部件及无人机（58.44%）、航空工装（38.72%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响商业化进度和订单兑现，只有经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”，才会形成可确认的收入和利润增量。客户认证、新增订单、交付节奏、相关业务收入和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 10664,
+            "stockCode": "002202.SZ",
+            "stockName": "金风科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "通过全资子公司持有蓝箭航天4.1412%的股份，是其重要股东。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002202.SZ",
+              "companyName": "金风科技",
+              "companyProfile": "公司是全球可信赖的清洁能源战略合作伙伴，致力于推动能源变革，让人人可负担、可靠、可持续的能源惠及全球，构建“可持续更美好”的未来。公司深度聚焦能源开发、能源装备、能源服务、能源应用四大领域，以强大科研创新和最佳业务实践，将可再生能源的效率提升至新高度。作为在深交所、港交所两地上市的公司，公司多次入选“气候领袖企业”、“亚洲地区最受尊敬公司”、“最佳投资者关系公司”，并荣登“全球最具创新能力企业50强”、“全球最环保企业200强”、“全球新能源企业500强”、“新财富最佳上市公司”、“《财富》中国500强”、年度ESG实力先锋企业、A股公司ESG百强等多个影响力榜单。公司着力构建以清洁能源为核心的业务版图，覆盖能源开发、能源装备、能源服务与能源应用四大领域，向“可持续·更美好”目标持续前进。在能源开发领域，公司致力于深入的属地化清洁能源资源开发及管理，赋能优化地区能源结构，并提供高效、安全的能源资产管理服务；在能源装备领域，基于严苛的智造质量管理标准和绿色供应链管理体系，公司提供更高效、更可靠、更低成本的智慧能源装备，让清洁能源的生产和获取触手可得；在能源服务领域，以贯穿清洁能源价值链的专业知识和经验优势，公司提供从规划设计、工程建设到能源场站运维的服务综合解决方案，让标准高效、智慧透明、灵活定制的服务能力贯穿始终；在能源应用领域，公司在源、网、储、荷各能源环节进行优化和再造，积极构建面向新型电力系统的零碳解决方案，助力各行各业、城市乃至国家加速低碳转型进程，全面实现“碳中和”。",
+              "profileSummary": "公司深度聚焦能源开发、能源装备、能源服务、能源应用四大领域，以强大科研创新和最佳业务实践，将可再生能源的效率提升至新高度。公司着力构建以清洁能源为核心的业务版图，覆盖能源开发、能源装备、能源服务与能源应用四大领域，向“可持续·更美好”目标持续前进。",
+              "majorProducts": "风电场投资与开发、风电服务、金风科技1.2MW风力发电机组、金风科技1.5MW风力发电机组、金风科技600kW风力发电机组、金风科技750kW风力发电机组、水务及其他业务",
+              "revenueComposition": "风力发电机组及零部件:78.34%;风电场开发:11.91%;风电服务:7.83%;其他:1.93%",
+              "revenueSegments": [
+                {
+                  "name": "风力发电机组及零部件",
+                  "sharePct": 78.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "风电场开发",
+                  "sharePct": 11.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "风电服务",
+                  "sharePct": 7.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "固废处理",
+                  "污泥处理",
+                  "工业废水处理",
+                  "风力发电",
+                  "风电场工程",
+                  "海上风电机组",
+                  "陆上风电机组"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "金风科技现有收入由风力发电机组及零部件（78.34%）、风电场开发（11.91%）贡献，主营产品为固废处理、污泥处理、工业废水处理、风力发电，与通过全资子公司持有蓝箭航天4.1412%的股份，是其重要股东指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，事件能否转化为可确认的经营增量才会通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”产生财务影响。现阶段订单、收入确认、产品结构和毛利率变化比概念标签更重要；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件对公司中期业绩的贡献将十分有限。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 16,
+        "stocks": [
+          {
+            "sourceRowNumber": 10645,
+            "stockCode": "600343.SH",
+            "stockName": "航天动力",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是航天六院旗下液体火箭发动机业务的上市平台，是火箭产业链核心环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600343.SH",
+              "companyName": "航天动力",
+              "companyProfile": "公司是由西安航天科技工业有限公司控股的上市公司，实际控制人为中国航天科技集团有限公司，是中国液体动力技术产业发展平台，成立于1999年12月。公司产业布局陕西、江苏两省四地。公司以航天液体动力技术为依托，持续做精做优泵及泵系统、液力传动系统两大核心产业，培育了氢能为主的增量产业。业务涉及化工、冶金、电力、能源、水利、矿山、消防、军工以及交通等多个行业领域，产品远销东南亚、南美洲、欧洲、非洲等20多个国家和地区。公司还拥有1个中国航天科技集团技能大师工作室，3个省级工程技术中心、3个省级企业技术中心、3个市级技术中心。",
+              "profileSummary": "公司产业布局陕西、江苏两省四地。业务涉及化工、冶金、电力、能源、水利、矿山、消防、军工以及交通等多个行业领域，产品远销东南亚、南美洲、欧洲、非洲等20多个国家和地区。",
+              "majorProducts": "航力变流稳压建筑用消防泵、航力柴油机消防泵组、航力车用消防泵、航力单级单吸离心泵、航力低温多级离心泵、航力多级离心泵、航力多卡对多表燃气表、航力飞机加油泵、航力分体式家用燃气表、航力工程机械用冲焊型液力变矩器、航力工业车辆用冲焊型液力变矩器、航力工业用燃气表、航力锅炉给水泵、航力机械式燃气表、航力离心油泵、航力立式生活供水泵、航力排污泵、航力喷水式柱塞泥浆泵、航力汽车用冲焊型变矩器、航力洒水车泵、航力卧式生活供水泵、航力洗井泵、航力压裂泵、航力一体式家用燃气表、航力油田用泵、航力蒸汽往复泵、航力钻井泥浆泵",
+              "revenueComposition": "泵及泵系统:47.73%;液力变矩器:26.17%;电机产品:16.22%;流体装备:6.9%;其他业务收入:4.9%;内部抵销:-1.91%",
+              "revenueSegments": [
+                {
+                  "name": "泵及泵系统",
+                  "sharePct": 47.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液力变矩器",
+                  "sharePct": 26.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电机产品",
+                  "sharePct": 16.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "流体装备",
+                  "sharePct": 6.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务收入",
+                  "sharePct": 4.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -1.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "消防泵",
+                  "工业往复泵",
+                  "水利泵",
+                  "输油泵",
+                  "储氢气瓶",
+                  "液氢罐箱",
+                  "液力变矩器",
+                  "油泵电机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "航天动力现有业务与公司是航天六院旗下液体火箭发动机业务的上市平台，是火箭产业链核心环节处于同一产业方向，收入主体为泵及泵系统（47.73%）、液力变矩器（26.17%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变事件能否转化为可确认的经营增量，只有经由“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，业务交集才会转化为业绩增量。订单、收入确认、产品结构和毛利率变化若逐步增强，相关业务的重要性会提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 10646,
+            "stockCode": "002179.SZ",
+            "stockName": "中航光电",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是蓝箭航天的核心主力供应商，提供连接器、单机、电缆网等多类关键产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002179.SZ",
+              "companyName": "中航光电",
+              "companyProfile": "公司是专业为航空及防务和高端制造提供互连解决方案的高科技企业。总部位于洛阳，在北京、深圳、广州、上海、沈阳、泰兴、西安、青岛、东莞、合肥、南昌、成都、无锡、武汉等地设有分公司和子公司，并在德国、越南、韩国及北美地区设有海外分支机构。公司专业从事中高端光、电、流体连接技术与产品的研究与开发，自主研发各类连接产品500多个系列、35万多个品种，拥有国家认定企业技术中心、博士后科研工作站以及国家和国防认可实验室。截至2024年底，公司累计获得授权专利5800余项，主持或参与制订行业标准920余项。公司已通过GB/T19001和GJB9001C标准的军民质量管理体系认证、GJB546B国军标生产线认证、AS9100D国际航空航天质量管理体系认证、IATF16949汽车行业质量管理体系认证、ISO13485医疗器械质量管理体系认证、ISO/TS22163轨道交通行业质量管理体系认证、ISO14001环境体系认证、ISO45001职业健康安全管理体系认证、GJB5000B软件工程化体系、安全生产标准化一级企业审核以及多项NADCAP特种工艺认证。公司多项重点产品通过了UL、CUL、CE、TUV、CB、3C、CQC、IECEX、ATEX等安规认证。公司产品广泛应用于防务、商业航空航天、通信网络、数据中心、石油装备、电力装备、工业装备、轨道交通、医疗设备、新能源汽车、消费电子等高端制造领域。公司秉承“航空报国、航空强国”使命，践行“诚信、厚德”为核心的特色企业文化，倾力打造全球一流的互连方案提供商。",
+              "profileSummary": "公司是专业为航空及防务和高端制造提供互连解决方案的高科技企业。公司专业从事中高端光、电、流体连接技术与产品的研究与开发，自主研发各类连接产品500多个系列、35万多个品种，拥有国家认定企业技术中心、博士后科研工作站以及国家和国防认可实验室。",
+              "majorProducts": "光、电、流体连接器、光电子器件、集成化设备、线缆组件",
+              "revenueComposition": "电连接器:74.55%;光器件及光电设备:17.11%;液冷解决方案及其他产品:8.34%",
+              "revenueSegments": [
+                {
+                  "name": "电连接器",
+                  "sharePct": 74.55,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "光器件及光电设备",
+                  "sharePct": 17.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液冷解决方案及其他产品",
+                  "sharePct": 8.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "机柜连接器",
+                    "category": "军工航空连接器"
+                  },
+                  {
+                    "name": "航天连接器",
+                    "category": "军工航空连接器"
+                  },
+                  {
+                    "name": "防务连接器",
+                    "category": "军工航空连接器"
+                  }
+                ],
+                "knownProducts": [
+                  "氧化锆瓷块",
+                  "钴铬烤瓷合金",
+                  "机柜连接器",
+                  "航天连接器",
+                  "防务连接器",
+                  "流体连接器",
+                  "新能源汽车充电连接器",
+                  "新能源汽车高压互锁连接器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中航光电的电连接器（74.55%）覆盖范围较宽，其中能够承载机柜连接器、航天连接器、防务连接器，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司是蓝箭航天的核心主力供应商，提供连接器、单机、电缆网等多类关键产品。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 10647,
+            "stockCode": "002025.SZ",
+            "stockName": "航天电器",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "为蓝箭航天等商业航天主要客户提供连接器、电机等产品配套服务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002025.SZ",
+              "companyName": "航天电器",
+              "companyProfile": "公司是中国航天科工集团有限公司所属上市公司。全国五一劳动奖状获得者、国家精密微特电机工程技术研究中心、中国电子元件百强企业、国家创新型企业、国家技术创新示范企业、全国知识产权示范企业、国家级智能制造新模式应用示范企业、全国文明单位，是全国质量奖、贵州省省长质量奖获得者、中国驰名商标。公司主营业务为高端连接器与互连一体化产品、微特电机与控制组件、继电器、光电器件、智能装备及服务等产品的研制和销售，致力于为客户提系统集成互连一体化解决方案。当前公司业务正在由单一元器件向互连一体化、驱动控制整体解决方案转型升级。目前公司主导产品用于航天、航空、电子、兵器、船舶、通讯、商业航天、数据中心、新能源汽车、能源装备、轨道交通等高技术领域配套。",
+              "profileSummary": "公司主营业务为高端连接器与互连一体化产品、微特电机与控制组件、继电器、光电器件、智能装备及服务等产品的研制和销售，致力于为客户提系统集成互连一体化解决方案。目前公司主导产品用于航天、航空、电子、兵器、船舶、通讯、商业航天、数据中心、新能源汽车、能源装备、轨道交通等高技术领域配套。",
+              "majorProducts": "步进电机、伺服电机、高可靠圆形连接器、高速传输连接器、固态继电器、光收发一体化组件、光纤连接器、激光器、绞线式弹性毫微插针连接器、毛钮扣连接器、密封电磁继电器、密封连接器、平衡力继电器、射频连接器、时间继电器、探测器、特种继电器、温度继电器、无刷直流电机、液冷连接器、印制电路连接器、永磁直流系列电机、直流力矩电机、中小型民用电机",
+              "revenueComposition": "连接器及互连一体化产品:68.46%;电机与控制组件:23.33%;继电器:4.13%;光通信器件:2.26%;其他业务:1.81%",
+              "revenueSegments": [
+                {
+                  "name": "连接器及互连一体化产品",
+                  "sharePct": 68.46,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电机与控制组件",
+                  "sharePct": 23.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "继电器",
+                  "sharePct": 4.13,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "光通信器件",
+                  "sharePct": 2.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "军用连接器",
+                    "category": "军工航空连接器"
+                  },
+                  {
+                    "name": "绞线式弹性毫微插针连接器",
+                    "category": "军工航空连接器"
+                  },
+                  {
+                    "name": "航天连接器",
+                    "category": "军工航空连接器"
+                  }
+                ],
+                "knownProducts": [
+                  "固体继电器",
+                  "军用连接器",
+                  "绞线式弹性毫微插针连接器",
+                  "航天连接器",
+                  "高速差分连接器",
+                  "高速背板连接器",
+                  "射频连接器",
+                  "探测器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "航天电器已经具备军用连接器、绞线式弹性毫微插针连接器、航天连接器等业务能力，为蓝箭航天等商业航天主要客户提供连接器、电机等产品配套服务并非单纯概念映射。当前对应的收入被归入连接器及互连一体化产品（68.46%）、继电器（4.13%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 10648,
+            "stockCode": "688333.SH",
+            "stockName": "铂力特",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为蓝箭航天等多家商业航天客户提供金属3D打印解决方案，多个项目已进入批量生产阶段。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688333.SH",
+              "companyName": "铂力特",
+              "companyProfile": "公司致力于成为全球领先的增材技术解决方案提供商。公司成立于2011年7月，2019年7月22日正式在上交所科创板挂牌上市。公司是国家级高新技术企业，拥有国家企业技术中心等高水平科研平台。公司为用户提供全方位的金属增材制造与再制造技术解决方案，包括：设备、打印服务、原材料、技术服务等。公司运用多年金属增材制造技术的专业经验，通过持续创新为航空航天、能源动力、医疗齿科、工业模具、汽车制造等行业客户提供服务。公司坚持以用户为中心，以市场为焦点，帮助用户实现最优设计、降低生产成本、提高生产效率、提升产品品质、创造价值。",
+              "profileSummary": "公司为用户提供全方位的金属增材制造与再制造技术解决方案，包括：设备、打印服务、原材料、技术服务等。公司运用多年金属增材制造技术的专业经验，通过持续创新为航空航天、能源动力、医疗齿科、工业模具、汽车制造等行业客户提供服务。",
+              "majorProducts": "代理销售设备及配件、电弧增材制造设备、激光立体成形设备、激光选区熔化成形设备、金属3D打印定制化产品、金属3D打印技术服务、金属3D打印设备、金属3D打印原材料",
+              "revenueComposition": "3D打印定制化产品:56.83%;3D打印设备及配件(自研):37.05%;3D打印原材料:6.12%",
+              "revenueSegments": [
+                {
+                  "name": "3D打印定制化产品",
+                  "sharePct": 56.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3D打印设备及配件(自研)",
+                  "sharePct": 37.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3D打印原材料",
+                  "sharePct": 6.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "3D打印定制化产品",
+                  "3D打印设备",
+                  "3D打印技术服务",
+                  "3D打印专用钛合金粉末材料"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "铂力特的业务范围能够覆盖为蓝箭航天等多家商业航天客户提供金属3D打印解决方案，多个项目已进入批量生产阶段所处的产业环节，但当前3D打印定制化产品（56.83%）、3D打印设备及配件(自研)（37.05%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”完成兑现，并在订单、收入确认、产品结构和毛利率变化上形成持续改善；若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 10649,
+            "stockCode": "688539.SH",
+            "stockName": "高华科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为蓝箭航天等多家头部商业火箭企业提供压力、温度、振动等传感器产品，助力可回收技术实现。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688539.SH",
+              "companyName": "高华科技",
+              "companyProfile": "公司成立于2000年，位于南京经济技术开发区栖霞大道66号，是一家以研发、设计、生产、销售高可靠性传感器及传感器网络系统为主的高新技术企业，2022年获得国家级专精特新“小巨人”企业称号，2023年4月18日成功登陆上交所科创板。公司主要产品涵盖各类压力、加速度、温湿度、位移等传感器，以及通过软件算法将上述传感器集成为传感器网络系统。依托高可靠性传感器产品的自主创新优势，公司核心产品具有可靠性高、一致性好、集成度高的特点，应用于航天、航空、轨交、机械装备等领域，参与并圆满完成了载人航天工程、探月工程、北斗工程、空间站建设工程、商业航天，和谐号、复兴号高铁动车，智能矿山机械等重点工程配套任务。公司在2019年被评选为探月工程嫦娥四号任务突出贡献单位，获探月工程嫦娥四号任务感谢信；2020年获长征五号B运载火箭首飞成功感谢信；2022年获力箭一号运载火箭发射成功感谢信；2023年获长征五号B运载火箭圆满完成我国空间站建设任务感谢信、长征二号F遥十七火箭发射成功感谢信；2024年获东方空间“引力一号遥一运载火箭”飞行试验任务获得圆满成功感谢信。",
+              "profileSummary": "公司主要产品涵盖各类压力、加速度、温湿度、位移等传感器，以及通过软件算法将上述传感器集成为传感器网络系统。依托高可靠性传感器产品的自主创新优势，公司核心产品具有可靠性高、一致性好、集成度高的特点，应用于航天、航空、轨交、机械装备等领域，参与并圆满完成了载人航天工程、探月工程、北斗工程、空间站建设工程、商业航天，和谐号、复兴号高铁动车，智能矿山机械等重点工程配套任务。",
+              "majorProducts": "GND15浓度传感器、GPD60矿用压力变送器、GUG900V磁致伸缩位移变送器、GWD200矿用温度变送器、GWZ125/4无线温振传感器、MB16系 列压力传感器、MB300系列通用压力变送器、MB610工程机械压力传感器、MJ-131B系列高铁转向架加速度传感、MJ-331系列高铁稳定性加速度传感器、船用无线环境监测系统、二代胎压检测系统、发动机状态智能传感监测系统、非实时传感器网络系统平台、高铁动车组双通道制动压力传感器、高压共轨压力传感器、航天发动机地面数据采集系统、活动发射平台健康管理系统、激光测距传感器、矿用本质安全型测高传感器、矿用本质安全型转速传感器、矿用无线压力传感器、实时传感器网络系统平台、微压压力传感器、位移传感器、温压复合传感器、无线温湿压传感器、旋转设备状态监测及故障分析系统、压力传感器、噪声传感器、振动传感器、转速传感器",
+              "revenueComposition": "高可靠性传感器:78.14%;传感器网络系统:17.71%;其他业务:2.57%;传感器芯片:1.58%",
+              "revenueSegments": [
+                {
+                  "name": "高可靠性传感器",
+                  "sharePct": 78.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "传感器网络系统",
+                  "sharePct": 17.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "传感器芯片",
+                  "sharePct": 1.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "MEMS压力传感器芯片",
+                  "位移传感器",
+                  "压力传感器",
+                  "振动传感器",
+                  "温度传感器",
+                  "转速传感器",
+                  "传感器网络系统平台",
+                  "旋转设备状态监测及故障分析系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "高华科技的业务范围能够覆盖为蓝箭航天等多家头部商业火箭企业提供压力、温度、振动等传感器产品，助力可回收技术实现所处的产业环节，但当前高可靠性传感器（78.14%）、传感器网络系统（17.71%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。技术商业化与产品迭代速度需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”完成兑现，并在客户认证、量产良率、订单规模、产品收入占比和毛利率上形成持续改善；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 10650,
+            "stockCode": "301005.SZ",
+            "stockName": "超捷股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为蓝箭航天等头部企业提供箭体结构件制造，包括整流罩等核心部件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301005.SZ",
+              "companyName": "超捷股份",
+              "companyProfile": "公司长期致力于高强度精密紧固件、异形连接件等产品的研发、生产与销售，产品主要应用于汽车发动机涡轮增压系统，换档驻车控制系统，汽车排气系统，汽车座椅、车灯与后视镜等内外饰系统的汽车关键零部件的连接、紧固。此外，公司的紧固件产品还应用于电子电器、通信等行业。经过多年的研发投入和持续积累，公司与下游主要的零部件一级供应商及整车厂建立了良好的合作关系，产品主要供给国内外知名汽车零部件一级供应商如富奥石川岛、华域视觉、盖瑞特、博世、佛吉亚、麦格纳、法雷奥、海拉、安道拓、德韧、上海菱重、宁波丰沃、博马科技、法雷奥西门子等，终端OEM为大众、通用、吉利、长城、日产、广汽菲克、蔚来等整车生产厂商。",
+              "profileSummary": "公司长期致力于高强度精密紧固件、异形连接件等产品的研发、生产与销售，产品主要应用于汽车发动机涡轮增压系统，换档驻车控制系统，汽车排气系统，汽车座椅、车灯与后视镜等内外饰系统的汽车关键零部件的连接、紧固。经过多年的研发投入和持续积累，公司与下游主要的零部件一级供应商及整车厂建立了良好的合作关系，产品主要供给国内外知名汽车零部件一级供应商如富奥石川岛、华域视觉、盖瑞特、博世、佛吉亚、麦格纳、法雷奥、海拉、安道拓、德韧、上海菱重、宁波丰沃、…",
+              "majorProducts": "金属类其他产品、螺钉螺栓、塑料类紧固件、异形连接件",
+              "revenueComposition": "螺钉螺栓:36.38%;异形连接件:24.38%;塑料紧固件:20.83%;其他金属件:8.84%;航空零部件:7.62%;其他业务:1.76%;机器人零部件:0.2%",
+              "revenueSegments": [
+                {
+                  "name": "螺钉螺栓",
+                  "sharePct": 36.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "异形连接件",
+                  "sharePct": 24.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "塑料紧固件",
+                  "sharePct": 20.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他金属件",
+                  "sharePct": 8.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "航空零部件",
+                  "sharePct": 7.62,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "机器人零部件",
+                  "sharePct": 0.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "火箭壳段",
+                    "category": "火箭"
+                  },
+                  {
+                    "name": "火箭尾段",
+                    "category": "火箭"
+                  },
+                  {
+                    "name": "火箭整流罩",
+                    "category": "火箭"
+                  }
+                ],
+                "knownProducts": [
+                  "尼龙线扣",
+                  "火箭壳段",
+                  "火箭尾段",
+                  "火箭整流罩",
+                  "塑料螺丝垫片",
+                  "尼龙铆钉",
+                  "十字轴万向节",
+                  "汽车换挡杆"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "超捷股份已经具备火箭壳段、火箭尾段、火箭整流罩等业务能力，为蓝箭航天等头部企业提供箭体结构件制造，包括整流罩等核心部件并非单纯概念映射。当前对应的收入被归入航空零部件（7.62%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 10656,
+            "stockCode": "002167.SZ",
+            "stockName": "东方锆业",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是国内稀有金属材料加工龙头，产品可用于航空航天领域，是SpaceX产业链潜在标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002167.SZ",
+              "companyName": "东方锆业",
+              "companyProfile": "公司深耕锆行业近三十年，是一家专注于锆系制品的研发、生产和销售的国家火炬计划重点高新技术企业。公司产品涵盖九大系列一百多个品种，广泛应用于生物陶瓷、电子陶瓷、结构陶瓷、色釉料、高温耐火材料及核能等行业，特别是在新能源电池材料、光伏、人造宝石、陶瓷基刹车片、种植牙及光通讯器件等领域市场占有率稳步提升。伴随宏观经济基本面的长期向好态势，锆系制品在传统市场的需求将持续扩大，同时，技术的创新和突破也推动着新兴领域对锆制品的需求不断增长。锆行业市场整体呈现出稳步增长的趋势，行业前景十分广阔。公司一直秉承着“做强做大，做精做细”的发展策略，不断延伸、拓展产业链，完善产业链，公司已成为国内锆行业中技术领先、规模居前，最具核心竞争力和综合竞争力的知名企业，更是全球锆产品品种最齐全的制造商之一。",
+              "profileSummary": "公司产品涵盖九大系列一百多个品种，广泛应用于生物陶瓷、电子陶瓷、结构陶瓷、色釉料、高温耐火材料及核能等行业，特别是在新能源电池材料、光伏、人造宝石、陶瓷基刹车片、种植牙及光通讯器件等领域市场占有率稳步提升。公司一直秉承着“做强做大，做精做细”的发展策略，不断延伸、拓展产业链，完善产业链，公司已成为国内锆行业中技术领先、规模居前，最具核心竞争力和综合竞争力的知名企业，更是全球锆产品品种最齐全的制造商之一。",
+              "majorProducts": "Y-TZP陶瓷刀、宇田二氧化锆、宇田复合氧化锆、宇田硅酸锆、宇田氯化锆、宇田氯氧化锆、宇田氧化锆结构陶瓷",
+              "revenueComposition": "无机非金属锆产品:89.61%;无机非金属材料产品:6.14%;附产品:2.26%;重矿物:1.77%;其他业务:0.22%",
+              "revenueSegments": [
+                {
+                  "name": "无机非金属锆产品",
+                  "sharePct": 89.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "无机非金属材料产品",
+                  "sharePct": 6.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "附产品",
+                  "sharePct": 2.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "重矿物",
+                  "sharePct": 1.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "二氧化锆",
+                  "复合氧化锆",
+                  "氯氧化锆",
+                  "海绵锆",
+                  "电熔氧化锆",
+                  "硅酸锆",
+                  "陶瓷手机后盖",
+                  "陶瓷刀具"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东方锆业现有业务与公司是国内稀有金属材料加工龙头，产品可用于航空航天领域，是SpaceX产业链潜在标的处于同一产业方向，收入主体为无机非金属锆产品（89.61%）、无机非金属材料产品（6.14%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变事件能否转化为可确认的经营增量，只有经由“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，业务交集才会转化为业绩增量。订单、收入确认、产品结构和毛利率变化若逐步增强，相关业务的重要性会提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 10665,
+            "stockCode": "600783.SH",
+            "stockName": "鲁信创投",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "通过参股基金合计持有蓝箭航天0.89%的股权。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600783.SH",
+              "companyName": "鲁信创投",
+              "companyProfile": "公司作为鲁信集团控股的山东省内最大、在国内具有重要影响力的专业创投机构，是国内证券市场首家上市创投企业。公司以“助力国家科技进步，推动山东产业结构转型升级”为使命，围绕“长周期”扶持创新型科技企业做强做大、“全流程”赋能实体产业高端高质高效发展等主营业务，持续聚焦新一代信息技术、高端装备制造、生命科学、新能源、新材料、航空航天、绿色低碳等国家战略性新兴产业。公司重点关注颠覆性创新、“卡脖子”技术攻关、国产化替代项目，始终坚持投早投小投长期投硬科技，做强做优耐心资本，着力打造科技金融生态圈，为我国加快推进新型工业化、发展新质生产力、构建新发展格局、建设现代化经济体系贡献力量。",
+              "profileSummary": "公司以“助力国家科技进步，推动山东产业结构转型升级”为使命，围绕“长周期”扶持创新型科技企业做强做大、“全流程”赋能实体产业高端高质高效发展等主营业务，持续聚焦新一代信息技术、高端装备制造、生命科学、新能源、新材料、航空航天、绿色低碳等国家战略性新兴产业。",
+              "majorProducts": "磨具、投资管理",
+              "revenueComposition": "磨料磨具产品:65.3%;管理费收入:28.27%;其他业务:6.44%",
+              "revenueSegments": [
+                {
+                  "name": "磨料磨具产品",
+                  "sharePct": 65.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "管理费收入",
+                  "sharePct": 28.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 6.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "股权投资业务",
+                    "category": "资产管理业务"
+                  }
+                ],
+                "knownProducts": [
+                  "磨砂轮",
+                  "股权投资业务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "鲁信创投实际经营中已有股权投资业务，与事件指向的通过参股基金合计持有蓝箭航天0.89%的股权能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在磨料磨具产品（65.3%）、管理费收入（28.27%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善事件能否转化为可确认的经营增量，需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。订单、收入确认、产品结构和毛利率变化将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 10669,
+            "stockCode": "688818.SH",
+            "stockName": "电科蓝天",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内砷化镓太阳能电池外延片第一供应商，商业航天高确定性赛道核心标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688818.SH",
+              "companyName": "电科蓝天",
+              "companyProfile": "公司坚持以“先进电源服务国家、绿色能源造福人类”为宗旨，以“引领电能源技术及产业发展”为主责，在电能源领域深耕多年，致力于成为中国先进电能源系统解决方案和核心产品的供应商。公司主要从事电能源产品及系统的研发、生产、销售及服务，拥有发电、储能、控制和系统集成全套解决方案，产品应用领域实现深海(水下1公里)至深空(距地球2.25亿公里)广泛覆盖。公司主营业务涵盖宇航电源、特种电源、新能源应用及服务三大板块。公司是中国化学与物理电源行业协会理事长单位，在电能源领域有着深厚的技术积淀，实际应用经验丰富，研发创新能力突出，部分关键领域引领世界前沿。公司拥有高效砷化镓空间太阳电池阵技术等11项核心技术，多项核心技术达到国际领先或国际先进水平。强大的技术实力保障了公司的核心竞争力，助力公司获得多项国家重大荣誉。2000年以来，公司累计获得国家科学技术进步奖9次、国防科学技术(进步)奖14次。",
+              "profileSummary": "公司主要从事电能源产品及系统的研发、生产、销售及服务，拥有发电、储能、控制和系统集成全套解决方案，产品应用领域实现深海(水下1公里)至深空(距地球2.25亿公里)广泛覆盖。公司主营业务涵盖宇航电源、特种电源、新能源应用及服务三大板块。",
+              "majorProducts": "储能系统及储能EPC服务、电源检测服务、电源控制设备及其构成的电源系统、光伏解决方案、空间锂离子电池组、空间太阳电池阵、锂电正极材料和消费类锂电池、燃料电池、砷化镓外延片、特种锂离子电池组、微电网解决方案",
+              "revenueComposition": "宇航电源:66.2%;新能源应用及服务:20.65%;特种电源:7.88%;其他业务:5.26%",
+              "revenueSegments": [
+                {
+                  "name": "宇航电源",
+                  "sharePct": 66.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源应用及服务",
+                  "sharePct": 20.65,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "特种电源",
+                  "sharePct": 7.88,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "航空航天用砷化镓太阳能电池",
+                    "category": "光伏电池"
+                  },
+                  {
+                    "name": "砷化镓外延片",
+                    "category": "航天材料"
+                  },
+                  {
+                    "name": "空间锂离子电池组",
+                    "category": "航天材料"
+                  },
+                  {
+                    "name": "军工电源",
+                    "category": "特种电源设备"
+                  },
+                  {
+                    "name": "航天器电源分系统",
+                    "category": "航天配套系统"
+                  },
+                  {
+                    "name": "航天器电源控制设备",
+                    "category": "航天配套系统"
+                  }
+                ],
+                "knownProducts": [
+                  "砷化镓外延片",
+                  "空间锂离子电池组",
+                  "航天器电源分系统",
+                  "航天器电源控制设备",
+                  "储能电站工程",
+                  "光伏电站工程",
+                  "航空航天用砷化镓太阳能电池",
+                  "集装箱储能系统"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "电科蓝天已经参与事件相关业务，但收入基数仍小：特种电源占收入的7.88%，说明公司已有业务抓手，但“国内砷化镓太阳能电池外延片第一供应商，商业航天高确定性赛道核心标的”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于事件能否转化为可确认的经营增量能否驱动“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，从而推动业务跨过小规模阶段。在此之前，订单、收入确认、产品结构和毛利率变化比总收入增速更值得跟踪；若事件关联停留在主题层面，未形成可持续订单或利润贡献，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 10670,
+            "stockCode": "600879.SH",
+            "stockName": "航天电子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是航天科技集团旗下电子产品核心平台，为卫星提供激光通信、连接器等多种配套。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600879.SH",
+              "companyName": "航天电子",
+              "companyProfile": "公司是中国航天科技集团公司旗下从事航天电子测控、航天电子对抗、航天制导、航天电子元器件专业的高科技上市公司。公司的航天高科技产品主要包括：高性能传感器、无线电测量控制系统、特种电子通信、自动跟踪系统和数据收集、传输处理系统、卫星电视广播系统、数字化有线电视网络设备、卫星通信地球站、星上精密机构及结构部件、大型地面工程业务测控站和电子支持设备，以及火箭、卫星、舰船、飞机、核能等产品配套使用的各种电连接器、继电器、电子仪器设备、电缆网及开关设备，GPS/GLONASS/北斗卫星导航应用系统及终端设备等，被广泛地应用于各类型号卫星、火箭运载工具、相应的地面通信测量与控制设备及工业自动化控制设备中。面对新机遇、新挑战，公司以强国强军为己任，以市场为导向，以经济效益为中心，以创新为动力，严谨慎密，不断超越，实现观念和机制创新的管理理念与雄厚的高科技实力相结合，使高新技术研发能力、产品批量生产能力、技术基础保障能力和规模式发展能力跃上新台阶。",
+              "profileSummary": "公司是中国航天科技集团公司旗下从事航天电子测控、航天电子对抗、航天制导、航天电子元器件专业的高科技上市公司。公司的航天高科技产品主要包括：高性能传感器、无线电测量控制系统、特种电子通信、自动跟踪系统和数据收集、传输处理系统、卫星电视广播系统、数字化有线电视网络设备、卫星通信地球站、星上精密机构及结构部件、大型地面工程业务测控站和电子支持设备，以及火箭、卫星、舰船、飞机、核能等产品配套使用的各种电连接器、继电器、电子仪器设备、电缆网及开…",
+              "majorProducts": "火箭股份MK系列开关、火箭股份车载移动电话、火箭股份电连接器、火箭股份电源管理芯片、火箭股份继电器、火箭股份石油钻井测斜仪器、火箭股份数字功放芯片、火箭股份水平测量仪、火箭股份卫星导航定位接收机、火箭股份卫星通信授时类、火箭股份位移传感器、火箭股份温度传感器、火箭股份遥测与电子测量",
+              "revenueComposition": "航天配套产品:66.68%;系统装备产品:16.55%;航天机电组件产品:9.3%;航天军用产品:6.78%;其他业务:0.69%",
+              "revenueSegments": [
+                {
+                  "name": "航天配套产品",
+                  "sharePct": 66.68,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "系统装备产品",
+                  "sharePct": 16.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "航天机电组件产品",
+                  "sharePct": 9.3,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "航天军用产品",
+                  "sharePct": 6.78,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "航天连接器",
+                    "category": "军工航空连接器"
+                  },
+                  {
+                    "name": "卫星导航模块",
+                    "category": "定位导航设备"
+                  },
+                  {
+                    "name": "察打一体无人机",
+                    "category": "军用无人机"
+                  },
+                  {
+                    "name": "导弹制导系统",
+                    "category": "飞行器零部件"
+                  },
+                  {
+                    "name": "导航用基带处理芯片",
+                    "category": "航空电子"
+                  },
+                  {
+                    "name": "小型制导火箭",
+                    "category": "火箭"
+                  }
+                ],
+                "knownProducts": [
+                  "航天测控通信系统",
+                  "察打一体无人机",
+                  "运输无人机",
+                  "无人机系统",
+                  "导航用基带处理芯片",
+                  "测控通信系统",
+                  "遥感信息系统",
+                  "小型制导火箭"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "航天电子的航天配套产品（66.68%）、航天机电组件产品（9.3%）覆盖范围较宽，其中能够承载航天连接器、卫星导航模块、察打一体无人机，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司是航天科技集团旗下电子产品核心平台，为卫星提供激光通信、连接器等多种配套。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 10671,
+            "stockCode": "688375.SH",
+            "stockName": "国博电子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是星网星座射频芯片核心供应商，受益于卫星相控阵天线价值量提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688375.SH",
+              "companyName": "国博电子",
+              "companyProfile": "公司设立于2000年，主要从事有源相控阵T/R组件和射频集成电路相关产品的研发、生产和销售，是目前国内能够批量提供有源相控阵T/R组件及系列化射频集成电路产品的领先企业，核心技术达到国内领先、国际先进水平，公司主要客户为各科研院所和整机单位、移动通信设备制造商等。2022年7月22日，国博电子登陆上海证券交易所科创板。公司建立了以化合物半导体为核心的技术体系，产品覆盖芯片、模块、组件，广泛应用于移动通信基站和终端、卫星领域、雷达探测等领域。公司主要产品包括有源相控阵T/R组件、射频模块、射频放大类芯片、射频控制类芯片等，均属于模拟集成电路。公司结合技术发展趋势和市场需求痛点，进一步推进新材料、新器件的开发应用，进一步完善和拓展产品种类及谱系，积极推进建立集成开发设计研发体系，推进先进封装技术产品化应用，合理布局一代(Si)、二代(GaAs)、三代(GaN)半导体射频IC和模块的技术研究和产品开发，强化客制化产品定向设计开发优势，聚焦重点应用有计划地开展技术研究和产品开发，持续拓展系统级应用市场。公司地址位于南京市江宁经济技术开发区，毗邻禄口国际机场和国家级风景区，交通便利、环境优美。经过多年的积累和发展，公司建立了国内一流的设计平台和制造平台，建立了稳定高效的研发团队、生产团队、销售团队和管理团队，能够为用户提供高可靠性、高集成度、高成品率、高性能的配套产品及优质服务，受到了市场的广泛关注和普遍认可。",
+              "profileSummary": "公司设立于2000年，主要从事有源相控阵T/R组件和射频集成电路相关产品的研发、生产和销售，是目前国内能够批量提供有源相控阵T/R组件及系列化射频集成电路产品的领先企业，核心技术达到国内领先、国际先进水平，公司主要客户为各科研院所和整机单位、移动通信设备制造商等。公司结合技术发展趋势和市场需求痛点，进一步推进新材料、新器件的开发应用，进一步完善和拓展产品种类及谱系，积极推进建立集成开发设计研发体系，推进先进封装技术产品化应用，合理布局…",
+              "majorProducts": "射频放大类芯片、射频控制类芯片、射频模块、有源相控阵T/R组件",
+              "revenueComposition": "T/R组件和射频模块:88.36%;射频芯片:7.84%;其他芯片:2.65%;其他业务:1.15%",
+              "revenueSegments": [
+                {
+                  "name": "T/R组件和射频模块",
+                  "sharePct": 88.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "射频芯片",
+                  "sharePct": 7.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他芯片",
+                  "sharePct": 2.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "射频低噪声放大器",
+                  "射频功率放大器",
+                  "射频开关",
+                  "射频控制类模块",
+                  "射频放大类模块",
+                  "数控衰减器芯片",
+                  "有源相控阵T/R组件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "国博电子的业务范围能够覆盖公司是星网星座射频芯片核心供应商，受益于卫星相控阵天线价值量提升所处的产业环节，但当前T/R组件和射频模块（88.36%）、射频芯片（7.84%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”完成兑现，并在订单、收入确认、产品结构和毛利率变化上形成持续改善；若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 10672,
+            "stockCode": "001270.SZ",
+            "stockName": "铖昌科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是星网一代及一代增强星T/R组件核心供应商，市场份额达70%。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "001270.SZ",
+              "companyName": "*ST铖昌",
+              "companyProfile": "公司成立于2010年11月，专注于微波毫米波模拟相控阵T/R芯片的研发、生产、销售和技术服务，是国内少数能够提供相控阵T/R芯片完整解决方案的企业之一。主要向市场提供基于GaN、GaAs和硅基工艺的系列化产品以及相关的技术解决方案。公司产品主要包含功率放大器芯片、低噪声放大器芯片、模拟波束赋形芯片及相控阵用无源器件等，频率可覆盖L波段至W波段。产品已应用于探测、遥感、通信、导航、电子对抗等领域，在星载、机载、舰载、车载和地面相控阵雷达中列装，亦可应用至卫星互联网、5G毫米波通信、安防雷达等场景。公司市场定位清晰，技术积累深厚，产品水平先进，是国内从事相控阵T/R芯片研制的主要企业，是微波毫米波射频集成电路创新链的典型代表。公司自成立以来一直致力于推进相控阵T/R芯片的自主可控并打破高端射频芯片长期以来大规模应用面临的成本高企困局。经过多年研发，公司产品已广泛应用于星载、机载、舰载、车载及地面相控阵雷达等多种型号装备中，特别是公司推出的星载相控阵T/R芯片系列产品在某系列卫星中实现了大规模应用，该芯片的应用提升了卫星雷达系统的整体性能，达到了国际先进水平。与此同时，公司加快拓展新兴领域业务。在卫星互联网方面，公司充分发挥技术创新优势，成功推出星载和地面用卫星互联网相控阵T/R芯片全套解决方案；其中值得一提的是，公司研制的硅基毫米波模拟波束赋形芯片系列产品的性能优异，目前已与多家科研院所及优势企业开展合作，从元器件层面助力我国卫星互联网快速、高质量、低成本发展；5G毫米波通信方面，公司已经和主流通信设备生产商建立了良好的合作关系，支撑5G毫米波相控阵T/R芯片国产化。",
+              "profileSummary": "公司成立于2010年11月，专注于微波毫米波模拟相控阵T/R芯片的研发、生产、销售和技术服务，是国内少数能够提供相控阵T/R芯片完整解决方案的企业之一。主要向市场提供基于GaN、GaAs和硅基工艺的系列化产品以及相关的技术解决方案。",
+              "majorProducts": "GaAs两片式单通道T/R芯片组、GaAs相控阵T/R芯片组、GaN相控阵T/R芯片组、放大器类芯片、幅相控制类芯片、硅基单片式多通道相控阵T/R芯片、微波毫米波相控阵T/R芯片、无源类芯片",
+              "revenueComposition": "相控阵T/R芯片:99.78%;技术服务:0.22%",
+              "revenueSegments": [
+                {
+                  "name": "相控阵T/R芯片",
+                  "sharePct": 99.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 0.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "射频低噪声放大器",
+                  "射频功率放大器",
+                  "幅相多功能芯片",
+                  "收发多功能放大器",
+                  "数控移相器芯片",
+                  "数控衰减器芯片",
+                  "模拟波束赋形芯片",
+                  "限幅器芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "铖昌科技现有业务与公司是星网一代及一代增强星T/R组件核心供应商，市场份额达70%处于同一产业方向，收入主体为相控阵T/R芯片（99.78%）、技术服务（0.22%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变事件能否转化为可确认的经营增量，只有经由“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，业务交集才会转化为业绩增量。订单、收入确认、产品结构和毛利率变化若逐步增强，相关业务的重要性会提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 10673,
+            "stockCode": "688270.SH",
+            "stockName": "ST臻镭",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是星网星座射频芯片核心供应商，ADC产品市场份额超70%，卡位优势显著。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688270.SH",
+              "companyName": "臻镭科技",
+              "companyProfile": "公司专注于集成电路芯片和微系统的研发、生产和销售，并围绕相关产品提供技术服务。公司主要产品包括终端射频前端芯片、射频收发芯片及高速高精度ADC/DAC、电源管理芯片、微系统及模组等，为客户提供从天线到信号处理之间的芯片及微系统产品和技术解决方案。公司产品及技术已广泛应用于无线通信终端、通信雷达系统、电子系统供配电等军用领域，并逐步拓展至移动通信系统、卫星互联网等民用领域。公司始终聚焦于高性能集成电路芯片的技术攻关，并已成为国内军用通信、雷达领域中射频芯片和电源管理芯片的核心供应商之一。公司的产品已应用于多个国家重大装备型号，其中终端射频前端芯片已应用于无线通信终端、北斗导航终端和新一代电台；射频收发芯片已应用于高速跳频宽带数据链和数字相控阵雷达系统；电源管理芯片已应用于低轨通信卫星星座，以及区域防护、预警、空间目标监测雷达；微系统及模组已应用于通信卫星和机载载荷。",
+              "profileSummary": "公司专注于集成电路芯片和微系统的研发、生产和销售，并围绕相关产品提供技术服务。公司主要产品包括终端射频前端芯片、射频收发芯片及高速高精度ADC/DAC、电源管理芯片、微系统及模组等，为客户提供从天线到信号处理之间的芯片及微系统产品和技术解决方案。",
+              "majorProducts": "T/R电源管理芯片、电池均衡器芯片、负载点电源芯片、高速高精度ADC/DAC芯片系列、固体电子开关芯片、宽带SDR射频收发芯片系列、模组系列、微系统系列、终端低噪声放大器系列、终端功率放大器系列、终端射频开关芯片系列",
+              "revenueComposition": "电源管理芯片:45.53%;射频收发芯片及高速高精度ADC/DAC芯片:31.67%;技术服务:17.27%;微系统及模组:3.93%;终端射频前端芯片:1.57%;其他业务:0.04%",
+              "revenueSegments": [
+                {
+                  "name": "电源管理芯片",
+                  "sharePct": 45.53,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "射频收发芯片及高速高精度ADC/DAC芯片",
+                  "sharePct": 31.67,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 17.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "微系统及模组",
+                  "sharePct": 3.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "终端射频前端芯片",
+                  "sharePct": 1.57,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "三维异构微系统",
+                    "category": "航空电子"
+                  },
+                  {
+                    "name": "数模转换器DAC",
+                    "category": "信号链芯片"
+                  },
+                  {
+                    "name": "模数转换器ADC",
+                    "category": "信号链芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "三维异构微系统",
+                  "数模转换器DAC",
+                  "时钟分配器",
+                  "模数转换器ADC",
+                  "运算放大器",
+                  "PWM控制器",
+                  "T/R电源管理芯片",
+                  "低压差线性稳压器LDO"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "ST臻镭的电源管理芯片（45.53%）、射频收发芯片及高速高精度ADC/DAC芯片（31.67%）覆盖范围较宽，其中能够承载三维异构微系统、数模转换器DAC、模数转换器ADC，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司是星网星座射频芯片核心供应商，ADC产品市场份额超70%，卡位优势显著。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 10674,
+            "stockCode": "300342.SZ",
+            "stockName": "天银机电",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "子公司天银星际是国内商业卫星星敏感器龙头，微小卫星市占率超90%。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300342.SZ",
+              "companyName": "天银机电",
+              "companyProfile": "公司是拥有自主知识产权的冰箱压缩机零部件提供商，专注于节能节材型冰箱压缩机零部件的研发、生产和销售。主要产品包括起动器、过载保护器、吸气消音器和接线盒以及变频控制器等压缩机外围配套电气零部件，同时公司积极拓展了军工电子、工业机器人及自动化成套设备、智能家电零部件以及航天传感器业务。公司拥有国内外多项专利，并先后获得了“国家火炬计划重点高新技术企业”、“江苏名牌产品”等称号，通过了新标准认定的“高新技术企业”。公司已获得ISO9001质量体系、ISO14001环境体系以及OHSAS18001职业健康安全管理体系认证，体系健全而且运行有效。",
+              "profileSummary": "公司是拥有自主知识产权的冰箱压缩机零部件提供商，专注于节能节材型冰箱压缩机零部件的研发、生产和销售。主要产品包括起动器、过载保护器、吸气消音器和接线盒以及变频控制器等压缩机外围配套电气零部件，同时公司积极拓展了军工电子、工业机器人及自动化成套设备、智能家电零部件以及航天传感器业务。",
+              "majorProducts": "冰箱压缩式起动机、热保护器、压缩机用塑料",
+              "revenueComposition": "冰箱压缩机用配套产品:61.6%;雷达:38.4%",
+              "revenueSegments": [
+                {
+                  "name": "冰箱压缩机用配套产品",
+                  "sharePct": 61.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "雷达",
+                  "sharePct": 38.4,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "便携式电子战装备",
+                    "category": "军用电子战装备"
+                  },
+                  {
+                    "name": "恒星敏感器",
+                    "category": "航空电子"
+                  },
+                  {
+                    "name": "无线电高度表",
+                    "category": "航空电子"
+                  },
+                  {
+                    "name": "电子战无人机",
+                    "category": "军用无人机"
+                  },
+                  {
+                    "name": "空间光学敏感器",
+                    "category": "航空电子"
+                  },
+                  {
+                    "name": "航空电子显控模块",
+                    "category": "航空电子"
+                  }
+                ],
+                "knownProducts": [
+                  "便携式电子战装备",
+                  "电子战无人机",
+                  "恒星敏感器",
+                  "无线电高度表",
+                  "空间光学敏感器",
+                  "航空电子显控模块",
+                  "航空电子系统模块",
+                  "冰箱压缩机起动器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "天银机电与事件存在真实业务交集：公司已有便携式电子战装备、恒星敏感器、无线电高度表，与子公司天银星际是国内商业卫星星敏感器龙头，微小卫星市占率超90%所处的产业环节一致。雷达（38.4%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 10678,
+            "stockCode": "688387.SH",
+            "stockName": "信科移动",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是星网、千帆星座基带与天线核心供应商，单星价值量高，市场份额领先。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688387.SH",
+              "companyName": "信科移动-U",
+              "companyProfile": "公司是大型高科技中央企业中国信息通信科技集团有限公司下属核心企业，是中国信科集团移动通信产业的承载主体和5G产业化的主导企业。作为以5G为代表的全球移动通信领域自主创新领军企业，公司是5G技术、标准、产业上实现引领发展的重要贡献者，是全球5G无线移动通信产业的核心推动力量，是引领我国6G持续保持国际领先的先锋企业。公司以“万物互联的无限沟通引擎”为企业发展理念，以“空天地一体化”为发展战略，致力于为全球电信运营商和行业客户提供领先的移动通信技术、产品与解决方案。公司是国务院国资委“科改示范企业”“创建世界一流专精特新示范企业”，坚持自主创新驱动价值创造，持续打造移动通信领域的核心技术、国之重器、创新高地。",
+              "profileSummary": "公司是大型高科技中央企业中国信息通信科技集团有限公司下属核心企业，是中国信科集团移动通信产业的承载主体和5G产业化的主导企业。公司以“万物互联的无限沟通引擎”为企业发展理念，以“空天地一体化”为发展战略，致力于为全球电信运营商和行业客户提供领先的移动通信技术、产品与解决方案。",
+              "majorProducts": "“4+4+16”超宽频多端口混合波束基站天线、4/5G超宽频融合天线、4G运营商网络设备、5G MIMO天线、5G高速铁路专网系列产品、5G基站放大系列、5G微功率系列、5G移频室分系列、5G运营商网络设备、5G智慧矿山行业专网系列产品、5G智慧油田行业专网系列产品、超宽频多端口基站天线、系统设备",
+              "revenueComposition": "移动通信一体化服务:36.05%;系统设备:22.21%;行业专网设备及其他:20.11%;天馈设备:9.63%;室分设备:6.13%;移动通信网络运维服务:5.59%;其他业务:0.29%",
+              "revenueSegments": [
+                {
+                  "name": "移动通信一体化服务",
+                  "sharePct": 36.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "系统设备",
+                  "sharePct": 22.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "行业专网设备及其他",
+                  "sharePct": 20.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "天馈设备",
+                  "sharePct": 9.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "室分设备",
+                  "sharePct": 6.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "移动通信网络运维服务",
+                  "sharePct": 5.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "天馈系统",
+                  "5G皮基站",
+                  "数字光纤直放站",
+                  "5G基站天线",
+                  "智能网关",
+                  "基带处理单元(BBU)",
+                  "射频拉远单元(RRU)",
+                  "有源天线处理单元(AAU)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "信科移动与新闻存在业务方向上的交集：公司是星网、千帆星座基带与天线核心供应商，单星价值量高，市场份额领先；公司当前收入主要来自移动通信一体化服务（36.05%）、系统设备（22.21%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对事件能否转化为可确认的经营增量的推动只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能进入报表，订单、收入确认、产品结构和毛利率变化决定这一交集能否升级为实际增量；事件关联停留在主题层面，未形成可持续订单或利润贡献是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 10679,
+            "stockCode": "300762.SZ",
+            "stockName": "上海瀚讯",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是千帆星座微波载荷总体供应商，深度受益于垣信（G60）星座的加速发射。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300762.SZ",
+              "companyName": "上海瀚讯",
+              "companyProfile": "公司前身瀚讯有限系由无线中心、上海科技投资公司、上海创业投资有限公司、上海信息技术创业投资有限公司、卜智勇、王克星、王晓东、顾小华以货币和人力资本出资设立，成立时的公司名称为“上海睿智通无线技术有限公司”,是在新一代宽带移动通信领域长期研究积累基础上，聚焦国家4G/5G长期技术发展及军队信息化升级等重大战略逐步发展起来的，主要从事行业宽带移动通信设备的研发、制造、销售及工程实施，结合业务应用软件、指挥调度软件等配套产品，向军方客户和铁路等行业客户提供行业宽带移动通信系统的整体解决方案。在军用宽带移动通信系统装备领域，公司拥有完整的军工科研生产资质，是业内少数既拥有自主核心知识产权又具备完整资质的供应商,公司还为北京奥运会、广州亚运会、上海世博会、博鳌论坛等一系列的重大活动提供通信保障,连续参与我军近年重大演习作训活动，为“嫦娥五号”、“神舟十一号”的返回着陆提供通信保障,并多次受到使用单位及我军各级机关的表扬和嘉奖，是我军移动通信从窄带到宽带的跨越式发展的重要产业力量。",
+              "profileSummary": "公司前身瀚讯有限系由无线中心、上海科技投资公司、上海创业投资有限公司、上海信息技术创业投资有限公司、卜智勇、王克星、王晓东、顾小华以货币和人力资本出资设立，成立时的公司名称为“上海睿智通无线技术有限公司”,是在新一代宽带移动通信领域长期研究积累基础上，聚焦国家4G/5G长期技术发展及军队信息化升级等重大战略逐步发展起来的，主要从事行业宽带移动通信设备的研发、制造、销售及工程实施，结合业务应用软件、指挥调度软件等配套产品，向军方客户和铁…",
+              "majorProducts": "5G-LSB板、Lite 5G：一体化大皮基站、Lite 5G：一体化微基站、刀片式灵巧5G技术方案、电力无线专网、轨交宽带无线网、国产化自主可控通用处理板、基带处理板、前传交换板、射频处理板、时钟保持板、通信模块、通讯保障、通用处理板",
+              "revenueComposition": "宽带移动通信设备:91.91%;其他产品:8.09%",
+              "revenueSegments": [
+                {
+                  "name": "宽带移动通信设备",
+                  "sharePct": 91.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 8.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "军用通信平板终端(PAD)",
+                  "军用通信车载平台",
+                  "军用通信手持台",
+                  "军用通信背负台",
+                  "背负式基站",
+                  "车地通信节点站",
+                  "车载中心站",
+                  "升空基站"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "上海瀚讯现有业务与公司是千帆星座微波载荷总体供应商，深度受益于垣信（G60）星座的加速发射处于同一产业方向，收入主体为宽带移动通信设备（91.91%）、其他产品（8.09%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变事件能否转化为可确认的经营增量，只有经由“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，业务交集才会转化为业绩增量。订单、收入确认、产品结构和毛利率变化若逐步增强，相关业务的重要性会提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，影响仍可能局限在估值预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "21条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

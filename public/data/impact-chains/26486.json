@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26486",
@@ -9,7 +9,7 @@
     "date": "2026-06-28"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 1,
     "mappedStockCount": 1,
     "unmappedStockCount": 0,
@@ -21,73 +21,21 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 7
+        "anchorProductCount": 1
       }
     ],
     "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 7,
-    "selectedCoreProductCount": 2,
+    "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 3,
-    "downstreamCandidateCount": 1,
-    "shownUpstreamCount": 3,
-    "shownDownstreamCount": 1
+    "level7ProductCount": 4,
+    "relatedIndustryCandidateCount": 2,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140028895",
-        "name": "电机定子",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140116120"
-        ],
-        "linkedCoreProductNames": [
-          "电机铁芯"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140028896",
-        "name": "电机转子",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140116120"
-        ],
-        "linkedCoreProductNames": [
-          "电机铁芯"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140133910",
-        "name": "网络变压器插座",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140133909"
-        ],
-        "linkedCoreProductNames": [
-          "网络变压器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140133909",
         "name": "网络变压器",
@@ -113,76 +61,314 @@
           "name": "网络变压器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301577.SZ",
             "stockName": "美信科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "通信设备",
           "通信"
         ]
-      },
-      {
-        "code": "1140116120",
-        "name": "电机铁芯",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "event_title",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "301577.SZ",
-            "stockName": "美信科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 2,
-        "downstreamCount": 1,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140008574",
-        "name": "电机",
-        "anchorCount": 1,
+        "code": "1210000378",
+        "name": "电池外壳材料",
+        "description": "电池外壳材料指用于封装电芯的结构件（如钢壳、铝壳）。受新能源车高增长及轻量化、高强度需求驱动，该行业因技术壁垒提升及头部效应显著，成为A股关注焦点，兼具成长性与确定性。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140116120"
+        "starWeight": 5,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "300953.SZ",
+            "stockName": "震裕科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
         ],
-        "linkedCoreProductNames": [
-          "电机铁芯"
+        "products": [
+          {
+            "code": "1140166455",
+            "name": "动力锂电池盖板",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电池外壳材料 > 电池外壳材料 > 动力锂电池盖板",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300953.SZ",
+                "stockName": "震裕科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140166454",
+            "name": "动力锂电池铝壳",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电池外壳材料 > 电池外壳材料 > 动力锂电池铝壳",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300953.SZ",
+                "stockName": "震裕科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1210000309",
+        "name": "其他金属新材料",
+        "description": "该行业涵盖稀土、钨等战略性小金属及高端合金材料。因具备稀缺性且广泛应用于新能源、军工及半导体等高景气领域，受国产替代与产业升级驱动，兼具资源壁垒与技术成长属性，成为市场关注焦点。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688190.SH",
+            "stockName": "云路股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140161022",
+            "name": "非晶合金薄带",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 其他金属新材料 > 非晶合金 > 非晶合金薄带",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688190.SH",
+                "stockName": "云路股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "非晶材料"
+            ]
+          },
+          {
+            "code": "1140192069",
+            "name": "非晶破碎磁粉",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 其他金属新材料 > 非晶合金 > 非晶破碎磁粉",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688190.SH",
+                "stockName": "云路股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "非晶材料"
+            ]
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 6,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 4,
+    "level7ProductCount": 4,
+    "candidateIndustryCount": 2,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 5593,
+        "stockCode": "300953.SZ",
+        "stockName": "震裕科技",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 5594,
+        "stockCode": "301577.SZ",
+        "stockName": "美信科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 5595,
+        "stockCode": "300680.SZ",
+        "stockName": "隆盛科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 5596,
+        "stockCode": "002576.SZ",
+        "stockName": "通达动力",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 5597,
+        "stockCode": "603370.SH",
+        "stockName": "华新精科",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 5599,
+        "stockCode": "688190.SH",
+        "stockName": "云路股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210000378",
+        "name": "电池外壳材料",
+        "description": "电池外壳材料指用于封装电芯的结构件（如钢壳、铝壳）。受新能源车高增长及轻量化、高强度需求驱动，该行业因技术壁垒提升及头部效应显著，成为A股关注焦点，兼具成长性与确定性。",
+        "stockCount": 1,
+        "starWeight": 5,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "300953.SZ",
+            "stockName": "震裕科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
+        ],
+        "products": [
+          {
+            "code": "1140166455",
+            "name": "动力锂电池盖板",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电池外壳材料 > 电池外壳材料 > 动力锂电池盖板",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300953.SZ",
+                "stockName": "震裕科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140166454",
+            "name": "动力锂电池铝壳",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电池外壳材料 > 电池外壳材料 > 动力锂电池铝壳",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300953.SZ",
+                "stockName": "震裕科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1210000309",
+        "name": "其他金属新材料",
+        "description": "该行业涵盖稀土、钨等战略性小金属及高端合金材料。因具备稀缺性且广泛应用于新能源、军工及半导体等高景气领域，受国产替代与产业升级驱动，兼具资源壁垒与技术成长属性，成为市场关注焦点。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688190.SH",
+            "stockName": "云路股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140161022",
+            "name": "非晶合金薄带",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 其他金属新材料 > 非晶合金 > 非晶合金薄带",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688190.SH",
+                "stockName": "云路股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "非晶材料"
+            ]
+          },
+          {
+            "code": "1140192069",
+            "name": "非晶破碎磁粉",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 其他金属新材料 > 非晶合金 > 非晶破碎磁粉",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688190.SH",
+                "stockName": "云路股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "非晶材料"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -197,10 +383,476 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 11,
+    "eligibleSourceRowCount": 6,
+    "totalStockCount": 6,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 4,
+    "excludedNonAShareCount": 1,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 6,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 5593,
+            "stockCode": "300953.SZ",
+            "stockName": "震裕科技",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "发布第三代电机铁芯粘胶技术，是本次技术革新的核心主体，引领行业发展方向。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300953.SZ",
+              "companyName": "震裕科技",
+              "companyProfile": "公司作为全球精密模具与结构件制造领域的领军企业，自创立以来，始终秉持“技术领先”的经营理念，专注从事精密级进冲压模具及下游精密结构件的研发、设计、生产和销售。公司拥有丰富的精密级进冲压模具开发经验和完整的制造体系，以精密级进冲压模具的设计开发为核心，为全球范围内的家用电器制造商及汽车、工业工控制造商等提供定制化的精密级进冲压模具。同时，公司以自身设计开发的冲压模具为基础，向客户提供精密结构件产品，广泛应用于家电、新能源锂电池、汽车、工业工控等行业领域，形成了“一体两翼四维”的发展战略格局。",
+              "profileSummary": "公司作为全球精密模具与结构件制造领域的领军企业，自创立以来，始终秉持“技术领先”的经营理念，专注从事精密级进冲压模具及下游精密结构件的研发、设计、生产和销售。同时，公司以自身设计开发的冲压模具为基础，向客户提供精密结构件产品，广泛应用于家电、新能源锂电池、汽车、工业工控等行业领域，形成了“一体两翼四维”的发展战略格局。",
+              "majorProducts": "单列电机铁芯级进模系列、单列动力锂电池结构件级进模系列、电机铁芯机结构件、动力锂电池精密结构件、多列电机铁芯级进模系列、精密级进冲压模具、精密结构件、三列电机铁芯级进模系列、双列电机铁芯级进模系列",
+              "revenueComposition": "精密结构件:81.3%;其他业务:14.16%;模具及配件:4.54%",
+              "revenueSegments": [
+                {
+                  "name": "精密结构件",
+                  "sharePct": 81.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 14.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "模具及配件",
+                  "sharePct": 4.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "动力锂电池盖板",
+                    "category": "电池外壳材料"
+                  },
+                  {
+                    "name": "动力锂电池铝壳",
+                    "category": "电池外壳材料"
+                  }
+                ],
+                "knownProducts": [
+                  "动力锂电池壳体冲压模具",
+                  "动力锂电池顶盖冲压模具",
+                  "电机定子铁芯冲压模具",
+                  "电机转子铁芯冲压模具",
+                  "行星滚柱丝杠",
+                  "电机定子铁芯",
+                  "电机转子铁芯",
+                  "动力锂电池盖板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "震裕科技拥有动力锂电池盖板、动力锂电池铝壳，其产业链位置与发布第三代电机铁芯粘胶技术，是本次技术革新的核心主体，引领行业发展方向一致；当前的精密结构件（81.3%）、其他业务（14.16%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由技术商业化与产品迭代速度决定，并需完成“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”。只有客户认证、量产良率、订单规模、产品收入占比和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；技术路线变化、良率爬坡缓慢或竞争方案更快成熟则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 5594,
+            "stockCode": "301577.SZ",
+            "stockName": "美信科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内精密冲压铁芯领先企业，其模内点胶技术是与震裕新一代技术相竞争的核心工艺之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301577.SZ",
+              "companyName": "美信科技",
+              "companyProfile": "公司是一家专注于磁性元器件设计、研发、生产与销售的高新技术企业。公司具备多品类磁性元器件的综合制造能力，产品主要应用于路由器、交换机、机顶盒、服务器等网络通信领域，并拓展至工业电源、安防设备、消费电子等领域。公司积极布局新能源汽车领域，不断加大对汽车用功率磁性元器件的研发创新及市场开拓力度。公司根据市场需要，以平板变压器技术为核心，磁集成技术为导向，开发了一系列汽车用功率磁性元器件。该系列产品能够广泛运用于新能源车的电池管理系统(BMS)、车载充电系统(OBC)、直流-直流变换器(DC-DC Converter)等汽车电子设备。公司高度重视磁性元器件产品新技术、新产品的前瞻性研发，不断加大对片式电感新产品的研发和创新，并成功将该产品切入下游客户网络变压器应用领域。公司持续推进自动化升级改造，致力于通过自动化设备投资降低网络变压器生产过程的人力依赖，提高生产效率，提升产品良率、产品质量的稳定性与可靠性。",
+              "profileSummary": "公司具备多品类磁性元器件的综合制造能力，产品主要应用于路由器、交换机、机顶盒、服务器等网络通信领域，并拓展至工业电源、安防设备、消费电子等领域。公司积极布局新能源汽车领域，不断加大对汽车用功率磁性元器件的研发创新及市场开拓力度。",
+              "majorProducts": "POE变压器、功率磁性元器件、片式电感、平板变压器、平板电感、驱动变压器、绕线共模电感、网络变压器",
+              "revenueComposition": "信号类磁性元器件:75.15%;功率类磁性元器件及其他:23.31%;其他业务:1.54%",
+              "revenueSegments": [
+                {
+                  "name": "信号类磁性元器件",
+                  "sharePct": 75.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "功率类磁性元器件及其他",
+                  "sharePct": 23.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "平板电感",
+                  "片式电感",
+                  "绕线共模电感",
+                  "POE变压器",
+                  "平板变压器",
+                  "驱动变压器",
+                  "网络变压器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "美信科技的主要经营内容是信号类磁性元器件（75.15%）、功率类磁性元器件及其他（23.31%），具体产品集中在平板电感、片式电感、绕线共模电感、POE变压器。“国内精密冲压铁芯领先企业，其模内点胶技术是与震裕新一代技术相竞争的核心工艺之一”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善技术商业化与产品迭代速度，也需要先补上产品落地和客户导入，再经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才可能影响业绩。客户认证、量产良率、订单规模、产品收入占比和毛利率没有同步改善时，股价反应更可能来自主题交易；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，基本面解释力会继续下降。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 5595,
+            "stockCode": "300680.SZ",
+            "stockName": "隆盛科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "新能源汽车驱动电机铁芯及半总成核心供应商，深度参与下游应用市场。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300680.SZ",
+              "companyName": "隆盛科技",
+              "companyProfile": "公司是国家高新技术企业、国家火炬计划重点高新技术企业、江苏省民营科技型企业、江苏省创新型企业、中国内燃机零部件行业排头兵企业以及中国内燃机工业协会内燃机排放后处理专业委员会理事长单位。公司“‘LS’系列发动机废气再循环EGR系统”荣获中国机械工业科学技术奖二等奖。公司主要致力于发动机节能减排领域，从事发动机废气再循环(EGR)系统的研发、生产和销售，专业生产先进的发动机废气再循环EGR系统产品，该系统包括EGR阀、控制单元(ECU)、传感器、EGR冷却器等。2018年，公司收购微研精密，微研精密专注于精密冲压模具、高端精密冲压件、高精密机加工件、精密注塑件等产品的研发和生产，产品主要应用于传统汽车的节能减排模块、安全模块、座椅门锁模块以及新能源汽车的电控电机模块。公司实现从EGR系统产品到上游精密冲压零部件的汽车零部件产业链延伸，整体产业布局得以完善。",
+              "profileSummary": "公司主要致力于发动机节能减排领域，从事发动机废气再循环(EGR)系统的研发、生产和销售，专业生产先进的发动机废气再循环EGR系统产品，该系统包括EGR阀、控制单元(ECU)、传感器、EGR冷却器等。公司实现从EGR系统产品到上游精密冲压零部件的汽车零部件产业链延伸，整体产业布局得以完善。",
+              "majorProducts": "柴油商用车 EGR 系统产品、乘用车混合动力 EGR 系统产品、航空航天精密制造、精密零部件、其他能源 EGR 系统产品、新能源",
+              "revenueComposition": "EGR产品:36.11%;新能源产品:34.96%;冲压件产品:17.79%;其他:8.04%;机加工产品:1.73%;注塑产品:1.36%",
+              "revenueSegments": [
+                {
+                  "name": "EGR产品",
+                  "sharePct": 36.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源产品",
+                  "sharePct": 34.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "冲压件产品",
+                  "sharePct": 17.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "机加工产品",
+                  "sharePct": 1.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "注塑产品",
+                  "sharePct": 1.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "汽车冲压件",
+                  "发动机废气再循环系统(EGR)",
+                  "电机定子铁芯",
+                  "电机转子铁芯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "隆盛科技的业务范围能够覆盖新能源汽车驱动电机铁芯及半总成核心供应商，深度参与下游应用市场所处的产业环节，但当前EGR产品（36.11%）、新能源产品（34.96%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。技术商业化与产品迭代速度需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”完成兑现，并在客户认证、量产良率、订单规模、产品收入占比和毛利率上形成持续改善；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 5596,
+            "stockCode": "002576.SZ",
+            "stockName": "通达动力",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球领先的电机定转子铁芯制造商，其自粘结铁芯技术是粘胶工艺的重要参照和替代方案。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002576.SZ",
+              "companyName": "通达动力",
+              "companyProfile": "公司目前主要从事电动机、发电机、新能源汽车定转子铁芯的研发、生产、销售和服务。电机广泛用于机械、钢铁、电力、化工、水泥、造纸、冶金、石化等行业以及重大基础设施工程项目等。公司生产的定转子铁芯产品品种齐全，能够应用于不同种类和型号的电机。经过多年发展，公司在电机定转子冲片和铁芯生产的冲压、叠装、铸铝、绕嵌线等技术环节中，均保持行业的领先地位。公司主要产品包括国标普通电机，新能源汽车驱动电机、高效电机、风力发电机、伺服电机、牵引电机等。主要用于高效节能领域如风机，水泵，机械装备，移动储能，5G建设，新基建，减速机，压缩机，风力发电领域，工业机器人领域，城市交通等领域。公司在电机铁芯冲压细分领域属于龙头企业，行业内主流客户均与公司有良好合作。公司现已成为国内硅钢冲压行业集技术研发、模具设计、级进模加工、压装焊接、组装配送、技术服务于一体的优势企业，在规模供应、技术研发、产品质量、市场占有率等方面都处于行业领先水平。",
+              "profileSummary": "公司目前主要从事电动机、发电机、新能源汽车定转子铁芯的研发、生产、销售和服务。公司主要产品包括国标普通电机，新能源汽车驱动电机、高效电机、风力发电机、伺服电机、牵引电机等。",
+              "majorProducts": "NEMA高效电机嵌线定子、NEMA高效电机铸铝转子(带轴)、柴油发电机转子冲片、磁极片、低压大功率电机铸铝转子、低压电机嵌线定子、低压电机铸铝转子、低压电机铸铝转子(带轴)、发电机磁极铁心、发电机电枢冲片、风力发电机、风力发电机定子、风力发电机定子冲片、风力发电机转子、风力发电机转子冲片、高效电机、高效电机铸铝转子、高压电机定子、高压电机定子冲片、高压电机铸铝转子、国标普通电机、牵引电机、扇形片、伺服电机、新能源汽车驱动电机、永磁电机转子冲片、直流电机定子冲片",
+              "revenueComposition": "定转子冲片和铁芯:77.84%;其他:9.08%;成品定转子:8.91%;材料贸易:2.34%;模具:1.3%;电气设备:0.53%",
+              "revenueSegments": [
+                {
+                  "name": "定转子冲片和铁芯",
+                  "sharePct": 77.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "成品定转子",
+                  "sharePct": 8.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "材料贸易",
+                  "sharePct": 2.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "模具",
+                  "sharePct": 1.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电气设备",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "电机铁芯模具",
+                  "电机定子",
+                  "电机定子冲片",
+                  "电机定子铁芯",
+                  "电机转子",
+                  "电机转子冲片",
+                  "电机转子铁芯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "通达动力现有业务与全球领先的电机定转子铁芯制造商，其自粘结铁芯技术是粘胶工艺的重要参照和替代方案处于同一产业方向，收入主体为定转子冲片和铁芯（77.84%）、其他（9.08%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变技术商业化与产品迭代速度，只有经由“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，业务交集才会转化为业绩增量。客户认证、量产良率、订单规模、产品收入占比和毛利率若逐步增强，相关业务的重要性会提高；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 5597,
+            "stockCode": "603370.SH",
+            "stockName": "华新精科",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "作为T链核心电机供应商的铁芯供应商，有望切入核心供应链，卡位优势明显。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603370.SH",
+              "companyName": "华新精科",
+              "companyProfile": "公司自设立以来，秉承自主创新、独立研发的精神，专注于精密冲压领域产品的研发、生产和销售。公司主要产品为各类精密冲压铁芯及铁芯生产相关的精密冲压模具。其中，精密冲压铁芯是公司的主要产品，可分为新能源汽车驱动电机铁芯、微特电机铁芯、电气设备铁芯、点火线圈铁芯等多种类型，主要供应给国内外众多大型汽车零部件厂商、电机制造厂商、电气设备制造厂商、汽车整车厂等各类企业；同时，公司还会向客户提供生产铁芯产品所需的精密冲压模具。经过多年发展，公司已成为国内外新能源汽车驱动电机铁芯、微特电机铁芯、电气设备铁芯、点火线圈铁芯等产品的主流供应商之一，获得了众多国内外大型汽车零部件厂商、整车厂商、电机制造厂商、电气设备制造厂商等的广泛认可，与法雷奥、台达电子、博世集团、艾尔多集团、汇川技术、比亚迪、宝马、采埃孚等知名企业建立了良好的合作关系。",
+              "profileSummary": "公司自设立以来，秉承自主创新、独立研发的精神，专注于精密冲压领域产品的研发、生产和销售。其中，精密冲压铁芯是公司的主要产品，可分为新能源汽车驱动电机铁芯、微特电机铁芯、电气设备铁芯、点火线圈铁芯等多种类型，主要供应给国内外众多大型汽车零部件厂商、电机制造厂商、电气设备制造厂商、汽车整车厂等各类企业；同时，公司还会向客户提供生产铁芯产品所需的精密冲压模具。",
+              "majorProducts": "变压器铁芯、传感器铁芯、点火线圈铁芯、电动工具微特电机铁芯、电抗器铁芯、工业工控电机铁芯、华新科技EI硅钢铁芯、华新科技电机铁芯、华新科技条料、华新科技微型电磁铁、家用电器微特电机铁芯、精密冲压模具、其他非标电气设备铁芯、汽车用微特电机铁芯、新能源汽车驱动电机铁芯、旋转变压器铁芯、镇流器铁芯",
+              "revenueComposition": "新能源汽车驱动电机铁芯:61.89%;微特电机铁芯:11.5%;其他业务:10.62%;点火线圈铁芯:6.58%;电气设备铁芯:6.21%;精密冲压模具:1.91%;其他铁芯:1.3%",
+              "revenueSegments": [
+                {
+                  "name": "新能源汽车驱动电机铁芯",
+                  "sharePct": 61.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "微特电机铁芯",
+                  "sharePct": 11.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 10.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "点火线圈铁芯",
+                  "sharePct": 6.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电气设备铁芯",
+                  "sharePct": 6.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密冲压模具",
+                  "sharePct": 1.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他铁芯",
+                  "sharePct": 1.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "电机定子铁芯",
+                  "电机转子铁芯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华新精科现有收入由新能源汽车驱动电机铁芯（61.89%）、微特电机铁芯（11.5%）贡献，主营产品为电机定子铁芯、电机转子铁芯，与作为T链核心电机供应商的铁芯供应商，有望切入核心供应链，卡位优势明显指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，技术商业化与产品迭代速度才会通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”产生财务影响。现阶段客户认证、量产良率、订单规模、产品收入占比和毛利率比概念标签更重要；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 5599,
+            "stockCode": "688190.SH",
+            "stockName": "云路股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内非晶带材龙头，其材料是制造非晶电机的核心，为硅钢铁芯技术路线的有力竞争者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688190.SH",
+              "companyName": "云路股份",
+              "companyProfile": "公司成立于2015年12月。秉承“动力强军、科技报国”的集团使命，公司15年来专注于先进磁性金属材料领域，已形成非晶合金、纳米晶合金、磁合金粉末三大材料及其制品系列。公司具备国内材料企业鲜有的“科学、工程、设计”三维度、全产业链、深度技术拓展能力，产品覆盖50Hz至100MHz的全球电力装备、移动载荷电机、光伏、家电用功率电感、无线充电、消费电子用贴片电感、极端应用、电力电子用EMI滤波器的超宽频段应用领域。2021年11月26日，公司成功登陆上海证券交易所科创板，借助资本力量促进企业更快发展。",
+              "profileSummary": "秉承“动力强军、科技报国”的集团使命，公司15年来专注于先进磁性金属材料领域，已形成非晶合金、纳米晶合金、磁合金粉末三大材料及其制品系列。公司具备国内材料企业鲜有的“科学、工程、设计”三维度、全产业链、深度技术拓展能力，产品覆盖50Hz至100MHz的全球电力装备、移动载荷电机、光伏、家电用功率电感、无线充电、消费电子用贴片电感、极端应用、电力电子用EMI滤波器的超宽频段应用领域。",
+              "majorProducts": "传感器、磁性粉末、电子变压器、非晶干式变压器平面卷铁心、非晶合金薄带、非晶立体卷铁心、非晶破碎粉、非晶铁心、非晶油浸式变压器平面卷铁心、互感器、纳米晶合金、纳米晶破碎粉、破碎粉末、无线充电模块、雾化粉末、制造电感",
+              "revenueComposition": "非晶合金薄带及其制品:72.92%;纳米晶产品:18.53%;磁性粉末及其制品:7.64%;其他业务:0.92%",
+              "revenueSegments": [
+                {
+                  "name": "非晶合金薄带及其制品",
+                  "sharePct": 72.92,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "纳米晶产品",
+                  "sharePct": 18.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "磁性粉末及其制品",
+                  "sharePct": 7.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "非晶合金薄带",
+                    "category": "非晶合金"
+                  },
+                  {
+                    "name": "非晶破碎磁粉",
+                    "category": "非晶合金"
+                  }
+                ],
+                "knownProducts": [
+                  "铁硅磁粉",
+                  "铁硅铝磁粉",
+                  "铁铬磁粉",
+                  "铁镍磁粉",
+                  "纳米晶合金带",
+                  "纳米晶破碎磁粉",
+                  "非晶合金薄带",
+                  "非晶破碎磁粉"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "云路股份的事件暴露较为直接：非晶合金薄带及其制品占收入的72.92%，相关业务不是边缘尝试；具体业务抓手是：国内非晶带材龙头，其材料是制造非晶电机的核心，为硅钢铁芯技术路线的有力竞争者。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于技术商业化与产品迭代速度是否通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”放大，尤其需要用客户认证、量产良率、订单规模、产品收入占比和毛利率区分行业普涨与公司自身竞争力。如果技术路线变化、良率爬坡缓慢或竞争方案更快成熟，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "4条低于3星的源记录已按当前关注口径排除。",
+      "1条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

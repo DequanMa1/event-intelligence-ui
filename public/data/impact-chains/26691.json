@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26691",
@@ -9,10 +9,10 @@
     "date": "2026-07-01"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 3,
-    "mappedStockCount": 3,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 1,
     "stocks": [
       {
         "sourceRowNumber": 10134,
@@ -21,7 +21,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 3
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 10139,
@@ -30,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 5
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 10146,
@@ -38,154 +38,32 @@
         "stockName": "锋龙股份",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 7
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 10146,
+        "stockCode": "002931.SZ",
+        "stockName": "锋龙股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 15,
     "selectedCoreProductCount": 2,
     "selectedCompanyCoreProductCount": 2,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 8,
-    "downstreamCandidateCount": 12,
-    "shownUpstreamCount": 8,
-    "shownDownstreamCount": 12
+    "level7ProductCount": 30,
+    "relatedIndustryCandidateCount": 11,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140039953",
-        "name": "滤光片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140025097",
-        "name": "激光发射器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140010332",
-        "name": "电子器件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140008840",
-        "name": "结构件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140008622",
-        "name": "芯片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140165729",
-        "name": "衍射光学元件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140165730",
-        "name": "通用感光芯片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140050625",
-        "name": "镜头",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140165644",
         "name": "3D视觉传感器",
@@ -211,18 +89,15 @@
           "name": "3D视觉传感器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688322.SH",
             "stockName": "奥比中光",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 8,
-        "downstreamCount": 10,
         "relevanceScore": 15,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -257,18 +132,15 @@
           "name": "谐波减速器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688017.SH",
             "stockName": "绿的谐波",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 2,
         "relevanceScore": 10,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -278,198 +150,573 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140165647",
-        "name": "3D体态仪",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
+        "code": "1200000463",
+        "name": "机器人",
+        "description": "A股机器人行业涵盖工业机器人、服务及人形机器人产业链。受AI技术突破、人口老龄化及“新质生产力”政策驱动，行业迎来智能化升级与人形机器人量产预期，具备高成长潜力，成为市场聚焦的科技热点。",
+        "stockCount": 7,
+        "starWeight": 22,
+        "level7ProductCount": 9,
+        "relevanceScore": 234,
+        "stocks": [
+          {
+            "stockCode": "688017.SH",
+            "stockName": "绿的谐波",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688360.SH",
+            "stockName": "德马科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688160.SH",
+            "stockName": "步科股份",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "605488.SH",
+            "stockName": "福莱新材",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688320.SH",
+            "stockName": "禾川科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300115.SZ",
+            "stockName": "长盈精密",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
+        "products": [
+          {
+            "code": "1140215960",
+            "name": "柔性触觉传感器",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 柔性触觉传感器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "605488.SH",
+                "stockName": "福莱新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "传感器"
+            ]
+          },
+          {
+            "code": "1140033204",
+            "name": "谐波减速器",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 谐波减速器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688017.SH",
+                "stockName": "绿的谐波",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "减速器",
+              "谐波减速器"
+            ]
+          },
+          {
+            "code": "1140149185",
+            "name": "无框力矩电机",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 无框力矩电机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688320.SH",
+                "stockName": "禾川科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "电机"
+            ]
+          },
+          {
+            "code": "1140215046",
+            "name": "机器人用伺服电机",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 机器人用伺服电机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688320.SH",
+                "stockName": "禾川科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "电机"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140165646",
-        "name": "3D体感一体机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
+        "code": "1200000474",
+        "name": "自动化设备",
+        "description": "自动化设备指替代人工的机械系统。A股中该板块因制造业升级、人口红利消退及“新质生产力”政策驱动而受关注。它提升效率与精度，是工业智能化核心，具备高成长性与国产替代潜力，成为资本市场焦点。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688017.SH",
+            "stockName": "绿的谐波",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688360.SH",
+            "stockName": "德马科技",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
+        "products": [
+          {
+            "code": "1140149145",
+            "name": "旋转执行器",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 自动化设备 > 自动化设备配件 > 旋转执行器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688017.SH",
+                "stockName": "绿的谐波",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140200964",
+            "name": "智能输送分拣系统",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 自动化设备 > 自动化解决方案 > 智能输送分拣系统",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688360.SH",
+                "stockName": "德马科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 16,
+    "mappedStockCount": 12,
+    "unmappedStockCount": 4,
+    "level7ProductCount": 30,
+    "candidateIndustryCount": 11,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 10132,
+        "stockCode": "688802.SH",
+        "stockName": "沐曦股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140165645",
-        "name": "3D刷脸支付设备",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10134,
+        "stockCode": "688017.SH",
+        "stockName": "绿的谐波",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140165924",
-        "name": "三维测量",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10135,
+        "stockCode": "000026.SZ",
+        "stockName": "飞亚达",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140165923",
-        "name": "智慧农牧",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10136,
+        "stockCode": "688160.SH",
+        "stockName": "步科股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140077795",
-        "name": "智能交通",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10137,
+        "stockCode": "688320.SH",
+        "stockName": "禾川科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140005664",
-        "name": "智能手机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10139,
+        "stockCode": "688322.SH",
+        "stockName": "奥比中光",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140000171",
-        "name": "智能电视",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10140,
+        "stockCode": "605488.SH",
+        "stockName": "福莱新材",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140011712",
-        "name": "智能门锁",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10142,
+        "stockCode": "300115.SZ",
+        "stockName": "长盈精密",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140125383",
-        "name": "服务机器人",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140165644"
-        ],
-        "linkedCoreProductNames": [
-          "3D视觉传感器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10144,
+        "stockCode": "301280.SZ",
+        "stockName": "珠城科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140149145",
-        "name": "旋转执行器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033204"
-        ],
-        "linkedCoreProductNames": [
-          "谐波减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10146,
+        "stockCode": "002931.SZ",
+        "stockName": "锋龙股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140041797",
-        "name": "焊接机器人",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033204"
+        "sourceRowNumber": 10147,
+        "stockCode": "002600.SZ",
+        "stockName": "领益智造",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 10148,
+        "stockCode": "300433.SZ",
+        "stockName": "蓝思科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 10150,
+        "stockCode": "000785.SZ",
+        "stockName": "居然智家",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 10152,
+        "stockCode": "002009.SZ",
+        "stockName": "天奇股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 10153,
+        "stockCode": "688360.SH",
+        "stockName": "德马科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 10154,
+        "stockCode": "603990.SH",
+        "stockName": "麦迪科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000463",
+        "name": "机器人",
+        "description": "A股机器人行业涵盖工业机器人、服务及人形机器人产业链。受AI技术突破、人口老龄化及“新质生产力”政策驱动，行业迎来智能化升级与人形机器人量产预期，具备高成长潜力，成为市场聚焦的科技热点。",
+        "stockCount": 7,
+        "starWeight": 22,
+        "level7ProductCount": 9,
+        "relevanceScore": 234,
+        "stocks": [
+          {
+            "stockCode": "688017.SH",
+            "stockName": "绿的谐波",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688360.SH",
+            "stockName": "德马科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688160.SH",
+            "stockName": "步科股份",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "605488.SH",
+            "stockName": "福莱新材",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688320.SH",
+            "stockName": "禾川科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300115.SZ",
+            "stockName": "长盈精密",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "谐波减速器"
+        "products": [
+          {
+            "code": "1140215960",
+            "name": "柔性触觉传感器",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 柔性触觉传感器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "605488.SH",
+                "stockName": "福莱新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "传感器"
+            ]
+          },
+          {
+            "code": "1140033204",
+            "name": "谐波减速器",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 谐波减速器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688017.SH",
+                "stockName": "绿的谐波",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "减速器",
+              "谐波减速器"
+            ]
+          },
+          {
+            "code": "1140149185",
+            "name": "无框力矩电机",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 无框力矩电机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688320.SH",
+                "stockName": "禾川科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "电机"
+            ]
+          },
+          {
+            "code": "1140215046",
+            "name": "机器人用伺服电机",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 机器人用伺服电机",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688320.SH",
+                "stockName": "禾川科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "电机"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000474",
+        "name": "自动化设备",
+        "description": "自动化设备指替代人工的机械系统。A股中该板块因制造业升级、人口红利消退及“新质生产力”政策驱动而受关注。它提升效率与精度，是工业智能化核心，具备高成长性与国产替代潜力，成为资本市场焦点。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688017.SH",
+            "stockName": "绿的谐波",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688360.SH",
+            "stockName": "德马科技",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140149145",
+            "name": "旋转执行器",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 自动化设备 > 自动化设备配件 > 旋转执行器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688017.SH",
+                "stockName": "绿的谐波",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140200964",
+            "name": "智能输送分拣系统",
+            "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 自动化设备 > 自动化解决方案 > 智能输送分拣系统",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688360.SH",
+                "stockName": "德马科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -484,9 +731,1231 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 24,
+    "eligibleSourceRowCount": 16,
+    "totalStockCount": 16,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 6,
+    "excludedNonAShareCount": 2,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 16,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 10134,
+            "stockCode": "688017.SH",
+            "stockName": "绿的谐波",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国产谐波减速器龙头，为优必选等国内主流机器人厂商提供核心零部件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688017.SH",
+              "companyName": "绿的谐波",
+              "companyProfile": "公司成立于2011年，公司于2020年8月在科创板上市，公司是从事精密传动装置研发、设计和生产的高新技术企业，主要产品包括谐波减速器、机电一体化执行器及精密零部件。公司核心研发团队从2003年开始从事机器人用精密谐波减速器理论基础的研究，经过多年自主研发，公司在国内率先实现了精密谐波减速器的技术突破，打破了国际品牌在国内机器人谐波减速器领域的垄断，凭借着严格的质量管控及完善的产品体系，公司在国内市场已逐步实现了对国际品牌的进口替代，在国产谐波减速器行业中确立了明显的竞争优势，已成长为行业内的领军企业。公司是国家专精特新小巨人企业、国家制造业单项冠军示范企业、国家高新技术企业，同时设有江苏省谐波减速器工程研究中心、江苏省工业企业技术中心、江苏省精密谐波减速器工程技术研究中心。公司在谐波减速器领域具有领先的技术研发水平，已通过ISO9001、ISO14001及IFTA16949国际质量体系认证，参与并承担了多项国家、团体标准的编制。近年来，公司聚焦人形机器人核心传动零部件，攻克了机电一体化、机械振动抑制等技术壁垒，研发出了高功率密度旋转关节、行星滚柱丝杠及直线电缸等精密传动装置。并且，公司联合上海交大，研制出完全拥有自主知识产权的四/五轴数控机床和行星滚柱丝用内/外圆磨床，其精度已达到全球顶尖的C0级别。",
+              "profileSummary": "公司成立于2011年，公司于2020年8月在科创板上市，公司是从事精密传动装置研发、设计和生产的高新技术企业，主要产品包括谐波减速器、机电一体化执行器及精密零部件。公司核心研发团队从2003年开始从事机器人用精密谐波减速器理论基础的研究，经过多年自主研发，公司在国内率先实现了精密谐波减速器的技术突破，打破了国际品牌在国内机器人谐波减速器领域的垄断，凭借着严格的质量管控及完善的产品体系，公司在国内市场已逐步实现了对国际品牌的进口替代，在…",
+              "majorProducts": "AES浮动电主轴、AGP自适应打磨工具、ATB砂带磨抛产品、ATC自动换刀库、ECM浮动模块、KAH系列旋转执行器、KAS系列旋转执行器、KAT系列旋转执行器、KCR系列数控机床四轴转台、KDE系列总线型伺服驱动器、KGM系列减速模组、KGR系列数控机床五轴转台、KGU系列轻量小型化旋转执行器、KMF系列无框力矩电机、KUR系列五轴数控转台、LCD、LCS（G）-I、LCS（G）-II、LHD-I、LHS（G）-（CL）-III、LHS（G）-I、LHS（G）-II、LHS（G）-IV、N系列、Y系列、不锈钢机加工零部件、电动静液压作动器（EHA）、阀控执行器、精密零部件、铝制机加工零部件、铁制机加工零部件、铜制机加工零部件、谐波减速器",
+              "revenueComposition": "谐波减速器及金属部件:83.49%;机电一体化产品:13.02%;智能自动化装备:2.61%;其他业务:0.88%",
+              "revenueSegments": [
+                {
+                  "name": "谐波减速器及金属部件",
+                  "sharePct": 83.49,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "机电一体化产品",
+                  "sharePct": 13.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能自动化装备",
+                  "sharePct": 2.61,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "谐波减速器",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "旋转执行器",
+                    "category": "自动化设备配件"
+                  }
+                ],
+                "knownProducts": [
+                  "谐波减速器",
+                  "旋转执行器",
+                  "精密金属零部件"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "绿的谐波的事件暴露较为直接：谐波减速器及金属部件占收入的83.49%，相关业务不是边缘尝试；具体业务抓手是：国产谐波减速器龙头，为优必选等国内主流机器人厂商提供核心零部件。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，尤其需要用客户认证、新增订单、交付节奏、相关业务收入和毛利率区分行业普涨与公司自身竞争力。如果客户验证或交付节奏低于预期，订单停留在小批量阶段，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 10139,
+            "stockCode": "688322.SH",
+            "stockName": "奥比中光",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "为优必选等主流人形机器人提供3D视觉传感器，市占率高。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688322.SH",
+              "companyName": "奥比中光-UW",
+              "companyProfile": "公司是行业领先的机器人视觉及AI视觉科技公司，致力于构建机器人与AI视觉产业中台、打造机器人的“眼睛”。基于自研芯片和全栈式系统技术，公司为机器人、3D扫描、生物识别等行业客户及全球开发者提供高性能的3D视觉传感器及机器人与AI视觉方案，助力新兴行业释放价值、推动传统行业智能化升级。拥有自建生产基地，公司具备百万级量产能力，提供灵活可靠的ODM/OEM服务。公司为全球超过3000家客户与开发者提供“研发+制造”的一站式产品和服务。公司成立于2013年，总部位于深圳，在佛山、上海、西安，美国均设有分支机构。2022年7月在科创板上市，获称“3D视觉第一股”。",
+              "profileSummary": "基于自研芯片和全栈式系统技术，公司为机器人、3D扫描、生物识别等行业客户及全球开发者提供高性能的3D视觉传感器及机器人与AI视觉方案，助力新兴行业释放价值、推动传统行业智能化升级。公司为全球超过3000家客户与开发者提供“研发+制造”的一站式产品和服务。",
+              "majorProducts": "3D视觉传感器、工业级应用设备、消费级应用设备",
+              "revenueComposition": "消费级应用设备:62.05%;3D视觉传感器:30.93%;其他:3.7%;工业级应用设备:2.71%;其他业务:0.61%",
+              "revenueSegments": [
+                {
+                  "name": "消费级应用设备",
+                  "sharePct": 62.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3D视觉传感器",
+                  "sharePct": 30.93,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业级应用设备",
+                  "sharePct": 2.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "3D视觉传感器",
+                    "category": "其他传感器"
+                  }
+                ],
+                "knownProducts": [
+                  "3D体态仪",
+                  "人脸支付终端",
+                  "3D视觉传感器",
+                  "3D体感一体机",
+                  "工业三维测量设备"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "奥比中光的事件逻辑具备真实业务底座，但尚不足以代表全部公司：3D视觉传感器占收入的30.93%。公司与事件的具体联系在于：为优必选等主流人形机器人提供3D视觉传感器，市占率高，对应的核心变量是商业化进度和订单兑现。若这一变量沿着“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，客户认证、新增订单、交付节奏、相关业务收入和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；客户验证或交付节奏低于预期，订单停留在小批量阶段则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 10146,
+            "stockCode": "002931.SZ",
+            "stockName": "锋龙股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "优必选拟控股的A股平台，将承接核心零部件及U1等C端本体的研发、生产和销售。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002931.SZ",
+              "companyName": "锋龙股份",
+              "companyProfile": "公司主要从事园林机械、液压以及汽车零部件的研发、生产和销售，产品主要包括点火器、飞轮、汽缸等园林机械发动机关键件，电磁阀、溢流阀、平衡阀等液压、气压阀及组件和各类汽车精密铝铁零组件，广泛应用于割草机、油锯、绿篱机、吹风机等园林机械整机产品，各类工程、工业及半导体机械的液压、气压控制系统和汽车传动、制动、调温系统及新能源汽车领域。坚持“满足客户需求”为己任，公司二十年励精图治，开拓进取，与STIHL、HUSQVARNA、MTD、HONDA、TTI、EMAK等国际知名园林机械整机厂商，MUVIQ(原DAYCO)、盖茨、舍弗勒、东科克诺尔、东风富士汤姆森等国内外一流整车及汽车系统集成商和卡特彼勒、派克汉尼汾、博世力士乐、潍柴、三一重工等世界级工程机械龙头企业建立起了合作关系。自成立以来，公司长期重视技术创新，遵循“品质，精益求精”的理念，公司打出了“锋龙”、“杜商”品牌的知名度和美誉度。公司通过了ISO9001质量体系、ISO14001环境体系、IATF16949汽车行业质量体系、全球知名园林机械整机、工程机械及液压系统集成商和汽车整车及系统集成商客户的认证，历史上也曾被众多国际知名客户评为“年度供应商”、“优秀质量奖”、“最佳压铸件供应商”、“卓越供应商”等奖项，也先后获得了“浙江省著名商标”、“浙江省知名商号”、“浙江名牌产品”、“浙江出口名牌”等一系列政府荣誉。",
+              "profileSummary": "公司主要从事园林机械、液压以及汽车零部件的研发、生产和销售，产品主要包括点火器、飞轮、汽缸等园林机械发动机关键件，电磁阀、溢流阀、平衡阀等液压、气压阀及组件和各类汽车精密铝铁零组件，广泛应用于割草机、油锯、绿篱机、吹风机等园林机械整机产品，各类工程、工业及半导体机械的液压、气压控制系统和汽车传动、制动、调温系统及新能源汽车领域。公司通过了ISO9001质量体系、ISO14001环境体系、IATF16949汽车行业质量体系、全球知名园林…",
+              "majorProducts": "ABS气压调节阀体、点火器、飞轮、工业及半导体设备用高端液压控制零部件、汽车铝压铸零部件、汽缸、涨紧轮传动部件",
+              "revenueComposition": "机械类产品:62.69%;电控类产品:36.84%;其他业务:0.47%",
+              "revenueSegments": [
+                {
+                  "name": "机械类产品",
+                  "sharePct": 62.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电控类产品",
+                  "sharePct": 36.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "电动工具发动机汽缸",
+                  "电动工具发动机点火器",
+                  "电动工具发动机飞轮",
+                  "汽车精密铝压铸件",
+                  "溢流阀",
+                  "电磁阀",
+                  "控制阀"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "锋龙股份当前收入集中在机械类产品（62.69%）、电控类产品（36.84%），现有产品以电动工具发动机汽缸、电动工具发动机点火器、电动工具发动机飞轮、汽车精密铝压铸件为主，与新闻所指的“优必选拟控股的A股平台，将承接核心零部件及U1等C端本体的研发、生产和销售”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，商业化进度和订单兑现才可能沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。在此之前，客户认证、新增订单、交付节奏、相关业务收入和毛利率若没有出现，事件对公司基本面的影响应按较弱处理；客户验证或交付节奏低于预期，订单停留在小批量阶段会进一步压低相关性。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 13,
+        "stocks": [
+          {
+            "sourceRowNumber": 10132,
+            "stockCode": "688802.SH",
+            "stockName": "沐曦股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "与优必选成立合资公司，为其定制研发核心的具身智能芯片。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688802.SH",
+              "companyName": "沐曦股份-U",
+              "companyProfile": "公司致力于自主研发全栈高性能GPU芯片及计算平台，主营业务是研发、设计和销售应用于人工智能训练和推理、通用计算与图形渲染领域的全栈GPU产品，并围绕GPU芯片提供配套的软件栈与计算平台。自成立以来，公司始终专注于GPU产品的技术创新和迭代升级，形成了独具优势的GPU产品体系和自主开放的软件生态，持续为云端计算提供高能效、高通用性的算力支撑，推动人工智能赋能千行百业，重点布局了教科研、金融、交通、能源、医疗健康、大文娱等行业应用场景，已成为推动我国智能算力基础设施自主可控的重要力量。作为国内高性能GPU产品的主要领军企业之一，公司将秉持“不负历史，为民族复兴、国家强盛贡献科技力量”的使命，不断打造行业领先的GPU核心产品，助力数字经济发展。公司拥有境内授权专利255项，其中发明专利245项。公司被认定为国家级专精特新“小巨人”企业、国家高新技术企业、上海市专精特新中小企业、上海市重点服务独角兽(潜力)企业等，是中国通信标准化协会、中国信息协会、中国互联网协会、中国半导体行业协会、中国计算机学会等行业协会的成员单位，积极推动国家算力发展与产业升级。",
+              "profileSummary": "公司致力于自主研发全栈高性能GPU芯片及计算平台，主营业务是研发、设计和销售应用于人工智能训练和推理、通用计算与图形渲染领域的全栈GPU产品，并围绕GPU芯片提供配套的软件栈与计算平台。自成立以来，公司始终专注于GPU产品的技术创新和迭代升级，形成了独具优势的GPU产品体系和自主开放的软件生态，持续为云端计算提供高能效、高通用性的算力支撑，推动人工智能赋能千行百业，重点布局了教科研、金融、交通、能源、医疗健康、大文娱等行业应用场景，已…",
+              "majorProducts": "曦彩G100系列、曦思N100系列、曦思N260系列、曦思N300系列、曦云C500系列、曦云C550、曦云C588(在研)、曦云C600(在研)、曦云C600系列",
+              "revenueComposition": "GPU产品及配件:99.19%;IP、技术服务及其他:0.81%",
+              "revenueSegments": [
+                {
+                  "name": "GPU产品及配件",
+                  "sharePct": 99.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "IP、技术服务及其他",
+                  "sharePct": 0.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "半导体IP授权服务",
+                    "category": "电子技术服务"
+                  }
+                ],
+                "knownProducts": [
+                  "桥接板",
+                  "半导体IP授权服务",
+                  "AI推理卡",
+                  "AI计算训练卡",
+                  "显卡",
+                  "AI服务器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "沐曦股份拥有AI服务器、半导体IP授权服务，其产业链位置与与优必选成立合资公司，为其定制研发核心的具身智能芯片一致；当前的GPU产品及配件（99.19%）、IP、技术服务及其他（0.81%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由商业化进度和订单兑现决定，并需完成“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”。只有客户认证、新增订单、交付节奏、相关业务收入和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；客户验证或交付节奏低于预期，订单停留在小批量阶段则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 10135,
+            "stockCode": "000026.SZ",
+            "stockName": "飞亚达",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "拟收购长空齿轮，后者是优必选等头部客户的减速器供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000026.SZ",
+              "companyName": "飞亚达",
+              "companyProfile": "公司创立于1987年，系中航工业集团下属中航科创的主要投资企业之一。公司创立及发展源于航空精密科技和材料技术，以“传承“航空报国精神”、创造品质生活”为使命，多年来深耕钟表行业，形成了手表自有品牌与名表全面服务相互促进的核心业务布局，致力于成为中国手表行业领军者，传播航空文化和中国文化，同时积极培育精密科技及智能穿戴等战略性新兴产业。公司凭借在专业制表能力建设和品牌运营管理方面的持续积累，拥有“飞亚达”“EmileChou-riet”“Jeep”“ADASHER”多个手表品牌，覆盖中高端、大众、时尚等细分市场。其中，“飞亚达”核心品牌定位“以航空航天表为特色的高品质中国手表品牌”，持续强化航空航天独特IP与产品品质，加大机心及关键零部件的研发力度，融入航空航天特色技术与材料应用，打造差异化特色，推动品牌向“年轻化、高端化、主流化”发展。近年来，公司立足“技术同源、产业同根、价值同向”的发展原则，凭借精密科技技术实力及产业积累，延伸拓展了精密科技业务和智能穿戴业务等战略新兴产业，并将继续积极加大资源投入培育壮大两项战新产业。",
+              "profileSummary": "公司创立及发展源于航空精密科技和材料技术，以“传承“航空报国精神”、创造品质生活”为使命，多年来深耕钟表行业，形成了手表自有品牌与名表全面服务相互促进的核心业务布局，致力于成为中国手表行业领军者，传播航空文化和中国文化，同时积极培育精密科技及智能穿戴等战略性新兴产业。公司凭借在专业制表能力建设和品牌运营管理方面的持续积累，拥有“飞亚达”“EmileChou-riet”“Jeep”“ADASHER”多个手表品牌，覆盖中高端、大众、时尚等…",
+              "majorProducts": "飞亚达大厦物业管理、飞亚达科技大厦物业管理、飞亚达男士腕表、飞亚达女士腕表、飞亚达情侣腕表、精密科技业务、西安城亨国际酒店大厦物业管理",
+              "revenueComposition": "名表全面服务业务:75.89%;手表品牌业务:16.26%;精密加工:4.1%;物业租赁:3.23%;其他业务:0.52%",
+              "revenueSegments": [
+                {
+                  "name": "名表全面服务业务",
+                  "sharePct": 75.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "手表品牌业务",
+                  "sharePct": 16.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密加工",
+                  "sharePct": 4.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物业租赁",
+                  "sharePct": 3.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "进口手表零售",
+                  "办公楼租赁",
+                  "智能手表",
+                  "手表机芯",
+                  "机械表"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "飞亚达当前收入集中在名表全面服务业务（75.89%）、手表品牌业务（16.26%），现有产品以进口手表零售、办公楼租赁、智能手表、手表机芯为主，与新闻所指的“拟收购长空齿轮，后者是优必选等头部客户的减速器供应商”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，商业化进度和订单兑现才可能沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。在此之前，客户认证、新增订单、交付节奏、相关业务收入和毛利率若没有出现，事件对公司基本面的影响应按较弱处理；客户验证或交付节奏低于预期，订单停留在小批量阶段会进一步压低相关性。"
+          },
+          {
+            "sourceRowNumber": 10136,
+            "stockCode": "688160.SH",
+            "stockName": "步科股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为优必选等机器人厂商提供伺服驱动等核心部件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688160.SH",
+              "companyName": "步科股份",
+              "companyProfile": "公司成立于1996年，2020年成功在上交所登陆科创板上市，是一家高度重视自主研发和创新的高新技术企业、专精特新企业，主要从事工业自动化及机器人核心部件与数字化工厂软硬件的研发、生产、销售以及相关技术服务，是中国领先的机器人与智能设备的运动控制与人机交互部件供应商。经过多年持续不断研发和创新，公司建立了完整的拥有自主知识产权的产品线，涵盖从机器物联网到人机交互、控制、驱动和执行等一系列产品，广泛应用于机器人、医疗设备、物流设备、包装设备、食品设备、服装设备、环保设备，新能源设备、轨道交通设备等自动化设备行业。其中公司基于综合性的工业自动化与数字化技术平台，深入机器人行业应用场景，为工业移动型机器人、协作机器人、工业机器人、泛服务机器人、仿生机器人提供显示、控制、驱动等多维度解决方案。公司通过对行业痛点的洞察，与机器人客户深度链接，结合产品研发优势，持续进行创新，推出引领行业的移动机器人专用低压伺服系列产品、一体化伺服轮、协作机器人专用无框力矩电机、机器人专用人机界面、机器人控制器等产品，形成较为完整的机器人核心部件能力，同时公司经过近10年在机器人行业的耕耘，成为移动机器人低压伺服领域领先企业，在行业内有较高品牌影响力。公司以“聚焦部件，成就全球机器人和智能设备”为使命，以“让机器人为人类智造美好生活”为愿景，秉承“成就客户、开放进取、艰苦奋斗、至诚守信”的价值观，坚持以创新的思维，实干的精神开发产品经营业务，长期致力于发展智能制造技术，期待智能制造的技术能让世界更美丽。",
+              "profileSummary": "经过多年持续不断研发和创新，公司建立了完整的拥有自主知识产权的产品线，涵盖从机器物联网到人机交互、控制、驱动和执行等一系列产品，广泛应用于机器人、医疗设备、物流设备、包装设备、食品设备、服装设备、环保设备，新能源设备、轨道交通设备等自动化设备行业。其中公司基于综合性的工业自动化与数字化技术平台，深入机器人行业应用场景，为工业移动型机器人、协作机器人、工业机器人、泛服务机器人、仿生机器人提供显示、控制、驱动等多维度解决方案。",
+              "majorProducts": "边缘服务器、步进系统、低压变频器、工厂内AGV、可编程逻辑控制器、人机界面、伺服系统、医疗影像设备、云服务平台",
+              "revenueComposition": "驱动系统:70.89%;控制系统:28.19%;其他业务:0.51%;其他:0.42%",
+              "revenueSegments": [
+                {
+                  "name": "驱动系统",
+                  "sharePct": 70.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "控制系统",
+                  "sharePct": 28.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "伺服电机",
+                    "category": "控制用电机"
+                  },
+                  {
+                    "name": "伺服驱动器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "无框力矩电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "机器人用伺服电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "伺服系统",
+                    "category": "电控系统"
+                  },
+                  {
+                    "name": "可编辑组态人机界面(HMI)",
+                    "category": "工控自动化产品"
+                  }
+                ],
+                "knownProducts": [
+                  "可编辑组态人机界面(HMI)",
+                  "步进系统",
+                  "无框力矩电机",
+                  "机器人伺服系统",
+                  "机器人用伺服电机",
+                  "电子白板",
+                  "伺服电机",
+                  "伺服驱动器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "步科股份实际经营中已有伺服电机、伺服驱动器、无框力矩电机，与事件指向的为优必选等机器人厂商提供伺服驱动等核心部件能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在驱动系统（70.89%）、控制系统（28.19%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善商业化进度和订单兑现，需要沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。客户认证、新增订单、交付节奏、相关业务收入和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 10137,
+            "stockCode": "688320.SH",
+            "stockName": "禾川科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "成立专门子公司运营人形机器人业务，自研关节模组等核心零部件已获主流客户认可，并向优必选送样。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688320.SH",
+              "companyName": "禾川科技",
+              "companyProfile": "公司是一家技术驱动的工业自动化控制核心部件及整体解决方案提供商，主要从事工业自动化产品的研发、生产、销售及应用集成。公司自设立起即以成为最具价值的工业自动化核心部件及方案提供商为使命，秉承“创新、诚信、服务”的核心价值观，通过核心技术及核心部件自主研发、国产产业链自主整合、优质终端客户自主开拓，力争成为一家在技术和产品领域具有全球竞争力的工业自动化企业，助力中国制造业的转型升级。公司的主要产品包括伺服系统、PLC等，覆盖了工业自动化领域的控制层、驱动层和执行传感层，并在近年在产业链上下游不断延伸，涉足上游的工控芯片、传感器和下游的高端精密数控机床等领域。其中，伺服系统作为公司的核心产品，搭载自主研发的编码器，在定位精度、速度控制、额定转矩等核心性能指标上均具有较强竞争力，在国内品牌厂商中保持优势地位。公司秉承“高性能、高可靠性、高性价比、高规格工业设计”的产品开发理念，全方位研究核心技术，不断完善各类产品，以持续增强核心竞争力。公司还是国内工业自动化厂商中较早实现编码器自主研发生产的企业，独立研发的高速高精度磁编码器项目为“浙江省重大科技专项重点工业项目”。",
+              "profileSummary": "公司是一家技术驱动的工业自动化控制核心部件及整体解决方案提供商，主要从事工业自动化产品的研发、生产、销售及应用集成。公司的主要产品包括伺服系统、PLC等，覆盖了工业自动化领域的控制层、驱动层和执行传感层，并在近年在产业链上下游不断延伸，涉足上游的工控芯片、传感器和下游的高端精密数控机床等领域。",
+              "majorProducts": "A系列 小型PLC、E380、HC-LMD 系列、HC-LMF 系列、IQ系列 IPC、PLC、QX系列 IO模块、Q系列 中型PAC、R系列 扩展型PLC、SOLAR 系列、TP2000、V500系列、X1/X3系列 传统型伺服电机、X2/X6系列 轻量化伺服电机、X2系列 简易型伺服驱动器、X3系列 通用型伺服驱动器、X6系列 高阶型伺服驱动器、磁编/光编、伺服系统",
+              "revenueComposition": "伺服系统产品:73.18%;其他工控产品:9.15%;PLC:8.05%;机床:7.39%;其他业务:1.61%;其他产品:0.62%",
+              "revenueSegments": [
+                {
+                  "name": "伺服系统产品",
+                  "sharePct": 73.18,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他工控产品",
+                  "sharePct": 9.15,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "PLC",
+                  "sharePct": 8.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "机床",
+                  "sharePct": 7.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 0.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "人形机器人空心杯电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "伺服电机",
+                    "category": "控制用电机"
+                  },
+                  {
+                    "name": "伺服驱动器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "无框力矩电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "机器人用伺服电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "SCARA机器人(圆柱坐标型机器人手臂)",
+                    "category": "工业机器人"
+                  }
+                ],
+                "knownProducts": [
+                  "可编辑组态人机界面(HMI)",
+                  "SCARA机器人(圆柱坐标型机器人手臂)",
+                  "人形机器人空心杯电机",
+                  "无框力矩电机",
+                  "机器人伺服系统",
+                  "机器人用伺服电机",
+                  "数控机床",
+                  "伺服电机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "禾川科技已经具备人形机器人空心杯电机、伺服电机、伺服驱动器等业务能力，成立专门子公司运营人形机器人业务，自研关节模组等核心零部件已获主流客户认可，并向优必选送样并非单纯概念映射。当前对应的收入被归入伺服系统产品（73.18%）、其他工控产品（9.15%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，并最终反映在客户认证、新增订单、交付节奏、相关业务收入和毛利率上；客户验证或交付节奏低于预期，订单停留在小批量阶段会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 10140,
+            "stockCode": "605488.SH",
+            "stockName": "福莱新材",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "为优必选仿生机器人提供电子皮肤/柔性传感器，是其仿生交互的关键部件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "605488.SH",
+              "companyName": "福莱新材",
+              "companyProfile": "公司成立于2009年，是一家专注于多功能涂布复合材料研发、生产、销售为一体的国家级专精特新“小巨人”企业。2021年在上海证券交易所主板上市。凭借先进的涂布技术和研发创新，正从单一涂布材料商向“基膜+涂层+终端+服务”一体化解决方案商转型，与众多国内外知名企业建立了长期稳定合作关系。随着人形机器人产业势能集中释放，依托在新材料和涂层技术上的优势，福莱新材自主研发的“电子皮肤”为人形机器人推开感知世界的大门，以柔性传感器为核心的“触觉系统”，能助力灵巧手更好地实现功能，为人形机器人触觉与电子皮肤、工业检测、可穿戴设备、医疗健康、新能源电池检测等领域提供关键材料支持。",
+              "profileSummary": "凭借先进的涂布技术和研发创新，正从单一涂布材料商向“基膜+涂层+终端+服务”一体化解决方案商转型，与众多国内外知名企业建立了长期稳定合作关系。随着人形机器人产业势能集中释放，依托在新材料和涂层技术上的优势，福莱新材自主研发的“电子皮肤”为人形机器人推开感知世界的大门，以柔性传感器为核心的“触觉系统”，能助力灵巧手更好地实现功能，为人形机器人触觉与电子皮肤、工业检测、可穿戴设备、医疗健康、新能源电池检测等领域提供关键材料支持。",
+              "majorProducts": "标签标识印刷材料、电子级功能材料、功能基膜材料、广告喷墨打印材料、胶粘材料",
+              "revenueComposition": "广告喷墨打印材料:47.99%;标签标识印刷材料:29.76%;功能基膜材料:9.48%;其他:7.09%;电子级功能材料:3.85%;其他业务:1.82%",
+              "revenueSegments": [
+                {
+                  "name": "广告喷墨打印材料",
+                  "sharePct": 47.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "标签标识印刷材料",
+                  "sharePct": 29.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "功能基膜材料",
+                  "sharePct": 9.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 7.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子级功能材料",
+                  "sharePct": 3.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "柔性触觉传感器",
+                    "category": "机器人部件"
+                  }
+                ],
+                "knownProducts": [
+                  "PET双面胶带",
+                  "PP类背胶",
+                  "双面胶",
+                  "超薄胶带",
+                  "PVC硬片",
+                  "透明离型膜",
+                  "双向拉伸聚丙烯薄膜(BOPP膜)",
+                  "珠光膜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "福莱新材实际经营中已有柔性触觉传感器，与事件指向的为优必选仿生机器人提供电子皮肤/柔性传感器，是其仿生交互的关键部件能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在广告喷墨打印材料（47.99%）、标签标识印刷材料（29.76%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善商业化进度和订单兑现，需要沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。客户认证、新增订单、交付节奏、相关业务收入和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 10142,
+            "stockCode": "300115.SZ",
+            "stockName": "长盈精密",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为优必选等海内外头部客户提供多种材料的机器人结构件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300115.SZ",
+              "companyName": "长盈精密",
+              "companyProfile": "公司成立于2001年7月，主要经营活动为开发、生产、销售智能终端及电子产品精密零组件、新能源关键结构件及连接组件、具身智能与新兴科技硬件等。公司坚持稳健经营，持续创新，致力于为行业及客户提供更具竞争力的产品和服务。公司主营业务涵盖智能终端及电子产品精密零组件、新能源关键结构件及连接组件、具身智能与新兴科技硬件三大板块。公司紧跟电子信息产业及新能源产业快速发展的步伐，持续开发、设计高精密、高性能、高附加值的新产品，并拓展、完善公司的业务及产品体系，逐步由精密制造向智能制造方向发展。目前，公司服务领域已拓展至智能终端、新能源、具身智能以及新兴科技领域等，形成了消费电子和新能源双支柱加人工智能的发展格局。近年来，生成式人工智能和大语言模型的迅速发展催化具身智能进入商业化应用阶段，公司也加快人形机器人相关产能的建设，加大研发投入。同时，公司持续看好AI服务器行业及基于铜连接的高速通信模组业务，积极布局AI算力相关领域，进一步强化在人工智能方向的产业布局。",
+              "profileSummary": "公司主营业务涵盖智能终端及电子产品精密零组件、新能源关键结构件及连接组件、具身智能与新兴科技硬件三大板块。目前，公司服务领域已拓展至智能终端、新能源、具身智能以及新兴科技领域等，形成了消费电子和新能源双支柱加人工智能的发展格局。",
+              "majorProducts": "IO 连接器、LCD∕LED 端子、SIM 卡连接器、USB 连接器、板对板连接器、表面贴装式LED精密支架、电池连接器、各种小五金端子、精密连接器端子、射频连接器、手机电池金手指、手机耳机插座、手机复合屏蔽件、手机滑轨、手机屏蔽件、手机转轴、数码产品五金零件、通信设备卡接簧片、小型记忆卡",
+              "revenueComposition": "智能终端及电子产品:58.73%;新能源产品零组件及连接器:36.46%;其他:3.83%;具身智能与新兴科技硬件:0.98%",
+              "revenueSegments": [
+                {
+                  "name": "智能终端及电子产品",
+                  "sharePct": 58.73,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源产品零组件及连接器",
+                  "sharePct": 36.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "具身智能与新兴科技硬件",
+                  "sharePct": 0.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "SCARA机器人(圆柱坐标型机器人手臂)",
+                    "category": "工业机器人"
+                  }
+                ],
+                "knownProducts": [
+                  "SCARA机器人(圆柱坐标型机器人手臂)",
+                  "新能源汽车动力电池盖板",
+                  "新能源汽车母排",
+                  "氢燃料电池用不锈钢水冷板",
+                  "氢燃料电池用不锈钢风冷板",
+                  "新能源汽车充电座",
+                  "汽车尾灯组件",
+                  "汽车门锁组件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "长盈精密与事件存在真实业务交集：公司已有SCARA机器人(圆柱坐标型机器人手臂)，与为优必选等海内外头部客户提供多种材料的机器人结构件所处的产业环节一致。智能终端及电子产品（58.73%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响商业化进度和订单兑现，只有经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”，才会形成可确认的收入和利润增量。客户认证、新增订单、交付节奏、相关业务收入和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 10144,
+            "stockCode": "301280.SZ",
+            "stockName": "珠城科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为优必选提供工业连接器，并成立合资公司推动产业链协同。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301280.SZ",
+              "companyName": "珠城科技",
+              "companyProfile": "公司自1994年创立于浙江乐清以来，始终深耕连接器行业，于2022年12月成功登陆深交所创业板。公司现已发展成集团化企业，并先后荣获浙江省重点企业研究院、工信部专精特新“小巨人”企业、国家高新技术企业等多项重量级认定。公司业务聚焦于消费电器、新能源汽车及光伏储能连接器的研发、生产与销售，产品广泛应用于家电、智能终端、新能源汽车、光伏储能等领域。公司始终坚持凭质优决胜于市场，以精诚取信于客户的经营理念，持续创新为客户提供安全、高效、智能的一站式连接系统解决方案。公司建立了CNAS及UL认证的目击实验室，并通过IATF16949等国际权威质量体系认证，建立了一体化研发创新体系，成功解决多项行业关键核心的痛点，并获得发明、实用新型等各项授权专利150余项。在生产制造端，公司已全面建成设备联网率高、全程数据贯通的数字化智能工厂，实现了以实时数据驱动的精益制造。",
+              "profileSummary": "公司自1994年创立于浙江乐清以来，始终深耕连接器行业，于2022年12月成功登陆深交所创业板。公司业务聚焦于消费电器、新能源汽车及光伏储能连接器的研发、生产与销售，产品广泛应用于家电、智能终端、新能源汽车、光伏储能等领域。",
+              "majorProducts": "储能连接器、刺破端子连接器、光伏连接器、精密SMT贴片连接器、快插一体化连接器、密封防流体连接器、汽车连接器、智能终端线束、珠城科技1.0~8.0mm线对板条形连接器、珠城科技护套、珠城科技接地及接线端子、珠城科技快插端子、珠城科技线对线空中对接连接器、珠城科技线束",
+              "revenueComposition": "家电连接器:96.37%;其他系类:2.32%;汽车连接器:1.31%",
+              "revenueSegments": [
+                {
+                  "name": "家电连接器",
+                  "sharePct": 96.37,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他系类",
+                  "sharePct": 2.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车连接器",
+                  "sharePct": 1.31,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "MSD连接器",
+                    "category": "新能源汽车连接器"
+                  },
+                  {
+                    "name": "储能连接器",
+                    "category": "储能连接器"
+                  },
+                  {
+                    "name": "光伏连接器",
+                    "category": "电气连接器"
+                  },
+                  {
+                    "name": "家电连接器",
+                    "category": "家电连接器"
+                  },
+                  {
+                    "name": "新能源汽车驱动电机连接器",
+                    "category": "新能源汽车连接器"
+                  },
+                  {
+                    "name": "连接器端子",
+                    "category": "连接器组件"
+                  }
+                ],
+                "knownProducts": [
+                  "洗碗机线束",
+                  "冰箱线束",
+                  "空调线束",
+                  "洗衣机线束",
+                  "汽车线束",
+                  "储能连接器",
+                  "家电连接器",
+                  "MSD连接器"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "珠城科技与事件的关系已经落在存量主业，而非远期概念：家电连接器（96.37%）、汽车连接器（1.31%）合计约占收入的97.68%。公司在产业链中的具体抓手是：为优必选提供工业连接器，并成立合资公司推动产业链协同。本次事件若改变商业化进度和订单兑现，影响会沿着“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；客户认证、新增订单、交付节奏、相关业务收入和毛利率比主题热度更有解释力。若客户验证或交付节奏低于预期，订单停留在小批量阶段，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 10147,
+            "stockCode": "002600.SZ",
+            "stockName": "领益智造",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "为优必选等海内外多家头部机器人企业提供核心结构件和整机组装服务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002600.SZ",
+              "companyName": "领益智造",
+              "companyProfile": "公司成立于2006年，2018年登陆A股资本市场。作为值得信赖的AI终端硬件核心供应商，公司在全球范围内为客户提供精密功能件、结构件、模组等一站式智能制造服务及解决方案。公司精密功能件产品的市场份额及出货量已连续多年稳居全球消费电子市场领先地位，在质量、制程、技术等多个方面设定了行业标准，成为全球客户值得信赖的“功能件专家”，并进一步渗透机器人、新能源汽车、光伏储能等新兴市场。近年来，公司综合实力持续提升，从单一加工制程到多种加工制程，从产品制造专家到解决方案专家，成为值得信赖的全球AI终端硬件制造平台。公司连续8年入选《财富》中国500强，并多次入选《财富》中国上市公司500强、中国民营企业500强、中国制造业民营企业500强等榜单。2023-2024年，公司MSCI-ESG评级连续2年为“A”。2024年公司实现营业收入442.11亿元，同比增长29.56%。其中，AI终端业务全年实现收入约407.31亿元，同比增长32.75%；汽车及低空经济业务实现收入21.17亿元，同比增长52.90%；公司其它业务实现收入约13.63亿元，其中公司清洁能源业务收入11.71亿元。截至2024年底，公司累计获得各项专利2178项，研发人员6367人。2024年公司研发投入19.78亿，较2023年同比增长9.10%。未来，公司将继续坚持创新引领和国际化发展的理念，聚焦主业并向上游延伸，全面发力机器人、服务器散热、AI眼镜、低空经济等第N增长曲线；拓展海外市场，提升海外盈利能力；深挖国内需求，进一步提升企业护城河；着力打造集“精益化、数字化、自动化、绿色化”于一体的智能制造平台，持续增强核心竞争力。",
+              "profileSummary": "作为值得信赖的AI终端硬件核心供应商，公司在全球范围内为客户提供精密功能件、结构件、模组等一站式智能制造服务及解决方案。公司精密功能件产品的市场份额及出货量已连续多年稳居全球消费电子市场领先地位，在质量、制程、技术等多个方面设定了行业标准，成为全球客户值得信赖的“功能件专家”，并进一步渗透机器人、新能源汽车、光伏储能等新兴市场。",
+              "majorProducts": "2.2kW 储能 PCS、600W 功率优化器、700W 微型光伏逆变器、CSV 减速器、hinge-无线耳机配件、Mesh产品、Mini LED 背光模组、MnZn软磁铁氧体材料、OCUG-室外微波合分路单元、PD3.1 140W+小型化 GaN 充电器、XR 无线充电、钣金滤波器、笔记本电脑触控模组、便携式户外储能电源、玻纤结构外观件产品、传感器精密金属件、导光板背光模组、导热类产品、电池铜/铝转接片、电磁屏蔽材料、动力电池顶盖、动力电池铝壳、多频 OMT组件、防水产品方案、复合板材手机电池盖、工业控制器一体化解决方案、工业用 IoT Sensor、光伏无线网络通讯模块、硅胶类产品、硅胶组件方案、键盘反光模组类产品、键盘模组、键盘组件方案、结构件 3D 打印方案、金属小件类产品----卡托类、全 CNC 笔电外壳、热管理产品方案、散热产品-不锈钢 VC、散热产品-钛合金 VC、射频腔体滤波器、声学类产品、手机按键-静音键、手机金属中框、手机摄像头支架、钛合金结构件 MIM方案、碳纤维产品-Hinge 零件、碳纤维桨叶产品、陶瓷纤维产品、微波定频双工、微波介质陶瓷、微波可调谐双工器、无线充电器外壳、智能耳机耳套、智能手机保护套",
+              "revenueComposition": "AI终端:87.1%;其他:7.16%;汽车及低空经济:5.74%",
+              "revenueSegments": [
+                {
+                  "name": "AI终端",
+                  "sharePct": 87.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 7.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车及低空经济",
+                  "sharePct": 5.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "充电器代工",
+                    "category": "有线充电"
+                  },
+                  {
+                    "name": "微型逆变器代工",
+                    "category": "光伏逆变器"
+                  }
+                ],
+                "knownProducts": [
+                  "无人机碳纤维桨叶",
+                  "纳米晶材料",
+                  "软磁铁氧体",
+                  "汽车传动轴",
+                  "汽车驱动轴",
+                  "汽车转向轴",
+                  "电磁屏蔽吸波片",
+                  "VR眼罩"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "领益智造拥有充电器代工、微型逆变器代工，其产业链位置与为优必选等海内外多家头部机器人企业提供核心结构件和整机组装服务一致；当前的AI终端（87.1%）、其他（7.16%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由商业化进度和订单兑现决定，并需完成“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”。只有客户认证、新增订单、交付节奏、相关业务收入和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；客户验证或交付节奏低于预期，订单停留在小批量阶段则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 10148,
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为优必选、智元等国内头部客户提供机器人整机代工服务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300433.SZ",
+              "companyName": "蓝思科技",
+              "companyProfile": "公司以科技创新为核心、智能智造为驱动，是业内领先的智能终端全产业链一站式精密制造解决方案提供商。公司前身于1993年在深圳成立，2006年总部落户湖南长沙，随后实现“A+H”双资本平台战略布局。公司在新材料应用领域持续突破，率先将玻璃、蓝宝石、陶瓷等脆性材料引入消费电子行业。凭借对玻璃、金属、陶瓷、塑胶、皮革、硅胶、玻纤、碳纤、化纤等十余种材料的深度技术积累，以及强大的平台化能力，公司实现了从原材料生产、功能模块贴合到整机组装的垂直整合能力，并与全球头部消费电子及智能汽车品牌建立了长期战略合作。公司通过“新材料、新技术、新装备、新领域”战略，持续拓展新领域。业务覆盖AI智能终端(包含智能手机、AI眼镜、智能汽车、具身智能等)、AI服务器、商业航天、光通信等领域，形成多场景协同发展的业务布局。",
+              "profileSummary": "凭借对玻璃、金属、陶瓷、塑胶、皮革、硅胶、玻纤、碳纤、化纤等十余种材料的深度技术积累，以及强大的平台化能力，公司实现了从原材料生产、功能模块贴合到整机组装的垂直整合能力，并与全球头部消费电子及智能汽车品牌建立了长期战略合作。业务覆盖AI智能终端(包含智能手机、AI眼镜、智能汽车、具身智能等)、AI服务器、商业航天、光通信等领域，形成多场景协同发展的业务布局。",
+              "majorProducts": "新能源汽车及智能座舱类、智能手机与电脑类、智能头显与智能穿戴类",
+              "revenueComposition": "智能手机与电脑类:82.23%;新能源汽车及智能座舱类:8.68%;智能头显与智能穿戴类:5.35%;其他业务:2.33%;其他智能终端类:1.41%",
+              "revenueSegments": [
+                {
+                  "name": "智能手机与电脑类",
+                  "sharePct": 82.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源汽车及智能座舱类",
+                  "sharePct": 8.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能头显与智能穿戴类",
+                  "sharePct": 5.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他智能终端类",
+                  "sharePct": 1.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "人形机器人",
+                    "category": "商用机器人"
+                  }
+                ],
+                "knownProducts": [
+                  "盖板玻璃",
+                  "人形机器人",
+                  "超薄夹胶多功能车窗玻璃",
+                  "AI眼镜结构件",
+                  "指纹识别模组",
+                  "手机影像模组",
+                  "手机摄像头陶瓷圈口",
+                  "手机摄像头装饰件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "蓝思科技与新闻之间有明确产品抓手：人形机器人，对应为优必选、智元等国内头部客户提供机器人整机代工服务。收入主体目前是智能手机与电脑类（82.23%）、新能源汽车及智能座舱类（8.68%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变商业化进度和订单兑现预期，随后要经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才能进入利润表。客户认证、新增订单、交付节奏、相关业务收入和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若客户验证或交付节奏低于预期，订单停留在小批量阶段，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 10150,
+            "stockCode": "000785.SZ",
+            "stockName": "居然智家",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "与优必选签订独家线下渠道代理销售协议，直接受益于U1等产品放量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000785.SZ",
+              "companyName": "居然智家",
+              "companyProfile": "公司由北京居然之家投资控股集团、阿里巴巴集团、泰康人寿保险集团等投资人共同投资设立。一方面，居然之家以“大家居”为主业，开展家居卖场实体店经营和连锁，以品牌和管理输出形式加快三四线城市及县域的连锁发展；另一方面，居然之家拓展自营和IP业务赛道，全链路地提升行业交付和服务能力，打造数字化时代下家居行业第一产业服务平台。公司是最早在泛家居行业进行全国性布局的企业之一，经过25年经营扩张已成为中国泛家居行业龙头企业。公司不断巩固主业，拓宽行业护城河，是国内市场中少数有实力进行泛家居全产业链布局的企业，建立了涵盖室内设计、装修施工、家居销售、智能家居、智慧物流、到家服务等泛家居服务生态闭环，并融合了百货商场、购物中心、生活超市等高频消费场景，可满足消费者快乐简单高效的一站式购物体验。公司依托强大的运营能力，在资产运营效率、坪效、人效比、总资产收益率、净资产收益率等核心数据上表现优异。在品牌影响力、资产运营效率、门店数量、市场销售、数字化程度、商业模式、商业资源等多个方面处于行业领先地位。公司作为家装家居行业领先品牌，在巩固“大家居”主业的同时，积极打造第二增长曲线，拓展购物中心业态，实现家居卖场与购物中心双轮驱动。公司通过“中商世界里”打造全新的购物中心品牌，以“青春时尚”和“引领未来”为消费主题，将智能家居体验中心有机结合到购物中心业态中，并通过独特商业IP的运营，为年轻人及家庭客群提供了丰富的社交和休闲娱乐体验。",
+              "profileSummary": "一方面，居然之家以“大家居”为主业，开展家居卖场实体店经营和连锁，以品牌和管理输出形式加快三四线城市及县域的连锁发展；另一方面，居然之家拓展自营和IP业务赛道，全链路地提升行业交付和服务能力，打造数字化时代下家居行业第一产业服务平台。公司不断巩固主业，拓宽行业护城河，是国内市场中少数有实力进行泛家居全产业链布局的企业，建立了涵盖室内设计、装修施工、家居销售、智能家居、智慧物流、到家服务等泛家居服务生态闭环，并融合了百货商场、购物中心、…",
+              "majorProducts": "购物中心及现代百货业务、连锁家居卖场业务、数字化、智能化业务、智慧物流业务、智能家装业务",
+              "revenueComposition": "商品销售收入:56.55%;租赁及其管理收入:37.37%;加盟管理收入:2.42%;其他业务:1.95%;装修服务收入:1.71%",
+              "revenueSegments": [
+                {
+                  "name": "商品销售收入",
+                  "sharePct": 56.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁及其管理收入",
+                  "sharePct": 37.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "加盟管理收入",
+                  "sharePct": 2.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "装修服务收入",
+                  "sharePct": 1.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "百货零售",
+                  "超市零售",
+                  "家具卖场委托管理",
+                  "家具卖场经营",
+                  "建材市场经营"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "居然智家当前收入集中在商品销售收入（56.55%）、租赁及其管理收入（37.37%），现有产品以百货零售、超市零售、家具卖场委托管理、家具卖场经营为主，与新闻所指的“与优必选签订独家线下渠道代理销售协议，直接受益于U1等产品放量”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，商业化进度和订单兑现才可能沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。在此之前，客户认证、新增订单、交付节奏、相关业务收入和毛利率若没有出现，事件对公司基本面的影响应按较弱处理；客户验证或交付节奏低于预期，订单停留在小批量阶段会进一步压低相关性。"
+          },
+          {
+            "sourceRowNumber": 10152,
+            "stockCode": "002009.SZ",
+            "stockName": "天奇股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "与优必选成立合资公司，共同开发基于人形机器人的工业及商业场景应用。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002009.SZ",
+              "companyName": "天奇股份",
+              "companyProfile": "公司始创于1984年，2004年在深圳证券交易所上市，立足于“诚信、勤勉、创新、共赢”的企业价值观，围绕“致力于服务汽车全生命周期”的企业愿景，聚焦两大主业发展：以汽车智能装备业务为核心、叠加人形机器人赋能的智能装备产业，以锂电池回收、梯次利用、再生利用为核心的锂电池循环产业。公司在全国范围内设立多家子公司，产品与服务主要涉及汽车制造、智能仓储、循环装备、报废汽车回收拆解、锂电回收处理、新能源工程、重工制造等产业领域。逐步形成拥有自动化物流装备、智能仓储与分拣、信息技术开发与服务、设备远程故障诊断分析与云服务、固体废弃物处理智能装备、报废汽车回收与利用、大型铸造件加工、新能源工程、锂电池回收与利用等综合业务的产业集团。公司是国家高新技术企业、创新型企业、国家知识产权工作示范单位。拥有企业技术中心、国家博士后科研工作站、江苏省物流自动化装备工程技术中心等研发创新平台。",
+              "profileSummary": "公司始创于1984年，2004年在深圳证券交易所上市，立足于“诚信、勤勉、创新、共赢”的企业价值观，围绕“致力于服务汽车全生命周期”的企业愿景，聚焦两大主业发展：以汽车智能装备业务为核心、叠加人形机器人赋能的智能装备产业，以锂电池回收、梯次利用、再生利用为核心的锂电池循环产业。逐步形成拥有自动化物流装备、智能仓储与分拣、信息技术开发与服务、设备远程故障诊断分析与云服务、固体废弃物处理智能装备、报废汽车回收与利用、大型铸造件加工、新能源…",
+              "majorProducts": "锂电池循环产业、汽车智能装备业务、循环装备业务、重工机械业务",
+              "revenueComposition": "其中：汽车智能装备:57.4%;锂电池循环事业部:17.11%;重工机械事业部:13.58%;散料输送机:6.05%;循环装备:3.59%;其他业务:2.27%",
+              "revenueSegments": [
+                {
+                  "name": "其中：汽车智能装备",
+                  "sharePct": 57.4,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "锂电池循环事业部",
+                  "sharePct": 17.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "重工机械事业部",
+                  "sharePct": 13.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "散料输送机",
+                  "sharePct": 6.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "循环装备",
+                  "sharePct": 3.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "汽车总装自动化生产线",
+                    "category": "汽车自动化生产线"
+                  },
+                  {
+                    "name": "汽车涂装自动化生产线",
+                    "category": "汽车自动化生产线"
+                  },
+                  {
+                    "name": "汽车车身智能焊装系统(生产线)",
+                    "category": "汽车自动化生产线"
+                  }
+                ],
+                "knownProducts": [
+                  "有色金属分选生产线",
+                  "废旧汽车回收拆解生产线",
+                  "废钢破碎生产线",
+                  "汽车总装自动化生产线",
+                  "汽车涂装自动化生产线",
+                  "汽车车身智能焊装系统(生产线)",
+                  "管状带式输送机",
+                  "通用带式输送机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "天奇股份的其中：汽车智能装备（57.4%）覆盖范围较宽，其中能够承载汽车总装自动化生产线、汽车涂装自动化生产线、汽车车身智能焊装系统(生产线)，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：与优必选成立合资公司，共同开发基于人形机器人的工业及商业场景应用。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 10153,
+            "stockCode": "688360.SH",
+            "stockName": "德马科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "与优必选深度绑定，成立合资公司共同开发物流场景应用。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688360.SH",
+              "companyName": "德马科技",
+              "companyProfile": "公司是智能物流装备全产业链的科技创新企业，长期致力于智能物流技术的研发与应用，将更快、更高效的智能物流技术惠及更多企业，以更便捷的方式解决企业仓储物流管理难题，提升企业的运营效率和降低货品的流动成本。公司拥有20多年的历史，于1997年在浙江省湖州市创立，至今业务已遍布全球30多个国家和地区，销售办事处覆盖全球，以上海总部和湖州中央工厂辐射全球，在澳大利亚、美国、罗马尼亚设立生产基地及销售服务中心，荷兰、德国、意大利、印度、越南、韩国等国家皆有合作伙伴。公司始终围绕着技术和创新的核心竞争力，从系统方案规划设计、软件规划设计、产品选型制造，再到项目现场实施交付，每一个细节都力求做的更好，为更多企业提供先进、稳定、可靠的智能物流产品及系统。公司的自动化物流解决方案已广泛运用于多个行业，如电商、快递、智能制造、纺织、医药、烟草、商超零售、冷链等领域，为菜鸟、京东、唯品会、顺丰等多个行业标杆企业提供了海量级的解决方案。作为国内智能物流装备的领先企业，公司将以AI+IoT为核心，充分发挥从核心软硬件到系统集成的产业链优势。打造更快、更高效的智能物流系统，惠及更多客户和企业。致力于成为具有全球影响力的智能物流科技企业。",
+              "profileSummary": "公司拥有20多年的历史，于1997年在浙江省湖州市创立，至今业务已遍布全球30多个国家和地区，销售办事处覆盖全球，以上海总部和湖州中央工厂辐射全球，在澳大利亚、美国、罗马尼亚设立生产基地及销售服务中心，荷兰、德国、意大利、印度、越南、韩国等国家皆有合作伙伴。公司始终围绕着技术和创新的核心竞争力，从系统方案规划设计、软件规划设计、产品选型制造，再到项目现场实施交付，每一个细节都力求做的更好，为更多企业提供先进、稳定、可靠的智能物流产品及…",
+              "majorProducts": "仓配一体化智能物流系统、德马科技其他物流设备、德马科技输送分拣核心零部件、德马科技物流自动化输送分拣关键设备及输送分拣系统解决方案、电芯装配系统设备、极卷搬运与缓存设备、模切叠片及物流设备、输送辊筒、新能源锂电整厂智能物流系统、直驱电机、智能存储系统、智能分拣设备、智能机器人、智能驱动单元、智能输送设备",
+              "revenueComposition": "智能物流输送分拣核心部件:72.71%;自动化物流输送分拣关键设备:26.61%;其他业务:0.37%;其他(售后服务):0.31%",
+              "revenueSegments": [
+                {
+                  "name": "智能物流输送分拣核心部件",
+                  "sharePct": 72.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自动化物流输送分拣关键设备",
+                  "sharePct": 26.61,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他(售后服务)",
+                  "sharePct": 0.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "分拣机器人",
+                    "category": "工业机器人"
+                  },
+                  {
+                    "name": "智能输送分拣系统",
+                    "category": "自动化解决方案"
+                  }
+                ],
+                "knownProducts": [
+                  "分拣机器人",
+                  "智能输送分拣系统",
+                  "交叉带分拣机",
+                  "滑块式分拣机",
+                  "落格式分拣机",
+                  "转向轮分拣机",
+                  "悬挂链式输送机",
+                  "托盘输送机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "德马科技的自动化物流输送分拣关键设备（26.61%）覆盖范围较宽，其中能够承载分拣机器人、智能输送分拣系统，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：与优必选深度绑定，成立合资公司共同开发物流场景应用。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 10154,
+            "stockCode": "603990.SH",
+            "stockName": "麦迪科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "与优必选成立合资公司，联合发布全国首款仿生医疗机器人，布局智慧康养。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603990.SH",
+              "companyName": "麦迪科技",
+              "companyProfile": "公司创立于2005年，经过多年的深耕与不懈努力，于2016年成功在A股上市。公司专注于急危重症救治领域的信息化建设，以协同救治、提高医疗质量、提升救治效率和促进科研创新为重点，旨在提升整体医疗水平和患者满意度，促进医疗服务的整体进步和创新。公司的核心产品DoCare系列临床信息系统广泛覆盖手术室、重症病区、院前急救和院内急诊等关键领域，依托先进的移动互联网、物联网技术和大数据模型，深化打造产品的竞争优势和专业性，以满足医院在新时代的高质量发展需求。公司终端用户覆盖全国32个省、自治区及直辖市，2400多家医疗机构，其中，三级甲等医院近1200家。作为国家高新技术企业，公司建有省级技术中心，重视技术创新，拥有近600项知识产权。多年以来，公司承担国家“十二五”863课题——数字化医疗工程技术(数字化手术室、院前急救、重症监护)的设计开发和推广、国家工信部人工智能创新任务揭榜挂帅项目、江苏省科技成果转化专项、江苏省工业和信息产业转型升级专项等多项重大课题，荣获江苏省“专精特新”企业、江苏省智慧健康优秀产品、江苏省优秀软件产品奖(金慧奖)等荣誉。公司以“为客户创造价值，为生命保驾护航”为使命，秉承“专注、持续、共赢”的经营理念，积极探索运用5G、物联网和人工智能大模型等前沿技术赋能低空经济，通过直升机和无人机开展低空救援，开创智慧急救新模式。同时，我们积极推动人形服务机器人在医疗康养领域的应用落地及产业发展，致力于推进医疗信息化向平台化、区域化和智能化方向发展，力争成为国内健康医疗人工智能领域的领先品牌。",
+              "profileSummary": "公司专注于急危重症救治领域的信息化建设，以协同救治、提高医疗质量、提升救治效率和促进科研创新为重点，旨在提升整体医疗水平和患者满意度，促进医疗服务的整体进步和创新。公司的核心产品DoCare系列临床信息系统广泛覆盖手术室、重症病区、院前急救和院内急诊等关键领域，依托先进的移动互联网、物联网技术和大数据模型，深化打造产品的竞争优势和专业性，以满足医院在新时代的高质量发展需求。",
+              "majorProducts": "DoCare急诊临床信息系统、DoCare麻醉临床信息系统、DoCare手术医疗行为管理系统、DoCare院前急救临床信息系统、DoCare重症监护临床信息系统",
+              "revenueComposition": "自制软件:34.2%;运维服务:30.15%;医疗服务:19.26%;整体解决方案:13.39%;外购软硬件:2.64%;其他业务:0.36%",
+              "revenueSegments": [
+                {
+                  "name": "自制软件",
+                  "sharePct": 34.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运维服务",
+                  "sharePct": 30.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医疗服务",
+                  "sharePct": 19.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "整体解决方案",
+                  "sharePct": 13.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "外购软硬件",
+                  "sharePct": 2.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "试管婴儿医学医疗服务",
+                  "IT运营维护",
+                  "临床路径信息系统",
+                  "数字化急诊急救平台整体解决方案",
+                  "数字化手术室整体解决方案",
+                  "血液净化信息系统",
+                  "重症监护(ICU)临床信息系统",
+                  "院前急救信息系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "麦迪科技现有业务与与优必选成立合资公司，联合发布全国首款仿生医疗机器人，布局智慧康养处于同一产业方向，收入主体为自制软件（34.2%）、运维服务（30.15%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变商业化进度和订单兑现，只有经由“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”，业务交集才会转化为业绩增量。客户认证、新增订单、交付节奏、相关业务收入和毛利率若逐步增强，相关业务的重要性会提高；若客户验证或交付节奏低于预期，订单停留在小批量阶段，影响仍可能局限在估值预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "6条低于3星的源记录已按当前关注口径排除。",
+      "2条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

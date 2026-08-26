@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26791",
@@ -9,10 +9,10 @@
     "date": "2026-07-02"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 8,
-    "mappedStockCount": 8,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 6,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 12656,
@@ -20,8 +20,8 @@
         "stockName": "中科磁业",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 2
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 12659,
@@ -57,7 +57,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 9
+        "anchorProductCount": 4
       },
       {
         "sourceRowNumber": 12667,
@@ -66,7 +66,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 5
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 12668,
@@ -74,8 +74,8 @@
         "stockName": "东微半导",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 12669,
@@ -84,73 +84,40 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 3
+        "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 12656,
+        "stockCode": "301141.SZ",
+        "stockName": "中科磁业",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 12668,
+        "stockCode": "688261.SH",
+        "stockName": "东微半导",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 31,
     "selectedCoreProductCount": 14,
     "selectedCompanyCoreProductCount": 14,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 3,
-    "downstreamCandidateCount": 3,
-    "shownUpstreamCount": 3,
-    "shownDownstreamCount": 3
+    "level7ProductCount": 52,
+    "relatedIndustryCandidateCount": 10,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140034108",
-        "name": "气缸",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033592"
-        ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140008574",
-        "name": "电机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033592"
-        ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140041932",
-        "name": "电气安装板",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033592"
-        ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140033592",
         "name": "芯片分选机",
@@ -176,23 +143,21 @@
           "name": "芯片分选机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "301629.SZ",
             "stockName": "矽电股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "603061.SH",
             "stockName": "金海通",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 3,
         "relevanceScore": 17,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -228,18 +193,15 @@
           "name": "MEMS探针卡"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688627.SH",
             "stockName": "精智达",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 17,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -275,18 +237,15 @@
           "name": "晶圆允收测试机(WAT)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301095.SZ",
             "stockName": "广立微",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 17,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -322,18 +281,15 @@
           "name": "晶圆探针台"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301629.SZ",
             "stockName": "矽电股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 17,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -369,18 +325,15 @@
           "name": "晶粒探针台"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301629.SZ",
             "stockName": "矽电股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 17,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -416,18 +369,15 @@
           "name": "模拟测试机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301369.SZ",
             "stockName": "联动科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 17,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -463,18 +413,15 @@
           "name": "芯片分选机视像检测系统"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301369.SZ",
             "stockName": "联动科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 12,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -509,18 +456,15 @@
           "name": "触摸屏触控测试机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688627.SH",
             "stockName": "精智达",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 10,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -555,18 +499,15 @@
           "name": "半导体存储器封装测试设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688627.SH",
             "stockName": "精智达",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -601,18 +542,15 @@
           "name": "半导体存储器老化修复设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688627.SH",
             "stockName": "精智达",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -647,18 +585,15 @@
           "name": "晶圆AOI检测机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301629.SZ",
             "stockName": "矽电股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -693,18 +628,15 @@
           "name": "晶圆三维形貌量测设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688361.SH",
             "stockName": "中科飞测",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -739,18 +671,15 @@
           "name": "晶圆曝光机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301629.SZ",
             "stockName": "矽电股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -785,18 +714,15 @@
           "name": "晶圆缺陷检测设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688361.SH",
             "stockName": "中科飞测",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -807,54 +733,548 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140008622",
-        "name": "芯片",
-        "anchorCount": 1,
+        "code": "1200000602",
+        "name": "消费电子制造装备",
+        "description": "该行业指为手机、穿戴设备等提供生产设备的领域。因AI终端创新及国产替代加速，设备更新需求旺盛，叠加技术壁垒高、业绩弹性大，成为A股聚焦智能制造与科技升级的核心赛道，备受资金关注。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033592"
+        "starWeight": 7,
+        "level7ProductCount": 8,
+        "relevanceScore": 128,
+        "stocks": [
+          {
+            "stockCode": "688627.SH",
+            "stockName": "精智达",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688001.SH",
+            "stockName": "华兴源创",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
+        "products": [
+          {
+            "code": "1140191389",
+            "name": "触摸屏触控测试机",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 消费电子制造装备 > 消费电子加工设备 > 触摸屏触控测试机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688627.SH",
+                "stockName": "精智达",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 28,
+            "matchedTerms": [
+              "测试机",
+              "测试设备"
+            ]
+          },
+          {
+            "code": "1140160076",
+            "name": "麦克风声压/阻抗测试机",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 消费电子制造装备 > 消费电子检测设备 > 麦克风声压/阻抗测试机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688001.SH",
+                "stockName": "华兴源创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 28,
+            "matchedTerms": [
+              "测试机",
+              "测试设备"
+            ]
+          },
+          {
+            "code": "1140033910",
+            "name": "3C气密性检测设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 消费电子制造装备 > 消费电子检测设备 > 3C气密性检测设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688001.SH",
+                "stockName": "华兴源创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140191598",
+            "name": "显示器Gamma调节设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 消费电子制造装备 > 消费电子检测设备 > 显示器Gamma调节设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688627.SH",
+                "stockName": "精智达",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140024044",
-        "name": "芯片设计",
-        "anchorCount": 1,
+        "code": "1200000507",
+        "name": "试验机",
+        "description": "试验机行业指研发制造材料力学性能测试设备的领域。因契合高端制造升级、新能源及航空航天对精密检测的需求，且具备国产替代逻辑，成为A股关注焦点，被视为衡量工业基础实力的关键赛道。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033592"
+        "starWeight": 6,
+        "level7ProductCount": 4,
+        "relevanceScore": 64,
+        "stocks": [
+          {
+            "stockCode": "688001.SH",
+            "stockName": "华兴源创",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688312.SH",
+            "stockName": "燕麦科技",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
+        "products": [
+          {
+            "code": "1140008025",
+            "name": "检测治具",
+            "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 试验机 > 其他试验机 > 检测治具",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688001.SH",
+                "stockName": "华兴源创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": [
+              "测试机",
+              "测试设备"
+            ]
+          },
+          {
+            "code": "1140213202",
+            "name": "MEMS传感器测试设备",
+            "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 试验机 > 其他试验机 > MEMS传感器测试设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688312.SH",
+                "stockName": "燕麦科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140213201",
+            "name": "FPC测试设备",
+            "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 试验机 > 其他试验机 > FPC测试设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688312.SH",
+                "stockName": "燕麦科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140217591",
+            "name": "FPC测试设备用针模",
+            "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 试验机 > 其他试验机 > FPC测试设备用针模",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688312.SH",
+                "stockName": "燕麦科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 15,
+    "mappedStockCount": 13,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 52,
+    "candidateIndustryCount": 10,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 12656,
+        "stockCode": "301141.SZ",
+        "stockName": "中科磁业",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140033740",
-        "name": "半导体自动封装系统",
-        "anchorCount": 1,
+        "sourceRowNumber": 12657,
+        "stockCode": "002027.SZ",
+        "stockName": "分众传媒",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 12658,
+        "stockCode": "688661.SH",
+        "stockName": "和林微纳",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 12659,
+        "stockCode": "603061.SH",
+        "stockName": "金海通",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 12660,
+        "stockCode": "301629.SZ",
+        "stockName": "矽电股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 12661,
+        "stockCode": "688361.SH",
+        "stockName": "中科飞测",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 12662,
+        "stockCode": "300567.SZ",
+        "stockName": "精测电子",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 12663,
+        "stockCode": "688312.SH",
+        "stockName": "燕麦科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 12664,
+        "stockCode": "300604.SZ",
+        "stockName": "长川科技",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 12665,
+        "stockCode": "688200.SH",
+        "stockName": "华峰测控",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 12666,
+        "stockCode": "688627.SH",
+        "stockName": "精智达",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 12667,
+        "stockCode": "301369.SZ",
+        "stockName": "联动科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 12668,
+        "stockCode": "688261.SH",
+        "stockName": "东微半导",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 12669,
+        "stockCode": "301095.SZ",
+        "stockName": "广立微",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 12670,
+        "stockCode": "688001.SH",
+        "stockName": "华兴源创",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 14
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000602",
+        "name": "消费电子制造装备",
+        "description": "该行业指为手机、穿戴设备等提供生产设备的领域。因AI终端创新及国产替代加速，设备更新需求旺盛，叠加技术壁垒高、业绩弹性大，成为A股聚焦智能制造与科技升级的核心赛道，备受资金关注。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033592"
+        "starWeight": 7,
+        "level7ProductCount": 8,
+        "relevanceScore": 128,
+        "stocks": [
+          {
+            "stockCode": "688627.SH",
+            "stockName": "精智达",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688001.SH",
+            "stockName": "华兴源创",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "芯片分选机"
+        "products": [
+          {
+            "code": "1140191389",
+            "name": "触摸屏触控测试机",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 消费电子制造装备 > 消费电子加工设备 > 触摸屏触控测试机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688627.SH",
+                "stockName": "精智达",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 28,
+            "matchedTerms": [
+              "测试机",
+              "测试设备"
+            ]
+          },
+          {
+            "code": "1140160076",
+            "name": "麦克风声压/阻抗测试机",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 消费电子制造装备 > 消费电子检测设备 > 麦克风声压/阻抗测试机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688001.SH",
+                "stockName": "华兴源创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 28,
+            "matchedTerms": [
+              "测试机",
+              "测试设备"
+            ]
+          },
+          {
+            "code": "1140033910",
+            "name": "3C气密性检测设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 消费电子制造装备 > 消费电子检测设备 > 3C气密性检测设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688001.SH",
+                "stockName": "华兴源创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140191598",
+            "name": "显示器Gamma调节设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 消费电子制造装备 > 消费电子检测设备 > 显示器Gamma调节设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688627.SH",
+                "stockName": "精智达",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000507",
+        "name": "试验机",
+        "description": "试验机行业指研发制造材料力学性能测试设备的领域。因契合高端制造升级、新能源及航空航天对精密检测的需求，且具备国产替代逻辑，成为A股关注焦点，被视为衡量工业基础实力的关键赛道。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 4,
+        "relevanceScore": 64,
+        "stocks": [
+          {
+            "stockCode": "688001.SH",
+            "stockName": "华兴源创",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688312.SH",
+            "stockName": "燕麦科技",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140008025",
+            "name": "检测治具",
+            "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 试验机 > 其他试验机 > 检测治具",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688001.SH",
+                "stockName": "华兴源创",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": [
+              "测试机",
+              "测试设备"
+            ]
+          },
+          {
+            "code": "1140213202",
+            "name": "MEMS传感器测试设备",
+            "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 试验机 > 其他试验机 > MEMS传感器测试设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688312.SH",
+                "stockName": "燕麦科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140213201",
+            "name": "FPC测试设备",
+            "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 试验机 > 其他试验机 > FPC测试设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688312.SH",
+                "stockName": "燕麦科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140217591",
+            "name": "FPC测试设备用针模",
+            "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 试验机 > 其他试验机 > FPC测试设备用针模",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688312.SH",
+                "stockName": "燕麦科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -869,9 +1289,1103 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 17,
+    "eligibleSourceRowCount": 15,
+    "totalStockCount": 15,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 0,
+    "excludedNonAShareCount": 2,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 15,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 12664,
+            "stockCode": "300604.SZ",
+            "stockName": "长川科技",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内半导体测试设备产品线最全的龙头，深度绑定国产算力与存储核心客户，显著受益于国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300604.SZ",
+              "companyName": "长川科技",
+              "companyProfile": "公司成立于2008年4月，是一家专注于集成电路封装和晶圆测试装备的高新技术企业。公司总部坐落于浙江省杭州市滨江区创智街500号，研发人员占比50%以上。公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。公司累计拥有海内外授权专利超1,400项，其中发明专利超400项，先后被认定为国家级高新技术企业、国家知识产权优势企业、专精特新“小巨人”企业。",
+              "profileSummary": "公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。",
+              "majorProducts": "C6系列、Cfocus、D9000Soc测试机系列、HEXA、NanoX-6000、NanoX-8000、SLT系列、大功率测试机系列、老化测试机系列、三温平移式分选机系列、数模混合测试机系列、重力式分选机系列、转塔式分选机系列",
+              "revenueComposition": "测试机:60.53%;分选机:29.64%;其他:9.83%",
+              "revenueSegments": [
+                {
+                  "name": "测试机",
+                  "sharePct": 60.53,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "分选机",
+                  "sharePct": 29.64,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "数模混合测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "芯片分选机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "AOI光学检测仪",
+                    "category": "光学测试仪器"
+                  }
+                ],
+                "knownProducts": [
+                  "AOI光学检测仪",
+                  "数模混合测试机",
+                  "芯片分选机"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长川科技与事件的关系已经落在存量主业，而非远期概念：测试机（60.53%）、分选机（29.64%）合计约占收入的90.17%。公司在产业链中的具体抓手是：国内半导体测试设备产品线最全的龙头，深度绑定国产算力与存储核心客户，显著受益于国产替代。本次事件若改变技术商业化与产品迭代速度，影响会沿着“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；客户认证、量产良率、订单规模、产品收入占比和毛利率比主题热度更有解释力。若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 12665,
+            "stockCode": "688200.SH",
+            "stockName": "华峰测控",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内模拟测试机龙头，SoC测试机已通过算力客户验证，有望实现订单突破，打开新成长空间。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688200.SH",
+              "companyName": "华峰测控",
+              "companyProfile": "公司作为国内最早进入半导体测试设备行业的企业之一，已在行业深耕近三十年，始终聚焦于模拟和混合信号测试设备领域。公司凭借产品的高性能、易操作和服务优势等特点，在模拟及数模混合测试设备领域多次打破了国外厂商的垄断地位，在营收和品牌优势方面均已达到了国内领先水平。公司产品不但在中国境内批量销售，还外销至中国台湾、美国、欧洲、韩国、日本及东南亚等境外半导体产业发达地区。公司目前已成为国内前三大半导体封测厂商模拟测试领域的主力测试平台供应商，拥有着上百家集成电路设计企业客户资源，同时也与超过三百家以上的集成电路设计企业保持着紧密的业务合作关系。未来，中国自主芯片产业的快速发展将为公司高速、持续的成长提供重大发展机遇。",
+              "profileSummary": "公司作为国内最早进入半导体测试设备行业的企业之一，已在行业深耕近三十年，始终聚焦于模拟和混合信号测试设备领域。公司凭借产品的高性能、易操作和服务优势等特点，在模拟及数模混合测试设备领域多次打破了国外厂商的垄断地位，在营收和品牌优势方面均已达到了国内领先水平。",
+              "majorProducts": "STS8600、V/I 源表测试模块、半导体自动化测试系统STS 8200系列、半导体自动化测试系统STS 8202系列、半导体自动化测试系统STS 8203系列、半导体自动化测试系统STS 8250系列、半导体自动化测试系统STS 8300系列、继电器控制测试模块、交流V/I 源表测试模块、时间测量测试模块、数字测量测试模块",
+              "revenueComposition": "测试系统:88.19%;配件:11.34%;其他业务:0.47%",
+              "revenueSegments": [
+                {
+                  "name": "测试系统",
+                  "sharePct": 88.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配件",
+                  "sharePct": 11.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "模拟测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "V/I源表",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "V/I源表",
+                  "模拟测试机",
+                  "继电控制器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华峰测控拥有模拟测试机、V/I源表，其产业链位置与国内模拟测试机龙头，SoC测试机已通过算力客户验证，有望实现订单突破，打开新成长空间一致；当前的测试系统（88.19%）、配件（11.34%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由商业化进度和订单兑现决定，并需完成“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”。只有客户认证、新增订单、交付节奏、相关业务收入和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；客户验证或交付节奏低于预期，订单停留在小批量阶段则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 8,
+        "stocks": [
+          {
+            "sourceRowNumber": 12656,
+            "stockCode": "301141.SZ",
+            "stockName": "中科磁业",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内唯一具备自产探针能力的MEMS探针卡龙头，受益于AI算力及存储测试需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301141.SZ",
+              "companyName": "中科磁业",
+              "companyProfile": "公司主要从事永磁材料的研发、生产和销售，是目前国内重要的永磁材料生产商之一，致力于发展成为新一代消费电子和节能家电领域全球领先的永磁材料应用方案提供商。公司生产的永磁材料可广泛应用于消费电子、节能家电、汽车工业、风力发电、智能制造、电动工具等众多领域。公司产品的牌号众多、规格齐全，已形成了较为完整的产品集群，可以充分满足下游市场的多元化需求。公司作为一家高新技术企业，经过多年的自主研发和生产实践，已全面掌握了生产永磁材料的核心技术，在相关领域拥有多项发明专利。公司长期致力于服务国内外中高端客户，高度重视市场开发和品牌建设，经过多年努力，公司品牌已获得市场的广泛认可，主要客户为业内领先的电声器件制造商及永磁电机生产企业，如韩国星主、通力电子、EM-Tech、东科控股、歌尔股份、威灵电机、卧龙电驱等，相关客户的产品主要应用于三星、哈曼、索尼、华为、小米、亚马逊、美的、格力、大金等全球知名消费电子、节能家电品牌。",
+              "profileSummary": "公司主要从事永磁材料的研发、生产和销售，是目前国内重要的永磁材料生产商之一，致力于发展成为新一代消费电子和节能家电领域全球领先的永磁材料应用方案提供商。公司产品的牌号众多、规格齐全，已形成了较为完整的产品集群，可以充分满足下游市场的多元化需求。",
+              "majorProducts": "烧结钕铁硼永磁材料、永磁铁氧体磁体",
+              "revenueComposition": "钕铁硼永磁材料及器件:50.61%;永磁铁氧体:42.2%;其他:7.19%",
+              "revenueSegments": [
+                {
+                  "name": "钕铁硼永磁材料及器件",
+                  "sharePct": 50.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "永磁铁氧体",
+                  "sharePct": 42.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 7.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "烧结钕铁硼永磁体",
+                  "永磁铁氧体湿压磁瓦"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中科磁业当前收入集中在钕铁硼永磁材料及器件（50.61%）、永磁铁氧体（42.2%），现有产品以烧结钕铁硼永磁体、永磁铁氧体湿压磁瓦为主，与新闻所指的“国内唯一具备自产探针能力的MEMS探针卡龙头，受益于AI算力及存储测试需求”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，终端需求与渗透率变化才可能沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。在此之前，终端销量、客户采购量、公司出货和相关产品收入增速若没有出现，事件对公司基本面的影响应按较弱处理；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会进一步压低相关性。"
+          },
+          {
+            "sourceRowNumber": 12659,
+            "stockCode": "603061.SH",
+            "stockName": "金海通",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内分选机龙头，受益于AI、车规、存储三大高景气赛道带来的测试时长增加和设备需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603061.SH",
+              "companyName": "金海通",
+              "companyProfile": "公司是一家从事研发、生产并销售半导体芯片测试设备的高新技术企业，是国家级“专精特新小巨人”企业。自成立以来，公司一直专注于全球半导体芯片测试设备领域，同时致力于以高端智能装备核心技术助力我国半导体行业发展。公司为半导体封装测试企业、测试代工厂、IDM企业(半导体设计制造一体化厂商)、芯片设计公司等提供自动化测试设备中的测试分选机及相关定制化设备。公司的产品在集成电路封测行业有较高的知名度和认可度，产品遍布中国大陆、中国台湾、东南亚、欧美等全球市场。",
+              "profileSummary": "公司是一家从事研发、生产并销售半导体芯片测试设备的高新技术企业，是国家级“专精特新小巨人”企业。公司为半导体封装测试企业、测试代工厂、IDM企业(半导体设计制造一体化厂商)、芯片设计公司等提供自动化测试设备中的测试分选机及相关定制化设备。",
+              "majorProducts": "EXCEED6000系列平移式测试分选机、EXCEED8000系列平移式测试分选机、NEOCEED系列平移式测试分选机、PUPPY、COLLIE系列工程测试分选机、SUMMIT系列系统级测试分选机",
+              "revenueComposition": "测试分选机:90.64%;备品备件:9.05%;其他业务:0.31%",
+              "revenueSegments": [
+                {
+                  "name": "测试分选机",
+                  "sharePct": 90.64,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "备品备件",
+                  "sharePct": 9.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "芯片分选机",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "芯片分选机"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "金海通的事件暴露较为直接：测试分选机占收入的90.64%，相关业务不是边缘尝试；具体业务抓手是：国内分选机龙头，受益于AI、车规、存储三大高景气赛道带来的测试时长增加和设备需求增长。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，尤其需要用终端销量、客户采购量、公司出货和相关产品收入增速区分行业普涨与公司自身竞争力。如果终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 12660,
+            "stockCode": "301629.SZ",
+            "stockName": "矽电股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内探针台龙头，产品已导入国内主要晶圆厂和封测厂，受益于国产替代加速。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301629.SZ",
+              "companyName": "矽电股份",
+              "companyProfile": "公司主要从事半导体专用设备的研发、生产和销售，专注于半导体探针测试技术领域，系境内领先的探针测试技术系列设备制造企业。探针测试技术主要应用于半导体制造晶圆检测(CP,Circuit Probing)环节，也应用于设计验证和成品测试(FT,Final Test)环节，是检测芯片性能与缺陷，保证芯片测试准确性，提高芯片测试效率的关键技术。公司自主研发了多种类型应用探针测试技术的半导体设备，产品已广泛应用于集成电路、光电芯片、分立器件、第三代化合物半导体等半导体产品制造领域。公司已成为中国大陆规模最大的探针台设备制造企业。公司核心技术团队拥有超过30年的探针测试技术研发经验，公司自设立以来立足技术创新，掌握了探针测试核心技术，打破了海外厂商垄断，在探针台领域成为中国大陆市场重要的设备厂商。公司的探针测试系列产品已应用于士兰微、比亚迪半导体、燕东微、华天科技、三安光电、光迅科技、歌尔微等境内领先的晶圆制造、封装测试、光电器件、分立器件及传感器生产厂商。根据SEMI和CSA Research统计，2019年公司占中国大陆探针台设备市场13%的市场份额，市场份额排名第四，为中国大陆设备厂商第一名。",
+              "profileSummary": "公司主要从事半导体专用设备的研发、生产和销售，专注于半导体探针测试技术领域，系境内领先的探针测试技术系列设备制造企业。公司自主研发了多种类型应用探针测试技术的半导体设备，产品已广泛应用于集成电路、光电芯片、分立器件、第三代化合物半导体等半导体产品制造领域。",
+              "majorProducts": "0",
+              "revenueComposition": "晶圆探针台:43.43%;晶粒探针台:36.66%;其他:19.91%",
+              "revenueSegments": [
+                {
+                  "name": "晶圆探针台",
+                  "sharePct": 43.43,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "晶粒探针台",
+                  "sharePct": 36.66,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 19.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "晶圆探针台",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "晶粒探针台",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "芯片分选机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "晶圆AOI检测机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "晶圆曝光机",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "晶圆AOI检测机",
+                  "晶圆探针台",
+                  "晶圆曝光机",
+                  "晶粒探针台",
+                  "芯片分选机"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "矽电股份的相关业务已决定公司大部分经营表现：晶圆探针台（43.43%）、晶粒探针台（36.66%）合计约占收入的80.09%。公司与事件的直接业务联系是：国内探针台龙头，产品已导入国内主要晶圆厂和封测厂，受益于国产替代加速，真正的增量取决于技术商业化与产品迭代速度，并需经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，客户认证、量产良率、订单规模、产品收入占比和毛利率需要显示公司获得超越行业的增量。技术路线变化、良率爬坡缓慢或竞争方案更快成熟是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 12661,
+            "stockCode": "688361.SH",
+            "stockName": "中科飞测",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内领先的半导体量检测设备企业，产品已在先进逻辑和存储产线实现规模化交付。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688361.SH",
+              "companyName": "中科飞测",
+              "companyProfile": "公司专注于高端半导体质量控制领域，为半导体行业客户提供涵盖设备产品、智能软件产品和相关服务的全流程良率管理解决方案。在设备产品方面，公司通过在光学检测技术、大数据检测算法和自动化软件领域的自主研发和不断创新，在多项半导体质量控制设备关键核心技术上达到国际领先水平，形成了集成电路制造过程中所有关键工艺环节所需的主要种类设备产品组合，使得公司能够为不同类型的集成电路客户提供全面覆盖的检测和量测设备供应保障，支持客户的量产工艺需求和未来工艺研发需求；在智能软件产品方面，公司将人工智能和大数据技术应用到半导体质量控制数据上，形成了一系列提升高端半导体制造良率的软件产品，这些软件产品能够在检测和量测设备的基础上进一步为客户在良率管理中赋能，形成完整的质量控制设备和智能软件相结合的良率管理闭环，为客户实现最大化的质量控制对良率管理的提升效果。",
+              "profileSummary": "公司专注于高端半导体质量控制领域，为半导体行业客户提供涵盖设备产品、智能软件产品和相关服务的全流程良率管理解决方案。在设备产品方面，公司通过在光学检测技术、大数据检测算法和自动化软件领域的自主研发和不断创新，在多项半导体质量控制设备关键核心技术上达到国际领先水平，形成了集成电路制造过程中所有关键工艺环节所需的主要种类设备产品组合，使得公司能够为不同类型的集成电路客户提供全面覆盖的检测和量测设备供应保障，支持客户的量产工艺需求和未来工艺…",
+              "majorProducts": "3D曲面玻璃量测设备系列、暗场纳米图形晶圆缺陷检测设备系列、半导体缺陷自动分类系统、薄膜膜厚量测设备系列、光刻套刻分析反馈系统、光学关键尺寸量测设备系列、介质膜厚量测设备系列、金属膜厚量测设备系列、良率管理系统、明场纳米图形晶圆缺陷检测设备系列、三维形貌量测设备系列、套刻精度量测设备系列、图形晶圆缺陷检测设备系列、无图形晶圆缺陷检测设备系列",
+              "revenueComposition": "检测设备:66.43%;量测设备:30.36%;其他业务:2.6%;软件:0.61%",
+              "revenueSegments": [
+                {
+                  "name": "检测设备",
+                  "sharePct": 66.43,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "量测设备",
+                  "sharePct": 30.36,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "软件",
+                  "sharePct": 0.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "晶圆三维形貌量测设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "晶圆缺陷检测设备",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "晶圆三维形貌量测设备",
+                  "晶圆缺陷检测设备"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中科飞测与事件的关系已经落在存量主业，而非远期概念：检测设备（66.43%）、量测设备（30.36%）合计约占收入的96.79%。公司在产业链中的具体抓手是：国内领先的半导体量检测设备企业，产品已在先进逻辑和存储产线实现规模化交付。本次事件若改变商业化进度和订单兑现，影响会沿着“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；客户认证、新增订单、交付节奏、相关业务收入和毛利率比主题热度更有解释力。若客户验证或交付节奏低于预期，订单停留在小批量阶段，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 12666,
+            "stockCode": "688627.SH",
+            "stockName": "精智达",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内存储测试设备龙头，深度绑定长鑫存储，受益于存储国产化和HBM扩产趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688627.SH",
+              "companyName": "精智达",
+              "companyProfile": "公司成立于2011年，2023年成功登陆科创板。公司是国内领先的半导体测试检测设备创新型企业，专注于半导体存储器测试与新型显示器件检测，为全球客户提供系统化、全站点的测试检测解决方案。依托深圳、合肥、南京、苏州、长沙等境内研发制造基地，以及中国香港、日本、韩国研发中心，精智达构建“技术全栈化、服务本地化、资源国际化”的业务生态，持续赋能半导体产业高质量发展，打造具有国际竞争力的半导体测试检测设备平台。",
+              "profileSummary": "公司是国内领先的半导体测试检测设备创新型企业，专注于半导体存储器测试与新型显示器件检测，为全球客户提供系统化、全站点的测试检测解决方案。依托深圳、合肥、南京、苏州、长沙等境内研发制造基地，以及中国香港、日本、韩国研发中心，精智达构建“技术全栈化、服务本地化、资源国际化”的业务生态，持续赋能半导体产业高质量发展，打造具有国际竞争力的半导体测试检测设备平台。",
+              "majorProducts": "Cell光学检测设备、Cell老化设备、Cell信号发生器、DRAM FT测试机、DRAM老化修复设备、Gamma调节设备、Module光学检测设备、Module老化设备、Module信号发生器、Mura补偿设备、Sensor测试机、精智达RTP模组自动电性测试机SC-TPRT系列、精智达Sensor电气特性测试机SC-TPST系列、精智达触控显示Cell自动测试机SC-LCET系列、精智达触控显示模组自动测试机SC-LCMT系列、精智达多功能触摸屏测试机SC-TPT系列、探针卡、线性测试机",
+              "revenueComposition": "半导体存储器件测试:55.57%;新型显示器件检测产品:44.43%",
+              "revenueSegments": [
+                {
+                  "name": "半导体存储器件测试",
+                  "sharePct": 55.57,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新型显示器件检测产品",
+                  "sharePct": 44.43,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "MEMS探针卡",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "半导体存储器封装测试设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "半导体存储器老化修复设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "触摸屏触控测试机",
+                    "category": "消费电子加工设备"
+                  },
+                  {
+                    "name": "显示器Gamma调节设备",
+                    "category": "消费电子检测设备"
+                  },
+                  {
+                    "name": "显示器Mura补偿设备",
+                    "category": "消费电子检测设备"
+                  }
+                ],
+                "knownProducts": [
+                  "触摸屏触控测试机",
+                  "显示器Gamma调节设备",
+                  "显示器Mura补偿设备",
+                  "显示器光学检测设备",
+                  "显示器老化设备",
+                  "MEMS探针卡",
+                  "半导体存储器封装测试设备",
+                  "半导体存储器老化修复设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "精智达的半导体存储器件测试（55.57%）、新型显示器件检测产品（44.43%）覆盖范围较宽，其中能够承载MEMS探针卡、半导体存储器封装测试设备、半导体存储器老化修复设备，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国内存储测试设备龙头，深度绑定长鑫存储，受益于存储国产化和HBM扩产趋势。现阶段无法用整个分部占比直接衡量受益程度，因为产能释放与行业供给变化还需沿“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。在建工程转固、产能利用率、产销率、库存和产品价格若持续增强，事件影响可以从产品层面扩散到公司盈利；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 12667,
+            "stockCode": "301369.SZ",
+            "stockName": "联动科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "功率半导体测试机龙头，新推出的SoC测试机已与国产GPU厂商天数智芯达成战略合作，切入AI算力芯片测试赛道。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301369.SZ",
+              "companyName": "联动科技",
+              "companyProfile": "公司深耕半导体封装测试领域20多年，专注于后道封装测试领域专用设备的研发、生产和销售，具有深厚的技术储备和客户基础。主要产品为半导体自动化测试系统、激光打标设备及其他机电一体化设备，产品主要应用于电动汽车、光伏、风电、储能新能源及数据中心电源管理芯片和模块的功能和性能测试。公司将行业前沿的技术与创新思维相结合，持续追求半导体专用设备相关产品及技术的革新。是国家高新技术企业，广东省战略性新兴产业培育企业、国家级“专精特新”小巨人企业，拥有广东省半导体集成电路封装测试设备工程技术研究开发中心，目前拥有授权专利144项，软件著作权102项，是国内领先的功率器件测试系统供应商。近年来，公司研制成功的集成电路自动化测试系统在安森美集团、安靠集团、长电科技、通富微电、华天科技等国内外知名半导体企业得到了认可和应用，达到国际同类产品的先进水平，不仅实现了进口替代，还是国内仅有少数将半导体集成电路制造装备出口应用于美、日、欧跨国半导体企业的南海品牌企业。“联芯聚力，动测未来”，联动科技将努力践行“以客户为中心以人为本高效协同开放进取”的核心价值观，为成为国际一流、值得信赖、技术领先的半导体封测设备制造商而不断勇往前行，回馈股东、回馈客户，回馈社会，实现跨越式发展！",
+              "profileSummary": "主要产品为半导体自动化测试系统、激光打标设备及其他机电一体化设备，产品主要应用于电动汽车、光伏、风电、储能新能源及数据中心电源管理芯片和模块的功能和性能测试。是国家高新技术企业，广东省战略性新兴产业培育企业、国家级“专精特新”小巨人企业，拥有广东省半导体集成电路封装测试设备工程技术研究开发中心，目前拥有授权专利144项，软件著作权102项，是国内领先的功率器件测试系统供应商。",
+              "majorProducts": "功率半导体测试系统、激光打标机、模拟及数模混合集成电路测试系统、配件、其他机电一体化设备、全自动激光打标设备、小信号分立器件高速测试系统",
+              "revenueComposition": "半导体自动化测试系统:84.77%;半导体激光打标设备及其他机电一体化设备:11.46%;配件、维修及其他技术服务:3.77%",
+              "revenueSegments": [
+                {
+                  "name": "半导体自动化测试系统",
+                  "sharePct": 84.77,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "半导体激光打标设备及其他机电一体化设备",
+                  "sharePct": 11.46,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "配件、维修及其他技术服务",
+                  "sharePct": 3.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "模拟测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "半导体封测激光打标机",
+                    "category": "半导体封装设备"
+                  },
+                  {
+                    "name": "芯片分选机视像检测系统",
+                    "category": "半导体设备部件"
+                  },
+                  {
+                    "name": "裸晶器件六面检测机",
+                    "category": "半导体封装设备"
+                  },
+                  {
+                    "name": "半导体激光器",
+                    "category": "激光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "半导体激光器",
+                  "半导体封测激光打标机",
+                  "裸晶器件六面检测机",
+                  "模拟测试机",
+                  "芯片分选机视像检测系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "联动科技的半导体自动化测试系统（84.77%）、半导体激光打标设备及其他机电一体化设备（11.46%）覆盖范围较宽，其中能够承载模拟测试机、半导体封测激光打标机、芯片分选机视像检测系统，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：功率半导体测试机龙头，新推出的SoC测试机已与国产GPU厂商天数智芯达成战略合作，切入AI算力芯片测试赛道。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 12668,
+            "stockCode": "688261.SH",
+            "stockName": "东微半导",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内高端测试仪器龙头，在光模块测试和存储测试两大高景气赛道均实现关键产品突破。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688261.SH",
+              "companyName": "东微半导",
+              "companyProfile": "公司成立于2008年，2022年2月10日于上海证券交易所登录科创板上市。公司是一家以高性能功率器件研发与销售为主的技术驱动型半导体企业，产品专注于工业及汽车相关等中大功率应用领域。公司的主要产品包括GreenMOS系列超级结MOSFET、SFGMOS系列及FSMOS系列屏蔽栅MOSFET、TGBT、SuperSi²C MOSSFET、SuperSi MOSFET、SiC MOSFET,产品可广泛应用于应用于以新能源汽车直流充电桩、车载充电机、光伏逆变器、储能、5G基站电源、通信电源、数据中心服务器电源、工业照明电源、电动工具、智能机器人、无人机、UPS电源为代表的工业级及汽车级应用领域，以及以PC电源、适配器、TV电源板、手机快速充电器、电磁加热为代表的消费电子应用领域。",
+              "profileSummary": "公司是一家以高性能功率器件研发与销售为主的技术驱动型半导体企业，产品专注于工业及汽车相关等中大功率应用领域。公司的主要产品包括GreenMOS系列超级结MOSFET、SFGMOS系列及FSMOS系列屏蔽栅MOSFET、TGBT、SuperSi²C MOSSFET、SuperSi MOSFET、SiC MOSFET,产品可广泛应用于应用于以新能源汽车直流充电桩、车载充电机、光伏逆变器、储能、5G基站电源、通信电源、数据中心服务器电源、工…",
+              "majorProducts": "Si2C MOSFET、SiC MOSFET/SBD、Tri-gate IGBT、超级硅MOSFET、高压超级结MOSFET、中低压屏蔽栅MOSFET",
+              "revenueComposition": "功率半导体产品:95.26%;晶圆:4.72%;其他业务:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "功率半导体产品",
+                  "sharePct": 95.26,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "晶圆",
+                  "sharePct": 4.72,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "Tri-gate IGBT (TGBT)",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "中低压屏蔽栅MOSFET",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "低压屏蔽栅MOSFET晶圆",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "高压超级结MOSFET",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "高压超级结MOSFET晶圆",
+                    "category": "MOSFET"
+                  }
+                ],
+                "knownProducts": [
+                  "Tri-gate IGBT (TGBT)",
+                  "中低压屏蔽栅MOSFET",
+                  "低压屏蔽栅MOSFET晶圆",
+                  "高压超级结MOSFET",
+                  "高压超级结MOSFET晶圆"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "东微半导已经参与事件相关业务，但收入基数仍小：晶圆占收入的4.72%，说明公司已有业务抓手，但“国内高端测试仪器龙头，在光模块测试和存储测试两大高景气赛道均实现关键产品突破”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于终端需求与渗透率变化能否驱动“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，从而推动业务跨过小规模阶段。在此之前，终端销量、客户采购量、公司出货和相关产品收入增速比总收入增速更值得跟踪；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 12669,
+            "stockCode": "301095.SZ",
+            "stockName": "广立微",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内晶圆级电性测试（WAT）设备龙头，深度绑定国内头部晶圆厂，受益于国产存储扩产和先进制程升级。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301095.SZ",
+              "companyName": "广立微",
+              "companyProfile": "公司作为领先的集成电路EDA软件与晶圆级电性测试设备供应商，专注于芯片成品率提升和电性测试快速监控技术，是国内外多家大型集成电路制造与设计企业的重要合作伙伴。公司提供EDA软件、PDA软件、大数据分析软件、电路IP、WAT电性测试设备以及与芯片成品率提升技术相结合的整套解决方案。这些服务覆盖从集成电路设计到量产的整个产品周期，旨在实现芯片性能、成品率及稳定性的全面提升。凭借成熟的技术体系，公司的成功案例已覆盖多个集成电路工艺节点，充分验证了其在行业内的技术实力与应用价值。",
+              "profileSummary": "公司提供EDA软件、PDA软件、大数据分析软件、电路IP、WAT电性测试设备以及与芯片成品率提升技术相结合的整套解决方案。这些服务覆盖从集成电路设计到量产的整个产品周期，旨在实现芯片性能、成品率及稳定性的全面提升。",
+              "majorProducts": "半导体大数据分析与管理系统、集成电路良率提升相关设计软件、晶圆级电性测试设备、可测试性（DFT）EDA软件、可制造性设计（DFM）EDA软件、软件开发技术服务",
+              "revenueComposition": "测试机及配件:61.68%;软件开发及授权:37.84%;测试服务及其他:0.48%",
+              "revenueSegments": [
+                {
+                  "name": "测试机及配件",
+                  "sharePct": 61.68,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "软件开发及授权",
+                  "sharePct": 37.84,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "测试服务及其他",
+                  "sharePct": 0.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "晶圆允收测试机(WAT)",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "测试芯片设计软件",
+                    "category": "集成电路软件开发"
+                  },
+                  {
+                    "name": "芯片测试数据分析软件",
+                    "category": "集成电路软件开发"
+                  }
+                ],
+                "knownProducts": [
+                  "晶圆允收测试机(WAT)",
+                  "测试芯片设计软件",
+                  "芯片测试数据分析软件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "广立微已经具备晶圆允收测试机(WAT)、测试芯片设计软件、芯片测试数据分析软件等业务能力，国内晶圆级电性测试（WAT）设备龙头，深度绑定国内头部晶圆厂，受益于国产存储扩产和先进制程升级并非单纯概念映射。当前对应的收入被归入测试机及配件（61.68%）、软件开发及授权（37.84%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于产能释放与行业供给变化是否通过“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”放大，并最终反映在在建工程转固、产能利用率、产销率、库存和产品价格上；需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 12657,
+            "stockCode": "002027.SZ",
+            "stockName": "分众传媒",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为半导体测试机（ATE）探针台提供高密度电源连接器及线缆组件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002027.SZ",
+              "companyName": "分众传媒",
+              "companyProfile": "公司诞生于2003年，构建了国内最大的城市生活圈媒体网络。公司当前的主营业务为生活圈媒体的开发和运营，主要产品为楼宇媒体(主要包括电梯电视媒体和电梯海报媒体等)和影院银幕广告媒体等，覆盖城市主流消费人群的工作场景、生活场景、娱乐场景和消费场景，并相互整合成为生活圈媒体网络。2005年，公司成为首家在美国纳斯达克上市的中国广告传媒股，并于2007年入选纳斯达克100指数。2015年，分众传媒回归A股，市值破千亿。电梯是城市的基础设施，电梯这个日常的生活场景代表着四个词：主流人群、必经、高频、低干扰，而这些正是当前引爆品牌的核心资源。公司目前已覆盖超过4亿中国城市主流人群，逐渐发展为贴近消费者生活的核心媒体平台，成为消费者生活的重要组成部分。",
+              "profileSummary": "公司当前的主营业务为生活圈媒体的开发和运营，主要产品为楼宇媒体(主要包括电梯电视媒体和电梯海报媒体等)和影院银幕广告媒体等，覆盖城市主流消费人群的工作场景、生活场景、娱乐场景和消费场景，并相互整合成为生活圈媒体网络。2005年，公司成为首家在美国纳斯达克上市的中国广告传媒股，并于2007年入选纳斯达克100指数。",
+              "majorProducts": "电梯电视媒体、电梯海报媒体、框架平面媒体、楼宇屏幕媒体、卖场终端视频媒体、影院银幕广告媒体",
+              "revenueComposition": "楼宇媒体:94.32%;影院媒体:5.01%;其他媒体:0.67%",
+              "revenueSegments": [
+                {
+                  "name": "楼宇媒体",
+                  "sharePct": 94.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "影院媒体",
+                  "sharePct": 5.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他媒体",
+                  "sharePct": 0.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "电影映前广告",
+                  "楼宇电梯广告"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "分众传媒当前收入集中在楼宇媒体（94.32%）、影院媒体（5.01%），现有产品以电影映前广告、楼宇电梯广告为主，与新闻所指的“为半导体测试机（ATE）探针台提供高密度电源连接器及线缆组件”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，技术商业化与产品迭代速度才可能沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。在此之前，客户认证、量产良率、订单规模、产品收入占比和毛利率若没有出现，事件对公司基本面的影响应按较弱处理；技术路线变化、良率爬坡缓慢或竞争方案更快成熟会进一步压低相关性。"
+          },
+          {
+            "sourceRowNumber": 12658,
+            "stockCode": "688661.SH",
+            "stockName": "和林微纳",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司主营业务为MEMS微机电系统测试探针，用于半导体芯片测试环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688661.SH",
+              "companyName": "和林微纳",
+              "companyProfile": "公司成立于2012年6月，是一家专注于微型精密制造的国家高新技术企业。产品广泛应用于MEMS精微制造、半导体芯片测试、新能源汽车、医疗器械等多个高端制造领域。通过在精微制造技术领域的不断投入与探索，公司已积累多项核心技术及产品专利，并通过IATF16949、ISO13485、ISO9001、ISO14001、ISO45001、ISO27001、QC080000等质量体系认证。长期以来，公司保持对精微技术的持续创新和卓越追求，秉持“技术为驱动，客户为导向”的经营理念，通过一站式精微制造解决方案服务全球一流品牌客户，引领精微制造技术的发展。公司采用全球化经营策略，积极布局全球业务，目前已设立美国、日本、新加坡、东南亚市场团队，服务全球16个国家和地区的客户。我们从未止步于此，以成为世界级精微制造企业为愿景，放眼更多先进智造领域，通过专业实现客户想象，通过创新超越客户想象。在追求卓越业绩的同时，和林人始终奉行成长·利他·感恩·信任·创造社会价值的核心价值观。公司致力于积极承担企业社会责任，打造志愿者活动平台，通过企业公益贡献社会。",
+              "profileSummary": "产品广泛应用于MEMS精微制造、半导体芯片测试、新能源汽车、医疗器械等多个高端制造领域。公司采用全球化经营策略，积极布局全球业务，目前已设立美国、日本、新加坡、东南亚市场团队，服务全球16个国家和地区的客户。",
+              "majorProducts": "半导体芯片测试探针系列产品、精密结构件、精微连接器及零部件、精微屏蔽罩系列产品",
+              "revenueComposition": "精密结构件:42.36%;半导体芯片测试探针:29.83%;精微屏蔽罩:18.56%;其它:8.06%;精微连接器及零部件:1.19%",
+              "revenueSegments": [
+                {
+                  "name": "精密结构件",
+                  "sharePct": 42.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半导体芯片测试探针",
+                  "sharePct": 29.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "精微屏蔽罩",
+                  "sharePct": 18.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其它",
+                  "sharePct": 8.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精微连接器及零部件",
+                  "sharePct": 1.19,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "半导体芯片测试探针",
+                    "category": "半导体设备部件"
+                  },
+                  {
+                    "name": "板对板连接器(BTB连接器)",
+                    "category": "印制电路板(PCB)连接器"
+                  },
+                  {
+                    "name": "线对板连接器(WTB连接器)",
+                    "category": "印制电路板(PCB)连接器"
+                  },
+                  {
+                    "name": "线对线连接器(WTW连接器)",
+                    "category": "印制电路板(PCB)连接器"
+                  }
+                ],
+                "knownProducts": [
+                  "板对板连接器(BTB连接器)",
+                  "线对板连接器(WTB连接器)",
+                  "线对线连接器(WTW连接器)",
+                  "精微屏蔽罩",
+                  "半导体芯片测试探针",
+                  "声学结构件"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "和林微纳已经参与事件相关业务，但收入基数仍小：精微连接器及零部件占收入的1.19%，说明公司已有业务抓手，但“公司主营业务为MEMS微机电系统测试探针，用于半导体芯片测试环节”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于技术商业化与产品迭代速度能否驱动“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，从而推动业务跨过小规模阶段。在此之前，客户认证、量产良率、订单规模、产品收入占比和毛利率比总收入增速更值得跟踪；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 12662,
+            "stockCode": "300567.SZ",
+            "stockName": "精测电子",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "半导体检测设备布局覆盖前后道，受益于半导体国产化替代进程。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300567.SZ",
+              "companyName": "精测电子",
+              "companyProfile": "公司以测试设备为核心，致力于成为半导体、显示、新能源行业中客户首选的综合服务提供商。公司总部位于武汉，逐步建立起包含美国、日本、韩国和中国(台湾/武汉/上海/北京)四大研发中心以及武汉、苏州、上海、常州、深圳、北京、江门七大智造基地，拥有全球化的技术研发、客户响应与服务覆盖能力。公司坚持以自主创新为核心、以产学研合作为两翼，持续加大战略研发投入，不断强化产品技术创新，现已形成较为完善的研发创新体系和牢固的知识产权保护体系。公司与华中科技大学、复旦大学等高校成立校企联合实验室，并依托国家级企业技术中心和博士后科研工作站积极承担国家部委相关技术产业攻坚项目，先后牵头发布多项国家标准、行业标准及产业白皮书，持续引领工业智能检测行业发展。",
+              "profileSummary": "公司以测试设备为核心，致力于成为半导体、显示、新能源行业中客户首选的综合服务提供商。公司总部位于武汉，逐步建立起包含美国、日本、韩国和中国(台湾/武汉/上海/北京)四大研发中心以及武汉、苏州、上海、常州、深圳、北京、江门七大智造基地，拥有全球化的技术研发、客户响应与服务覆盖能力。",
+              "majorProducts": "AOI光学检测系统、Memory晶圆探测自动测试设备（CPATE）、Memory老化（Burn-In）测试设备、Memory最终测试自动测试设备（FTATE）、OLED调测系统、电子束缺陷检测系统、光学关键尺寸量测系统、光学缺陷检测系统、锂电池检测和生产设备、膜厚量测系统、平板显示自动化设备、切叠一体机、信号检测系统",
+              "revenueComposition": "显示:52.42%;半导体:39.36%;新能源:5.04%;其他业务:3.17%",
+              "revenueSegments": [
+                {
+                  "name": "显示",
+                  "sharePct": 52.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半导体",
+                  "sharePct": 39.36,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源",
+                  "sharePct": 5.04,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "半导体膜厚量测设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "晶圆测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "锂电池化成分容系统",
+                    "category": "锂电池电芯检测设备"
+                  }
+                ],
+                "knownProducts": [
+                  "平板显示自动化设备",
+                  "AOI光学检测仪",
+                  "OLED检测仪",
+                  "模组检测仪",
+                  "半导体膜厚量测设备",
+                  "晶圆测试机",
+                  "锂电池组BMS检测系统",
+                  "锂电池视觉检测系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "精测电子已经具备半导体膜厚量测设备、晶圆测试机、锂电池化成分容系统等业务能力，半导体检测设备布局覆盖前后道，受益于半导体国产化替代进程并非单纯概念映射。当前对应的收入被归入半导体（39.36%）、新能源（5.04%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于技术商业化与产品迭代速度是否通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”放大，并最终反映在客户认证、量产良率、订单规模、产品收入占比和毛利率上；技术路线变化、良率爬坡缓慢或竞争方案更快成熟会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 12663,
+            "stockCode": "688312.SH",
+            "stockName": "燕麦科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司布局硅光晶圆检测设备，切入新兴半导体测试赛道。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688312.SH",
+              "companyName": "燕麦科技",
+              "companyProfile": "公司成立于2012年，专注于自动化、智能化测试行业，是电子产业智能制造行业专用检测设备和全流程综合解决方案的优质提供商，荣获国家级专精特新“小巨人”、广东省制造业单项冠军企业等称号。公司在持续稳固FPC测试领域技术领导地位的前提下，利用自身深厚的智能测试技术沉淀，向相邻产业链开拓，在半导体测试、新能源车载电子测试、射频测试等领域持续布局，拓展边界，已取得可喜成果。公司将继续秉承“专注智能制造，释放时间与空间”的理念，发挥专精特新小巨人企业科研优势，专注创新，继续加大技术开发和自主创新力度，构建强大的研发中台，从技术高度和技术规范性上加强研发能力，打造基于行业需求、基于技术发展的最具竞争力的系列方案。公司拥有深圳——杭州两大研发生产基地、在东南亚成立了海外工厂，辐射全球客户，迎接全球智能制造新机遇。",
+              "profileSummary": "公司成立于2012年，专注于自动化、智能化测试行业，是电子产业智能制造行业专用检测设备和全流程综合解决方案的优质提供商，荣获国家级专精特新“小巨人”、广东省制造业单项冠军企业等称号。公司在持续稳固FPC测试领域技术领导地位的前提下，利用自身深厚的智能测试技术沉淀，向相邻产业链开拓，在半导体测试、新能源车载电子测试、射频测试等领域持续布局，拓展边界，已取得可喜成果。",
+              "majorProducts": "FPCA检测设备、FPC光板检测设备、通用功能测试治具、专项功能测试治具-触摸传感器类、专项功能测试治具-射频类、转盘测试设备-AJ插座、转盘测试设备-D-flex系列、转盘测试设备-Dock系列、转盘测试设备-Sensor系列、自动化测试系统-Camera系列、自动化测试系统-D-flex系列、自动化测试系统-Dock系列、自动化载具的测试治具",
+              "revenueComposition": "自动化测试设备:75.69%;配件及其他:12.82%;测试治具:11.28%;其他业务:0.21%",
+              "revenueSegments": [
+                {
+                  "name": "自动化测试设备",
+                  "sharePct": 75.69,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "配件及其他",
+                  "sharePct": 12.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "测试治具",
+                  "sharePct": 11.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "MEMS传感器测试设备",
+                    "category": "其他试验机"
+                  },
+                  {
+                    "name": "FPC测试设备",
+                    "category": "其他试验机"
+                  },
+                  {
+                    "name": "FPC测试设备用针模",
+                    "category": "其他试验机"
+                  }
+                ],
+                "knownProducts": [
+                  "FPC测试设备",
+                  "FPC测试设备用针模",
+                  "MEMS传感器测试设备",
+                  "测试治具"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "燕麦科技与事件存在真实业务交集：公司已有MEMS传感器测试设备、FPC测试设备、FPC测试设备用针模，与公司布局硅光晶圆检测设备，切入新兴半导体测试赛道所处的产业环节一致。自动化测试设备（75.69%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响技术商业化与产品迭代速度，只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，才会形成可确认的收入和利润增量。客户认证、量产良率、订单规模、产品收入占比和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 12670,
+            "stockCode": "688001.SH",
+            "stockName": "华兴源创",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "产品覆盖SoC、射频等测试领域，通过收购补强光电半导体测试能力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688001.SH",
+              "companyName": "华兴源创",
+              "companyProfile": "公司是行业领先的工业自动化测试设备与整线系统解决方案提供商。基于在电子、光学、声学、射频、机器视觉、机械自动化等多学科交叉融合的核心技术为客户提供芯片、SiP、模块、系统、整机各个工艺节点的自动化测试设备。公司产品主要应用于消费电子、半导体集成电路、新能源汽车电子等行业。作为一家专注于全球化专业检测领域的高科技企业，公司坚持在技术研发、产品质量、技术服务上为客户提供具有竞争力的解决方案，在各类数字、模拟、射频等高速、高频、高精度信号板卡、基于平板显示检测的机器视觉图像算法，以及配套各类高精度自动化与精密连接组件的设计制造能力等方面具备较强的竞争优势和自主创新能力。",
+              "profileSummary": "公司是行业领先的工业自动化测试设备与整线系统解决方案提供商。基于在电子、光学、声学、射频、机器视觉、机械自动化等多学科交叉融合的核心技术为客户提供芯片、SiP、模块、系统、整机各个工艺节点的自动化测试设备。",
+              "majorProducts": "Aging-90UP系列、BFGX-CHAMBER系列、BI测试机、BMS测试系统、DFU测试机、DTF X-ray Full Contact设备需求、EP-2000、EP-3000、EP-5000、ET1系列OLED显示检测设备、ET-20、ET2系列OLED显示检测设备、E系列SOC测试机、FOS检测机、Gemini—mp1000、HITS系列TSP检测设备、H系列8K/5G版信号检查机、H系列TSP检测设备、ICM-61M系列亮/色度计、InlineOQC自动化、LCD车载系列黑色斑检测设备、Micro OLED AFT/AMT设备、Micro OLED Gamma设备、MicroLed光学检测设备、OC系列GAMMA检测设备、Off-Linegamma&Demura设备、OLED色度缺陷自动化检测设备、OLED图像缺陷检测设备、OQC功能检连线新制方案、PCBA3DAOI检测设备、PXIe系列测试机、Q-Panel测试设备、SMT电路板功能检测治具、SPUC系列Demura检测设备、T60测试机、TOS+LightOn复合机、TS系列射频测试机、T系列SOC测试机、Veridian-BMS系列检测设备、Z系列平板显示检测设备、玻璃颗粒检测设备、测试机、车载导航通信芯片测试系统、触控检测设备、穿戴显示TSP系列-Tester、穿戴线GDS1&4复合检测设备、电池管理系统芯片测试机、电路检测设备、耳机硅胶套声学测试设备、飞卓自动装配流水线、分选机、高压继电器测试线体、光学检测设备、激光雷达测试系统、老化检测设备、六角度光谱仪MVAS-6、平板显示TSP系列-Tester、汽车ADAS相关FCT/EOL测试机、汽车PCMU域控制器组装测试线、汽车电子检测设备、手机电池充放电设备、双目摄像头组装测试线体、微米级裂纹检测设备、无人驾驶车载电脑测试机、无线耳机在线气密性测设备、显示检测设备、新能源汽车电控（控制器总成）产线、新能源汽车三电测试平台系统、信号检测设备、智能音箱声学测试设备、自动化检测设备",
+              "revenueComposition": "检测设备:49.35%;治具及配件:42.94%;组装设备:4.62%;其他:3%;其他业务:0.08%",
+              "revenueSegments": [
+                {
+                  "name": "检测设备",
+                  "sharePct": 49.35,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "治具及配件",
+                  "sharePct": 42.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "组装设备",
+                  "sharePct": 4.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "图像传感器测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "数字测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "模拟测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "芯片分选机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "晶圆缺陷检测设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "麦克风声压/阻抗测试机",
+                    "category": "消费电子检测设备"
+                  }
+                ],
+                "knownProducts": [
+                  "3C气密性检测设备",
+                  "消费电子产品屏幕检测设备",
+                  "麦克风声压/阻抗测试机",
+                  "检测治具",
+                  "新能源汽车电子组装测试线",
+                  "IGBT双脉冲检测设备",
+                  "汽车车身控制器检测设备(BCM)",
+                  "电池管理系统检测设备(BMS)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对华兴源创而言，产品覆盖SoC、射频等测试领域，通过收购补强光电半导体测试能力并非纯概念映射，因为检测设备占收入的49.35%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是技术商业化与产品迭代速度，传导效率取决于“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由客户认证、量产良率、订单规模、产品收入占比和毛利率来区分；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，重估逻辑会被削弱。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "2条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

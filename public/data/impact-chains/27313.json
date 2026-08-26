@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27313",
@@ -9,10 +9,10 @@
     "date": "2026-07-09"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 9,
-    "mappedStockCount": 8,
-    "unmappedStockCount": 1,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 8,
+    "mappedStockCount": 5,
+    "unmappedStockCount": 3,
     "stocks": [
       {
         "sourceRowNumber": 24799,
@@ -20,8 +20,8 @@
         "stockName": "芯碁微装",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 24800,
@@ -30,7 +30,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 5
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 24808,
@@ -39,7 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 10
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 24809,
@@ -47,8 +47,8 @@
         "stockName": "民爆光电",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 11
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 24817,
@@ -57,16 +57,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 3
-      },
-      {
-        "sourceRowNumber": 24818,
-        "stockCode": "01888.HK",
-        "stockName": "建滔积层板",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 24836,
@@ -74,8 +65,8 @@
         "stockName": "*ST新元",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 9
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 24837,
@@ -93,15 +84,33 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 7
+        "anchorProductCount": 5
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 24818,
-        "stockCode": "01888.HK",
-        "stockName": "建滔积层板",
+        "sourceRowNumber": 24799,
+        "stockCode": "688630.SH",
+        "stockName": "芯碁微装",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24809,
+        "stockCode": "301362.SZ",
+        "stockName": "民爆光电",
         "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24836,
+        "stockCode": "300472.SZ",
+        "stockName": "*ST新元",
+        "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
@@ -112,292 +121,12 @@
     "candidateCoreProductCount": 56,
     "selectedCoreProductCount": 15,
     "selectedCompanyCoreProductCount": 15,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 66,
-    "downstreamCandidateCount": 147,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 70,
+    "relatedIndustryCandidateCount": 20,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1114000087",
-        "name": "铜箔",
-        "anchorCount": 7,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1125000047",
-          "1140022867",
-          "1140023044",
-          "1140023113",
-          "1140023253",
-          "1140023254",
-          "1140098536"
-        ],
-        "linkedCoreProductNames": [
-          "PCB(印刷电路板)",
-          "PCB八层板",
-          "PCB六层板",
-          "PCB四层板",
-          "消费电子用PCB(印刷电路板)",
-          "覆铜板(CCL)",
-          "计算机用PCB(印刷电路板)"
-        ],
-        "evidence": {
-          "original": 7,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023063",
-        "name": "半固化片",
-        "anchorCount": 5,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140023044",
-          "1140023055",
-          "1140023113",
-          "1140023253",
-          "1140023254"
-        ],
-        "linkedCoreProductNames": [
-          "PCB六层板",
-          "PCB四层板",
-          "PCB多层板",
-          "消费电子用PCB(印刷电路板)",
-          "计算机用PCB(印刷电路板)"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023612",
-        "name": "铜球",
-        "anchorCount": 5,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140023044",
-          "1140023113",
-          "1140023253",
-          "1140023254",
-          "1140098536"
-        ],
-        "linkedCoreProductNames": [
-          "PCB八层板",
-          "PCB六层板",
-          "PCB四层板",
-          "消费电子用PCB(印刷电路板)",
-          "计算机用PCB(印刷电路板)"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1112000155",
-        "name": "油墨",
-        "anchorCount": 4,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140023044",
-          "1140023113",
-          "1140023253",
-          "1140023254"
-        ],
-        "linkedCoreProductNames": [
-          "PCB六层板",
-          "PCB四层板",
-          "消费电子用PCB(印刷电路板)",
-          "计算机用PCB(印刷电路板)"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023613",
-        "name": "金盐",
-        "anchorCount": 4,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140023044",
-          "1140023113",
-          "1140023253",
-          "1140023254"
-        ],
-        "linkedCoreProductNames": [
-          "PCB六层板",
-          "PCB四层板",
-          "消费电子用PCB(印刷电路板)",
-          "计算机用PCB(印刷电路板)"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140122818",
-        "name": "PCB用油墨",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140022940",
-          "1140022941"
-        ],
-        "linkedCoreProductNames": [
-          "PCB单面板",
-          "PCB双面板"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140122819",
-        "name": "PCB用蚀刻液",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140022940",
-          "1140022941"
-        ],
-        "linkedCoreProductNames": [
-          "PCB单面板",
-          "PCB双面板"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140096284",
-        "name": "干膜",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023253",
-          "1140023254"
-        ],
-        "linkedCoreProductNames": [
-          "PCB六层板",
-          "PCB四层板"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023615",
-        "name": "干膜及其他化工材料",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023044",
-          "1140023113"
-        ],
-        "linkedCoreProductNames": [
-          "消费电子用PCB(印刷电路板)",
-          "计算机用PCB(印刷电路板)"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140047052",
-        "name": "玻璃纤维",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023253",
-          "1140023254"
-        ],
-        "linkedCoreProductNames": [
-          "PCB六层板",
-          "PCB四层板"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023064",
-        "name": "电子级玻纤布",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1125000047",
-          "1140022867"
-        ],
-        "linkedCoreProductNames": [
-          "PCB(印刷电路板)",
-          "覆铜板(CCL)"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140024144",
-        "name": "刚性覆铜箔板CCL",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023055"
-        ],
-        "linkedCoreProductNames": [
-          "PCB多层板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140011872",
-        "name": "夹板",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140152335"
-        ],
-        "linkedCoreProductNames": [
-          "PCB专用水平式除胶化铜设备"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040125",
-        "name": "底座",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140152335"
-        ],
-        "linkedCoreProductNames": [
-          "PCB专用水平式除胶化铜设备"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140022867",
         "name": "覆铜板(CCL)",
@@ -423,18 +152,15 @@
           "name": "覆铜板(CCL)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600183.SH",
             "stockName": "生益科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 12,
-        "downstreamCount": 31,
         "relevanceScore": 18,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -470,18 +196,15 @@
           "name": "PCB单面板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001389.SZ",
             "stockName": "广合科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 33,
         "relevanceScore": 17,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -517,18 +240,15 @@
           "name": "PCB双面板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001389.SZ",
             "stockName": "广合科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 33,
         "relevanceScore": 17,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -564,110 +284,15 @@
           "name": "PCB(印刷电路板)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600183.SH",
             "stockName": "生益科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 31,
-        "downstreamCount": 82,
-        "relevanceScore": 14,
-        "strongRelevanceScore": 8,
-        "matchedTerms": [
-          "pcb",
-          "印制电路板",
-          "元件",
-          "电子"
-        ]
-      },
-      {
-        "code": "1140023254",
-        "name": "PCB六层板",
-        "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > PCB六层板",
-        "industryPath": [
-          "电子",
-          "元件",
-          "印制电路板",
-          "刚性电路板",
-          "刚性电路板",
-          "PCB六层板"
-        ],
-        "level5Industry": {
-          "code": "1200001362",
-          "name": "刚性电路板"
-        },
-        "level6Industry": {
-          "code": "1200005129",
-          "name": "刚性电路板"
-        },
-        "level7Product": {
-          "code": "1140023254",
-          "name": "PCB六层板"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "001389.SZ",
-            "stockName": "广合科技",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 8,
-        "downstreamCount": 6,
-        "relevanceScore": 14,
-        "strongRelevanceScore": 8,
-        "matchedTerms": [
-          "pcb",
-          "印制电路板",
-          "元件",
-          "电子"
-        ]
-      },
-      {
-        "code": "1140023253",
-        "name": "PCB四层板",
-        "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > PCB四层板",
-        "industryPath": [
-          "电子",
-          "元件",
-          "印制电路板",
-          "刚性电路板",
-          "刚性电路板",
-          "PCB四层板"
-        ],
-        "level5Industry": {
-          "code": "1200001362",
-          "name": "刚性电路板"
-        },
-        "level6Industry": {
-          "code": "1200005129",
-          "name": "刚性电路板"
-        },
-        "level7Product": {
-          "code": "1140023253",
-          "name": "PCB四层板"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "001389.SZ",
-            "stockName": "广合科技",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 8,
-        "downstreamCount": 6,
         "relevanceScore": 14,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -702,18 +327,15 @@
           "name": "PCB八层板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001389.SZ",
             "stockName": "广合科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 6,
         "relevanceScore": 14,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -724,42 +346,82 @@
         ]
       },
       {
-        "code": "1140023113",
-        "name": "计算机用PCB(印刷电路板)",
-        "hierarchyPath": "电子 > 元件 > 印制电路板 > 特种电路板 > 特种电路板 > 计算机用PCB(印刷电路板)",
+        "code": "1140023254",
+        "name": "PCB六层板",
+        "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > PCB六层板",
         "industryPath": [
           "电子",
           "元件",
           "印制电路板",
-          "特种电路板",
-          "特种电路板",
-          "计算机用PCB(印刷电路板)"
+          "刚性电路板",
+          "刚性电路板",
+          "PCB六层板"
         ],
         "level5Industry": {
-          "code": "1200001365",
-          "name": "特种电路板"
+          "code": "1200001362",
+          "name": "刚性电路板"
         },
         "level6Industry": {
-          "code": "1200005132",
-          "name": "特种电路板"
+          "code": "1200005129",
+          "name": "刚性电路板"
         },
         "level7Product": {
-          "code": "1140023113",
-          "name": "计算机用PCB(印刷电路板)"
+          "code": "1140023254",
+          "name": "PCB六层板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
-            "stockCode": "002938.SZ",
-            "stockName": "鹏鼎控股",
-            "rating": "★★★★"
+            "stockCode": "001389.SZ",
+            "stockName": "广合科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 7,
-        "downstreamCount": 3,
+        "relevanceScore": 14,
+        "strongRelevanceScore": 8,
+        "matchedTerms": [
+          "pcb",
+          "印制电路板",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140023253",
+        "name": "PCB四层板",
+        "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > PCB四层板",
+        "industryPath": [
+          "电子",
+          "元件",
+          "印制电路板",
+          "刚性电路板",
+          "刚性电路板",
+          "PCB四层板"
+        ],
+        "level5Industry": {
+          "code": "1200001362",
+          "name": "刚性电路板"
+        },
+        "level6Industry": {
+          "code": "1200005129",
+          "name": "刚性电路板"
+        },
+        "level7Product": {
+          "code": "1140023253",
+          "name": "PCB四层板"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "001389.SZ",
+            "stockName": "广合科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 14,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -794,18 +456,15 @@
           "name": "PCB多层板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "001389.SZ",
             "stockName": "广合科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 6,
         "relevanceScore": 14,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -840,64 +499,15 @@
           "name": "RPCB(刚性电路板)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002938.SZ",
             "stockName": "鹏鼎控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 6,
-        "relevanceScore": 14,
-        "strongRelevanceScore": 8,
-        "matchedTerms": [
-          "pcb",
-          "印制电路板",
-          "元件",
-          "电子"
-        ]
-      },
-      {
-        "code": "1140023044",
-        "name": "消费电子用PCB(印刷电路板)",
-        "hierarchyPath": "电子 > 元件 > 印制电路板 > 特种电路板 > 特种电路板 > 消费电子用PCB(印刷电路板)",
-        "industryPath": [
-          "电子",
-          "元件",
-          "印制电路板",
-          "特种电路板",
-          "特种电路板",
-          "消费电子用PCB(印刷电路板)"
-        ],
-        "level5Industry": {
-          "code": "1200001365",
-          "name": "特种电路板"
-        },
-        "level6Industry": {
-          "code": "1200005132",
-          "name": "特种电路板"
-        },
-        "level7Product": {
-          "code": "1140023044",
-          "name": "消费电子用PCB(印刷电路板)"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "002938.SZ",
-            "stockName": "鹏鼎控股",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 7,
-        "downstreamCount": 1,
         "relevanceScore": 14,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -932,18 +542,15 @@
           "name": "服务器用PCB(印刷电路板)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002938.SZ",
             "stockName": "鹏鼎控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 14,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -978,18 +585,101 @@
           "name": "汽车用PCB(印刷电路板)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002938.SZ",
             "stockName": "鹏鼎控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 14,
+        "strongRelevanceScore": 8,
+        "matchedTerms": [
+          "pcb",
+          "印制电路板",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140023044",
+        "name": "消费电子用PCB(印刷电路板)",
+        "hierarchyPath": "电子 > 元件 > 印制电路板 > 特种电路板 > 特种电路板 > 消费电子用PCB(印刷电路板)",
+        "industryPath": [
+          "电子",
+          "元件",
+          "印制电路板",
+          "特种电路板",
+          "特种电路板",
+          "消费电子用PCB(印刷电路板)"
+        ],
+        "level5Industry": {
+          "code": "1200001365",
+          "name": "特种电路板"
+        },
+        "level6Industry": {
+          "code": "1200005132",
+          "name": "特种电路板"
+        },
+        "level7Product": {
+          "code": "1140023044",
+          "name": "消费电子用PCB(印刷电路板)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002938.SZ",
+            "stockName": "鹏鼎控股",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 14,
+        "strongRelevanceScore": 8,
+        "matchedTerms": [
+          "pcb",
+          "印制电路板",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140023113",
+        "name": "计算机用PCB(印刷电路板)",
+        "hierarchyPath": "电子 > 元件 > 印制电路板 > 特种电路板 > 特种电路板 > 计算机用PCB(印刷电路板)",
+        "industryPath": [
+          "电子",
+          "元件",
+          "印制电路板",
+          "特种电路板",
+          "特种电路板",
+          "计算机用PCB(印刷电路板)"
+        ],
+        "level5Industry": {
+          "code": "1200001365",
+          "name": "特种电路板"
+        },
+        "level6Industry": {
+          "code": "1200005132",
+          "name": "特种电路板"
+        },
+        "level7Product": {
+          "code": "1140023113",
+          "name": "计算机用PCB(印刷电路板)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002938.SZ",
+            "stockName": "鹏鼎控股",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 14,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -1024,18 +714,15 @@
           "name": "PCB专用水平式除胶化铜设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688700.SH",
             "stockName": "东威科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 8,
-        "downstreamCount": 1,
         "relevanceScore": 12,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -1070,18 +757,15 @@
           "name": "PCB板用微型刀具"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000657.SZ",
             "stockName": "中钨高新",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 1,
         "relevanceScore": 9,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -1090,290 +774,838 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1130000189",
-        "name": "汽车电子",
-        "anchorCount": 6,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1125000047",
-          "1140023055",
-          "1140023108",
-          "1140023253",
-          "1140023254",
-          "1140098536"
+        "code": "1200001366",
+        "name": "电路板材料",
+        "description": "电路板材料是电子产品的核心基材。因AI算力、5G及新能源汽车驱动高端需求爆发，叠加国产替代加速，该行业具备高成长性与技术壁垒，成为A股聚焦半导体上游的关键赛道，备受资金关注。",
+        "stockCount": 5,
+        "starWeight": 16,
+        "level7ProductCount": 7,
+        "relevanceScore": 332,
+        "stocks": [
+          {
+            "stockCode": "600183.SH",
+            "stockName": "生益科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "603186.SH",
+            "stockName": "华正新材",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688519.SH",
+            "stockName": "南亚新材",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603228.SH",
+            "stockName": "景旺电子",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002636.SZ",
+            "stockName": "金安国纪",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "PCB(印刷电路板)",
-          "PCB八层板",
-          "PCB六层板",
-          "PCB四层板",
-          "PCB多层板",
-          "RPCB(刚性电路板)"
+        "products": [
+          {
+            "code": "1140022867",
+            "name": "覆铜板(CCL)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 电路板材料 > 电路板材料 > 覆铜板(CCL)",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600183.SH",
+                "stockName": "生益科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "603186.SH",
+                "stockName": "华正新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688519.SH",
+                "stockName": "南亚新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002636.SZ",
+                "stockName": "金安国纪",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 50,
+            "matchedTerms": [
+              "ccl",
+              "覆铜板ccl"
+            ]
+          },
+          {
+            "code": "1140023062",
+            "name": "铝基覆铜板(CCL)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 电路板材料 > 电路板材料 > 铝基覆铜板(CCL)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002636.SZ",
+                "stockName": "金安国纪",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "ccl",
+              "覆铜板ccl"
+            ]
+          },
+          {
+            "code": "1140023262",
+            "name": "金属基电路板(MCPCB)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 电路板材料 > 电路板材料 > 金属基电路板(MCPCB)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603228.SH",
+                "stockName": "景旺电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140130023",
+            "name": "高频覆铜板",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 电路板材料 > 电路板材料 > 高频覆铜板",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603186.SH",
+                "stockName": "华正新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 6,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140045848",
-        "name": "计算机",
-        "anchorCount": 6,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1125000047",
-          "1140023055",
-          "1140023108",
-          "1140023253",
-          "1140023254",
-          "1140098536"
+        "code": "1200000556",
+        "name": "激光专用设备",
+        "description": "激光专用设备指利用激光进行切割、焊接等加工的设备。因契合制造业升级与国产替代趋势，兼具高精度、高效率优势，且下游覆盖新能源、半导体等高景气领域，业绩增长潜力大，故备受A股市场关注。",
+        "stockCount": 4,
+        "starWeight": 19,
+        "level7ProductCount": 5,
+        "relevanceScore": 92,
+        "stocks": [
+          {
+            "stockCode": "301200.SZ",
+            "stockName": "大族数控",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002008.SZ",
+            "stockName": "大族激光",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "301377.SZ",
+            "stockName": "鼎泰高科",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688630.SH",
+            "stockName": "芯碁微装",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "PCB(印刷电路板)",
-          "PCB八层板",
-          "PCB六层板",
-          "PCB四层板",
-          "PCB多层板",
-          "RPCB(刚性电路板)"
+        "products": [
+          {
+            "code": "1140163249",
+            "name": "PCB板用图形激光直接成像设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > PCB板用图形激光直接成像设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301200.SZ",
+                "stockName": "大族数控",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140135494",
+            "name": "PCB激光机械钻孔机",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > PCB激光机械钻孔机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002008.SZ",
+                "stockName": "大族激光",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140120362",
+            "name": "PCB激光打标机",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > PCB激光打标机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301377.SZ",
+                "stockName": "鼎泰高科",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140147674",
+            "name": "激光直接成像设备(LDI)",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > 激光直接成像设备(LDI)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688630.SH",
+                "stockName": "芯碁微装",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "ldi"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 6,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 35,
+    "mappedStockCount": 23,
+    "unmappedStockCount": 12,
+    "level7ProductCount": 70,
+    "candidateIndustryCount": 20,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 24797,
+        "stockCode": "002008.SZ",
+        "stockName": "大族激光",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140031433",
-        "name": "航天航空",
-        "anchorCount": 5,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1125000047",
-          "1140023055",
-          "1140023108",
-          "1140023253",
-          "1140023254"
-        ],
-        "linkedCoreProductNames": [
-          "PCB(印刷电路板)",
-          "PCB六层板",
-          "PCB四层板",
-          "PCB多层板",
-          "RPCB(刚性电路板)"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24798,
+        "stockCode": "301200.SZ",
+        "stockName": "大族数控",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140007704",
-        "name": "消费电子产品",
-        "anchorCount": 4,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140023055",
-          "1140023108",
-          "1140023253",
-          "1140023254"
-        ],
-        "linkedCoreProductNames": [
-          "PCB六层板",
-          "PCB四层板",
-          "PCB多层板",
-          "RPCB(刚性电路板)"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24799,
+        "stockCode": "688630.SH",
+        "stockName": "芯碁微装",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140021148",
-        "name": "通信产品",
-        "anchorCount": 4,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023055",
-          "1140023253",
-          "1140023254",
-          "1140098536"
-        ],
-        "linkedCoreProductNames": [
-          "PCB八层板",
-          "PCB六层板",
-          "PCB四层板",
-          "PCB多层板"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24800,
+        "stockCode": "688700.SH",
+        "stockName": "东威科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140025418",
-        "name": "工控医疗",
-        "anchorCount": 3,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023055",
-          "1140023253",
-          "1140023254"
-        ],
-        "linkedCoreProductNames": [
-          "PCB六层板",
-          "PCB四层板",
-          "PCB多层板"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24801,
+        "stockCode": "301338.SZ",
+        "stockName": "凯格精机",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140078682",
-        "name": "消费电子",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1125000047",
-          "1140023044"
-        ],
-        "linkedCoreProductNames": [
-          "PCB(印刷电路板)",
-          "消费电子用PCB(印刷电路板)"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24802,
+        "stockCode": "688531.SH",
+        "stockName": "日联科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140081030",
-        "name": "PCB",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140022867",
-          "1140152335"
-        ],
-        "linkedCoreProductNames": [
-          "PCB专用水平式除胶化铜设备",
-          "覆铜板(CCL)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 24803,
+        "stockCode": "000983.SZ",
+        "stockName": "山西焦煤",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140123174",
-        "name": "ADAS",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140022940",
-          "1140022941"
-        ],
-        "linkedCoreProductNames": [
-          "PCB单面板",
-          "PCB双面板"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24804,
+        "stockCode": "301021.SZ",
+        "stockName": "英诺激光",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140017101",
-        "name": "GPS",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140022940",
-          "1140022941"
-        ],
-        "linkedCoreProductNames": [
-          "PCB单面板",
-          "PCB双面板"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24807,
+        "stockCode": "301377.SZ",
+        "stockName": "鼎泰高科",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140003159",
-        "name": "MRI",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140022940",
-          "1140022941"
-        ],
-        "linkedCoreProductNames": [
-          "PCB单面板",
-          "PCB双面板"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24808,
+        "stockCode": "000657.SZ",
+        "stockName": "中钨高新",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140096811",
-        "name": "UPS电源",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140022940",
-          "1140022941"
-        ],
-        "linkedCoreProductNames": [
-          "PCB单面板",
-          "PCB双面板"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24809,
+        "stockCode": "301362.SZ",
+        "stockName": "民爆光电",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140123164",
-        "name": "交流稳压电源",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140022940",
-          "1140022941"
-        ],
-        "linkedCoreProductNames": [
-          "PCB单面板",
-          "PCB双面板"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 24810,
+        "stockCode": "688028.SH",
+        "stockName": "沃尔德",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1130000053",
-        "name": "传感器",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140022940",
-          "1140022941"
+        "sourceRowNumber": 24812,
+        "stockCode": "688308.SH",
+        "stockName": "欧科亿",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24813,
+        "stockCode": "688257.SH",
+        "stockName": "新锐股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24814,
+        "stockCode": "300179.SZ",
+        "stockName": "四方达",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24817,
+        "stockCode": "600183.SH",
+        "stockName": "生益科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 24819,
+        "stockCode": "688519.SH",
+        "stockName": "南亚新材",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 24820,
+        "stockCode": "603186.SH",
+        "stockName": "华正新材",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 24821,
+        "stockCode": "002636.SZ",
+        "stockName": "金安国纪",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 24822,
+        "stockCode": "600176.SH",
+        "stockName": "中国巨石",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24823,
+        "stockCode": "002080.SZ",
+        "stockName": "中材科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24824,
+        "stockCode": "603256.SH",
+        "stockName": "宏和科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 24825,
+        "stockCode": "301526.SZ",
+        "stockName": "国际复材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 24826,
+        "stockCode": "301511.SZ",
+        "stockName": "德福科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 24827,
+        "stockCode": "301217.SZ",
+        "stockName": "铜冠铜箔",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 24829,
+        "stockCode": "605589.SH",
+        "stockName": "圣泉集团",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
+      },
+      {
+        "sourceRowNumber": 24830,
+        "stockCode": "601208.SH",
+        "stockName": "东材科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 24834,
+        "stockCode": "002463.SZ",
+        "stockName": "沪电股份",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 24835,
+        "stockCode": "002436.SZ",
+        "stockName": "兴森科技",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 24836,
+        "stockCode": "300472.SZ",
+        "stockName": "*ST新元",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 24837,
+        "stockCode": "001389.SZ",
+        "stockName": "广合科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 24838,
+        "stockCode": "002938.SZ",
+        "stockName": "鹏鼎控股",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 24839,
+        "stockCode": "603228.SH",
+        "stockName": "景旺电子",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 24840,
+        "stockCode": "688183.SH",
+        "stockName": "生益电子",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 24841,
+        "stockCode": "300964.SZ",
+        "stockName": "本川智能",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001366",
+        "name": "电路板材料",
+        "description": "电路板材料是电子产品的核心基材。因AI算力、5G及新能源汽车驱动高端需求爆发，叠加国产替代加速，该行业具备高成长性与技术壁垒，成为A股聚焦半导体上游的关键赛道，备受资金关注。",
+        "stockCount": 5,
+        "starWeight": 16,
+        "level7ProductCount": 7,
+        "relevanceScore": 332,
+        "stocks": [
+          {
+            "stockCode": "600183.SH",
+            "stockName": "生益科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "603186.SH",
+            "stockName": "华正新材",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688519.SH",
+            "stockName": "南亚新材",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603228.SH",
+            "stockName": "景旺电子",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002636.SZ",
+            "stockName": "金安国纪",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "PCB单面板",
-          "PCB双面板"
+        "products": [
+          {
+            "code": "1140022867",
+            "name": "覆铜板(CCL)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 电路板材料 > 电路板材料 > 覆铜板(CCL)",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600183.SH",
+                "stockName": "生益科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "603186.SH",
+                "stockName": "华正新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688519.SH",
+                "stockName": "南亚新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002636.SZ",
+                "stockName": "金安国纪",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 50,
+            "matchedTerms": [
+              "ccl",
+              "覆铜板ccl"
+            ]
+          },
+          {
+            "code": "1140023062",
+            "name": "铝基覆铜板(CCL)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 电路板材料 > 电路板材料 > 铝基覆铜板(CCL)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002636.SZ",
+                "stockName": "金安国纪",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "ccl",
+              "覆铜板ccl"
+            ]
+          },
+          {
+            "code": "1140023262",
+            "name": "金属基电路板(MCPCB)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 电路板材料 > 电路板材料 > 金属基电路板(MCPCB)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603228.SH",
+                "stockName": "景旺电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140130023",
+            "name": "高频覆铜板",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 电路板材料 > 电路板材料 > 高频覆铜板",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603186.SH",
+                "stockName": "华正新材",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000556",
+        "name": "激光专用设备",
+        "description": "激光专用设备指利用激光进行切割、焊接等加工的设备。因契合制造业升级与国产替代趋势，兼具高精度、高效率优势，且下游覆盖新能源、半导体等高景气领域，业绩增长潜力大，故备受A股市场关注。",
+        "stockCount": 4,
+        "starWeight": 19,
+        "level7ProductCount": 5,
+        "relevanceScore": 92,
+        "stocks": [
+          {
+            "stockCode": "301200.SZ",
+            "stockName": "大族数控",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002008.SZ",
+            "stockName": "大族激光",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "301377.SZ",
+            "stockName": "鼎泰高科",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688630.SH",
+            "stockName": "芯碁微装",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140163249",
+            "name": "PCB板用图形激光直接成像设备",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > PCB板用图形激光直接成像设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301200.SZ",
+                "stockName": "大族数控",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140135494",
+            "name": "PCB激光机械钻孔机",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > PCB激光机械钻孔机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002008.SZ",
+                "stockName": "大族激光",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140120362",
+            "name": "PCB激光打标机",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > PCB激光打标机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301377.SZ",
+                "stockName": "鼎泰高科",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140147674",
+            "name": "激光直接成像设备(LDI)",
+            "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 激光专用设备 > 激光加工设备 > 激光直接成像设备(LDI)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688630.SH",
+                "stockName": "芯碁微装",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "ldi"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -1388,10 +1620,2656 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 48,
+    "eligibleSourceRowCount": 35,
+    "totalStockCount": 35,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 11,
+    "excludedNonAShareCount": 2,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 35,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 24797,
+            "stockCode": "002008.SZ",
+            "stockName": "大族激光",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球PCB专用设备龙头，其PCB业务是核心增长引擎，上半年收入同比增长超100%。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002008.SZ",
+              "companyName": "大族激光",
+              "companyProfile": "公司于1996年在中国深圳创立，2004年在深圳证券交易所上市。公司专注于智能制造装备及其关键器件的研发、生产和销售，具备从基础器件、整机设备到工艺解决方案的垂直一体化能力，是全球领先的智能制造装备整体解决方案服务商。公司是国家重点高新技术企业、国家级创新型试点企业、国家科技成果推广示范基地重点推广示范企业、广东省装备制造业重点企业、深圳自主创新领军企业，主要科研项目被认定为国家级火炬计划项目。作为中国工业激光设备制造的开拓者，经过二十多年的成长，公司现已全面服务于世界500强企业和中国行业标杆工业企业，销量领先，领跑全球。",
+              "profileSummary": "公司专注于智能制造装备及其关键器件的研发、生产和销售，具备从基础器件、整机设备到工艺解决方案的垂直一体化能力，是全球领先的智能制造装备整体解决方案服务商。作为中国工业激光设备制造的开拓者，经过二十多年的成长，公司现已全面服务于世界500强企业和中国行业标杆工业企业，销量领先，领跑全球。",
+              "majorProducts": "CNC 数控机床、PCB 设备、半导体设备、大族激光打标机、大族激光雕刻机、大族激光焊接机、大族激光激光制版及印刷设备、大族激光切割机、大族激光钻孔机、大族油墨喷码机、防水气密性检测设备、高功率光纤激光器、光伏设备、极限制造产品、锂电设备、脉冲光纤激光器、通用运动控制系统、行业专机产品、振镜、伺服电机、中低功率 CO2 激光器、紫外及超快激光器",
+              "revenueComposition": "其他智能制造装备:69.23%;PCB及自动化配套设备:30.77%",
+              "revenueSegments": [
+                {
+                  "name": "其他智能制造装备",
+                  "sharePct": 69.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "PCB及自动化配套设备",
+                  "sharePct": 30.77,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PCB激光机械钻孔机",
+                    "category": "激光加工设备"
+                  }
+                ],
+                "knownProducts": [
+                  "激光切割机",
+                  "PCB激光机械钻孔机",
+                  "激光直接成像设备(LDI)",
+                  "玻璃热弯机",
+                  "等离子清洗机",
+                  "激光打标机",
+                  "焊接机器人",
+                  "激光焊接机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "大族激光已经具备PCB激光机械钻孔机等业务能力，全球PCB专用设备龙头，其PCB业务是核心增长引擎，上半年收入同比增长超100%并非单纯概念映射。当前对应的收入被归入PCB及自动化配套设备（30.77%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 24798,
+            "stockCode": "301200.SZ",
+            "stockName": "大族数控",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "大族激光控股子公司，全球PCB专用设备龙头，钻孔设备市占率领先，深度受益于AIPCB扩产周期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301200.SZ",
+              "companyName": "大族数控",
+              "companyProfile": "公司主营业务为PCB专用设备的研发、生产和销售，报告期内产品主要覆盖钻孔、曝光、成型、检测等PCB关键工序，是全球PCB专用设备企业中产品线最广泛的企业之一。公司连续十一年位列CPCA发布的中国电子电路行业百强排行榜(专用仪器和设备类)第一名，子公司麦逊电子连续六年位列第四名，主要产品销量在行业内保持领先地位。公司凭借近二十年在高速高精运动控制、精密机械、电气工程、软件算法、先进光学系统、激光技术、图像处理、电子测试等方面的技术沉淀，为PCB行业打造了具备竞争优势的工序解决方案，如多类型机械钻孔设备、多光源激光钻孔设备，针对不同感光材料的激光直接成像设备，机械及激光成型设备，通用、专用及专用高精架构的多规格测试设备等，主要产品在性能、可靠性上已达到了行业先进水平，满足国内外龙头客户的技术要求，不断加速对进口设备的国产替代。",
+              "profileSummary": "公司主营业务为PCB专用设备的研发、生产和销售，报告期内产品主要覆盖钻孔、曝光、成型、检测等PCB关键工序，是全球PCB专用设备企业中产品线最广泛的企业之一。公司凭借近二十年在高速高精运动控制、精密机械、电气工程、软件算法、先进光学系统、激光技术、图像处理、电子测试等方面的技术沉淀，为PCB行业打造了具备竞争优势的工序解决方案，如多类型机械钻孔设备、多光源激光钻孔设备，针对不同感光材料的激光直接成像设备，机械及激光成型设备，通用、专用…",
+              "majorProducts": "成型工序解决方案、检测工序解决方案、曝光工序解决方案、压合工序解决方案、钻孔工序解决方案",
+              "revenueComposition": "钻孔类设备:72.19%;检测类设备:9.24%;其他业务:5.94%;曝光类设备:5.58%;成型类设备:4.68%;贴附类设备:2.05%;压合类设备:0.32%",
+              "revenueSegments": [
+                {
+                  "name": "钻孔类设备",
+                  "sharePct": 72.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "检测类设备",
+                  "sharePct": 9.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "曝光类设备",
+                  "sharePct": 5.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "成型类设备",
+                  "sharePct": 4.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贴附类设备",
+                  "sharePct": 2.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "压合类设备",
+                  "sharePct": 0.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "FPCB贴补强机",
+                    "category": "工业电子制造装备"
+                  },
+                  {
+                    "name": "PCB板用图形激光直接成像设备",
+                    "category": "激光加工设备"
+                  },
+                  {
+                    "name": "PCB板用机械钻孔设备",
+                    "category": "工业电子制造装备"
+                  },
+                  {
+                    "name": "PCB板电性能测试设备",
+                    "category": "工业电子制造装备"
+                  },
+                  {
+                    "name": "IC封装基板用超快激光钻孔设备",
+                    "category": "激光加工设备"
+                  }
+                ],
+                "knownProducts": [
+                  "FPCB贴补强机",
+                  "PCB板用机械钻孔设备",
+                  "PCB板电性能测试设备",
+                  "刚性板用机械成型设备",
+                  "HDI板用CO2激光钻孔设备",
+                  "IC封装基板用超快激光钻孔设备",
+                  "PCB板用图形激光直接成像设备",
+                  "挠性板用激光成型设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "大族数控实际经营中已有FPCB贴补强机、PCB板用图形激光直接成像设备、PCB板用机械钻孔设备，与事件指向的大族激光控股子公司，全球PCB专用设备龙头，钻孔设备市占率领先，深度受益于AIPCB扩产周期能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在钻孔类设备（72.19%）、检测类设备（9.24%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善产能释放与行业供给变化，需要沿“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”进入经营结果。在建工程转固、产能利用率、产销率、库存和产品价格将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 24807,
+            "stockCode": "301377.SZ",
+            "stockName": "鼎泰高科",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球PCB钻针龙头，深度受益于AI服务器PCB加工带来的钻针\"量价齐升\"。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301377.SZ",
+              "companyName": "鼎泰高科",
+              "companyProfile": "公司是一家专业为PCB、数控精密机件等领域的企业提供工具、材料、装备的一体化解决方案，具有自主研发和创新能力的高新技术企业。PCB为各类电子系统提供元器件的装配支撑和电气连接的功能，享有“电子产品之母”之称，被广泛应用于电子产品制造领域，属于电子信息行业的重要组成部分。PCB产业的发展水平可在一定程度上反映一个国家或地区电子产业的整体发展速度与技术水准。随着PCB层数和密度的不断增加，PCB产品与微型芯片的结合日益紧密，PCB生产和研发甚至会影响到国家的战略信息安全。在整个电子产业链中，PCB属于上游产业，而公司主要产品钻针、铣刀则属于PCB加工制造专用的耗材。公司自成立之日起，便致力于微钻、铣刀及其他刀具等产品设计制造，积累了丰富的生产工艺和质量管理经验，具备全系列的研发设计、制造能力，为广大客户提供全方位的产品解决方案。公司目前是国内PCB刀具生产规模最大的企业之一，与健鼎科技、方正科技、华通电脑、瀚宇博德、胜宏科技、深南电路、景旺电子、崇达技术等国内外知名PCB生产厂商建立了长期稳定的合作关系。",
+              "profileSummary": "PCB为各类电子系统提供元器件的装配支撑和电气连接的功能，享有“电子产品之母”之称，被广泛应用于电子产品制造领域，属于电子信息行业的重要组成部分。在整个电子产业链中，PCB属于上游产业，而公司主要产品钻针、铣刀则属于PCB加工制造专用的耗材。",
+              "majorProducts": "刀具、功能性膜材料、研磨抛光材料、智能数控装备",
+              "revenueComposition": "精密刀具:81.17%;研磨抛光材料:8.98%;智能数控装备:3.58%;功能性膜材料:3.44%;其他业务:2.77%;其他:0.07%",
+              "revenueSegments": [
+                {
+                  "name": "精密刀具",
+                  "sharePct": 81.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "研磨抛光材料",
+                  "sharePct": 8.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能数控装备",
+                  "sharePct": 3.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "功能性膜材料",
+                  "sharePct": 3.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "PCB钻针",
+                    "category": "机床刀具"
+                  },
+                  {
+                    "name": "FPCB贴补强机",
+                    "category": "工业电子制造装备"
+                  },
+                  {
+                    "name": "PCB刷磨轮",
+                    "category": "磨砂轮"
+                  },
+                  {
+                    "name": "PCB激光打标机",
+                    "category": "激光加工设备"
+                  },
+                  {
+                    "name": "PCB铣刀",
+                    "category": "机床刀具"
+                  }
+                ],
+                "knownProducts": [
+                  "FPCB贴补强机",
+                  "PCB激光打标机",
+                  "硬质合金钻头研磨机",
+                  "PCB钻针",
+                  "PCB铣刀",
+                  "数控刀片",
+                  "PCB刷磨轮",
+                  "3C屏幕表面保护膜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "鼎泰高科实际经营中已有PCB钻针、FPCB贴补强机、PCB刷磨轮，与事件指向的全球PCB钻针龙头，深度受益于AI服务器PCB加工带来的钻针\"量价齐升\"能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在精密刀具（81.17%）、研磨抛光材料（8.98%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善供需缺口与产品价格，需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。产品报价、订单排期、产销率和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 24834,
+            "stockCode": "002463.SZ",
+            "stockName": "沪电股份",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "AI PCB绝对龙头，技术领先行业一代，深度受益于AI服务器、高速交换机、汽车电子等高端PCB需求爆发。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002463.SZ",
+              "companyName": "沪电股份",
+              "companyProfile": "公司自1992年成立以来，秉持“成长、长青、共利”的经营理念，始终专注执行既定的“聚焦PCB主业、精益求精”的运营战略，经过多年的发展和长期积累，公司已经在技术、质量、成本、品牌、规模等方面形成相对竞争优势，居行业领先地位，是PCB行业内的重要品牌之一。公司连续多年入选中国电子电路行业协会(CPCA)、行业研究机构Prismark、N.T.Information等行业协会及研究机构发布的PCB百强企业。公司一直专注于印制电路板的生产、销售及相关售后服务。公司PCB产品以通信通讯设备、数据中心基础设施、汽车电子为核心应用领域，辅以工业设备、半导体芯片测试等应用领域。公司涉足PCB行业多年，经过多年的市场拓展和品牌经营，已成为PCB行业内的重要品牌之一，在行业内享有盛誉。公司坚持实施差异化产品竞争战略，即依靠技术、管理和服务的比较竞争优势，依托平衡的产品布局以及深耕多年的中高阶产品与量产技术，重点生产技术含量高、应用领域相对高端的差异化产品。公司立足于既有的企业通讯市场板、汽车板等主导产品的技术领先优势，及时把握通信、汽车等领域高端产品需求，持续保持自身研发水平的领先性和研究方向的前瞻性。公司十分注重与客户的长期战略合作关系，积极配合客户进行项目研发或产品设计，努力成为其供应链中重要一环，从而提升客户忠诚度。此外，公司还致力于在不同地区和不同产品领域持续开发新客户，实现客户资源的适度多样化。通过以上举措，公司与国内外主要客户在PCB主要产品领域建立了稳固的业务联系，多次获得上述客户“最佳质量表现奖”、“最佳合作供应商”、“金牌供应商”等奖项。",
+              "profileSummary": "公司自1992年成立以来，秉持“成长、长青、共利”的经营理念，始终专注执行既定的“聚焦PCB主业、精益求精”的运营战略，经过多年的发展和长期积累，公司已经在技术、质量、成本、品牌、规模等方面形成相对竞争优势，居行业领先地位，是PCB行业内的重要品牌之一。公司一直专注于印制电路板的生产、销售及相关售后服务。",
+              "majorProducts": "Linecard、背板、高密度集成板、厚铜板、混压板、埋被动元器件、企业通讯市场板、企业通讯市场板业务、汽车板、汽车板业务、散热板(背面连接金属块)、射频/微波/基站天线板、无卤素板",
+              "revenueComposition": "企业通讯市场板:77.36%;汽车板:16.07%;销售材料:4.2%;工业设备板及其他:2.34%;房屋销售收入:0.02%;租金收入:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "企业通讯市场板",
+                  "sharePct": 77.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车板",
+                  "sharePct": 16.07,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "销售材料",
+                  "sharePct": 4.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业设备板及其他",
+                  "sharePct": 2.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "房屋销售收入",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租金收入",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "HPC用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "数据中心交换机用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "汽车用印刷电路板(PCB)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "5G基站用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "办公工业用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "5G基站用PCB(印刷电路板)",
+                  "AI服务器用PCB(印刷电路板)",
+                  "HPC用PCB(印刷电路板)",
+                  "办公工业用PCB(印刷电路板)",
+                  "数据中心交换机用PCB(印刷电路板)",
+                  "汽车用印刷电路板(PCB)",
+                  "消费电子用PCB(印刷电路板)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "沪电股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：汽车板占收入的16.07%。公司与事件的具体联系在于：AI PCB绝对龙头，技术领先行业一代，深度受益于AI服务器、高速交换机、汽车电子等高端PCB需求爆发，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 24835,
+            "stockCode": "002436.SZ",
+            "stockName": "兴森科技",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内PCB领军企业，在通信背板和封装基板领域优势显著，是AI服务器和国产算力核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002436.SZ",
+              "companyName": "兴森科技",
+              "companyProfile": "公司深耕电子电路行业30年，是全球先进电子电路方案数字制造提供商，掌握电子电路生产制造领域核心技术并拥有关键产品量产能力，产品布局覆盖电子硬件三级封装领域，构建电子电路设计制造的数字化新模式，为客户提供从设计到测试交付的高价值整体解决方案。公司积极参与合作伙伴技术迭代，持续精进复杂制程工艺，技术能力对标国际先进水平，并在通信、数据中心、工控、医疗、消费电子等领域，赢得全球标杆客户的持续信赖。公司在PCB样板快件及批量板领域建立起强大的快速制造平台；在IC封装基板领域提供快速打样和量产制造服务；在半导体测试板领域打造业内领先的高层数、高厚径比、高平整度、小间距、高可靠性制造工艺能力和快速交付能力；并以印制电路板制造技术为基础，构建开放式技术服务平台，组建业内资深的技术顾问专家团队，形成电子硬件设计领域通用核心技术的综合解决方案能力，结合配套的多品种快速贴装服务能力，为客户提供个性化的一站式服务。公司坚持以传统PCB业务和半导体业务为发展核心，注重质量和研发投入，通过强化管理不断巩固和提升经营管理能力，提升效率以保持并增强核心竞争力。",
+              "profileSummary": "公司深耕电子电路行业30年，是全球先进电子电路方案数字制造提供商，掌握电子电路生产制造领域核心技术并拥有关键产品量产能力，产品布局覆盖电子硬件三级封装领域，构建电子电路设计制造的数字化新模式，为客户提供从设计到测试交付的高价值整体解决方案。公司在PCB样板快件及批量板领域建立起强大的快速制造平台；在IC封装基板领域提供快速打样和量产制造服务；在半导体测试板领域打造业内领先的高层数、高厚径比、高平整度、小间距、高可靠性制造工艺能力和快速…",
+              "majorProducts": "ATE 半导体测试板、传统多层 PCB、封装基板、高密度互连 HDI 板、类载板（SLP）、软硬结合板",
+              "revenueComposition": "PCB印制电路板:68.07%;IC封装基板:23.22%;其他:5.39%;半导体测试板:3.33%",
+              "revenueSegments": [
+                {
+                  "name": "PCB印制电路板",
+                  "sharePct": 68.07,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "IC封装基板",
+                  "sharePct": 23.22,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 5.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半导体测试板",
+                  "sharePct": 3.33,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PCB(印刷电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "IC封装基板",
+                    "category": "封装基材"
+                  },
+                  {
+                    "name": "半导体测试板",
+                    "category": "特种电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB(印刷电路板)",
+                  "半导体测试板",
+                  "IC封装基板"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "兴森科技的事件逻辑具备真实业务底座，但尚不足以代表全部公司：IC封装基板占收入的23.22%。公司与事件的具体联系在于：国内PCB领军企业，在通信背板和封装基板领域优势显著，是AI服务器和国产算力核心供应商，对应的核心变量是事件能否转化为可确认的经营增量。若这一变量沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，订单、收入确认、产品结构和毛利率变化既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；事件关联停留在主题层面，未形成可持续订单或利润贡献则可能令增量低于预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 8,
+        "stocks": [
+          {
+            "sourceRowNumber": 24799,
+            "stockCode": "688630.SH",
+            "stockName": "芯碁微装",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内领先的直写光刻设备商，其LDI设备是mSAP工艺升级的核心设备，受益于PCB高端化趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688630.SH",
+              "companyName": "芯碁微装",
+              "companyProfile": "公司成立于2015年6月，坐落于安徽省合肥市高新区集成电路产业基地。公司专业从事以微纳直写光刻为技术核心的直接成像设备及直写光刻设备的研发和生产。公司坚持自主研发与创新，拥有完整的自主知识产权。凭借团队领先的研发水平，公司目前拥有知识产权两百余项，多次获得“安徽省专利金奖”，牵头起草PCB直接成像设备国家标准并发布。依托核心技术，卓越性能，科技创新等强大的核心竞争力，公司荣获“安徽省五一劳动奖”、“安徽省优秀民营企业”、“国家高新技术企业”、“工信部专精特新‘小巨人’企业”、“2023年度中国电子电路行业专用设备和仪器企业第四名”等多项殊荣，并多次承接国家、省、市级重大专项的研发项目，与多家知名高等院校建立长期产学研合作。公司建成超70000平方米的集研发、生产、办公于一体的智能化研发制造基地，我们将继续坚持战略创新、技术创新、机制创新和人才创新，用创新和技术创造更多的社会价值和商业价值。",
+              "profileSummary": "凭借团队领先的研发水平，公司目前拥有知识产权两百余项，多次获得“安徽省专利金奖”，牵头起草PCB直接成像设备国家标准并发布。依托核心技术，卓越性能，科技创新等强大的核心竞争力，公司荣获“安徽省五一劳动奖”、“安徽省优秀民营企业”、“国家高新技术企业”、“工信部专精特新‘小巨人’企业”、“2023年度中国电子电路行业专用设备和仪器企业第四名”等多项殊荣，并多次承接国家、省、市级重大专项的研发项目，与多家知名高等院校建立长期产学研合作。",
+              "majorProducts": "IC掩膜版制版、IC制造直写光刻设备、OLED直写光刻设备自动线系统、PCB直接成像设备及自动线系统、泛半导体直写光刻设备及自动线系统、激光直接成像(LDI)设备、丝网印刷激光直接制版设备、直接成像联机自动线系统、紫外LED直接成像(UVLED-DI)设备",
+              "revenueComposition": "PCB系列:76.69%;泛半导体系列:16.58%;租赁及其他:6.21%;其他业务:0.52%",
+              "revenueSegments": [
+                {
+                  "name": "PCB系列",
+                  "sharePct": 76.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "泛半导体系列",
+                  "sharePct": 16.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁及其他",
+                  "sharePct": 6.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "激光直接成像设备(LDI)",
+                    "category": "激光加工设备"
+                  },
+                  {
+                    "name": "紫外LED直接成像设备(UVLEDDI)",
+                    "category": "LED制造设备"
+                  }
+                ],
+                "knownProducts": [
+                  "OLED直写光刻设备自动线系统",
+                  "激光直接成像设备(LDI)",
+                  "紫外LED直接成像设备(UVLEDDI)",
+                  "泛半导体直写光刻设备",
+                  "直接成像联机自动线系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "芯碁微装拥有激光直接成像设备(LDI)、紫外LED直接成像设备(UVLEDDI)，其产业链位置与国内领先的直写光刻设备商，其LDI设备是mSAP工艺升级的核心设备，受益于PCB高端化趋势一致；当前的PCB系列（76.69%）、泛半导体系列（16.58%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由技术商业化与产品迭代速度决定，并需完成“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”。只有客户认证、量产良率、订单规模、产品收入占比和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；技术路线变化、良率爬坡缓慢或竞争方案更快成熟则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 24800,
+            "stockCode": "688700.SH",
+            "stockName": "东威科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "全球领先的PCB电镀设备制造商，其VCP设备在mSAP工艺升级中价值量大幅提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688700.SH",
+              "companyName": "东威科技",
+              "companyProfile": "公司于2021年6月15日在上海证券交易所科创板上市。公司主要从事高端精密电镀设备及其配套设备的研发、设计、生产及销售的国家级高新技术企业，主要产品分为三大领域，第一是高端印制电路(PCB)电镀专用设备(包括VCP、水平式除胶化铜、水平镀三合一、陶瓷镀、MSAP移载式VCP等设备)，第二类是五金表面处理专用设备(包括龙门、五金连续电镀等设备)，第三类面向新能源动力电池正、负极材料专用设备、光伏领域专用设备、真空溅射专用设备的研发与制造。公司自主研发的垂直连续电镀设备可以用于各种基材特性、特殊工艺，应用场景包含5G通讯、消费电子、汽车电子、工控医疗、航空航天等。目前公司下游客户已覆盖大多数国内一线PCB制造厂商，同时已成功将产品出口至日本、韩国、欧洲和东南亚等地区。公司的新能源专用设备——卷式水平膜材电镀设备生产的PET复合铜膜作为锂电负极集流体新材料能有效提高电池安全性和续航里程，该材料可用于动力电池、储能电池及3C电池等领域。公司的光伏镀铜设备利用铜代替银技术可大大降低目前晶硅电池生产成本，突破光伏电力大规模应用的材料瓶颈，将为“碳中和”目标作出重要贡献。2023年6月13日，公司全球存托凭证(GDR)于瑞士证券交易所正式挂牌上市交易，GDR的成功发行有利于公司持续强化竞争优势，稳步推进全球市场的业务发展和扩张。展望未来，公司将始终坚持“以客户需求为导向，以技术创新为动力”的经营理念，凭借持续研发能力为下游客户提供技术支持与服务，成为填补技术空白、解决行业痛点的电镀设备专家。",
+              "profileSummary": "公司主要从事高端精密电镀设备及其配套设备的研发、设计、生产及销售的国家级高新技术企业，主要产品分为三大领域，第一是高端印制电路(PCB)电镀专用设备(包括VCP、水平式除胶化铜、水平镀三合一、陶瓷镀、MSAP移载式VCP等设备)，第二类是五金表面处理专用设备(包括龙门、五金连续电镀等设备)，第三类面向新能源动力电池正、负极材料专用设备、光伏领域专用设备、真空溅射专用设备的研发与制造。目前公司下游客户已覆盖大多数国内一线PCB制造厂商…",
+              "majorProducts": "刚性板VCP、连续滚镀设备、龙门式电镀设备、柔性板卷对卷VCP、柔性板片对片VCP、水平式除胶化铜设备",
+              "revenueComposition": "垂直连续电镀设备:69.76%;龙门式电镀设备:9.85%;其他:7.84%;水平式表面处理设备:5.09%;五金连续电镀设备:4.26%;卷式水平膜材电镀设备:2.47%;其他业务:0.48%;光伏镀铜设备:0.26%",
+              "revenueSegments": [
+                {
+                  "name": "垂直连续电镀设备",
+                  "sharePct": 69.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "龙门式电镀设备",
+                  "sharePct": 9.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 7.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "水平式表面处理设备",
+                  "sharePct": 5.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "五金连续电镀设备",
+                  "sharePct": 4.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "卷式水平膜材电镀设备",
+                  "sharePct": 2.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光伏镀铜设备",
+                  "sharePct": 0.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "PCB专用水平式除胶化铜设备",
+                    "category": "工业电子制造装备"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB专用水平式除胶化铜设备",
+                  "刚性板垂直连续电镀设备",
+                  "卷式水平膜材电镀设备",
+                  "柔性板垂直连续电镀设备",
+                  "龙门式五金电镀设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东威科技实际经营中已有PCB专用水平式除胶化铜设备，与事件指向的全球领先的PCB电镀设备制造商，其VCP设备在mSAP工艺升级中价值量大幅提升能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在垂直连续电镀设备（69.76%）、龙门式电镀设备（9.85%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善技术商业化与产品迭代速度，需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。客户认证、量产良率、订单规模、产品收入占比和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 24808,
+            "stockCode": "000657.SZ",
+            "stockName": "中钨高新",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "旗下金洲精工为国内PCB钻针技术领先企业，全球销量第二，充分受益于AI PCB趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000657.SZ",
+              "companyName": "中钨高新",
+              "companyProfile": "公司是在深圳证券交易所上市的高技术制造企业，是世界500强企业中国五矿集团有限公司旗下专业发展钨产业的企业。公司前身为海南金海股份有限公司，1996年12月在深圳证券交易所挂牌上市，2000年6月更名为中钨高新材料股份有限公司。公司管理资产规模超190亿元，境外机构遍及美国、德国、法国、印度、韩国等地，产品销往世界70多个国家和地区。公司是中国五矿钨产业的运营管理平台，管理运营着集矿山、冶炼、加工、贸易于一体的完整钨产业链。管理范围内钨矿山保有钨资源量123万吨，占全国查明钨资源量的11%。钼资源量10.9万吨，铋资源量20.9万吨，萤石资源量4700万吨。钨冶炼年生产能力20000吨，占全国APT产能的10%。硬质合金占国内市场的25%以上份额，拥有众多主导优势类产品，其中切削刀具、IT工具，硬质合金棒材、球齿、轧辊产品、粉末产品等处于国内领先水平，在国际上也有较高的知名度及影响力。公司人才和技术优势突出，拥有4个国家级科技创新平台和重点实验室，研发人员近1500名，累计有效专利超过1500件，并保持每年较快增长，是中国钨产业领域当之无愧的龙头企业和领跑者。步入新时代，公司确立了“矿山是保障，冶炼是基础，合金是方向”的战略定位，全体中钨人将牢记“中国制造用中钨工具，世界制造有中国工具”的战略使命，秉承“诚信、专业、创新、高效”的共同价值观，发扬“千提百炼，其利断金”的企业精神，为建设具有全球竞争力的世界一流钨产业集团而不懈奋斗！",
+              "profileSummary": "公司管理资产规模超190亿元，境外机构遍及美国、德国、法国、印度、韩国等地，产品销往世界70多个国家和地区。硬质合金占国内市场的25%以上份额，拥有众多主导优势类产品，其中切削刀具、IT工具，硬质合金棒材、球齿、轧辊产品、粉末产品等处于国内领先水平，在国际上也有较高的知名度及影响力。",
+              "majorProducts": "粉末制品、贸易及装备业务、难熔金属、其他硬质合金、切削刀具及工具",
+              "revenueComposition": "精矿及粉末产品:31.6%;其他硬质合金:25.65%;切削刀具及工具:20.47%;难熔金属:15.39%;贸易及装备:6.9%",
+              "revenueSegments": [
+                {
+                  "name": "精矿及粉末产品",
+                  "sharePct": 31.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他硬质合金",
+                  "sharePct": 25.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "切削刀具及工具",
+                  "sharePct": 20.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "难熔金属",
+                  "sharePct": 15.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易及装备",
+                  "sharePct": 6.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "PCB板用微型刀具",
+                    "category": "机床刀具"
+                  }
+                ],
+                "knownProducts": [
+                  "有色金属贸易",
+                  "硬质合金刀具",
+                  "碳化钨粉",
+                  "氧化钨",
+                  "钨粉",
+                  "钨丝",
+                  "钨硬质合金",
+                  "钼合金"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中钨高新实际经营中已有PCB板用微型刀具，与事件指向的旗下金洲精工为国内PCB钻针技术领先企业，全球销量第二，充分受益于AI PCB趋势能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在精矿及粉末产品（31.6%）、其他硬质合金（25.65%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 24809,
+            "stockCode": "301362.SZ",
+            "stockName": "民爆光电",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "通过收购技术领先的厦芝精密跨界入局PCB钻针高景气赛道，扩产计划超预期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301362.SZ",
+              "companyName": "民爆光电",
+              "companyProfile": "公司是一家专注于绿色照明业务领域的高新技术企业，主要从事LED照明产品的研发、设计、制造、销售及服务，致力于成为行业内一流的绿色照明产品制造商。公司始终专注于服务境外区域性品牌商和工程商，并为客户提供商业照明和工业照明领域的ODM产品。公司的境外客户以经营进口国区域性市场为主，有别于昕诺飞、欧司朗等国际照明品牌在全球市场上布局标准产品，更贴近进口国当地市场。公司以ODM方式为境外客户提供差异化、个性化的定制产品，满足终端用户在不同商业/工业应用场景下对特定照明光效以及外观、应用功能等方面的需求，协助境外区域性品牌商和工程商，与国际照明品牌进行差异化竞争。公司主要有商业照明和工业照明两大业务板块，其中民爆光电专业从事商业照明业务，子公司艾格斯特专业从事工业照明业务。公司是国家高新技术企业，2020年被国家工业和信息化部评定为专精特新“小巨人”企业，2021年被认定为国家级专精特新“小巨人”企业，公司是2020年度中国LED行业营收50强企业、2020年度中国LED行业专利50强企业、2021年度中国LED行业知识产权50强企业，是国家级“工业企业知识产权应用试点单位”和中国节能协会碳中和专业委员会常务委员单位，2021年荣获“碳中和实践创新奖”。",
+              "profileSummary": "公司是一家专注于绿色照明业务领域的高新技术企业，主要从事LED照明产品的研发、设计、制造、销售及服务，致力于成为行业内一流的绿色照明产品制造商。公司始终专注于服务境外区域性品牌商和工程商，并为客户提供商业照明和工业照明领域的ODM产品。",
+              "majorProducts": "壁灯、泛光灯、防爆灯、工矿灯、轨道灯、红外理疗仪、路灯、美容面罩、面板灯、墙壁灯、庭院灯、筒灯、吸顶灯、洗墙灯、应急灯、支架灯、植物灯",
+              "revenueComposition": "LED 商业照明产品:54.86%;工业照明-灯具产品:36.98%;LED植物照明灯具:3.15%;LED应急照明灯具:2.78%;其他业务:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "LED 商业照明产品",
+                  "sharePct": 54.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业照明-灯具产品",
+                  "sharePct": 36.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "LED植物照明灯具",
+                  "sharePct": 3.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "LED应急照明灯具",
+                  "sharePct": 2.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "LED工矿灯",
+                  "LED应急灯",
+                  "LED支架灯",
+                  "LED植物灯",
+                  "LED防爆灯",
+                  "LED吊灯",
+                  "LED吸顶灯",
+                  "LED泛光灯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "民爆光电现有收入由LED 商业照明产品（54.86%）、工业照明-灯具产品（36.98%）贡献，主营产品为LED工矿灯、LED应急灯、LED支架灯、LED植物灯，与通过收购技术领先的厦芝精密跨界入局PCB钻针高景气赛道，扩产计划超预期指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，产能释放与行业供给变化才会通过“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”产生财务影响。现阶段在建工程转固、产能利用率、产销率、库存和产品价格比概念标签更重要；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 24817,
+            "stockCode": "600183.SH",
+            "stockName": "生益科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "全球覆铜板龙头，深度受益AI驱动的高频高速覆铜板需求增长及国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600183.SH",
+              "companyName": "生益科技",
+              "companyProfile": "公司成立于1985年，是一家集研发、生产、销售、服务为一体的全球电子电路基材核心供应商。经过三十余年的发展，通过不断努力，覆铜板板材产量从建厂之初的年产60万平方米发展到2024年度的1.4亿平方米。根据美国Prismark调研机构对于全球硬质覆铜板的统计和排名，从2013年至今，硬质覆铜板销售总额已持续保持全球第二。集团总部位于中国最具经济活力的城市——广东东莞。先后在咸阳、苏州、香港、台湾、常熟、南通、九江及泰国等地建立了全资子公司和控股子公司。集团主营业务及产品应用范围公司始终立足于高标准、高品质、高性能、高可靠性，自主生产覆铜板、半固化片、绝缘层压板、金属基覆铜箔板、涂树脂铜箔、覆盖膜类等高端电子材料。产品主要供制作单、双面线路板及高多层线路板，广泛应用于高算力、AI服务器、5G天线、新一代通讯基站、大型计算机、高端服务器、航空航天工业、芯片封装、汽车电子、智能家居、工控医疗设备、家电、消费类终端以及各种中高档电子产品中。公司的主导产品已获得博世、联想、索尼、飞利浦等国际、国内知名企业的认证，拥有较大的竞争优势，产品销美洲、欧洲、韩国、日本、东南亚等世界多个国家和地区。",
+              "profileSummary": "集团主营业务及产品应用范围公司始终立足于高标准、高品质、高性能、高可靠性，自主生产覆铜板、半固化片、绝缘层压板、金属基覆铜箔板、涂树脂铜箔、覆盖膜类等高端电子材料。产品主要供制作单、双面线路板及高多层线路板，广泛应用于高算力、AI服务器、5G天线、新一代通讯基站、大型计算机、高端服务器、航空航天工业、芯片封装、汽车电子、智能家居、工控医疗设备、家电、消费类终端以及各种中高档电子产品中。",
+              "majorProducts": "生益覆铜板、生益硅微粉、生益陶瓷电子元件、生益印刷线路板、生益粘结片",
+              "revenueComposition": "0",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "覆铜板(CCL)",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "PCB(印刷电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "粘结片",
+                    "category": "电路板材料"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB(印刷电路板)",
+                  "粘结片",
+                  "覆铜板(CCL)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "生益科技与事件之间有具体产品连接：覆铜板(CCL)、PCB(印刷电路板)、粘结片，对应全球覆铜板龙头，深度受益AI驱动的高频高速覆铜板需求增长及国产替代。目前无法单独量化这些产品的收入权重，因而不能把公司归为纯概念，也不能把产业空间直接等同于利润弹性。终端需求与渗透率变化只有沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”完成兑现，才会改变公司经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定业务能否跨过小规模阶段；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件对公司的影响会主要停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 24836,
+            "stockCode": "300472.SZ",
+            "stockName": "*ST新元",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "AI PCB黑马，深度绑定英伟达，显卡PCB业务基础扎实，并积极扩产AI服务器板。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300472.SZ",
+              "companyName": "*ST新元",
+              "companyProfile": "公司是一家集研发、设计、智能制造、系统集成、运维服务于一体的一流创新型高科技企业，产品涵盖环境治理、高端智能制造、智能控制、云计算大数据信息技术四个方面。公司坚持“纵深发展、精品战略”的理念，追求以工业4.0为目标，助力中国制造2025。以环境治理、绿色智能制造(人工智能)为主业,为客户提供成套解决方案，具备工程EPC总承包经验和实力。公司以提供工业智能化输送、配料成套解决方案为主业，集方案设计、技术研发、设备制造、系统集成、销售服务于一体，主要产品包括上辅机系统、小料配料称量系统、气力输送系统、环保系统、电镀系统等。公司通过ISO9001:2008质量管理体系认证，产品通过欧洲CE安全认证、美国UL认证、俄罗斯GOST认证。参与“橡胶工厂节能设计规范”“橡胶工厂环境保护设计规范”、“橡胶工厂职业安全与卫生设计标准”、《GB/T25939-2010密闭式炼胶机上辅机系统》和《GB/T25938-2010炼胶工序中小料自动配料称量系统》等多项国家标准的制定。",
+              "profileSummary": "公司是一家集研发、设计、智能制造、系统集成、运维服务于一体的一流创新型高科技企业，产品涵盖环境治理、高端智能制造、智能控制、云计算大数据信息技术四个方面。公司以提供工业智能化输送、配料成套解决方案为主业，集方案设计、技术研发、设备制造、系统集成、销售服务于一体，主要产品包括上辅机系统、小料配料称量系统、气力输送系统、环保系统、电镀系统等。",
+              "majorProducts": "5G网络设备、废旧轮胎热裂解资源化利用产品、硅料循环利用智能装备、绿色环保装备、智能输送配料装备、智能数字显控及存储装备、智能专用装备",
+              "revenueComposition": "智能输送配料装备:50.47%;电镀设备:19.99%;绿色环保装备:19.74%;其他:8.42%;5G网络设备:1.34%;废旧轮胎热裂解资源化循环利用产品:0.03%",
+              "revenueSegments": [
+                {
+                  "name": "智能输送配料装备",
+                  "sharePct": 50.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电镀设备",
+                  "sharePct": 19.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "绿色环保装备",
+                  "sharePct": 19.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "5G网络设备",
+                  "sharePct": 1.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "废旧轮胎热裂解资源化循环利用产品",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "密闭式炼胶机上辅机系统",
+                  "硅料循环装备",
+                  "工业废水处理装备",
+                  "污水处理设备",
+                  "有机废气处理设备",
+                  "布袋除尘器",
+                  "小粉料配料称量系统",
+                  "物料气力输送系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "*ST新元的业务范围能够覆盖AI PCB黑马，深度绑定英伟达，显卡PCB业务基础扎实，并积极扩产AI服务器板所处的产业环节，但当前智能输送配料装备（50.47%）、电镀设备（19.99%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。产能释放与行业供给变化需要沿“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”完成兑现，并在在建工程转固、产能利用率、产销率、库存和产品价格上形成持续改善；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 24837,
+            "stockCode": "001389.SZ",
+            "stockName": "广合科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "服务器PCB龙头，CPU主板业务优势突出，AI相关业务占比提升带动业绩高速增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "001389.SZ",
+              "companyName": "广合科技",
+              "companyProfile": "公司于2002年在广州市黄埔区成立，2024年在深圳证券交易所主板挂牌上市。总部位于广州市黄埔开发区，生产基地主要分布在广东广州、广东东莞、湖北黄石、泰国巴真府。我们拥有高端的研发技术团队、优秀的管理团队以及国内外顶尖的自动化生产线。公司多年来一直致力于打造成为集高端优质PCB产品的研发、生产、销售、服务为一体的行业领先电路板制造企业。公司一直致力于以高速、高频为主的高端PCB制造，产品主要应用于数据中心、云计算、工业互联网、人工智能、5G通讯、汽车电子、安防和打印等终端领域。长期服务于国内外知名客户。多年来，公司规模和技术能力在PCB领域保持持续快速成长，并连续多年被公司主要客户评定为优秀供应商和长期战略合作伙伴。我们注重公司品牌价值、产品研发、产品品质、营销策略、企业文化的打造，通过先进的前沿技术，制造出优质的产品，打造便捷的产品渠道，提供贴心、快捷的售后服务，独创具有特色的运营管理模式，以“服务客户”为宗旨，为推进“智能制造”同步发展的新业态结构建设提供创新动力和重要支持，我们立志成为国内外PCB产业发展的领航者。",
+              "profileSummary": "公司多年来一直致力于打造成为集高端优质PCB产品的研发、生产、销售、服务为一体的行业领先电路板制造企业。我们注重公司品牌价值、产品研发、产品品质、营销策略、企业文化的打造，通过先进的前沿技术，制造出优质的产品，打造便捷的产品渠道，提供贴心、快捷的售后服务，独创具有特色的运营管理模式，以“服务客户”为宗旨，为推进“智能制造”同步发展的新业态结构建设提供创新动力和重要支持，我们立志成为国内外PCB产业发展的领航者。",
+              "majorProducts": "5G通讯板、AI 运算服务器板、AI运算服务器板、PCB、高速交换机板、高性能存储服务器板、高性能计算服务器板、阶梯HDI服务器加速卡",
+              "revenueComposition": "印制电路板:93.01%;其他业务:6.99%",
+              "revenueSegments": [
+                {
+                  "name": "印制电路板",
+                  "sharePct": 93.01,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 6.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PCB八层板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB六层板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB单面板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB双面板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB四层板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB多层板",
+                    "category": "刚性电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB八层板",
+                  "PCB六层板",
+                  "PCB单面板",
+                  "PCB双面板",
+                  "PCB四层板",
+                  "PCB多层板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "广合科技已经具备PCB八层板、PCB六层板、PCB单面板等业务能力，服务器PCB龙头，CPU主板业务优势突出，AI相关业务占比提升带动业绩高速增长并非单纯概念映射。当前对应的收入被归入印制电路板（93.01%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 24838,
+            "stockCode": "002938.SZ",
+            "stockName": "鹏鼎控股",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球PCB龙头，mSAP工艺领先，深度卡位AI光模块及服务器市场，并积极扩产。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002938.SZ",
+              "companyName": "鹏鼎控股",
+              "companyProfile": "公司由富葵精密组件(深圳)有限公司整体变更设立。公司成立于1999年4月29日，并于2018年9月18日在深圳证券交易所上市。公司为全球范围内少数同时具备各类PCB产品研发、设计、制造与销售服务的专业大型厂商，拥有优质多样的PCB产品线，主要产品范围涵盖FPC、SMA、SLP、HDI、RPCB、RigidFlex等多类产品，并广泛应用于通讯电子产品、消费电子及高性能计算机类产品以及EV汽车和AI服务器等产品，具备为不同客户提供打造全方位PCB电子互联产品及服务的强大实力，打造了全方位的PCB产品一站式服务平台。公司高度重视研究开发工作，在深圳市设有研发中心，不断加强产学研合作，与包含清华大学、香港城市大学、东南大学、深圳大学、燕山大学、河北工业大学及广东工业大学等大陆院校，以及台湾大学、新竹清华大学、成功大学、中央大学、台湾科技大学、中原大学、元智大学、龙华科技大学等台湾研究机构及院校建立了长期的合作关系。截止2025年6月30日，公司累计申请专利2732件，累计获得国内外授权专利数1525件。根据Prismark2018至2025年以营收计算的全球PCB企业排名，公司2017年-2024年连续八年位列全球最大PCB生产企业。产品领域INDUSTRIALOPERATION公司是主要从事各类印制电路板的设计、研发、制造与销售业务的专业服务公司，专注于为行业领先客户提供全方位PCB产品及服务。鹏鼎控股拥有一流质量的产品与服务，可提供全方位电路板系列产品，满足客户「onestopshopping」的需求。",
+              "profileSummary": "公司为全球范围内少数同时具备各类PCB产品研发、设计、制造与销售服务的专业大型厂商，拥有优质多样的PCB产品线，主要产品范围涵盖FPC、SMA、SLP、HDI、RPCB、RigidFlex等多类产品，并广泛应用于通讯电子产品、消费电子及高性能计算机类产品以及EV汽车和AI服务器等产品，具备为不同客户提供打造全方位PCB电子互联产品及服务的强大实力，打造了全方位的PCB产品一站式服务平台。产品领域INDUSTRIALOPERATION公…",
+              "majorProducts": "其他领域用板、通讯用板、消费电子及计算机用板",
+              "revenueComposition": "通讯用板:64.98%;消费电子及计算机用板:28.83%;汽车、服务器用板:5.41%;其他业务:0.78%",
+              "revenueSegments": [
+                {
+                  "name": "通讯用板",
+                  "sharePct": 64.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "消费电子及计算机用板",
+                  "sharePct": 28.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "汽车、服务器用板",
+                  "sharePct": 5.41,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "服务器用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "RPCB(刚性电路板)",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "汽车用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "消费电子用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "计算机用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "FPC(柔性电路板)",
+                    "category": "柔性电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "RPCB(刚性电路板)",
+                  "高密度互联板(HDI)",
+                  "FPC(柔性电路板)",
+                  "服务器用PCB(印刷电路板)",
+                  "汽车用PCB(印刷电路板)",
+                  "消费电子用PCB(印刷电路板)",
+                  "计算机用PCB(印刷电路板)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "鹏鼎控股已经具备服务器用PCB(印刷电路板)、RPCB(刚性电路板)、汽车用PCB(印刷电路板)等业务能力，全球PCB龙头，mSAP工艺领先，深度卡位AI光模块及服务器市场，并积极扩产并非单纯概念映射。当前对应的收入被归入消费电子及计算机用板（28.83%）、汽车、服务器用板（5.41%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于产能释放与行业供给变化是否通过“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”放大，并最终反映在在建工程转固、产能利用率、产销率、库存和产品价格上；需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 22,
+        "stocks": [
+          {
+            "sourceRowNumber": 24801,
+            "stockCode": "301338.SZ",
+            "stockName": "凯格精机",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "全球高端电子装备供应商，其锡膏印刷设备是PCBA生产核心环节，受益于AI服务器需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301338.SZ",
+              "companyName": "凯格精机",
+              "companyProfile": "公司主要从事自动化精密装备的研发、生产、销售及技术支持服务。公司生产的自动化精密装备主要应用于电子工业制造领域的电子装联环节及LED封装环节，公司主要产品为锡膏印刷设备，同时经营有点胶设备、柔性自动化设备及LED封装设备。公司以自主研发的精密机械、软件算法、自动控制、机器视觉和系统集成为技术核心，并结合在自动化精密装备领域的长期实践，运用自主研发的核心技术，通过设备精度设定、设备功能规划设计、工艺技术规划及整体调试等关键环节，实现客户高效、高质量的生产需求，并持续协助众多行业客户提升生产制造自动化水平。公司已形成了由多项专利及非专利技术组成的核心技术体系。至2020年6月30日，公司已获得专利78项，其中包括21项发明专利、53项实用新型专利和4项外观专利，此外，公司还取得了软件著作权21项，并参与了1项行业标准的编制工作。",
+              "profileSummary": "公司主要从事自动化精密装备的研发、生产、销售及技术支持服务。公司生产的自动化精密装备主要应用于电子工业制造领域的电子装联环节及LED封装环节，公司主要产品为锡膏印刷设备，同时经营有点胶设备、柔性自动化设备及LED封装设备。",
+              "majorProducts": "LED封装设备、点胶设备、柔性自动化设备、锡膏印刷设备",
+              "revenueComposition": "锡膏印刷设备:64.18%;LED封装设备:12.47%;点胶设备:12.1%;柔性自动化设备:7.62%;其他业务:3.62%",
+              "revenueSegments": [
+                {
+                  "name": "锡膏印刷设备",
+                  "sharePct": 64.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "LED封装设备",
+                  "sharePct": 12.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "点胶设备",
+                  "sharePct": 12.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "柔性自动化设备",
+                  "sharePct": 7.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "SMT锡膏印刷设备",
+                  "电子厂摆盘设备",
+                  "电子装联点胶设备",
+                  "闭环锁螺丝设备",
+                  "激光打标设备",
+                  "LED固晶机",
+                  "光子器件集成耦合设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "凯格精机与新闻存在业务方向上的交集：全球高端电子装备供应商，其锡膏印刷设备是PCBA生产核心环节，受益于AI服务器需求增长；公司当前收入主要来自锡膏印刷设备（64.18%）、LED封装设备（12.47%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对终端需求与渗透率变化的推动只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入报表，终端销量、客户采购量、公司出货和相关产品收入增速决定这一交集能否升级为实际增量；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 24802,
+            "stockCode": "688531.SH",
+            "stockName": "日联科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内工业X射线检测设备龙头，受益于AI PCB向高多层、HDI升级带来的高端检测需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688531.SH",
+              "companyName": "日联科技",
+              "companyProfile": "公司是国内工业智能检测领域龙头企业，主要从事工业智能检测设备及核心部件的研发、生产、销售与服务，产品和技术主要应用于集成电路及电子制造、新能源电池、铸件焊件及材料、食品异物等检测领域。公司围绕“横向拓展、纵向深耕”“高端化、平台化、全球化”的发展战略，面向全球开展投资并购，持续整合全系电磁波谱和原子物理检测技术，为客户提供涵盖多模态检测技术的一站式解决方案。公司工业X射线智能检测设备上游的核心部件X射线源、AI软件算法“一硬一软”的底层能力持续夯实，核心部件+智能算法+检测设备及整体解决方案持续完善；通过投资并购，公司检测技术领域持续打开，加速打造工业检测技术平台型企业。公司在集团层面推进跨业务主体的协同发展，围绕已有检测技术、产品能力边界持续拓展新的下游业务场景，积极拓展全球化制造能力及营销网络建设，持续为客户及合作伙伴提供创新和可衡量的增值服务。",
+              "profileSummary": "公司是国内工业智能检测领域龙头企业，主要从事工业智能检测设备及核心部件的研发、生产、销售与服务，产品和技术主要应用于集成电路及电子制造、新能源电池、铸件焊件及材料、食品异物等检测领域。公司在集团层面推进跨业务主体的协同发展，围绕已有检测技术、产品能力边界持续拓展新的下游业务场景，积极拓展全球化制造能力及营销网络建设，持续为客户及合作伙伴提供创新和可衡量的增值服务。",
+              "majorProducts": "X射线影像软件系统、X射线源、封闭式热阴极微焦点X射线源、工业X射线智能检测装备、集成电路及电子制造X射线智能检测装备、其他X射线智能检测装备、新能源电池X射线智能检测设备、影像软件、铸件焊件及材料检测X射线智能检测装备",
+              "revenueComposition": "集成电路及电子制造:44.05%;新能源电池检测:21.68%;铸件焊件及材料检测:19.05%;备品备件及其他:10.78%;其他X射线检测装备:2.34%;其他智能检测设备:2.01%;其他业务:0.09%",
+              "revenueSegments": [
+                {
+                  "name": "集成电路及电子制造",
+                  "sharePct": 44.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源电池检测",
+                  "sharePct": 21.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铸件焊件及材料检测",
+                  "sharePct": 19.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "备品备件及其他",
+                  "sharePct": 10.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他X射线检测装备",
+                  "sharePct": 2.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他智能检测设备",
+                  "sharePct": 2.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "微焦点X射线源",
+                  "公共安防X射线检测装备",
+                  "新能源电池X射线检测装备",
+                  "铸件焊件及材料X射线检测装备",
+                  "集成电路及电子制造X射线检测装备",
+                  "食品异物X射线检测装备",
+                  "电池电性能检测设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "日联科技现有业务与国内工业X射线检测设备龙头，受益于AI PCB向高多层、HDI升级带来的高端检测需求处于同一产业方向，收入主体为集成电路及电子制造（44.05%）、新能源电池检测（21.68%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变终端需求与渗透率变化，只有经由“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，业务交集才会转化为业绩增量。终端销量、客户采购量、公司出货和相关产品收入增速若逐步增强，相关业务的重要性会提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 24803,
+            "stockCode": "000983.SZ",
+            "stockName": "山西焦煤",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内激光技术及应用龙头企业，其PCB自动化设备聚焦IC载板等高端应用。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000983.SZ",
+              "companyName": "山西焦煤",
+              "companyProfile": "公司是全国首批循环经济试点单位。公司主营业务是煤炭的生产、洗选加工、销售及发供电，矿山开发设计施工、矿用及电力器材生产经营等。公司的主要产品为煤炭、电力热力、焦炭及化工产品等。煤炭产品主要是：焦煤、肥煤、瘦煤、贫瘦煤、气煤等。公司煤炭销售的主要区域是东北、华北、南方地区的大型钢铁企业及发电企业。公司所属矿区资源储量丰富，煤层赋存稳定，属近水平煤层，地质构造简单，并且煤种齐全：有焦煤、肥煤、瘦煤、贫瘦煤、气煤等，特别是在冶炼煤中，公司的冶炼精煤具有低灰分、低硫分、结焦性好等优点，属优质炼焦煤品种，是稀缺、保护性开采煤种。从规模优势和质量优势而言，公司的冶炼精煤在市场上有较强的竞争力，在国内冶炼精煤供给方面具有重要地位。公司曾荣获全国五一劳动奖状、全国思想政治工作优秀企业、全国模范职工之家等荣誉称号，“煤矿通风瓦斯超限预控与监管技术及系统”荣膺国家科技进步二等奖。",
+              "profileSummary": "公司主营业务是煤炭的生产、洗选加工、销售及发供电，矿山开发设计施工、矿用及电力器材生产经营等。煤炭产品主要是：焦煤、肥煤、瘦煤、贫瘦煤、气煤等。",
+              "majorProducts": "西山电精煤、西山肥精煤、西山供热、西山焦精煤、西山煤电火电供应、西山煤电焦煤、西山煤电煤泥、西山煤电洗混煤、西山煤电洗精煤、西山煤电原煤、西山普通动力煤、西山筛混煤、西山瘦精煤、西山洗混煤",
+              "revenueComposition": "煤炭:57.33%;电力热力:18.82%;焦炭:16.29%;其他化工产品及副产品:4.73%;其他:1.41%;焦油:1.02%;建材:0.39%",
+              "revenueSegments": [
+                {
+                  "name": "煤炭",
+                  "sharePct": 57.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力热力",
+                  "sharePct": 18.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "焦炭",
+                  "sharePct": 16.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他化工产品及副产品",
+                  "sharePct": 4.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "焦油",
+                  "sharePct": 1.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "建材",
+                  "sharePct": 0.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "热电联产(电力)",
+                  "粗苯",
+                  "甲醇",
+                  "硫磺",
+                  "橡胶用炭黑",
+                  "煤焦油",
+                  "焦炭",
+                  "气煤"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "山西焦煤现有收入由煤炭（57.33%）、电力热力（18.82%）贡献，主营产品为热电联产(电力)、粗苯、甲醇、硫磺，与国内激光技术及应用龙头企业，其PCB自动化设备聚焦IC载板等高端应用指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，技术商业化与产品迭代速度才会通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”产生财务影响。现阶段客户认证、量产良率、订单规模、产品收入占比和毛利率比概念标签更重要；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 24804,
+            "stockCode": "301021.SZ",
+            "stockName": "英诺激光",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内领先的微加工激光器生产商，其超快激光钻孔设备可复用至算力PCB领域。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301021.SZ",
+              "companyName": "英诺激光",
+              "companyProfile": "公司是国内领先的微加工激光器生产商，是全球少数同时具备纳秒、亚纳秒、皮秒、飞秒级激光器核心技术与生产能力的企业之一，也是全球少数实现工业深紫外激光器批量供应的生产商之一。公司产品广泛应用于消费电子、半导体、新能源、超硬材料、新一代显示及生物医学等多个领域，销售网络覆盖中国、美国、日本、德国、韩国等二十多个国家或地区。主要客户群体包括设备集成商、工业制造商、医疗器械商以及科研机构等。凭借卓越的技术实力与产品质量，公司已成功进入苹果和安卓系众多知名品牌，以及SHI、Medtronic、DiamondFoundry等多家知名企业的供应链体系，确立了在全球微加工激光领域的竞争优势与市场地位。",
+              "profileSummary": "公司产品广泛应用于消费电子、半导体、新能源、超硬材料、新一代显示及生物医学等多个领域，销售网络覆盖中国、美国、日本、德国、韩国等二十多个国家或地区。主要客户群体包括设备集成商、工业制造商、医疗器械商以及科研机构等。",
+              "majorProducts": "DPSS调Q纳秒激光器、MOPA纳秒激光器、超短脉冲激光器（皮秒、飞秒级）、超硬材料、高值医疗器械、消费电子行业解决方案、新能源行业解决方案、医疗影像",
+              "revenueComposition": "激光器:56.38%;激光模组:31.48%;其他主营业务:10.38%;其他业务:1.75%",
+              "revenueSegments": [
+                {
+                  "name": "激光器",
+                  "sharePct": 56.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "激光模组",
+                  "sharePct": 31.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他主营业务",
+                  "sharePct": 10.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "定制化激光模组",
+                  "深紫外激光器",
+                  "皮秒级超短脉冲激光器",
+                  "纳秒固体激光器",
+                  "飞秒级超短脉冲激光器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "英诺激光与新闻存在业务方向上的交集：国内领先的微加工激光器生产商，其超快激光钻孔设备可复用至算力PCB领域；公司当前收入主要来自激光器（56.38%）、激光模组（31.48%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对事件能否转化为可确认的经营增量的推动只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能进入报表，订单、收入确认、产品结构和毛利率变化决定这一交集能否升级为实际增量；事件关联停留在主题层面，未形成可持续订单或利润贡献是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 24810,
+            "stockCode": "688028.SH",
+            "stockName": "沃尔德",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "布局PCD/CVD金刚石钻针差异化技术路线，产品在M9等高难板材加工中寿命优势显著。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688028.SH",
+              "companyName": "沃尔德",
+              "companyProfile": "公司创立于2006年，国家高新技术企业、北京民营企业中小百强、北京市诚信创建企业、北京市共铸诚信企业，于2019年7月22日在上海证券交易所科创板上市。公司专注于超高精密、高精密刀具及超硬材料制品的研发、生产和销售业务，刀具业务定位于全球高端刀具市场，是国内较为领先的刀具综合方案提供商，为客户提供涵盖超硬、硬质合金、金属陶瓷材料的刀具产品；金刚石功能材料业务定位于全球高端新材料市场，是国内少数能够掌握CVD法三大制备工艺的公司之一，主要产品包括金刚石膜声学器件、金刚石热沉材料、金刚石光学窗口、金刚石工具材料、硼掺杂金刚石膜涂层电极及制品、CVD培育钻石等。公司拥有浙江省超高精密与高精密超硬工具省级高新技术企业研究开发中心、河北省CVD金刚石功能材料科技创新中心、嘉兴市超高精密与高精密超硬工具重点实验室、廊坊市CVD金刚石生长技术研发中心、嘉兴市企业研究院等研发平台。公司产品先后获得首届全国创新创业大赛全国总决赛企业组第二名、第三届中国电子信息博览会(CITE)创新产品与应用金奖、国际半导体产业协会和国际信息显示学会联合颁发的“杰出产品奖”、科学技术部等四部委联合颁发的“国家重点新产品”、国家火炬计划产业化示范项目、金属加工杂志社第五届切削刀具用户调查“用户满意品牌”等诸多荣誉。公司秉持“诚信、价值、巅峰”的企业价值观，紧密抓住新质生产力发展机遇，坚守科创、精进产品、提升服务、臻塑品牌，积极构建未来新发展格局，力求将自身打造成为一家在全球高端刀具和新材料制造领域中占据领先地位，以技术创新为核心驱动力，不断推动行业进步的国际化标杆企业。",
+              "profileSummary": "公司专注于超高精密、高精密刀具及超硬材料制品的研发、生产和销售业务，刀具业务定位于全球高端刀具市场，是国内较为领先的刀具综合方案提供商，为客户提供涵盖超硬、硬质合金、金属陶瓷材料的刀具产品；金刚石功能材料业务定位于全球高端新材料市场，是国内少数能够掌握CVD法三大制备工艺的公司之一，主要产品包括金刚石膜声学器件、金刚石热沉材料、金刚石光学窗口、金刚石工具材料、硼掺杂金刚石膜涂层电极及制品、CVD培育钻石等。公司秉持“诚信、价值、巅峰”…",
+              "majorProducts": "PCD、PCBN刀具、棒材、单晶金刚石刀具、金刚石功能材料、金刚石磨轮、微钻微铣刀具、硬质合金数控刀片、整体硬质合金刀具",
+              "revenueComposition": "超硬刀具:75.86%;硬质合金刀具:16.35%;超硬材料:5.58%;其他:2.2%",
+              "revenueSegments": [
+                {
+                  "name": "超硬刀具",
+                  "sharePct": 75.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硬质合金刀具",
+                  "sharePct": 16.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "超硬材料",
+                  "sharePct": 5.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "超硬复合片",
+                  "硬质合金刀具",
+                  "钻石刀轮",
+                  "铣刀",
+                  "高精密超硬刀具",
+                  "聚晶金刚石微钻钻头",
+                  "金刚石研磨轮"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "沃尔德与新闻存在业务方向上的交集：布局PCD/CVD金刚石钻针差异化技术路线，产品在M9等高难板材加工中寿命优势显著；公司当前收入主要来自超硬刀具（75.86%）、硬质合金刀具（16.35%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对技术商业化与产品迭代速度的推动只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能进入报表，客户认证、量产良率、订单规模、产品收入占比和毛利率决定这一交集能否升级为实际增量；技术路线变化、良率爬坡缓慢或竞争方案更快成熟是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 24812,
+            "stockCode": "688308.SH",
+            "stockName": "欧科亿",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "通过收购永鑫精工进入PCB钻针领域，与原有棒材业务形成产业链协同。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688308.SH",
+              "companyName": "欧科亿",
+              "companyProfile": "公司是一家专业从事数控刀具产品和硬质合金制品的研发、生产和销售，具有自主研发和创新能力的高新技术企业。公司始终坚持“贴近市场做改进，引领市场做研发”的研发理念，形成了由首席技术专家、研发工程师、新品实现工艺师、专家顾问组成的技术研发团队，同时与中南大学、四川大学等多家高校深入开展产学研用校企合作。公司掌握了贯通硬质合金制造、刀具制造和集成应用全过程的关键技术体系，成功解决了硬质合金性能稳定性和精度一致性的控制难题。公司的核心重点产品钢件和不锈钢加工用数控刀片达到了国际先进水平，可替代进口。公司是国家级高新技术企业、国家级专精特新“小巨人”企业、湖南省新材料企业、湖南省企业技术中心，拥有博士后科研工作站、湖南省数控刀具涂层工程技术研究中心。公司自主研发的数控刀具产品多次获得“金锋奖”、“荣格技术创新奖”，锯齿刀片产品被认定为“国家制造业单项冠军产品”。未来，我们将牢牢抓住我国制造业升级的历史性机遇，利用多年积累的核心技术、产业布局、运营管理、研发创新及品牌等优势，以客户为中心、以人才为根本，专注于高精数控刀具国产化和进口替代，持续增强自主创新能力，打造中国智能数控刀具领域的引领者和国际知名的智能数控刀具中国品牌，以优异的业绩回报广大投资者、回报社会。",
+              "profileSummary": "公司是一家专业从事数控刀具产品和硬质合金制品的研发、生产和销售，具有自主研发和创新能力的高新技术企业。公司始终坚持“贴近市场做改进，引领市场做研发”的研发理念，形成了由首席技术专家、研发工程师、新品实现工艺师、专家顾问组成的技术研发团队，同时与中南大学、四川大学等多家高校深入开展产学研用校企合作。",
+              "majorProducts": "棒材、超硬刀具、金属陶瓷刀片、数控刀片、数控刀体、硬质合金锯齿刀片、硬质合金圆片、整体硬质合金刀具",
+              "revenueComposition": "数控刀具产品:55.19%;硬质合金制品:42.1%;其他业务:2.02%;钨制品:0.69%",
+              "revenueSegments": [
+                {
+                  "name": "数控刀具产品",
+                  "sharePct": 55.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硬质合金制品",
+                  "sharePct": 42.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "钨制品",
+                  "sharePct": 0.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "硬质合金锯齿刀片",
+                  "数控刀片",
+                  "整体硬质合金圆片铣刀毛坯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "欧科亿的主要经营内容是数控刀具产品（55.19%）、硬质合金制品（42.1%），具体产品集中在硬质合金锯齿刀片、数控刀片、整体硬质合金圆片铣刀毛坯。“通过收购永鑫精工进入PCB钻针领域，与原有棒材业务形成产业链协同”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善事件能否转化为可确认的经营增量，也需要先补上产品落地和客户导入，再经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才可能影响业绩。订单、收入确认、产品结构和毛利率变化没有同步改善时，股价反应更可能来自主题交易；若事件关联停留在主题层面，未形成可持续订单或利润贡献，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 24813,
+            "stockCode": "688257.SH",
+            "stockName": "新锐股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "通过收购汇联电子跨界进入PCB刀具领域，属于二梯队弹性标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688257.SH",
+              "companyName": "新锐股份",
+              "companyProfile": "公司成立于2005年8月，是一家专注于硬质合金材料与凿岩工具及矿山综合服务，集研发、制造、销售、服务为一体的国际化制造服务商。2021年10月在上海证券交易所登陆科创板正式挂牌上市。经过多年积累，公司在硬质合金及凿岩工具领域形成了完备的核心技术体系，实现了从硬质合金生产、凿岩工具制造以及矿山耗材综合服务的上下游产业链贯通和产业一体化发展的运营模式。公司通过了API认证及ISO9001质量管理、ISO14001环境管理和ISO45001职业健康安全管理三体系认证，目前累计荣获“国家高新技术企业”、“国家专精特新小巨人”、“江苏省企业技术中心”、“江苏省工业设计中心”、“江苏省高效凿岩工具工程技术研究中心”、“江苏省博士后创新实践基地”、“江苏省企业研究生工作站”、“江苏省两化融合示范企业”、“江苏省国际知名品牌”、“苏州市出口名牌企业”、“苏州市瞪羚企业”、“苏州工业园区科技领军人才企业”、“苏州工业园区示范智能车间”等资质认定，产品获得“江苏精品”、“江苏省高新技术产品”、“苏州市名牌产品”、“苏州制造”称号。从产品高端化、品牌国际化到产业多元化，公司追求以技术突破赋能客户价值，以绿色智造守护可持续发展，以开放协作共创行业未来，致力于成为中国凿岩工具的领跑者、硬质合金材料及工具的国际型制造服务商。我们期待与全球伙伴携手，在振兴民族工业与勇担社会责任的道路上，锻造更坚韧的工业基石，为社会创造持久价值。",
+              "profileSummary": "经过多年积累，公司在硬质合金及凿岩工具领域形成了完备的核心技术体系，实现了从硬质合金生产、凿岩工具制造以及矿山耗材综合服务的上下游产业链贯通和产业一体化发展的运营模式。从产品高端化、品牌国际化到产业多元化，公司追求以技术突破赋能客户价值，以绿色智造守护可持续发展，以开放协作共创行业未来，致力于成为中国凿岩工具的领跑者、硬质合金材料及工具的国际型制造服务商。",
+              "majorProducts": "金刚石取芯钻头、金属陶瓷棒材、金属陶瓷均热板、矿用工具合金、耐磨工具合金、潜孔钻具、切削工具合金、天井滚刀、新锐股份矿用凿岩工具、新锐股份硬质合金制品、牙轮钻头、钻杆",
+              "revenueComposition": "凿岩工具及配套服务:44.95%;硬质合金:29.76%;切削工具:14.55%;油服类产品:6.43%;其他业务:3.02%;其他产品:1.29%",
+              "revenueSegments": [
+                {
+                  "name": "凿岩工具及配套服务",
+                  "sharePct": 44.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硬质合金",
+                  "sharePct": 29.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "切削工具",
+                  "sharePct": 14.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "油服类产品",
+                  "sharePct": 6.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 1.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "硬质合金刀具",
+                  "碳化钨焊料",
+                  "碳化钨合金棒",
+                  "碳化钨采煤机截齿",
+                  "冷镦模具",
+                  "金刚石复合片",
+                  "地矿刀块",
+                  "天井滚刀"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "新锐股份现有业务与通过收购汇联电子跨界进入PCB刀具领域，属于二梯队弹性标的处于同一产业方向，收入主体为凿岩工具及配套服务（44.95%）、硬质合金（29.76%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变事件能否转化为可确认的经营增量，只有经由“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，业务交集才会转化为业绩增量。订单、收入确认、产品结构和毛利率变化若逐步增强，相关业务的重要性会提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 24814,
+            "stockCode": "300179.SZ",
+            "stockName": "四方达",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "布局金刚石钻针技术，并发布大规模定增扩产计划，同时受益于金刚石散热材料趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300179.SZ",
+              "companyName": "四方达",
+              "companyProfile": "公司成立于1997年，现为高新技术企业、专精特新小巨人企业、海关高级认证企业(AEO)、河南省技术创新示范企业、河南省高成长民营企业、河南省知识产权优势企业、河南省质量标杆示范企业、河南省智能制造车间试点企业以及安全生产标准化三级企业、郑州市前十大三高企业、郑州市先进制造业产业链“链主”企业，获得“绿色工厂”、绿色供应链管理企业、省长质量奖提名奖等荣誉。2011年在深交所上市，为中国聚晶金刚石行业上市公司。公司主营聚晶金刚石(简称PCD)及其相关制品的研发、生产和销售，是国内规模大、技术实力强的复合超硬材料生产厂商，是国内能批量生产及销售超大直径切削用聚晶金刚石复合片的企业，产品质量达到行业较高水平;公司产品包括石油/天然气钻探用聚晶金刚石复合片、煤田及矿山用聚晶金刚石复合片、切削刀具用聚晶金刚石复合片、聚晶金刚石拉丝模坯/拉丝模具、精密超硬刀具、矿山工具等，形成以复合超硬材料为核心，以精密金刚石工具为新的业务增长点的战略产品体系;产品广泛应用于石油钻探及矿山开采、汽车零部件、装备制造等制造领域。公司产品品种及规格齐全、规模优势明显，远销欧洲、美洲、东南亚等四十多个国家和地区。公司技术中心被认定为“国家企业技术中心”、“河南省复合超硬材料工程技术研究中心”。参与4项行业标准的制修定，主导起草2项团体标准，承担国家省市级科研项目9项，获得2项河南省科技成果鉴定并获得4项省部级科技奖励。公司与中南大学、郑州大学等知名高校进行产学研合作，2024年获得国家博士后科研工作站称号，培养研究类科研人才。",
+              "profileSummary": "公司主营聚晶金刚石(简称PCD)及其相关制品的研发、生产和销售，是国内规模大、技术实力强的复合超硬材料生产厂商，是国内能批量生产及销售超大直径切削用聚晶金刚石复合片的企业，产品质量达到行业较高水平;公司产品包括石油/天然气钻探用聚晶金刚石复合片、煤田及矿山用聚晶金刚石复合片、切削刀具用聚晶金刚石复合片、聚晶金刚石拉丝模坯/拉丝模具、精密超硬刀具、矿山工具等，形成以复合超硬材料为核心，以精密金刚石工具为新的业务增长点的战略产品体系;产品…",
+              "majorProducts": "PCD、CBN刀具、微钻、PCD、PCBN材料、公路齿、聚晶金刚石复合片、煤田齿、潜孔钻头",
+              "revenueComposition": "资源开采/工程施工类:53.6%;精密加工类:29.39%;其他:17.01%",
+              "revenueSegments": [
+                {
+                  "name": "资源开采/工程施工类",
+                  "sharePct": 53.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密加工类",
+                  "sharePct": 29.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 17.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "聚晶立方氮化硼刀具",
+                  "金刚石刀具",
+                  "聚晶金刚石微钻钻头",
+                  "煤田/矿山用金刚石复合片",
+                  "石油/天然气钻探用聚晶金刚石复合片",
+                  "聚晶金刚石刀具",
+                  "聚晶金刚石拉丝模胚",
+                  "金刚石潜孔钻头"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "四方达现有业务与布局金刚石钻针技术，并发布大规模定增扩产计划，同时受益于金刚石散热材料趋势处于同一产业方向，收入主体为资源开采/工程施工类（53.6%）、精密加工类（29.39%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变产能释放与行业供给变化，只有经由“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”，业务交集才会转化为业绩增量。在建工程转固、产能利用率、产销率、库存和产品价格若逐步增强，相关业务的重要性会提高；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 24819,
+            "stockCode": "688519.SH",
+            "stockName": "南亚新材",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内领先的高频高速覆铜板厂商，积极推进海外大客户认证，若通过则业绩预期存在上修空间。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688519.SH",
+              "companyName": "南亚新材",
+              "companyProfile": "公司创立于2000年，是国内专业从事覆铜箔板和粘结片等复合材料及其制品设计、研发、制造及服务于一体的高新技术企业。公司产品广泛应用于消费电子、计算机、通讯、数据中心、汽车电子、安防、航空航天和工业控制等终端领域，形成了以CCL行业制造与方案解决的业务架构。公司以上海总部为中心，在上海设有研发中心及华东生产基地，在广东东莞设有研发测试中心，在江西设有研发分中心及华南生产基地，围绕长三角，珠三角两个电子信息最为集聚的区域形成生产与研发“一核两翼”的新发展格局。智新材，创未来！公司秉承“以人为本、集思广益、持之以恒、共创大业”的企业发展精神，贯彻“市场导向、管理创新、质量至上、技术领先”的经营方针，以科技创新之力，以客户为中心，以奋斗者的姿态，朝着成为全球领先的CCL行业制造与方案解决公司目标稳步迈进。",
+              "profileSummary": "公司创立于2000年，是国内专业从事覆铜箔板和粘结片等复合材料及其制品设计、研发、制造及服务于一体的高新技术企业。公司产品广泛应用于消费电子、计算机、通讯、数据中心、汽车电子、安防、航空航天和工业控制等终端领域，形成了以CCL行业制造与方案解决的业务架构。",
+              "majorProducts": "车用板、覆铜箔层压板、高频高速系列、普通板系列、无卤板系列、无铅板系列、粘结片",
+              "revenueComposition": "覆铜板:77.56%;粘结片:20.51%;其他业务:1.93%",
+              "revenueSegments": [
+                {
+                  "name": "覆铜板",
+                  "sharePct": 77.56,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "粘结片",
+                  "sharePct": 20.51,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "覆铜板(CCL)",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "粘结片",
+                    "category": "电路板材料"
+                  }
+                ],
+                "knownProducts": [
+                  "粘结片",
+                  "覆铜板(CCL)"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "南亚新材的相关业务已决定公司大部分经营表现：覆铜板（77.56%）、粘结片（20.51%）合计约占收入的98.07%。公司与事件的直接业务联系是：国内领先的高频高速覆铜板厂商，积极推进海外大客户认证，若通过则业绩预期存在上修空间，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 24820,
+            "stockCode": "603186.SH",
+            "stockName": "华正新材",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国产算力核心CCL供应商，PTFE技术领先，在特定技术路线下具备卡位优势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603186.SH",
+              "companyName": "华正新材",
+              "companyProfile": "公司是华立集团的控股成员企业，是国内最早从事研发生产环氧树脂覆铜板的企业之一，连续获得五届“中国印制电路行业优秀民族品牌企业”称号。2017年1月3日，公司正式在上海证券交易所A股上市。公司已通过ISO9001质量管理体系、IATF16949汽车板质量管理体系和ISO14001环境管理体系认证，主营覆铜板(包括粘结片)、复合材料(包括功能性复合材料和交通物流用复合材料)和膜材料等产品的设计、研发、生产及销售，产品均已通过中国CQC、美国UL认证且符合欧盟REACH、ROHS标准，并广泛应用于5G通讯、服务器、数据中心、半导体封装、新能源汽车、智慧家电、医疗设备、轨道交通、绿色物流等领域。公司先后荣获中国驰名商标、国家高新技术企业、中国印制电路行业优秀民族品牌、浙江省企业技术中心、国家企业技术中心、浙江省重点企业研究院等称号。迄今，华正新材拥有三大主要生产基地，业务覆盖100多个国家和地区。展望未来，华正将继续秉持创新与专业精神双轮驱动，始终与时代共呼吸，突破关键核心技术，打破技术垄断，致力于成为高端电子基础材料和特种复合材料等新材料应用领域总体解决方案的提供商。",
+              "profileSummary": "公司已通过ISO9001质量管理体系、IATF16949汽车板质量管理体系和ISO14001环境管理体系认证，主营覆铜板(包括粘结片)、复合材料(包括功能性复合材料和交通物流用复合材料)和膜材料等产品的设计、研发、生产及销售，产品均已通过中国CQC、美国UL认证且符合欧盟REACH、ROHS标准，并广泛应用于5G通讯、服务器、数据中心、半导体封装、新能源汽车、智慧家电、医疗设备、轨道交通、绿色物流等领域。迄今，华正新材拥有三大主要生产…",
+              "majorProducts": "CME-3、FR-4环氧玻纤布基覆铜板、绝缘层压板、铝基覆铜板、热塑性蜂窝板",
+              "revenueComposition": "覆铜板:77.25%;交通物流用复合材料:8.64%;导热材料:6.72%;功能性复合材料:3.88%;其他材料:3.51%",
+              "revenueSegments": [
+                {
+                  "name": "覆铜板",
+                  "sharePct": 77.25,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "交通物流用复合材料",
+                  "sharePct": 8.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "导热材料",
+                  "sharePct": 6.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "功能性复合材料",
+                  "sharePct": 3.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他材料",
+                  "sharePct": 3.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "覆铜板(CCL)",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "高频覆铜板",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "金属基板",
+                    "category": "电路板材料"
+                  }
+                ],
+                "knownProducts": [
+                  "PP蜂窝板",
+                  "玻纤复合材料",
+                  "覆铜板(CCL)",
+                  "金属基板",
+                  "高频覆铜板",
+                  "电池箱盖",
+                  "锂离子电池用铝塑膜"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华正新材的事件暴露较为直接：覆铜板占收入的77.25%，相关业务不是边缘尝试；具体业务抓手是：国产算力核心CCL供应商，PTFE技术领先，在特定技术路线下具备卡位优势。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于技术商业化与产品迭代速度是否通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”放大，尤其需要用客户认证、量产良率、订单规模、产品收入占比和毛利率区分行业普涨与公司自身竞争力。如果技术路线变化、良率爬坡缓慢或竞争方案更快成熟，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 24821,
+            "stockCode": "002636.SZ",
+            "stockName": "金安国纪",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内覆铜板主要生产商之一，受益于行业整体景气度提升和涨价周期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002636.SZ",
+              "companyName": "金安国纪",
+              "companyProfile": "公司从事的主要业务为电子行业基础材料覆铜板的研发、生产和销售。主要产品包括各种通用FR-5、FR-4、CEM-3等系列覆铜板及铝基覆铜板、半固化片等和特殊指标要求的无卤环保、高阻燃、耐CAF、高TG、高CTI等系列覆铜板，广泛用于家电、计算机、照明、汽车、通讯等行业，具有较强的产业稳定性。公司诚实守信，守法经营，稳健发展。经过多年的发展，赢得了广大客户、供应商、合作银行及当地政府的广泛信任。公司通过了ISO9001质量管理体系认证、ISO14001环境管理体系认证、美国UL认证中国CQC认证和特殊客户要求的其他相关认证。公司注重品牌建设，加强质量体系管理，不断提高用户满意度，通过良好的品牌效应和高质量、高性价比产品的供应，有效建立了与客户的信任关系、提高了公司的知名度，为公司可持续发展建立了良好的基础。公司除生产、销售覆铜板系列产品外，还从事覆铜板的原材料电子级玻纤布以及下游PCB产品的生产和销售。公司生产的电子级玻纤布可为日益扩大的覆铜板产能提供原材料保障。公司的PCB工厂，不仅能够充分应用公司的覆铜板产品，还可以对公司覆铜板产品的研发和工艺改善提供技术支撑，进而形成产业链协同效应。",
+              "profileSummary": "公司除生产、销售覆铜板系列产品外，还从事覆铜板的原材料电子级玻纤布以及下游PCB产品的生产和销售。公司的PCB工厂，不仅能够充分应用公司的覆铜板产品，还可以对公司覆铜板产品的研发和工艺改善提供技术支撑，进而形成产业链协同效应。",
+              "majorProducts": "CEM-3覆铜板、FR-4覆铜板、FR-5",
+              "revenueComposition": "覆铜板（含半固化片）:91.98%;PCB:2.47%;医疗器械:2.29%;其他业务:1.8%;医药:1.46%",
+              "revenueSegments": [
+                {
+                  "name": "覆铜板（含半固化片）",
+                  "sharePct": 91.98,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "PCB",
+                  "sharePct": 2.47,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "医疗器械",
+                  "sharePct": 2.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医药",
+                  "sharePct": 1.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "覆铜板(CCL)",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "铝基覆铜板(CCL)",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "半固化片",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "电子级玻纤布",
+                    "category": "玻璃纤维制品"
+                  }
+                ],
+                "knownProducts": [
+                  "麻杏止咳糖浆",
+                  "板蓝根颗粒",
+                  "电子级玻纤布",
+                  "半固化片",
+                  "覆铜板(CCL)",
+                  "铝基覆铜板(CCL)"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "金安国纪的事件暴露较为直接：覆铜板（含半固化片）（91.98%）、PCB（2.47%）合计约占收入的94.45%，相关业务不是边缘尝试；具体业务抓手是：国内覆铜板主要生产商之一，受益于行业整体景气度提升和涨价周期。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，尤其需要用产品报价、订单排期、产销率和毛利率区分行业普涨与公司自身竞争力。如果供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 24822,
+            "stockCode": "600176.SH",
+            "stockName": "中国巨石",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "全球玻纤龙头，积极布局高端电子布，受益于AI带来的全品类电子布供需紧张和涨价。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600176.SH",
+              "companyName": "中国巨石",
+              "companyProfile": "公司是中国建材股份有限公司玻璃纤维业务的核心企业，以玻璃纤维及制品的生产与销售为主营业务，是我国新材料行业进入资本市场早，企业规模大的上市公司之一。经过多年的努力，中国巨石已成为治理完善、战略清晰、资产优良、文化优秀、管理精细、技术先进、营销网络完整的行业龙头企业。公司拥有具有自主知识产权的大型无碱池窑、环保池窑的设计和建造技术；研发了国际首创的纯氧燃烧技术并进行了工业化应用，大大降低单位产能能耗。公司建有玻纤研发实验基地，包括国家认定企业技术中心、省级重点实验室及博士后科研工作站等研发机构，所属检测中心通过了国家实验室认可委员会认可，并获得德国船级社GL认证。",
+              "profileSummary": "公司是中国建材股份有限公司玻璃纤维业务的核心企业，以玻璃纤维及制品的生产与销售为主营业务，是我国新材料行业进入资本市场早，企业规模大的上市公司之一。公司建有玻纤研发实验基地，包括国家认定企业技术中心、省级重点实验室及博士后科研工作站等研发机构，所属检测中心通过了国家实验室认可委员会认可，并获得德国船级社GL认证。",
+              "majorProducts": "中国玻纤缠绕、拉挤、编织用直接无捻粗纱、中国玻纤粉剂短切原丝毡、中国玻纤缝编短切毡、中国玻纤缝编复合毡、中国玻纤连续玻璃纤维纱、中国玻纤模压用干法短切原丝、中国玻纤膨体纱、中国玻纤强PBT、PET用干法短切原丝、中国玻纤热塑性塑料用合股无捻粗纱、中国玻纤湿法短切原丝、中国玻纤无捻粗纱布、中国玻纤无念粗纱布复合毡、中国玻纤增强PA用干法短切原丝、中国玻纤增强PP用干法短切原丝、中国玻纤增强PP用合股无捻粗纱",
+              "revenueComposition": "玻纤纱及制品:97.16%;其他业务:1.87%;其他:0.97%",
+              "revenueSegments": [
+                {
+                  "name": "玻纤纱及制品",
+                  "sharePct": 97.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "玻璃纤维"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中国巨石当前收入集中在玻纤纱及制品（97.16%）、其他业务（1.87%），现有产品以玻璃纤维为主，与新闻所指的“全球玻纤龙头，积极布局高端电子布，受益于AI带来的全品类电子布供需紧张和涨价”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，供需缺口与产品价格才可能沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。在此之前，产品报价、订单排期、产销率和毛利率若没有出现，事件对公司基本面的影响应按较弱处理；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会进一步压低相关性。"
+          },
+          {
+            "sourceRowNumber": 24823,
+            "stockCode": "002080.SZ",
+            "stockName": "中材科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "电子布全能型选手，T布核心供应商，受益于高端电子布需求爆发。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002080.SZ",
+              "companyName": "中材科技",
+              "companyProfile": "公司是2001年12月28日在国家工商行政管理总局注册设立的股份制企业。2006年11月20日，公司A股股票在深交所上市。公司承继了原南京玻璃纤维研究设计院、北京玻璃钢研究设计院和苏州非金属矿工业设计研究院三个科研院所五十多年的核心技术资源和人才优势，拥有完整的非金属矿物材料、玻璃纤维、纤维复合材料技术产业链，是我国特种纤维复合材料领域集研发、设计、产品制造与销售、技术装备集成于一体的高新技术企业。2024年，公司围绕新能源、新材料、节能减排等战略新兴产业方向，聚焦特种纤维、复合材料、新能源材料三大赛道，集中优势资源大力发展风电叶片、玻璃纤维及制品、锂电池隔膜三大主导产业，同时从事高压复合气瓶、膜材料及其他复合材料制品的研发、制造及销售，业务产品紧扣新能源、航空航天、节能减排等应用领域。",
+              "profileSummary": "公司承继了原南京玻璃纤维研究设计院、北京玻璃钢研究设计院和苏州非金属矿工业设计研究院三个科研院所五十多年的核心技术资源和人才优势，拥有完整的非金属矿物材料、玻璃纤维、纤维复合材料技术产业链，是我国特种纤维复合材料领域集研发、设计、产品制造与销售、技术装备集成于一体的高新技术企业。2024年，公司围绕新能源、新材料、节能减排等战略新兴产业方向，聚焦特种纤维、复合材料、新能源材料三大赛道，集中优势资源大力发展风电叶片、玻璃纤维及制品、锂电…",
+              "majorProducts": "电子布、电子级细纱、短切毡、多轴向经编织物、方格布、风机叶片用高模量纱、热塑性纤维、无捻粗纱、中材AGM隔板、中材MW级风机叶片、中材TXZ型陶瓷纤维纸、中材摆锤法岩棉生产技术及设备、中材玻璃微纤维纸、中材玻纤覆膜滤料、中材玻纤空气过滤纸、中材玻纤生产线设计与安装、中材玻纤湿法薄毡生产技术及设备、中材玻纤装备、中材池窑拉丝技术装备、中材低介电玻璃纤维、中材高硅氧玻璃纤维、中材高模量玻璃纤维、中材高强度玻璃纤维、中材空气净化过滤毡、中材离心喷吹法生产技术及设备、中材平面仿形织物、中材自动换筒拉丝机",
+              "revenueComposition": "风电叶片:41.71%;玻璃纤维及制品:25.84%;锂电池隔膜:7.94%;特种纤维复合材料技术与装备:6.19%;工程复合材料:5.32%;高压复合气瓶:4.66%;先进复合材料:3.56%;膜材料制品:2.99%;其他:1.78%",
+              "revenueSegments": [
+                {
+                  "name": "风电叶片",
+                  "sharePct": 41.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "玻璃纤维及制品",
+                  "sharePct": 25.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锂电池隔膜",
+                  "sharePct": 7.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特种纤维复合材料技术与装备",
+                  "sharePct": 6.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程复合材料",
+                  "sharePct": 5.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高压复合气瓶",
+                  "sharePct": 4.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "先进复合材料",
+                  "sharePct": 3.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "膜材料制品",
+                  "sharePct": 2.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "耐碱纤维",
+                  "酚醛树脂",
+                  "玻璃纤维",
+                  "短切纤维",
+                  "玻璃纤维过滤纸",
+                  "玻璃钢地铁防护罩",
+                  "玻璃钢电杆",
+                  "玻璃钢雷达罩"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中材科技的业务范围能够覆盖电子布全能型选手，T布核心供应商，受益于高端电子布需求爆发所处的产业环节，但当前风电叶片（41.71%）、玻璃纤维及制品（25.84%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”完成兑现，并在终端销量、客户采购量、公司出货和相关产品收入增速上形成持续改善；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 24824,
+            "stockCode": "603256.SH",
+            "stockName": "宏和科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "T布技术领先，卡位稀缺，受益于先进封装及AI需求爆发。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603256.SH",
+              "companyName": "宏和科技",
+              "companyProfile": "公司是全球领先的中高端电子级玻璃纤维布专业厂商。在高端电子布领域，宏和科技是全球少数具备极薄布生产能力的厂商之一，成功打破国际垄断，实现我国电子级玻璃纤维布行业历史性的突破，降低了国内市场对进口电子布产品的依赖。公司主要产品为中高端电子布产品，具有绝缘、增强、高耐热、高耐化性、高耐燃性等优点，是铜箔基板的核心原材料之一，能使基板具备优质的电气特性及机械强度等性能，广泛应用于智能手机、平板、笔记本电脑、AI服务器、5G基站、汽车、消费类电子产品、工业控制、仪器仪表、医疗机械、航天航空、IC芯片封装基板等高科技电子产品中。黄石宏和电子级玻璃纤维超细纱顺利投产，黄石宏和募投项目“年产5040万米5G用高端电子级玻璃纤维布开发与生产项目”顺利投产，公司实现了电子纱、电子布一体化生产和经营，进一步提高了产品市场占有率。公司以客户为中心，确保客户供应安全，加强与客户的技术服务、交流工作，持续加大研发创新工作，始终保持行业技术领先地位，保持产品品质稳定。公司将在技术提升、管理提升、人才培养、团队建设等方面落实工作，努力创造价值，回报股东，回馈社会。",
+              "profileSummary": "在高端电子布领域，宏和科技是全球少数具备极薄布生产能力的厂商之一，成功打破国际垄断，实现我国电子级玻璃纤维布行业历史性的突破，降低了国内市场对进口电子布产品的依赖。公司主要产品为中高端电子布产品，具有绝缘、增强、高耐热、高耐化性、高耐燃性等优点，是铜箔基板的核心原材料之一，能使基板具备优质的电气特性及机械强度等性能，广泛应用于智能手机、平板、笔记本电脑、AI服务器、5G基站、汽车、消费类电子产品、工业控制、仪器仪表、医疗机械、航天航空…",
+              "majorProducts": "薄型电子级玻璃纤维布、超薄型电子级玻璃纤维布、极薄型电子级玻璃纤维布",
+              "revenueComposition": "E玻璃纤维布:80.31%;特种电子布:15.24%;纱:3.96%;其他业务:0.49%",
+              "revenueSegments": [
+                {
+                  "name": "E玻璃纤维布",
+                  "sharePct": 80.31,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "特种电子布",
+                  "sharePct": 15.24,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "纱",
+                  "sharePct": 3.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电子级玻纤布",
+                    "category": "玻璃纤维制品"
+                  }
+                ],
+                "knownProducts": [
+                  "电子玻璃纤维纱",
+                  "电子级玻纤布"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "宏和科技的事件逻辑具备真实业务底座，但尚不足以代表全部公司：特种电子布占收入的15.24%。公司与事件的具体联系在于：T布技术领先，卡位稀缺，受益于先进封装及AI需求爆发，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 24825,
+            "stockCode": "301526.SZ",
+            "stockName": "国际复材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "二代布出货量领先，深度绑定下游CCL龙头，受益于M8/M9材料放量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301526.SZ",
+              "companyName": "国际复材",
+              "companyProfile": "公司以高性能新材料为核心业务，是云天化集团旗下玻纤及复合材料产业板块的重要支柱。公司成立于1991年，专注于研制品质稳定、持续创新的高性能产品，致力于为客户提供更具价值的服务和应用解决方案，是一家集研发、生产、销售玻璃纤维及复合材料于一体的企业。经过三十余年的发展，公司在全球拥有多个生产基地及多条玻纤池窑生产线，玻纤年产能规模位居全球前列。在清洁能源、节能减排、5G通讯等核心业务领域，公司处于全球领先地位。其营销网络遍布全球，在多个国家和地区设立贸易子公司，产品畅销全球数十个国家和地区，并与国内外知名企业建立了长期稳定的战略合作关系。在技术创新方面，公司通过多年探索，拥有多项发明和实用型专利。主要产品通过了挪威船级社认证、国际可持续发展和碳认证以及产品安全认证，确保了产品的高品质与国际认可度。顺应集团发展思路，公司坚持“卓越运营”、“产品创新”、“纤材协同”三大战略发展主题。公司紧抓绿色能源、汽车轻量化、新基建、节能建筑、电子通信等市场机遇，全面提升核心竞争力，致力于成为全球最具价值的玻璃纤维及复合材料企业，不断向打造具有全球竞争力的世界一流绿色化工产业集团的目标迈进。",
+              "profileSummary": "公司以高性能新材料为核心业务，是云天化集团旗下玻纤及复合材料产业板块的重要支柱。公司成立于1991年，专注于研制品质稳定、持续创新的高性能产品，致力于为客户提供更具价值的服务和应用解决方案，是一家集研发、生产、销售玻璃纤维及复合材料于一体的企业。",
+              "majorProducts": "粗纱、粗纱制品、细纱、细纱制品",
+              "revenueComposition": "玻璃纤维纱:57.26%;玻璃纤维布:40.05%;其他:2.69%",
+              "revenueSegments": [
+                {
+                  "name": "玻璃纤维纱",
+                  "sharePct": 57.26,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "玻璃纤维布",
+                  "sharePct": 40.05,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "玻璃纤维布",
+                    "category": "玻璃纤维制品"
+                  }
+                ],
+                "knownProducts": [
+                  "玻璃纤维",
+                  "湿法薄毡",
+                  "玻璃纤维布",
+                  "玻璃纤维织物"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "国际复材与事件存在真实业务交集：公司已有玻璃纤维布，与二代布出货量领先，深度绑定下游CCL龙头，受益于M8/M9材料放量所处的产业环节一致。玻璃纤维纱（57.26%）、玻璃纤维布（40.05%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 24826,
+            "stockCode": "301511.SZ",
+            "stockName": "德福科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "高端PCB铜箔龙头，积极扩产HVLP及载体铜箔，受益于AI带来的高端铜箔需求增长和国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301511.SZ",
+              "companyName": "德福科技",
+              "companyProfile": "公司是全球电解铜箔行业领军企业，主营业务为电解铜箔的研发、生产与销售，产品涵盖各类高性能锂电铜箔与电子电路铜箔。公司深耕铜箔行业四十年，始终以技术创新为发展核心，高度重视自主研发与技术积累。公司倾力打造德福研究院，汇聚专业科研团队并配备先进的研发设备，持续强化工艺创新与制造能力，以技术突破推动高质量可持续发展。同时，围绕铜箔产业链关键环节，公司布局了涵盖添加剂技术开发、生产装备设计制造及电解阳极材料研发生产的配套子公司，全面掌握铜箔核心技术，为下游新能源及高端消费电子领域提供定制化解决方案与专业技术服务。公司已深度绑定国内下游头部客户，并加速推进全球化业务布局。通过设立海外营销中心与组建专业销售团队，公司精准洞察国际市场需求与行业法规动态，已与韩国、日本、欧洲及东南亚等地区的多家行业龙头企业建立战略合作，产品顺利导入并实现规模化交付。在此基础上，公司持续优化全球产能布局，致力于为全球客户提供高效、稳定、优质的产品与服务。",
+              "profileSummary": "公司是全球电解铜箔行业领军企业，主营业务为电解铜箔的研发、生产与销售，产品涵盖各类高性能锂电铜箔与电子电路铜箔。同时，围绕铜箔产业链关键环节，公司布局了涵盖添加剂技术开发、生产装备设计制造及电解阳极材料研发生产的配套子公司，全面掌握铜箔核心技术，为下游新能源及高端消费电子领域提供定制化解决方案与专业技术服务。",
+              "majorProducts": "电子电路铜箔、锂电铜箔",
+              "revenueComposition": "锂电铜箔:80.61%;电子电路铜箔:14.32%;其他业务:5.06%",
+              "revenueSegments": [
+                {
+                  "name": "锂电铜箔",
+                  "sharePct": 80.61,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电子电路铜箔",
+                  "sharePct": 14.32,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "覆铜板铜箔",
+                    "category": "铜压延加工"
+                  },
+                  {
+                    "name": "印刷电路板铜箔",
+                    "category": "铜压延加工"
+                  },
+                  {
+                    "name": "固态电池用复合铜箔",
+                    "category": "负极集流体"
+                  },
+                  {
+                    "name": "多孔铜箔",
+                    "category": "负极集流体"
+                  },
+                  {
+                    "name": "锂电铜箔",
+                    "category": "负极集流体"
+                  }
+                ],
+                "knownProducts": [
+                  "印刷电路板铜箔",
+                  "覆铜板铜箔",
+                  "固态电池用复合铜箔",
+                  "多孔铜箔",
+                  "锂电铜箔"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "德福科技与事件的关系已经落在存量主业，而非远期概念：锂电铜箔占收入的80.61%。公司在产业链中的具体抓手是：高端PCB铜箔龙头，积极扩产HVLP及载体铜箔，受益于AI带来的高端铜箔需求增长和国产替代。本次事件若改变产能释放与行业供给变化，影响会沿着“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；在建工程转固、产能利用率、产销率、库存和产品价格比主题热度更有解释力。若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 24827,
+            "stockCode": "301217.SZ",
+            "stockName": "铜冠铜箔",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内主要PCB铜箔供应商，受益于AI带来的高端铜箔需求及加工费上涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301217.SZ",
+              "companyName": "铜冠铜箔",
+              "companyProfile": "公司成立于2010年，是铜陵有色金属集团股份有限公司控股子公司，主要从事各类高精度电子铜箔研发、制造和销售的高新技术企业。2022年于深圳证券交易所正式挂牌上市，是安徽省第一家分拆上市企业。公司技术工艺水平居国内前列、国际先进，是中国电子材料行业协会副理事长单位、电子铜箔分会理事长单位。公司相继获得国家级“绿色工厂”称号，连续多届获“中国电子材料行业五十强企业”和“中国电子材料行业电子铜箔专业十强”荣誉称号，被安徽省国资委遴选为创新改革试点单位，入选国务院国资委“国企双百行动”企业名单。作为国家标准《印制板用电解铜箔》主持修订单位，以及国家标准《印刷电路用金属箔通用规范》及行业标准《锂离子电池用电解铜箔》主要参与制定者，铜冠铜箔具有较高的行业地位和知名度。",
+              "profileSummary": "公司成立于2010年，是铜陵有色金属集团股份有限公司控股子公司，主要从事各类高精度电子铜箔研发、制造和销售的高新技术企业。作为国家标准《印制板用电解铜箔》主持修订单位，以及国家标准《印刷电路用金属箔通用规范》及行业标准《锂离子电池用电解铜箔》主要参与制定者，铜冠铜箔具有较高的行业地位和知名度。",
+              "majorProducts": "PCB铜箔、锂电池铜箔",
+              "revenueComposition": "PCB铜箔:55.37%;锂电池铜箔:39.19%;铜扁线等:4.6%;其他业务:0.84%",
+              "revenueSegments": [
+                {
+                  "name": "PCB铜箔",
+                  "sharePct": 55.37,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "锂电池铜箔",
+                  "sharePct": 39.19,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "铜扁线等",
+                  "sharePct": 4.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "印刷电路板铜箔",
+                    "category": "铜压延加工"
+                  },
+                  {
+                    "name": "锂电铜箔",
+                    "category": "负极集流体"
+                  }
+                ],
+                "knownProducts": [
+                  "印刷电路板铜箔",
+                  "锂电铜箔",
+                  "漆包铜扁线"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "铜冠铜箔与事件的关系已经落在存量主业，而非远期概念：PCB铜箔占收入的55.37%。公司在产业链中的具体抓手是：国内主要PCB铜箔供应商，受益于AI带来的高端铜箔需求及加工费上涨。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 24829,
+            "stockCode": "605589.SH",
+            "stockName": "圣泉集团",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "AI用高阶树脂核心供应商，受益于M7及以上等级CCL材料放量及涨价。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "605589.SH",
+              "companyName": "圣泉集团",
+              "companyProfile": "公司始建于1979年，是一家专注于各类植物秸秆与合成树脂的研发和应用的高新技术企业。历经多年发展，公司从一家乡镇企业成长为国际知名的生物制造和化学新材料解决方案提供商，于2021年在上海证券交易所上市。公司生产基地占地面积广阔，产业覆盖生物质精炼、电子化学品、新能源、工业酚醛和复合材料、铸造材料、健康医药等领域。公司秉持“一切为了您的需要”的经营理念，产品远销欧美、东南亚等50多个国家和地区，为上万家客户提供产品及解决方案。公司拥有强大的科研实力，拥有800多人的科研团队、16个专业研究所，与50余所高校院所合作，在核心技术上拥有多项自主知识产权，并参与多项标准制定。公司荣获国家技术创新示范企业、国家知识产权示范企业、农业产业化国家重点龙头企业等荣誉，入选首批国家级“绿色工厂”和中国工业碳达峰“领跑者”企业，拥有2家国家制造业单项冠军示范企业、1家国家专精特新小巨人企业。公司成为全球秸秆绿色节能综合利用引领者，主导产品呋喃树脂和酚醛树脂产销规模位居全球首位。公司是“神舟”飞船返回舱隔热材料、第四代核电站核燃料包覆材料、商业航天发射热防护材料、“复兴号”高铁减重防火材料等先进材料供应商，也是半导体电子化学材料国产化平台型企业。",
+              "profileSummary": "公司始建于1979年，是一家专注于各类植物秸秆与合成树脂的研发和应用的高新技术企业。公司秉持“一切为了您的需要”的经营理念，产品远销欧美、东南亚等50多个国家和地区，为上万家客户提供产品及解决方案。",
+              "majorProducts": "圣泉集团L-阿拉伯糖、圣泉集团电子树脂、圣泉集团酚醛泡沫板、圣泉集团覆膜砂树脂、圣泉集团摩擦材料树脂、圣泉集团磨具材料树脂、圣泉集团耐火材料树脂、圣泉集团食用木糖、圣泉集团铸造用呋喃树脂、圣泉集团铸造用固化剂、圣泉集团铸造用陶瓷过滤器、圣泉集团铸造用涂料",
+              "revenueComposition": "合成树脂及衍生品:87.18%;生物质产品:10.12%;其他业务:1.82%;其他产品:0.88%",
+              "revenueSegments": [
+                {
+                  "name": "合成树脂及衍生品",
+                  "sharePct": 87.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生物质产品",
+                  "sharePct": 10.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 0.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "冷芯盒树脂",
+                    "category": "其他合成树脂"
+                  },
+                  {
+                    "name": "环氧树脂",
+                    "category": "环氧树脂"
+                  },
+                  {
+                    "name": "电子级聚苯醚树脂",
+                    "category": "其他合成树脂"
+                  },
+                  {
+                    "name": "碳氢树脂",
+                    "category": "热塑性树脂"
+                  },
+                  {
+                    "name": "自硬呋喃树脂",
+                    "category": "呋喃树脂"
+                  },
+                  {
+                    "name": "酚醛树脂",
+                    "category": "酚醛树脂"
+                  }
+                ],
+                "knownProducts": [
+                  "沥青乳化剂",
+                  "环氧固化剂",
+                  "铸造涂料",
+                  "木质素染料分散剂",
+                  "冷芯盒树脂",
+                  "电子级聚苯醚树脂",
+                  "马来酰亚胺树脂",
+                  "自硬呋喃树脂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "圣泉集团与新闻之间有明确产品抓手：冷芯盒树脂、环氧树脂、电子级聚苯醚树脂，对应AI用高阶树脂核心供应商，受益于M7及以上等级CCL材料放量及涨价。收入主体目前是合成树脂及衍生品（87.18%）、生物质产品（10.12%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 24830,
+            "stockCode": "601208.SH",
+            "stockName": "东材科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "AI用高阶树脂核心供应商，受益于高频高速覆铜板需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601208.SH",
+              "companyName": "东材科技",
+              "companyProfile": "公司是一家专业从事新材料研发、制造、销售的科技型上市公司，长期致力于为社会提供安全、环保的新材料解决方案，创造美好新生活。公司一贯秉承“科技立企、实干兴业”的发展理念，依托国家绝缘材料工程中心、国家级企业技术中心、博士后科研工作站三大创新平台，依靠一支主要由博士、硕士组成的高素质的研发团队，坚持走自主创新之路，重点发展绝缘膜材料、光学膜材料、新型绝缘材料和制品、环保阻燃材料、精细化工材料等系列产品，服务于新能源、智能电网、消费电子、平板显示、电工电气、军工等诸多领域。公司产品以其优异的性能和良好的声誉远销50多个国家和地区，与众多国外知名企业建立了长期稳定的合作关系。公司通过创新系统化、技术关联化、产品多元化和服务专业化，努力把东财科技打造成为世界知名的创新型材料生产服务商。",
+              "profileSummary": "公司是一家专业从事新材料研发、制造、销售的科技型上市公司，长期致力于为社会提供安全、环保的新材料解决方案，创造美好新生活。公司一贯秉承“科技立企、实干兴业”的发展理念，依托国家绝缘材料工程中心、国家级企业技术中心、博士后科研工作站三大创新平台，依靠一支主要由博士、硕士组成的高素质的研发团队，坚持走自主创新之路，重点发展绝缘膜材料、光学膜材料、新型绝缘材料和制品、环保阻燃材料、精细化工材料等系列产品，服务于新能源、智能电网、消费电子、平…",
+              "majorProducts": "PC薄膜、层压、模压制品、非织布、浸渍漆、浸渍纤维制品、精细化工产品、聚丙烯薄膜、聚酯薄膜、聚酯材料、模塑料、漆包线漆、柔软复合材料、树脂、涂布产品、云母制品",
+              "revenueComposition": "电子:30%;光学膜:27.47%;新能源材料:24.99%;绝缘:9.28%;其他:3.46%;环保阻燃:3.02%;材料销售收入:0.93%;废料销售:0.62%;其他-其他:0.17%;纺织品销售:0.04%;房租收入:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "电子",
+                  "sharePct": 30.0,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "光学膜",
+                  "sharePct": 27.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源材料",
+                  "sharePct": 24.99,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "绝缘",
+                  "sharePct": 9.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "环保阻燃",
+                  "sharePct": 3.02,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "材料销售收入",
+                  "sharePct": 0.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "废料销售",
+                  "sharePct": 0.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他-其他",
+                  "sharePct": 0.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "纺织品销售",
+                  "sharePct": 0.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "房租收入",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "环保阻燃共聚型聚酯树脂",
+                    "category": "聚酯树脂"
+                  },
+                  {
+                    "name": "电子级双马来酰亚胺树脂",
+                    "category": "其他合成树脂"
+                  },
+                  {
+                    "name": "电子级活性酯树脂",
+                    "category": "其他合成树脂"
+                  },
+                  {
+                    "name": "电子级碳氢树脂",
+                    "category": "热塑性树脂"
+                  },
+                  {
+                    "name": "电子级聚苯醚树脂",
+                    "category": "其他合成树脂"
+                  },
+                  {
+                    "name": "电容器薄膜",
+                    "category": "电路类器件材料"
+                  }
+                ],
+                "knownProducts": [
+                  "电子级双马来酰亚胺树脂",
+                  "电子级活性酯树脂",
+                  "电子级聚苯醚树脂",
+                  "环保阻燃共聚型聚酯树脂",
+                  "电子级碳氢树脂",
+                  "电容器薄膜",
+                  "金属化膜",
+                  "MLCC离型基膜"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "东材科技已经参与事件相关业务，但收入基数仍小：环保阻燃占收入的3.02%，说明公司已有业务抓手，但“AI用高阶树脂核心供应商，受益于高频高速覆铜板需求增长”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于终端需求与渗透率变化能否驱动“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，从而推动业务跨过小规模阶段。在此之前，终端销量、客户采购量、公司出货和相关产品收入增速比总收入增速更值得跟踪；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 24839,
+            "stockCode": "603228.SH",
+            "stockName": "景旺电子",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "汽车PCB龙头，战略性重点布局AI计算领域，产品矩阵齐全，积极扩产高端产能。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603228.SH",
+              "companyName": "景旺电子",
+              "companyProfile": "公司是全球领先的印制电路板及高端电子材料研发、生产和销售的国家高新技术企业。作为世界上最大的印制电路板供应商之一，我们在全球设立11个办事处，提供FAE本地化即时服务。公司是国家知识产权优势企业，为客户提供最可靠的印制电路解决方案，公司的行业知名度、优质客户认可度较高。我们的产品覆盖多层板、类载板、厚铜板、高频高速板、金属基电路板、双面/多层柔性电路板、高密度柔性电路板、HDI板、刚挠结合板、特种材料PCB等，是国内少数产品类型覆盖刚性电路板、柔性线路板和金属基电路板的厂商。我们在汽车、通讯、计算机、电源、智能终端、工控医疗和消费类等领域为客户提供有竞争力、安全可信赖的产品、解决方案与服务。我们坚持围绕客户需求持续创新，加大基础研究投入，厚积薄发，进一步夯实公司的技术能力，满足客户更多高端产品需求，提升公司品牌力和核心竞争力。我们聚焦主航道，深耕印制电路板行业三十余年，坚持不走捷径，求真务实，稳健投资，厚积薄发。我们秉承“以人为本，制造精品，拓展企业，回报社会”的经营理念，坚持“以客户为中心、以价值创造者为本、自我批判、诚信、责任、合作、创新”的核心价值观，通过大数据信息化平台、先进的生产制造系统、深厚的技术沉淀和充满活力的组织人才团队，与产业链上下游开放合作，持续为客户创造价值，释放个人潜能，激发组织创新，强化企业核心竞争力，践行“线路联通世界，共建万物互联”的使命，致力成为全球最可信赖的电子电路制造商。",
+              "profileSummary": "公司是全球领先的印制电路板及高端电子材料研发、生产和销售的国家高新技术企业。作为世界上最大的印制电路板供应商之一，我们在全球设立11个办事处，提供FAE本地化即时服务。",
+              "majorProducts": "HDI板、多层板、封装基板、刚挠结合板、高密度柔性电路板、高频高速板、厚铜板、金属基电路板、类载板、柔性电路板、双面/多层柔性电路板、双面及多层刚性电路板、特种材料PCB",
+              "revenueComposition": "印制电路板:93.89%;其他业务:6.11%",
+              "revenueSegments": [
+                {
+                  "name": "印制电路板",
+                  "sharePct": 93.89,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 6.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "RPCB(刚性电路板)",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "金属基电路板(MCPCB)",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "FPC(柔性电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "高密度互联板(HDI)",
+                    "category": "刚性电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "RPCB(刚性电路板)",
+                  "高密度互联板(HDI)",
+                  "FPC(柔性电路板)",
+                  "金属基电路板(MCPCB)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "景旺电子已经具备RPCB(刚性电路板)、金属基电路板(MCPCB)、FPC(柔性电路板)等业务能力，汽车PCB龙头，战略性重点布局AI计算领域，产品矩阵齐全，积极扩产高端产能并非单纯概念映射。当前对应的收入被归入印制电路板（93.89%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于产能释放与行业供给变化是否通过“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”放大，并最终反映在在建工程转固、产能利用率、产销率、库存和产品价格上；需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 24840,
+            "stockCode": "688183.SH",
+            "stockName": "生益电子",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "内资数通板龙头之一，深度绑定国内外服务器及交换机大客户，受益于国产算力和海外ASIC趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688183.SH",
+              "companyName": "生益电子",
+              "companyProfile": "公司成立于1985年，于2021年2月在上海证券交易所科创板上市，是专业制作高精度、高密度、高品质印制电路板的国家高新技术企业。公司依托成熟的运营管理和健全的质量体系，秉承“市场引领，双轮驱动”的经营理念，以全员参与的品质文化、高精尖的人才团队、雄厚的工艺技术研发能力、客户至上的服务精神，成为PCB领域的先锋。公司为客户提供一站式的印制电路板解决方案，产品广泛应用于通信设备、网络设备、计算机/服务器、汽车电子、消费电子、工业控制、医疗、航空航天等领域。从产品到客户，公司一路陪伴着全球通讯技术的迭代成长，与众多世界顶尖企业建立了长期稳定的战略合作关系。随着通信基础建设、服务器、汽车电子以及智能终端等下游市场的不断发展及市场对高层数、高精度、高密度和高可靠的多层印制电路板需求增长，中高端PCB产品将保持稳定增长的需求，进一步推动公司高质量发展。“创一流企业，造百年生益”，公司始终坚持科技创新引领，把握新一轮科技革命和产业变革深入发展的机遇期，行稳致远！",
+              "profileSummary": "公司为客户提供一站式的印制电路板解决方案，产品广泛应用于通信设备、网络设备、计算机/服务器、汽车电子、消费电子、工业控制、医疗、航空航天等领域。随着通信基础建设、服务器、汽车电子以及智能终端等下游市场的不断发展及市场对高层数、高精度、高密度和高可靠的多层印制电路板需求增长，中高端PCB产品将保持稳定增长的需求，进一步推动公司高质量发展。",
+              "majorProducts": "封装测试板、高铁和航空航天领域用板、工控医疗板、计算机/服务器板、汽车电子板、通信设备板、网络设备板、消费电子板",
+              "revenueComposition": "印制电路板:96.33%;其他业务:3.67%",
+              "revenueSegments": [
+                {
+                  "name": "印制电路板",
+                  "sharePct": 96.33,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "办公工业用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "汽车用印刷电路板(PCB)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "计算机用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "网络设备用印制电路板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "工控医疗用印刷电路板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "通信类印制电路板",
+                    "category": "特种电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "工控医疗用印刷电路板",
+                  "网络设备用印制电路板",
+                  "办公工业用PCB(印刷电路板)",
+                  "汽车用印刷电路板(PCB)",
+                  "计算机用PCB(印刷电路板)",
+                  "通信类印制电路板"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "生益电子的事件暴露较为直接：印制电路板占收入的96.33%，相关业务不是边缘尝试；具体业务抓手是：内资数通板龙头之一，深度绑定国内外服务器及交换机大客户，受益于国产算力和海外ASIC趋势。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 24841,
+            "stockCode": "300964.SZ",
+            "stockName": "本川智能",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "电源PCB新秀，其CIPB产品是AI服务器电源和HVDC等高功率场景的核心解决方案，成长弹性大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300964.SZ",
+              "companyName": "本川智能",
+              "companyProfile": "公司成立于2006年，位于江苏省南京市溧水经济开发区，主要致力于高精度印制线路板的研发、生产及销售，产品主要应用于新能源、通信、汽车电子、工业控制、电力、医疗等领域。公司坚持“小批量、多品种、多批次、短交期”的市场定位，生产高品质、高精度、高密度的印制电路板。公司配备高规格的无尘净化生产车间、先进的生产和检测设备，引进包括西门子CAMSTAR的制造执行系统，赛意的设备自动化系统(EAP)、质量管理系统(QMS)、高级计划与排程系统(APS)、仓储管理系统(WMS)和设备数字化运营平台(EDO)等系统，结合其他应用系统进行业务扩展与集成，打造精益化、数字化、高度自动化的智能工厂。",
+              "profileSummary": "公司成立于2006年，位于江苏省南京市溧水经济开发区，主要致力于高精度印制线路板的研发、生产及销售，产品主要应用于新能源、通信、汽车电子、工业控制、电力、医疗等领域。公司坚持“小批量、多品种、多批次、短交期”的市场定位，生产高品质、高精度、高密度的印制电路板。",
+              "majorProducts": "本川智能多品种的印刷电路板",
+              "revenueComposition": "PCB:90.19%;其他业务:9.81%",
+              "revenueSegments": [
+                {
+                  "name": "PCB",
+                  "sharePct": 90.19,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 9.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PCB单面板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB双面板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB多层板",
+                    "category": "刚性电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB单面板",
+                  "PCB双面板",
+                  "PCB多层板"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "本川智能的相关业务已决定公司大部分经营表现：PCB占收入的90.19%。公司与事件的直接业务联系是：电源PCB新秀，其CIPB产品是AI服务器电源和HVDC等高功率场景的核心解决方案，成长弹性大，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "11条低于3星的源记录已按当前关注口径排除。",
+      "2条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "3只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

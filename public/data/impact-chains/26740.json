@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26740",
@@ -9,20 +9,11 @@
     "date": "2026-07-01"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 4,
-    "mappedStockCount": 3,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
+    "mappedStockCount": 2,
     "unmappedStockCount": 1,
     "stocks": [
-      {
-        "sourceRowNumber": 11692,
-        "stockCode": "BN.N",
-        "stockName": "Brookfield",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 11695,
         "stockCode": "300408.SZ",
@@ -30,7 +21,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 17
+        "anchorProductCount": 6
       },
       {
         "sourceRowNumber": 11699,
@@ -38,8 +29,8 @@
         "stockName": "春晖智控",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 10
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 11705,
@@ -48,15 +39,15 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 10
+        "anchorProductCount": 5
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 11692,
-        "stockCode": "BN.N",
-        "stockName": "Brookfield",
-        "rating": "★★★★",
+        "sourceRowNumber": 11699,
+        "stockCode": "300943.SZ",
+        "stockName": "春晖智控",
+        "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
@@ -67,242 +58,54 @@
     "candidateCoreProductCount": 37,
     "selectedCoreProductCount": 11,
     "selectedCompanyCoreProductCount": 11,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 15,
-    "downstreamCandidateCount": 39,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 2,
+    "relatedIndustryCandidateCount": 1,
+    "shownRelatedIndustryCount": 1
   },
-  "chain": {
-    "upstream": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
-        "code": "1140068407",
-        "name": "铬酸钾",
-        "anchorCount": 2,
+        "code": "1140154403",
+        "name": "多层片式陶瓷电容器(MLCC)",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "电路类器件",
+          "电容器",
+          "多层片式陶瓷电容器(MLCC)"
+        ],
+        "level5Industry": {
+          "code": "1200001354",
+          "name": "电路类器件"
+        },
+        "level6Industry": {
+          "code": "1200005109",
+          "name": "电容器"
+        },
+        "level7Product": {
+          "code": "1140154403",
+          "name": "多层片式陶瓷电容器(MLCC)"
+        },
+        "matchedSourceLevel": 7,
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007490",
-          "1140067152"
+        "stocks": [
+          {
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "硫铬酸钾",
-          "重铬酸钾"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
       },
-      {
-        "code": "1140068406",
-        "name": "氧化硫",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140067152"
-        ],
-        "linkedCoreProductNames": [
-          "硫铬酸钾"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140160841",
-        "name": "氧化铝原材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108774"
-        ],
-        "linkedCoreProductNames": [
-          "氧化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140006102",
-        "name": "氧化铝粉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
-        ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140109049",
-        "name": "氮化铝",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
-        ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140046760",
-        "name": "氯化钾",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007285"
-        ],
-        "linkedCoreProductNames": [
-          "重铬酸钠"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140139437",
-        "name": "氰化亚金钾电镀液",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
-        ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140109072",
-        "name": "电解质自支撑单元",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108778"
-        ],
-        "linkedCoreProductNames": [
-          "阳极支撑SOFC单电池"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140068404",
-        "name": "硫酸氢钠溶液",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140067151"
-        ],
-        "linkedCoreProductNames": [
-          "碱式硫酸铬"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1137000008",
-        "name": "硫酸溶液",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140067151"
-        ],
-        "linkedCoreProductNames": [
-          "碱式硫酸铬"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140068405",
-        "name": "葡萄糖还原剂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140067151"
-        ],
-        "linkedCoreProductNames": [
-          "碱式硫酸铬"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140068403",
-        "name": "重铬酸钠母液",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140067151"
-        ],
-        "linkedCoreProductNames": [
-          "碱式硫酸铬"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1114000087",
-        "name": "铜箔",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108774"
-        ],
-        "linkedCoreProductNames": [
-          "氧化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140109074",
-        "name": "阳极支撑单元",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108778"
-        ],
-        "linkedCoreProductNames": [
-          "阳极支撑SOFC单电池"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
       {
         "code": "1140108774",
         "name": "氧化铝陶瓷基板",
@@ -328,18 +131,15 @@
           "name": "氧化铝陶瓷基板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300408.SZ",
             "stockName": "三环集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 15,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -373,18 +173,15 @@
           "name": "氮化铝陶瓷基板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300408.SZ",
             "stockName": "三环集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 3,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -418,69 +215,21 @@
           "name": "铬粉"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603067.SH",
             "stockName": "振华股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 3,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "其他小金属",
           "小金属",
           "有色金属"
-        ]
-      },
-      {
-        "code": "1140154403",
-        "name": "多层片式陶瓷电容器(MLCC)",
-        "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
-        "industryPath": [
-          "电子",
-          "元件",
-          "被动元件",
-          "电路类器件",
-          "电容器",
-          "多层片式陶瓷电容器(MLCC)"
-        ],
-        "level5Industry": {
-          "code": "1200001354",
-          "name": "电路类器件"
-        },
-        "level6Industry": {
-          "code": "1200005109",
-          "name": "电容器"
-        },
-        "level7Product": {
-          "code": "1140154403",
-          "name": "多层片式陶瓷电容器(MLCC)"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300408.SZ",
-            "stockName": "三环集团",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 6,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "被动元件",
-          "元件",
-          "电子"
         ]
       },
       {
@@ -508,18 +257,15 @@
           "name": "陶瓷封装基座(PKG)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300408.SZ",
             "stockName": "三环集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -529,60 +275,57 @@
         ]
       },
       {
-        "code": "1140007490",
-        "name": "重铬酸钾",
-        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 重铬酸钾",
+        "code": "1140220408",
+        "name": "SOFC电堆",
+        "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > SOFC电堆",
         "industryPath": [
-          "化工",
-          "化学原料",
-          "无机盐",
-          "金属氧化物及过氧化物酸盐",
-          "金属氧化物及过氧化物酸盐",
-          "重铬酸钾"
+          "电气设备",
+          "电池",
+          "蓄电池及其他电池",
+          "其他电池",
+          "其他电池",
+          "SOFC电堆"
         ],
         "level5Industry": {
-          "code": "1200000890",
-          "name": "金属氧化物及过氧化物酸盐"
+          "code": "1210000387",
+          "name": "其他电池"
         },
         "level6Industry": {
-          "code": "1200003989",
-          "name": "金属氧化物及过氧化物酸盐"
+          "code": "1210000597",
+          "name": "其他电池"
         },
         "level7Product": {
-          "code": "1140007490",
-          "name": "重铬酸钾"
+          "code": "1140220408",
+          "name": "SOFC电堆"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
-            "stockCode": "603067.SH",
-            "stockName": "振华股份",
-            "rating": "★★★★☆"
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 8,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
-          "无机盐",
-          "化学原料"
+          "蓄电池及其他电池",
+          "电池"
         ]
       },
       {
-        "code": "1140007285",
-        "name": "重铬酸钠",
-        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 重铬酸钠",
+        "code": "1140067152",
+        "name": "硫铬酸钾",
+        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 硫铬酸钾",
         "industryPath": [
           "化工",
           "化学原料",
           "无机盐",
           "金属氧化物及过氧化物酸盐",
           "金属氧化物及过氧化物酸盐",
-          "重铬酸钠"
+          "硫铬酸钾"
         ],
         "level5Industry": {
           "code": "1200000890",
@@ -593,22 +336,19 @@
           "name": "金属氧化物及过氧化物酸盐"
         },
         "level7Product": {
-          "code": "1140007285",
-          "name": "重铬酸钠"
+          "code": "1140067152",
+          "name": "硫铬酸钾"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603067.SH",
             "stockName": "振华股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 7,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -641,18 +381,15 @@
           "name": "碱式硫酸铬"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603067.SH",
             "stockName": "振华股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 2,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -661,16 +398,16 @@
         ]
       },
       {
-        "code": "1140067152",
-        "name": "硫铬酸钾",
-        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 硫铬酸钾",
+        "code": "1140007285",
+        "name": "重铬酸钠",
+        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 重铬酸钠",
         "industryPath": [
           "化工",
           "化学原料",
           "无机盐",
           "金属氧化物及过氧化物酸盐",
           "金属氧化物及过氧化物酸盐",
-          "硫铬酸钾"
+          "重铬酸钠"
         ],
         "level5Industry": {
           "code": "1200000890",
@@ -681,22 +418,60 @@
           "name": "金属氧化物及过氧化物酸盐"
         },
         "level7Product": {
-          "code": "1140067152",
-          "name": "硫铬酸钾"
+          "code": "1140007285",
+          "name": "重铬酸钠"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603067.SH",
             "stockName": "振华股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 3,
+        "relevanceScore": 5,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "无机盐",
+          "化学原料"
+        ]
+      },
+      {
+        "code": "1140007490",
+        "name": "重铬酸钾",
+        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 重铬酸钾",
+        "industryPath": [
+          "化工",
+          "化学原料",
+          "无机盐",
+          "金属氧化物及过氧化物酸盐",
+          "金属氧化物及过氧化物酸盐",
+          "重铬酸钾"
+        ],
+        "level5Industry": {
+          "code": "1200000890",
+          "name": "金属氧化物及过氧化物酸盐"
+        },
+        "level6Industry": {
+          "code": "1200003989",
+          "name": "金属氧化物及过氧化物酸盐"
+        },
+        "level7Product": {
+          "code": "1140007490",
+          "name": "重铬酸钾"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "603067.SH",
+            "stockName": "振华股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -729,62 +504,15 @@
           "name": "阳极支撑SOFC单电池"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300408.SZ",
             "stockName": "三环集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 2,
-        "relevanceScore": 5,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "蓄电池及其他电池",
-          "电池"
-        ]
-      },
-      {
-        "code": "1140220408",
-        "name": "SOFC电堆",
-        "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > SOFC电堆",
-        "industryPath": [
-          "电气设备",
-          "电池",
-          "蓄电池及其他电池",
-          "其他电池",
-          "其他电池",
-          "SOFC电堆"
-        ],
-        "level5Industry": {
-          "code": "1210000387",
-          "name": "其他电池"
-        },
-        "level6Industry": {
-          "code": "1210000597",
-          "name": "其他电池"
-        },
-        "level7Product": {
-          "code": "1140220408",
-          "name": "SOFC电堆"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300408.SZ",
-            "stockName": "三环集团",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -793,238 +521,171 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140006877",
-        "name": "印染",
-        "anchorCount": 2,
+        "code": "1210000387",
+        "name": "其他电池",
+        "description": "“其他电池”指除锂电、铅酸外，如钠离子、固态、液流等新兴或小众电池。因具备低成本、高安全或长寿命等优势，被视为下一代储能与动力技术突破点，备受市场关注，旨在解决资源瓶颈并推动能源转型。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007285",
-          "1140007490"
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "重铬酸钠",
-          "重铬酸钾"
+        "products": [
+          {
+            "code": "1140220408",
+            "name": "SOFC电堆",
+            "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > SOFC电堆",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "sofc"
+            ]
+          },
+          {
+            "code": "1140108778",
+            "name": "阳极支撑SOFC单电池",
+            "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > 阳极支撑SOFC单电池",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "sofc"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 4,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 3,
+    "level7ProductCount": 2,
+    "candidateIndustryCount": 1,
+    "relatedIndustryCount": 1,
+    "stocks": [
+      {
+        "sourceRowNumber": 11687,
+        "stockCode": "000338.SZ",
+        "stockName": "潍柴动力",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140051177",
-        "name": "媒染剂",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140067151",
-          "1140067152"
-        ],
-        "linkedCoreProductNames": [
-          "硫铬酸钾",
-          "碱式硫酸铬"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 11695,
+        "stockCode": "300408.SZ",
+        "stockName": "三环集团",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140007283",
-        "name": "铬酸酐",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007285",
-          "1140007490"
-        ],
-        "linkedCoreProductNames": [
-          "重铬酸钠",
-          "重铬酸钾"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 11699,
+        "stockCode": "300943.SZ",
+        "stockName": "春晖智控",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140046128",
-        "name": "维生素k3",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007285",
-          "1140007490"
-        ],
-        "linkedCoreProductNames": [
-          "重铬酸钠",
-          "重铬酸钾"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
+        "sourceRowNumber": 11705,
+        "stockCode": "603067.SH",
+        "stockName": "振华股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
       {
-        "code": "1140139582",
-        "name": "光电外壳的基板",
-        "anchorCount": 1,
+        "code": "1210000387",
+        "name": "其他电池",
+        "description": "“其他电池”指除锂电、铅酸外，如钠离子、固态、液流等新兴或小众电池。因具备低成本、高安全或长寿命等优势，被视为下一代储能与动力技术突破点，备受市场关注，旨在解决资源瓶颈并推动能源转型。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
+        "products": [
+          {
+            "code": "1140220408",
+            "name": "SOFC电堆",
+            "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > SOFC电堆",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "sofc"
+            ]
+          },
+          {
+            "code": "1140108778",
+            "name": "阳极支撑SOFC单电池",
+            "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > 阳极支撑SOFC单电池",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "sofc"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1125000366",
-        "name": "军用电子",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108774"
-        ],
-        "linkedCoreProductNames": [
-          "氧化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140109584",
-        "name": "功率控制电路",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108774"
-        ],
-        "linkedCoreProductNames": [
-          "氧化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140109585",
-        "name": "功率混合电路",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108774"
-        ],
-        "linkedCoreProductNames": [
-          "氧化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140139583",
-        "name": "功率激光器外壳的热沉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
-        ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140042543",
-        "name": "化学工业",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007490"
-        ],
-        "linkedCoreProductNames": [
-          "重铬酸钾"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1119001540",
-        "name": "医药",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007285"
-        ],
-        "linkedCoreProductNames": [
-          "重铬酸钠"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140160949",
-        "name": "半导体制冷器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108774"
-        ],
-        "linkedCoreProductNames": [
-          "氧化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140034433",
-        "name": "固态继电器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108774"
-        ],
-        "linkedCoreProductNames": [
-          "氧化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140109581",
-        "name": "大功率电力半导体模块",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108774"
-        ],
-        "linkedCoreProductNames": [
-          "氧化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       }
     ]
   },
@@ -1039,10 +700,375 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 21,
+    "eligibleSourceRowCount": 4,
+    "totalStockCount": 4,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 12,
+    "excludedNonAShareCount": 5,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 4,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 11695,
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "Bloom Energy的SOFC隔膜片核心供应商，市场份额高，深度受益于BE产能扩张。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300408.SZ",
+              "companyName": "三环集团",
+              "companyProfile": "公司成立于1970年，2014年在深交所上市，是一家专注于先进材料研发、生产及销售的综合性高新技术企业。产品覆盖通信、电子、新能源、半导体、移动智能终端等众多应用领域。其中，光通信用陶瓷插芯、片式电阻用氧化铝陶瓷基板、半导体陶瓷封装基座等产品产销量均居全球前列，多项产品先后荣获国家优质产品金奖。公司被认定为国家高新技术企业、国家技术创新示范企业、国家企业技术中心、中国制造业单项冠军示范企业，连续多年入选中国电子元件百强企业。",
+              "profileSummary": "产品覆盖通信、电子、新能源、半导体、移动智能终端等众多应用领域。公司被认定为国家高新技术企业、国家技术创新示范企业、国家企业技术中心、中国制造业单项冠军示范企业，连续多年入选中国电子元件百强企业。",
+              "majorProducts": "三环MLCC、三环电阻、三环光纤陶瓷插芯及套筒、三环接线端子、三环燃料电池隔膜板、三环陶瓷封装基座、三环陶瓷基片、三环陶瓷基体",
+              "revenueComposition": "电子元件:36.73%;通信器件:28.8%;电子及陶瓷材料:21.75%;设备组件:6.68%;其他:4.5%;其他业务:1.54%",
+              "revenueSegments": [
+                {
+                  "name": "电子元件",
+                  "sharePct": 36.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "通信器件",
+                  "sharePct": 28.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子及陶瓷材料",
+                  "sharePct": 21.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备组件",
+                  "sharePct": 6.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "SOFC电堆",
+                    "category": "其他电池"
+                  },
+                  {
+                    "name": "阳极支撑SOFC单电池",
+                    "category": "其他电池"
+                  }
+                ],
+                "knownProducts": [
+                  "氧化铝陶瓷基板",
+                  "氮化铝陶瓷基板",
+                  "陶瓷封装基座(PKG)",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "半导体封装点胶机",
+                  "刻蚀环",
+                  "压缩机接线端子",
+                  "沉积室衬垫"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三环集团与新闻之间有明确产品抓手：SOFC电堆、阳极支撑SOFC单电池，对应Bloom Energy的SOFC隔膜片核心供应商，市场份额高，深度受益于BE产能扩张。收入主体目前是电子元件（36.73%）、通信器件（28.8%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变商业化进度和订单兑现预期，随后要经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才能进入利润表。客户认证、新增订单、交付节奏、相关业务收入和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若客户验证或交付节奏低于预期，订单停留在小批量阶段，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 11699,
+            "stockCode": "300943.SZ",
+            "stockName": "春晖智控",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "子公司春晖仪表是Bloom Energy温度传感器的核心供应商，份额超70%，具备强耗材属性，业绩弹性大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300943.SZ",
+              "companyName": "春晖智控",
+              "companyProfile": "公司是国家重点扶持的高新技术企业、浙江省隐形冠军企业、浙江省制造业单项冠军培育企业、浙江省专精特新中小企业、浙江省创新型试点企业、浙江省内外贸一体领跑者企业、浙江省创新型中小企业、绍兴市云上企业。公司建有春晖流体控制省级企业研究院、春晖流体控制省级高新技术研究开发中心，与中国计量大学共同组建院士工作站，多项研究成果被列入国家火炬计划、国家级重点新产品。公司产品涉及材料工程、机械设计与制造、流体力学、控制科学与工程、测量技术与仪表等相关交叉学科技术以及信息系统集成和技术服务。",
+              "profileSummary": "公司建有春晖流体控制省级企业研究院、春晖流体控制省级高新技术研究开发中心，与中国计量大学共同组建院士工作站，多项研究成果被列入国家火炬计划、国家级重点新产品。公司产品涉及材料工程、机械设计与制造、流体力学、控制科学与工程、测量技术与仪表等相关交叉学科技术以及信息系统集成和技术服务。",
+              "majorProducts": "@MRS智慧燃气调压站、电磁比例阀、电磁热力膨胀阀、电子膨胀阀、电子气液比调节阀、阀门井智能监控终端、供热水路控制阀、户内调压器、换热站、紧急切断阀、拉断阀、流量电磁阀、汽车空调电磁阀、汽车空调热力膨胀阀、氢能进堆电磁阀、氢能驱动阀、燃气过滤器、燃气流量计、燃气调压器、燃气调压器预警系统、双流量电磁阀、水路电机、调压器检修智能检测仪、调压箱/柜、牺牲阳极管地电位检测系统、油气回收装置",
+              "revenueComposition": "供热控制产品:33.61%;燃气控制产品:19.71%;油气控制产品:13.99%;其他业务:12.2%;内燃机配件产品:10.61%;空调控制产品:6.16%;技术服务:2.58%;信息系统集成:1.14%",
+              "revenueSegments": [
+                {
+                  "name": "供热控制产品",
+                  "sharePct": 33.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "燃气控制产品",
+                  "sharePct": 19.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "油气控制产品",
+                  "sharePct": 13.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 12.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内燃机配件产品",
+                  "sharePct": 10.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "空调控制产品",
+                  "sharePct": 6.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 2.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "信息系统集成",
+                  "sharePct": 1.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "空调四通阀",
+                  "空调电子膨胀阀",
+                  "燃气报警器",
+                  "柴油机凸轮轴",
+                  "柴油机挺柱",
+                  "调压阀组",
+                  "供热水路控制阀",
+                  "双流量电磁阀"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "春晖智控的主要经营内容是供热控制产品（33.61%）、燃气控制产品（19.71%），具体产品集中在空调四通阀、空调电子膨胀阀、燃气报警器、柴油机凸轮轴。“子公司春晖仪表是Bloom Energy温度传感器的核心供应商，份额超70%，具备强耗材属性，业绩弹性大”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善商业化进度和订单兑现，也需要先补上产品落地和客户导入，再经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才可能影响业绩。客户认证、新增订单、交付节奏、相关业务收入和毛利率没有同步改善时，股价反应更可能来自主题交易；若客户验证或交付节奏低于预期，订单停留在小批量阶段，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 11705,
+            "stockCode": "603067.SH",
+            "stockName": "振华股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "全球铬盐龙头，为SOFC连接体和热箱高温合金提供核心原材料金属铬，在供给受限和需求增长双重驱动下弹性显著。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603067.SH",
+              "companyName": "振华股份",
+              "companyProfile": "公司是目前全球范围内最具规模的铬盐上市企业，公司维生素K3的生产能力位居全球前列。公司是高新技术企业，分别在湖北黄石、重庆潼南设有生产基地，拥有“民众”、“楚高”两大业内知名品牌，公司综合竞争力全球领先。公司主要产品有重铬酸钠、重铬酸钾、铬酸酐、氧化铬绿、碱式硫酸铬、精制元明粉、铬黄、金属铬、超细氢氧化铝及维生素K3等。目前，公司正深度融入液流储能产业链，逐步开展在液流储能关键原材料领域的投资布局。未来，公司将秉承“诚信、奉献、创新、争先”的企业宗旨，持续、充分完善铬化学品全产业链一体化经营布局，构筑价值多元、内涵丰富、本质安全的铬盐产品生态圈，打造资源节约型、环境友好型、经济效益型、本质安全型绿色铬盐生产企业，加速全球铬盐行业朝着绿色清洁生产、资源化利用、技术创新、智能制造的方向发展，争做世界铬盐行业引领者。",
+              "profileSummary": "目前，公司正深度融入液流储能产业链，逐步开展在液流储能关键原材料领域的投资布局。未来，公司将秉承“诚信、奉献、创新、争先”的企业宗旨，持续、充分完善铬化学品全产业链一体化经营布局，构筑价值多元、内涵丰富、本质安全的铬盐产品生态圈，打造资源节约型、环境友好型、经济效益型、本质安全型绿色铬盐生产企业，加速全球铬盐行业朝着绿色清洁生产、资源化利用、技术创新、智能制造的方向发展，争做世界铬盐行业引领者。",
+              "majorProducts": "超细氢氧化铝、铬酸酐、碱式硫酸铬、维生素K3、氧化铬绿、重铬酸钠",
+              "revenueComposition": "铬的氧化物:52%;铬基冶金材料:14.79%;其他:12.89%;铬盐联产产品:8.73%;重铬酸盐:7.2%;超细氢氧化铝:3.72%;其他业务:0.67%",
+              "revenueSegments": [
+                {
+                  "name": "铬的氧化物",
+                  "sharePct": 52.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铬基冶金材料",
+                  "sharePct": 14.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 12.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铬盐联产产品",
+                  "sharePct": 8.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "重铬酸盐",
+                  "sharePct": 7.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "超细氢氧化铝",
+                  "sharePct": 3.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "饲料级维生素K3",
+                  "氧化铬绿",
+                  "铬黄",
+                  "铬酸酐",
+                  "硫铬酸钾",
+                  "重铬酸钠",
+                  "重铬酸钾",
+                  "碱式硫酸铬"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "振华股份当前收入集中在铬的氧化物（52%）、铬基冶金材料（14.79%），而全球铬盐龙头，为SOFC连接体和热箱高温合金提供核心原材料金属铬，在供给受限和需求增长双重驱动下弹性显著所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响商业化进度和订单兑现预期，业务端仍需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导后才能确认。客户认证、新增订单、交付节奏、相关业务收入和毛利率如果持续改善，相关业务可能从产业布局转为实际增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 11687,
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内SOFC整机龙头企业，通过Ceres技术授权切入赛道，有望受益于全球SOFC产业化加速。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000338.SZ",
+              "companyName": "潍柴动力",
+              "companyProfile": "公司成立于2002年，由原潍坊柴油机厂作为主发起人、联合境内外投资者发起设立，是中国内燃机行业首家在中国香港H股上市的企业，也是首家通过换股吸收合并方式实现“HtoA”两地上市的企业。公司主营业务涵盖动力系统、商用车、农业装备、智慧物流等业务板块，分子公司遍及欧洲、北美、亚洲等地区，产品远销150多个国家和地区。重型发动机、重型变速器销量全球第一，工业叉车全球领先，农业装备销量中国第一，重型卡车中国领先。公司始终将技术创新作为核心驱动力，公司拥有内燃机与动力系统全国重点实验室、国家燃料电池技术创新中心、国家商用汽车动力系统总成工程技术研究中心、国家级工业设计中心、国家内燃机产品质量检验检测中心、国家内燃机产业计量测试中心、国家认定企业技术中心等国家创新平台，设有“博士后工作站”等研究基地，在全球多地设立十大前沿创新中心，建立了全球协同研发体系。先后荣获国家级科技奖励9项，其中国家科技进步一等奖1项(2018年度)。公司以“绿色动力，国际潍柴”为使命，不断提升自身的核心竞争力，推动全球动力行业的绿色转型和可持续发展。",
+              "profileSummary": "公司主营业务涵盖动力系统、商用车、农业装备、智慧物流等业务板块，分子公司遍及欧洲、北美、亚洲等地区，产品远销150多个国家和地区。公司始终将技术创新作为核心驱动力，公司拥有内燃机与动力系统全国重点实验室、国家燃料电池技术创新中心、国家商用汽车动力系统总成工程技术研究中心、国家级工业设计中心、国家内燃机产品质量检验检测中心、国家内燃机产业计量测试中心、国家认定企业技术中心等国家创新平台，设有“博士后工作站”等研究基地，在全球多地设立十大…",
+              "majorProducts": "变速箱、叉车、车桥、供应链解决方案、农业装备、汽车电子及零部件、全系列发动机、燃料电池系统及零部件、液压产品、重型汽车",
+              "revenueComposition": "动力总成、整车整机及关键零部件:43.32%;智慧物流:39.29%;农业装备:8.11%;其他零部件:5.12%;其他:4.17%",
+              "revenueSegments": [
+                {
+                  "name": "动力总成、整车整机及关键零部件",
+                  "sharePct": 43.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智慧物流",
+                  "sharePct": 39.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "农业装备",
+                  "sharePct": 8.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他零部件",
+                  "sharePct": 5.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "垃圾车",
+                  "扫路车",
+                  "洒水车",
+                  "洗扫车",
+                  "清洗车",
+                  "轮式拖拉机",
+                  "小麦收获机",
+                  "玉米收获机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "潍柴动力现有收入由动力总成、整车整机及关键零部件（43.32%）、智慧物流（39.29%）贡献，主营产品为垃圾车、扫路车、洒水车、洗扫车，与国内SOFC整机龙头企业，通过Ceres技术授权切入赛道，受益环节在于全球SOFC产业化加速指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，研发里程碑与商业化成功概率才会通过“研发或授权进展改变项目成功率和未来现金流预期，再通过里程碑收入、销售分成或费用投入影响利润”产生财务影响。现阶段临床数据、监管节点、首付款及里程碑确认和销售放量比概念标签更重要；若研发、审批或商业化进度不及预期，且前期投入难以形成对应回报，事件对公司中期业绩的贡献将十分有限。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "12条低于3星的源记录已按当前关注口径排除。",
+      "5条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

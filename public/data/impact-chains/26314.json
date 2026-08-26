@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26314",
@@ -9,7 +9,7 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 2,
     "mappedStockCount": 2,
     "unmappedStockCount": 0,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 9
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 682,
@@ -30,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 6
+        "anchorProductCount": 1
       }
     ],
     "unmappedStocks": []
@@ -39,64 +39,12 @@
     "candidateCoreProductCount": 14,
     "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 3,
-    "downstreamCandidateCount": 3,
-    "shownUpstreamCount": 3,
-    "shownDownstreamCount": 3
+    "level7ProductCount": 5,
+    "relatedIndustryCandidateCount": 2,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140089283",
-        "name": "厨余垃圾处置业务",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140071268"
-        ],
-        "linkedCoreProductNames": [
-          "生物柴油"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140089327",
-        "name": "新型环保装备",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140071268"
-        ],
-        "linkedCoreProductNames": [
-          "生物柴油"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140163609",
-        "name": "餐厨再生油脂",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140071268"
-        ],
-        "linkedCoreProductNames": [
-          "生物柴油"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140071268",
         "name": "生物柴油",
@@ -122,23 +70,21 @@
           "name": "生物柴油"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "603822.SH",
             "stockName": "ST嘉澳",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "688196.SH",
             "stockName": "卓越新能",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 3,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -148,54 +94,262 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140048489",
-        "name": "烷醇酰胺",
-        "anchorCount": 1,
+        "code": "1200000656",
+        "name": "固体废物的处理和利用工程",
+        "description": "该工程指固废无害化处理与资源化利用。投资者青睐因其契合环保政策，具备稳定现金流和高成长潜力，且随着“无废城市”推进，市场需求持续扩大，兼具社会效益与投资价值。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140071268"
+        "starWeight": 8,
+        "level7ProductCount": 1,
+        "relevanceScore": 20,
+        "stocks": [
+          {
+            "stockCode": "000803.SZ",
+            "stockName": "山高环能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "301109.SZ",
+            "stockName": "军信股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "生物柴油"
+        "products": [
+          {
+            "code": "1140046968",
+            "name": "餐厨垃圾处理",
+            "hierarchyPath": "公用事业 > 环保工程及服务 > 环保工程及服务 > 固体废物的处理和利用工程 > 生活固废处理 > 餐厨垃圾处理",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000803.SZ",
+                "stockName": "山高环能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "301109.SZ",
+                "stockName": "军信股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "餐厨垃圾处理"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140078471",
-        "name": "生物能源进出口贸易",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140071268"
+        "code": "1200000946",
+        "name": "化学试剂和助剂",
+        "description": "该行业提供科研及工业用基础化学品，被誉为“工业味精”。因兼具高科技属性与国产替代潜力，且下游覆盖半导体、新能源等高景气赛道，具备高壁垒和高毛利特征，成为资本市场关注的高成长细分领域。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "603334.SH",
+            "stockName": "丰倍生物",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "生物柴油"
+        "products": [
+          {
+            "code": "1140215128",
+            "name": "生物柴油配方产品",
+            "hierarchyPath": "化工 > 化学制品 > 其他化学制品 > 化学试剂和助剂 > 其他化工用助剂 > 生物柴油配方产品",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603334.SH",
+                "stockName": "丰倍生物",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "生物柴油"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 7,
+    "mappedStockCount": 5,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 5,
+    "candidateIndustryCount": 2,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 673,
+        "stockCode": "000803.SZ",
+        "stockName": "山高环能",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140071269",
-        "name": "生物酯增塑剂",
-        "anchorCount": 1,
+        "sourceRowNumber": 674,
+        "stockCode": "301305.SZ",
+        "stockName": "朗坤科技",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 675,
+        "stockCode": "301109.SZ",
+        "stockName": "军信股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 679,
+        "stockCode": "603334.SH",
+        "stockName": "丰倍生物",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 680,
+        "stockCode": "300072.SZ",
+        "stockName": "海新能科",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 681,
+        "stockCode": "603822.SH",
+        "stockName": "ST嘉澳",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 682,
+        "stockCode": "688196.SH",
+        "stockName": "卓越新能",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000656",
+        "name": "固体废物的处理和利用工程",
+        "description": "该工程指固废无害化处理与资源化利用。投资者青睐因其契合环保政策，具备稳定现金流和高成长潜力，且随着“无废城市”推进，市场需求持续扩大，兼具社会效益与投资价值。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140071268"
+        "starWeight": 8,
+        "level7ProductCount": 1,
+        "relevanceScore": 20,
+        "stocks": [
+          {
+            "stockCode": "000803.SZ",
+            "stockName": "山高环能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "301109.SZ",
+            "stockName": "军信股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "生物柴油"
+        "products": [
+          {
+            "code": "1140046968",
+            "name": "餐厨垃圾处理",
+            "hierarchyPath": "公用事业 > 环保工程及服务 > 环保工程及服务 > 固体废物的处理和利用工程 > 生活固废处理 > 餐厨垃圾处理",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000803.SZ",
+                "stockName": "山高环能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "301109.SZ",
+                "stockName": "军信股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "餐厨垃圾处理"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000946",
+        "name": "化学试剂和助剂",
+        "description": "该行业提供科研及工业用基础化学品，被誉为“工业味精”。因兼具高科技属性与国产替代潜力，且下游覆盖半导体、新能源等高景气赛道，具备高壁垒和高毛利特征，成为资本市场关注的高成长细分领域。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "603334.SH",
+            "stockName": "丰倍生物",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140215128",
+            "name": "生物柴油配方产品",
+            "hierarchyPath": "化工 > 化学制品 > 其他化学制品 > 化学试剂和助剂 > 其他化工用助剂 > 生物柴油配方产品",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603334.SH",
+                "stockName": "丰倍生物",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "生物柴油"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -232,9 +386,587 @@
     ],
     "reason": ""
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 32,
+    "eligibleSourceRowCount": 7,
+    "totalStockCount": 7,
+    "groupCount": 3,
+    "invalidRatingCount": 11,
+    "excludedLowStarCount": 14,
+    "excludedNonAShareCount": 0,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 7,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 673,
+            "stockCode": "000803.SZ",
+            "stockName": "山高环能",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内餐厨垃圾处理龙头，拥有最大的自产UCO产能，是UCO资源稀缺增值的核心受益者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000803.SZ",
+              "companyName": "山高环能",
+              "companyProfile": "公司是深圳证券交易所主板上市公司，山东高速集团旗下环保与绿色能源业务版块，聚焦固废处理与再生能源领域，以技术为核心，资本为翼，管理为纲，专注有机废弃物处置与资源化利用项目投资运营，打造再生油脂加工出口贸易平台。公司作为有机固废投资运营领域领先企业，聚焦城市有机废弃物处置与资源利用、城市供暖等领域，以技术为核心，资本为翼，管理为纲，专注有机废弃物处置与资源化利用项目投资运营，打造再生油脂加工出口贸易平台，是国内以餐厨废弃物资源化利用为主业的深圳证券交易所主板上市公司。公司从事的主要业务包括有机餐厨固废领域的无害化处理与资源化利用及城市清洁供暖，步入了“环保+能源”双领域的产业转型与战略布局。公司采用PPP、特许经营、股权收购等模式，已在东、中、西部近二十个主要城市实现项目网络化布局。自建油脂出口渠道，与国际能源巨头达成稳定供应合作。公司作为A股上市公司，固废处理领域的头部企业，拥有领先的经营管理、技术开发能力，在餐厨垃圾处理行业中已形成规模化发展格局。未来，公司将在“两山”理论的指引下，秉承高质量发展理念，践行山东高速企业精神，不断扩大产能、改进技术、提升环保处理标准，为实现“双碳”目标贡献力量。",
+              "profileSummary": "公司是深圳证券交易所主板上市公司，山东高速集团旗下环保与绿色能源业务版块，聚焦固废处理与再生能源领域，以技术为核心，资本为翼，管理为纲，专注有机废弃物处置与资源化利用项目投资运营，打造再生油脂加工出口贸易平台。公司从事的主要业务包括有机餐厨固废领域的无害化处理与资源化利用及城市清洁供暖，步入了“环保+能源”双领域的产业转型与战略布局。",
+              "majorProducts": "工业级混合油加工和销售、供暖、环保无害化处理、节能环保装备与配套工程、油脂产品加工和销售",
+              "revenueComposition": "油脂产品加工和销售:51.33%;环保无害化处理:25.37%;供暖收入:21.56%;节能环保装备与配套工程:1.39%;其他业务:0.36%",
+              "revenueSegments": [
+                {
+                  "name": "油脂产品加工和销售",
+                  "sharePct": 51.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "环保无害化处理",
+                  "sharePct": 25.37,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "供暖收入",
+                  "sharePct": 21.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "节能环保装备与配套工程",
+                  "sharePct": 1.39,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "餐厨垃圾处理",
+                    "category": "生活固废处理"
+                  },
+                  {
+                    "name": "再生废弃食用油脂(UCO)",
+                    "category": "生物质燃料"
+                  }
+                ],
+                "knownProducts": [
+                  "餐厨垃圾处理",
+                  "合同能源管理服务(EMC)",
+                  "供热",
+                  "再生废弃食用油脂(UCO)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "山高环能的环保无害化处理（25.37%）、节能环保装备与配套工程（1.39%）覆盖范围较宽，其中能够承载餐厨垃圾处理、再生废弃食用油脂(UCO)，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国内餐厨垃圾处理龙头，拥有最大的自产UCO产能，是UCO资源稀缺增值的核心受益者。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 674,
+            "stockCode": "301305.SZ",
+            "stockName": "朗坤科技",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "锁定京广深核心城市餐厨废油资源，具备特许经营权壁垒和低成本优势，UCO业务是其核心利润来源。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301305.SZ",
+              "companyName": "朗坤科技",
+              "companyProfile": "公司愿景是成为世界级的智慧化生物科技企业，致力于引领创新、推动科技发展，为全球生物科技行业贡献力量。公司正在打造高标准的生物科技研发中心，包括AI+生物信息平台、微流控高通量筛选平台、分子生物学(基因工程)平台、发酵与检测平台等，将为公司的研发工作提供强大的技术支持和创新动力。公司结合微生物发酵技术及生物酶法技术等核心技术，实现了对生物质废弃物(餐饮、厨余废弃物及废弃油脂等)的处理和深度资源化，并生产生物能源、绿色电力、沼气等资源化产品；结合基因工程编辑、代谢通路的编辑与调控，实现了HMOs(母乳低聚糖)中主要物质2'-FL(2'-岩藻糖基乳糖)、3-FL(3-岩藻糖基乳糖)、LN nT(乳糖-N-新四糖)、LNT(乳糖-N-四糖)等的高效生物合成，研发生产新型健康产品。目前，公司已形成两大主营业务，一是生物质资源再生业务，二是合成生物智造业务，均采用了一脉相承的微生物发酵和提纯等生物技术。",
+              "profileSummary": "公司正在打造高标准的生物科技研发中心，包括AI+生物信息平台、微流控高通量筛选平台、分子生物学(基因工程)平台、发酵与检测平台等，将为公司的研发工作提供强大的技术支持和创新动力。目前，公司已形成两大主营业务，一是生物质资源再生业务，二是合成生物智造业务，均采用了一脉相承的微生物发酵和提纯等生物技术。",
+              "majorProducts": "合成生物智造业务（HMOs(母乳低聚糖)）、生物能源业务、生物质废弃物资源化处理业务",
+              "revenueComposition": "生物能源:54.76%;运营服务:35.49%;有机固废处理-工程建造:9.35%;其他业务:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "生物能源",
+                  "sharePct": 54.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运营服务",
+                  "sharePct": 35.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "有机固废处理-工程建造",
+                  "sharePct": 9.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "固废处理",
+                  "生活垃圾处理",
+                  "生物质综合节能利用工程",
+                  "垃圾焚烧发电",
+                  "沼气发电",
+                  "有机肥原料",
+                  "生物柴油"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "朗坤科技目前更依赖生物能源（54.76%）、运营服务（35.49%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：锁定京广深核心城市餐厨废油资源，具备特许经营权壁垒和低成本优势，UCO业务是其核心利润来源，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变供需缺口与产品价格；公司的产业链位置只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能转化为收入。现阶段可以用产品报价、订单排期、产销率和毛利率判断预期差方向；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 680,
+            "stockCode": "300072.SZ",
+            "stockName": "海新能科",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内最早进入HVO和SAF产业的上市公司之一，拥有出口白名单资质，是纯粹的SAF生产商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300072.SZ",
+              "companyName": "海新能科",
+              "companyProfile": "公司坚持服务国家重大战略需求，积极推动实现“双碳”目标，贯彻国家能源安全新战略。作为国内首批研发、生产、销售烃基生物柴油的先行企业之一，公司独创悬浮床加氢技术应用于烃基生物柴油生产，与国际各大型石油公司和油品贸易商建立了稳定的合作关系；步履坚定地开展生物燃料生产加工基地建设，推进优化生物能源全要素资源配置；率先参与《烃基生物柴油》行业标准的制定；参与申报并建设全国首个烃基生物柴油试点；获颁中国民航局可持续航空燃料(SAF)适航审定证书，成为国内首家取证的地方性国企；获批生物航油出口“白名单”资质，取得通往国际市场的“绿色通行证”。海新能科坚持以创新为驱动，形成以生物能源、催化净化(环保材料)、特色化工为主营业务的创新型企业，开发具有自主知识产权的技术、工艺、装备和产品，其应用渗透各行各业，足迹遍布海内外，切实服务新时代发展需求，在新征程中彰显海新力量、国企本色。",
+              "profileSummary": "作为国内首批研发、生产、销售烃基生物柴油的先行企业之一，公司独创悬浮床加氢技术应用于烃基生物柴油生产，与国际各大型石油公司和油品贸易商建立了稳定的合作关系；步履坚定地开展生物燃料生产加工基地建设，推进优化生物能源全要素资源配置；率先参与《烃基生物柴油》行业标准的制定；参与申报并建设全国首个烃基生物柴油试点；获颁中国民航局可持续航空燃料(SAF)适航审定证书，成为国内首家取证的地方性国企；获批生物航油出口“白名单”资质，取得通往国际市场…",
+              "majorProducts": "环保材料、生物柴油、特色化工、新型煤化工",
+              "revenueComposition": "烃基生物柴油:54.51%;环保化工类:31.87%;生物航煤（SAF）:9.94%;能源净化综合服务:3.26%;其他业务:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "烃基生物柴油",
+                  "sharePct": 54.51,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "环保化工类",
+                  "sharePct": 31.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生物航煤（SAF）",
+                  "sharePct": 9.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "能源净化综合服务",
+                  "sharePct": 3.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "烃基生物柴油(HVO)",
+                    "category": "生物质燃料"
+                  }
+                ],
+                "knownProducts": [
+                  "秸杆炭化生产炭基复合肥",
+                  "土壤改良剂",
+                  "氧化锌脱硫剂",
+                  "高硫容脱硫剂",
+                  "烃基生物柴油(HVO)",
+                  "苯乙烯",
+                  "新戊二醇",
+                  "航空燃料"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "海新能科的相关业务已决定公司大部分经营表现：烃基生物柴油占收入的54.51%。公司与事件的直接业务联系是：国内最早进入HVO和SAF产业的上市公司之一，拥有出口白名单资质，是纯粹的SAF生产商，真正的增量取决于供需缺口与产品价格，并需经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，产品报价、订单排期、产销率和毛利率需要显示公司获得超越行业的增量。供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是这条逻辑最主要的反向约束。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 681,
+            "stockCode": "603822.SH",
+            "stockName": "ST嘉澳",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "子公司连云港嘉澳已建成37万吨/年SAF装置，并获得国内首张生物航油出口许可证，深度绑定BP等国际巨头。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603822.SH",
+              "companyName": "ST嘉澳",
+              "companyProfile": "公司坐落于浙江嘉兴桐乡，东靠上海，北抵苏州，西邻杭州，居于沪、杭、苏金三角之中心，地理位置优越，交通运输便利。公司成立于2003年1月，2016年上市，是一家致力于研发、生产、销售生物基增塑剂和生物质能源的环保型科技公司。公司系国家火炬计划重点高新技术企业、浙江省高新技术企业、浙江省绿色企业，拥有省级博士后工作站、省级企业研究院，曾多次被中国增塑剂行业协会评为“中国增塑剂行业十强企业”。公司自成立以来，始终聚焦于具有前瞻性、环境友好、可再生、可生物降解的生物基增塑剂产品，经过多年的技术积累，已经形成了以生物基增塑剂类、无苯增塑剂类、功能性特种增塑剂三大系列为主的多种类环保型产品体系，以及辅助的环保型稳定剂系列产品，为客户提供多元化的增塑剂、稳定剂产品以及定制化的特种产品。产品广泛应用于航天、汽车内饰、儿童玩具、食品包装、建材、管材、塑料薄膜、家装材料等与人们生活息息相关的塑料制品领域。近年来，公司不断进行产业升级，致力于各类废弃油脂资源的综合利用，积极布局生物质能源产业。目前，子公司东江能源和嘉澳新能源的生物柴油全年产能已达到30万吨。在立足生物柴油的同时，超前布局生物航煤，与全球500强霍尼韦尔合作，携手在连云港打造大型可持续航空燃料生产基地，填补国内规模化量产可持续航空燃料的空白，助力航空业碳减排，向全世界展现中国在绿色能源行业的实力与态度。公司始终坚持“务实、诚信、敬业、创新”的企业精神，为“实现废弃资源循环利用，实现绿色、可持续循环发展”“打造全球环保生物质能源领军企业”的战略目标而努力奋斗。",
+              "profileSummary": "公司自成立以来，始终聚焦于具有前瞻性、环境友好、可再生、可生物降解的生物基增塑剂产品，经过多年的技术积累，已经形成了以生物基增塑剂类、无苯增塑剂类、功能性特种增塑剂三大系列为主的多种类环保型产品体系，以及辅助的环保型稳定剂系列产品，为客户提供多元化的增塑剂、稳定剂产品以及定制化的特种产品。目前，子公司东江能源和嘉澳新能源的生物柴油全年产能已达到30万吨。",
+              "majorProducts": "多功能复合型增塑剂、环保稳定剂、环保增塑剂、环氧大豆油、环氧脂肪酸甲酯、生物质能源、石化类环保型增塑剂",
+              "revenueComposition": "生物能源产业:85.17%;环保型增塑剂:13.46%;环保型稳定剂:1.08%;其他业务:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "生物能源产业",
+                  "sharePct": 85.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "环保型增塑剂",
+                  "sharePct": 13.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "环保型稳定剂",
+                  "sharePct": 1.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "钙锌稳定剂",
+                  "环氧大豆油(ESO)",
+                  "钡锌复合稳定剂",
+                  "生物柴油",
+                  "偏苯三酸三辛酯",
+                  "对苯二甲酸二辛酯(DOTP)",
+                  "己二酸二辛酯(DOA)",
+                  "环氧脂肪酸甲酯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "ST嘉澳当前收入集中在生物能源产业（85.17%）、环保型增塑剂（13.46%），而子公司连云港嘉澳已建成37万吨/年SAF装置，并获得国内首张生物航油出口许可证，深度绑定BP等国际巨头所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响供需缺口与产品价格预期，业务端仍需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导后才能确认。产品报价、订单排期、产销率和毛利率如果持续改善，相关业务可能从产业布局转为实际增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 682,
+            "stockCode": "688196.SH",
+            "stockName": "卓越新能",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内生物柴油出口龙头，积极扩产HVO/SAF产能，并前瞻性布局海外生产基地。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688196.SH",
+              "companyName": "卓越新能",
+              "companyProfile": "公司是一家专业利用废油脂从事生物柴油、衍生产品工业甘油、生物酯增塑剂、水性醇酸树脂等研发、生产与销售的资源循环利用企业，产品用于清洁动力能源和生物基绿色化学品等领域，实现废油脂的无害化处置和资源化利用。公司拥有独立的研发机构和技术团队，具备较强的自主创新能力和产业化应用能力，是高新技术企业。公司建有省级企业技术中心、重点实验室和工程技术中心等科研平台，陆续承担了“国家重点新产品计划”、“国家火炬计划”、国家“十五科技攻关计划”、国家“十一五科技支撑计划”、国家“十二五科技攻关计划”等生物柴油应用技术研发课题与示范项目，并取得大量科技成果。公司是福建省循环经济示范企业、福建省创新型示范企业、福建省战略性新兴产业骨干企业。经过近20年的发展，公司拥有多个生物柴油生产基地和生物基绿色材料生产基地，是我国生物柴油行业产能规模大、出口量多、创新能力强劲的龙头企业。公司于2019年11月21日在上海证券交易所科创板上市。",
+              "profileSummary": "公司是一家专业利用废油脂从事生物柴油、衍生产品工业甘油、生物酯增塑剂、水性醇酸树脂等研发、生产与销售的资源循环利用企业，产品用于清洁动力能源和生物基绿色化学品等领域，实现废油脂的无害化处置和资源化利用。公司建有省级企业技术中心、重点实验室和工程技术中心等科研平台，陆续承担了“国家重点新产品计划”、“国家火炬计划”、国家“十五科技攻关计划”、国家“十一五科技支撑计划”、国家“十二五科技攻关计划”等生物柴油应用技术研发课题与示范项目，并取…",
+              "majorProducts": "工业甘油、生物柴油、生物酯增塑剂、水性醇酸树脂、天然脂肪醇",
+              "revenueComposition": "生物柴油:81.96%;天然脂肪醇:8.21%;脂肪酸混合油脂:6.22%;工业甘油:1.65%;醇酸树脂:1.3%;其他业务:0.51%;生物酯增塑剂:0.15%",
+              "revenueSegments": [
+                {
+                  "name": "生物柴油",
+                  "sharePct": 81.96,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "天然脂肪醇",
+                  "sharePct": 8.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "脂肪酸混合油脂",
+                  "sharePct": 6.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业甘油",
+                  "sharePct": 1.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "醇酸树脂",
+                  "sharePct": 1.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生物酯增塑剂",
+                  "sharePct": 0.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "生物柴油",
+                    "category": "生物质燃料"
+                  }
+                ],
+                "knownProducts": [
+                  "生物酯增塑剂",
+                  "工业甘油",
+                  "脂肪酸混合油脂",
+                  "生物柴油",
+                  "天然脂肪醇",
+                  "环保型醇酸树脂"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "卓越新能的事件暴露较为直接：生物柴油占收入的81.96%，相关业务不是边缘尝试；具体业务抓手是：国内生物柴油出口龙头，积极扩产HVO/SAF产能，并前瞻性布局海外生产基地。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，尤其需要用产品报价、订单排期、产销率和毛利率区分行业普涨与公司自身竞争力。如果供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 675,
+            "stockCode": "301109.SZ",
+            "stockName": "军信股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "通过控股子公司仁和环境拥有全国单体规模最大的餐厨垃圾处理厂之一，UCO业务贡献显著利润。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301109.SZ",
+              "companyName": "军信股份",
+              "companyProfile": "公司是一家长期致力于生活垃圾、餐厨垃圾、市政污泥、垃圾渗滤液、飞灰等固废处理和绿色能源业务，集投资建设、技术研发、运营管理于一体的国家高新技术企业，现已在深交所创业板上市。项目主要分布在湖南长沙、浏阳、平江及中亚国家吉尔吉斯斯坦。近年来，公司业绩稳步增长，彰显高质量的经营水平。作为湖南固废处理领域的领军企业，公司运营的长沙黑麋峰固废处理场是全国唯一获得两个垃圾焚烧项目鲁班奖的环保园区。其中，垃圾焚烧项目一期是国内同期一次性建成投产规模最大的垃圾焚烧发电项目，荣获中国钢结构金奖及湖南省环卫行业标杆项目等多项荣誉；长沙市垃圾中转项目和餐厨项目的建设规模及运营标准位居同行业前列；污泥处置项目和渗滤液处理项目分别被国家住建部评为“重大科技专项实施场所”和“科技示范工程”。公司打造了具有标杆示范作用的城市固废综合协同处理模式，形成了固废处理全产业链示范能力。公司始终秉持高质量发展和科技创新理念，积极响应国家“一带一路”倡议，通过输出成熟的固废综合协同处理模式及核心技术与管理经验，打造更多高品质固废处理和绿色能源项目，为全球生态文明建设贡献力量。",
+              "profileSummary": "公司是一家长期致力于生活垃圾、餐厨垃圾、市政污泥、垃圾渗滤液、飞灰等固废处理和绿色能源业务，集投资建设、技术研发、运营管理于一体的国家高新技术企业，现已在深交所创业板上市。作为湖南固废处理领域的领军企业，公司运营的长沙黑麋峰固废处理场是全国唯一获得两个垃圾焚烧项目鲁班奖的环保园区。",
+              "majorProducts": "军信股份城市污泥处理、军信股份浦湘生物生活垃圾清洁焚烧项目、军信股份生活垃圾渗沥液处理、军信股份生活垃圾卫生填埋、垃圾焚烧发电",
+              "revenueComposition": "垃圾发电项目建设运营:49.97%;生活垃圾中转处理业务:24.93%;污水、污泥、飞灰、填埋项目建设运营:10.6%;工业级混合油业务:7.23%;餐厨垃圾收运及厌氧发酵业务:6.59%;配套污水处理:0.37%;其他业务:0.18%;沼气发电:0.13%",
+              "revenueSegments": [
+                {
+                  "name": "垃圾发电项目建设运营",
+                  "sharePct": 49.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生活垃圾中转处理业务",
+                  "sharePct": 24.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "污水、污泥、飞灰、填埋项目建设运营",
+                  "sharePct": 10.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业级混合油业务",
+                  "sharePct": 7.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "餐厨垃圾收运及厌氧发酵业务",
+                  "sharePct": 6.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配套污水处理",
+                  "sharePct": 0.37,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "沼气发电",
+                  "sharePct": 0.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "餐厨垃圾处理",
+                    "category": "生活固废处理"
+                  },
+                  {
+                    "name": "再生废弃食用油脂(UCO)",
+                    "category": "生物质燃料"
+                  }
+                ],
+                "knownProducts": [
+                  "垃圾填埋配套设施建设工程",
+                  "污泥处理",
+                  "生活垃圾填埋",
+                  "餐厨垃圾处理",
+                  "市政污水处理",
+                  "垃圾焚烧发电",
+                  "再生废弃食用油脂(UCO)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "军信股份已经具备餐厨垃圾处理、再生废弃食用油脂(UCO)等业务能力，通过控股子公司仁和环境拥有全国单体规模最大的餐厨垃圾处理厂之一，UCO业务贡献显著利润并非单纯概念映射。当前对应的收入被归入配套污水处理（0.37%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 679,
+            "stockCode": "603334.SH",
+            "stockName": "丰倍生物",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内第一梯队的废弃油脂资源综合利用企业，专注于将地沟油等废弃油脂转化为高附加值产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603334.SH",
+              "companyName": "丰倍生物",
+              "companyProfile": "公司是一家废弃资源综合利用领域的高新技术企业，主要以废弃油脂生产资源化产品。基于长期的研发投入和产业实践，公司在废弃油脂资源综合利用的深度及广度上不断拓展，形成了“废弃油脂—生物燃料(生物柴油)—生物基材料”的废弃资源再生产业链。此外，公司还依托自身油脂综合利用核心技术和渠道优势为客户提供油脂化学品。公司主营业务以废弃油脂资源综合利用业务为主，油脂化学品业务为辅。废弃油脂资源综合利用业务主要产品为生物基材料和生物燃料，其中生物基材料主要为应用于农药、化肥、选矿、油墨树脂、纺织、生物医药等多个领域的助剂，能够发挥溶解、增效、分散、润滑等作用；生物燃料主要为生物柴油；油脂化学品业务主要产品为DD油、脂肪酸等。作为废弃油脂资源综合利用领域的开拓者，公司围绕“基础研究、材料开发、应用开发”三大方向，依托深入实践的研发团队、长期积累的技术经验，以及丰富的检测应用数据、机理研究和配方技术，形成了一系列油脂综合利用相关核心技术。有基于此，公司能够利用更广泛的废弃油脂，实现各类渠道来源废弃油脂中复杂成分的提纯、转化和分离，并成功推广生物基材料在农化等细分领域的应用，建立差异化的竞争优势。在化石资源日益枯竭、CO2过度排放造成的全球气候环境危机背景下，公司产品为废弃油脂的资源化利用和无害化处理开拓了良好途径，具备绿色环保、可再生、易降解、无毒无害的特点，可以部分代替石油化工材料用于多个细分行业领域，符合全球发展绿色低碳循环经济的要求。",
+              "profileSummary": "公司主营业务以废弃油脂资源综合利用业务为主，油脂化学品业务为辅。废弃油脂资源综合利用业务主要产品为生物基材料和生物燃料，其中生物基材料主要为应用于农药、化肥、选矿、油墨树脂、纺织、生物医药等多个领域的助剂，能够发挥溶解、增效、分散、润滑等作用；生物燃料主要为生物柴油；油脂化学品业务主要产品为DD油、脂肪酸等。",
+              "majorProducts": "工业级混合油、生物柴油配方产品、生物燃料、油脂化学品业务",
+              "revenueComposition": "生物基材料:76.83%;生物燃料:12.36%;油脂化学品:10.6%;其他业务:0.21%",
+              "revenueSegments": [
+                {
+                  "name": "生物基材料",
+                  "sharePct": 76.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生物燃料",
+                  "sharePct": 12.36,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "油脂化学品",
+                  "sharePct": 10.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "再生废弃食用油脂(UCO)",
+                    "category": "生物质燃料"
+                  },
+                  {
+                    "name": "烃基生物柴油(HVO)",
+                    "category": "生物质燃料"
+                  },
+                  {
+                    "name": "生物柴油配方产品",
+                    "category": "其他化工用助剂"
+                  }
+                ],
+                "knownProducts": [
+                  "生物柴油配方产品",
+                  "植物油脱臭馏出物(DD油)",
+                  "再生废弃食用油脂(UCO)",
+                  "烃基生物柴油(HVO)",
+                  "脂肪酸"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对丰倍生物而言，国内第一梯队的废弃油脂资源综合利用企业，专注于将地沟油等废弃油脂转化为高附加值产品并非纯概念映射，因为生物燃料占收入的12.36%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是供需缺口与产品价格，传导效率取决于“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由产品报价、订单排期、产销率和毛利率来区分；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，重估逻辑会被削弱。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "11条源记录因星级格式无法解析而未进入组合。",
+      "14条低于3星的源记录已按当前关注口径排除。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

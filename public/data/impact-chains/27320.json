@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27320",
@@ -9,20 +9,11 @@
     "date": "2026-07-09"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 4,
-    "mappedStockCount": 3,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
+    "mappedStockCount": 2,
     "unmappedStockCount": 1,
     "stocks": [
-      {
-        "sourceRowNumber": 25017,
-        "stockCode": "00826.HK",
-        "stockName": "天工国际",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 25025,
         "stockCode": "688433.SH",
@@ -30,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 4
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 25026,
@@ -39,7 +30,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 4
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 25030,
@@ -47,15 +38,15 @@
         "stockName": "奥普特",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 16
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 25017,
-        "stockCode": "00826.HK",
-        "stockName": "天工国际",
+        "sourceRowNumber": 25030,
+        "stockCode": "688686.SH",
+        "stockName": "奥普特",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -67,96 +58,12 @@
     "candidateCoreProductCount": 23,
     "selectedCoreProductCount": 3,
     "selectedCompanyCoreProductCount": 3,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 5,
-    "downstreamCandidateCount": 6,
-    "shownUpstreamCount": 5,
-    "shownDownstreamCount": 6
+    "level7ProductCount": 16,
+    "relatedIndustryCandidateCount": 9,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140008336",
-        "name": "3D打印设备整机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
-        ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140008104",
-        "name": "光学模块",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
-        ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140008105",
-        "name": "水气路循环风路",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
-        ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1130000728",
-        "name": "线缆",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
-        ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140087594",
-        "name": "智能一体式电机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
-        ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140008041",
         "name": "3D打印设备",
@@ -182,18 +89,15 @@
           "name": "3D打印设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688333.SH",
             "stockName": "铂力特",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 5,
-        "downstreamCount": 6,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -226,18 +130,15 @@
           "name": "选区激光烧结(SLS)高分子3D打印设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688433.SH",
             "stockName": "华曙高科",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -270,18 +171,15 @@
           "name": "选区激光熔融(SLM)金属3D打印设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688433.SH",
             "stockName": "华曙高科",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -290,102 +188,243 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140008194",
-        "name": "工业机械",
-        "anchorCount": 1,
+        "code": "1200001387",
+        "name": "专业应用软件",
+        "description": "专业应用软件指面向特定行业提供深度解决方案的软件。因契合数字经济与国产替代趋势，具备高壁垒、高粘性及稳定现金流，成为A股关注焦点，尤其在工业软件、金融IT等领域潜力巨大。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "688686.SH",
+            "stockName": "奥普特",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
+        "products": [
+          {
+            "code": "1140139412",
+            "name": "视觉处理分析软件",
+            "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 专业应用软件 > 专业分析系统 > 视觉处理分析软件",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688686.SH",
+                "stockName": "奥普特",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "视觉系统"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140014916",
-        "name": "汽车",
-        "anchorCount": 1,
+        "code": "1200001310",
+        "name": "光源",
+        "description": "A股光源行业指LED、激光等照明及显示核心器件领域。受关注源于Mini/Micro LED技术突破、新能源汽车智能车灯需求爆发，以及“双碳”政策推动节能替换，兼具科技成长与绿色消费属性，市场潜力巨大。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 4,
+        "stocks": [
+          {
+            "stockCode": "688686.SH",
+            "stockName": "奥普特",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
+        "products": [
+          {
+            "code": "1140150795",
+            "name": "机器视觉光源",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 光源 > 特种光源 > 机器视觉光源",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688686.SH",
+                "stockName": "奥普特",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 8,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 4,
+    "level7ProductCount": 16,
+    "candidateIndustryCount": 9,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 25018,
+        "stockCode": "688456.SH",
+        "stockName": "有研粉材",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140031433",
-        "name": "航天航空",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
-        ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 25019,
+        "stockCode": "002149.SZ",
+        "stockName": "西部材料",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140085169",
-        "name": "可吸收骨折内固定螺钉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
-        ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 25024,
+        "stockCode": "002008.SZ",
+        "stockName": "大族激光",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140008115",
-        "name": "成型产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
-        ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 25025,
+        "stockCode": "688433.SH",
+        "stockName": "华曙高科",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140033214",
-        "name": "重型金属3D打印业务",
-        "anchorCount": 1,
+        "sourceRowNumber": 25026,
+        "stockCode": "688333.SH",
+        "stockName": "铂力特",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 25030,
+        "stockCode": "688686.SH",
+        "stockName": "奥普特",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 25031,
+        "stockCode": "300909.SZ",
+        "stockName": "汇创达",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 25032,
+        "stockCode": "300433.SZ",
+        "stockName": "蓝思科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 9
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001387",
+        "name": "专业应用软件",
+        "description": "专业应用软件指面向特定行业提供深度解决方案的软件。因契合数字经济与国产替代趋势，具备高壁垒、高粘性及稳定现金流，成为A股关注焦点，尤其在工业软件、金融IT等领域潜力巨大。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008041"
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "688686.SH",
+            "stockName": "奥普特",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "3D打印设备"
+        "products": [
+          {
+            "code": "1140139412",
+            "name": "视觉处理分析软件",
+            "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 专业应用软件 > 专业分析系统 > 视觉处理分析软件",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688686.SH",
+                "stockName": "奥普特",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "视觉系统"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200001310",
+        "name": "光源",
+        "description": "A股光源行业指LED、激光等照明及显示核心器件领域。受关注源于Mini/Micro LED技术突破、新能源汽车智能车灯需求爆发，以及“双碳”政策推动节能替换，兼具科技成长与绿色消费属性，市场潜力巨大。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 4,
+        "stocks": [
+          {
+            "stockCode": "688686.SH",
+            "stockName": "奥普特",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140150795",
+            "name": "机器视觉光源",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 光源 > 特种光源 > 机器视觉光源",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688686.SH",
+                "stockName": "奥普特",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -400,10 +439,622 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 23,
+    "eligibleSourceRowCount": 8,
+    "totalStockCount": 8,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 9,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 8,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 25024,
+            "stockCode": "002008.SZ",
+            "stockName": "大族激光",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "苹果3D打印设备新贵，深度参与苹果创新产品开发，有望在苹果中框3D打印中获得主要份额。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002008.SZ",
+              "companyName": "大族激光",
+              "companyProfile": "公司于1996年在中国深圳创立，2004年在深圳证券交易所上市。公司专注于智能制造装备及其关键器件的研发、生产和销售，具备从基础器件、整机设备到工艺解决方案的垂直一体化能力，是全球领先的智能制造装备整体解决方案服务商。公司是国家重点高新技术企业、国家级创新型试点企业、国家科技成果推广示范基地重点推广示范企业、广东省装备制造业重点企业、深圳自主创新领军企业，主要科研项目被认定为国家级火炬计划项目。作为中国工业激光设备制造的开拓者，经过二十多年的成长，公司现已全面服务于世界500强企业和中国行业标杆工业企业，销量领先，领跑全球。",
+              "profileSummary": "公司专注于智能制造装备及其关键器件的研发、生产和销售，具备从基础器件、整机设备到工艺解决方案的垂直一体化能力，是全球领先的智能制造装备整体解决方案服务商。作为中国工业激光设备制造的开拓者，经过二十多年的成长，公司现已全面服务于世界500强企业和中国行业标杆工业企业，销量领先，领跑全球。",
+              "majorProducts": "CNC 数控机床、PCB 设备、半导体设备、大族激光打标机、大族激光雕刻机、大族激光焊接机、大族激光激光制版及印刷设备、大族激光切割机、大族激光钻孔机、大族油墨喷码机、防水气密性检测设备、高功率光纤激光器、光伏设备、极限制造产品、锂电设备、脉冲光纤激光器、通用运动控制系统、行业专机产品、振镜、伺服电机、中低功率 CO2 激光器、紫外及超快激光器",
+              "revenueComposition": "其他智能制造装备:69.23%;PCB及自动化配套设备:30.77%",
+              "revenueSegments": [
+                {
+                  "name": "其他智能制造装备",
+                  "sharePct": 69.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "PCB及自动化配套设备",
+                  "sharePct": 30.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "激光切割机",
+                  "PCB激光机械钻孔机",
+                  "激光直接成像设备(LDI)",
+                  "玻璃热弯机",
+                  "等离子清洗机",
+                  "激光打标机",
+                  "焊接机器人",
+                  "激光焊接机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "大族激光目前更依赖其他智能制造装备（69.23%）、PCB及自动化配套设备（30.77%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：苹果3D打印设备新贵，深度参与苹果创新产品开发，有望在苹果中框3D打印中获得主要份额，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变事件能否转化为可确认的经营增量；公司的产业链位置只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能转化为收入。现阶段可以用订单、收入确认、产品结构和毛利率变化判断预期差方向；若事件关联停留在主题层面，未形成可持续订单或利润贡献，短期主题弹性与中期业绩贡献可能明显背离。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 25025,
+            "stockCode": "688433.SH",
+            "stockName": "华曙高科",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "全球少数兼具金属与高分子3D打印设备、材料、软件自主研发能力的企业，是苹果和华为的3D打印设备供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688433.SH",
+              "companyName": "华曙高科",
+              "companyProfile": "公司成立于2009年，十余年来专注于工业级增材制造设备的研发、生产与销售，致力于为全球客户提供金属(SLM)增材制造设备和高分子(SLS)增材制造设备，并提供3D打印材料、工艺及服务。公司已开发20余款设备，并配套40余款专用材料及工艺，正加速应用于航空航天、汽车、医疗、模具等领域。公司是全球极少数同时具备3D打印设备、材料及软件自主研发与生产能力的增材制造企业，销售规模位居全球前列，是我国工业级增材制造设备龙头企业之一。2023年4月17日，公司成功登陆上交所科创板。公司持续深化技术创新，构建了多位一体的金属与高分子工业级增材制造完整自主技术、知识产权与品牌价值体系，自主开发了增材制造设备数据处理系统和控制系统的全套软件源代码，加载全部自主开发增材制造工业软件、控制系统，并实现SLM设备和SLS设备产业化量产销售。公司拥有国内唯一“高分子复杂结构增材制造国家工程研究中心”，是国家级“专精特新”小巨人企业。公司依托强大的设计、生产、服务的系统综合能力，快速响应市场多样、复杂的产业化需求，连续、稳定向美国、德国等增材制造强国销售工业级自有品牌SLM、SLS打印设备及SLS粉末材料，自主产品出口至全球30多个国家和地区，持续推动行业融合与国内外资源运用，与产业链上下游共建高价值规模产业，服务国家战略需求，赋能国民经济与社会发展。未来，公司将以自主开放的工业级增材制造设备为硬核，加快融合上下游产业资源，持续提升产业水平，服务规模化制造，领衔打造具有国际竞争力优势的中国增材制造自主技术与产业新高地，实现从“追赶”、“并跑”到“领跑”的时代跨越。",
+              "profileSummary": "公司成立于2009年，十余年来专注于工业级增材制造设备的研发、生产与销售，致力于为全球客户提供金属(SLM)增材制造设备和高分子(SLS)增材制造设备，并提供3D打印材料、工艺及服务。公司是全球极少数同时具备3D打印设备、材料及软件自主研发与生产能力的增材制造企业，销售规模位居全球前列，是我国工业级增材制造设备龙头企业之一。",
+              "majorProducts": "3D打印高分子粉末材料、高分子3D打印设备、金属3D打印设备",
+              "revenueComposition": "3D打印设备:77.41%;3D打印服务:11.73%;3D打印原材料:8.43%;售后服务及其他:2.29%;其他业务:0.15%",
+              "revenueSegments": [
+                {
+                  "name": "3D打印设备",
+                  "sharePct": 77.41,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "3D打印服务",
+                  "sharePct": 11.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3D打印原材料",
+                  "sharePct": 8.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "售后服务及其他",
+                  "sharePct": 2.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "选区激光烧结(SLS)高分子3D打印设备",
+                    "category": "专用打印机"
+                  },
+                  {
+                    "name": "选区激光熔融(SLM)金属3D打印设备",
+                    "category": "专用打印机"
+                  }
+                ],
+                "knownProducts": [
+                  "选区激光烧结(SLS)高分子3D打印设备",
+                  "选区激光熔融(SLM)金属3D打印设备",
+                  "3D打印技术服务",
+                  "3D打印高分子粉末材料"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华曙高科的相关业务已决定公司大部分经营表现：3D打印设备占收入的77.41%。公司与事件的直接业务联系是：全球少数兼具金属与高分子3D打印设备、材料、软件自主研发能力的企业，是苹果和华为的3D打印设备供应商，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 25026,
+            "stockCode": "688333.SH",
+            "stockName": "铂力特",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内金属3D打印设备龙头，通过富士康绑定苹果供应链，并深度参与商业航天等高端制造领域。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688333.SH",
+              "companyName": "铂力特",
+              "companyProfile": "公司致力于成为全球领先的增材技术解决方案提供商。公司成立于2011年7月，2019年7月22日正式在上交所科创板挂牌上市。公司是国家级高新技术企业，拥有国家企业技术中心等高水平科研平台。公司为用户提供全方位的金属增材制造与再制造技术解决方案，包括：设备、打印服务、原材料、技术服务等。公司运用多年金属增材制造技术的专业经验，通过持续创新为航空航天、能源动力、医疗齿科、工业模具、汽车制造等行业客户提供服务。公司坚持以用户为中心，以市场为焦点，帮助用户实现最优设计、降低生产成本、提高生产效率、提升产品品质、创造价值。",
+              "profileSummary": "公司为用户提供全方位的金属增材制造与再制造技术解决方案，包括：设备、打印服务、原材料、技术服务等。公司运用多年金属增材制造技术的专业经验，通过持续创新为航空航天、能源动力、医疗齿科、工业模具、汽车制造等行业客户提供服务。",
+              "majorProducts": "代理销售设备及配件、电弧增材制造设备、激光立体成形设备、激光选区熔化成形设备、金属3D打印定制化产品、金属3D打印技术服务、金属3D打印设备、金属3D打印原材料",
+              "revenueComposition": "3D打印定制化产品:56.83%;3D打印设备及配件(自研):37.05%;3D打印原材料:6.12%",
+              "revenueSegments": [
+                {
+                  "name": "3D打印定制化产品",
+                  "sharePct": 56.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3D打印设备及配件(自研)",
+                  "sharePct": 37.05,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "3D打印原材料",
+                  "sharePct": 6.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "3D打印设备",
+                    "category": "专用打印机"
+                  }
+                ],
+                "knownProducts": [
+                  "3D打印定制化产品",
+                  "3D打印设备",
+                  "3D打印技术服务",
+                  "3D打印专用钛合金粉末材料"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对铂力特而言，国内金属3D打印设备龙头，通过富士康绑定苹果供应链，并深度参与商业航天等高端制造领域并非纯概念映射，因为3D打印设备及配件(自研)占收入的37.05%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是事件能否转化为可确认的经营增量，传导效率取决于“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由订单、收入确认、产品结构和毛利率变化来区分；若事件关联停留在主题层面，未形成可持续订单或利润贡献，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 25030,
+            "stockCode": "688686.SH",
+            "stockName": "奥普特",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "为苹果3D打印设备提供核心机器视觉方案，价值量占比高达15%，是保障打印质量和效率的关键环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688686.SH",
+              "companyName": "奥普特",
+              "companyProfile": "公司定位于自动化核心零部件供应商。自创立以来，一直快速稳步发展，现已成为机器视觉应用技术领先者。公司的产品和解决方案应用于20多个国家和地区，全球范围设立30多个服务网点，服务于15000余家客户。在公司的客户群体中，有众多世界500强企业以及全球知名的设备制造商。公司已经成为全球客户信赖的合作伙伴。公司产品包括：视觉系统、工业相机、智能读码器、3D传感器、SC智能相机、测量系统、工业镜头、传感器、运动部件、光源、工控机等。",
+              "profileSummary": "公司定位于自动化核心零部件供应商。公司产品包括：视觉系统、工业相机、智能读码器、3D传感器、SC智能相机、测量系统、工业镜头、传感器、运动部件、光源、工控机等。",
+              "majorProducts": "光源、光源控制器、镜头、视觉控制系统、相机",
+              "revenueComposition": "机器视觉核心部件:75.66%;机器视觉配件:13.66%;运控产品:10.64%;其他业务:0.05%",
+              "revenueSegments": [
+                {
+                  "name": "机器视觉核心部件",
+                  "sharePct": 75.66,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "机器视觉配件",
+                  "sharePct": 13.66,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "运控产品",
+                  "sharePct": 10.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "视觉处理分析软件",
+                    "category": "专业分析系统"
+                  },
+                  {
+                    "name": "机器视觉光源",
+                    "category": "特种光源"
+                  },
+                  {
+                    "name": "直线滑台",
+                    "category": "智能装备模组"
+                  },
+                  {
+                    "name": "视觉控制器",
+                    "category": "机器视觉设备"
+                  }
+                ],
+                "knownProducts": [
+                  "视觉控制器",
+                  "直线滑台",
+                  "滤光片",
+                  "光源控制器",
+                  "机器视觉光源",
+                  "条形光源",
+                  "环形光源",
+                  "线形光源"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "奥普特的机器视觉核心部件（75.66%）、机器视觉配件（13.66%）覆盖范围较宽，其中能够承载视觉处理分析软件、机器视觉光源、直线滑台，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：为苹果3D打印设备提供核心机器视觉方案，价值量占比高达15%，是保障打印质量和效率的关键环节。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 25018,
+            "stockCode": "688456.SH",
+            "stockName": "有研粉材",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司3D打印铜粉可用于AI服务器液冷冷板，铝合金粉末在商业航天领域已有应用，是上游核心材料供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688456.SH",
+              "companyName": "有研粉材",
+              "companyProfile": "公司成立于2004年3月，由中国有研科技集团(隶属国务院国资委的中央企业)控股，专业从事先进有色金属粉体材料的设计、研发、生产和销售，主要产品包括铜基金属粉体材料、微电子锡基焊粉材料、3D打印粉体材料和电子浆料等，是国内铜基金属粉体材料和锡基焊粉材料领域的龙头企业，已成为国际领先的先进有色金属粉体材料生产企业之一。公司拥有工信部金属粉体产业技术研究院等多个国家科技创新平台和企业博士后工作站，发起金刚石工具产业技术创新联盟、粉末冶金产业技术创新联盟，搭建信息共享平台，促进行业间、上下游技术交流、协作与推广。公司在重庆、安徽、山东、英国和泰国等国内外地区布局了产业基地，在国内外有色金属粉体材料市场皆具有较强的市场竞争力，公司主营产品先进铜基粉体材料和微电子互连用合金焊粉先后被国家工信部评为制造业单项冠军产品，铜基金属粉体材料产品、微电子锡基焊粉材料产品的国内市场占有率位居前列。未来，公司将立足于我国高端制造业在材料端的重大需求，以现有核心技术为基础，以市场需求为导向，持续推进有色金属粉体材料制备和应用技术的迭代和产品的创新，不断完善公司产业全球战略布局，进一步提升公司国际竞争力。",
+              "profileSummary": "公司成立于2004年3月，由中国有研科技集团(隶属国务院国资委的中央企业)控股，专业从事先进有色金属粉体材料的设计、研发、生产和销售，主要产品包括铜基金属粉体材料、微电子锡基焊粉材料、3D打印粉体材料和电子浆料等，是国内铜基金属粉体材料和锡基焊粉材料领域的龙头企业，已成为国际领先的先进有色金属粉体材料生产企业之一。公司在重庆、安徽、山东、英国和泰国等国内外地区布局了产业基地，在国内外有色金属粉体材料市场皆具有较强的市场竞争力，公司主营…",
+              "majorProducts": "3D打印金属粉体材料、电子浆料、铜基金属粉体材料、微电子互连锡基焊粉",
+              "revenueComposition": "先进铜基金属粉体材料:55.65%;高端微电子锡基焊粉材料:32.25%;其他:6.05%;电子浆料:4.06%;3D打印用粉体材料:1.48%;其他业务:0.52%",
+              "revenueSegments": [
+                {
+                  "name": "先进铜基金属粉体材料",
+                  "sharePct": 55.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高端微电子锡基焊粉材料",
+                  "sharePct": 32.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 6.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子浆料",
+                  "sharePct": 4.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3D打印用粉体材料",
+                  "sharePct": 1.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "锡基焊料",
+                  "铜粉",
+                  "纯铜浆料"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "有研粉材现有业务与公司3D打印铜粉可用于AI服务器液冷冷板，铝合金粉末在商业航天领域已有应用，是上游核心材料供应商处于同一产业方向，收入主体为先进铜基金属粉体材料（55.65%）、高端微电子锡基焊粉材料（32.25%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变事件能否转化为可确认的经营增量，只有经由“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，业务交集才会转化为业绩增量。订单、收入确认、产品结构和毛利率变化若逐步增强，相关业务的重要性会提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 25019,
+            "stockCode": "002149.SZ",
+            "stockName": "西部材料",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是SpaceX的钽铌复材耗材及钛产品供应商，深度参与商业航天及高端制造材料领域。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002149.SZ",
+              "companyName": "西部材料",
+              "companyProfile": "公司是主要从事稀有金属材料的研发、生产和销售的新材料行业的领军企业，经过多年的研发积累和市场开拓，已发展成为规模较大、品种齐全的稀有金属材料深加工研发生产基地。拥有钛、锆及其合金加工材产业，层状金属复合材料产业，稀贵、钽铌金属材料产业，金属纤维及制品产业，钨钼材料及制品产业，民用消费品产业和精密智造产业等业务板块。产品主要应用于航空航天、核电、环保、海洋工程、石化、化工、冶金、电力等行业和众多国家大型项目。公司主要有两种经营模式：买断加工模式和来料加工模式。买断加工即公司自己购买稀有金属原料，经过加工后卖给下游客户。买断加工模式公司需要承担稀有金属价格波动的风险，公司一般通过在接受客户订单的时即锁定原料采购成本的方式以规避上述风险；来料加工则是对客户的材料进行加工，收取稳定的加工费用，公司不承担稀有金属价格波动的风险。",
+              "profileSummary": "公司是主要从事稀有金属材料的研发、生产和销售的新材料行业的领军企业，经过多年的研发积累和市场开拓，已发展成为规模较大、品种齐全的稀有金属材料深加工研发生产基地。拥有钛、锆及其合金加工材产业，层状金属复合材料产业，稀贵、钽铌金属材料产业，金属纤维及制品产业，钨钼材料及制品产业，民用消费品产业和精密智造产业等业务板块。",
+              "majorProducts": "层状复合材料、金属纤维、钛制品、钨钼制品、稀贵金属",
+              "revenueComposition": "钛产品:68.4%;其他稀有金属:26.9%;其他业务:4.7%",
+              "revenueSegments": [
+                {
+                  "name": "钛产品",
+                  "sharePct": 68.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他稀有金属",
+                  "sharePct": 26.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 4.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "铁铬铝纤维",
+                  "铌铪合金板",
+                  "铌锆管",
+                  "铪管",
+                  "钛合金冷轧薄板",
+                  "钛合金带材",
+                  "钛合金热轧中厚板",
+                  "钛合金管"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "西部材料现有业务与公司是SpaceX的钽铌复材耗材及钛产品供应商，深度参与商业航天及高端制造材料领域处于同一产业方向，收入主体为钛产品（68.4%）、其他稀有金属（26.9%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变事件能否转化为可确认的经营增量，只有经由“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，业务交集才会转化为业绩增量。订单、收入确认、产品结构和毛利率变化若逐步增强，相关业务的重要性会提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 25031,
+            "stockCode": "300909.SZ",
+            "stockName": "汇创达",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司作为苹果3D打印结构件的弹性标的，深度绑定3D打印设备商华曙高科和后处理厂商春草研磨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300909.SZ",
+              "companyName": "汇创达",
+              "companyProfile": "公司是国家级高新技术企业和深圳市高新技术企业,专注于导光结构微纳米热压印生产工艺的自主研发，具备较强的技术实力和研发能力,通过自身在光学微结构设计、微纳米压印模具开发、自动化制造等核心环节多年积累的技术优势，为公司产品在输入设备导光结构件及组件、精密按键开关结构件及组件等细分业务领域取得竞争优势奠定了坚实基础。公司的研发能力、生产管理水平、产品质量已得到了下游客户的广泛认可，在笔记本电脑输入设备背光领域先后通过了群光电子、达方电子、光宝科技、精元电脑等全球知名笔记本电脑键盘制造商的合格供应商认证，为其提供笔记本电脑键盘背光模组产品，并最终应用于联想、惠普、戴尔、华硕等全球主流笔记本电脑品牌；同时公司也为华为、OPPO、VIVO、诺基亚、小米、中兴等全球知名手机制造商提供导光膜、金属薄膜开关等功能性结构件、组件，并将金属薄膜开关应用领域延伸至Click Pad，得到了下游笔记本电脑键盘厂商的认可；公司成功研发生产了超小型防水轻触开关，突破了国外超小型防水轻触开关的技术壁垒，实现了国内相关产品的进口替代。",
+              "profileSummary": "公司是国家级高新技术企业和深圳市高新技术企业,专注于导光结构微纳米热压印生产工艺的自主研发，具备较强的技术实力和研发能力,通过自身在光学微结构设计、微纳米压印模具开发、自动化制造等核心环节多年积累的技术优势，为公司产品在输入设备导光结构件及组件、精密按键开关结构件及组件等细分业务领域取得竞争优势奠定了坚实基础。公司的研发能力、生产管理水平、产品质量已得到了下游客户的广泛认可，在笔记本电脑输入设备背光领域先后通过了群光电子、达方电子、光…",
+              "majorProducts": "薄膜开关、背光模组、导光膜、贸易业务、皮套键盘",
+              "revenueComposition": "信号传输元器件及组件:47.46%;导光结构件及组件:25.44%;光学膜片:11.97%;新能源结构组件:6.63%;代工业务:5.45%;其他:3.05%",
+              "revenueSegments": [
+                {
+                  "name": "信号传输元器件及组件",
+                  "sharePct": 47.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "导光结构件及组件",
+                  "sharePct": 25.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光学膜片",
+                  "sharePct": 11.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源结构组件",
+                  "sharePct": 6.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "代工业务",
+                  "sharePct": 5.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "扫地机器人代工",
+                  "偏光片",
+                  "导光膜",
+                  "摄像头代工",
+                  "键盘用背光模组",
+                  "CCS(集成母排)",
+                  "超小型防水轻触开关",
+                  "金属薄膜开关"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "汇创达当前收入集中在信号传输元器件及组件（47.46%）、导光结构件及组件（25.44%），而公司作为苹果3D打印结构件的弹性标的，深度绑定3D打印设备商华曙高科和后处理厂商春草研磨所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响事件能否转化为可确认的经营增量预期，业务端仍需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导后才能确认。订单、收入确认、产品结构和毛利率变化如果持续改善，相关业务可能从产业布局转为实际增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 25032,
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "苹果核心供应商，2027年将全面切入手机钛中框领域，深度参与苹果硬件创新。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300433.SZ",
+              "companyName": "蓝思科技",
+              "companyProfile": "公司以科技创新为核心、智能智造为驱动，是业内领先的智能终端全产业链一站式精密制造解决方案提供商。公司前身于1993年在深圳成立，2006年总部落户湖南长沙，随后实现“A+H”双资本平台战略布局。公司在新材料应用领域持续突破，率先将玻璃、蓝宝石、陶瓷等脆性材料引入消费电子行业。凭借对玻璃、金属、陶瓷、塑胶、皮革、硅胶、玻纤、碳纤、化纤等十余种材料的深度技术积累，以及强大的平台化能力，公司实现了从原材料生产、功能模块贴合到整机组装的垂直整合能力，并与全球头部消费电子及智能汽车品牌建立了长期战略合作。公司通过“新材料、新技术、新装备、新领域”战略，持续拓展新领域。业务覆盖AI智能终端(包含智能手机、AI眼镜、智能汽车、具身智能等)、AI服务器、商业航天、光通信等领域，形成多场景协同发展的业务布局。",
+              "profileSummary": "公司在新材料应用领域持续突破，率先将玻璃、蓝宝石、陶瓷等脆性材料引入消费电子行业。业务覆盖AI智能终端(包含智能手机、AI眼镜、智能汽车、具身智能等)、AI服务器、商业航天、光通信等领域，形成多场景协同发展的业务布局。",
+              "majorProducts": "新能源汽车及智能座舱类、智能手机与电脑类、智能头显与智能穿戴类",
+              "revenueComposition": "智能手机与电脑类:82.23%;新能源汽车及智能座舱类:8.68%;智能头显与智能穿戴类:5.35%;其他业务:2.33%;其他智能终端类:1.41%",
+              "revenueSegments": [
+                {
+                  "name": "智能手机与电脑类",
+                  "sharePct": 82.23,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源汽车及智能座舱类",
+                  "sharePct": 8.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能头显与智能穿戴类",
+                  "sharePct": 5.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他智能终端类",
+                  "sharePct": 1.41,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI眼镜结构件",
+                    "category": "其他消费电子零部件"
+                  },
+                  {
+                    "name": "手机影像模组",
+                    "category": "摄像头模组"
+                  },
+                  {
+                    "name": "手机摄像头装饰件",
+                    "category": "消费电子外壳"
+                  },
+                  {
+                    "name": "手机摄像头陶瓷圈口",
+                    "category": "摄像头模组"
+                  },
+                  {
+                    "name": "手机陶瓷侧键",
+                    "category": "消费电子外壳"
+                  },
+                  {
+                    "name": "手表陶瓷外壳",
+                    "category": "消费电子外壳"
+                  }
+                ],
+                "knownProducts": [
+                  "盖板玻璃",
+                  "人形机器人",
+                  "超薄夹胶多功能车窗玻璃",
+                  "AI眼镜结构件",
+                  "指纹识别模组",
+                  "手机影像模组",
+                  "手机摄像头陶瓷圈口",
+                  "手机摄像头装饰件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "蓝思科技已经具备AI眼镜结构件、手机影像模组、手机摄像头装饰件等业务能力，苹果核心供应商，2027年将全面切入手机钛中框领域，深度参与苹果硬件创新并非单纯概念映射。当前对应的收入被归入智能手机与电脑类（82.23%）、其他智能终端类（1.41%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "9条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

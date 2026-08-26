@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27282",
@@ -9,10 +9,10 @@
     "date": "2026-07-09"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 1,
     "mappedStockCount": 1,
-    "unmappedStockCount": 1,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 23763,
@@ -21,124 +21,21 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 18
-      },
-      {
-        "sourceRowNumber": 23764,
-        "stockCode": "AKAM.O",
-        "stockName": "Akamai",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 23764,
-        "stockCode": "AKAM.O",
-        "stockName": "Akamai",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 18,
-    "selectedCoreProductCount": 2,
+    "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 5,
-    "downstreamCandidateCount": 10,
-    "shownUpstreamCount": 5,
-    "shownDownstreamCount": 10
+    "level7ProductCount": 1,
+    "relatedIndustryCandidateCount": 1,
+    "shownRelatedIndustryCount": 1
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140079590",
-        "name": "事件产生器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140079591",
-        "name": "事件分析器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140079593",
-        "name": "事件数据库",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140079592",
-        "name": "响应单元",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140021161",
-        "name": "互联网安全产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140200789",
         "name": "主机入侵检测系统(HIDS)",
@@ -164,18 +61,15 @@
           "name": "主机入侵检测系统(HIDS)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300017.SZ",
             "stockName": "网宿科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 8,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -183,202 +77,108 @@
           "软件开发",
           "计算机"
         ]
-      },
+      }
+    ],
+    "relatedIndustries": [
       {
-        "code": "1140015609",
-        "name": "入侵检测系统",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:主机入侵检测系统(HIDS)",
+        "code": "1210003145",
+        "name": "云计算",
+        "description": "云计算指通过互联网提供计算资源服务。A股中该板块受关注，因其作为数字经济底座，受益于企业数字化转型、AI算力需求爆发及政策支持，具备高成长性与广阔市场空间，是科技投资的核心赛道之一。",
         "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 8,
         "stocks": [
           {
             "stockCode": "300017.SZ",
             "stockName": "网宿科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 5,
-        "downstreamCount": 10,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
+        "products": [
+          {
+            "code": "1140200786",
+            "name": "内容分发网络(CDN)",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > IaaS > 内容分发网络(CDN)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300017.SZ",
+                "stockName": "网宿科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "cdn"
+            ]
+          }
+        ],
+        "rank": 1
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 1,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 1,
+    "candidateIndustryCount": 1,
+    "relatedIndustryCount": 1,
+    "stocks": [
+      {
+        "sourceRowNumber": 23763,
+        "stockCode": "300017.SZ",
+        "stockName": "网宿科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140079618",
-        "name": "军工涉密单位",
-        "anchorCount": 1,
+        "code": "1210003145",
+        "name": "云计算",
+        "description": "云计算指通过互联网提供计算资源服务。A股中该板块受关注，因其作为数字经济底座，受益于企业数字化转型、AI算力需求爆发及政策支持，具备高成长性与广阔市场空间，是科技投资的核心赛道之一。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "300017.SZ",
+            "stockName": "网宿科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
+        "products": [
+          {
+            "code": "1140200786",
+            "name": "内容分发网络(CDN)",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > IaaS > 内容分发网络(CDN)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300017.SZ",
+                "stockName": "网宿科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "cdn"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140079619",
-        "name": "各企事业单位",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140018712",
-        "name": "政府机关单位",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140082412",
-        "name": "IDC网络安全检测",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140115778",
-        "name": "城市地下综合管廊智能监控系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140133805",
-        "name": "智能园区管理监控系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140117804",
-        "name": "智能监控系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140162872",
-        "name": "服务器深度安全防护系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140014578",
-        "name": "网络边界安全产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140014769",
-        "name": "通用安全产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       }
     ]
   },
@@ -393,11 +193,112 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 12,
+    "eligibleSourceRowCount": 1,
+    "totalStockCount": 1,
+    "groupCount": 1,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 4,
+    "excludedNonAShareCount": 7,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 1,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 23763,
+            "stockCode": "300017.SZ",
+            "stockName": "网宿科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内CDN龙头，业务模式与Cloudflare高度对标，有望在国内市场复制内容鉴权收费服务商的\"卖铲人\"角色。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300017.SZ",
+              "companyName": "网宿科技",
+              "companyProfile": "公司成立于2000年1月，致力于成为全球领先的IT基础平台服务提供商。凭借公司在计算、存储、网络及安全等方面的核心技术及服务能力，为互联网客户、政府及企业客户提供高效、稳定、安全的IT基础设施及服务，助力客户实现卓越的数字化、智能化体验。2010年起，公司开启全球化战略，通过持续投入不断强化海外业务平台及销售体系，为客户提供全球化服务。公司客户覆盖多个产业领域，包括视频、电商、游戏、政务、金融、汽车、零售、航空、媒体、消费电子、家电制造、教育、医疗等。",
+              "profileSummary": "公司成立于2000年1月，致力于成为全球领先的IT基础平台服务提供商。2010年起，公司开启全球化战略，通过持续投入不断强化海外业务平台及销售体系，为客户提供全球化服务。",
+              "majorProducts": "CDN服务、IDC及液冷解决方案、MSP服务、SASE办公安全一体化体系、WAAP全站防护体系、边缘计算、算力云、综合安全服务体系",
+              "revenueComposition": "CDN服务:62.11%;安全及增值服务:29.61%;IDC服务:6.06%;商品销售:2.22%",
+              "revenueSegments": [
+                {
+                  "name": "CDN服务",
+                  "sharePct": 62.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "安全及增值服务",
+                  "sharePct": 29.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "IDC服务",
+                  "sharePct": 6.06,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "商品销售",
+                  "sharePct": 2.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "内容分发网络(CDN)",
+                    "category": "IaaS"
+                  }
+                ],
+                "knownProducts": [
+                  "云安全运营中心(SOC)",
+                  "云管理服务(MSP)",
+                  "内容分发网络(CDN)",
+                  "裸金属服务器",
+                  "边缘云存储服务",
+                  "专属云平台",
+                  "多云管理平台(CMP)",
+                  "混合云平台"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "网宿科技已经具备内容分发网络(CDN)等业务能力，国内CDN龙头，业务模式与Cloudflare高度对标，有望在国内市场复制内容鉴权收费服务商的\"卖铲人\"角色并非单纯概念映射。当前对应的收入被归入IDC服务（6.06%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "4条低于3星的源记录已按当前关注口径排除。",
+      "7条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

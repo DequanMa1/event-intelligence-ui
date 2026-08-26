@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26605",
@@ -9,10 +9,10 @@
     "date": "2026-06-30"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 4,
-    "mappedStockCount": 4,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 8221,
@@ -20,8 +20,8 @@
         "stockName": "昊华科技",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 27
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 8222,
@@ -30,7 +30,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 14
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 8227,
@@ -38,8 +38,8 @@
         "stockName": "新兴铸管",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 7
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 8228,
@@ -48,121 +48,40 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 15
+        "anchorProductCount": 2
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 8221,
+        "stockCode": "600378.SH",
+        "stockName": "昊华科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 8227,
+        "stockCode": "000778.SZ",
+        "stockName": "新兴铸管",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 63,
     "selectedCoreProductCount": 3,
     "selectedCompanyCoreProductCount": 3,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 6,
-    "downstreamCandidateCount": 34,
-    "shownUpstreamCount": 6,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 26,
+    "relatedIndustryCandidateCount": 14,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140077181",
-        "name": "炭黑",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000144"
-        ],
-        "linkedCoreProductNames": [
-          "碳化钨粉"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140107998",
-        "name": "三氧化钨",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
-        ],
-        "linkedCoreProductNames": [
-          "钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1114000076",
-        "name": "仲钨酸铵APT",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
-        ],
-        "linkedCoreProductNames": [
-          "钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140005270",
-        "name": "回收钨粉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000144"
-        ],
-        "linkedCoreProductNames": [
-          "碳化钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140007462",
-        "name": "氢气",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
-        ],
-        "linkedCoreProductNames": [
-          "钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1114000205",
-        "name": "氧化钨",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
-        ],
-        "linkedCoreProductNames": [
-          "钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140175369",
         "name": "六氟化钨",
@@ -188,18 +107,15 @@
           "name": "六氟化钨"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688549.SH",
             "stockName": "中巨芯",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 12,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -234,18 +150,15 @@
           "name": "碳化钨粉"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600549.SH",
             "stockName": "厦门钨业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 20,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -279,18 +192,15 @@
           "name": "钨粉"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600549.SH",
             "stockName": "厦门钨业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 17,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -300,234 +210,405 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140005207",
-        "name": "钨硬质合金",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110",
-          "1114000144"
+        "code": "1210000314",
+        "name": "钨冶炼",
+        "description": "钨冶炼指将钨矿加工为仲钨酸铵等中间品的过程。因钨属战略稀缺资源，广泛应用于军工、光伏及半导体领域，受地缘政治与高端制造需求驱动，其供给刚性凸显，成为A股备受关注的战略性金属赛道。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 3,
+        "relevanceScore": 88,
+        "stocks": [
+          {
+            "stockCode": "600549.SH",
+            "stockName": "厦门钨业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002842.SZ",
+            "stockName": "翔鹭钨业",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "碳化钨粉",
-          "钨粉"
+        "products": [
+          {
+            "code": "1114000110",
+            "name": "钨粉",
+            "hierarchyPath": "有色金属 > 小金属 > 钨 > 钨冶炼 > 钨冶炼 > 钨粉",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600549.SH",
+                "stockName": "厦门钨业",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002842.SZ",
+                "stockName": "翔鹭钨业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "钨粉"
+            ]
+          },
+          {
+            "code": "1140166171",
+            "name": "仲钨酸铵(APT)",
+            "hierarchyPath": "有色金属 > 小金属 > 钨 > 钨冶炼 > 钨冶炼 > 仲钨酸铵(APT)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600549.SH",
+                "stockName": "厦门钨业",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002842.SZ",
+                "stockName": "翔鹭钨业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1114000205",
+            "name": "氧化钨",
+            "hierarchyPath": "有色金属 > 小金属 > 钨 > 钨冶炼 > 钨冶炼 > 氧化钨",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600549.SH",
+                "stockName": "厦门钨业",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002842.SZ",
+                "stockName": "翔鹭钨业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140166259",
-        "name": "钨硬质合金刀片",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110",
-          "1114000144"
+        "code": "1210000317",
+        "name": "其他钨制品",
+        "description": "该行业指钨深加工及非传统钨产品。因钨具高熔点、硬度，广泛用于军工、光伏及半导体领域，兼具战略资源属性。受地缘政治、国产替代及高端制造需求驱动，其稀缺性与技术壁垒使其成为市场关注焦点。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 1,
+        "relevanceScore": 40,
+        "stocks": [
+          {
+            "stockCode": "600549.SH",
+            "stockName": "厦门钨业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002842.SZ",
+            "stockName": "翔鹭钨业",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "碳化钨粉",
-          "钨粉"
+        "products": [
+          {
+            "code": "1114000144",
+            "name": "碳化钨粉",
+            "hierarchyPath": "有色金属 > 小金属 > 钨 > 其他钨制品 > 其他钨制品 > 碳化钨粉",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600549.SH",
+                "stockName": "厦门钨业",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002842.SZ",
+                "stockName": "翔鹭钨业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "钨粉"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 10,
+    "mappedStockCount": 6,
+    "unmappedStockCount": 4,
+    "level7ProductCount": 26,
+    "candidateIndustryCount": 14,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 8220,
+        "stockCode": "688146.SH",
+        "stockName": "中船特气",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140160105",
-        "name": "冲压模具合金",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000144"
-        ],
-        "linkedCoreProductNames": [
-          "碳化钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8221,
+        "stockCode": "600378.SH",
+        "stockName": "昊华科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140160103",
-        "name": "切削合金棒材",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000144"
-        ],
-        "linkedCoreProductNames": [
-          "碳化钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8222,
+        "stockCode": "688549.SH",
+        "stockName": "中巨芯",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140160104",
-        "name": "切削合金滚刀毛坯",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000144"
-        ],
-        "linkedCoreProductNames": [
-          "碳化钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8223,
+        "stockCode": "002407.SZ",
+        "stockName": "多氟多",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140108002",
-        "name": "合金刀片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
-        ],
-        "linkedCoreProductNames": [
-          "钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8224,
+        "stockCode": "002971.SZ",
+        "stockName": "和远气体",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140090083",
-        "name": "合金模具",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
-        ],
-        "linkedCoreProductNames": [
-          "钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8227,
+        "stockCode": "000778.SZ",
+        "stockName": "新兴铸管",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140108003",
-        "name": "合金钻头",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
-        ],
-        "linkedCoreProductNames": [
-          "钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8228,
+        "stockCode": "600549.SH",
+        "stockName": "厦门钨业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 12
       },
       {
-        "code": "1140160101",
-        "name": "地矿刀块",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000144"
-        ],
-        "linkedCoreProductNames": [
-          "碳化钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8229,
+        "stockCode": "300666.SZ",
+        "stockName": "江丰电子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 12
       },
       {
-        "code": "1140005212",
-        "name": "热喷涂粉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
-        ],
-        "linkedCoreProductNames": [
-          "钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8230,
+        "stockCode": "002842.SZ",
+        "stockName": "翔鹭钨业",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140160110",
-        "name": "牙轮钻机钻杆",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000144"
+        "sourceRowNumber": 8234,
+        "stockCode": "002409.SZ",
+        "stockName": "雅克科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210000314",
+        "name": "钨冶炼",
+        "description": "钨冶炼指将钨矿加工为仲钨酸铵等中间品的过程。因钨属战略稀缺资源，广泛应用于军工、光伏及半导体领域，受地缘政治与高端制造需求驱动，其供给刚性凸显，成为A股备受关注的战略性金属赛道。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 3,
+        "relevanceScore": 88,
+        "stocks": [
+          {
+            "stockCode": "600549.SH",
+            "stockName": "厦门钨业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002842.SZ",
+            "stockName": "翔鹭钨业",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "碳化钨粉"
+        "products": [
+          {
+            "code": "1114000110",
+            "name": "钨粉",
+            "hierarchyPath": "有色金属 > 小金属 > 钨 > 钨冶炼 > 钨冶炼 > 钨粉",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600549.SH",
+                "stockName": "厦门钨业",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002842.SZ",
+                "stockName": "翔鹭钨业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "钨粉"
+            ]
+          },
+          {
+            "code": "1140166171",
+            "name": "仲钨酸铵(APT)",
+            "hierarchyPath": "有色金属 > 小金属 > 钨 > 钨冶炼 > 钨冶炼 > 仲钨酸铵(APT)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600549.SH",
+                "stockName": "厦门钨业",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002842.SZ",
+                "stockName": "翔鹭钨业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1114000205",
+            "name": "氧化钨",
+            "hierarchyPath": "有色金属 > 小金属 > 钨 > 钨冶炼 > 钨冶炼 > 氧化钨",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600549.SH",
+                "stockName": "厦门钨业",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002842.SZ",
+                "stockName": "翔鹭钨业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140166240",
-        "name": "特种合金焊料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
+        "code": "1210000317",
+        "name": "其他钨制品",
+        "description": "该行业指钨深加工及非传统钨产品。因钨具高熔点、硬度，广泛用于军工、光伏及半导体领域，兼具战略资源属性。受地缘政治、国产替代及高端制造需求驱动，其稀缺性与技术壁垒使其成为市场关注焦点。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 1,
+        "relevanceScore": 40,
+        "stocks": [
+          {
+            "stockCode": "600549.SH",
+            "stockName": "厦门钨业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002842.SZ",
+            "stockName": "翔鹭钨业",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "钨粉"
+        "products": [
+          {
+            "code": "1114000144",
+            "name": "碳化钨粉",
+            "hierarchyPath": "有色金属 > 小金属 > 钨 > 其他钨制品 > 其他钨制品 > 碳化钨粉",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600549.SH",
+                "stockName": "厦门钨业",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002842.SZ",
+                "stockName": "翔鹭钨业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "钨粉"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140005203",
-        "name": "特种钢材",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000110"
-        ],
-        "linkedCoreProductNames": [
-          "钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140160099",
-        "name": "矿用合金冲击齿",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1114000144"
-        ],
-        "linkedCoreProductNames": [
-          "碳化钨粉"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -542,9 +623,851 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 20,
+    "eligibleSourceRowCount": 10,
+    "totalStockCount": 10,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 10,
+    "excludedNonAShareCount": 0,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 10,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 8220,
+            "stockCode": "688146.SH",
+            "stockName": "中船特气",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球六氟化钨产能最大的龙头企业，产品已进入全球主流半导体厂商供应链，是本轮供给缺口和价格上涨的最直接受益者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688146.SH",
+              "companyName": "中船特气",
+              "companyProfile": "公司是电子特种气体和三氟甲磺酸系列产品供应商，是国务院国资委“双百行动”综合改革、国家发改委混合所有制改革试点企业，是集科研、生产、销售、服务于一体，拥有核心自主知识产权的高新技术企业。2023年，公司在上交所科创板上市，是河北省、中国船舶集团首家科创板上市企业。公司聚焦于电子氟化材料领域，主要从事电子特种气体及三氟甲磺酸系列产品的研发、生产和销售。主要产品包括高纯三氟化氮、高纯六氟化钨、高纯氯化氢、高纯氟化氢、高纯四氟化硅、高纯氘气、高纯六氟丁二烯、高纯八氟环丁烷、高纯电子混合气等电子特种气体，以及三氟甲磺酸、三氟甲磺酸酐、双(三氟甲磺酰)亚胺锂等含氟新材料。产品广泛应用于集成电路、显示面板、锂电新能源、医药、光纤等行业，是上述产业发展不可或缺的关键性材料。经过多年发展和积累，公司目前已经具备电子特种气体及含氟新材料等70余种产品的生产能力，成为行业内产业规模大、客户覆盖广、创新能力强且具备参与全球竞争能力的头部企业。",
+              "profileSummary": "公司聚焦于电子氟化材料领域，主要从事电子特种气体及三氟甲磺酸系列产品的研发、生产和销售。主要产品包括高纯三氟化氮、高纯六氟化钨、高纯氯化氢、高纯氟化氢、高纯四氟化硅、高纯氘气、高纯六氟丁二烯、高纯八氟环丁烷、高纯电子混合气等电子特种气体，以及三氟甲磺酸、三氟甲磺酸酐、双(三氟甲磺酰)亚胺锂等含氟新材料。",
+              "majorProducts": "高纯八氟环丁烷、高纯氘气、高纯电子混合气、高纯氟化氢、高纯六氟丁二烯、高纯六氟化钨、高纯氯化氢、高纯三氟化氮、高纯四氟化硅、六氟化钨、三氟化氮、三氟甲磺酸、三氟甲磺酸酐、三氟甲磺酸锂、三氟甲磺酸三甲基硅酯、双（三氟甲磺酰）亚胺锂",
+              "revenueComposition": "电子特种气体:85.24%;三氟甲磺酸系列:13.23%;其他业务:1.52%",
+              "revenueSegments": [
+                {
+                  "name": "电子特种气体",
+                  "sharePct": 85.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "三氟甲磺酸系列",
+                  "sharePct": 13.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "六氟化钨",
+                    "category": "化学气相沉积气体"
+                  }
+                ],
+                "knownProducts": [
+                  "三氟甲磺酸三甲基硅酯",
+                  "双(三氟甲磺酰)亚胺锂",
+                  "三氟甲磺酸",
+                  "三氟甲磺酸酐",
+                  "氘气",
+                  "三氟化氮",
+                  "六氟丁二烯",
+                  "氟化氢"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中船特气拥有六氟化钨，其产业链位置与全球六氟化钨产能最大的龙头企业，产品已进入全球主流半导体厂商供应链，是本轮供给缺口和价格上涨的最直接受益者一致；当前的电子特种气体（85.24%）、三氟甲磺酸系列（13.23%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 8221,
+            "stockCode": "600378.SH",
+            "stockName": "昊华科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内六氟化钨核心生产商之一，受益于行业供需紧张及价格上涨，同时公司氟化工主业景气度向好。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600378.SH",
+              "companyName": "昊华科技",
+              "companyProfile": "公司是中国中化控股有限责任公司旗下的上市公司。1999年经国家经贸委批准在成都发起设立，2001年1月在上海证券交易所挂牌上市。2018年实施重大资产重组，转型升级为先进化工材料领域科研院所集群公司，主要从事高端氟材料、电子化学品、高端制造化工材料的研发与生产，以及提供绿色低碳整体解决方案的碳减排业务。近年来，公司围绕国家发展和市场需求，聚焦化工新材料补短板，强化科技创新，不断优化结构，持续深化改革，发展成为业绩优良、竞争力强、主业突出、治理规范的上市公司。公司始终把“致力成为中国先进化工材料行业引领者，持续为人类品质生活提升和技术进步作贡献”作为公司的发展战略和发展愿景；把“科技引领，创新驱动，追求卓越”作为公司的发展理念，持续推进公司高质量发展。",
+              "profileSummary": "2018年实施重大资产重组，转型升级为先进化工材料领域科研院所集群公司，主要从事高端氟材料、电子化学品、高端制造化工材料的研发与生产，以及提供绿色低碳整体解决方案的碳减排业务。近年来，公司围绕国家发展和市场需求，聚焦化工新材料补短板，强化科技创新，不断优化结构，持续深化改革，发展成为业绩优良、竞争力强、主业突出、治理规范的上市公司。",
+              "majorProducts": "电子化学品、高端氟材料、高端制造化工材料、碳减排业务",
+              "revenueComposition": "氟材料:59.55%;高端制造:17.57%;工程技术服务:11.34%;电子化学品:6.82%;其他业务:2.87%;贸易及其他:1.85%",
+              "revenueSegments": [
+                {
+                  "name": "氟材料",
+                  "sharePct": 59.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高端制造",
+                  "sharePct": 17.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程技术服务",
+                  "sharePct": 11.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子化学品",
+                  "sharePct": 6.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易及其他",
+                  "sharePct": 1.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "天然气转化(镍系)催化剂",
+                  "燃料电池催化剂",
+                  "甲醇合成(铜系)催化剂",
+                  "四氧化二氮",
+                  "氟橡胶混炼胶",
+                  "全氟丙烯",
+                  "四氟丙醇",
+                  "四氟乙烯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "昊华科技的业务范围能够覆盖国内六氟化钨核心生产商之一，受益于行业供需紧张及价格上涨，同时公司氟化工主业景气度向好所处的产业环节，但当前氟材料（59.55%）、高端制造（17.57%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。供需缺口与产品价格需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”完成兑现，并在产品报价、订单排期、产销率和毛利率上形成持续改善；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 8222,
+            "stockCode": "688549.SH",
+            "stockName": "中巨芯",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "与日本中央硝子合资生产六氟化钨，可直接承接其因原料断供而流失的客户订单，显著受益于海外市场的高溢价。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688549.SH",
+              "companyName": "中巨芯-U",
+              "companyProfile": "公司成立于2017年12月，由浙江巨化股份有限公司和国家集成电路产业投资基金股份有限公司为主投资设立。公司于2021年被评为浙江省国企混改典型案例，于2022年列入国家科改示范企业，并于2023年9月8日在上海证券交易所科创板上市。公司专注于半导体制造支撑业，在持续深耕电子湿化学品、电子特气、前驱体材料等电子化学材料的同时，将适时拓展边界，延伸至更广阔的其他半导体材料(如高纯石英材料)及相关零部件领域，为全球半导体衬底、装备、制造、封装等类型企业提供高品质的通用和定制化产品与服务。未来，公司将继续秉承以满足客户需求为导向，提供组合化的优质产品和一体化的解决方案；坚持以创新驱动为发展内核，持续满足集成电路制造工艺不断进步的需求，致力于成为广受信赖的半导体产业生态伙伴！",
+              "profileSummary": "公司专注于半导体制造支撑业，在持续深耕电子湿化学品、电子特气、前驱体材料等电子化学材料的同时，将适时拓展边界，延伸至更广阔的其他半导体材料(如高纯石英材料)及相关零部件领域，为全球半导体衬底、装备、制造、封装等类型企业提供高品质的通用和定制化产品与服务。未来，公司将继续秉承以满足客户需求为导向，提供组合化的优质产品和一体化的解决方案；坚持以创新驱动为发展内核，持续满足集成电路制造工艺不断进步的需求，致力于成为广受信赖的半导体产业生态伙…",
+              "majorProducts": "BDEAS、HCDS、TDMAT、电子级氨水、电子级氟化铵、电子级硫酸、电子级氢氟酸、电子级硝酸、电子级盐酸、高纯氟化氢、高纯氟碳类气体（主要包括三氟甲烷、八氟环丁烷、八氟环戊烯、六氟丁二烯等）、高纯六氟化钨、高纯氯化氢、硅刻蚀液、缓冲氧化物刻蚀液",
+              "revenueComposition": "电子湿化学品:72.52%;电子特种气体及前驱体:23.87%;其他业务:3.61%",
+              "revenueSegments": [
+                {
+                  "name": "电子湿化学品",
+                  "sharePct": 72.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子特种气体及前驱体",
+                  "sharePct": 23.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "六氟化钨",
+                    "category": "化学气相沉积气体"
+                  }
+                ],
+                "knownProducts": [
+                  "电子级氢氟酸",
+                  "电子级硫酸",
+                  "高纯三氟甲烷",
+                  "电子级氟化铵",
+                  "硅刻蚀液",
+                  "缓冲氧化物刻蚀液",
+                  "电子级氨水",
+                  "电子级盐酸"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中巨芯实际经营中已有六氟化钨，与事件指向的与日本中央硝子合资生产六氟化钨，可直接承接其因原料断供而流失的客户订单，显著受益于海外市场的高溢价能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在电子湿化学品（72.52%）、电子特种气体及前驱体（23.87%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善商业化进度和订单兑现，需要沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。客户认证、新增订单、交付节奏、相关业务收入和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 8227,
+            "stockCode": "000778.SZ",
+            "stockName": "新兴铸管",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内钨矿及硬质合金龙头，为六氟化钨生产提供关键原材料钨粉，受益于钨全产业链价值重估。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000778.SZ",
+              "companyName": "新兴铸管",
+              "companyProfile": "公司源于1971年成立的中国人民解放军第二六七二工程指挥部，1996年改制为国有独资有限公司，1997年在深交所上市，是国资委监管中央企业一新兴际华集团所属核心企业。经过50余年的发展，公司生产基地分布于全国各大区域和“一带一路”沿线国家，销售网络覆盖亚洲、欧洲、非洲、美洲，产品出口世界120多个国家。铸管产品国内市场和出口市场具有显著优势，形成了战略布局优势、销售终端优势、生产成本优势、品牌价值优势、科技创新优势和企业文化优势六大核心竞争力，是供排水管道项目设计、建设、运营、移交的综合性研发制造商。公司综合竞争力连续九年获评A+，连续十年上榜“亚洲品牌500强”，铸管产品获得国家科技进步一等奖，钢格栅板产品荣获国家工信部“制造业单项冠军企业”称号。新兴钢材获冶金产品实物质量金杯奖，信用等级为“AAA”。同时公司在智能工厂、工业互联网等数字化转型关键领域成绩斐然，荣获工信部“数字领航”企业等国家级荣誉3项，省级荣誉5项。",
+              "profileSummary": "经过50余年的发展，公司生产基地分布于全国各大区域和“一带一路”沿线国家，销售网络覆盖亚洲、欧洲、非洲、美洲，产品出口世界120多个国家。铸管产品国内市场和出口市场具有显著优势，形成了战略布局优势、销售终端优势、生产成本优势、品牌价值优势、科技创新优势和企业文化优势六大核心竞争力，是供排水管道项目设计、建设、运营、移交的综合性研发制造商。",
+              "majorProducts": "不锈钢管、钢塑管、特种钢管、新兴DN110、新兴DN1800、新兴DN2000、新兴DN2200、新兴DN2400、新兴DN2600、新兴DN50、新兴DN75、新兴DN90、新兴低合金螺纹钢、新兴钢格板、新兴钢铁冶金、新兴灰铁管、新兴离心球墨铸铁管、新兴普碳圆钢、新兴圆钢、新兴铸管",
+              "revenueComposition": "铸管及管铸件:34.15%;优特钢:28.18%;普钢:24.21%;其他收入:13.47%",
+              "revenueSegments": [
+                {
+                  "name": "铸管及管铸件",
+                  "sharePct": 34.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "优特钢",
+                  "sharePct": 28.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "普钢",
+                  "sharePct": 24.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他收入",
+                  "sharePct": 13.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "钢塑复合管",
+                  "特种钢管",
+                  "离心球墨铸铁管",
+                  "钢格板",
+                  "螺纹钢",
+                  "齿轮钢",
+                  "工具钢"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "新兴铸管现有收入由铸管及管铸件（34.15%）、优特钢（28.18%）贡献，主营产品为钢塑复合管、特种钢管、离心球墨铸铁管、钢格板，与国内钨矿及硬质合金龙头，为六氟化钨生产提供关键原材料钨粉，受益于钨全产业链价值重估指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，事件能否转化为可确认的经营增量才会通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”产生财务影响。现阶段订单、收入确认、产品结构和毛利率变化比概念标签更重要；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 8228,
+            "stockCode": "600549.SH",
+            "stockName": "厦门钨业",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内高纯钨粉核心供应商，是六氟化钨生产的关键上游原料，直接受益于钨产业链价值重估。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600549.SH",
+              "companyName": "厦门钨业",
+              "companyProfile": "公司专注于钨钼、能源新材料和稀土三大核心业务。依靠持续的技术和管理创新，公司构建了前端钨矿山采选，中端钨钼冶炼及钨钼粉末生产，后端硬质合金、钨钼丝材制品、切削工具等高端深加工应用及回收的全产业链，多项技术国际领先。公司构建起完整的新能源材料产品线，助力3C消费电子、新能源汽车、电能储能创造更多可能，为实现碳中和提供先进材料解决方案。公司构建了覆盖稀土全产业链的协同体系，前端通过战略参股方式布局矿山开采及冶炼分离环节，确保上游资源稳定供应；后端以自主控股形式深度开发高附加值领域，涵盖稀土高纯氧化物、稀土金属加工、发光材料、高性能磁性材料、光电晶体的全产业链闭环。",
+              "profileSummary": "公司构建起完整的新能源材料产品线，助力3C消费电子、新能源汽车、电能储能创造更多可能，为实现碳中和提供先进材料解决方案。公司构建了覆盖稀土全产业链的协同体系，前端通过战略参股方式布局矿山开采及冶炼分离环节，确保上游资源稳定供应；后端以自主控股形式深度开发高附加值领域，涵盖稀土高纯氧化物、稀土金属加工、发光材料、高性能磁性材料、光电晶体的全产业链闭环。",
+              "majorProducts": "钼、能源新材料、钨、稀土",
+              "revenueComposition": "钨钼等有色金属制品:43.56%;电池材料:42.97%;稀土业务:13.36%;房地产及配套服务:0.11%",
+              "revenueSegments": [
+                {
+                  "name": "钨钼等有色金属制品",
+                  "sharePct": 43.56,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电池材料",
+                  "sharePct": 42.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "稀土业务",
+                  "sharePct": 13.36,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "房地产及配套服务",
+                  "sharePct": 0.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "碳化钨粉",
+                    "category": "其他钨制品"
+                  },
+                  {
+                    "name": "钨粉",
+                    "category": "钨冶炼"
+                  },
+                  {
+                    "name": "仲钨酸铵(APT)",
+                    "category": "钨冶炼"
+                  },
+                  {
+                    "name": "氧化钨",
+                    "category": "钨冶炼"
+                  },
+                  {
+                    "name": "稀土氧化物",
+                    "category": "稀土原材料"
+                  },
+                  {
+                    "name": "稀土贮氢材料",
+                    "category": "稀土产品"
+                  }
+                ],
+                "knownProducts": [
+                  "房地产开发(住宅-厦门)",
+                  "稀土贮氢材料",
+                  "稀土氧化物",
+                  "稀土金属",
+                  "碳化钨粉",
+                  "仲钨酸铵(APT)",
+                  "氧化钨",
+                  "钨粉"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "厦门钨业与事件存在真实业务交集：公司已有碳化钨粉、钨粉、仲钨酸铵(APT)，与国内高纯钨粉核心供应商，是六氟化钨生产的关键上游原料，直接受益于钨产业链价值重估所处的产业环节一致。钨钼等有色金属制品（43.56%）、稀土业务（13.36%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 8223,
+            "stockCode": "002407.SZ",
+            "stockName": "多氟多",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "氟化工龙头，已规划布局六氟化钨等高端电子特气产线，具备完整的氟化工产业链协同优势和客户基础。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002407.SZ",
+              "companyName": "多氟多",
+              "companyProfile": "公司是一家致力于氟、锂、硅、硼等元素细分领域进行材料和能源体系研究及产业化的国家高新技术企业。主营业务为氟基新材料、新能源材料、电子信息材料和新能源电池，产品广泛应用于电解铝、半导体集成电路、光伏、TFT液晶屏幕、电动汽车等领域。公司走出一条“技术专利化、专利标准化、标准国际化”的创新发展道路。是全国有色金属标准样品定点研制单位、全国化学标准化委员会无机分会氟化盐工作组召集单位、ISO铝用原材料技术委员会冶金级氟化盐工作组召集人单位、ISO锂技术委员会锂电解质分析工作组召集人单位。拥有国家企业技术中心、国家博士后科研工作站、国家认可实验室、国家技能大师工作室、河南省无机氟化学工程技术研究中心、河南省氟基新材料产业研究院、河南省氟基功能新材料创新中心等研发平台。先后承担国家“863”计划、国家增强制造业核心竞争力专项、国家工业强基工程、国家产业基础再造工程等国家级项目20余项。公司秉承“氟通四海、锂行天下、硅达五洲、硼程万里、智创未来”的发展愿景，沿着“新材料支撑新能源、新能源牵引新材料”的发展路径，不断探求氟在人类生活和工业应用中的无限可能，运用数字化技术，为推动氟化盐可持续发展、半导体高端材料国产化、新能源产业绿色发展贡献智慧。",
+              "profileSummary": "主营业务为氟基新材料、新能源材料、电子信息材料和新能源电池，产品广泛应用于电解铝、半导体集成电路、光伏、TFT液晶屏幕、电动汽车等领域。",
+              "majorProducts": "电子级硅烷、电子级氢氟酸、高分子比冰晶石、锂离子电池、六氟磷酸锂、六氟磷酸钠、钠离子电池、双氟磺酰亚胺锂、无水氟化氢",
+              "revenueComposition": "新能源材料:33.21%;新能源电池:30.21%;氟基新材料:29.56%;电子信息材料:4.33%;其他:2.68%",
+              "revenueSegments": [
+                {
+                  "name": "新能源材料",
+                  "sharePct": 33.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源电池",
+                  "sharePct": 30.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氟基新材料",
+                  "sharePct": 29.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子信息材料",
+                  "sharePct": 4.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "无水氟化铝",
+                  "电子级氢氟酸",
+                  "高分子比冰晶石",
+                  "六氟磷酸锂",
+                  "硫化物固态电解质",
+                  "聚合物固态电解质",
+                  "钠离子电池",
+                  "三元锂电池"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "多氟多现有业务与氟化工龙头，已规划布局六氟化钨等高端电子特气产线，具备完整的氟化工产业链协同优势和客户基础处于同一产业方向，收入主体为新能源材料（33.21%）、新能源电池（30.21%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变政策约束与需求释放节奏，只有经由“政策先改变客户采购意愿或行业准入，再通过项目落地、订单转化和成本变化影响经营结果”，业务交集才会转化为业绩增量。政策细则、招投标规模、项目开工率和回款进度若逐步增强，相关业务的重要性会提高；若政策执行弱于预期、补贴退坡或项目回款周期拉长，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 8224,
+            "stockCode": "002971.SZ",
+            "stockName": "和远气体",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "区域性气体公司，规划六氟化钨产能，产品处于试生产阶段，是行业潜在的新增供给方。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002971.SZ",
+              "companyName": "和远气体",
+              "companyProfile": "公司成立于2003年11月，于2020年1月在深交所主板上市，主要股东有杨涛，湖北省交投集团、长江证券等，现为国家高新技术企业、国家专精特新小巨人企业。公司一直致力于各类气体产品的研发、生产、销售、服务以及工业尾气回收循环利用。截至目前，公司拥有分子公司28家，终端销售网络已遍布全国，广泛服务于化工、钢铁、食品、家电、机械等基础行业以及半导体、新能源、生物医药等新兴产业。经过20余年的发展，公司已成为国内领先的综合型气体公司。公司始终坚持创新引领发展的理念，紧紧围绕气体合成、分离、纯化、低温等核心技术不断加大人才引进和培养、增加研发投入，与上下游合作伙伴、科研院校一起，力争在电子特气及电子化学品、电子级超纯大宗气体、硅基功能性新材料的研发和生产以及大型空分配套、稀有气体提取、工业尾气回收净化再利用、液氮冷冻技术应用、标准气体制备等领域不断延伸与拓展，致力于将和远气体打造成为具有国际竞争力的综合型气体公司。",
+              "profileSummary": "公司一直致力于各类气体产品的研发、生产、销售、服务以及工业尾气回收循环利用。截至目前，公司拥有分子公司28家，终端销售网络已遍布全国，广泛服务于化工、钢铁、食品、家电、机械等基础行业以及半导体、新能源、生物医药等新兴产业。",
+              "majorProducts": "丙烷、电子级硅烷、电子级乙硅烷、二氯二氢硅、二氧化碳、高纯氨、高纯甲烷、高纯氯化氢、高纯氯气、高纯氢气、高纯羰基硫、高纯一氧化碳、工业氮气、工业级氨水、工业级硅烷、工业级氯化氢、工业级无水氨、工业氧气、硅基功能性新材料、硅烷偶联剂、氦气、六氟化钨、普通气体、清洁能源、三氟化氮、三甲基铝、三氯化硼、三氯氢硅、食品氮气、四氯化硅、特种气体、溴化氢、氩气、医用氧气、乙炔、正硅酸乙酯",
+              "revenueComposition": "大宗气体:47.53%;工业级化学品:28.52%;清洁能源:14.09%;电子特气及电子化学品:4.14%;污水处理服务:2.68%;其他:1.88%;尾气回收:0.68%;资产租赁及技术服务收入:0.29%;硅基功能性新材料:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "大宗气体",
+                  "sharePct": 47.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业级化学品",
+                  "sharePct": 28.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "清洁能源",
+                  "sharePct": 14.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子特气及电子化学品",
+                  "sharePct": 4.14,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "污水处理服务",
+                  "sharePct": 2.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "尾气回收",
+                  "sharePct": 0.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "资产租赁及技术服务收入",
+                  "sharePct": 0.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硅基功能性新材料",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "六氟化钨",
+                    "category": "化学气相沉积气体"
+                  }
+                ],
+                "knownProducts": [
+                  "工业污水处理",
+                  "氨水",
+                  "液氨",
+                  "硅烷偶联剂",
+                  "丙烷",
+                  "乙炔",
+                  "二氧化碳",
+                  "医用氧气"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "和远气体的电子特气及电子化学品（4.14%）覆盖范围较宽，其中能够承载六氟化钨，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：区域性气体公司，规划六氟化钨产能，产品处于试生产阶段，是行业潜在的新增供给方。现阶段无法用整个分部占比直接衡量受益程度，因为政策约束与需求释放节奏还需沿“政策先改变客户采购意愿或行业准入，再通过项目落地、订单转化和成本变化影响经营结果”传导，相关产品在分部内部的收入权重才会逐步显现。政策细则、招投标规模、项目开工率和回款进度若持续增强，事件影响可以从产品层面扩散到公司盈利；若政策执行弱于预期、补贴退坡或项目回款周期拉长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 8229,
+            "stockCode": "300666.SZ",
+            "stockName": "江丰电子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是全球半导体溅射靶材龙头，产品包括高纯钨靶材，受益于存储扩产及钨产业链景气度提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300666.SZ",
+              "companyName": "江丰电子",
+              "companyProfile": "公司自成立以来一直从事高纯溅射靶材的研发、生产和销售业务，主要产品为各种高纯溅射靶材，包括铝靶、钛靶、钽靶、钨钛靶等，这些产品主要应用于半导体(主要为超大规模集成电路领域)、平板显示、太阳能等领域。超高纯金属及溅射靶材是生产超大规模集成电路的关键材料之一，公司的超高纯金属溅射靶材产品已应用于世界著名半导体厂商的最先端制造工艺，在16纳米技术节点实现批量供货，同时还满足了国内厂商28纳米技术节点的量产需求。",
+              "profileSummary": "公司自成立以来一直从事高纯溅射靶材的研发、生产和销售业务，主要产品为各种高纯溅射靶材，包括铝靶、钛靶、钽靶、钨钛靶等，这些产品主要应用于半导体(主要为超大规模集成电路领域)、平板显示、太阳能等领域。超高纯金属及溅射靶材是生产超大规模集成电路的关键材料之一，公司的超高纯金属溅射靶材产品已应用于世界著名半导体厂商的最先端制造工艺，在16纳米技术节点实现批量供货，同时还满足了国内厂商28纳米技术节点的量产需求。",
+              "majorProducts": "LCD用碳纤维复合材料部件、超高纯铝靶材、超高纯钛靶材及环件、超高纯钽靶材及环件、超高纯铜靶材及环件、第三代半导体基板材料、精密零部件、碳化硅外延片",
+              "revenueComposition": "超高纯靶材:61.9%;零部件:23.54%;其他:14.56%",
+              "revenueSegments": [
+                {
+                  "name": "超高纯靶材",
+                  "sharePct": 61.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "零部件",
+                  "sharePct": 23.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 14.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "钨靶材",
+                    "category": "其他小金属及合金"
+                  },
+                  {
+                    "name": "钛靶材",
+                    "category": "金属靶材"
+                  },
+                  {
+                    "name": "钴靶材",
+                    "category": "金属靶材"
+                  },
+                  {
+                    "name": "铜靶材",
+                    "category": "金属靶材"
+                  },
+                  {
+                    "name": "铝靶材",
+                    "category": "金属靶材"
+                  },
+                  {
+                    "name": "铬靶材",
+                    "category": "金属靶材"
+                  }
+                ],
+                "knownProducts": [
+                  "钨靶材",
+                  "钽靶材",
+                  "LCD用碳纤维传动轴",
+                  "LCD用碳纤维叉臂",
+                  "LCD用碳纤维支撑",
+                  "钛靶材",
+                  "钴靶材",
+                  "铜靶材"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "江丰电子拥有钨靶材、钛靶材、钴靶材，其产业链位置与公司是全球半导体溅射靶材龙头，产品包括高纯钨靶材，受益于存储扩产及钨产业链景气度提升一致；当前的超高纯靶材（61.9%）、零部件（23.54%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由产能释放与行业供给变化决定，并需完成“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”。只有在建工程转固、产能利用率、产销率、库存和产品价格持续改善，产品能力才会转化为公司层面的收入和盈利提升；需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 8230,
+            "stockCode": "002842.SZ",
+            "stockName": "翔鹭钨业",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司高纯钨粉通过SK海力士认证，切入半导体材料供应链，受益于六氟化钨上游原料需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002842.SZ",
+              "companyName": "翔鹭钨业",
+              "companyProfile": "公司创建于1997年，是一家集钨矿开采、钨粉末生产到钨深加工为一体的国家高新技术企业、广东省专精特新中小企业。公司专注于钨制品的开发、生产和销售，经过多年的发展形成了从仲钨酸铵、氧化钨、钨粉、碳化钨粉再到钨硬质合金精密深加工全产业链的企业。凭借多年的持续努力与创新，公司形成了明显的综合竞争优势，获得了广东省钨新材料工程技术研究中心、广东省省级企业技术中心、广东省博士工作站、健康企业等认证资质和荣誉称号，目前是中国钨业协会主席团单位、广东省有色金属行业协会副会长单位，商务部认定为全国16家钨及钨制品国营贸易出口企业之一，广东省最大的钨制品生产和出口企业。“高品位的企业和高品质的产品是我们永恒的追求”。“厚德载物，诚信致远”是企业的发展基石，通过ERP信息管理系统集中管理，推行5S现场管理制度，建立健全各项经济责任制的管理和考核，逐步形成了信息化、标准化、规范化、高效化的新型生产管理模式。公司配备先进的生产设备和工艺，拥有精密齐全的检测仪器，注重技术创新，坚持实施技术领先的差异化战略和强化管理降低成本的领先战略，不断提升产品技术工艺水平，继续加大研发投入力度，以做精、做专、做实为原则提升企业在整个行业的综合竞争力，努力打造一流的中国钨粉末研发和生产基地，向具有较强国际竞争力的集团化高科技企业迈进。",
+              "profileSummary": "公司专注于钨制品的开发、生产和销售，经过多年的发展形成了从仲钨酸铵、氧化钨、钨粉、碳化钨粉再到钨硬质合金精密深加工全产业链的企业。凭借多年的持续努力与创新，公司形成了明显的综合竞争优势，获得了广东省钨新材料工程技术研究中心、广东省省级企业技术中心、广东省博士工作站、健康企业等认证资质和荣誉称号，目前是中国钨业协会主席团单位、广东省有色金属行业协会副会长单位，商务部认定为全国16家钨及钨制品国营贸易出口企业之一，广东省最大的钨制品生产和…",
+              "majorProducts": "光伏用超细钨丝、黄色氧化钨、蓝色氧化钨、三氧化钨、碳化钨粉、钨粉、钨合金粉、钨硬质合金、硬质合金、紫色氧化钨",
+              "revenueComposition": "粉末制品:66.95%;硬质合金:20.78%;钨丝系列:8.16%;其他副产品:4.11%",
+              "revenueSegments": [
+                {
+                  "name": "粉末制品",
+                  "sharePct": 66.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硬质合金",
+                  "sharePct": 20.78,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "钨丝系列",
+                  "sharePct": 8.16,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他副产品",
+                  "sharePct": 4.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "碳化钨粉",
+                    "category": "其他钨制品"
+                  },
+                  {
+                    "name": "钨粉",
+                    "category": "钨冶炼"
+                  },
+                  {
+                    "name": "仲钨酸铵(APT)",
+                    "category": "钨冶炼"
+                  },
+                  {
+                    "name": "氧化钨",
+                    "category": "钨冶炼"
+                  },
+                  {
+                    "name": "钨丝",
+                    "category": "钨压延加工"
+                  },
+                  {
+                    "name": "钨硬质合金",
+                    "category": "钨合金"
+                  }
+                ],
+                "knownProducts": [
+                  "碳化钨粉",
+                  "仲钨酸铵(APT)",
+                  "氧化钨",
+                  "钨粉",
+                  "钨丝",
+                  "钨硬质合金"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "翔鹭钨业的事件逻辑具备真实业务底座，但尚不足以代表全部公司：硬质合金占收入的20.78%。公司与事件的具体联系在于：公司高纯钨粉通过SK海力士认证，切入半导体材料供应链，受益于六氟化钨上游原料需求增长，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 8234,
+            "stockCode": "002409.SZ",
+            "stockName": "雅克科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "虽不生产六氟化钨，但其钼系前驱体是\"以钼代钨\"技术路线的核心材料，且是存储厂商核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002409.SZ",
+              "companyName": "雅克科技",
+              "companyProfile": "公司是一家中国深圳证券交易所上市企业，主要致力于电子半导体材料，深冷复合材料以及塑料助剂材料研发和生产。公司通过多种方式参与到集成电路(晶圆制造及封装)、平板显示(包含LCD及OLED)等电子制造产业链各个环节，丰富产品链为客户提供多方位的产品和技术服务，并积极探索新业务模式提升高附加值满足市场的需求；公司具有全球领先的深冷复合材料技术，针对以三航(航空、航天和航海)为代表的高端装备制备需求提供专业性的解决方案；最后以磷系阻燃剂为主的塑料助剂材料的世界主要供应商为客户提供更多有竞争力的产品和服务。2018年，公司通过外延并购，成功切入半导体封装材料领域、电子特气领域、IC材料等领域。公司在电子材料行业有稳固的市场地位，是国内首家LNG保温绝热板材供应商，在磷系阻燃剂行业深耕多年，在市场布局、工艺技术和人才储备等各方面均有深厚积累，竞争优势明显，综合实力位居行业前列。",
+              "profileSummary": "公司是一家中国深圳证券交易所上市企业，主要致力于电子半导体材料，深冷复合材料以及塑料助剂材料研发和生产。公司通过多种方式参与到集成电路(晶圆制造及封装)、平板显示(包含LCD及OLED)等电子制造产业链各个环节，丰富产品链为客户提供多方位的产品和技术服务，并积极探索新业务模式提升高附加值满足市场的需求；公司具有全球领先的深冷复合材料技术，针对以三航(航空、航天和航海)为代表的高端装备制备需求提供专业性的解决方案；最后以磷系阻燃剂为主的…",
+              "majorProducts": "CNT 防静电材料、LNG 保温绝热板材、OCPS 光刻胶、RGB 彩色光刻胶、TPP 阻燃剂、光刻胶配套试剂、含氟类电子特种气体、三氯化磷、三氯氧磷、正性 TFT 薄膜电路正性光刻胶",
+              "revenueComposition": "半导体:31.39%;化工材料:30.87%;LNG保温复合材料:27.53%;半导体化学材料:24.51%;光刻胶业务:22.76%;设备租赁:7.92%;特种气体业务:4.85%;LDS设备:3.53%;硅微粉:3.35%;阻燃剂:3.34%;其他业务:2.22%",
+              "revenueSegments": [
+                {
+                  "name": "半导体",
+                  "sharePct": 31.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "化工材料",
+                  "sharePct": 30.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "LNG保温复合材料",
+                  "sharePct": 27.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半导体化学材料",
+                  "sharePct": 24.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光刻胶业务",
+                  "sharePct": 22.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备租赁",
+                  "sharePct": 7.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特种气体业务",
+                  "sharePct": 4.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "LDS设备",
+                  "sharePct": 3.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硅微粉",
+                  "sharePct": 3.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "阻燃剂",
+                  "sharePct": 3.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "有机磷系阻燃剂",
+                  "二异丙氨基硅烷(DIPAS)",
+                  "双(二乙氨基)硅烷(BDEAS)",
+                  "双(叔丁基氨基)硅烷(BTBAS)",
+                  "高纯四氟化碳",
+                  "三甲基铝",
+                  "四(乙基甲基氨基)铪(TEMAH)",
+                  "四(乙基甲基氨基)锆(TEMAZ)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "雅克科技当前收入集中在半导体（31.39%）、化工材料（30.87%），现有产品以有机磷系阻燃剂、二异丙氨基硅烷(DIPAS)、双(二乙氨基)硅烷(BDEAS)、双(叔丁基氨基)硅烷(BTBAS)为主，与新闻所指的“虽不生产六氟化钨，但其钼系前驱体是\"以钼代钨\"技术路线的核心材料，且是存储厂商核心供应商”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，技术商业化与产品迭代速度才可能沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。在此之前，客户认证、量产良率、订单规模、产品收入占比和毛利率若没有出现，事件对公司基本面的影响应按较弱处理；技术路线变化、良率爬坡缓慢或竞争方案更快成熟会进一步压低相关性。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "10条低于3星的源记录已按当前关注口径排除。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

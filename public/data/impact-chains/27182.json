@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27182",
@@ -9,10 +9,10 @@
     "date": "2026-07-08"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 6,
-    "mappedStockCount": 4,
-    "unmappedStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 4,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 3,
     "stocks": [
       {
         "sourceRowNumber": 21482,
@@ -20,31 +20,13 @@
         "stockName": "蔚蓝锂芯",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 21483,
         "stockCode": "001283.SZ",
         "stockName": "豪鹏科技",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 8
-      },
-      {
-        "sourceRowNumber": 21488,
-        "stockCode": "6752.T",
-        "stockName": "松下",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 21489,
-        "stockCode": "006400.KS",
-        "stockName": "三星SDI",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -57,7 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 19
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 21494,
@@ -65,24 +47,33 @@
         "stockName": "思源电气",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 21
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 21488,
-        "stockCode": "6752.T",
-        "stockName": "松下",
+        "sourceRowNumber": 21482,
+        "stockCode": "002245.SZ",
+        "stockName": "蔚蓝锂芯",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 21483,
+        "stockCode": "001283.SZ",
+        "stockName": "豪鹏科技",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       },
       {
-        "sourceRowNumber": 21489,
-        "stockCode": "006400.KS",
-        "stockName": "三星SDI",
+        "sourceRowNumber": 21494,
+        "stockCode": "002028.SZ",
+        "stockName": "思源电气",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -94,240 +85,12 @@
     "candidateCoreProductCount": 53,
     "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 17,
-    "downstreamCandidateCount": 3,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 3
+    "level7ProductCount": 48,
+    "relatedIndustryCandidateCount": 17,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140015203",
-        "name": "CPU口",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015200",
-        "name": "主板插口",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015207",
-        "name": "储能电感",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015201",
-        "name": "光驱插口",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140005952",
-        "name": "功率二极管",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1137000022",
-        "name": "变压器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015209",
-        "name": "散热片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015205",
-        "name": "显卡口",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140010936",
-        "name": "电容器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015198",
-        "name": "电源铭牌",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015197",
-        "name": "电源风扇",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015202",
-        "name": "硬盘口",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015199",
-        "name": "认证标识",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140015204",
-        "name": "软驱口",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
-        ],
-        "linkedCoreProductNames": [
-          "服务器电源"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140014459",
         "name": "服务器电源",
@@ -353,18 +116,15 @@
           "name": "服务器电源"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002851.SZ",
             "stockName": "麦格米特",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 17,
-        "downstreamCount": 3,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -374,54 +134,553 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140018538",
-        "name": "台式机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
+        "code": "1200001354",
+        "name": "电路类器件",
+        "description": "电路类器件指电阻、电容等基础电子元件。因受益于新能源汽车、AI及国产替代需求，行业景气度回升且具备自主可控逻辑，成为A股科技板块中兼具成长性与安全边际的关注焦点。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 7,
+        "relevanceScore": 162,
+        "stocks": [
+          {
+            "stockCode": "002484.SZ",
+            "stockName": "江海股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "服务器电源"
+        "products": [
+          {
+            "code": "1140032975",
+            "name": "超级电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 超级电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002484.SZ",
+                "stockName": "江海股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "超级电容",
+              "电容器",
+              "超级电容器"
+            ]
+          },
+          {
+            "code": "1140200654",
+            "name": "单层陶瓷电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 单层陶瓷电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "电容器"
+            ]
+          },
+          {
+            "code": "1140154403",
+            "name": "多层片式陶瓷电容器(MLCC)",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "电容器"
+            ]
+          },
+          {
+            "code": "1140006040",
+            "name": "钽电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 钽电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "电容器"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140061843",
-        "name": "工作站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
+        "code": "1200001395",
+        "name": "网络设备",
+        "description": "A股网络设备指路由器、交换机等通信基础设施。受5G、算力网络及AI驱动，它是数字经济的底座。因技术迭代快、国产替代加速及数据中心扩容需求，该行业具备高成长性与战略价值，备受市场关注。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 4,
+        "relevanceScore": 48,
+        "stocks": [
+          {
+            "stockCode": "601138.SH",
+            "stockName": "工业富联",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "服务器电源"
+        "products": [
+          {
+            "code": "1140114168",
+            "name": "光纤交换机",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 光纤交换机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140021877",
+            "name": "智能家庭网关",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 智能家庭网关",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140015337",
+            "name": "网络交换机",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 网络交换机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140005662",
+            "name": "路由器",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 路由器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 14,
+    "mappedStockCount": 10,
+    "unmappedStockCount": 4,
+    "level7ProductCount": 48,
+    "candidateIndustryCount": 17,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 21482,
+        "stockCode": "002245.SZ",
+        "stockName": "蔚蓝锂芯",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140021224",
-        "name": "服务器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014459"
+        "sourceRowNumber": 21483,
+        "stockCode": "001283.SZ",
+        "stockName": "豪鹏科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 21484,
+        "stockCode": "300014.SZ",
+        "stockName": "亿纬锂能",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 21485,
+        "stockCode": "300438.SZ",
+        "stockName": "鹏辉能源",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 21486,
+        "stockCode": "301587.SZ",
+        "stockName": "中瑞股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 21491,
+        "stockCode": "002851.SZ",
+        "stockName": "麦格米特",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 21492,
+        "stockCode": "002335.SZ",
+        "stockName": "科华数据",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 21493,
+        "stockCode": "002364.SZ",
+        "stockName": "中恒电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 21494,
+        "stockCode": "002028.SZ",
+        "stockName": "思源电气",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 21495,
+        "stockCode": "002484.SZ",
+        "stockName": "江海股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 21496,
+        "stockCode": "603678.SH",
+        "stockName": "火炬电子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 21497,
+        "stockCode": "301238.SZ",
+        "stockName": "瑞泰新材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 21499,
+        "stockCode": "000977.SZ",
+        "stockName": "浪潮信息",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 9
+      },
+      {
+        "sourceRowNumber": 21500,
+        "stockCode": "601138.SH",
+        "stockName": "工业富联",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001354",
+        "name": "电路类器件",
+        "description": "电路类器件指电阻、电容等基础电子元件。因受益于新能源汽车、AI及国产替代需求，行业景气度回升且具备自主可控逻辑，成为A股科技板块中兼具成长性与安全边际的关注焦点。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 7,
+        "relevanceScore": 162,
+        "stocks": [
+          {
+            "stockCode": "002484.SZ",
+            "stockName": "江海股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "服务器电源"
+        "products": [
+          {
+            "code": "1140032975",
+            "name": "超级电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 超级电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002484.SZ",
+                "stockName": "江海股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "超级电容",
+              "电容器",
+              "超级电容器"
+            ]
+          },
+          {
+            "code": "1140200654",
+            "name": "单层陶瓷电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 单层陶瓷电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "电容器"
+            ]
+          },
+          {
+            "code": "1140154403",
+            "name": "多层片式陶瓷电容器(MLCC)",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "电容器"
+            ]
+          },
+          {
+            "code": "1140006040",
+            "name": "钽电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 钽电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "电容器"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200001395",
+        "name": "网络设备",
+        "description": "A股网络设备指路由器、交换机等通信基础设施。受5G、算力网络及AI驱动，它是数字经济的底座。因技术迭代快、国产替代加速及数据中心扩容需求，该行业具备高成长性与战略价值，备受市场关注。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 4,
+        "relevanceScore": 48,
+        "stocks": [
+          {
+            "stockCode": "601138.SH",
+            "stockName": "工业富联",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140114168",
+            "name": "光纤交换机",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 光纤交换机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140021877",
+            "name": "智能家庭网关",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 智能家庭网关",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140015337",
+            "name": "网络交换机",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 网络交换机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140005662",
+            "name": "路由器",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 路由器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -436,10 +695,1134 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 19,
+    "eligibleSourceRowCount": 14,
+    "totalStockCount": 14,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 1,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 14,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 21482,
+            "stockCode": "002245.SZ",
+            "stockName": "蔚蓝锂芯",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司是国内BBU电芯领域的领先企业，通过代工与直供模式深度卡位全球AI服务器供应链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002245.SZ",
+              "companyName": "蔚蓝锂芯",
+              "companyProfile": "公司于2008年在深交所上市，公司本部位于苏州张家港市，是金属物流行业中第一家在国内上市的企业，为超过200家知名客户提供着钢板、铝板供应链管理的全面解决方案。公司是金属物流配送行业的领导者，为超过1000家知名企业提供金属材料的仓储、分拣、套裁、包装、配送以及来料加工等完整供应链服务。公司主要从事LED芯片业务、锂电池及金属物流配送三大业务，拥有10多家控股子公司,遍布于长三角及珠三角的苏州、上海、淮安、扬州、东莞等地区。公司下属的江苏天鹏电源有限公司是专业从事锂离子电池研发、生产、销售的高新技术企业，作为国内较早选定三元体系用于电动工具用锂离子电池的企业，在三元材料动力型圆柱电池领域具有将近10年的研发和制造经验的积累，拥有先进的圆柱型锂电池生产线，具有较大规模的圆柱型动力锂离子电池生产能力，在工具型动力锂电池领域处于领先地位。公司凭借着规模化的运营、精细化的管理体制及专业的服务，在金属物流行业得到客户的普遍认可，作为规模化企业在金属物流配送市场中具有领先优势与竞争力。公司以先进成熟的技术工艺为基础，结合业内领先的核心装备和公司优秀的管理理念，成为LED外延芯片行业技术水平、营运效率、盈利最好的企业之一，LED芯片凭借稳定的性能和高性价比获得市场的高度认可。",
+              "profileSummary": "公司主要从事LED芯片业务、锂电池及金属物流配送三大业务，拥有10多家控股子公司,遍布于长三角及珠三角的苏州、上海、淮安、扬州、东莞等地区。公司下属的江苏天鹏电源有限公司是专业从事锂离子电池研发、生产、销售的高新技术企业，作为国内较早选定三元体系用于电动工具用锂离子电池的企业，在三元材料动力型圆柱电池领域具有将近10年的研发和制造经验的积累，拥有先进的圆柱型锂电池生产线，具有较大规模的圆柱型动力锂离子电池生产能力，在工具型动力锂电池领…",
+              "majorProducts": "LED 产品、金属物流配送业务、锂电池业务",
+              "revenueComposition": "锂电池:44.33%;金属物流:32.11%;LED:19.52%;其他:4.04%",
+              "revenueSegments": [
+                {
+                  "name": "锂电池",
+                  "sharePct": 44.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金属物流",
+                  "sharePct": 32.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "LED",
+                  "sharePct": 19.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "钢卷供应链管理服务",
+                  "铝合金板供应链管理服务",
+                  "LED芯片",
+                  "三元锂电池",
+                  "钢卷裁剪加工"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "蔚蓝锂芯现有收入由锂电池（44.33%）、金属物流（32.11%）贡献，主营产品为钢卷供应链管理服务、铝合金板供应链管理服务、LED芯片、三元锂电池，与公司是国内BBU电芯领域的领先企业，通过代工与直供模式深度卡位全球AI服务器供应链指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，事件能否转化为可确认的经营增量才会通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”产生财务影响。现阶段订单、收入确认、产品结构和毛利率变化比概念标签更重要；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 21483,
+            "stockCode": "001283.SZ",
+            "stockName": "豪鹏科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司BBU电池产品已向全球领先的服务器客户出货，并同步推进多个项目的量产导入。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "001283.SZ",
+              "companyName": "豪鹏科技",
+              "companyProfile": "公司创立于2002年，是一家致力于锂离子电池、镍氢电池的研发、设计、制造和销售，以及废旧电池回收及资源循环利用的企业。作为一家具备自主研发能力和全球市场综合竞争力的企业，我们深知全球品牌商所面临的挑战和压力。凭借多年的技术积累和产品研发经验，我们成功获得了众多全球知名品牌商的信任。我们为客户提供一站式的电源解决方案，以满足不断变化的市场需求。公司现有产品包括聚合物软包锂离子电池、圆柱锂离子电池、储能电芯及镍氢电池。其中：中型聚合物软包锂离子电池主要应用于笔记本电脑及周边产品、平板、智能手机等领域；小型聚合物软包锂离子电池主要应用于可穿戴设备、电子烟等领域；扣式锂离子电池主要应用于TWS耳机和助听器等可穿戴设备等领域；圆柱锂离子电池主要应用于个人护理、蓝牙音箱、医疗设备、轻动力、便携式储能等领域；储能电芯主要应用于源网侧储能、工商侧储能和家庭储能等应用场景；镍氢电池主要应用于民用零售、车载T-Box、太阳能储能街灯、个人护理等领域。公司秉承“成就客户、开放共赢、严谨务实、自我批判”的核心价值观，聚焦全球品牌商面临的挑战和压力，持续为客户创造价值。公司凭借多年的技术积累和产品研发经验，获得全球诸多细分领域知名品牌商的认可。",
+              "profileSummary": "公司现有产品包括聚合物软包锂离子电池、圆柱锂离子电池、储能电芯及镍氢电池。其中：中型聚合物软包锂离子电池主要应用于笔记本电脑及周边产品、平板、智能手机等领域；小型聚合物软包锂离子电池主要应用于可穿戴设备、电子烟等领域；扣式锂离子电池主要应用于TWS耳机和助听器等可穿戴设备等领域；圆柱锂离子电池主要应用于个人护理、蓝牙音箱、医疗设备、轻动力、便携式储能等领域；储能电芯主要应用于源网侧储能、工商侧储能和家庭储能等应用场景；镍氢电池主要应用…",
+              "majorProducts": "锂离子电池、镍氢电池",
+              "revenueComposition": "消费类应用场景新能源解决方案产品:86.32%;储能类应用场景新能源解决方案产品:11.09%;其他业务:2.59%",
+              "revenueSegments": [
+                {
+                  "name": "消费类应用场景新能源解决方案产品",
+                  "sharePct": 86.32,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "储能类应用场景新能源解决方案产品",
+                  "sharePct": 11.09,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "储能锂电池",
+                    "category": "锂离子电池"
+                  },
+                  {
+                    "name": "全固态电池",
+                    "category": "锂离子电池"
+                  },
+                  {
+                    "name": "小动力锂电池",
+                    "category": "锂离子电池"
+                  },
+                  {
+                    "name": "工商用储能一体柜",
+                    "category": "储能系统"
+                  },
+                  {
+                    "name": "户外电源",
+                    "category": "储能系统"
+                  },
+                  {
+                    "name": "消费类锂离子电池",
+                    "category": "锂离子电池"
+                  }
+                ],
+                "knownProducts": [
+                  "工商用储能一体柜",
+                  "户外电源",
+                  "集装箱储能系统",
+                  "镍氢电池",
+                  "储能锂电池",
+                  "全固态电池",
+                  "小动力锂电池",
+                  "消费类锂离子电池"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "豪鹏科技的消费类应用场景新能源解决方案产品（86.32%）、储能类应用场景新能源解决方案产品（11.09%）覆盖范围较宽，其中能够承载储能锂电池、全固态电池、小动力锂电池，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司BBU电池产品已向全球领先的服务器客户出货，并同步推进多个项目的量产导入。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 21491,
+            "stockCode": "002851.SZ",
+            "stockName": "麦格米特",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司是少数进入英伟达生态的国内AI服务器电源企业，产品线覆盖BBU、HVDC等，深度受益于Rubin平台升级。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002851.SZ",
+              "companyName": "麦格米特",
+              "companyProfile": "公司是电气自动化领域硬件和软件研发、生产、销售与服务的一站式解决方案提供商，二十多年砥砺前行形成以数字化电源控制、系统控制与通讯、功率变换硬件为核心的技术平台，衍生出电源产品、工业自动化、新能源&轨道交通、智能装备、智能家电电控、精密连接等六大业务领域，同时在全球各地建立研发中心、生产制造中心以及市场服务中心。作为全球专业的电气自动化领域解决方案提供商，麦格米特始终坚持技术领先、工艺精湛、品质高端、服务一流的经营方针，致力于人类电能使用更加高效、生存环境更加洁净、生产效率持续进步，以人类生活日益美好为重任，打造全球电气自动化行业标杆！麦格米特聚焦电力电子及相关控制核心技术，不断向与核心技术相关的交叉领域和新兴领域延伸，从最初的电视电源领域，稳扎稳打，逐步拓宽到消费类电源控制器、工业类电源、工控产品、消费类终端和工业装备，从板件产品逐步升级到模块产品、系统产品及集成产品，多年来布局逐步取得效果，并产生了越来越多的协同效应。产品的拓展也带动公司从家用电视市场逐步拓展到各类商业显示、变频家电、智能卫浴、医疗、通信、智能装备、新能源汽车、轨道交通、微波工业应用、智能采油设备、热管理、光储充、焊接技术和电机相关控制等消费和工业的众多行业。在产品和行业的拓展中，不断产生裂变效应，从而发现更多的市场需求，进入更多的细分领域。",
+              "profileSummary": "公司是电气自动化领域硬件和软件研发、生产、销售与服务的一站式解决方案提供商，二十多年砥砺前行形成以数字化电源控制、系统控制与通讯、功率变换硬件为核心的技术平台，衍生出电源产品、工业自动化、新能源&轨道交通、智能装备、智能家电电控、精密连接等六大业务领域，同时在全球各地建立研发中心、生产制造中心以及市场服务中心。麦格米特聚焦电力电子及相关控制核心技术，不断向与核心技术相关的交叉领域和新兴领域延伸，从最初的电视电源领域，稳扎稳打，逐步拓宽…",
+              "majorProducts": "电源产品、工业自动化、精密连接、新能源及轨道交通部件、智能家电电控产品、智能装备",
+              "revenueComposition": "智能家电电控产品:37.85%;电源产品:28.5%;新能源及轨道交通产品:12.18%;工业自动化:9.33%;智能装备:6.44%;精密连接:4.78%;其他业务:0.93%",
+              "revenueSegments": [
+                {
+                  "name": "智能家电电控产品",
+                  "sharePct": 37.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电源产品",
+                  "sharePct": 28.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源及轨道交通产品",
+                  "sharePct": 12.18,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "工业自动化",
+                  "sharePct": 9.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能装备",
+                  "sharePct": 6.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密连接",
+                  "sharePct": 4.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "服务器电源",
+                    "category": "计算机电源"
+                  },
+                  {
+                    "name": "汽车电力电子集成模块(PEU)",
+                    "category": "新能源汽车车身系统"
+                  }
+                ],
+                "knownProducts": [
+                  "空调变频驱控系统",
+                  "轨道交通空调控制器",
+                  "逆变焊机",
+                  "汽车电力电子集成模块(PEU)",
+                  "车载充电机",
+                  "新能源汽车驱动电机驱动器(MCU)",
+                  "车载DC/DC转换器",
+                  "温度控制器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "麦格米特已经具备服务器电源、汽车电力电子集成模块(PEU)等业务能力，公司是少数进入英伟达生态的国内AI服务器电源企业，产品线覆盖BBU、HVDC等，深度受益于Rubin平台升级并非单纯概念映射。当前对应的收入被归入新能源及轨道交通产品（12.18%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于技术商业化与产品迭代速度是否通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”放大，并最终反映在客户认证、量产良率、订单规模、产品收入占比和毛利率上；技术路线变化、良率爬坡缓慢或竞争方案更快成熟会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 21494,
+            "stockCode": "002028.SZ",
+            "stockName": "思源电气",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "通过控股烯晶碳能布局超级电容领域，产品已进入台达产业链并获批量订单，深度受益于BBU与CBU协同方案。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002028.SZ",
+              "companyName": "思源电气",
+              "companyProfile": "公司主营业务为输配电设备的研发、生产、销售及服务。公司是目前输配电设备行业中少数几家具备电力系统一次设备(传统机械类电力设备)、二次设备(控制类电力设备)、电力电子设备等产品的研发、制造和解决方案能力的厂家之一。同时，公司大力发展数字电网与电力电子融合技术，积极拓展静止同步调相机(SSC)、构网型SVG和储能成套系统、宽频振荡抑制、高压有源滤波等相关业务；公司积极探索交直流混合配用电领域应用，积极发展分布式新能源多功能融合一体化解决方案、低压直流开关元件、户用光储充一体化系统等相关业务；公司坚持探索功率型储能元件的应用，积极发展汽车电子电器、配网后备电源、混合调频成套系统等相关业务。公司有着二十多年的行业经验，积累了丰富且成熟的产品开发和制造经验，对行业的现状和发展有着深刻的理解和把握，参与了多项国家标准和行业标准的制定，拥有多项行业领先的核心技术，并积极开展自主可控国产化设备的研发工作，目前在同行业处于领先地位。",
+              "profileSummary": "公司主营业务为输配电设备的研发、生产、销售及服务。公司是目前输配电设备行业中少数几家具备电力系统一次设备(传统机械类电力设备)、二次设备(控制类电力设备)、电力电子设备等产品的研发、制造和解决方案能力的厂家之一。",
+              "majorProducts": "110kV-500kVGIS及SF6开关耐压试验系统、110kV-500kV交联电缆耐压试验系统、BKSC系列环氧浇注铁心并联电抗器、BKS系列油浸式铁心并联电抗器、CI—2000型电容电流测试仪、CKSC系列环氧浇注铁心串联电抗器、DWKN—I型动态无功补偿及电能质量监控装置、GZF-I型GIS工频耐压及局放测试系统、JC1MOA在线监测仪、LP—I移频线路参数测试仪、M—8000I型变频介质测试仪、OSM—1000高压设备绝缘在线监测系统、TROM—600变压器油色谱在线监测系统、磁控电抗器(MCR)型SVC、高压隔离开关、高压交直流互感器、光电互感器、思源电气变频串联谐振成套试验装置、思源电气变压器感应耐压及局放测试系统、思源电气便携式高电压变频谐振耐压试验装置、思源电气电容式电压互感器、思源电气干式互感器、思源电气高压并联电容器、思源电气户外高压交流隔离开关、思源电气户外高压交流接地开关、思源电气户外高压交流中性点隔离开关、思源电气集合式高压并联电容器、思源电气交流高压六氟化硫断路器、思源电气交流高压真空断路器、思源电气接地变压器、思源电气耦合电容器、思源电气微机小电流接地选线成套设备、思源电气消弧线圈自动调谐及接地选线成套装置、思源电气自能式高压六氟化硫断路器",
+              "revenueComposition": "开关类业务:41.48%;变压器类业务:21.51%;保护及自动化类业务:11.8%;EPC类业务:10.83%;储能系统及元件类业务:7.11%;电力电子类业务:7.08%;租赁业务:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "开关类业务",
+                  "sharePct": 41.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "变压器类业务",
+                  "sharePct": 21.51,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "保护及自动化类业务",
+                  "sharePct": 11.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "EPC类业务",
+                  "sharePct": 10.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "储能系统及元件类业务",
+                  "sharePct": 7.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力电子类业务",
+                  "sharePct": 7.08,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "租赁业务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电力电容器",
+                    "category": "电力电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "变电站工程",
+                  "直流充电机",
+                  "直流充电桩",
+                  "中性点接地成套装置",
+                  "互感器",
+                  "油色谱在线监测装置",
+                  "消弧线圈",
+                  "罐式断路器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "思源电气已经具备电力电容器等业务能力，通过控股烯晶碳能布局超级电容领域，产品已进入台达产业链并获批量订单，深度受益于BBU与CBU协同方案并非单纯概念映射。当前对应的收入被归入变压器类业务（21.51%）、电力电子类业务（7.08%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于研发里程碑与商业化成功概率是否通过“研发或授权进展改变项目成功率和未来现金流预期，再通过里程碑收入、销售分成或费用投入影响利润”放大，并最终反映在临床数据、监管节点、首付款及里程碑确认和销售放量上；研发、审批或商业化进度不及预期，且前期投入难以形成对应回报会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 10,
+        "stocks": [
+          {
+            "sourceRowNumber": 21484,
+            "stockCode": "300014.SZ",
+            "stockName": "亿纬锂能",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司已形成覆盖AIDC全场景的备电解决方案，BBU电芯是其战略推进方向。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300014.SZ",
+              "companyName": "亿纬锂能",
+              "companyProfile": "公司成立于2001年，于2009年在深圳创业板首批上市，历经20余年高质量发展，已成为具有全球竞争力的全场景锂电池平台企业。公司致力于“以全场景锂电池方案，加速万物互联”，构建起从材料、电芯、BMS到系统的全体系研发平台。公司拥有约23万m2研究院，设立5个研发中心及国际化、跨学科综合研发团队，同时与武汉大学等高等院校和科研机构就新材料、前沿技术等建立深入合作关系。在消费电池领域，公司消费类小圆柱电池出货量全国第一，全球第四；在储能电池领域，公司储能电芯出货量全球第二；在动力电池领域，公司动力电池装机量排名全国第五，全球第九，其中国内商用车电池市场份额排名第二。公司秉承可持续发展理念，打造更加绿色节能的产品和解决方案，获得“国家级绿色工厂”称号。2024年公司提出CREATE碳中和行动计划，即在2030年实现运营碳中和，2040年实现核心价值链碳中和。面向数字化驱动的可持续未来，公司以“让世界充满前进的能量”为愿景，依托“全球制造、全球合作、全球服务”能力体系，携手价值链合作伙伴，为无处不在的能量需求提供可靠支撑。",
+              "profileSummary": "公司致力于“以全场景锂电池方案，加速万物互联”，构建起从材料、电芯、BMS到系统的全体系研发平台。面向数字化驱动的可持续未来，公司以“让世界充满前进的能量”为愿景，依托“全球制造、全球合作、全球服务”能力体系，携手价值链合作伙伴，为无处不在的能量需求提供可靠支撑。",
+              "majorProducts": "储能电池、动力电池、亿纬锂能锂离子及锂聚合物组合电池、亿纬锂能锂锰电池、亿纬锂能锂亚电池、亿纬锂能镍氢组合电池",
+              "revenueComposition": "动力电池:42.07%;储能电池:39.76%;消费电池:18.02%;其他业务:0.16%",
+              "revenueSegments": [
+                {
+                  "name": "动力电池",
+                  "sharePct": 42.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "储能电池",
+                  "sharePct": 39.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "消费电池",
+                  "sharePct": 18.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "工商用储能一体柜",
+                  "户用光储一体机",
+                  "集装箱储能系统",
+                  "三元锂电池",
+                  "储能锂电池",
+                  "全固态电池",
+                  "半固态电池",
+                  "消费类锂离子电池"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "亿纬锂能的业务范围能够覆盖公司已形成覆盖AIDC全场景的备电解决方案，BBU电芯是其战略推进方向所处的产业环节，但当前动力电池（42.07%）、储能电池（39.76%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”完成兑现，并在订单、收入确认、产品结构和毛利率变化上形成持续改善；若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 21485,
+            "stockCode": "300438.SZ",
+            "stockName": "鹏辉能源",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司BBU专用电芯已完成小试并开始交付，有望受益于AIDC备电需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300438.SZ",
+              "companyName": "鹏辉能源",
+              "companyProfile": "公司以电化学电池为核心产品，致力于成为行业内领先的电池制造商及综合储能解决方案提供商，引领清洁能源未来。电化学电池是以正极活性材料、负极活性材料、电解质及隔膜为核心组件，通过密封式结构设计与电化学原理实现电能存储与释放的能量转换装置，广泛应用于储能系统、消费电子、工业控制、新能源汽车等领域。公司成立于2001年，历经多年深耕发展，已构建覆盖储能电池、消费及动力电池的核心电池业务全球版图。公司主导编制多项锂电行业标准，储能电池出货量连续多年稳居全球十强，工商业储能系统稳居全国前列，是国家级高新技术企业，拥有多个省级科技创新平台。公司主要业务涵盖高性能电池及集成储能解决方案的研发、生产及销售。公司的全面产品组合包括二次充电电池(包含锂离子电池、锂聚合物电池及钠离子电池)；以及一次性电池(包含锂铁电池与锌空电池)。该等产品广泛应用于核心产品类别：储能电池以及消费及动力电池。",
+              "profileSummary": "公司以电化学电池为核心产品，致力于成为行业内领先的电池制造商及综合储能解决方案提供商，引领清洁能源未来。公司成立于2001年，历经多年深耕发展，已构建覆盖储能电池、消费及动力电池的核心电池业务全球版图。",
+              "majorProducts": "锂离子电池、锂锰电池、锂铁电池、镍氢电池",
+              "revenueComposition": "锂离子电池:93.08%;其他类:4.11%;一次锂电电池:2.81%",
+              "revenueSegments": [
+                {
+                  "name": "锂离子电池",
+                  "sharePct": 93.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他类",
+                  "sharePct": 4.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "一次锂电电池",
+                  "sharePct": 2.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "工商用储能一体柜",
+                  "集装箱储能系统",
+                  "钠离子电池",
+                  "锌空气电池",
+                  "镍氢电池",
+                  "锂铁电池",
+                  "锂锰电池",
+                  "三元锂电池"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "鹏辉能源当前收入集中在锂离子电池（93.08%）、其他类（4.11%），现有产品以工商用储能一体柜、集装箱储能系统、钠离子电池、锌空气电池为主，与新闻所指的“公司BBU专用电芯已完成小试并开始交付，受益环节在于AIDC备电需求增长”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，商业化进度和订单兑现才可能沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。在此之前，客户认证、新增订单、交付节奏、相关业务收入和毛利率若没有出现，事件对公司基本面的影响应按较弱处理；客户验证或交付节奏低于预期，订单停留在小批量阶段会进一步压低相关性。"
+          },
+          {
+            "sourceRowNumber": 21486,
+            "stockCode": "301587.SZ",
+            "stockName": "中瑞股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为LG新能源圆柱结构件核心供应商，将直接受益于BBU电池紧缺带来的LG扩产切入。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301587.SZ",
+              "companyName": "中瑞股份",
+              "companyProfile": "公司主要从事圆柱锂电池精密安全结构件的研发、制造及销售，主要产品包括动力型、容量型锂电池组合盖帽系列产品。公司凭借在圆柱锂电池领域十几年不懈地努力和积累，具备突出的技术研发实力，已形成较大的生产和销售规模，并占据了领先市场地位。报告期内，公司实现营业收入金额分别为27,948.51万元、45,998.43万元和64,768.38万元。精密安全结构件是圆柱动力电池的重要组成部分，需要满足动力锂电池高能量密度、安全性和可靠性等要求。由于关系到电池的安全使用，锂电池客户对安全组件的认证周期较长，需要公司拥有较强的工艺积累、技术储备和客户拓展能力。公司坚持定位于中高端产品市场，持续发展下游新能源汽车、电动工具、电动自行车、智能家居等动力型锂电池行业的优质客户。公司已与LG新能源、能元科技、比克电池、力神电池等国内外行业领先锂电池生产销售厂商建立了长期稳定的合作关系。公司产品主要应用于特斯拉Model3、Model Y等新能源汽车，小牛、哈啰、雅迪等品牌电动自行车，戴森(Dyson)、TTI、博世等品牌电动工具，以及数码3C类产品等，具备较强的市场竞争力和较高的市场美誉度。",
+              "profileSummary": "公司主要从事圆柱锂电池精密安全结构件的研发、制造及销售，主要产品包括动力型、容量型锂电池组合盖帽系列产品。公司凭借在圆柱锂电池领域十几年不懈地努力和积累，具备突出的技术研发实力，已形成较大的生产和销售规模，并占据了领先市场地位。",
+              "majorProducts": "容量型锂电池组合盖帽、圆柱锂电池组合盖帽",
+              "revenueComposition": "锂电池组合盖帽:78.9%;其它:14.08%;大圆柱结构件:7.02%",
+              "revenueSegments": [
+                {
+                  "name": "锂电池组合盖帽",
+                  "sharePct": 78.9,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其它",
+                  "sharePct": 14.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "大圆柱结构件",
+                  "sharePct": 7.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "动力锂电池端盖",
+                    "category": "电池外壳材料"
+                  },
+                  {
+                    "name": "动力锂电池钢壳",
+                    "category": "电池外壳材料"
+                  },
+                  {
+                    "name": "动力锂电池铝极柱",
+                    "category": "锂电池正极材料"
+                  },
+                  {
+                    "name": "动力锂电池集流盘",
+                    "category": "电池外壳材料"
+                  },
+                  {
+                    "name": "锂电池盖帽",
+                    "category": "电池外壳材料"
+                  }
+                ],
+                "knownProducts": [
+                  "动力锂电池端盖",
+                  "动力锂电池钢壳",
+                  "动力锂电池集流盘",
+                  "锂电池盖帽",
+                  "动力锂电池铝极柱"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中瑞股份已经具备动力锂电池端盖、动力锂电池钢壳、动力锂电池铝极柱等业务能力，作为LG新能源圆柱结构件核心供应商，将直接受益于BBU电池紧缺带来的LG扩产切入并非单纯概念映射。当前对应的收入被归入锂电池组合盖帽（78.9%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于产能释放与行业供给变化是否通过“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”放大，并最终反映在在建工程转固、产能利用率、产销率、库存和产品价格上；需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 21492,
+            "stockCode": "002335.SZ",
+            "stockName": "科华数据",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内数据中心能源解决方案一站式集成商，正将业务重心向BBU系统集成迁移。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002335.SZ",
+              "companyName": "科华数据",
+              "companyProfile": "公司“以智慧电能驱动低碳数字未来”为使命，致力成为全球卓越的智慧电能服务商。在数据中心领域，公司抓住AI、算力、无人驾驶等市场发展机遇，打造千行百业智算基座枢纽，构建强大的算力调度网络平台，为客户提供高质量的算力服务。在智慧电能领域，公司在交通、电子、石油化工、核电、电力、通信、金融、医疗、教育等多个领域拥有丰富的智慧电能综合性解决方案和项目服务经验。在清洁能源领域，公司专注于储能、光伏、微网、风电配套以及综合能源服务，提供多元化的解决方案。公司技术实力雄厚，智能制造能力显现，致力于为客户提供安全、可靠的智慧电能综合管理解决方案及服务。",
+              "profileSummary": "在数据中心领域，公司抓住AI、算力、无人驾驶等市场发展机遇，打造千行百业智算基座枢纽，构建强大的算力调度网络平台，为客户提供高质量的算力服务。在清洁能源领域，公司专注于储能、光伏、微网、风电配套以及综合能源服务，提供多元化的解决方案。",
+              "majorProducts": "1500V S³液冷储能系统、3kW-6.9MW 储能变流器、3kW-9MW 光伏逆变器、6－GFM系列蓄电池、DL31系列UPS、DLG系列UPS、DR系列电梯节能装置、EMS 智慧管理平台、FL系列电源防雷箱、FR-UK-P系列电源、FR-UK系列UPS、IT机房电源解决方案、KI系列UPS、MMBM-2智能电池管理系统、MR系列工业级模块化UPS、电力行业解决方案、钢铁行业解决方案、工商业储能系统、工业用FR-UK-PG系列UPS、户用光储系统、科华 Wise MDC 系列液冷微模块、三进单出FR-UK系列UPS、三进三出FR-UK系列UPS、水泥行业电源解决方案、通信行业电源解决方案、通信用分布式UPS、通信用在线式不间断电源DXB系列UPS、通信用正弦波逆变器DJN系列UPS、小卫士系列UPS、液氯化工企业解决方案、智慧电能业务、智能化超小型在线式UPS",
+              "revenueComposition": "新能源产品:46.56%;数据中心产品:27.44%;IDC服务:15.73%;智慧电能产品:9.11%;其他业务:1.16%",
+              "revenueSegments": [
+                {
+                  "name": "新能源产品",
+                  "sharePct": 46.56,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "数据中心产品",
+                  "sharePct": 27.44,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "IDC服务",
+                  "sharePct": 15.73,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "智慧电能产品",
+                  "sharePct": 9.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "IDC高压直流电源系统",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "冷却液分配单元(CDU)",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "数据中心服务器托管服务(IDC)",
+                    "category": "IDC基础业务"
+                  },
+                  {
+                    "name": "数据中心配电柜",
+                    "category": "配电柜"
+                  },
+                  {
+                    "name": "模块化数据中心",
+                    "category": "IDC基础业务"
+                  },
+                  {
+                    "name": "能源管理系统(EMS)",
+                    "category": "资源管理IT"
+                  }
+                ],
+                "knownProducts": [
+                  "光伏发电",
+                  "光伏离网控制器",
+                  "组串式光伏逆变器",
+                  "集中式光伏逆变器",
+                  "不间断电源(UPS)",
+                  "应急电源(EPS)",
+                  "核级UPS电源",
+                  "储能变流器(PCS)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "对科华数据而言，国内数据中心能源解决方案一站式集成商，正将业务重心向BBU系统集成迁移并非纯概念映射，因为数据中心产品占收入的27.44%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是事件能否转化为可确认的经营增量，传导效率取决于“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由订单、收入确认、产品结构和毛利率变化来区分；若事件关联停留在主题层面，未形成可持续订单或利润贡献，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 21493,
+            "stockCode": "002364.SZ",
+            "stockName": "中恒电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是HVDC技术领先企业，其800V高压直流方案为BBU等机柜级备电提供了基础架构。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002364.SZ",
+              "companyName": "中恒电气",
+              "companyProfile": "公司创立于1996年，2010年3月在深圳证券交易所上市，是一家专注于零碳智能社会建设的数字能源公司。公司总部位于中国杭州高新技术产业开发区，设有“国家级博士后科研工作站”“浙江省重点新能源用电力电子技术科技创新团队”“浙江省能源互联网重点研究院”和现代化生产制造基地，并在杭州、北京等地设立了研发中心。公司坚持把“掌握数字能源的前沿技术和研发具有国际竞争力的产品”作为发展的战略支撑，在“电力电子技术”“电力数字化技术”“能源云平台技术”等关键技术饱和投入，聚焦绿色ICT基础设施、低碳交通、新型电力系统及综合能源服务等四大领域构筑数字世界与能源世界的孪生系统，提供能源减碳的全链路产品和解决方案。",
+              "profileSummary": "公司坚持把“掌握数字能源的前沿技术和研发具有国际竞争力的产品”作为发展的战略支撑，在“电力电子技术”“电力数字化技术”“能源云平台技术”等关键技术饱和投入，聚焦绿色ICT基础设施、低碳交通、新型电力系统及综合能源服务等四大领域构筑数字世界与能源世界的孪生系统，提供能源减碳的全链路产品和解决方案。",
+              "majorProducts": "240V/336V 直流关键电源、5G-Smart模块化电源系统、5G站点一体化能源柜、5G智慧储能系统、HVDC、UPS、大功率充电系统、大功率电源系统、电力模组-AC 系列、电力模组-H 系列、电力模组-P 系列、电力通信电源、二轮換电、国内直流电源产品、国外直流电源产品、交流供配电源、精密配电、室外小型一体化电源、算力电源、有序交流充电系统、直流一体式充电系统、智能光伏、智能锂电、智能微模块、智能液冷整机柜、智能一体化电源",
+              "revenueComposition": "数据中心电源:36.3%;电力操作电源系统:22.16%;软件开发、销售及技术服务:19.6%;通信电源系统:17.98%;其他:3.38%;电力管理服务及工程收入(服务收入):0.58%",
+              "revenueSegments": [
+                {
+                  "name": "数据中心电源",
+                  "sharePct": 36.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力操作电源系统",
+                  "sharePct": 22.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "软件开发、销售及技术服务",
+                  "sharePct": 19.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "通信电源系统",
+                  "sharePct": 17.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力管理服务及工程收入(服务收入)",
+                  "sharePct": 0.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "通信电源",
+                  "电力操作电源",
+                  "数据中心配电柜",
+                  "数字电网软件",
+                  "能源管理系统(EMS)",
+                  "IDC液冷机柜",
+                  "IDC高压直流电源系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中恒电气目前更依赖数据中心电源（36.3%）、电力操作电源系统（22.16%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：公司是HVDC技术领先企业，其800V高压直流方案为BBU等机柜级备电提供了基础架构，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变技术商业化与产品迭代速度；公司的产业链位置只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能转化为收入。现阶段可以用客户认证、量产良率、订单规模、产品收入占比和毛利率判断预期差方向；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 21495,
+            "stockCode": "002484.SZ",
+            "stockName": "江海股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "超级电容是AI服务器BBU的备用电源技术路线之一，与BBU形成互补。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002484.SZ",
+              "companyName": "江海股份",
+              "companyProfile": "公司总部位于江苏省南通市，所属行业为电子元器件制造业，是从事电容器及其材料、仪器的研究开发、生产和销售的高新技术企业。公司拥有超过50年的电容器生产经验，通过为客户提供铝电解、薄膜、和超级电容器“一站式”的服务，持续开拓新的应用的市场，致力于成为全球电容器行业的领先者。江海牌电容器是中国电子元器件行业拥有自主知识产权、自有品牌，通过自己的渠道真正进入国际高端主流市场的民族品牌之一，是江苏省名牌产品，中国驰名商标。公司是中国电子元件行业副理事长单位、中国超级电容器标准工作副组长单位、高分子固体电容器国家标准主要起草单位，连续三十一年主要指标在全国电容器行业名列前茅。公司是全球在电力电子领域少数几家同时在铝电解电容器、薄膜电容器、超级电容器这三大类电容器进行研发、制造和销售的企业之一，产品广泛应用于工业自动化、机器人、消费电子、轨道交通、5G通讯设备、数据中心、新能源和储能、电动汽车、智能电网、军工等多个领域。同时，公司积极布局三大电容器用关键材料的技术工艺研究攻关和产业化，向铝电解电容器产业链上游延伸，开发出国内高比容、高强度、高一致性的电极箔(腐蚀箔和化成箔)，有效保障了材料性能、品质和供给，进一步提升了行业竞争优势。目前，公司已成为全球电力电子应用领域品种最齐全、产业链最完整的电容器公司。",
+              "profileSummary": "公司拥有超过50年的电容器生产经验，通过为客户提供铝电解、薄膜、和超级电容器“一站式”的服务，持续开拓新的应用的市场，致力于成为全球电容器行业的领先者。公司是中国电子元件行业副理事长单位、中国超级电容器标准工作副组长单位、高分子固体电容器国家标准主要起草单位，连续三十一年主要指标在全国电容器行业名列前茅。",
+              "majorProducts": "薄膜电容器、超级电容器、铝电解电容器（及核心材料）",
+              "revenueComposition": "铝电解电容:80.55%;薄膜电容:10.49%;超级电容:6.42%;电极箔:2.19%;其他业务:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "铝电解电容",
+                  "sharePct": 80.55,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "薄膜电容",
+                  "sharePct": 10.49,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "超级电容",
+                  "sharePct": 6.42,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电极箔",
+                  "sharePct": 2.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "超级电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "电力电子电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "薄膜电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "铝电解电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "电极铝箔",
+                  "电力电子电容器",
+                  "薄膜电容器",
+                  "超级电容器",
+                  "铝电解电容器"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "江海股份的相关业务已决定公司大部分经营表现：铝电解电容（80.55%）、薄膜电容（10.49%）合计约占收入的97.46%。公司与事件的直接业务联系是：超级电容是AI服务器BBU的备用电源技术路线之一，与BBU形成互补，真正的增量取决于技术商业化与产品迭代速度，并需经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，客户认证、量产良率、订单规模、产品收入占比和毛利率需要显示公司获得超越行业的增量。技术路线变化、良率爬坡缓慢或竞争方案更快成熟是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 21496,
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司积极推进超级电容器项目，下游应用涵盖AI服务器电源、电力储能市场、UPS等场景。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603678.SH",
+              "companyName": "火炬电子",
+              "companyProfile": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。2015年1月，公司在上海证券交易所上市。公司系国家高新技术企业，连续13年位列中国电子元器件百强企业榜单。拥有CNAS实验室认可的火炬电子实验室、省级企业技术中心、省级工程研究中心，设立国家博士后科研工作站，先后通过ISO9001质量管理体系、ISO14001环境管理体系、ISO45001职业健康安全管理体系、SA8000社会责任管理体系认证和IATF16949质量管理体系等资质认证。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。全力推进产品核心技术的自主研发，在推动内生增长的同时，积极向具有渠道和技术协同效应的其他类型元器件产品延伸，以“传承创新、百年火炬”为企业愿景，用高质量、高效率的发展促进产业升级，为我国电子元器件和新材料产业的发展做出贡献。",
+              "profileSummary": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。",
+              "majorProducts": "EMI 电源滤波器、IGBT、MOSFET、SIP模块、薄膜电路、薄膜无源集成器件、超级电容器、第三代功率器件、电阻器、定制化特种元器件、火炬电子多芯组陶瓷电容器、火炬电子片式多层陶瓷电容器、火炬电子引线式多层陶瓷电容器、模拟IC、钽电容器、陶瓷电容器、微波介质频率器件、微波芯片电容器",
+              "revenueComposition": "国际贸易业务:61.43%;元器件贸易:33.08%;陶瓷材料:4.96%;其他业务:0.53%",
+              "revenueSegments": [
+                {
+                  "name": "国际贸易业务",
+                  "sharePct": 61.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "元器件贸易",
+                  "sharePct": 33.08,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "陶瓷材料",
+                  "sharePct": 4.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "超级电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "单层陶瓷电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "钽电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "微波天线",
+                    "category": "天线"
+                  },
+                  {
+                    "name": "电子元器件贸易",
+                    "category": "电子元件销售"
+                  }
+                ],
+                "knownProducts": [
+                  "聚碳硅烷",
+                  "电子元器件贸易",
+                  "单层陶瓷电容器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "超级电容器",
+                  "钽电容器",
+                  "射频薄膜无源集成器件",
+                  "微波天线"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对火炬电子而言，公司积极推进超级电容器项目，下游应用涵盖AI服务器电源、电力储能市场、UPS等场景并非纯概念映射，因为元器件贸易占收入的33.08%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是事件能否转化为可确认的经营增量，传导效率取决于“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由订单、收入确认、产品结构和毛利率变化来区分；若事件关联停留在主题层面，未形成可持续订单或利润贡献，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 21497,
+            "stockCode": "301238.SZ",
+            "stockName": "瑞泰新材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是全球少数能提供AIDC级LIC超级电容电解液的企业，受益于Rubin平台将LIC列为核心储能元件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301238.SZ",
+              "companyName": "瑞泰新材",
+              "companyProfile": "公司主要从事锂离子电池材料以及硅烷偶联剂等化工新材料的研发、生产和销售。公司一直专注于锂离子电池材料以及硅烷偶联剂等业务，主营业务和主要产品未发生变化。未来公司将在稳定发展现有产品的基础上，积极拓展产品的种类，优化和完善技术服务和技术解决方案，以全球化的视野拓展国内外业务，加强与国内外客户、供应商的合作，致力于成为具备国际竞争力的化工新材料供应商。公司坚持创新驱动发展的理念，持续加大研发投入。公司通过在行业内多年的技术积累，掌握了锂离子电池材料以及有机硅材料等所需的主要核心技术，从而与下游客户建立了良好的合作关系，为企业的长远稳步发展奠定坚实的基础。基于多年的行业从业经验，公司的技术团队掌握了丰富的锂离子电池材料以及有机硅材料的制造和工艺知识，深刻理解制造过程中所面临的技术需求和研发挑战。公司及子公司相继获评2016年度江苏省科学技术奖、苏州市科学技术奖、中国轻工业联合会科学技术进步奖、中国轻工业新能源电池行业十强企业、2018年苏州市“专精特新”培育企业、“十二五”轻工业科技创新先进集体等荣誉。",
+              "profileSummary": "公司一直专注于锂离子电池材料以及硅烷偶联剂等业务，主营业务和主要产品未发生变化。未来公司将在稳定发展现有产品的基础上，积极拓展产品的种类，优化和完善技术服务和技术解决方案，以全球化的视野拓展国内外业务，加强与国内外客户、供应商的合作，致力于成为具备国际竞争力的化工新材料供应商。",
+              "majorProducts": "氨基硅烷偶联剂、超级电容器电解液、储能电池电解液、动力电池电解液、环氧烃基硅烷、锂离子电池电解液添加剂、酰氧基硅烷、消费电池电解液",
+              "revenueComposition": "电子化学品:94.96%;有机硅橡胶材料产品:4.66%;其他:0.38%",
+              "revenueSegments": [
+                {
+                  "name": "电子化学品",
+                  "sharePct": 94.96,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "有机硅橡胶材料产品",
+                  "sharePct": 4.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "三氟甲磺酸锂",
+                    "category": "电解液"
+                  },
+                  {
+                    "name": "二氟草酸硼酸锂",
+                    "category": "电解液"
+                  },
+                  {
+                    "name": "双三氟甲基磺酰亚胺锂",
+                    "category": "电解液"
+                  },
+                  {
+                    "name": "锂离子电池电解液",
+                    "category": "电解液"
+                  }
+                ],
+                "knownProducts": [
+                  "氨基硅烷",
+                  "环氧烃基硅烷",
+                  "酰氧基硅烷",
+                  "硫化锂",
+                  "三氟甲磺酸锂",
+                  "二氟草酸硼酸锂",
+                  "双三氟甲基磺酰亚胺锂",
+                  "锂离子电池电解液"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "瑞泰新材的电子化学品（94.96%）覆盖范围较宽，其中能够承载三氟甲磺酸锂、二氟草酸硼酸锂、双三氟甲基磺酰亚胺锂，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司是全球少数能提供AIDC级LIC超级电容电解液的企业，受益于Rubin平台将LIC列为核心储能元件。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 21499,
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内AI服务器龙头，深度参与国产超节点机柜，是BBU等机柜级部件的需求方。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000977.SZ",
+              "companyName": "浪潮信息",
+              "companyProfile": "公司作为全球领先的IT基础设施产品、方案和服务提供商，公司秉持“计算力就是生产力，智算力就是创新力”的核心理念，致力于智慧计算技术的创新和应用，为全球注入高质量算力，加速数字世界与实体世界的融合，激发智慧潜能，从而让人们的生活更加美好，企业的经营更为高效，社会治理更加完善，人与自然的关系更加和谐。一直坚持开放融合的业务战略，积极发展开放融合的全球计算产业。在开放开源的模式下，加快技术创新和应用，为客户提供领先的云计算、大数据、人工智能、边缘计算等各类创新产品和解决方案，助力客户在数字化时代实现转型升级。公司始终坚持“以应用为导向，以系统为核心”，全面推进算法、算力、数据和互连技术的创新，加速“人工智能+”的落地。算法方面，积极探索各类大模型算法，持续提升模型算力效率，探索智能边界；落实绿色可持续的发展理念，积极推动数据中心建设和运行模式的升级，提高数据中心的能源利用水平，降低碳排放。公司全线服务器支持液冷，建成了亚洲最大的液冷数据中心研发生产基地，具备业界领先的液冷数据中心交付能力，为数据中心的绿色、高效运行提供了坚实保障。公司坚持“伙伴第一”的原则，携手众多合作伙伴，共同打造共融共生的计算产业生态。通过与合作伙伴的紧密协作，为客户提供全栈式、一体化的智算解决方案，加速各行业的智能化转型，助力客户在智慧时代把握变革机遇，开创发展新局面，实现互利共赢，共同推动计算产业的繁荣发展。",
+              "profileSummary": "公司作为全球领先的IT基础设施产品、方案和服务提供商，公司秉持“计算力就是生产力，智算力就是创新力”的核心理念，致力于智慧计算技术的创新和应用，为全球注入高质量算力，加速数字世界与实体世界的融合，激发智慧潜能，从而让人们的生活更加美好，企业的经营更为高效，社会治理更加完善，人与自然的关系更加和谐。公司全线服务器支持液冷，建成了亚洲最大的液冷数据中心研发生产基地，具备业界领先的液冷数据中心交付能力，为数据中心的绿色、高效运行提供了坚实保…",
+              "majorProducts": "互联网设备制造与销售、计算机软硬件及外围设备制造与销售、浪潮ERP软件、浪潮服务器、浪潮税控打印机、浪潮税控收款机、浪潮税务软件、浪潮台式电脑、浪潮行业专用软件、浪潮英信存储器、通信设备制造与销售、网络技术服务、信息安全设备制造与销售、信息技术咨询服务、云计算设备制造与销售",
+              "revenueComposition": "服务器产品:93.82%;存储类、交换类等产品:5.93%;其他业务:0.25%",
+              "revenueSegments": [
+                {
+                  "name": "服务器产品",
+                  "sharePct": 93.82,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "存储类、交换类等产品",
+                  "sharePct": 5.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "存储服务器",
+                    "category": "数据管理系统"
+                  },
+                  {
+                    "name": "关键应用主机",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "液冷服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "超节点服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "边缘服务器",
+                    "category": "服务器"
+                  }
+                ],
+                "knownProducts": [
+                  "存储服务器",
+                  "AI管理软件",
+                  "AI服务器",
+                  "关键应用主机",
+                  "液冷服务器",
+                  "超节点服务器",
+                  "边缘服务器",
+                  "通用服务器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "浪潮信息的事件暴露较为直接：服务器产品占收入的93.82%，相关业务不是边缘尝试；具体业务抓手是：国内AI服务器龙头，深度参与国产超节点机柜，是BBU等机柜级部件的需求方。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，尤其需要用终端销量、客户采购量、公司出货和相关产品收入增速区分行业普涨与公司自身竞争力。如果终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 21500,
+            "stockCode": "601138.SH",
+            "stockName": "工业富联",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球领先的AI服务器ODM厂商，为英伟达Rubin等平台提供整机柜集成服务，是BBU等部件的集成商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601138.SH",
+              "companyName": "工业富联",
+              "companyProfile": "公司是全球领先的通信网络设备、云服务设备、精密工具及工业机器人专业设计制造服务商，为客户提供以工业互联网平台为核心的新形态电子设备产品智能制造服务。公司致力于为企业提供以自动化、网络化、平台化、大数据为基础的科技服务综合解决方案，引领传统制造向智能制造的转型；并以此为基础构建云计算、移动终端、物联网、大数据、人工智能、高速网络和机器人为技术平台的“先进制造+工业互联网”新生态。公司主要从事各类电子设备产品的设计、研发、制造与销售业务，依托于工业互联网为全球知名客户提供智能制造和科技服务解决方案。公司主要产品涵盖通信网络设备、云服务设备、精密工具和工业机器人。相关产品主要应用于智能手机、宽带和无线网络、多媒体服务运营商的基础建设、电信运营商的基础建设、互联网增值服务商所需终端产品、企业网络及数据中心的基础建设以及精密核心零组件的自动化智能制造等。",
+              "profileSummary": "公司是全球领先的通信网络设备、云服务设备、精密工具及工业机器人专业设计制造服务商，为客户提供以工业互联网平台为核心的新形态电子设备产品智能制造服务。公司主要从事各类电子设备产品的设计、研发、制造与销售业务，依托于工业互联网为全球知名客户提供智能制造和科技服务解决方案。",
+              "majorProducts": "存储设备、服务器设备、工业机器人、光传输设备、行动基站设备、机顶盒、金刚石工具、路由器、数据中心设备、网络电信设备高精密机构件、网络服务器、网络交换机、微细丝锥、钨钢工具、无线设备、云服务设备高精密机构件、云计算、智能家庭网关、智能手机高精密高分子聚合物机构件、智能手机高精密金属机构件",
+              "revenueComposition": "3C电子产品:99.82%;其他业务:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "3C电子产品",
+                  "sharePct": 99.82,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "通用服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "智能家庭网关",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "网络交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "路由器",
+                    "category": "网络分流设备"
+                  }
+                ],
+                "knownProducts": [
+                  "金刚石精密工具",
+                  "电视机顶盒",
+                  "工业机器人",
+                  "手机精密结构件",
+                  "AI服务器",
+                  "通用服务器",
+                  "行动通信基站",
+                  "光传输设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "工业富联与事件存在真实业务交集：公司已有AI服务器、通用服务器、智能家庭网关，与全球领先的AI服务器ODM厂商，为英伟达Rubin等平台提供整机柜集成服务，是BBU等部件的集成商所处的产业环节一致。3C电子产品（99.82%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "1条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "3只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

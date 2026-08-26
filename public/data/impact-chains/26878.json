@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26878",
@@ -9,10 +9,10 @@
     "date": "2026-07-03"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 8,
-    "mappedStockCount": 7,
-    "unmappedStockCount": 1,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 6,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 14569,
@@ -20,8 +20,8 @@
         "stockName": "华特气体",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 35
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 14570,
@@ -29,8 +29,8 @@
         "stockName": "金宏气体",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 19
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 14575,
@@ -39,7 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 14
+        "anchorProductCount": 6
       },
       {
         "sourceRowNumber": 14576,
@@ -48,7 +48,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 40
+        "anchorProductCount": 7
       },
       {
         "sourceRowNumber": 14577,
@@ -57,7 +57,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 27
+        "anchorProductCount": 3
       },
       {
         "sourceRowNumber": 14583,
@@ -66,33 +66,24 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 14
-      },
+        "anchorProductCount": 4
+      }
+    ],
+    "unmappedStocks": [
       {
-        "sourceRowNumber": 14587,
-        "stockCode": "未上市",
-        "stockName": "长江存储",
+        "sourceRowNumber": 14569,
+        "stockCode": "688268.SH",
+        "stockName": "华特气体",
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       },
       {
-        "sourceRowNumber": 14588,
-        "stockCode": "00981.HK",
-        "stockName": "中芯国际",
+        "sourceRowNumber": 14570,
+        "stockCode": "688106.SH",
+        "stockName": "金宏气体",
         "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
-      }
-    ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 14587,
-        "stockCode": "未上市",
-        "stockName": "长江存储",
-        "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
@@ -100,293 +91,15 @@
     ]
   },
   "totals": {
-    "candidateCoreProductCount": 139,
+    "candidateCoreProductCount": 134,
     "selectedCoreProductCount": 18,
     "selectedCompanyCoreProductCount": 18,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 61,
-    "downstreamCandidateCount": 262,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 163,
+    "relatedIndustryCandidateCount": 38,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140007579",
-        "name": "乙炔",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046725",
-          "1140067073"
-        ],
-        "linkedCoreProductNames": [
-          "一氟二氯乙烷",
-          "偏氟乙烯"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140032879",
-        "name": "干式螺杆真空泵",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140034089",
-          "1140042230"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "晶圆刻蚀机"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1115000050",
-        "name": "乙烯",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140067087"
-        ],
-        "linkedCoreProductNames": [
-          "四氟丙醇"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140049801",
-        "name": "二氟一氯甲烷",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046726"
-        ],
-        "linkedCoreProductNames": [
-          "四氟乙烯"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140047631",
-        "name": "发烟硫酸",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140067087"
-        ],
-        "linkedCoreProductNames": [
-          "四氟丙醇"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140048426",
-        "name": "碘化物",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140067087"
-        ],
-        "linkedCoreProductNames": [
-          "四氟丙醇"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140048214",
-        "name": "三氯甲烷",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046726"
-        ],
-        "linkedCoreProductNames": [
-          "四氟乙烯"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140049338",
-        "name": "五氯化锑",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046726"
-        ],
-        "linkedCoreProductNames": [
-          "四氟乙烯"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140001102",
-        "name": "无水氢氟酸",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046726"
-        ],
-        "linkedCoreProductNames": [
-          "四氟乙烯"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140049798",
-        "name": "1,1,1一三氟乙烷",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046725"
-        ],
-        "linkedCoreProductNames": [
-          "偏氟乙烯"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140047500",
-        "name": "1，1，1-三氯乙烷",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140067073"
-        ],
-        "linkedCoreProductNames": [
-          "一氟二氯乙烷"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140081152",
-        "name": "Alu发生器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140049696",
-        "name": "PH缓冲剂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140067114"
-        ],
-        "linkedCoreProductNames": [
-          "全氟丙烯"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140081158",
-        "name": "中央中和系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140200586",
-        "name": "晶圆代工",
-        "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆制造 > 晶圆代工",
-        "industryPath": [
-          "电子",
-          "半导体",
-          "集成电路",
-          "IC制造",
-          "晶圆制造",
-          "晶圆代工"
-        ],
-        "level5Industry": {
-          "code": "1200001283",
-          "name": "IC制造"
-        },
-        "level6Industry": {
-          "code": "1200004967",
-          "name": "晶圆制造"
-        },
-        "level7Product": {
-          "code": "1140200586",
-          "name": "晶圆代工"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "00981.HK",
-            "stockName": "中芯国际",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 15,
-        "strongRelevanceScore": 12,
-        "matchedTerms": [
-          "晶圆代工",
-          "晶圆",
-          "半导体",
-          "电子"
-        ]
-      },
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140042230",
         "name": "CVD设备",
@@ -412,18 +125,15 @@
           "name": "CVD设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002371.SZ",
             "stockName": "北方华创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 17,
-        "downstreamCount": 213,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -458,18 +168,15 @@
           "name": "PVD设备"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002371.SZ",
             "stockName": "北方华创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 216,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -504,18 +211,15 @@
           "name": "晶圆刻蚀机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002371.SZ",
             "stockName": "北方华创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 10,
-        "downstreamCount": 9,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -550,18 +254,15 @@
           "name": "晶圆氧化炉"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002371.SZ",
             "stockName": "北方华创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 5,
-        "downstreamCount": 5,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -596,18 +297,15 @@
           "name": "电子级氟化铵"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688549.SH",
             "stockName": "中巨芯",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -642,18 +340,15 @@
           "name": "电子级氨水"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688549.SH",
             "stockName": "中巨芯",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -688,18 +383,15 @@
           "name": "电子级盐酸"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688549.SH",
             "stockName": "中巨芯",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -734,18 +426,15 @@
           "name": "电子级硝酸"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688549.SH",
             "stockName": "中巨芯",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -780,18 +469,15 @@
           "name": "硅刻蚀液"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688549.SH",
             "stockName": "中巨芯",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -826,18 +512,15 @@
           "name": "缓冲氧化物刻蚀液"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688549.SH",
             "stockName": "中巨芯",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 14,
         "strongRelevanceScore": 11,
         "matchedTerms": [
@@ -845,56 +528,6 @@
           "半导体材料",
           "半导体",
           "电子"
-        ]
-      },
-      {
-        "code": "1140046726",
-        "name": "四氟乙烯",
-        "hierarchyPath": "化工 > 化学制品 > 氟化工 > 氟精细化学品 > 氟精细化学品 > 四氟乙烯",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "氟化工",
-          "氟精细化学品",
-          "氟精细化学品",
-          "四氟乙烯"
-        ],
-        "level5Industry": {
-          "code": "1210003297",
-          "name": "氟精细化学品"
-        },
-        "level6Industry": {
-          "code": "1200004052",
-          "name": "氟精细化学品"
-        },
-        "level7Product": {
-          "code": "1140046726",
-          "name": "四氟乙烯"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "600160.SH",
-            "stockName": "巨化股份",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "600378.SH",
-            "stockName": "昊华科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 4,
-        "downstreamCount": 13,
-        "relevanceScore": 11,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "化学品",
-          "氟化工",
-          "化学制品"
         ]
       },
       {
@@ -922,23 +555,21 @@
           "name": "四氟丙醇"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600160.SH",
             "stockName": "巨化股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "600378.SH",
             "stockName": "昊华科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 5,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -948,16 +579,16 @@
         ]
       },
       {
-        "code": "1140154284",
-        "name": "六氟丙烯(HFP)",
-        "hierarchyPath": "化工 > 化学制品 > 氟化工 > 氟精细化学品 > 氟精细化学品 > 六氟丙烯(HFP)",
+        "code": "1140046726",
+        "name": "四氟乙烯",
+        "hierarchyPath": "化工 > 化学制品 > 氟化工 > 氟精细化学品 > 氟精细化学品 > 四氟乙烯",
         "industryPath": [
           "化工",
           "化学制品",
           "氟化工",
           "氟精细化学品",
           "氟精细化学品",
-          "六氟丙烯(HFP)"
+          "四氟乙烯"
         ],
         "level5Industry": {
           "code": "1210003297",
@@ -968,22 +599,25 @@
           "name": "氟精细化学品"
         },
         "level7Product": {
-          "code": "1140154284",
-          "name": "六氟丙烯(HFP)"
+          "code": "1140046726",
+          "name": "四氟乙烯"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
+        "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600160.SH",
             "stockName": "巨化股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600378.SH",
+            "stockName": "昊华科技",
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 7,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -1017,108 +651,15 @@
           "name": "一氟二氯乙烷"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600160.SH",
             "stockName": "巨化股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 6,
-        "downstreamCount": 2,
-        "relevanceScore": 11,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "化学品",
-          "氟化工",
-          "化学制品"
-        ]
-      },
-      {
-        "code": "1140067114",
-        "name": "全氟丙烯",
-        "hierarchyPath": "化工 > 化学制品 > 氟化工 > 氟精细化学品 > 氟精细化学品 > 全氟丙烯",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "氟化工",
-          "氟精细化学品",
-          "氟精细化学品",
-          "全氟丙烯"
-        ],
-        "level5Industry": {
-          "code": "1210003297",
-          "name": "氟精细化学品"
-        },
-        "level6Industry": {
-          "code": "1200004052",
-          "name": "氟精细化学品"
-        },
-        "level7Product": {
-          "code": "1140067114",
-          "name": "全氟丙烯"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "600378.SH",
-            "stockName": "昊华科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 2,
-        "relevanceScore": 11,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "化学品",
-          "氟化工",
-          "化学制品"
-        ]
-      },
-      {
-        "code": "1140046725",
-        "name": "偏氟乙烯",
-        "hierarchyPath": "化工 > 化学制品 > 氟化工 > 氟精细化学品 > 氟精细化学品 > 偏氟乙烯",
-        "industryPath": [
-          "化工",
-          "化学制品",
-          "氟化工",
-          "氟精细化学品",
-          "氟精细化学品",
-          "偏氟乙烯"
-        ],
-        "level5Industry": {
-          "code": "1210003297",
-          "name": "氟精细化学品"
-        },
-        "level6Industry": {
-          "code": "1200004052",
-          "name": "氟精细化学品"
-        },
-        "level7Product": {
-          "code": "1140046725",
-          "name": "偏氟乙烯"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "600160.SH",
-            "stockName": "巨化股份",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 5,
-        "downstreamCount": 2,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -1152,18 +693,183 @@
           "name": "七氟溴丙烷"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600160.SH",
             "stockName": "巨化股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 3,
+        "relevanceScore": 11,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "化学品",
+          "氟化工",
+          "化学制品"
+        ]
+      },
+      {
+        "code": "1140046725",
+        "name": "偏氟乙烯",
+        "hierarchyPath": "化工 > 化学制品 > 氟化工 > 氟精细化学品 > 氟精细化学品 > 偏氟乙烯",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "氟化工",
+          "氟精细化学品",
+          "氟精细化学品",
+          "偏氟乙烯"
+        ],
+        "level5Industry": {
+          "code": "1210003297",
+          "name": "氟精细化学品"
+        },
+        "level6Industry": {
+          "code": "1200004052",
+          "name": "氟精细化学品"
+        },
+        "level7Product": {
+          "code": "1140046725",
+          "name": "偏氟乙烯"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "600160.SH",
+            "stockName": "巨化股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 11,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "化学品",
+          "氟化工",
+          "化学制品"
+        ]
+      },
+      {
+        "code": "1140067114",
+        "name": "全氟丙烯",
+        "hierarchyPath": "化工 > 化学制品 > 氟化工 > 氟精细化学品 > 氟精细化学品 > 全氟丙烯",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "氟化工",
+          "氟精细化学品",
+          "氟精细化学品",
+          "全氟丙烯"
+        ],
+        "level5Industry": {
+          "code": "1210003297",
+          "name": "氟精细化学品"
+        },
+        "level6Industry": {
+          "code": "1200004052",
+          "name": "氟精细化学品"
+        },
+        "level7Product": {
+          "code": "1140067114",
+          "name": "全氟丙烯"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "600378.SH",
+            "stockName": "昊华科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 11,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "化学品",
+          "氟化工",
+          "化学制品"
+        ]
+      },
+      {
+        "code": "1140154284",
+        "name": "六氟丙烯(HFP)",
+        "hierarchyPath": "化工 > 化学制品 > 氟化工 > 氟精细化学品 > 氟精细化学品 > 六氟丙烯(HFP)",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "氟化工",
+          "氟精细化学品",
+          "氟精细化学品",
+          "六氟丙烯(HFP)"
+        ],
+        "level5Industry": {
+          "code": "1210003297",
+          "name": "氟精细化学品"
+        },
+        "level6Industry": {
+          "code": "1200004052",
+          "name": "氟精细化学品"
+        },
+        "level7Product": {
+          "code": "1140154284",
+          "name": "六氟丙烯(HFP)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "600160.SH",
+            "stockName": "巨化股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 11,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "化学品",
+          "氟化工",
+          "化学制品"
+        ]
+      },
+      {
+        "code": "1140067086",
+        "name": "四氟丙酸钠",
+        "hierarchyPath": "化工 > 化学制品 > 氟化工 > 氟精细化学品 > 氟精细化学品 > 四氟丙酸钠",
+        "industryPath": [
+          "化工",
+          "化学制品",
+          "氟化工",
+          "氟精细化学品",
+          "氟精细化学品",
+          "四氟丙酸钠"
+        ],
+        "level5Industry": {
+          "code": "1210003297",
+          "name": "氟精细化学品"
+        },
+        "level6Industry": {
+          "code": "1200004052",
+          "name": "氟精细化学品"
+        },
+        "level7Product": {
+          "code": "1140067086",
+          "name": "四氟丙酸钠"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "600160.SH",
+            "stockName": "巨化股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -1173,260 +879,660 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140008622",
-        "name": "芯片",
-        "anchorCount": 3,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140034089",
-          "1140042230",
-          "1140079911"
+        "code": "1200000873",
+        "name": "有机化学原料",
+        "description": "有机化学原料指生产基础化工品的行业。因处于产业链上游，其价格波动直接传导至下游，且受原油成本及供需周期影响显著，业绩弹性大，故成为捕捉经济复苏与通胀预期的关键投资标的，备受市场关注。",
+        "stockCount": 6,
+        "starWeight": 22,
+        "level7ProductCount": 20,
+        "relevanceScore": 264,
+        "stocks": [
+          {
+            "stockCode": "688549.SH",
+            "stockName": "中巨芯",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688268.SH",
+            "stockName": "华特气体",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600160.SH",
+            "stockName": "巨化股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688106.SH",
+            "stockName": "金宏气体",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "603650.SH",
+            "stockName": "彤程新材",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "605020.SH",
+            "stockName": "永和股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备",
-          "晶圆刻蚀机"
+        "products": [
+          {
+            "code": "1140046718",
+            "name": "一氯甲烷",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 其他烃类化合物、衍生物 > 一氯甲烷",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600160.SH",
+                "stockName": "巨化股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "605020.SH",
+                "stockName": "永和股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140077529",
+            "name": "高纯三氟甲烷",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 其他烃类化合物、衍生物 > 高纯三氟甲烷",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688549.SH",
+                "stockName": "中巨芯",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688268.SH",
+                "stockName": "华特气体",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140067076",
+            "name": "一丁胺",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 氨基化合物 > 一丁胺",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600160.SH",
+                "stockName": "巨化股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140067077",
+            "name": "三丁胺",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 氨基化合物 > 三丁胺",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600160.SH",
+                "stockName": "巨化股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 2
-        }
+        "rank": 1
       },
       {
-        "code": "1140102148",
-        "name": "THV树脂",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046726",
-          "1140154284"
+        "code": "1200000874",
+        "name": "气体及稀有气体",
+        "description": "该行业涵盖工业及电子特种气体。因半导体、光伏等高端制造依赖高纯气体，且部分稀有气体具战略稀缺性，受国产替代加速及供需紧张驱动，成为资本市场关注焦点，兼具科技成长与资源属性。",
+        "stockCount": 5,
+        "starWeight": 21,
+        "level7ProductCount": 38,
+        "relevanceScore": 620,
+        "stocks": [
+          {
+            "stockCode": "688548.SH",
+            "stockName": "广钢气体",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688268.SH",
+            "stockName": "华特气体",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600160.SH",
+            "stockName": "巨化股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600378.SH",
+            "stockName": "昊华科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688106.SH",
+            "stockName": "金宏气体",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "六氟丙烯(HFP)",
-          "四氟乙烯"
+        "products": [
+          {
+            "code": "1140070344",
+            "name": "工业氧气",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 气体及稀有气体 > 一般气体 > 工业氧气",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "688548.SH",
+                "stockName": "广钢气体",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688268.SH",
+                "stockName": "华特气体",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688106.SH",
+                "stockName": "金宏气体",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "工业气体"
+            ]
+          },
+          {
+            "code": "1140190863",
+            "name": "工业氨气",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 气体及稀有气体 > 稀有气体 > 工业氨气",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688268.SH",
+                "stockName": "华特气体",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "工业气体"
+            ]
+          },
+          {
+            "code": "1140165225",
+            "name": "工业氩气",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 气体及稀有气体 > 稀有气体 > 工业氩气",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688548.SH",
+                "stockName": "广钢气体",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "工业气体"
+            ]
+          },
+          {
+            "code": "1140077216",
+            "name": "工业氮气",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 气体及稀有气体 > 一般气体 > 工业氮气",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688548.SH",
+                "stockName": "广钢气体",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "工业气体"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 13,
+    "mappedStockCount": 12,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 163,
+    "candidateIndustryCount": 38,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 14568,
+        "stockCode": "688548.SH",
+        "stockName": "广钢气体",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 12
       },
       {
-        "code": "1140046724",
-        "name": "聚全氟乙丙烯(FEP)",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140046726",
-          "1140154284"
-        ],
-        "linkedCoreProductNames": [
-          "六氟丙烯(HFP)",
-          "四氟乙烯"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14569,
+        "stockCode": "688268.SH",
+        "stockName": "华特气体",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 32
       },
       {
-        "code": "1140135753",
-        "name": "AC-DC电源芯片",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14570,
+        "stockCode": "688106.SH",
+        "stockName": "金宏气体",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 18
       },
       {
-        "code": "1140162916",
-        "name": "ADC/DAC芯片",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14575,
+        "stockCode": "688549.SH",
+        "stockName": "中巨芯",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 14
       },
       {
-        "code": "1140157925",
-        "name": "AIoT芯片",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14576,
+        "stockCode": "600160.SH",
+        "stockName": "巨化股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 40
       },
       {
-        "code": "1140056608",
-        "name": "AI音视频系统终端芯片",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14577,
+        "stockCode": "600378.SH",
+        "stockName": "昊华科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 26
       },
       {
-        "code": "1140164730",
-        "name": "BLDC电机主控芯片ASIC",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14578,
+        "stockCode": "605020.SH",
+        "stockName": "永和股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 19
       },
       {
-        "code": "1140164728",
-        "name": "BLDC电机主控芯片MCU",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14579,
+        "stockCode": "300054.SZ",
+        "stockName": "鼎龙股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140164729",
-        "name": "BLDC电机驱动芯片HVIC",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14580,
+        "stockCode": "603650.SH",
+        "stockName": "彤程新材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 14
       },
       {
-        "code": "1140135755",
-        "name": "DC-DC电源芯片",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14581,
+        "stockCode": "000725.SZ",
+        "stockName": "京东方A",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140161167",
-        "name": "DDR3 DRAM",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14583,
+        "stockCode": "002371.SZ",
+        "stockName": "北方华创",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140023162",
-        "name": "EEPROM存储芯片",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
-        ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "sourceRowNumber": 14584,
+        "stockCode": "603324.SH",
+        "stockName": "盛剑科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140135457",
-        "name": "ETC芯片",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140042230",
-          "1140079911"
+        "sourceRowNumber": 14585,
+        "stockCode": "300604.SZ",
+        "stockName": "长川科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000873",
+        "name": "有机化学原料",
+        "description": "有机化学原料指生产基础化工品的行业。因处于产业链上游，其价格波动直接传导至下游，且受原油成本及供需周期影响显著，业绩弹性大，故成为捕捉经济复苏与通胀预期的关键投资标的，备受市场关注。",
+        "stockCount": 6,
+        "starWeight": 22,
+        "level7ProductCount": 20,
+        "relevanceScore": 264,
+        "stocks": [
+          {
+            "stockCode": "688549.SH",
+            "stockName": "中巨芯",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688268.SH",
+            "stockName": "华特气体",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600160.SH",
+            "stockName": "巨化股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688106.SH",
+            "stockName": "金宏气体",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "603650.SH",
+            "stockName": "彤程新材",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "605020.SH",
+            "stockName": "永和股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "CVD设备",
-          "PVD设备"
+        "products": [
+          {
+            "code": "1140046718",
+            "name": "一氯甲烷",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 其他烃类化合物、衍生物 > 一氯甲烷",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600160.SH",
+                "stockName": "巨化股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "605020.SH",
+                "stockName": "永和股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140077529",
+            "name": "高纯三氟甲烷",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 其他烃类化合物、衍生物 > 高纯三氟甲烷",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688549.SH",
+                "stockName": "中巨芯",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688268.SH",
+                "stockName": "华特气体",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140067076",
+            "name": "一丁胺",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 氨基化合物 > 一丁胺",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600160.SH",
+                "stockName": "巨化股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140067077",
+            "name": "三丁胺",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 氨基化合物 > 三丁胺",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600160.SH",
+                "stockName": "巨化股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000874",
+        "name": "气体及稀有气体",
+        "description": "该行业涵盖工业及电子特种气体。因半导体、光伏等高端制造依赖高纯气体，且部分稀有气体具战略稀缺性，受国产替代加速及供需紧张驱动，成为资本市场关注焦点，兼具科技成长与资源属性。",
+        "stockCount": 5,
+        "starWeight": 21,
+        "level7ProductCount": 38,
+        "relevanceScore": 620,
+        "stocks": [
+          {
+            "stockCode": "688548.SH",
+            "stockName": "广钢气体",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688268.SH",
+            "stockName": "华特气体",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600160.SH",
+            "stockName": "巨化股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600378.SH",
+            "stockName": "昊华科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688106.SH",
+            "stockName": "金宏气体",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140070344",
+            "name": "工业氧气",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 气体及稀有气体 > 一般气体 > 工业氧气",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "688548.SH",
+                "stockName": "广钢气体",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688268.SH",
+                "stockName": "华特气体",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688106.SH",
+                "stockName": "金宏气体",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "工业气体"
+            ]
+          },
+          {
+            "code": "1140190863",
+            "name": "工业氨气",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 气体及稀有气体 > 稀有气体 > 工业氨气",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688268.SH",
+                "stockName": "华特气体",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "工业气体"
+            ]
+          },
+          {
+            "code": "1140165225",
+            "name": "工业氩气",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 气体及稀有气体 > 稀有气体 > 工业氩气",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688548.SH",
+                "stockName": "广钢气体",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "工业气体"
+            ]
+          },
+          {
+            "code": "1140077216",
+            "name": "工业氮气",
+            "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 气体及稀有气体 > 一般气体 > 工业氮气",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688548.SH",
+                "stockName": "广钢气体",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "工业气体"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -1441,10 +1547,1221 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 22,
+    "eligibleSourceRowCount": 13,
+    "totalStockCount": 13,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 1,
+    "excludedNonAShareCount": 8,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 13,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 14568,
+            "stockCode": "688548.SH",
+            "stockName": "广钢气体",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "公司是国内领先的电子大宗气体综合服务商，业绩超预期增长直接反映了半导体产业链的高景气度。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688548.SH",
+              "companyName": "广钢气体",
+              "companyProfile": "公司是国内领先的电子大宗气体综合服务商，是国务院“科改示范企业”及广州市国资委重点混合所有制改革项目企业，系广州工业投资控股集团有限公司子公司。公司的主营业务是研发、生产和销售以电子大宗气体为核心的工业气体。公司打造了全方位、自主可控的气体供应体系，专业和能力涵盖从气体制备装置的设计到投产运行、气体储运、数字化运营、气体应用解决方案等全部环节，为客户提供现场制气、零售供气等综合服务。公司拥有齐全的产品线，包括电子级超高纯氮气(N2)、氦气(He)、氧气(O2)、氢气(H2)、氩气(Ar)、二氧化碳(CO2)等气体品种，广泛应用于集成电路制造、半导体显示、光纤通信等电子半导体领域以及能源化工、有色金属、机械制造等通用工业领域。公司凭借自主研发的核心技术以及多年的气体生产运营经验，形成了ppb级超高纯电子大宗气体的制备及稳定供应能力，实现了超高纯电子大宗气体供应的国产替代，实现了国内电子大宗气体技术的自主可控，成为国内集成电路制造、半导体显示行业龙头企业的重要供应商。未来，公司将始终以客户需求和市场发展趋势为导向，以电子大宗气体为核心，不断加大研发投入和强化自主创新、扩大产品品类、提升气体品质和产能、持续提高气体供应的稳定可靠性，充分发挥综合性、平台型气体公司的优势，实现“广钢气智造中国芯，广钢气点亮中国屏”的战略发展目标，成为电子大宗气体的领军企业。",
+              "profileSummary": "公司是国内领先的电子大宗气体综合服务商，是国务院“科改示范企业”及广州市国资委重点混合所有制改革项目企业，系广州工业投资控股集团有限公司子公司。公司的主营业务是研发、生产和销售以电子大宗气体为核心的工业气体。",
+              "majorProducts": "电子大宗气体、通用工业气体",
+              "revenueComposition": "电子大宗气体:71.42%;通用工业气体:21.29%;其他业务:7.28%",
+              "revenueSegments": [
+                {
+                  "name": "电子大宗气体",
+                  "sharePct": 71.42,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "通用工业气体",
+                  "sharePct": 21.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 7.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "工业氧气",
+                    "category": "一般气体"
+                  },
+                  {
+                    "name": "工业氩气",
+                    "category": "稀有气体"
+                  },
+                  {
+                    "name": "工业氮气",
+                    "category": "一般气体"
+                  },
+                  {
+                    "name": "工业级二氧化碳",
+                    "category": "一般气体"
+                  },
+                  {
+                    "name": "氢气",
+                    "category": "一般气体"
+                  },
+                  {
+                    "name": "氦气",
+                    "category": "稀有气体"
+                  }
+                ],
+                "knownProducts": [
+                  "工业氧气",
+                  "工业氮气",
+                  "工业级二氧化碳",
+                  "氢气",
+                  "电子二氧化碳",
+                  "电子氢气",
+                  "电子氧气",
+                  "电子氮气"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "广钢气体的事件暴露较为直接：电子大宗气体占收入的71.42%，相关业务不是边缘尝试；具体业务抓手是：公司是国内领先的电子大宗气体综合服务商，业绩超预期增长直接反映了半导体产业链的高景气度。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，尤其需要用终端销量、客户采购量、公司出货和相关产品收入增速区分行业普涨与公司自身竞争力。如果终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 14569,
+            "stockCode": "688268.SH",
+            "stockName": "华特气体",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内领先的电子特气企业，与广钢气体同处半导体气体赛道，直接受益于行业景气度和国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688268.SH",
+              "companyName": "华特气体",
+              "companyProfile": "公司是一家致力于国产化替代，打破极大规模集成电路、新型显示面板等高端领域气体材料制约的民族厂商，主营业务以特种气体的研发、生产及销售为核心，辅以普通工业气体和相关气体设备与工程业务，提供气体一站式综合应用解决方案。随着公司产品的纯度、精度和稳定度持续提高以及市场开拓的深入，产品获得了市场知名客户的广泛认可，实现了对国内8寸及以上集成电路制造厂商超过90%的客户覆盖率，解决了长江存储、中芯国际、华润微电子、合肥长鑫等众多知名半导体客户多种气体材料的进口制约，并进入了英特尔、美光科技、台积电、SK海力士、英飞凌、三星等全球领先半导体企业的供应链体系。",
+              "profileSummary": "公司是一家致力于国产化替代，打破极大规模集成电路、新型显示面板等高端领域气体材料制约的民族厂商，主营业务以特种气体的研发、生产及销售为核心，辅以普通工业气体和相关气体设备与工程业务，提供气体一站式综合应用解决方案。随着公司产品的纯度、精度和稳定度持续提高以及市场开拓的深入，产品获得了市场知名客户的广泛认可，实现了对国内8寸及以上集成电路制造厂商超过90%的客户覆盖率，解决了长江存储、中芯国际、华润微电子、合肥长鑫等众多知名半导体客户多…",
+              "majorProducts": "氮气、氮气（6N）、低温绝热气瓶、低温压力容器、二氧化碳、氟氖混合气、高纯氨、高纯八氟丙烷、高纯二氟甲烷、高纯二氧化碳、高纯六氟丙烷、高纯六氟乙烷、高纯全氟丁二烯、高纯三氟甲烷、高纯四氟化碳、高纯一氟甲烷、高纯乙炔、高纯乙烯、工业氨气、硅烷、氦氖激光气、环氧乙烷、氪及其混合气、氪氖混合气、磷烷、密封束激光气、氖及其混合气、普通工业气体、气体设备与工程、汽化器、撬装装置、氢气（6N）、三氯化硼、特种气体、氙及其混合气、消毒气、小铝瓶、溴化氢、血气测定混合气、氩及其混合气、氩气、氩气（5.5N）、氧气、医用氧、乙硅烷、乙硼烷、乙炔、锗烷",
+              "revenueComposition": "光刻及其他混合气体:22%;普通工业气体:20.4%;氟碳类:15.66%;其他:10.54%;碳氧化合物:8.16%;焊接绝热气瓶及其附属设备:8.13%;氢化物:7.48%;氮氧化合物:4.18%;其他业务:3.45%",
+              "revenueSegments": [
+                {
+                  "name": "光刻及其他混合气体",
+                  "sharePct": 22.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "普通工业气体",
+                  "sharePct": 20.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氟碳类",
+                  "sharePct": 15.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 10.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "碳氧化合物",
+                  "sharePct": 8.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "焊接绝热气瓶及其附属设备",
+                  "sharePct": 8.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氢化物",
+                  "sharePct": 7.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氮氧化合物",
+                  "sharePct": 4.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "工业氧气",
+                    "category": "一般气体"
+                  },
+                  {
+                    "name": "工业氨气",
+                    "category": "稀有气体"
+                  },
+                  {
+                    "name": "气体工程",
+                    "category": "化学工程"
+                  },
+                  {
+                    "name": "高纯八氟丙烷",
+                    "category": "刻蚀气体"
+                  },
+                  {
+                    "name": "高纯八氟环丁烷",
+                    "category": "刻蚀气体"
+                  },
+                  {
+                    "name": "高纯六氟乙烷",
+                    "category": "刻蚀气体"
+                  }
+                ],
+                "knownProducts": [
+                  "高纯四氟化碳",
+                  "锗烷混氢",
+                  "高纯一氟甲烷",
+                  "高纯三氟甲烷",
+                  "高纯二氟甲烷",
+                  "工业氧气",
+                  "氢气",
+                  "氮气"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华特气体与新闻之间有明确产品抓手：工业氧气、工业氨气、气体工程，对应国内领先的电子特气企业，与广钢气体同处半导体气体赛道，直接受益于行业景气度和国产替代。收入主体目前是光刻及其他混合气体（22%）、普通工业气体（20.4%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 14570,
+            "stockCode": "688106.SH",
+            "stockName": "金宏气体",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内重要的电子气体供应商，业务覆盖大宗气体和多种特气，受益于半导体产业链需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688106.SH",
+              "companyName": "金宏气体",
+              "companyProfile": "公司成立于1999年，是专业从事气体的研发、生产、销售和服务一体化解决方案的环保集约型综合性气体服务商。总部基地位于苏州市相城区黄埭镇潘阳工业园。公司于2020年6月在科创板上市,致力于打造行业第一民族品牌，为客户创造纯金价值——金宏气体，纯金品质。公司主要为客户提供各种大宗气体、特种气体和燃气的一站式供气解决方案。公司建设有国家企业技术中心、国家博士后科研工作站、省级高纯特种气体工程中心、省级特种气体工程技术研究中心；商标、专利等知识产权多次荣获知名商标及专利奖；企业被评为国家专精特新“小巨人”企业、国家高新技术企业、国家智能制造示范工厂、国家知识产权示范企业、国家服务型制造示范平台、国家智能制造优秀场景、国家绿色工厂、江苏制造突出贡献奖、江苏省科技创新发展优秀企业、江苏省省长质量提名奖、江苏省“质量标杆”、江苏省五星级上云企业、江苏省智能制造示范车间等，先后承担20多项国家、省市级重大科研任务，并与南京大学、浙江大学、苏州大学、华东师范大学等多所国内知名高校院所开展产学研合作。",
+              "profileSummary": "公司成立于1999年，是专业从事气体的研发、生产、销售和服务一体化解决方案的环保集约型综合性气体服务商。公司主要为客户提供各种大宗气体、特种气体和燃气的一站式供气解决方案。",
+              "majorProducts": "超纯氨、氮气、二氧化碳、氟碳气体、干冰、高纯二氧化碳、高纯氧化亚氮、硅烷、氦气、混合气、氢气、天然气、氩气、氧气、液化石油气、医用气体、乙炔、正硅酸乙酯",
+              "revenueComposition": "大宗气体:42.25%;特种气体:32.1%;现场制气及租金:12.87%;燃气:8.31%;其他业务:4.48%",
+              "revenueSegments": [
+                {
+                  "name": "大宗气体",
+                  "sharePct": 42.25,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "特种气体",
+                  "sharePct": 32.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "现场制气及租金",
+                  "sharePct": 12.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "燃气",
+                  "sharePct": 8.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 4.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "工业氧气",
+                    "category": "一般气体"
+                  },
+                  {
+                    "name": "硅烷",
+                    "category": "掺杂气体"
+                  },
+                  {
+                    "name": "高纯八氟环丁烷",
+                    "category": "刻蚀气体"
+                  },
+                  {
+                    "name": "高纯六氟乙烷",
+                    "category": "刻蚀气体"
+                  },
+                  {
+                    "name": "高纯氧化亚氮",
+                    "category": "化学气相沉积气体"
+                  },
+                  {
+                    "name": "乙炔",
+                    "category": "其他烃类化合物、衍生物"
+                  }
+                ],
+                "knownProducts": [
+                  "正硅酸乙酯",
+                  "乙炔",
+                  "二氧化碳",
+                  "医用氧气",
+                  "工业氧气",
+                  "氢气",
+                  "氮气",
+                  "超纯氨"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "金宏气体已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：大宗气体占收入的42.25%。公司在产业链中的位置是：国内重要的电子气体供应商，业务覆盖大宗气体和多种特气，受益于半导体产业链需求增长，终端需求与渗透率变化则决定增量大小。只有完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，相关业务的增长才可能改善公司整体盈利。终端销量、客户采购量、公司出货和相关产品收入增速还需与其他主业表现同时改善；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 14575,
+            "stockCode": "688549.SH",
+            "stockName": "中巨芯",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司是国内领先的电子化学品企业，核心产品六氟化钨等受益于海外产能受限和国产替代加速。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688549.SH",
+              "companyName": "中巨芯-U",
+              "companyProfile": "公司成立于2017年12月，由浙江巨化股份有限公司和国家集成电路产业投资基金股份有限公司为主投资设立。公司于2021年被评为浙江省国企混改典型案例，于2022年列入国家科改示范企业，并于2023年9月8日在上海证券交易所科创板上市。公司专注于半导体制造支撑业，在持续深耕电子湿化学品、电子特气、前驱体材料等电子化学材料的同时，将适时拓展边界，延伸至更广阔的其他半导体材料(如高纯石英材料)及相关零部件领域，为全球半导体衬底、装备、制造、封装等类型企业提供高品质的通用和定制化产品与服务。未来，公司将继续秉承以满足客户需求为导向，提供组合化的优质产品和一体化的解决方案；坚持以创新驱动为发展内核，持续满足集成电路制造工艺不断进步的需求，致力于成为广受信赖的半导体产业生态伙伴！",
+              "profileSummary": "公司专注于半导体制造支撑业，在持续深耕电子湿化学品、电子特气、前驱体材料等电子化学材料的同时，将适时拓展边界，延伸至更广阔的其他半导体材料(如高纯石英材料)及相关零部件领域，为全球半导体衬底、装备、制造、封装等类型企业提供高品质的通用和定制化产品与服务。未来，公司将继续秉承以满足客户需求为导向，提供组合化的优质产品和一体化的解决方案；坚持以创新驱动为发展内核，持续满足集成电路制造工艺不断进步的需求，致力于成为广受信赖的半导体产业生态伙…",
+              "majorProducts": "BDEAS、HCDS、TDMAT、电子级氨水、电子级氟化铵、电子级硫酸、电子级氢氟酸、电子级硝酸、电子级盐酸、高纯氟化氢、高纯氟碳类气体（主要包括三氟甲烷、八氟环丁烷、八氟环戊烯、六氟丁二烯等）、高纯六氟化钨、高纯氯化氢、硅刻蚀液、缓冲氧化物刻蚀液",
+              "revenueComposition": "电子湿化学品:72.52%;电子特种气体及前驱体:23.87%;其他业务:3.61%",
+              "revenueSegments": [
+                {
+                  "name": "电子湿化学品",
+                  "sharePct": 72.52,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电子特种气体及前驱体",
+                  "sharePct": 23.87,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "六氟化钨",
+                    "category": "化学气相沉积气体"
+                  },
+                  {
+                    "name": "六氟丁二烯",
+                    "category": "刻蚀气体"
+                  },
+                  {
+                    "name": "氟化氢",
+                    "category": "刻蚀气体"
+                  },
+                  {
+                    "name": "氯化氢",
+                    "category": "刻蚀气体"
+                  },
+                  {
+                    "name": "电子级氟化铵",
+                    "category": "刻蚀液"
+                  },
+                  {
+                    "name": "电子级氨水",
+                    "category": "清洗液"
+                  }
+                ],
+                "knownProducts": [
+                  "电子级氢氟酸",
+                  "电子级硫酸",
+                  "高纯三氟甲烷",
+                  "电子级氟化铵",
+                  "硅刻蚀液",
+                  "缓冲氧化物刻蚀液",
+                  "电子级氨水",
+                  "电子级盐酸"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中巨芯与事件的关系已经落在存量主业，而非远期概念：电子湿化学品（72.52%）、电子特种气体及前驱体（23.87%）合计约占收入的96.39%。公司在产业链中的具体抓手是：公司是国内领先的电子化学品企业，核心产品六氟化钨等受益于海外产能受限和国产替代加速。本次事件若改变产能释放与行业供给变化，影响会沿着“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；在建工程转固、产能利用率、产销率、库存和产品价格比主题热度更有解释力。若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 14576,
+            "stockCode": "600160.SH",
+            "stockName": "巨化股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司是国内氟化工龙头，布局PFA、电子级氢氟酸等多种半导体关键材料，深度受益于国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600160.SH",
+              "companyName": "巨化股份",
+              "companyProfile": "公司成立于1998年，是国内氟化工与氯碱化工综合配套的先进制造基地。公司在阿联酋阿布扎比设有海外生产基地，坚持创新驱动发展，构建了覆盖杭州、衢州两地的研发体系，设有国家级企业技术中心、国家氟材料工程技术研究中心、国家级制造业中试平台、中国化工新材料(衢州)产业园、企业博士后工作站、省重点企业研究院、省企业研究院等高能级创新平台。公司是国内领先的氟化工、氯碱化工新材料先进制造业基地，主要业务涵盖基础化工、氟化工、食品包装材料、石油化工及后续产品的研发、生产与销售。公司拥有氯碱化工、硫酸化工、煤化工、基础氟化工等氟化工必需的产业自我配套体系，并以此为基础，形成了包括基础配套原料、氟制冷剂、有机氟单体、含氟聚合物、含氟精细化学品等在内的完整的氟化工产业链，并涉足石油化工产业。在现有完备的产业链基础上，公司重点发展新材料、新环保、新能源、新用途等绿色科技应用产品，加大绿色产业的投资与研发投入，充分掌握能源结构转型、清洁技术及工业互联网快速发展等重要机遇，发挥自身独特优势，推进产业迈向高端化、智能化、绿色化转型，着力将公司打造成为国内氟化工的领先者，国内一流的化工新材料供应商、服务商。",
+              "profileSummary": "公司是国内领先的氟化工、氯碱化工新材料先进制造业基地，主要业务涵盖基础化工、氟化工、食品包装材料、石油化工及后续产品的研发、生产与销售。公司拥有氯碱化工、硫酸化工、煤化工、基础氟化工等氟化工必需的产业自我配套体系，并以此为基础，形成了包括基础配套原料、氟制冷剂、有机氟单体、含氟聚合物、含氟精细化学品等在内的完整的氟化工产业链，并涉足石油化工产业。",
+              "majorProducts": "巨化股份50%甲氨磷乳油、巨化股份氟制冷剂、巨化股份复合肥、巨化股份合成氨、巨化股份甲醇、巨化股份甲烷氯化物、巨化股份聚氯乙烯、巨化股份硫酸、巨化股份氯磺酸、巨化股份氯甲烷、巨化股份尿素、巨化股份脲醛树脂、巨化股份氢氟酸、巨化股份烧碱、巨化股份乌洛托品",
+              "revenueComposition": "制冷剂:47.69%;石化材料:13.9%;其他业务:11.61%;基础化工产品及其它:10.71%;含氟聚合物材料:6.9%;氟化工原料:4.55%;食品包装材料:2.91%;含氟精细化学品:1.46%;检维修及工程项目管理:0.27%",
+              "revenueSegments": [
+                {
+                  "name": "制冷剂",
+                  "sharePct": 47.69,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "石化材料",
+                  "sharePct": 13.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 11.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "基础化工产品及其它",
+                  "sharePct": 10.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "含氟聚合物材料",
+                  "sharePct": 6.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氟化工原料",
+                  "sharePct": 4.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "食品包装材料",
+                  "sharePct": 2.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "含氟精细化学品",
+                  "sharePct": 1.46,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "检维修及工程项目管理",
+                  "sharePct": 0.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PVDC乳液",
+                    "category": "通用涂料"
+                  },
+                  {
+                    "name": "R1234yf制冷剂代工",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R125制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R134a制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R22制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R32制冷剂",
+                    "category": "含氟制冷剂"
+                  }
+                ],
+                "knownProducts": [
+                  "乙氧氟草醚",
+                  "氨水",
+                  "R1234yf制冷剂代工",
+                  "R125制冷剂",
+                  "R134a制冷剂",
+                  "R22制冷剂",
+                  "R32制冷剂",
+                  "R410A制冷剂"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "巨化股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：制冷剂（47.69%）、含氟精细化学品（1.46%）合计约占收入的49.15%。公司与事件的具体联系在于：公司是国内氟化工龙头，布局PFA、电子级氢氟酸等多种半导体关键材料，深度受益于国产替代，对应的核心变量是技术商业化与产品迭代速度。若这一变量沿着“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，客户认证、量产良率、订单规模、产品收入占比和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；技术路线变化、良率爬坡缓慢或竞争方案更快成熟则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 14577,
+            "stockCode": "600378.SH",
+            "stockName": "昊华科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司是国内重要的氟化工技术平台，含氟特气产品受益于半导体行业景气上行。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600378.SH",
+              "companyName": "昊华科技",
+              "companyProfile": "公司是中国中化控股有限责任公司旗下的上市公司。1999年经国家经贸委批准在成都发起设立，2001年1月在上海证券交易所挂牌上市。2018年实施重大资产重组，转型升级为先进化工材料领域科研院所集群公司，主要从事高端氟材料、电子化学品、高端制造化工材料的研发与生产，以及提供绿色低碳整体解决方案的碳减排业务。近年来，公司围绕国家发展和市场需求，聚焦化工新材料补短板，强化科技创新，不断优化结构，持续深化改革，发展成为业绩优良、竞争力强、主业突出、治理规范的上市公司。公司始终把“致力成为中国先进化工材料行业引领者，持续为人类品质生活提升和技术进步作贡献”作为公司的发展战略和发展愿景；把“科技引领，创新驱动，追求卓越”作为公司的发展理念，持续推进公司高质量发展。",
+              "profileSummary": "2018年实施重大资产重组，转型升级为先进化工材料领域科研院所集群公司，主要从事高端氟材料、电子化学品、高端制造化工材料的研发与生产，以及提供绿色低碳整体解决方案的碳减排业务。近年来，公司围绕国家发展和市场需求，聚焦化工新材料补短板，强化科技创新，不断优化结构，持续深化改革，发展成为业绩优良、竞争力强、主业突出、治理规范的上市公司。",
+              "majorProducts": "电子化学品、高端氟材料、高端制造化工材料、碳减排业务",
+              "revenueComposition": "氟材料:59.55%;高端制造:17.57%;工程技术服务:11.34%;电子化学品:6.82%;其他业务:2.87%;贸易及其他:1.85%",
+              "revenueSegments": [
+                {
+                  "name": "氟材料",
+                  "sharePct": 59.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高端制造",
+                  "sharePct": 17.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程技术服务",
+                  "sharePct": 11.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子化学品",
+                  "sharePct": 6.82,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易及其他",
+                  "sharePct": 1.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "三氟化氮",
+                    "category": "刻蚀气体"
+                  },
+                  {
+                    "name": "全氟丙烯",
+                    "category": "氟精细化学品"
+                  },
+                  {
+                    "name": "四氟丙醇",
+                    "category": "氟精细化学品"
+                  },
+                  {
+                    "name": "四氟乙烯",
+                    "category": "氟精细化学品"
+                  },
+                  {
+                    "name": "四氧化二氮",
+                    "category": "氧化剂"
+                  },
+                  {
+                    "name": "天然气转化(镍系)催化剂",
+                    "category": "催化剂"
+                  }
+                ],
+                "knownProducts": [
+                  "天然气转化(镍系)催化剂",
+                  "燃料电池催化剂",
+                  "甲醇合成(铜系)催化剂",
+                  "四氧化二氮",
+                  "氟橡胶混炼胶",
+                  "全氟丙烯",
+                  "四氟丙醇",
+                  "四氟乙烯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "昊华科技的电子化学品（6.82%）覆盖范围较宽，其中能够承载三氟化氮、全氟丙烯、四氟丙醇，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司是国内重要的氟化工技术平台，含氟特气产品受益于半导体行业景气上行。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 14583,
+            "stockCode": "002371.SZ",
+            "stockName": "北方华创",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内半导体设备龙头，产品线覆盖全面，最受益于国内晶圆厂扩产及自主可控趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002371.SZ",
+              "companyName": "北方华创",
+              "companyProfile": "公司成立于2001年9月，是一家以电子专用设备和电子元器件为主要产品，集研发、生产、销售及服务于一体的大型综合性高科技公司。电子专用设备方面，公司以大规模集成电路制造工艺技术为核心，研发生产了集成电路工艺设备、太阳能电池制造设备、气体质量流量控制器(MFC)、TFT设备、真空热处理设备、锂离子电池制造设备等系列产品，广泛应用于半导体、光伏、电力电子、TFT-LCD、LED、MEMS、锂电等多个新兴行业。高精密电子元器件方面，公司依托多年的元器件技术积累，建立了新产品、新工艺研发体系，产品技术等级不断提升，研发生产了电阻、电容、晶体器件、微波组件、模块电源、混合集成电路等高精密电子元器件系列产品，广泛应用于精密仪器仪表、自动控制等领域。公司为中国电子专用设备工业协会理事长和中国电子元件协会副理事长单位，是中国最大的电子装备生产基地和高端电子元器件制造基地。公司始终站在电子信息技术的前沿，技术开发坚持以自主研发为主、对外技术合作为辅的发展道路。公司依靠自主研发创造了辉煌的业绩，保持了在国内同行业中的技术领先地位。",
+              "profileSummary": "公司成立于2001年9月，是一家以电子专用设备和电子元器件为主要产品，集研发、生产、销售及服务于一体的大型综合性高科技公司。电子专用设备方面，公司以大规模集成电路制造工艺技术为核心，研发生产了集成电路工艺设备、太阳能电池制造设备、气体质量流量控制器(MFC)、TFT设备、真空热处理设备、锂离子电池制造设备等系列产品，广泛应用于半导体、光伏、电力电子、TFT-LCD、LED、MEMS、锂电等多个新兴行业。",
+              "majorProducts": "半导体装备、高可靠高稳定电阻器、固体钽电容器、混合集成电路、集成电路制造设备、模块电源、石英晶体器件、微波组件、真空及新能源锂电装备",
+              "revenueComposition": "电子工艺装备:93.34%;电子元件:6.55%;其他业务:0.11%",
+              "revenueSegments": [
+                {
+                  "name": "电子工艺装备",
+                  "sharePct": 93.34,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电子元件",
+                  "sharePct": 6.55,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "CVD设备",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "PVD设备",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "晶圆刻蚀机",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "晶圆氧化炉",
+                    "category": "晶圆加工设备"
+                  },
+                  {
+                    "name": "硅片清洗机",
+                    "category": "半导体用硅片制造设备"
+                  }
+                ],
+                "knownProducts": [
+                  "高速分切机",
+                  "模块电源",
+                  "石英晶体器件",
+                  "微波组件",
+                  "钽电容器",
+                  "硅片清洗机",
+                  "CVD设备",
+                  "PVD设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "北方华创已经具备CVD设备、PVD设备、晶圆刻蚀机等业务能力，国内半导体设备龙头，产品线覆盖全面，最受益于国内晶圆厂扩产及自主可控趋势并非单纯概念映射。当前对应的收入被归入电子工艺装备（93.34%）、电子元件（6.55%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于产能释放与行业供给变化是否通过“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”放大，并最终反映在在建工程转固、产能利用率、产销率、库存和产品价格上；需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 14578,
+            "stockCode": "605020.SH",
+            "stockName": "永和股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司含氟高分子材料业务量价齐升，PFA等产品切入半导体领域，成为公司业绩增长的重要驱动力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "605020.SH",
+              "companyName": "永和股份",
+              "companyProfile": "公司成立于2004年，总部地处素有中国“氟都”之称的浙江衢州，2021年7月9日在上海证券交易所主板挂牌上市，是一家集原料矿石开采、研发、生产、仓储、运输和销售为一体的专业氟化工企业。公司深耕氟化工领域多年，聚焦于高附加值的含氟高分子材料和环保氟碳化学品业务，已形成从萤石矿、氢氟酸、甲烷氯化物、氟碳化学品到含氟高分子材料、含氟精细化学品的完整产业链，产品远销100多个国家和地区，是我国氟化工行业中产业链最完整的企业之一。公司拥有自主萤石资源(3个采矿权、2个探矿权)，无水氢氟酸年产能13.50万吨，甲烷氯化物和一氯甲烷年产能共计19.7万吨，氟碳化学品单质年产能19万吨(含原料用氟碳化学品)，含氟高分子材料及单体年产能8.28万吨，主要产品品质和产能规模国内领先；公司本部及内蒙永和拥有年混配、分装9.72万吨单质制冷剂、混合制冷剂的生产能力。同时，公司在建产能包括8万吨/年氢氟酸、超过3万吨/年含氟高分子材料以及4.3万吨/年第四代制冷剂。未来公司将持续推进业务全球整体布局，并利用全产业链布局优势，整合更多行业资源，做精做强。在公司已有的生产线基础上，加大对高端含氟高分子材料、氟碳化学品的开发力度，扩大生产能力，丰富产品种类，同时适度适时布局上游甲烷氯化物及氯碱业务；启动四代制冷剂研究、探索精细氟化工和无机氟化工领域，力争打造国内领先、品种齐全、能适应多种特殊用途的专业氟化工领军企业。",
+              "profileSummary": "公司深耕氟化工领域多年，聚焦于高附加值的含氟高分子材料和环保氟碳化学品业务，已形成从萤石矿、氢氟酸、甲烷氯化物、氟碳化学品到含氟高分子材料、含氟精细化学品的完整产业链，产品远销100多个国家和地区，是我国氟化工行业中产业链最完整的企业之一。在公司已有的生产线基础上，加大对高端含氟高分子材料、氟碳化学品的开发力度，扩大生产能力，丰富产品种类，同时适度适时布局上游甲烷氯化物及氯碱业务；启动四代制冷剂研究、探索精细氟化工和无机氟化工领域，力…",
+              "majorProducts": "FEP、HCFC-22、HFC-125、HFC-134a、HFC-143a、HFC-152a、HFC-227ea、HFC-32、HFP、PPVE、PTFE、PVDF、R404A、R407C、R410A、R421A、R507、TFE、VDF、甲烷氯化物、氯化钙、氢氟酸、一氯甲烷",
+              "revenueComposition": "氟碳化学品:53.25%;含氟高分子材料及其单体:33.39%;氟化工原料:8.47%;其他业务:2.6%;含氟精细化学品:2.29%",
+              "revenueSegments": [
+                {
+                  "name": "氟碳化学品",
+                  "sharePct": 53.25,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "含氟高分子材料及其单体",
+                  "sharePct": 33.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氟化工原料",
+                  "sharePct": 8.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "含氟精细化学品",
+                  "sharePct": 2.29,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "R125制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R143a制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R152a制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R227ea制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R32制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R404A制冷剂",
+                    "category": "含氟制冷剂"
+                  }
+                ],
+                "knownProducts": [
+                  "R125制冷剂",
+                  "R143a制冷剂",
+                  "R152a制冷剂",
+                  "R227ea制冷剂",
+                  "R32制冷剂",
+                  "R404A制冷剂",
+                  "R410A制冷剂",
+                  "无水氟化氢"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "永和股份与事件的关系已经落在存量主业，而非远期概念：氟碳化学品（53.25%）、含氟精细化学品（2.29%）合计约占收入的55.54%。公司在产业链中的具体抓手是：公司含氟高分子材料业务量价齐升，PFA等产品切入半导体领域，成为公司业绩增长的重要驱动力。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 14579,
+            "stockCode": "300054.SZ",
+            "stockName": "鼎龙股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是国内半导体材料平台型企业，高端光刻胶产品已取得多家主流晶圆厂批量订单，受益于国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300054.SZ",
+              "companyName": "鼎龙股份",
+              "companyProfile": "公司成立于2000年，一直从事关键大赛道上核心创新材料的研发生产。作为关键创新材料领域的领军企业，公司始终将科技创新作为核心发展引擎。公司依托实力雄厚的技术创新团队与持续高强度的研发投入，在半导体材料等战略领域，成功开发出系列拥有自主知识产权的高新技术产品，突破多项关键核心材料的技术壁垒，实现尖端材料的重要突破。自上市以来，公司充分借力资本市场赋能，结合自研孵化的双轮驱动模式，加速推进产业生态布局与技术迭代创新。目前已发展成为集多产业协同、多领域布局于一体的国家技术创新示范企业、国家知识产权示范企业、工信部制造业单项冠军示范企业，以及引领材料创新的平台型标杆企业。",
+              "profileSummary": "公司依托实力雄厚的技术创新团队与持续高强度的研发投入，在半导体材料等战略领域，成功开发出系列拥有自主知识产权的高新技术产品，突破多项关键核心材料的技术壁垒，实现尖端材料的重要突破。目前已发展成为集多产业协同、多领域布局于一体的国家技术创新示范企业、国家知识产权示范企业、工信部制造业单项冠军示范企业，以及引领材料创新的平台型标杆企业。",
+              "majorProducts": "CMP制程工艺材料、半导体先进封装材料、半导体显示材料、打印复印通用耗材、高端晶圆光刻胶、集成电路芯片",
+              "revenueComposition": "半导体业务:57%;打印复印耗材:42.6%;其他业务:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "半导体业务",
+                  "sharePct": 57.0,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "打印复印耗材",
+                  "sharePct": 42.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "ArF光刻胶",
+                    "category": "半导体用光刻胶"
+                  },
+                  {
+                    "name": "KrF光刻胶",
+                    "category": "半导体用光刻胶"
+                  },
+                  {
+                    "name": "晶圆清洗液",
+                    "category": "清洗液"
+                  },
+                  {
+                    "name": "CMP抛光垫",
+                    "category": "化学机械抛光材料"
+                  },
+                  {
+                    "name": "化学机械抛光液(CMP)",
+                    "category": "化学机械抛光材料"
+                  },
+                  {
+                    "name": "彩色聚合碳粉",
+                    "category": "碳粉"
+                  }
+                ],
+                "knownProducts": [
+                  "彩色聚合碳粉",
+                  "聚酰亚胺(PI)浆料",
+                  "显影辊",
+                  "硒鼓",
+                  "墨盒",
+                  "ArF光刻胶",
+                  "KrF光刻胶",
+                  "CMP抛光垫"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "鼎龙股份的半导体业务（57%）覆盖范围较宽，其中能够承载ArF光刻胶、KrF光刻胶、晶圆清洗液，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司是国内半导体材料平台型企业，高端光刻胶产品已取得多家主流晶圆厂批量订单，受益于国产替代。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 14580,
+            "stockCode": "603650.SH",
+            "stockName": "彤程新材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司通过子公司北京科华成为国内最大的本土KrF光刻胶供应商，ArF光刻胶业务实现突破式增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603650.SH",
+              "companyName": "彤程新材",
+              "companyProfile": "公司创建于1999年，2018年6月在上交所A股主板成功上市，主要从事新材料的研发、生产、销售和相关贸易业务，是全球领先的新材料综合服务商，目前在中国拥有多家精益制造工厂和国家级实验室。公司是全球知名的特种橡胶助剂和高端酚醛树脂生产商，在汽车/轮胎用特种材料方面长期处于国际领导者地位，也是国内半导体和显示面板光刻胶等电子化学品领先企业，业务范围覆盖全球40多个国家和地区，公司通过产业链横向和纵向延伸，产品进一步多元化、成本优势凸显，持续夯实客户合作范围并扩大全球销售的市场占有率，并通过与产业上下游协作，致力于在产品、服务、研发等全方位建立围绕客户需求的长期多元化合作模式，已形成了完备的一体化全产业链布局，是所在细分行业龙头，拥有多业务并举且相互促进的平台型企业优势。",
+              "profileSummary": "公司创建于1999年，2018年6月在上交所A股主板成功上市，主要从事新材料的研发、生产、销售和相关贸易业务，是全球领先的新材料综合服务商，目前在中国拥有多家精益制造工厂和国家级实验室。公司是全球知名的特种橡胶助剂和高端酚醛树脂生产商，在汽车/轮胎用特种材料方面长期处于国际领导者地位，也是国内半导体和显示面板光刻胶等电子化学品领先企业，业务范围覆盖全球40多个国家和地区，公司通过产业链横向和纵向延伸，产品进一步多元化、成本优势凸显，持…",
+              "majorProducts": "补强树脂、超级增粘树脂、防护蜡、钴盐、均匀剂、其他橡胶助剂、增粘树脂、粘合剂、粘合树脂",
+              "revenueComposition": "自产酚醛树脂:49.05%;自产电子材料产品:26.88%;贸易类其他:9.76%;自产其他产品:9.06%;自产可降解产品:3.11%;贸易类电子产品:1.87%;其他业务:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "自产酚醛树脂",
+                  "sharePct": 49.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自产电子材料产品",
+                  "sharePct": 26.88,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "贸易类其他",
+                  "sharePct": 9.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自产其他产品",
+                  "sharePct": 9.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自产可降解产品",
+                  "sharePct": 3.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易类电子产品",
+                  "sharePct": 1.87,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "KrF光刻胶",
+                    "category": "半导体用光刻胶"
+                  },
+                  {
+                    "name": "G线光刻胶",
+                    "category": "半导体用光刻胶"
+                  },
+                  {
+                    "name": "I线光刻胶",
+                    "category": "半导体用光刻胶"
+                  },
+                  {
+                    "name": "TFT-LCD正性光刻胶",
+                    "category": "液晶显示（LCD）用光刻胶"
+                  },
+                  {
+                    "name": "CMP抛光垫",
+                    "category": "化学机械抛光材料"
+                  },
+                  {
+                    "name": "PBAT树脂",
+                    "category": "热塑性树脂"
+                  }
+                ],
+                "knownProducts": [
+                  "对叔丁基苯酚",
+                  "对特辛基苯酚",
+                  "苯酚",
+                  "酚醛树脂",
+                  "PBAT树脂",
+                  "PTOP增粘树脂",
+                  "对叔丁基苯酚PTBP增粘树脂",
+                  "橡胶助剂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "彤程新材已经具备KrF光刻胶、G线光刻胶、I线光刻胶等业务能力，公司通过子公司北京科华成为国内最大的本土KrF光刻胶供应商，ArF光刻胶业务实现突破式增长并非单纯概念映射。当前对应的收入被归入自产电子材料产品（26.88%）、贸易类电子产品（1.87%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 14581,
+            "stockCode": "000725.SZ",
+            "stockName": "京东方A",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司将玻璃基板作为切入AI上游半导体材料的核心抓手，联合康宁推进国产化替代，已向客户批量送样。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000725.SZ",
+              "companyName": "京东方A",
+              "companyProfile": "公司创立于1993年4月，是一家领先的物联网创新企业，为信息交互和人类健康提供智慧端口产品和专业服务，形成了以半导体显示为核心，物联网创新、传感器及解决方案、MLED、智慧医工融合发展的“1+4+N+生态链”业务发展架构。在“1+4+N+生态链”业务不断突破的同时，公司持续贯彻“技术+品牌”双轮驱动发展模式：国内科技企业首档自制技术科普综艺节目《BOE解忧实验室》、年度标杆性品牌巡展“你好，BOE”两大品牌IP，已成为科技企业破圈营销的创新典范。公司在北京、合肥、成都、重庆、福州、绵阳、武汉、昆明、鄂尔多斯等地拥有多个智造基地，子公司遍布美国、德国、日本、韩国、新加坡、印度、越南、墨西哥、巴西、阿联酋等多个国家和地区，服务体系覆盖欧、美、亚、非等全球多个区域。公司坚持“技术领先、全球首发、价值共创”的创新理念。",
+              "profileSummary": "公司创立于1993年4月，是一家领先的物联网创新企业，为信息交互和人类健康提供智慧端口产品和专业服务，形成了以半导体显示为核心，物联网创新、传感器及解决方案、MLED、智慧医工融合发展的“1+4+N+生态链”业务发展架构。公司在北京、合肥、成都、重庆、福州、绵阳、武汉、昆明、鄂尔多斯等地拥有多个智造基地，子公司遍布美国、德国、日本、韩国、新加坡、印度、越南、墨西哥、巴西、阿联酋等多个国家和地区，服务体系覆盖欧、美、亚、非等全球多个区域。",
+              "majorProducts": "“N”业务、MLED、传感、京东方LED显示系统、京东方TFT液晶显示器、京东方彩色显象管、京东方纯平CRT显示器、京东方锂电池、京东方液晶电视、京东方液晶显示模块、物联网创新、显示器件、智慧医工",
+              "revenueComposition": "显示器件业务:81.34%;物联网创新业务:19.04%;MLED业务:4.55%;智慧健康服务:0.93%;传感业务:0.29%;其他及抵销:-6.15%",
+              "revenueSegments": [
+                {
+                  "name": "显示器件业务",
+                  "sharePct": 81.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物联网创新业务",
+                  "sharePct": 19.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "MLED业务",
+                  "sharePct": 4.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智慧健康服务",
+                  "sharePct": 0.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "传感业务",
+                  "sharePct": 0.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他及抵销",
+                  "sharePct": -6.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "投影仪",
+                  "LCD液晶电视",
+                  "户外LED广告机",
+                  "Micro LED显示屏",
+                  "OLED显示屏",
+                  "电子标牌",
+                  "电子白板",
+                  "液晶面板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "京东方A与新闻存在业务方向上的交集：公司将玻璃基板作为切入AI上游半导体材料的核心抓手，联合康宁推进国产化替代，已向客户批量送样；公司当前收入主要来自显示器件业务（81.34%）、物联网创新业务（19.04%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对技术商业化与产品迭代速度的推动只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能进入报表，客户认证、量产良率、订单规模、产品收入占比和毛利率决定这一交集能否升级为实际增量；技术路线变化、良率爬坡缓慢或竞争方案更快成熟是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 14584,
+            "stockCode": "603324.SH",
+            "stockName": "盛剑科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是国内半导体厂务系统龙头，受益于晶圆厂扩产及国产替代，真空泵等核心设备迎来导入窗口。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603324.SH",
+              "companyName": "盛剑科技",
+              "companyProfile": "公司是中国高科技产业知名的绿色科技服务商，于2021年4月在上海证券交易所主板上市。公司以“致力于美好环境”为企业使命，持续秉持“行业延伸+产品延伸”的发展方针，已形成“绿色厂务系统解决方案、半导体附属装备及核心零部件、电子化学品材料”主营业务三驾马车。公司深度布局中国半导体产业集聚区，总部位于中国上海，下设华东、华中、华南等制造基地及服务中心，并在新加坡设立海外总部，构建“双轮驱动”格局，长期服务众多集成电路、半导体显示、新能源等高科技产业的知名企业，助力产业绿色生产，持续为客户创造价值。历经多年产业深耕，积累了深厚的项目经验、赢得了良好的行业口碑并夯实了稳固的行业地位。先后被评为国家级“高新技术企业”、工信部专精特新“小巨人”企业、“上海市企业技术中心”。未来的盛剑科技，将锚定“为科技企业提供绿色服务，为绿色企业提供科技产品”的战略定位，以国际化思维，励志发展成为全球领先的绿色科技企业。",
+              "profileSummary": "公司以“致力于美好环境”为企业使命，持续秉持“行业延伸+产品延伸”的发展方针，已形成“绿色厂务系统解决方案、半导体附属装备及核心零部件、电子化学品材料”主营业务三驾马车。未来的盛剑科技，将锚定“为科技企业提供绿色服务，为绿色企业提供科技产品”的战略定位，以国际化思维，励志发展成为全球领先的绿色科技企业。",
+              "majorProducts": "L/S、LOC-VOC、VOCs处理系统、剥离液深度处理装置、非涂层风管、沸石转轮、干式除尘器、连续水幕湿式电除尘、湿电子化学品供应与回收再生系统、酸碱废气处理系统、涂层风管、温控设备、洗涤塔、蓄热式焚化炉、烟气净化系统、一般排气系统、有毒废气处理系统、真空设备、直燃式焚化炉",
+              "revenueComposition": "绿色厂务系统:67.94%;设备及关键零部件产品:27.45%;电子化学品材料:4.4%;其他业务:0.21%",
+              "revenueSegments": [
+                {
+                  "name": "绿色厂务系统",
+                  "sharePct": 67.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备及关键零部件产品",
+                  "sharePct": 27.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子化学品材料",
+                  "sharePct": 4.4,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "洗涤塔",
+                    "category": "塔器"
+                  }
+                ],
+                "knownProducts": [
+                  "洗涤塔",
+                  "直燃式焚化炉",
+                  "蓄热式焚化炉",
+                  "L/S设备",
+                  "LOC-VOC设备",
+                  "VOCs处理系统",
+                  "一般排气系统",
+                  "不锈钢涂层风管"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "盛剑科技与事件存在真实业务交集：公司已有洗涤塔，与公司是国内半导体厂务系统龙头，受益于晶圆厂扩产及国产替代，真空泵等核心设备迎来导入窗口所处的产业环节一致。电子化学品材料（4.4%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响产能释放与行业供给变化，只有经过“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”，才会形成可确认的收入和利润增量。在建工程转固、产能利用率、产销率、库存和产品价格能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 14585,
+            "stockCode": "300604.SZ",
+            "stockName": "长川科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内ATE龙头，率先完成SOC测试机国产替代，受益于AI芯片测试需求量价齐升及国产GPU厂商产能释放。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300604.SZ",
+              "companyName": "长川科技",
+              "companyProfile": "公司成立于2008年4月，是一家专注于集成电路封装和晶圆测试装备的高新技术企业。公司总部坐落于浙江省杭州市滨江区创智街500号，研发人员占比50%以上。公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。公司累计拥有海内外授权专利超1,400项，其中发明专利超400项，先后被认定为国家级高新技术企业、国家知识产权优势企业、专精特新“小巨人”企业。",
+              "profileSummary": "公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。",
+              "majorProducts": "C6系列、Cfocus、D9000Soc测试机系列、HEXA、NanoX-6000、NanoX-8000、SLT系列、大功率测试机系列、老化测试机系列、三温平移式分选机系列、数模混合测试机系列、重力式分选机系列、转塔式分选机系列",
+              "revenueComposition": "测试机:60.53%;分选机:29.64%;其他:9.83%",
+              "revenueSegments": [
+                {
+                  "name": "测试机",
+                  "sharePct": 60.53,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "分选机",
+                  "sharePct": 29.64,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "数模混合测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "芯片分选机",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "AOI光学检测仪",
+                  "数模混合测试机",
+                  "芯片分选机"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长川科技与事件的关系已经落在存量主业，而非远期概念：测试机（60.53%）、分选机（29.64%）合计约占收入的90.17%。公司在产业链中的具体抓手是：国内ATE龙头，率先完成SOC测试机国产替代，受益于AI芯片测试需求量价齐升及国产GPU厂商产能释放。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "1条低于3星的源记录已按当前关注口径排除。",
+      "8条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26638",
@@ -9,10 +9,10 @@
     "date": "2026-06-30"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 3,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 1,
     "mappedStockCount": 1,
-    "unmappedStockCount": 2,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 9282,
@@ -22,153 +22,20 @@
         "filledStars": 4,
         "mapped": true,
         "anchorProductCount": 3
-      },
-      {
-        "sourceRowNumber": 9284,
-        "stockCode": "未上市",
-        "stockName": "地瓜机器人",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 9285,
-        "stockCode": "09660.HK",
-        "stockName": "地平线机器人",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 9284,
-        "stockCode": "未上市",
-        "stockName": "地瓜机器人",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 9285,
-        "stockCode": "09660.HK",
-        "stockName": "地平线机器人",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 3,
     "selectedCoreProductCount": 3,
     "selectedCompanyCoreProductCount": 3,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 3,
-    "downstreamCandidateCount": 6,
-    "shownUpstreamCount": 3,
-    "shownDownstreamCount": 6
+    "level7ProductCount": 17,
+    "relatedIndustryCandidateCount": 6,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140111849",
-        "name": "半导体IP",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111364"
-        ],
-        "linkedCoreProductNames": [
-          "半导体IP授权服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140006108",
-        "name": "芯片封测",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111363"
-        ],
-        "linkedCoreProductNames": [
-          "芯片量产代理"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140108442",
-        "name": "集成电路晶圆代工",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111363"
-        ],
-        "linkedCoreProductNames": [
-          "芯片量产代理"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140111363",
-        "name": "芯片量产代理",
-        "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片量产代理",
-        "industryPath": [
-          "电子",
-          "半导体",
-          "集成电路",
-          "IC制造",
-          "晶圆加工",
-          "芯片量产代理"
-        ],
-        "level5Industry": {
-          "code": "1200001283",
-          "name": "IC制造"
-        },
-        "level6Industry": {
-          "code": "1200004968",
-          "name": "晶圆加工"
-        },
-        "level7Product": {
-          "code": "1140111363",
-          "name": "芯片量产代理"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688521.SH",
-            "stockName": "芯原股份",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 2,
-        "downstreamCount": 5,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "半导体",
-          "电子"
-        ]
-      },
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140111364",
         "name": "半导体IP授权服务",
@@ -194,18 +61,15 @@
           "name": "半导体IP授权服务"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688521.SH",
             "stockName": "芯原股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -238,18 +102,56 @@
           "name": "芯片定制"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688521.SH",
             "stockName": "芯原股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "半导体",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140111363",
+        "name": "芯片量产代理",
+        "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片量产代理",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "集成电路",
+          "IC制造",
+          "晶圆加工",
+          "芯片量产代理"
+        ],
+        "level5Industry": {
+          "code": "1200001283",
+          "name": "IC制造"
+        },
+        "level6Industry": {
+          "code": "1200004968",
+          "name": "晶圆加工"
+        },
+        "level7Product": {
+          "code": "1140111363",
+          "name": "芯片量产代理"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -258,102 +160,329 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140027236",
-        "name": "工业",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111363"
+        "code": "1200001341",
+        "name": "电子技术服务",
+        "description": "电子技术服务指为电子设备提供检测、维修及技术支持。因受益于半导体国产化加速、AI算力需求爆发及高端制造升级，该行业作为产业链关键支撑环节，具备高成长性与技术壁垒，成为市场关注焦点。",
+        "stockCount": 2,
+        "starWeight": 9,
+        "level7ProductCount": 1,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688220.SH",
+            "stockName": "翱捷科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "芯片量产代理"
+        "products": [
+          {
+            "code": "1140111364",
+            "name": "半导体IP授权服务",
+            "hierarchyPath": "电子 > 其他电子 > 其他电子 > 电子技术服务 > 电子技术服务 > 半导体IP授权服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140016255",
-        "name": "数据处理",
-        "anchorCount": 1,
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111363"
+        "starWeight": 5,
+        "level7ProductCount": 5,
+        "relevanceScore": 60,
+        "stocks": [
+          {
+            "stockCode": "688220.SH",
+            "stockName": "翱捷科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
         ],
-        "linkedCoreProductNames": [
-          "芯片量产代理"
+        "products": [
+          {
+            "code": "1140215313",
+            "name": "GNSS SoC",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 通信芯片 > GNSS SoC",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215354",
+            "name": "IoT MCU",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > IoT MCU",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215306",
+            "name": "LoRa通信芯片",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 通信芯片 > LoRa通信芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1125000251",
+            "name": "WIFI芯片",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 通信芯片 > WIFI芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 4,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 17,
+    "candidateIndustryCount": 6,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 9281,
+        "stockCode": "688220.SH",
+        "stockName": "翱捷科技",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140161636",
-        "name": "汽车电子厂商",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111363"
-        ],
-        "linkedCoreProductNames": [
-          "芯片量产代理"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9282,
+        "stockCode": "688521.SH",
+        "stockName": "芯原股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140161635",
-        "name": "消费电子厂商",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111363"
-        ],
-        "linkedCoreProductNames": [
-          "芯片量产代理"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9283,
+        "stockCode": "688691.SH",
+        "stockName": "灿芯股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140006045",
-        "name": "物联网",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111363"
+        "sourceRowNumber": 9288,
+        "stockCode": "688003.SH",
+        "stockName": "天准科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001341",
+        "name": "电子技术服务",
+        "description": "电子技术服务指为电子设备提供检测、维修及技术支持。因受益于半导体国产化加速、AI算力需求爆发及高端制造升级，该行业作为产业链关键支撑环节，具备高成长性与技术壁垒，成为市场关注焦点。",
+        "stockCount": 2,
+        "starWeight": 9,
+        "level7ProductCount": 1,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688220.SH",
+            "stockName": "翱捷科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "芯片量产代理"
+        "products": [
+          {
+            "code": "1140111364",
+            "name": "半导体IP授权服务",
+            "hierarchyPath": "电子 > 其他电子 > 其他电子 > 电子技术服务 > 电子技术服务 > 半导体IP授权服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140160951",
-        "name": "集成电路设计厂商",
-        "anchorCount": 1,
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111364"
+        "starWeight": 5,
+        "level7ProductCount": 5,
+        "relevanceScore": 60,
+        "stocks": [
+          {
+            "stockCode": "688220.SH",
+            "stockName": "翱捷科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
         ],
-        "linkedCoreProductNames": [
-          "半导体IP授权服务"
+        "products": [
+          {
+            "code": "1140215313",
+            "name": "GNSS SoC",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 通信芯片 > GNSS SoC",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215354",
+            "name": "IoT MCU",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > IoT MCU",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215306",
+            "name": "LoRa通信芯片",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 通信芯片 > LoRa通信芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1125000251",
+            "name": "WIFI芯片",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 通信芯片 > WIFI芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688220.SH",
+                "stockName": "翱捷科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -368,10 +497,356 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 17,
+    "eligibleSourceRowCount": 4,
+    "totalStockCount": 4,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 11,
+    "excludedNonAShareCount": 2,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 4,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 9281,
+            "stockCode": "688220.SH",
+            "stockName": "翱捷科技",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "获得地平线旗下地瓜机器人2颗4nm机器人芯片的ASIC设计项目。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688220.SH",
+              "companyName": "翱捷科技-U",
+              "companyProfile": "公司成立于2015年4月，总部位于上海张江高科技园区，在北京、南京、深圳、合肥、大连、成都、西安、美国、意大利等地区建立了多个研发、支持中心。公司是一家提供无线通信、超大规模芯片的平台型芯片企业，专注于无线通信芯片的研发和技术创新，拥有全制式蜂窝基带芯片及多协议非蜂窝物联网芯片设计与供货能力，具备超大规模高速SoC芯片定制及半导体IP授权服务能力。公司各类芯片产品广泛应用于手机、智能可穿戴设备等消费电子市场，以及智慧安防、智能家居、自动驾驶等智能物联网市场。公司成立以来，成功收购多个海内外团队，完成团队与技术融合，推出系列有竞争力的产品，获得客户与市场认可。未来，公司将继续保持高技术壁垒，推进新一代通信技术演进，丰富多元化产品布局，通过战略收购整合海内外优质资源，拓展更具发展前景的新市场，成为立足中国的世界级企业。",
+              "profileSummary": "公司是一家提供无线通信、超大规模芯片的平台型芯片企业，专注于无线通信芯片的研发和技术创新，拥有全制式蜂窝基带芯片及多协议非蜂窝物联网芯片设计与供货能力，具备超大规模高速SoC芯片定制及半导体IP授权服务能力。公司各类芯片产品广泛应用于手机、智能可穿戴设备等消费电子市场，以及智慧安防、智能家居、自动驾驶等智能物联网市场。",
+              "majorProducts": "半导体IP授权服务、非蜂窝物联网芯片、蜂窝基带芯片、基带通信芯片、芯片定制服务、移动智能终端芯片",
+              "revenueComposition": "芯片产品销售:93.78%;芯片定制业务:5.69%;半导体IP授权:0.53%",
+              "revenueSegments": [
+                {
+                  "name": "芯片产品销售",
+                  "sharePct": 93.78,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "芯片定制业务",
+                  "sharePct": 5.69,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "半导体IP授权",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "GNSS SoC",
+                    "category": "通信芯片"
+                  },
+                  {
+                    "name": "IoT MCU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "LoRa通信芯片",
+                    "category": "通信芯片"
+                  },
+                  {
+                    "name": "SoC芯片定制",
+                    "category": "晶圆加工"
+                  },
+                  {
+                    "name": "WIFI芯片",
+                    "category": "通信芯片"
+                  },
+                  {
+                    "name": "半导体IP授权服务",
+                    "category": "电子技术服务"
+                  }
+                ],
+                "knownProducts": [
+                  "半导体IP授权服务",
+                  "SoC芯片定制",
+                  "IoT MCU",
+                  "GNSS SoC",
+                  "LoRa通信芯片",
+                  "WIFI芯片",
+                  "蜂窝基带芯片"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "翱捷科技已经参与事件相关业务，但收入基数仍小：芯片定制业务占收入的5.69%，说明公司已有业务抓手，但“获得地平线旗下地瓜机器人2颗4nm机器人芯片的ASIC设计项目”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于事件能否转化为可确认的经营增量能否驱动“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，从而推动业务跨过小规模阶段。在此之前，订单、收入确认、产品结构和毛利率变化比总收入增速更值得跟踪；若事件关联停留在主题层面，未形成可持续订单或利润贡献，市场对远期空间的定价可能缺少当期业绩支撑。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 9282,
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "与翱捷科技同为A股ASIC设计服务核心标的，受益于大厂芯片定制化趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688521.SH",
+              "companyName": "芯原股份",
+              "companyProfile": "公司是一家依托自主半导体IP，为客户提供平台化、全方位、一站式芯片定制服务和半导体IP授权服务的企业。公司拥有自主可控的图形处理器IP(GPU IP)、神经网络处理器IP(NPU IP)、视频处理器IP(VPU IP)、数字信号处理器IP(DSP IP)、图像信号处理器IP(ISP IP)和显示处理器IP(Display Processing IP)这六类处理器IP，以及1,600多个数模混合IP和射频IP。基于自有的IP，公司已拥有丰富的面向人工智能(AI)应用的软硬件芯片定制平台解决方案，涵盖如智能手表、AR/VR眼镜等始终在线(Always-on)的轻量化空间计算设备，AI PC、AI手机、智慧汽车、机器人等高效率端侧计算设备，以及数据中心/服务器等高性能云侧计算设备。为顺应大算力需求所推动的SoC(系统级芯片)向SiP(系统级封装)发展的趋势，公司正在以“IP芯片化(IP as a Chiplet)”、“芯片平台化(Chiplet as a Platform)”和“平台生态化(Platform as an Ecosystem)”理念为行动指导方针，从接口IP、Chiplet芯片架构、先进封装技术、面向AIGC和智慧出行的解决方案等方面入手，持续推进公司Chiplet技术、项目的研发和产业化。基于公司独有的芯片设计平台即服务(Silicon Platform as a Service,SiPaaS)经营模式，目前公司主营业务的应用领域广泛包括消费电子、汽车电子、计算机及周边、工业、数据处理、物联网等，主要客户包括芯片设计公司、IDM、系统厂商、大型互联网公司、云服务提供商等。公司成立于2001年，总部位于中国上海，在全球设有9个设计研发中心，以及11个销售和客户支持办事处。",
+              "profileSummary": "公司是一家依托自主半导体IP，为客户提供平台化、全方位、一站式芯片定制服务和半导体IP授权服务的企业。基于公司独有的芯片设计平台即服务(Silicon Platform as a Service,SiPaaS)经营模式，目前公司主营业务的应用领域广泛包括消费电子、汽车电子、计算机及周边、工业、数据处理、物联网等，主要客户包括芯片设计公司、IDM、系统厂商、大型互联网公司、云服务提供商等。",
+              "majorProducts": "半导体IP授权服务、一站式芯片定制服务",
+              "revenueComposition": "芯片量产业务收入:47.25%;芯片设计业务收入:27.81%;知识产权授权使用费收入:21.29%;特许权使用费收入:3.52%;其他业务:0.13%",
+              "revenueSegments": [
+                {
+                  "name": "芯片量产业务收入",
+                  "sharePct": 47.25,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "芯片设计业务收入",
+                  "sharePct": 27.81,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "知识产权授权使用费收入",
+                  "sharePct": 21.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特许权使用费收入",
+                  "sharePct": 3.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "芯片定制",
+                    "category": "晶圆加工"
+                  },
+                  {
+                    "name": "半导体IP授权服务",
+                    "category": "电子技术服务"
+                  },
+                  {
+                    "name": "芯片量产代理",
+                    "category": "晶圆加工"
+                  }
+                ],
+                "knownProducts": [
+                  "半导体IP授权服务",
+                  "芯片定制",
+                  "芯片量产代理"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "芯原股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：芯片量产业务收入占收入的47.25%。公司与事件的具体联系在于：与翱捷科技同为A股ASIC设计服务核心标的，受益于大厂芯片定制化趋势，对应的核心变量是事件能否转化为可确认的经营增量。若这一变量沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，订单、收入确认、产品结构和毛利率变化既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；事件关联停留在主题层面，未形成可持续订单或利润贡献则可能令增量低于预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 9283,
+            "stockCode": "688691.SH",
+            "stockName": "灿芯股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "与翱捷科技同为ASIC设计服务核心标的，直接受益于大客户自研芯片趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688691.SH",
+              "companyName": "灿芯股份",
+              "companyProfile": "公司是一家提供一站式定制芯片及IP的高新技术企业，为客户提供从芯片规格制定、架构设计到芯片成品的一站式服务，致力于为客户提供高价值、差异化的解决方案。公司定位于新一代信息技术领域，自成立至今一直致力于为客户提供高价值、差异化的芯片设计服务，并以此研发形成了以大型SoC定制设计技术与半导体IP开发技术为核心的全方位技术服务体系。依托完善的技术体系与全面的设计服务能力，公司不断帮助客户高质量、高效率、低成本、低风险地完成芯片设计开发与量产上市。公司为客户提供芯片设计服务最终转化为客户品牌的芯片产品被广泛应用于物联网、工业控制、消费电子、网络通信、智慧城市、高性能计算等行业。公司是国家级专精特新“小巨人”企业，并入选建议支持的国家级专精特新“小巨人”企业名单。公司凭借技术和服务的优异表现，获得了“中国半导体创新产品和技术奖”、“中国半导体市场最佳设计企业奖”、“上海市浦东新区科学技术奖”、“2021年度最具影响力IC设计企业”等多项荣誉奖项，并被权威媒体《电子工程专辑》(EETimes)评选为“全球60家最受关注的半导体初创公司”。",
+              "profileSummary": "公司定位于新一代信息技术领域，自成立至今一直致力于为客户提供高价值、差异化的芯片设计服务，并以此研发形成了以大型SoC定制设计技术与半导体IP开发技术为核心的全方位技术服务体系。公司凭借技术和服务的优异表现，获得了“中国半导体创新产品和技术奖”、“中国半导体市场最佳设计企业奖”、“上海市浦东新区科学技术奖”、“2021年度最具影响力IC设计企业”等多项荣誉奖项，并被权威媒体《电子工程专辑》(EETimes)评选为“全球60家最受关注的…",
+              "majorProducts": "芯片工程定制服务、芯片全定制服务",
+              "revenueComposition": "芯片设计业务:50.7%;芯片量产业务:49.3%",
+              "revenueSegments": [
+                {
+                  "name": "芯片设计业务",
+                  "sharePct": 50.7,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "芯片量产业务",
+                  "sharePct": 49.3,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "芯片定制",
+                    "category": "晶圆加工"
+                  },
+                  {
+                    "name": "芯片量产代理",
+                    "category": "晶圆加工"
+                  }
+                ],
+                "knownProducts": [
+                  "芯片定制",
+                  "芯片量产代理"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "灿芯股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：芯片量产业务占收入的49.3%。公司与事件的具体联系在于：与翱捷科技同为ASIC设计服务核心标的，直接受益于大客户自研芯片趋势，对应的核心变量是事件能否转化为可确认的经营增量。若这一变量沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，订单、收入确认、产品结构和毛利率变化既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；事件关联停留在主题层面，未形成可持续订单或利润贡献则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 9288,
+            "stockCode": "688003.SH",
+            "stockName": "天准科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "发布基于地平线征程芯片的机器人域控制器，是智元机器人大脑的第一供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688003.SH",
+              "companyName": "天准科技",
+              "companyProfile": "公司致力于以领先技术推动工业数字化智能化发展，致力打造卓越视觉装备平台企业，主要产品包括视觉测量装备、视觉检测装备、视觉制程装备和智能驾驶方案等。公司面向工业计量、消费电子、半导体、PCB、光伏、新汽车等精密制造领域，提供视觉测量、检测、制程等高端装备产品，促进制造业向更高效率、更高质量和更高智能化发展。同时在智能驾驶领域，提供域控制器、边缘计算产品与解决方案，推动行业进步，改善人们的生活。公司始终坚持“客户就是上级”的经营理念并长期保持高强度的研发投入，以此不断加深行业应用能力和技术能力双护城河。通过与各行业头部客户紧密合作，不断深入应用场景，开发高适用性的精准解决方案。同时，围绕人工智能和精密光机电两大技术体系，搭建有高度、强协同的人才梯队，建设科学的研发管理体系，持续打造业界领先的技术与产品。经过十多年的深耕与积累，公司累计服务了全球5000余家中高端工业客户。未来，公司将一如既往地围绕工业智能方向，坚持长期主义，提供优秀的工业视觉装备产品，为客户创造更大价值。",
+              "profileSummary": "公司致力于以领先技术推动工业数字化智能化发展，致力打造卓越视觉装备平台企业，主要产品包括视觉测量装备、视觉检测装备、视觉制程装备和智能驾驶方案等。同时在智能驾驶领域，提供域控制器、边缘计算产品与解决方案，推动行业进步，改善人们的生活。",
+              "majorProducts": "AI边缘计算控制器、车规级智能驾驶域控制器、视觉测量装备、视觉检测装备、视觉制程装备、天准科技测量自动化系统、天准科技检测自动化系统、天准科技三坐标测量机、天准科技影像测量仪、天准科技组装自动化系统、无人物流车",
+              "revenueComposition": "视觉量检测装备:60.24%;视觉制程装备:29.82%;智能驾驶:9.94%",
+              "revenueSegments": [
+                {
+                  "name": "视觉量检测装备",
+                  "sharePct": 60.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "视觉制程装备",
+                  "sharePct": 29.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能驾驶",
+                  "sharePct": 9.94,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "智能驾驶域控制器(ADCU)",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "PCB光学检测设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "光伏硅片检测分选装备",
+                    "category": "半导体用硅片制造设备"
+                  },
+                  {
+                    "name": "减振器组装自动化生产线",
+                    "category": "自动化装配设备"
+                  },
+                  {
+                    "name": "手机中板组装自动化生产线",
+                    "category": "消费电子生产线"
+                  },
+                  {
+                    "name": "晶圆缺陷检测设备",
+                    "category": "半导体测试设备"
+                  }
+                ],
+                "knownProducts": [
+                  "3C结构件检测装备",
+                  "3D曲面玻璃检测装备",
+                  "手机中板组装自动化生产线",
+                  "影像测量仪",
+                  "零部件三坐标测量仪",
+                  "无人配送车",
+                  "减振器组装自动化生产线",
+                  "机油泵组装自动化生产线"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "天准科技已经参与事件相关业务，但收入基数仍小：智能驾驶占收入的9.94%，说明公司已有业务抓手，但“发布基于地平线征程芯片的机器人域控制器，是智元机器人大脑的第一供应商”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于技术商业化与产品迭代速度能否驱动“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，从而推动业务跨过小规模阶段。在此之前，客户认证、量产良率、订单规模、产品收入占比和毛利率比总收入增速更值得跟踪；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，市场对远期空间的定价可能缺少当期业绩支撑。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "11条低于3星的源记录已按当前关注口径排除。",
+      "2条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

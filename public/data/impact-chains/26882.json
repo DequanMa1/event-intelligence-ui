@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26882",
@@ -9,10 +9,10 @@
     "date": "2026-07-03"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 5,
-    "mappedStockCount": 4,
-    "unmappedStockCount": 1,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 4,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 3,
     "stocks": [
       {
         "sourceRowNumber": 14671,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 11
       },
       {
         "sourceRowNumber": 14672,
@@ -29,8 +29,8 @@
         "stockName": "凡拓数创",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 14673,
@@ -38,8 +38,8 @@
         "stockName": "奥比中光",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 14681,
@@ -47,25 +47,34 @@
         "stockName": "风语筑",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 4
-      },
-      {
-        "sourceRowNumber": 14682,
-        "stockCode": "未上市",
-        "stockName": "北京人形机器人创新中心",
-        "rating": "★★★★",
-        "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 14682,
-        "stockCode": "未上市",
-        "stockName": "北京人形机器人创新中心",
+        "sourceRowNumber": 14672,
+        "stockCode": "301313.SZ",
+        "stockName": "凡拓数创",
         "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 14673,
+        "stockCode": "688322.SH",
+        "stockName": "奥比中光",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 14681,
+        "stockCode": "603466.SH",
+        "stockName": "风语筑",
+        "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
@@ -74,242 +83,14 @@
   },
   "totals": {
     "candidateCoreProductCount": 26,
-    "selectedCoreProductCount": 12,
+    "selectedCoreProductCount": 11,
     "selectedCompanyCoreProductCount": 11,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 20,
-    "downstreamCandidateCount": 91,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 17,
+    "relatedIndustryCandidateCount": 4,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140040730",
-        "name": "PLC控制系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140108738",
-        "name": "人工智能系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140038783",
-        "name": "人机交互系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140159074",
-        "name": "传感机构",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140026125",
-        "name": "光纤通信",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140030900",
-        "name": "单元控制板",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140000553",
-        "name": "单片机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140033283",
-        "name": "压力传感器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140090506",
-        "name": "控制程序",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140008877",
-        "name": "控制算法",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140070212",
-        "name": "数字控制系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140167874",
-        "name": "数字模拟混合控制系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140159077",
-        "name": "料门调节机构",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140163720",
-        "name": "智能远程运维服务",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140175382",
         "name": "仿真-试验融合验证系统",
@@ -335,18 +116,15 @@
           "name": "仿真-试验融合验证系统"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -379,18 +157,15 @@
           "name": "光学仿真软件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -423,18 +198,15 @@
           "name": "声学仿真软件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -467,18 +239,15 @@
           "name": "工业仿真云平台"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -511,18 +280,15 @@
           "name": "数据采集与监视控制系统(SCADA)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -555,18 +321,15 @@
           "name": "流体仿真软件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -599,18 +362,15 @@
           "name": "测控类仿真软件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -643,18 +403,15 @@
           "name": "生产管控一体化平台"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -687,18 +444,15 @@
           "name": "电磁仿真软件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -731,18 +485,15 @@
           "name": "结构仿真软件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -775,284 +526,281 @@
           "name": "高性能仿真模拟计算平台"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688507.SH",
             "stockName": "索辰科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "软件开发",
           "计算机"
         ]
-      },
-      {
-        "code": "1140016969",
-        "name": "控制系统",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:数据采集与监视控制系统(SCADA)",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688507.SH",
-            "stockName": "索辰科技",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 20,
-        "downstreamCount": 91,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140149410",
-        "name": "LED外观检测设备",
-        "anchorCount": 1,
+        "code": "1200001378",
+        "name": "人工智能",
+        "description": "A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
+        "starWeight": 3,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688787.SH",
+            "stockName": "海天瑞声",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "控制系统"
+        "products": [
+          {
+            "code": "1140158479",
+            "name": "图像素材训练服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 图像素材训练服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140158478",
+            "name": "语音素材训练服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 语音素材训练服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140102623",
-        "name": "LED小尺寸显示屏",
-        "anchorCount": 1,
+        "code": "1200001387",
+        "name": "专业应用软件",
+        "description": "专业应用软件指面向特定行业提供深度解决方案的软件。因契合数字经济与国产替代趋势，具备高壁垒、高粘性及稳定现金流，成为A股关注焦点，尤其在工业软件、金融IT等领域潜力巨大。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "688787.SH",
+            "stockName": "海天瑞声",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "控制系统"
+        "products": [
+          {
+            "code": "1140164558",
+            "name": "自然语言训练数据集",
+            "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 专业应用软件 > 数据管理系统 > 自然语言训练数据集",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 7,
+    "mappedStockCount": 3,
+    "unmappedStockCount": 4,
+    "level7ProductCount": 17,
+    "candidateIndustryCount": 4,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 14671,
+        "stockCode": "688507.SH",
+        "stockName": "索辰科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 11
       },
       {
-        "code": "1140095730",
-        "name": "MY1.5系列风力发电机组",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 14672,
+        "stockCode": "301313.SZ",
+        "stockName": "凡拓数创",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140095727",
-        "name": "MY2.0系列风力发电机组",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 14673,
+        "stockCode": "688322.SH",
+        "stockName": "奥比中光",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140095729",
-        "name": "MY3.0系列海上风力发电机组",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 14674,
+        "stockCode": "688787.SH",
+        "stockName": "海天瑞声",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140095726",
-        "name": "MY3.0系列陆上风力发电机组",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 14677,
+        "stockCode": "688400.SH",
+        "stockName": "凌云光",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140095728",
-        "name": "MY5.0系列海上风力发电机组",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 14681,
+        "stockCode": "603466.SH",
+        "stockName": "风语筑",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140079524",
-        "name": "USB安全管理产品(USN)",
-        "anchorCount": 1,
+        "sourceRowNumber": 14683,
+        "stockCode": "002354.SZ",
+        "stockName": "天娱数科",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001378",
+        "name": "人工智能",
+        "description": "A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
+        "starWeight": 3,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688787.SH",
+            "stockName": "海天瑞声",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "控制系统"
+        "products": [
+          {
+            "code": "1140158479",
+            "name": "图像素材训练服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 图像素材训练服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140158478",
+            "name": "语音素材训练服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 语音素材训练服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140112701",
-        "name": "USB安全管理客户端(USN)",
-        "anchorCount": 1,
+        "code": "1200001387",
+        "name": "专业应用软件",
+        "description": "专业应用软件指面向特定行业提供深度解决方案的软件。因契合数字经济与国产替代趋势，具备高壁垒、高粘性及稳定现金流，成为A股关注焦点，尤其在工业软件、金融IT等领域潜力巨大。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "688787.SH",
+            "stockName": "海天瑞声",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "控制系统"
+        "products": [
+          {
+            "code": "1140164558",
+            "name": "自然语言训练数据集",
+            "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 专业应用软件 > 数据管理系统 > 自然语言训练数据集",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140153937",
-        "name": "VOCs气体冷凝回收装置",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140155383",
-        "name": "X射线血液辐照仪",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140031230",
-        "name": "主机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140160093",
-        "name": "交叉带分拣系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140160075",
-        "name": "人机界面检测设备",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140016969"
-        ],
-        "linkedCoreProductNames": [
-          "控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -1067,11 +815,559 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 15,
+    "eligibleSourceRowCount": 7,
+    "totalStockCount": 7,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 2,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 7,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 14671,
+            "stockCode": "688507.SH",
+            "stockName": "索辰科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国产CAE龙头，布局世界模型与物理AI工厂，是物理AI数据与仿真环节的核心标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688507.SH",
+              "companyName": "索辰科技",
+              "companyProfile": "公司以“物理AI”为核心驱动力，基于生成式物理AI技术和实景渲染技术，实现真实场景下的四维时空耦合多物理场设计、仿真、优化和训练，并应用于工业装备的研制和部署，推动工业装备设计、研发和制造的智能化升级。公司推出涵盖物理AI开发及应用平台的全场景解决方案，使开发者和工业用户能够轻松开发和部署物理AI应用。基于物理AI的自动设计训练一体化系统，实现成千上万的设计样本智能衍生、验证与训练；生成式物理AI计算引擎结合自动3D实景渲染技术，高效构建高保真的虚拟验证环境，精准复现和预测装备与环境之间的实时、多维互动，为复杂场景下的装备设计优化提供强大支持；实时环境感知与自动测控所得数据，可在虚拟环境中进行智能分析与仿真验证；实时数据库助力海量数据高效存储与传输。未来，公司将持续探索物理AI技术的落地应用，赋能工业装备的设计与制造，助力客户实现跨越式发展。",
+              "profileSummary": "公司以“物理AI”为核心驱动力，基于生成式物理AI技术和实景渲染技术，实现真实场景下的四维时空耦合多物理场设计、仿真、优化和训练，并应用于工业装备的研制和部署，推动工业装备设计、研发和制造的智能化升级。基于物理AI的自动设计训练一体化系统，实现成千上万的设计样本智能衍生、验证与训练；生成式物理AI计算引擎结合自动3D实景渲染技术，高效构建高保真的虚拟验证环境，精准复现和预测装备与环境之间的实时、多维互动，为复杂场景下的装备设计优化提供…",
+              "majorProducts": "测控类仿真软件、电磁仿真软件、定制化仿真软件开发、多学科仿真软件、仿真产品开发、仿真-试验融合验证系统、仿真数据管理软件、高性能计算平台、工程仿真软件、工程仿真优化系统、工业仿真云平台、光学仿真软件、结构仿真软件、流体仿真软件、热-结构-光学耦合仿真软件、热-结构耦合仿真软件、热-流体-结构耦合仿真软件、声学仿真软件、声学分析软件、试验数据管理软件、需求分析软件、制造系统仿真软件",
+              "revenueComposition": "工程仿真软件:42.49%;仿真产品开发:18.57%;天工-生产管控一体化解决方案:10.69%;开物-工程仿真软件:8.67%;技术服务:6.49%;天工-工业自动化软件产品:6.34%;开物-仿真产品开发:3.81%;其他:1.63%;机加工服务:1.31%",
+              "revenueSegments": [
+                {
+                  "name": "工程仿真软件",
+                  "sharePct": 42.49,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "仿真产品开发",
+                  "sharePct": 18.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "天工-生产管控一体化解决方案",
+                  "sharePct": 10.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "开物-工程仿真软件",
+                  "sharePct": 8.67,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 6.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "天工-工业自动化软件产品",
+                  "sharePct": 6.34,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "开物-仿真产品开发",
+                  "sharePct": 3.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "机加工服务",
+                  "sharePct": 1.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "仿真-试验融合验证系统",
+                    "category": "工业IT"
+                  },
+                  {
+                    "name": "光学仿真软件",
+                    "category": "工业IT"
+                  },
+                  {
+                    "name": "声学仿真软件",
+                    "category": "工业IT"
+                  },
+                  {
+                    "name": "工业仿真云平台",
+                    "category": "工业IT"
+                  },
+                  {
+                    "name": "数据采集与监视控制系统(SCADA)",
+                    "category": "工业IT"
+                  },
+                  {
+                    "name": "流体仿真软件",
+                    "category": "工业IT"
+                  }
+                ],
+                "knownProducts": [
+                  "IT运营维护",
+                  "仿真-试验融合验证系统",
+                  "光学仿真软件",
+                  "声学仿真软件",
+                  "工业仿真云平台",
+                  "数据采集与监视控制系统(SCADA)",
+                  "流体仿真软件",
+                  "测控类仿真软件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "索辰科技已经具备仿真-试验融合验证系统、光学仿真软件、声学仿真软件等业务能力，国产CAE龙头，布局世界模型与物理AI工厂，是物理AI数据与仿真环节的核心标的并非单纯概念映射。当前对应的收入被归入工程仿真软件（42.49%）、开物-工程仿真软件（8.67%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 14672,
+            "stockCode": "301313.SZ",
+            "stockName": "凡拓数创",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "深耕3D数字内容与仿真业务，布局物理AI，与风语筑业务模式相似，是物理AI数据采集与仿真环节的受益者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301313.SZ",
+              "companyName": "凡拓数创",
+              "companyProfile": "公司以数字创意产品及数字一体化解决方案的综合提供商为定位，始终致力于展馆数字化革新。通过结合数字技术与文化创意，公司提供总体设计、3D数字内容制作、软件开发、系统集成等数字展馆一体化服务。公司广泛服务于智慧产城、文化文博、科技教育、主题文旅、品牌企业等多个领域，旨在打造数字展馆标杆，引领数字文化新体验。在技术布局方面，公司持续发力AIGC、AI算法、BI大数据、WEB3D等前沿技术。同时，公司致力于做强做大数字孪生、虚拟人、知识图谱等核心产品，积极探索数智展馆的无限可能，推动行业创新发展。",
+              "profileSummary": "公司以数字创意产品及数字一体化解决方案的综合提供商为定位，始终致力于展馆数字化革新。通过结合数字技术与文化创意，公司提供总体设计、3D数字内容制作、软件开发、系统集成等数字展馆一体化服务。",
+              "majorProducts": "凡拓创意动态数字创意服务、凡拓创意静态数字创意服务、凡拓创意数字展示及系统集成服务、数字孪生FT-E平台、数字一体化综合服务、虚拟数智人",
+              "revenueComposition": "数字展示及系统集成:58.58%;数字孪生及信息化软件:27.74%;3D可视化产品及服务:13.54%;其他业务:0.14%",
+              "revenueSegments": [
+                {
+                  "name": "数字展示及系统集成",
+                  "sharePct": 58.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "数字孪生及信息化软件",
+                  "sharePct": 27.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3D可视化产品及服务",
+                  "sharePct": 13.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "3D图像设计",
+                  "3D影视制作",
+                  "数字场馆",
+                  "具身拓展背包套件",
+                  "数字孪生平台"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "凡拓数创的业务范围能够覆盖深耕3D数字内容与仿真业务，布局物理AI，与风语筑业务模式相似，是物理AI数据采集与仿真环节的受益者所处的产业环节，但当前数字展示及系统集成（58.58%）、数字孪生及信息化软件（27.74%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”完成兑现，并在订单、收入确认、产品结构和毛利率变化上形成持续改善；若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 14673,
+            "stockCode": "688322.SH",
+            "stockName": "奥比中光",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "3D视觉感知技术是物理AI和具身智能的核心硬件，为机器人提供环境感知能力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688322.SH",
+              "companyName": "奥比中光-UW",
+              "companyProfile": "公司是行业领先的机器人视觉及AI视觉科技公司，致力于构建机器人与AI视觉产业中台、打造机器人的“眼睛”。基于自研芯片和全栈式系统技术，公司为机器人、3D扫描、生物识别等行业客户及全球开发者提供高性能的3D视觉传感器及机器人与AI视觉方案，助力新兴行业释放价值、推动传统行业智能化升级。拥有自建生产基地，公司具备百万级量产能力，提供灵活可靠的ODM/OEM服务。公司为全球超过3000家客户与开发者提供“研发+制造”的一站式产品和服务。公司成立于2013年，总部位于深圳，在佛山、上海、西安，美国均设有分支机构。2022年7月在科创板上市，获称“3D视觉第一股”。",
+              "profileSummary": "基于自研芯片和全栈式系统技术，公司为机器人、3D扫描、生物识别等行业客户及全球开发者提供高性能的3D视觉传感器及机器人与AI视觉方案，助力新兴行业释放价值、推动传统行业智能化升级。公司为全球超过3000家客户与开发者提供“研发+制造”的一站式产品和服务。",
+              "majorProducts": "3D视觉传感器、工业级应用设备、消费级应用设备",
+              "revenueComposition": "消费级应用设备:62.05%;3D视觉传感器:30.93%;其他:3.7%;工业级应用设备:2.71%;其他业务:0.61%",
+              "revenueSegments": [
+                {
+                  "name": "消费级应用设备",
+                  "sharePct": 62.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3D视觉传感器",
+                  "sharePct": 30.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业级应用设备",
+                  "sharePct": 2.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "3D体态仪",
+                  "人脸支付终端",
+                  "3D视觉传感器",
+                  "3D体感一体机",
+                  "工业三维测量设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "奥比中光现有业务与3D视觉感知技术是物理AI和具身智能的核心硬件，为机器人提供环境感知能力处于同一产业方向，收入主体为消费级应用设备（62.05%）、3D视觉传感器（30.93%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变技术商业化与产品迭代速度，只有经由“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，业务交集才会转化为业绩增量。客户认证、量产良率、订单规模、产品收入占比和毛利率若逐步增强，相关业务的重要性会提高；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 14681,
+            "stockCode": "603466.SH",
+            "stockName": "风语筑",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "与松应科技成立合资公司风应科技，从数字展示工程商向物理AI应用平台升级。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603466.SH",
+              "companyName": "风语筑",
+              "companyProfile": "公司是A股主板上市公司，中国数字科技应用领域龙头企业。公司致力于数字新媒体技术研发及数字内容生产、分发与管理。依托公司强大的创意、设计和内容制作能力，结合长年积累的CG特效、人机交互、裸眼3D、全息影像、5G云XR、AIGC、大数据可视化等关键技术手段，公司的产品及系统广泛应用于政务服务、城市文化体验、数字展示、文化旅游、广电MCN、新零售体验及数字艺术消费等众多领域。5G时代的到来将促进数字科技的颠覆性变革，公司将以5G“新基建”为战略基石，加强5G后端应用，加大对5G实时云渲染，全息现实，VR、AR、MR，4K/8K超高清视频等数字新媒体技术的投入，强化数字文化IP的开发、打造及运营能力，巩固数字内容的生产制作及场景供给优势，力争成为全球新媒体数字科技的超前引领者及优质数字内容全渠道服务商。公司的未来已来，好玩的时候才刚刚开始。公司创意大楼作为国内数字文化展示行业内首幢复合型设计大楼，拥有近20000m²LOFT办公空间，设计师用简洁流畅的空间设计语言和独特的设计理念，向这里的员工、客户及前来参观的人们传递着公司的核心价值观和服务理念。整体设计秉承了“独栋、创意、数字化”理念，跨界式发展、颠覆式设计，创新打造成集数字科技、创意设计、艺术娱乐等多位一体娱乐性休闲创意设计工场。位于大楼二层的公司数字展示中心是一座集现代高科技声光电技术的多维立体展示馆，馆内精选国际一流、国内领先的展陈技术，如虚拟现实、数字沙盘、5D影院、超长高清无缝触摸屏、非触摸互动投影、互动飞屏、WIND-RENDER云渲染农场等等，多角度体现公司的文化创意与技术革新。",
+              "profileSummary": "依托公司强大的创意、设计和内容制作能力，结合长年积累的CG特效、人机交互、裸眼3D、全息影像、5G云XR、AIGC、大数据可视化等关键技术手段，公司的产品及系统广泛应用于政务服务、城市文化体验、数字展示、文化旅游、广电MCN、新零售体验及数字艺术消费等众多领域。5G时代的到来将促进数字科技的颠覆性变革，公司将以5G“新基建”为战略基石，加强5G后端应用，加大对5G实时云渲染，全息现实，VR、AR、MR，4K/8K超高清视频等数字新媒体…",
+              "majorProducts": "AR/VR、博物馆展示系统、城市馆展示系统、互动体验、会展展示系统、科技馆展示系统、旅游景区展示体验中心展示系统、企业馆展示系统、商业体验馆展示系统、数字沙盘、特效影片、园区馆展示系统、主题展览馆展示系统、综合展览馆展示系统",
+              "revenueComposition": "文化及品牌数字化体验空间:80.36%;城市数字化体验空间:11.31%;数字化产品及服务:8.33%",
+              "revenueSegments": [
+                {
+                  "name": "文化及品牌数字化体验空间",
+                  "sharePct": 80.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "城市数字化体验空间",
+                  "sharePct": 11.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "数字化产品及服务",
+                  "sharePct": 8.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "虚拟数字人",
+                  "商业展览数字视觉服务",
+                  "城市规划展览馆",
+                  "文化展示园"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "风语筑与新闻存在业务方向上的交集：与松应科技成立合资公司风应科技，从数字展示工程商向物理AI应用平台升级；公司当前收入主要来自文化及品牌数字化体验空间（80.36%）、城市数字化体验空间（11.31%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对技术商业化与产品迭代速度的推动只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能进入报表，客户认证、量产良率、订单规模、产品收入占比和毛利率决定这一交集能否升级为实际增量；技术路线变化、良率爬坡缓慢或竞争方案更快成熟是主要失效条件。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 14674,
+            "stockCode": "688787.SH",
+            "stockName": "海天瑞声",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "AI数据服务提供商，数据是物理AI模型训练的基础要素。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688787.SH",
+              "companyName": "海天瑞声",
+              "companyProfile": "公司成立于2005年，是我国最早从事AI训练数据的专业服务商之一，也是目前A股市场唯一一家以训练数据为主业的上市公司。经过20年的发展，公司的数据服务类型已经实现智能语音(语音识别、语音合成等)、计算机视觉、自然语言等多个核心领域全覆盖，可服务于智能驾驶、内容生成、机器人、智慧医疗、智慧教育、智慧金融等22种创新应用场景。公司的产品和服务已获得阿里巴巴、腾讯、百度、科大讯飞、海康威视、字节跳动、微软、亚马逊、三星、中国科学院、清华大学等国内外客户的认可，客户类型覆盖了科技互联网、社交、IoT、智能驾驶、智慧金融等领域的主流企业，教育科研机构以及部分政企机构。近年来，公司已成为具有国际竞争力、领先性的标杆企业，核心技术自主创新能力不断得到行业主管部门的高度认可，先后获得国家专精特新“小巨人”企业、“新一代人工智能产业创新重点任务揭榜优胜单位”、“北京市科学技术进步奖二等奖”等资质荣誉，入选中共中央网络安全和信息化委员会办公室“人工智能企业典型应用案例”、“北京国家人工智能创新应用先导区示范案例”、获评“北京数字经济企业100强”、福布斯中国人工智能科技企业TOP50、《财富》中国科技50强、2024胡润中国人工智能企业50强，充分彰显了公司在基础数据服务行业的创新实力与影响力。当前，公司已驶入快速发展轨道，将继续保持并提升全面竞争力。",
+              "profileSummary": "公司成立于2005年，是我国最早从事AI训练数据的专业服务商之一，也是目前A股市场唯一一家以训练数据为主业的上市公司。经过20年的发展，公司的数据服务类型已经实现智能语音(语音识别、语音合成等)、计算机视觉、自然语言等多个核心领域全覆盖，可服务于智能驾驶、内容生成、机器人、智慧医疗、智慧教育、智慧金融等22种创新应用场景。",
+              "majorProducts": "词典资源数据库、视频资源数据库、数据资源定制服务、数据资源相关的应用服务、图像资源数据库、文本资源数据库、语音合成数据库、语音识别数据库",
+              "revenueComposition": "智能语音:39.88%;计算机视觉:39.22%;自然语言:13.56%;数据资源相关的应用服务:7.33%",
+              "revenueSegments": [
+                {
+                  "name": "智能语音",
+                  "sharePct": 39.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "计算机视觉",
+                  "sharePct": 39.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自然语言",
+                  "sharePct": 13.56,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "数据资源相关的应用服务",
+                  "sharePct": 7.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "图像素材训练服务",
+                    "category": "人工智能"
+                  },
+                  {
+                    "name": "自然语言训练数据集",
+                    "category": "数据管理系统"
+                  },
+                  {
+                    "name": "语音素材训练服务",
+                    "category": "人工智能"
+                  }
+                ],
+                "knownProducts": [
+                  "图像素材训练服务",
+                  "语音素材训练服务",
+                  "自然语言训练数据集"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "海天瑞声已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：自然语言占收入的13.56%。公司在产业链中的位置是：AI数据服务提供商，数据是物理AI模型训练的基础要素，事件能否转化为可确认的经营增量则决定增量大小。只有完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，相关业务的增长才可能改善公司整体盈利。订单、收入确认、产品结构和毛利率变化还需与其他主业表现同时改善；事件关联停留在主题层面，未形成可持续订单或利润贡献会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 14677,
+            "stockCode": "688400.SH",
+            "stockName": "凌云光",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "机器视觉龙头，为虚拟动点代销产品，其技术可用于物理AI的数据采集与感知。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688400.SH",
+              "companyName": "凌云光",
+              "companyProfile": "公司是国内领先的数字内容智能创作工具平台提供商，是机器视觉领域龙头企业凌云光技术股份有限公司设立的全资子公司，其前身为凌云光立体视觉事业部。基于10多年的自主视觉图像技术积累，公司拥有底层核心硬件、算法研发能力及整体系统设计与集成能力，打造了FZMotion运动捕捉、LuStage光场重建、InFision虚拟拍摄系统和智能资产制作、XR虚实融合制播等产品和解决方案，在传媒、娱乐、文旅、教育等行业，为1000+企业与高校科研等客户提供上万套端到端的数字内容智能制作拍摄系统。北京元客方舟科技有限公司是元客视界控股子公司，基于全栈数字内容制作解决方案的能力，通过核心光场重建、运动捕捉和XR虚拟拍摄技术，帮助客户实现业内高质量、高效率的全栈式的超写实数字人、虚拟演播内容制作，服务总台春晚、北京冬奥手语播报数字人、咪咕世界杯数智人、电影《飞向月球》等标杆项目，目前在北京石景山区首钢园与朝阳区西店记忆文创园区设立有约2000平全栈式数字内容制播基地，公司也是北京市高精尖光场共性技术平台的建设运营主体。",
+              "profileSummary": "公司是国内领先的数字内容智能创作工具平台提供商，是机器视觉领域龙头企业凌云光技术股份有限公司设立的全资子公司，其前身为凌云光立体视觉事业部。基于10多年的自主视觉图像技术积累，公司拥有底层核心硬件、算法研发能力及整体系统设计与集成能力，打造了FZMotion运动捕捉、LuStage光场重建、InFision虚拟拍摄系统和智能资产制作、XR虚实融合制播等产品和解决方案，在传媒、娱乐、文旅、教育等行业，为1000+企业与高校科研等客户提供…",
+              "majorProducts": "代理视觉器件、光纤器件与仪器代理产品、机器视觉、科学图像领域可配置视觉系统、可配置视觉系统、立体视觉领域可配置视觉系统、其他制造业可配置视觉系统、视觉器件、消费电子领域智能视觉装备、新型显示领域智能视觉装备、印刷包装智能视觉装备、智慧交通领域可配置视觉系统、智能视觉装备、智能手机组装工艺应用、智能相机、自主的光接入网产品、自主视觉器件",
+              "revenueComposition": "智能视觉装备:40.92%;可配置视觉系统:25.28%;光通信产品:19.43%;视觉器件:13%;服务收入:1.37%",
+              "revenueSegments": [
+                {
+                  "name": "智能视觉装备",
+                  "sharePct": 40.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "可配置视觉系统",
+                  "sharePct": 25.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光通信产品",
+                  "sharePct": 19.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "视觉器件",
+                  "sharePct": 13.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "服务收入",
+                  "sharePct": 1.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "光纤器件代理",
+                  "智能化视觉检测设备",
+                  "机器视觉模块",
+                  "视觉器件代理",
+                  "棱镜相机",
+                  "线阵相机",
+                  "面阵相机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "凌云光与新闻存在业务方向上的交集：机器视觉龙头，为虚拟动点代销产品，其技术可用于物理AI的数据采集与感知；公司当前收入主要来自智能视觉装备（40.92%）、可配置视觉系统（25.28%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对技术商业化与产品迭代速度的推动只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能进入报表，客户认证、量产良率、订单规模、产品收入占比和毛利率决定这一交集能否升级为实际增量；技术路线变化、良率爬坡缓慢或竞争方案更快成熟是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 14683,
+            "stockCode": "002354.SZ",
+            "stockName": "天娱数科",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "布局虚拟数字人与元宇宙，被视为物理AI数据采集与3D仿真平台受益标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002354.SZ",
+              "companyName": "天娱数科",
+              "companyProfile": "公司坚持“数字化、智能化、全球化”发展战略，以天星大模型为技术底座，依托数据流量优势，聚焦智能营销、智慧能源、空间智能等领域，构建了AI营销、AI应用分发、AI售电、空间智能MaaS等业务平台，并同步拓展全球化布局，形成以AI能力为核心的业务架构。公司面向互联网、零售、能源、工业、金融等行业，加快推动人工智能技术与业务场景融合，贯通“基础模型-行业模型-智能体-业务平台”能力链条，持续提升产品化与平台化水平，助力客户降本、提质、增效，推动产业数字化转型与智能化升级。",
+              "profileSummary": "公司坚持“数字化、智能化、全球化”发展战略，以天星大模型为技术底座，依托数据流量优势，聚焦智能营销、智慧能源、空间智能等领域，构建了AI营销、AI应用分发、AI售电、空间智能MaaS等业务平台，并同步拓展全球化布局，形成以AI能力为核心的业务架构。公司面向互联网、零售、能源、工业、金融等行业，加快推动人工智能技术与业务场景融合，贯通“基础模型-行业模型-智能体-业务平台”能力链条，持续提升产品化与平台化水平，助力客户降本、提质、增效…",
+              "majorProducts": "数据流量、网络游戏",
+              "revenueComposition": "数据流量业务:98.67%;数字竞技平台:1.23%;其他:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "数据流量业务",
+                  "sharePct": 98.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "数字竞技平台",
+                  "sharePct": 1.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "移动应用智能分发平台",
+                    "category": "软件分发"
+                  },
+                  {
+                    "name": "空间智能MaaS平台",
+                    "category": "地理信息系统"
+                  },
+                  {
+                    "name": "虚拟数字人",
+                    "category": "传媒配套服务"
+                  }
+                ],
+                "knownProducts": [
+                  "移动应用智能分发平台",
+                  "虚拟数字人",
+                  "手机游戏",
+                  "网页游戏",
+                  "游戏联合运营",
+                  "效果营销服务",
+                  "空间智能MaaS平台"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "天娱数科与新闻之间有明确产品抓手：移动应用智能分发平台、空间智能MaaS平台、虚拟数字人，对应布局虚拟数字人与元宇宙，被视为物理AI数据采集与3D仿真平台受益标的。收入主体目前是数据流量业务（98.67%）、数字竞技平台（1.23%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变事件能否转化为可确认的经营增量预期，随后要经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能进入利润表。订单、收入确认、产品结构和毛利率变化若形成连续改善，相关产品对整体经营的贡献会逐步提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件影响更可能停留在产品布局层面。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "2条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "3只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

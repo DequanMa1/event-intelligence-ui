@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26523",
@@ -9,10 +9,10 @@
     "date": "2026-06-29"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 4,
-    "mappedStockCount": 4,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 6147,
@@ -20,8 +20,8 @@
         "stockName": "飞龙股份",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 9
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 6148,
@@ -29,8 +29,8 @@
         "stockName": "大元泵业",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 10
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 6157,
@@ -39,7 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 18
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 6158,
@@ -48,24 +48,40 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 11
+        "anchorProductCount": 3
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 6147,
+        "stockCode": "002536.SZ",
+        "stockName": "飞龙股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 6148,
+        "stockCode": "603757.SH",
+        "stockName": "大元泵业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 44,
-    "selectedCoreProductCount": 4,
+    "selectedCoreProductCount": 3,
     "selectedCompanyCoreProductCount": 3,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 0,
-    "downstreamCandidateCount": 1,
-    "shownUpstreamCount": 0,
-    "shownDownstreamCount": 1
+    "level7ProductCount": 25,
+    "relatedIndustryCandidateCount": 5,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140216650",
         "name": "冷却液分配单元(CDU)",
@@ -91,23 +107,21 @@
           "name": "冷却液分配单元(CDU)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "300990.SZ",
             "stockName": "同飞股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "301018.SZ",
             "stockName": "申菱环境",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 12,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -140,23 +154,21 @@
           "name": "冷却液分歧管(Manifold)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "300990.SZ",
             "stockName": "同飞股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "301018.SZ",
             "stockName": "申菱环境",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -188,80 +200,446 @@
           "name": "浸没式液冷机柜(TANK)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300990.SZ",
             "stockName": "同飞股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 6,
         "matchedTerms": [
           "液冷机柜"
         ]
-      },
-      {
-        "code": "1140128178",
-        "name": "冷却液分配单元",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:冷却液分配单元(CDU)",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "300990.SZ",
-            "stockName": "同飞股份",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "301018.SZ",
-            "stockName": "申菱环境",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 1,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140128105",
-        "name": "汽车冷却系统电子水泵智能控制器",
-        "anchorCount": 1,
+        "code": "1200000429",
+        "name": "泵",
+        "description": "A股泵行业指研发制造流体输送设备的板块。受关注因其广泛应用于核电、水利及新能源领域，兼具基建刚需与高端制造属性。随着设备更新政策落地及出海加速，具备技术壁垒的龙头企业业绩增长潜力大，成为市场焦点。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140128178"
+        "starWeight": 8,
+        "level7ProductCount": 10,
+        "relevanceScore": 120,
+        "stocks": [
+          {
+            "stockCode": "603757.SH",
+            "stockName": "大元泵业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002536.SZ",
+            "stockName": "飞龙股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "冷却液分配单元"
+        "products": [
+          {
+            "code": "1140033021",
+            "name": "井用潜水泵",
+            "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 泵 > 叶片式泵 > 井用潜水泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603757.SH",
+                "stockName": "大元泵业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140098739",
+            "name": "化工屏蔽泵",
+            "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 泵 > 其他泵 > 化工屏蔽泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603757.SH",
+                "stockName": "大元泵业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140088710",
+            "name": "卧式多级离心泵",
+            "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 泵 > 叶片式泵 > 卧式多级离心泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603757.SH",
+                "stockName": "大元泵业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140033148",
+            "name": "小型潜水泵",
+            "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 泵 > 叶片式泵 > 小型潜水泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603757.SH",
+                "stockName": "大元泵业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200001151",
+        "name": "汽车发动机系统",
+        "description": "汽车发动机系统指内燃机核心部件，涵盖缸体、曲轴等。虽受新能源冲击，但因混动技术普及及存量市场巨大，具备高壁垒与稳定现金流，且涉及高端制造升级，故在A股仍受关注，尤其聚焦于转型混动或出海龙头的企业。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 3,
+        "relevanceScore": 36,
+        "stocks": [
+          {
+            "stockCode": "002536.SZ",
+            "stockName": "飞龙股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140211665",
+            "name": "汽车发动机冷却系统铝合金流量控制阀",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机冷却系统 > 汽车发动机冷却系统铝合金流量控制阀",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002536.SZ",
+                "stockName": "飞龙股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135931",
+            "name": "汽车发动机油泵",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机润滑系统 > 汽车发动机油泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002536.SZ",
+                "stockName": "飞龙股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135903",
+            "name": "汽车电子水泵(EWP)",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机冷却系统 > 汽车电子水泵(EWP)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002536.SZ",
+                "stockName": "飞龙股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 9,
+    "mappedStockCount": 7,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 25,
+    "candidateIndustryCount": 5,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 6139,
+        "stockCode": "002600.SZ",
+        "stockName": "领益智造",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 6140,
+        "stockCode": "002790.SZ",
+        "stockName": "瑞尔特",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 6141,
+        "stockCode": "301128.SZ",
+        "stockName": "强瑞技术",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 6142,
+        "stockCode": "300322.SZ",
+        "stockName": "硕贝德",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 6147,
+        "stockCode": "002536.SZ",
+        "stockName": "飞龙股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 6148,
+        "stockCode": "603757.SH",
+        "stockName": "大元泵业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 10
+      },
+      {
+        "sourceRowNumber": 6156,
+        "stockCode": "002837.SZ",
+        "stockName": "英维克",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 6157,
+        "stockCode": "301018.SZ",
+        "stockName": "申菱环境",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 6158,
+        "stockCode": "300990.SZ",
+        "stockName": "同飞股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000429",
+        "name": "泵",
+        "description": "A股泵行业指研发制造流体输送设备的板块。受关注因其广泛应用于核电、水利及新能源领域，兼具基建刚需与高端制造属性。随着设备更新政策落地及出海加速，具备技术壁垒的龙头企业业绩增长潜力大，成为市场焦点。",
+        "stockCount": 2,
+        "starWeight": 8,
+        "level7ProductCount": 10,
+        "relevanceScore": 120,
+        "stocks": [
+          {
+            "stockCode": "603757.SH",
+            "stockName": "大元泵业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002536.SZ",
+            "stockName": "飞龙股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140033021",
+            "name": "井用潜水泵",
+            "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 泵 > 叶片式泵 > 井用潜水泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603757.SH",
+                "stockName": "大元泵业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140098739",
+            "name": "化工屏蔽泵",
+            "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 泵 > 其他泵 > 化工屏蔽泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603757.SH",
+                "stockName": "大元泵业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140088710",
+            "name": "卧式多级离心泵",
+            "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 泵 > 叶片式泵 > 卧式多级离心泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603757.SH",
+                "stockName": "大元泵业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140033148",
+            "name": "小型潜水泵",
+            "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 泵 > 叶片式泵 > 小型潜水泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603757.SH",
+                "stockName": "大元泵业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001151",
+        "name": "汽车发动机系统",
+        "description": "汽车发动机系统指内燃机核心部件，涵盖缸体、曲轴等。虽受新能源冲击，但因混动技术普及及存量市场巨大，具备高壁垒与稳定现金流，且涉及高端制造升级，故在A股仍受关注，尤其聚焦于转型混动或出海龙头的企业。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 3,
+        "relevanceScore": 36,
+        "stocks": [
+          {
+            "stockCode": "002536.SZ",
+            "stockName": "飞龙股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140211665",
+            "name": "汽车发动机冷却系统铝合金流量控制阀",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机冷却系统 > 汽车发动机冷却系统铝合金流量控制阀",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002536.SZ",
+                "stockName": "飞龙股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135931",
+            "name": "汽车发动机油泵",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机润滑系统 > 汽车发动机油泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002536.SZ",
+                "stockName": "飞龙股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135903",
+            "name": "汽车电子水泵(EWP)",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机冷却系统 > 汽车电子水泵(EWP)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002536.SZ",
+                "stockName": "飞龙股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -276,10 +654,762 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 29,
+    "eligibleSourceRowCount": 9,
+    "totalStockCount": 9,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 20,
+    "excludedNonAShareCount": 0,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 9,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 6139,
+            "stockCode": "002600.SZ",
+            "stockName": "领益智造",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "子公司利敏达是英伟达液冷直接供应商，为GB200/Rubin系列供应冷板、快接头等核心组件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002600.SZ",
+              "companyName": "领益智造",
+              "companyProfile": "公司成立于2006年，2018年登陆A股资本市场。作为值得信赖的AI终端硬件核心供应商，公司在全球范围内为客户提供精密功能件、结构件、模组等一站式智能制造服务及解决方案。公司精密功能件产品的市场份额及出货量已连续多年稳居全球消费电子市场领先地位，在质量、制程、技术等多个方面设定了行业标准，成为全球客户值得信赖的“功能件专家”，并进一步渗透机器人、新能源汽车、光伏储能等新兴市场。近年来，公司综合实力持续提升，从单一加工制程到多种加工制程，从产品制造专家到解决方案专家，成为值得信赖的全球AI终端硬件制造平台。公司连续8年入选《财富》中国500强，并多次入选《财富》中国上市公司500强、中国民营企业500强、中国制造业民营企业500强等榜单。2023-2024年，公司MSCI-ESG评级连续2年为“A”。2024年公司实现营业收入442.11亿元，同比增长29.56%。其中，AI终端业务全年实现收入约407.31亿元，同比增长32.75%；汽车及低空经济业务实现收入21.17亿元，同比增长52.90%；公司其它业务实现收入约13.63亿元，其中公司清洁能源业务收入11.71亿元。截至2024年底，公司累计获得各项专利2178项，研发人员6367人。2024年公司研发投入19.78亿，较2023年同比增长9.10%。未来，公司将继续坚持创新引领和国际化发展的理念，聚焦主业并向上游延伸，全面发力机器人、服务器散热、AI眼镜、低空经济等第N增长曲线；拓展海外市场，提升海外盈利能力；深挖国内需求，进一步提升企业护城河；着力打造集“精益化、数字化、自动化、绿色化”于一体的智能制造平台，持续增强核心竞争力。",
+              "profileSummary": "作为值得信赖的AI终端硬件核心供应商，公司在全球范围内为客户提供精密功能件、结构件、模组等一站式智能制造服务及解决方案。公司精密功能件产品的市场份额及出货量已连续多年稳居全球消费电子市场领先地位，在质量、制程、技术等多个方面设定了行业标准，成为全球客户值得信赖的“功能件专家”，并进一步渗透机器人、新能源汽车、光伏储能等新兴市场。",
+              "majorProducts": "2.2kW 储能 PCS、600W 功率优化器、700W 微型光伏逆变器、CSV 减速器、hinge-无线耳机配件、Mesh产品、Mini LED 背光模组、MnZn软磁铁氧体材料、OCUG-室外微波合分路单元、PD3.1 140W+小型化 GaN 充电器、XR 无线充电、钣金滤波器、笔记本电脑触控模组、便携式户外储能电源、玻纤结构外观件产品、传感器精密金属件、导光板背光模组、导热类产品、电池铜/铝转接片、电磁屏蔽材料、动力电池顶盖、动力电池铝壳、多频 OMT组件、防水产品方案、复合板材手机电池盖、工业控制器一体化解决方案、工业用 IoT Sensor、光伏无线网络通讯模块、硅胶类产品、硅胶组件方案、键盘反光模组类产品、键盘模组、键盘组件方案、结构件 3D 打印方案、金属小件类产品----卡托类、全 CNC 笔电外壳、热管理产品方案、散热产品-不锈钢 VC、散热产品-钛合金 VC、射频腔体滤波器、声学类产品、手机按键-静音键、手机金属中框、手机摄像头支架、钛合金结构件 MIM方案、碳纤维产品-Hinge 零件、碳纤维桨叶产品、陶瓷纤维产品、微波定频双工、微波介质陶瓷、微波可调谐双工器、无线充电器外壳、智能耳机耳套、智能手机保护套",
+              "revenueComposition": "AI终端:87.1%;其他:7.16%;汽车及低空经济:5.74%",
+              "revenueSegments": [
+                {
+                  "name": "AI终端",
+                  "sharePct": 87.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 7.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车及低空经济",
+                  "sharePct": 5.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "无人机碳纤维桨叶",
+                  "纳米晶材料",
+                  "软磁铁氧体",
+                  "汽车传动轴",
+                  "汽车驱动轴",
+                  "汽车转向轴",
+                  "电磁屏蔽吸波片",
+                  "VR眼罩"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "领益智造的事件主线是：子公司利敏达是英伟达液冷直接供应商，为GB200/Rubin系列供应冷板、快接头等核心组件，但当前收入结构尚未体现其重要性，收入重心仍是AI终端（87.1%）、其他（7.16%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，并在订单、收入确认、产品结构和毛利率变化上留下可核验痕迹。若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 6156,
+            "stockCode": "002837.SZ",
+            "stockName": "英维克",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "A股液冷龙头，在谷歌CDU环节卡位领先，并已获得英伟达Rubin系列CDU订单。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002837.SZ",
+              "companyName": "英维克",
+              "companyProfile": "深圳市英维克科技股份有限公司成立于2005年，总部位于深圳，是技术领先的精密温控节能解决方案与产品提供商，高新技术企业，2016年12月29日登陆深交所。英维克已构建起多领域业务布局，产品及服务涵盖数据中心温控、储能温控、全链条液冷及电子散热、机柜空调、数据中心集成、冷链温控、新能源客车及轨交空调、室内空气环境控制等领域，广泛应用于数据中心、储能电站、通信、智能电网，冷链运输、新能源车、轨道交通，智慧教育、家居、医疗等行业。",
+              "profileSummary": "深圳市英维克科技股份有限公司成立于2005年，总部位于深圳，是技术领先的精密温控节能解决方案与产品提供商，高新技术企业，2016年12月29日登陆深交所。英维克已构建起多领域业务布局，产品及服务涵盖数据中心温控、储能温控、全链条液冷及电子散热、机柜空调、数据中心集成、冷链温控、新能源客车及轨交空调、室内空气环境控制等领域，广泛应用于数据中心、储能电站、通信、智能电网，冷链运输、新能源车、轨道交通，智慧教育、家居、医疗等行业。",
+              "majorProducts": "轨道交通列车空调及服务、机房温控节能设备、机柜温控节能产品、客车空调、室外机柜温控节能设备、新能源车用空调",
+              "revenueComposition": "机房温控节能设备:56.83%;户外机柜温控节能设备:32.59%;其他:8.35%;客车空调:1.49%;轨道交通列车空调及服务:0.74%",
+              "revenueSegments": [
+                {
+                  "name": "机房温控节能设备",
+                  "sharePct": 56.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "户外机柜温控节能设备",
+                  "sharePct": 32.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "客车空调",
+                  "sharePct": 1.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "轨道交通列车空调及服务",
+                  "sharePct": 0.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "冷却应用快速接头(UQD)",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "冷却液分配单元(CDU)",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "冷板式液冷机柜",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "浸没式液冷机柜(TANK)",
+                    "category": "IDC硬件产品"
+                  }
+                ],
+                "knownProducts": [
+                  "机房空调",
+                  "机柜空调",
+                  "轨道车辆空调",
+                  "电池液冷板",
+                  "新能源客车空调",
+                  "VC均热板",
+                  "储能机柜",
+                  "储能液冷机组"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "英维克与事件存在真实业务交集：公司已有冷却应用快速接头(UQD)、冷却液分配单元(CDU)、冷板式液冷机柜，与A股液冷龙头，在谷歌CDU环节卡位领先，并已获得英伟达Rubin系列CDU订单所处的产业环节一致。机房温控节能设备（56.83%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响商业化进度和订单兑现，只有经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”，才会形成可确认的收入和利润增量。客户认证、新增订单、交付节奏、相关业务收入和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 6147,
+            "stockCode": "002536.SZ",
+            "stockName": "飞龙股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "电子水泵领域口碑最优标的，已对谷歌链、英伟达链条台系CDU厂商实现批量/小批量供应。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002536.SZ",
+              "companyName": "飞龙股份",
+              "companyProfile": "公司是一家在国内A股上市的国家技术创新示范企业，是汽车热管理领域的卓越领航者。公司已构建全场景产品矩阵，拥有传统机械水泵类；排气歧管类；涡轮增压器壳体类；电子产品类；冷却液温控阀、执行器类；热管理集成模块类；机械油泵类；支架、飞轮壳等八大类核心产品，覆盖传统燃油车、新能源车等新兴领域。公司技术研发实力雄厚，依托国家级技术中心、9家高新技术子公司及新能源研发双中心，形成电子水泵(覆盖12V-1500V全电压)、温控阀等专利技术体系。品质获国际认可，通过IATF16949、大众VDA6.3、通用BIQS、福特Q1等严苛认证。公司连续10年位居世界首位，新能源汽车渗透率超40%，标志着行业已进入绿色转型加速期。在这一浪潮中，公司作为扎根汽车零部件制造60余年的领军企业，凭借深厚技术积淀与前瞻布局，持续为全球客户提供高效、可靠的热管理解决方案，成为推动行业技术升级的重要力量。公司聚焦热管理领域，形成覆盖传统汽车、新能源、氢能及民用场景的全方位产品体系。",
+              "profileSummary": "在这一浪潮中，公司作为扎根汽车零部件制造60余年的领军企业，凭借深厚技术积淀与前瞻布局，持续为全球客户提供高效、可靠的热管理解决方案，成为推动行业技术升级的重要力量。公司聚焦热管理领域，形成覆盖传统汽车、新能源、氢能及民用场景的全方位产品体系。",
+              "majorProducts": "大流量多通阀、电动车水阀、电动开关水泵、电子机油泵、电子水泵系列产品、电子真空泵、电子执行器、发动机电子水泵、飞轮壳、机械水泵、机油泵、绝缘屏蔽电子水泵、密封孔盖、排气歧管、燃料电池热管理控制阀、热管理多通阀、热管理控制阀、热管理系统集成、三电冷却电子水泵、温控阀系列产品、涡轮增压器壳体、油位计总成、域控制器、支架",
+              "revenueComposition": "发动机热管理节能减排部件:46.35%;发动机热管理重要部件:36.56%;新能源、氢燃料电池和5G工业液冷及光伏系统冷却部件与模块:14.81%;非发动机其他部件:1.87%;其他业务:0.4%",
+              "revenueSegments": [
+                {
+                  "name": "发动机热管理节能减排部件",
+                  "sharePct": 46.35,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "发动机热管理重要部件",
+                  "sharePct": 36.56,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源、氢燃料电池和5G工业液冷及光伏系统冷却部件与模块",
+                  "sharePct": 14.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "非发动机其他部件",
+                  "sharePct": 1.87,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "汽车发动机冷却系统铝合金流量控制阀",
+                    "category": "汽车发动机冷却系统"
+                  },
+                  {
+                    "name": "汽车发动机机械水泵",
+                    "category": "其他泵"
+                  },
+                  {
+                    "name": "汽车发动机油泵",
+                    "category": "汽车发动机润滑系统"
+                  },
+                  {
+                    "name": "汽车电子水泵(EWP)",
+                    "category": "汽车发动机冷却系统"
+                  },
+                  {
+                    "name": "液冷泵",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "液冷温控阀",
+                    "category": "IDC硬件产品"
+                  }
+                ],
+                "knownProducts": [
+                  "汽车发动机机械水泵",
+                  "汽车发动机冷却系统铝合金流量控制阀",
+                  "汽车电子水泵(EWP)",
+                  "汽车飞轮壳体",
+                  "汽车发动机油泵",
+                  "汽车发动机排气歧管",
+                  "涡轮增压器涡轮壳",
+                  "液冷泵"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "飞龙股份的发动机热管理节能减排部件（46.35%）、发动机热管理重要部件（36.56%）覆盖范围较宽，其中能够承载汽车发动机冷却系统铝合金流量控制阀、汽车发动机机械水泵、汽车发动机油泵，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：电子水泵领域口碑最优标的，已对谷歌链、英伟达链条台系CDU厂商实现批量/小批量供应。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 6148,
+            "stockCode": "603757.SH",
+            "stockName": "大元泵业",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内少数可参与液冷电子屏蔽泵的上市公司，已获谷歌链订单并与英伟达链头部CDU厂商对接。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603757.SH",
+              "companyName": "大元泵业",
+              "companyProfile": "公司为上海证券交易所主板上市公司，是中国水泵行业标准起草单位之一、于2021年入选国家专精特新小巨人企业，也是省级高新技术企业，曾获得中国驰名商标、省级企业技术中心、浙江省消费者信得过单位、温岭市十强工业企业、温岭市二十强工业企业、温岭市纳税大户等荣誉，多款产品获浙江制造认证，多款技术项目获得全国流通装备技术创新一等奖，连续第15年获得浙江省AAA级“守合同重信用”企业荣誉称号。公司主要从事各类泵的研发、生产、销售及提供相关服务，是拥有数十年品牌历史的全球知名品牌民用水泵提供商，同时也是国内屏蔽泵行业的高新技术企业及领军企业。报告期内，公司主营业务未发生变化。从应用场景及使用对象进行区分，公司产品主要分三大业务类型：1、民用类产品，主要包括农泵、家用屏蔽泵业务，主要应用在农林畜牧、家庭场景下的水循环(含家用电器配套)等相关民用领域。2、商用类产品，主要包括立卧式多级离心泵、液冷泵等业务，主要应用在新能源(氢能源)汽车、风电、储能、数据中心、企业生产与居民生活、城市与乡村建设、环境保护与水务管理等商用领域。3、工业类产品，主要包括工业用泵业务，主要应用在化工、制冷、制氢、半导体与电子工业、核电、激光、信息基础设施、航天工业、船舰制造等工业领域。",
+              "profileSummary": "公司主要从事各类泵的研发、生产、销售及提供相关服务，是拥有数十年品牌历史的全球知名品牌民用水泵提供商，同时也是国内屏蔽泵行业的高新技术企业及领军企业。从应用场景及使用对象进行区分，公司产品主要分三大业务类型：1、民用类产品，主要包括农泵、家用屏蔽泵业务，主要应用在农林畜牧、家庭场景下的水循环(含家用电器配套)等相关民用领域。",
+              "majorProducts": "GPD壁挂炉用屏蔽泵、GPD单相管道屏蔽泵、GP冷热水管道屏蔽泵、HW制冷用屏蔽泵、化工屏蔽泵、井用潜水电泵、空调机用屏蔽泵（NP系类）、喷射自吸泵、污水泵、小型潜水电泵、旋涡式自吸泵",
+              "revenueComposition": "民用类:70.46%;商用类:12.83%;工业类:11.64%;配件:2.74%;其他业务:2.33%",
+              "revenueSegments": [
+                {
+                  "name": "民用类",
+                  "sharePct": 70.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "商用类",
+                  "sharePct": 12.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业类",
+                  "sharePct": 11.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配件",
+                  "sharePct": 2.74,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "井用潜水泵",
+                    "category": "叶片式泵"
+                  },
+                  {
+                    "name": "化工屏蔽泵",
+                    "category": "其他泵"
+                  },
+                  {
+                    "name": "卧式多级离心泵",
+                    "category": "叶片式泵"
+                  },
+                  {
+                    "name": "小型潜水泵",
+                    "category": "叶片式泵"
+                  },
+                  {
+                    "name": "水泵配件",
+                    "category": "泵零件"
+                  },
+                  {
+                    "name": "液冷泵",
+                    "category": "IDC硬件产品"
+                  }
+                ],
+                "knownProducts": [
+                  "化工屏蔽泵",
+                  "空调制冷屏蔽泵",
+                  "陆上泵",
+                  "井用潜水泵",
+                  "卧式多级离心泵",
+                  "小型潜水泵",
+                  "立式多级离心泵",
+                  "热水循环屏蔽泵"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "大元泵业的配件（2.74%）覆盖范围较宽，其中能够承载井用潜水泵、化工屏蔽泵、卧式多级离心泵，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国内少数可参与液冷电子屏蔽泵的上市公司，已获谷歌链订单并与英伟达链头部CDU厂商对接。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 6157,
+            "stockCode": "301018.SZ",
+            "stockName": "申菱环境",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "在ASIC链条中已拿到CDU订单，海外客户拓展顺利，谷歌CDU导入进度超预期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301018.SZ",
+              "companyName": "申菱环境",
+              "companyProfile": "公司以人工环境调节、污染治理、能源利用为服务方向，致力于为数据服务产业环境、工业工艺产研环境、专业特种应用环境、公共建筑室内环境等应用场景提供人工环境调控整体解决方案的现代化企业。公司主营业务围绕专用性空调为代表的空气环境调节设备开展，集研发设计、生产制造、营销服务、工程安装、运营维护于一体，是目前国内专用性空调领域规模较大、技术先进、产品齐全的主要企业之一。公司提供之产品与服务涉及行业较多，细分领域技术要求较高，潜在市场广大。下游应用场景所属行业包括通信、信息技术、电力、化工、交通、能源、军工与航天等，涵盖多种对使用环境有特殊要求的应用场景，并服务于“新基建”中5G基建、特高压、城际高速铁路和城际轨道交通、大数据中心等多个板块。公司拥有超高能效、环保绿色工程、智能控制、极端环境保障、防爆防腐、抗震抗冲击六大核心技术体系，整体技术水平先进，其中在水电、轨道交通、信息通信、核电领域的技术达到了国际领先或国际先进水平。",
+              "profileSummary": "公司主营业务围绕专用性空调为代表的空气环境调节设备开展，集研发设计、生产制造、营销服务、工程安装、运营维护于一体，是目前国内专用性空调领域规模较大、技术先进、产品齐全的主要企业之一。公司提供之产品与服务涉及行业较多，细分领域技术要求较高，潜在市场广大。",
+              "majorProducts": "VOCs治理特种设备、除湿机、低露点除湿机、飞机地面空调、核电抗震型风冷冷水机、恒温恒湿空调、机房专用空调、洁净空调、冷热水机组、污泥低温干化设备等环境调控设备、屋顶式空调、一体化蒸发冷却式冷水机组、专用性空调、组合式空气处理机",
+              "revenueComposition": "设备:77.66%;解决方案及服务:21.97%;其他业务:0.37%",
+              "revenueSegments": [
+                {
+                  "name": "设备",
+                  "sharePct": 77.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "解决方案及服务",
+                  "sharePct": 21.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "冷却应用快速接头(UQD)",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "冷却液分配单元(CDU)",
+                    "category": "IDC硬件产品"
+                  }
+                ],
+                "knownProducts": [
+                  "低露点除湿机",
+                  "除湿机",
+                  "污泥低温干化机",
+                  "VOCs气体冷凝回收装置",
+                  "涡旋式冷水机组",
+                  "螺杆式冷水机组",
+                  "风冷模块式冷热水机组",
+                  "屋顶式空调"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "申菱环境与新闻之间有明确产品抓手：冷却应用快速接头(UQD)、冷却液分配单元(CDU)，对应在ASIC链条中已拿到CDU订单，海外客户拓展顺利，谷歌CDU导入进度超预期。收入主体目前是设备（77.66%）、解决方案及服务（21.97%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变商业化进度和订单兑现预期，随后要经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才能进入利润表。客户认证、新增订单、交付节奏、相关业务收入和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若客户验证或交付节奏低于预期，订单停留在小批量阶段，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 6158,
+            "stockCode": "300990.SZ",
+            "stockName": "同飞股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "作为台达CDU的唯一代工厂，将受益于台达在Rubin时代份额的提升，并已联合开发谷歌3兆瓦CDU。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300990.SZ",
+              "companyName": "同飞股份",
+              "companyProfile": "公司主营业务为工业制冷设备的研发、生产和销售。公司自成立以来，一直致力于工业制冷设备的研发。公司目前已主要形成了液体恒温设备、电气箱恒温装置、纯水冷却单元和特种换热器四大类产品，并成为目前以数控装备、电力电子装置制冷为核心应用领域的工业制冷解决方案服务商。公司生产的产品主要包括液体恒温设备、电气箱恒温装置、纯水冷却单元和特种换热器等四大类，上述产品应用涵盖多个工业制冷领域。液体恒温设备主要应用于数控装备(包括数控机床、激光设备等)，电气箱恒温装置主要应用于数控装备电气控制柜、激光器柜体、电力电子装置的电气控制箱制冷，纯水冷却单元主要应用于电力电子装置，特种换热器则主要应用于工业洗涤设备，相对于同行业竞争对手通常将业务定位于某一个应用市场而言，公司下游覆盖面较广。",
+              "profileSummary": "公司主营业务为工业制冷设备的研发、生产和销售。公司目前已主要形成了液体恒温设备、电气箱恒温装置、纯水冷却单元和特种换热器四大类产品，并成为目前以数控装备、电力电子装置制冷为核心应用领域的工业制冷解决方案服务商。",
+              "majorProducts": "纯水冷却单元、电气箱恒温装置、特种换热器、液体恒温设备",
+              "revenueComposition": "液体恒温设备:70.93%;电气箱恒温装置:12.74%;纯水冷却单元:8.06%;其他:5.07%;特种换热器:3.2%",
+              "revenueSegments": [
+                {
+                  "name": "液体恒温设备",
+                  "sharePct": 70.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电气箱恒温装置",
+                  "sharePct": 12.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "纯水冷却单元",
+                  "sharePct": 8.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 5.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特种换热器",
+                  "sharePct": 3.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "冷却液分配单元(CDU)",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "浸没式液冷机柜(TANK)",
+                    "category": "IDC硬件产品"
+                  }
+                ],
+                "knownProducts": [
+                  "电气箱温湿度调节机",
+                  "集装箱冷站",
+                  "机房空调",
+                  "翅片管式换热器",
+                  "数控机床冷却机",
+                  "激光水冷却机",
+                  "电力电子装置用纯水冷却单元",
+                  "电气箱换热器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "同飞股份拥有冷却液分配单元(CDU)、浸没式液冷机柜(TANK)，其产业链位置与作为台达CDU的唯一代工厂，将受益于台达在Rubin时代份额的提升，并已联合开发谷歌3兆瓦CDU一致；当前的液体恒温设备（70.93%）、电气箱恒温装置（12.74%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由事件能否转化为可确认的经营增量决定，并需完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。只有订单、收入确认、产品结构和毛利率变化持续改善，产品能力才会转化为公司层面的收入和盈利提升；事件关联停留在主题层面，未形成可持续订单或利润贡献则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 6140,
+            "stockCode": "002790.SZ",
+            "stockName": "瑞尔特",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "子公司华研精密的液冷快接头（QD）产品切入英伟达供应链，为Rubin机柜提供核心连接部件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002790.SZ",
+              "companyName": "瑞尔特",
+              "companyProfile": "公司就带着使命感，致力成为全球领先的卫浴空间和家庭水系统解决方案提供商。公司主要从事生产、研发、销售卫浴空间和家庭水系统相关解决方案。目前，公司产品主要包括：卫浴冲水系统产品(节水型冲水组件、静音缓降盖板、挂式水箱等)，智能卫浴产品(一体式智能坐便器、智能坐便盖等)，同层排水系统产品(隐藏式水箱、卫浴管道等)，同时卫浴适老产品解决方案、卫浴空间智慧互联解决方案和卫浴集成式整体解决方案的也是公司产品体系的组成部分。成立至今，公司卫浴冲水系统产品遍及全世界八十多个国家和地区，携手国内外中高端卫浴品牌客户一起为全球水资源的节约做出了巨大的贡献。目前卫浴行业的新趋势将朝着智能、健康、关爱、卫浴空间美学的方向发展。经过多年的研发投入和产品布局，瑞尔特已形成包括以节水型冲水组件为核心的卫浴冲水系统产品解决方案、以智能坐便器为核心的智能卫浴产品解决方案以及同层排水系统产品解决方案、卫浴适老产品解决方案、卫浴空间智慧互联解决方案和卫浴集成式整体解决方案的产品体系。瑞尔特也进阶成为卫浴行业中为数不多拥有较完整的卫浴空间和家庭水系统解决方案的卓越提供商。",
+              "profileSummary": "目前，公司产品主要包括：卫浴冲水系统产品(节水型冲水组件、静音缓降盖板、挂式水箱等)，智能卫浴产品(一体式智能坐便器、智能坐便盖等)，同层排水系统产品(隐藏式水箱、卫浴管道等)，同时卫浴适老产品解决方案、卫浴空间智慧互联解决方案和卫浴集成式整体解决方案的也是公司产品体系的组成部分。经过多年的研发投入和产品布局，瑞尔特已形成包括以节水型冲水组件为核心的卫浴冲水系统产品解决方案、以智能坐便器为核心的智能卫浴产品解决方案以及同层排水系统产品…",
+              "majorProducts": "挂式水箱、节水型冲水组件、静音缓降盖板、升降坐便辅助器、卫浴管道、无障碍扶手、无障碍智能卫浴升降系统、一体式智能坐便器、隐藏式水箱、智能盖板、智能花洒、智能镜柜、智能坐便盖",
+              "revenueComposition": "智能座便器及盖板:54.94%;水箱及配件:29.51%;同层排水系统产品:9.96%;其他:5.59%",
+              "revenueSegments": [
+                {
+                  "name": "智能座便器及盖板",
+                  "sharePct": 54.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "水箱及配件",
+                  "sharePct": 29.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "同层排水系统产品",
+                  "sharePct": 9.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 5.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "一体式智能坐便器",
+                  "坐便器挂式水箱",
+                  "坐便器节水型冲水组件",
+                  "坐便器隐藏式水箱",
+                  "坐便器静音缓降盖板",
+                  "智能坐便盖"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "瑞尔特目前更依赖智能座便器及盖板（54.94%）、水箱及配件（29.51%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：子公司华研精密的液冷快接头（QD）产品切入英伟达供应链，为Rubin机柜提供核心连接部件，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变事件能否转化为可确认的经营增量；公司的产业链位置只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能转化为收入。现阶段可以用订单、收入确认、产品结构和毛利率变化判断预期差方向；若事件关联停留在主题层面，未形成可持续订单或利润贡献，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 6141,
+            "stockCode": "301128.SZ",
+            "stockName": "强瑞技术",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "为北美AI龙头企业供应液冷服务器组装线体，并为Rubin服务器提供inner manifold中央分水器产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301128.SZ",
+              "companyName": "强瑞技术",
+              "companyProfile": "公司主要从事工装和检测用治具及设备的研发、设计、生产和销售，致力于为客户提供实现自动化生产、提高生产效率和良品率的治具及设备产品。公司自成立之日起一直专注于手机等移动终端电子产品工装和检测用治具、设备的研发、设计、生产和销售，经过多年的积累与发展，公司已成为国内智能手机组装和检测治具领域的主要企业之一，获得了市场和客户的认可，在业内具有一定的知名度。",
+              "profileSummary": "公司主要从事工装和检测用治具及设备的研发、设计、生产和销售，致力于为客户提供实现自动化生产、提高生产效率和良品率的治具及设备产品。公司自成立之日起一直专注于手机等移动终端电子产品工装和检测用治具、设备的研发、设计、生产和销售，经过多年的积累与发展，公司已成为国内智能手机组装和检测治具领域的主要企业之一，获得了市场和客户的认可，在业内具有一定的知名度。",
+              "majorProducts": "工装治具、检测治具、设备产品、治具产品",
+              "revenueComposition": "治具:37.81%;设备:31.82%;散热器:15.59%;零部件及其他:9.14%;电机:5.64%",
+              "revenueSegments": [
+                {
+                  "name": "治具",
+                  "sharePct": 37.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备",
+                  "sharePct": 31.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "散热器",
+                  "sharePct": 15.59,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "零部件及其他",
+                  "sharePct": 9.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电机",
+                  "sharePct": 5.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器散热器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "冷却液分歧管(Manifold)",
+                    "category": "IDC硬件产品"
+                  }
+                ],
+                "knownProducts": [
+                  "3C测试治具",
+                  "智能手机工装治具",
+                  "智能手机自动化装配设备",
+                  "全自动化多功能3C测试设备",
+                  "微型无刷电机",
+                  "AI服务器散热器",
+                  "基站散热器",
+                  "光模块散热器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对强瑞技术而言，为北美AI龙头企业供应液冷服务器组装线体，并为Rubin服务器提供inner manifold中央分水器产品并非纯概念映射，因为散热器占收入的15.59%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是事件能否转化为可确认的经营增量，传导效率取决于“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由订单、收入确认、产品结构和毛利率变化来区分；若事件关联停留在主题层面，未形成可持续订单或利润贡献，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 6142,
+            "stockCode": "300322.SZ",
+            "stockName": "硕贝德",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为英伟达Rubin平台提供液冷busbar产品，并向台湾客户送样服务器液冷板产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300322.SZ",
+              "companyName": "硕贝德",
+              "companyProfile": "公司创立于2004年，以深厚的技术积累构建覆盖天线及射频模组、射频精密结构件、散热器件及模组、线束及连接件、传感器智能模组的一体化产品体系，深度赋能消费电子与通信、汽车、新能源、AI终端与机器人、AI数据中心等前沿领域，持续为全球产业升级注入创新动能。",
+              "profileSummary": "公司创立于2004年，以深厚的技术积累构建覆盖天线及射频模组、射频精密结构件、散热器件及模组、线束及连接件、传感器智能模组的一体化产品体系，深度赋能消费电子与通信、汽车、新能源、AI终端与机器人、AI数据中心等前沿领域，持续为全球产业升级注入创新动能。",
+              "majorProducts": "散热器件模组、天线及天线模组、新能源部品业务及线束、指纹识别模组",
+              "revenueComposition": "天线及模组:51.71%;线束及新能源结构件:25.05%;传感器智能模组:12.04%;散热组件:10.42%;其他产品:0.78%",
+              "revenueSegments": [
+                {
+                  "name": "天线及模组",
+                  "sharePct": 51.71,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "线束及新能源结构件",
+                  "sharePct": 25.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "传感器智能模组",
+                  "sharePct": 12.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "散热组件",
+                  "sharePct": 10.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 0.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "VC均热板",
+                    "category": "散热模块"
+                  },
+                  {
+                    "name": "屏下光学指纹识别模组",
+                    "category": "指纹模组"
+                  },
+                  {
+                    "name": "热管",
+                    "category": "散热模块"
+                  },
+                  {
+                    "name": "电容式指纹识别模组",
+                    "category": "指纹模组"
+                  }
+                ],
+                "knownProducts": [
+                  "铜铝排",
+                  "新能源汽车铝合金电池包端板",
+                  "电池液冷板",
+                  "胎压传感器",
+                  "新能源汽车PDU控制盒线束",
+                  "屏下光学指纹识别模组",
+                  "电容式指纹识别模组",
+                  "VC均热板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "硕贝德已经具备VC均热板、屏下光学指纹识别模组、热管等业务能力，为英伟达Rubin平台提供液冷busbar产品，并向台湾客户送样服务器液冷板产品并非单纯概念映射。当前对应的收入被归入天线及模组（51.71%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "20条低于3星的源记录已按当前关注口径排除。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
-  "status": "ready",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
+  "status": "no_company_product_mapping",
   "event": {
     "mainId": "27210",
     "uid": "0RB7WE8YQ15G0",
@@ -9,10 +9,10 @@
     "date": "2026-07-08"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 7,
-    "mappedStockCount": 6,
-    "unmappedStockCount": 1,
+    "mappedStockCount": 0,
+    "unmappedStockCount": 7,
     "stocks": [
       {
         "sourceRowNumber": 22370,
@@ -20,8 +20,8 @@
         "stockName": "国泰海通",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 13
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 22371,
@@ -29,8 +29,8 @@
         "stockName": "中金公司",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 12
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 22372,
@@ -38,8 +38,8 @@
         "stockName": "中信建投",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 11
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 22373,
@@ -47,8 +47,8 @@
         "stockName": "华泰证券",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 10
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 22374,
@@ -56,8 +56,8 @@
         "stockName": "广发证券",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 9
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 22375,
@@ -74,15 +74,69 @@
         "stockName": "东方财富",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 8
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
     "unmappedStocks": [
       {
+        "sourceRowNumber": 22370,
+        "stockCode": "601211.SH",
+        "stockName": "国泰海通",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 22371,
+        "stockCode": "601995.SH",
+        "stockName": "中金公司",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 22372,
+        "stockCode": "601066.SH",
+        "stockName": "中信建投",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 22373,
+        "stockCode": "601688.SH",
+        "stockName": "华泰证券",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 22374,
+        "stockCode": "000776.SZ",
+        "stockName": "广发证券",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
         "sourceRowNumber": 22375,
         "stockCode": "600837.SH",
         "stockName": "海通证券",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 22377,
+        "stockCode": "300059.SZ",
+        "stockName": "东方财富",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -92,1506 +146,2842 @@
   },
   "totals": {
     "candidateCoreProductCount": 18,
-    "selectedCoreProductCount": 18,
-    "selectedCompanyCoreProductCount": 18,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 73,
-    "downstreamCandidateCount": 24,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "selectedCoreProductCount": 0,
+    "selectedCompanyCoreProductCount": 0,
+    "level7ProductCount": 14,
+    "relatedIndustryCandidateCount": 5,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
+  "productIndustryMap": {
+    "coreProducts": [],
+    "relatedIndustries": [
       {
-        "code": "1140149103",
-        "name": "内部控制运营",
-        "anchorCount": 2,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140098167",
-          "1140148516"
+        "code": "1200001096",
+        "name": "非通道业务",
+        "description": "非通道业务指券商摆脱单纯经纪中介角色，转向投行、资管等主动管理领域。因能提升盈利稳定性与估值上限，减少对市场交易量依赖，成为机构关注焦点，被视为券商转型高质量增长的关键驱动力。",
+        "stockCount": 11,
+        "starWeight": 43,
+        "level7ProductCount": 5,
+        "relevanceScore": 504,
+        "stocks": [
+          {
+            "stockCode": "600030.SH",
+            "stockName": "中信证券",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600999.SH",
+            "stockName": "招商证券",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300059.SZ",
+            "stockName": "东方财富",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601066.SH",
+            "stockName": "中信建投",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601995.SH",
+            "stockName": "中金公司",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601688.SH",
+            "stockName": "华泰证券",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601211.SH",
+            "stockName": "国泰海通",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000776.SZ",
+            "stockName": "广发证券",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601881.SH",
+            "stockName": "中国银河",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600909.SH",
+            "stockName": "华安证券",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600109.SH",
+            "stockName": "国金证券",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "基金代销业务",
-          "证券资管业务"
+        "products": [
+          {
+            "code": "1140077005",
+            "name": "信用交易业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 信用交易业务 > 信用交易业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 11,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300059.SZ",
+                "stockName": "东方财富",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140148518",
+            "name": "证券自营业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 自营业务 > 证券自营业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140148516",
+            "name": "证券资管业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 资产管理业务 > 证券资管业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140148519",
+            "name": "证券研究咨询业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 投资咨询业务 > 证券研究咨询业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 9,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140045137",
-        "name": "风险管理",
-        "anchorCount": 2,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140098167",
-          "1140148516"
+        "code": "1200001095",
+        "name": "通道业务",
+        "description": "通道业务指金融机构借牌照协助资金规避监管投向限制领域。因易引发影子银行风险、加剧金融空转，受监管严打。其兴衰反映去杠杆政策力度，影响券商信托业绩及市场流动性，故备受投资者与监管层关注。",
+        "stockCount": 11,
+        "starWeight": 43,
+        "level7ProductCount": 4,
+        "relevanceScore": 492,
+        "stocks": [
+          {
+            "stockCode": "600030.SH",
+            "stockName": "中信证券",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600999.SH",
+            "stockName": "招商证券",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300059.SZ",
+            "stockName": "东方财富",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601066.SH",
+            "stockName": "中信建投",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601995.SH",
+            "stockName": "中金公司",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601688.SH",
+            "stockName": "华泰证券",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601211.SH",
+            "stockName": "国泰海通",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000776.SZ",
+            "stockName": "广发证券",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601881.SH",
+            "stockName": "中国银河",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600909.SH",
+            "stockName": "华安证券",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600109.SH",
+            "stockName": "国金证券",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "基金代销业务",
-          "证券资管业务"
+        "products": [
+          {
+            "code": "1140019865",
+            "name": "证券经纪业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券经纪业务 > 证券经纪业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 11,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300059.SZ",
+                "stockName": "东方财富",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140124843",
+            "name": "债券承销业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券投资银行业务 > 债券承销业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140173552",
+            "name": "证券保荐业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券投资银行业务 > 证券保荐业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140173553",
+            "name": "证券承销业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券投资银行业务 > 证券承销业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 12,
+    "mappedStockCount": 11,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 14,
+    "candidateIndustryCount": 5,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 22368,
+        "stockCode": "600999.SH",
+        "stockName": "招商证券",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140028236",
-        "name": "募集资金",
-        "anchorCount": 2,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1140148516",
-          "1140148518"
-        ],
-        "linkedCoreProductNames": [
-          "证券自营业务",
-          "证券资管业务"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22369,
+        "stockCode": "600030.SH",
+        "stockName": "中信证券",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140028227",
-        "name": "自有资金",
-        "anchorCount": 2,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1140148516",
-          "1140148518"
-        ],
-        "linkedCoreProductNames": [
-          "证券自营业务",
-          "证券资管业务"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22370,
+        "stockCode": "601211.SH",
+        "stockName": "国泰海通",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 10
       },
       {
-        "code": "1140149252",
-        "name": "证券从业资格证",
-        "anchorCount": 2,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1140148518",
-          "1140148519"
-        ],
-        "linkedCoreProductNames": [
-          "证券研究咨询业务",
-          "证券自营业务"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22371,
+        "stockCode": "601995.SH",
+        "stockName": "中金公司",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 10
       },
       {
-        "code": "1140006663",
-        "name": "上市公司",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140019865"
-        ],
-        "linkedCoreProductNames": [
-          "证券经纪业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22372,
+        "stockCode": "601066.SH",
+        "stockName": "中信建投",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 9
       },
       {
-        "code": "1140111189",
-        "name": "上市公司股票",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140077005"
-        ],
-        "linkedCoreProductNames": [
-          "信用交易业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22373,
+        "stockCode": "601688.SH",
+        "stockName": "华泰证券",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 9
       },
       {
-        "code": "1140111188",
-        "name": "可出借资金",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140077005"
-        ],
-        "linkedCoreProductNames": [
-          "信用交易业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22374,
+        "stockCode": "000776.SZ",
+        "stockName": "广发证券",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140111186",
-        "name": "投资者审查系统",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140077005"
-        ],
-        "linkedCoreProductNames": [
-          "信用交易业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22375,
+        "stockCode": "600837.SH",
+        "stockName": "海通证券",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140111185",
-        "name": "担保抵押物",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140077005"
-        ],
-        "linkedCoreProductNames": [
-          "信用交易业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22376,
+        "stockCode": "601881.SH",
+        "stockName": "中国银河",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 10
       },
       {
-        "code": "1140111187",
-        "name": "融资融券牌照",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140077005"
-        ],
-        "linkedCoreProductNames": [
-          "信用交易业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22377,
+        "stockCode": "300059.SZ",
+        "stockName": "东方财富",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140006662",
-        "name": "证券交易所",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140019865"
-        ],
-        "linkedCoreProductNames": [
-          "证券经纪业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22378,
+        "stockCode": "600109.SH",
+        "stockName": "国金证券",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140107066",
-        "name": "风险管理系统",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140077005"
-        ],
-        "linkedCoreProductNames": [
-          "信用交易业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140149265",
-        "name": "其他资产",
-        "anchorCount": 1,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1140148516"
-        ],
-        "linkedCoreProductNames": [
-          "证券资管业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 22379,
+        "stockCode": "600909.SH",
+        "stockName": "华安证券",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
       }
     ],
-    "core": [
+    "relatedIndustries": [
       {
-        "code": "1140077005",
-        "name": "信用交易业务",
-        "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 信用交易业务 > 信用交易业务",
-        "industryPath": [
-          "非银金融",
-          "证券",
-          "证券",
-          "非通道业务",
-          "信用交易业务",
-          "信用交易业务"
-        ],
-        "level5Industry": {
-          "code": "1200001096",
-          "name": "非通道业务"
-        },
-        "level6Industry": {
-          "code": "1200004485",
-          "name": "信用交易业务"
-        },
-        "level7Product": {
-          "code": "1140077005",
-          "name": "信用交易业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 6,
+        "code": "1200001096",
+        "name": "非通道业务",
+        "description": "非通道业务指券商摆脱单纯经纪中介角色，转向投行、资管等主动管理领域。因能提升盈利稳定性与估值上限，减少对市场交易量依赖，成为机构关注焦点，被视为券商转型高质量增长的关键驱动力。",
+        "stockCount": 11,
+        "starWeight": 43,
+        "level7ProductCount": 5,
+        "relevanceScore": 504,
         "stocks": [
+          {
+            "stockCode": "600030.SH",
+            "stockName": "中信证券",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600999.SH",
+            "stockName": "招商证券",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
           {
             "stockCode": "300059.SZ",
             "stockName": "东方财富",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "601066.SH",
             "stockName": "中信建投",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "601995.SH",
             "stockName": "中金公司",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "601688.SH",
             "stockName": "华泰证券",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "601211.SH",
             "stockName": "国泰海通",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "000776.SZ",
             "stockName": "广发证券",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601881.SH",
+            "stockName": "中国银河",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600909.SH",
+            "stockName": "华安证券",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600109.SH",
+            "stockName": "国金证券",
+            "rating": "★★★",
+            "filledStars": 3
           }
         ],
-        "upstreamCount": 6,
-        "downstreamCount": 2,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
+        "products": [
+          {
+            "code": "1140077005",
+            "name": "信用交易业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 信用交易业务 > 信用交易业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 11,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300059.SZ",
+                "stockName": "东方财富",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140148518",
+            "name": "证券自营业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 自营业务 > 证券自营业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140148516",
+            "name": "证券资管业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 资产管理业务 > 证券资管业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140148519",
+            "name": "证券研究咨询业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 投资咨询业务 > 证券研究咨询业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 9,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
       },
       {
-        "code": "1140019865",
-        "name": "证券经纪业务",
-        "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券经纪业务 > 证券经纪业务",
-        "industryPath": [
-          "非银金融",
-          "证券",
-          "证券",
-          "通道业务",
-          "证券经纪业务",
-          "证券经纪业务"
-        ],
-        "level5Industry": {
-          "code": "1200001095",
-          "name": "通道业务"
-        },
-        "level6Industry": {
-          "code": "1200004483",
-          "name": "证券经纪业务"
-        },
-        "level7Product": {
-          "code": "1140019865",
-          "name": "证券经纪业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 6,
+        "code": "1200001095",
+        "name": "通道业务",
+        "description": "通道业务指金融机构借牌照协助资金规避监管投向限制领域。因易引发影子银行风险、加剧金融空转，受监管严打。其兴衰反映去杠杆政策力度，影响券商信托业绩及市场流动性，故备受投资者与监管层关注。",
+        "stockCount": 11,
+        "starWeight": 43,
+        "level7ProductCount": 4,
+        "relevanceScore": 492,
         "stocks": [
+          {
+            "stockCode": "600030.SH",
+            "stockName": "中信证券",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600999.SH",
+            "stockName": "招商证券",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
           {
             "stockCode": "300059.SZ",
             "stockName": "东方财富",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "601066.SH",
             "stockName": "中信建投",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "601995.SH",
             "stockName": "中金公司",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "601688.SH",
             "stockName": "华泰证券",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "601211.SH",
             "stockName": "国泰海通",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "000776.SZ",
             "stockName": "广发证券",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "601881.SH",
+            "stockName": "中国银河",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600909.SH",
+            "stockName": "华安证券",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600109.SH",
+            "stockName": "国金证券",
+            "rating": "★★★",
+            "filledStars": 3
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 2,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140148519",
-        "name": "证券研究咨询业务",
-        "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 投资咨询业务 > 证券研究咨询业务",
-        "industryPath": [
-          "非银金融",
-          "证券",
-          "证券",
-          "非通道业务",
-          "投资咨询业务",
-          "证券研究咨询业务"
-        ],
-        "level5Industry": {
-          "code": "1200001096",
-          "name": "非通道业务"
-        },
-        "level6Industry": {
-          "code": "1200004486",
-          "name": "投资咨询业务"
-        },
-        "level7Product": {
-          "code": "1140148519",
-          "name": "证券研究咨询业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 5,
-        "stocks": [
+        "products": [
           {
-            "stockCode": "601066.SH",
-            "stockName": "中信建投",
-            "rating": "★★★★☆"
+            "code": "1140019865",
+            "name": "证券经纪业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券经纪业务 > 证券经纪业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 11,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300059.SZ",
+                "stockName": "东方财富",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
           },
           {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
+            "code": "1140124843",
+            "name": "债券承销业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券投资银行业务 > 债券承销业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
           },
           {
-            "stockCode": "601688.SH",
-            "stockName": "华泰证券",
-            "rating": "★★★★"
+            "code": "1140173552",
+            "name": "证券保荐业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券投资银行业务 > 证券保荐业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
           },
           {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000776.SZ",
-            "stockName": "广发证券",
-            "rating": "★★★★"
+            "code": "1140173553",
+            "name": "证券承销业务",
+            "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券投资银行业务 > 证券承销业务",
+            "matchedSourceLevel": 7,
+            "stockCount": 10,
+            "stocks": [
+              {
+                "stockCode": "600030.SH",
+                "stockName": "中信证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600999.SH",
+                "stockName": "招商证券",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601066.SH",
+                "stockName": "中信建投",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601995.SH",
+                "stockName": "中金公司",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601688.SH",
+                "stockName": "华泰证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601211.SH",
+                "stockName": "国泰海通",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000776.SZ",
+                "stockName": "广发证券",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "601881.SH",
+                "stockName": "中国银河",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600909.SH",
+                "stockName": "华安证券",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600109.SH",
+                "stockName": "国金证券",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
           }
         ],
-        "upstreamCount": 11,
-        "downstreamCount": 2,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140148518",
-        "name": "证券自营业务",
-        "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 自营业务 > 证券自营业务",
-        "industryPath": [
-          "非银金融",
-          "证券",
-          "证券",
-          "非通道业务",
-          "自营业务",
-          "证券自营业务"
-        ],
-        "level5Industry": {
-          "code": "1200001096",
-          "name": "非通道业务"
-        },
-        "level6Industry": {
-          "code": "1200004488",
-          "name": "自营业务"
-        },
-        "level7Product": {
-          "code": "1140148518",
-          "name": "证券自营业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 5,
-        "stocks": [
-          {
-            "stockCode": "601066.SH",
-            "stockName": "中信建投",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601688.SH",
-            "stockName": "华泰证券",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000776.SZ",
-            "stockName": "广发证券",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 4,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140148516",
-        "name": "证券资管业务",
-        "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 资产管理业务 > 证券资管业务",
-        "industryPath": [
-          "非银金融",
-          "证券",
-          "证券",
-          "非通道业务",
-          "资产管理业务",
-          "证券资管业务"
-        ],
-        "level5Industry": {
-          "code": "1200001096",
-          "name": "非通道业务"
-        },
-        "level6Industry": {
-          "code": "1200004487",
-          "name": "资产管理业务"
-        },
-        "level7Product": {
-          "code": "1140148516",
-          "name": "证券资管业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 5,
-        "stocks": [
-          {
-            "stockCode": "601066.SH",
-            "stockName": "中信建投",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601688.SH",
-            "stockName": "华泰证券",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000776.SZ",
-            "stockName": "广发证券",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 8,
-        "downstreamCount": 2,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140027491",
-        "name": "期货经纪业务",
-        "hierarchyPath": "非银金融 > 多元金融 > 多元金融 > 期货业务 > 期货经纪业务 > 期货经纪业务",
-        "industryPath": [
-          "非银金融",
-          "多元金融",
-          "多元金融",
-          "期货业务",
-          "期货经纪业务",
-          "期货经纪业务"
-        ],
-        "level5Industry": {
-          "code": "1200001076",
-          "name": "期货业务"
-        },
-        "level6Industry": {
-          "code": "1200004461",
-          "name": "期货经纪业务"
-        },
-        "level7Product": {
-          "code": "1140027491",
-          "name": "期货经纪业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 5,
-        "stocks": [
-          {
-            "stockCode": "300059.SZ",
-            "stockName": "东方财富",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601066.SH",
-            "stockName": "中信建投",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601688.SH",
-            "stockName": "华泰证券",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 2,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140124843",
-        "name": "债券承销业务",
-        "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券投资银行业务 > 债券承销业务",
-        "industryPath": [
-          "非银金融",
-          "证券",
-          "证券",
-          "通道业务",
-          "证券投资银行业务",
-          "债券承销业务"
-        ],
-        "level5Industry": {
-          "code": "1200001095",
-          "name": "通道业务"
-        },
-        "level6Industry": {
-          "code": "1200004484",
-          "name": "证券投资银行业务"
-        },
-        "level7Product": {
-          "code": "1140124843",
-          "name": "债券承销业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 5,
-        "stocks": [
-          {
-            "stockCode": "601066.SH",
-            "stockName": "中信建投",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601688.SH",
-            "stockName": "华泰证券",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000776.SZ",
-            "stockName": "广发证券",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140203875",
-        "name": "公募基金管理业务",
-        "hierarchyPath": "非银金融 > 多元金融 > 多元金融 > 基金业务 > 基金管理业务 > 公募基金管理业务",
-        "industryPath": [
-          "非银金融",
-          "多元金融",
-          "多元金融",
-          "基金业务",
-          "基金管理业务",
-          "公募基金管理业务"
-        ],
-        "level5Industry": {
-          "code": "1210003138",
-          "name": "基金业务"
-        },
-        "level6Industry": {
-          "code": "1210003254",
-          "name": "基金管理业务"
-        },
-        "level7Product": {
-          "code": "1140203875",
-          "name": "公募基金管理业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 5,
-        "stocks": [
-          {
-            "stockCode": "601066.SH",
-            "stockName": "中信建投",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601688.SH",
-            "stockName": "华泰证券",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000776.SZ",
-            "stockName": "广发证券",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140173552",
-        "name": "证券保荐业务",
-        "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券投资银行业务 > 证券保荐业务",
-        "industryPath": [
-          "非银金融",
-          "证券",
-          "证券",
-          "通道业务",
-          "证券投资银行业务",
-          "证券保荐业务"
-        ],
-        "level5Industry": {
-          "code": "1200001095",
-          "name": "通道业务"
-        },
-        "level6Industry": {
-          "code": "1200004484",
-          "name": "证券投资银行业务"
-        },
-        "level7Product": {
-          "code": "1140173552",
-          "name": "证券保荐业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 5,
-        "stocks": [
-          {
-            "stockCode": "601066.SH",
-            "stockName": "中信建投",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601688.SH",
-            "stockName": "华泰证券",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000776.SZ",
-            "stockName": "广发证券",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140173553",
-        "name": "证券承销业务",
-        "hierarchyPath": "非银金融 > 证券 > 证券 > 通道业务 > 证券投资银行业务 > 证券承销业务",
-        "industryPath": [
-          "非银金融",
-          "证券",
-          "证券",
-          "通道业务",
-          "证券投资银行业务",
-          "证券承销业务"
-        ],
-        "level5Industry": {
-          "code": "1200001095",
-          "name": "通道业务"
-        },
-        "level6Industry": {
-          "code": "1200004484",
-          "name": "证券投资银行业务"
-        },
-        "level7Product": {
-          "code": "1140173553",
-          "name": "证券承销业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 5,
-        "stocks": [
-          {
-            "stockCode": "601066.SH",
-            "stockName": "中信建投",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601688.SH",
-            "stockName": "华泰证券",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "000776.SZ",
-            "stockName": "广发证券",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140098167",
-        "name": "基金代销业务",
-        "hierarchyPath": "非银金融 > 多元金融 > 多元金融 > 基金业务 > 基金代销业务 > 基金代销业务",
-        "industryPath": [
-          "非银金融",
-          "多元金融",
-          "多元金融",
-          "基金业务",
-          "基金代销业务",
-          "基金代销业务"
-        ],
-        "level5Industry": {
-          "code": "1210003138",
-          "name": "基金业务"
-        },
-        "level6Industry": {
-          "code": "1210003255",
-          "name": "基金代销业务"
-        },
-        "level7Product": {
-          "code": "1140098167",
-          "name": "基金代销业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 4,
-        "stocks": [
-          {
-            "stockCode": "300059.SZ",
-            "stockName": "东方财富",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "601066.SH",
-            "stockName": "中信建投",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 8,
-        "downstreamCount": 3,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140006536",
-        "name": "股权投资业务",
-        "hierarchyPath": "非银金融 > 证券 > 证券 > 非通道业务 > 资产管理业务 > 股权投资业务",
-        "industryPath": [
-          "非银金融",
-          "证券",
-          "证券",
-          "非通道业务",
-          "资产管理业务",
-          "股权投资业务"
-        ],
-        "level5Industry": {
-          "code": "1200001096",
-          "name": "非通道业务"
-        },
-        "level6Industry": {
-          "code": "1200004487",
-          "name": "资产管理业务"
-        },
-        "level7Product": {
-          "code": "1140006536",
-          "name": "股权投资业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "601995.SH",
-            "stockName": "中金公司",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 25,
-        "downstreamCount": 2,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140006497",
-        "name": "融资租赁业务",
-        "hierarchyPath": "非银金融 > 多元金融 > 多元金融 > 金融租赁业务 > 金融租赁业务 > 融资租赁业务",
-        "industryPath": [
-          "非银金融",
-          "多元金融",
-          "多元金融",
-          "金融租赁业务",
-          "金融租赁业务",
-          "融资租赁业务"
-        ],
-        "level5Industry": {
-          "code": "1200001082",
-          "name": "金融租赁业务"
-        },
-        "level6Industry": {
-          "code": "1200004469",
-          "name": "金融租赁业务"
-        },
-        "level7Product": {
-          "code": "1140006497",
-          "name": "融资租赁业务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140213469",
-        "name": "虚拟资产交易服务",
-        "hierarchyPath": "非银金融 > 多元金融 > 多元金融 > 境外金融服务 > 境外金融服务 > 虚拟资产交易服务",
-        "industryPath": [
-          "非银金融",
-          "多元金融",
-          "多元金融",
-          "境外金融服务",
-          "境外金融服务",
-          "虚拟资产交易服务"
-        ],
-        "level5Industry": {
-          "code": "1200001089",
-          "name": "境外金融服务"
-        },
-        "level6Industry": {
-          "code": "1200004477",
-          "name": "境外金融服务"
-        },
-        "level7Product": {
-          "code": "1140213469",
-          "name": "虚拟资产交易服务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "601211.SH",
-            "stockName": "国泰海通",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "非银金融"
-        ]
-      },
-      {
-        "code": "1140014741",
-        "name": "金融数据服务",
-        "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 证券IT > 金融数据服务",
-        "industryPath": [
-          "计算机",
-          "计算机应用",
-          "软件开发",
-          "行业应用软件",
-          "证券IT",
-          "金融数据服务"
-        ],
-        "level5Industry": {
-          "code": "1200001386",
-          "name": "行业应用软件"
-        },
-        "level6Industry": {
-          "code": "1200005208",
-          "name": "证券IT"
-        },
-        "level7Product": {
-          "code": "1140014741",
-          "name": "金融数据服务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300059.SZ",
-            "stockName": "东方财富",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 11,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      },
-      {
-        "code": "1140014036",
-        "name": "互联网广告",
-        "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 版面广告 > 互联网版面 > 互联网广告",
-        "industryPath": [
-          "传媒",
-          "营销传播",
-          "营销服务",
-          "版面广告",
-          "互联网版面",
-          "互联网广告"
-        ],
-        "level5Industry": {
-          "code": "1210000078",
-          "name": "版面广告"
-        },
-        "level6Industry": {
-          "code": "1210000135",
-          "name": "互联网版面"
-        },
-        "level7Product": {
-          "code": "1140014036",
-          "name": "互联网广告"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300059.SZ",
-            "stockName": "东方财富",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 5,
-        "downstreamCount": 3,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      },
-      {
-        "code": "1140206488",
-        "name": "增值付费证券分析软件",
-        "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 证券IT > 增值付费证券分析软件",
-        "industryPath": [
-          "计算机",
-          "计算机应用",
-          "软件开发",
-          "行业应用软件",
-          "证券IT",
-          "增值付费证券分析软件"
-        ],
-        "level5Industry": {
-          "code": "1200001386",
-          "name": "行业应用软件"
-        },
-        "level6Industry": {
-          "code": "1200005208",
-          "name": "证券IT"
-        },
-        "level7Product": {
-          "code": "1140206488",
-          "name": "增值付费证券分析软件"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300059.SZ",
-            "stockName": "东方财富",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      },
-      {
-        "code": "1140206489",
-        "name": "证券行情交易软件",
-        "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 证券IT > 证券行情交易软件",
-        "industryPath": [
-          "计算机",
-          "计算机应用",
-          "软件开发",
-          "行业应用软件",
-          "证券IT",
-          "证券行情交易软件"
-        ],
-        "level5Industry": {
-          "code": "1200001386",
-          "name": "行业应用软件"
-        },
-        "level6Industry": {
-          "code": "1200005208",
-          "name": "证券IT"
-        },
-        "level7Product": {
-          "code": "1140206489",
-          "name": "证券行情交易软件"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300059.SZ",
-            "stockName": "东方财富",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      }
-    ],
-    "downstream": [
-      {
-        "code": "1140019063",
-        "name": "个人投资者",
-        "anchorCount": 7,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140014741",
-          "1140019865",
-          "1140027491",
-          "1140077005",
-          "1140098167",
-          "1140148516",
-          "1140148519"
-        ],
-        "linkedCoreProductNames": [
-          "信用交易业务",
-          "基金代销业务",
-          "期货经纪业务",
-          "证券研究咨询业务",
-          "证券经纪业务",
-          "证券资管业务",
-          "金融数据服务"
-        ],
-        "evidence": {
-          "original": 7,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140019098",
-        "name": "机构投资者",
-        "anchorCount": 5,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140019865",
-          "1140077005",
-          "1140098167",
-          "1140148516",
-          "1140148519"
-        ],
-        "linkedCoreProductNames": [
-          "信用交易业务",
-          "基金代销业务",
-          "证券研究咨询业务",
-          "证券经纪业务",
-          "证券资管业务"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140149270",
-        "name": "债券市场",
-        "anchorCount": 1,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1140148518"
-        ],
-        "linkedCoreProductNames": [
-          "证券自营业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140149272",
-        "name": "同业拆借市场",
-        "anchorCount": 1,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1140148518"
-        ],
-        "linkedCoreProductNames": [
-          "证券自营业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140019096",
-        "name": "投资机构",
-        "anchorCount": 1,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1140027491"
-        ],
-        "linkedCoreProductNames": [
-          "期货经纪业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140149271",
-        "name": "票据市场",
-        "anchorCount": 1,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1140148518"
-        ],
-        "linkedCoreProductNames": [
-          "证券自营业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140149273",
-        "name": "金融衍生品市场",
-        "anchorCount": 1,
-        "stockCount": 5,
-        "linkedCoreProductCodes": [
-          "1140148518"
-        ],
-        "linkedCoreProductNames": [
-          "证券自营业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140140069",
-        "name": "零售银行中间业务",
-        "anchorCount": 1,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1140098167"
-        ],
-        "linkedCoreProductNames": [
-          "基金代销业务"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140006663",
-        "name": "上市公司",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014741"
-        ],
-        "linkedCoreProductNames": [
-          "金融数据服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140077035",
-        "name": "上市公司股权",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140006536"
-        ],
-        "linkedCoreProductNames": [
-          "股权投资业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140004480",
-        "name": "保险",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014741"
-        ],
-        "linkedCoreProductNames": [
-          "金融数据服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140028237",
-        "name": "公募基金",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014741"
-        ],
-        "linkedCoreProductNames": [
-          "金融数据服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140018991",
-        "name": "广告主",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014036"
-        ],
-        "linkedCoreProductNames": [
-          "互联网广告"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140000714",
-        "name": "承租人",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140006497"
-        ],
-        "linkedCoreProductNames": [
-          "融资租赁业务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
   "industryAnalysis": {
-    "status": "research_pending",
-    "target": {
-      "code": "1200001096",
-      "name": "非通道业务"
-    },
-    "overview": "非通道业务指券商摆脱单纯经纪中介角色，转向投行、资管等主动管理领域。与本次事件关联度较高的产品包括信用交易业务、证券研究咨询业务、证券自营业务等。",
+    "status": "unavailable",
+    "target": null,
+    "overview": null,
     "impact": null,
     "researchSources": [],
-    "reason": "该产业的专项研究内容正在补充中"
+    "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
+  },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 13,
+    "eligibleSourceRowCount": 12,
+    "totalStockCount": 12,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 1,
+    "excludedNonAShareCount": 0,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 11,
+    "companyProfileUnmatchedCount": 1,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 22368,
+            "stockCode": "600999.SH",
+            "stockName": "招商证券",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "发布2026上半年业绩预增公告，净利润同比预增近1倍，创历史新高，是券商板块景气度核心风向标。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600999.SH",
+              "companyName": "招商证券",
+              "companyProfile": "公司是具有百年历史的招商局集团旗下的证券公司，传承了招商局集团长期积淀的创新精神、市场化管理理念、国际化运营模式及稳健经营的风格，经过三十余年的发展，已成为国内拥有证券市场业务全牌照的一流券商。公司具有稳定持续的盈利能力、科学合理的风险管理架构、全面专业的服务能力。拥有多层次客户服务渠道，在中国境内设有分公司、营业部，同时在中国香港、韩国设有子公司；全资控股国际有限公司、期货有限公司、资产管理有限公司、致远资本投资有限公司、证券投资有限公司，参股基金管理有限公司、基金管理有限公司，构建起国内国际业务一体化的综合证券服务平台。公司以“服务国家科技自立自强、助力社会财富保值增值”为使命，恪守“家国情怀，时代担当；励新图强，敦行致远”的核心价值观，致力于建设“特色鲜明、创新引领、质量第一、贡献卓越的中国领先投资银行”。我们将以卓越的金融服务实现客户价值增长，推动证券行业进步，努力成为客户信赖、员工自豪、股东满意、社会尊重的优秀企业。",
+              "profileSummary": "公司是具有百年历史的招商局集团旗下的证券公司，传承了招商局集团长期积淀的创新精神、市场化管理理念、国际化运营模式及稳健经营的风格，经过三十余年的发展，已成为国内拥有证券市场业务全牌照的一流券商。拥有多层次客户服务渠道，在中国境内设有分公司、营业部，同时在中国香港、韩国设有子公司；全资控股国际有限公司、期货有限公司、资产管理有限公司、致远资本投资有限公司、证券投资有限公司，参股基金管理有限公司、基金管理有限公司，构建起国内国际业务一体化…",
+              "majorProducts": "博时基金股权投资、参股招商基金、招商期货经纪、招商证券财务顾问业务、招商证券代理买卖业务、招商证券股票承销、招商证券境外证券投资管理业务、招商证券投资管理业务、招商证券研发中心、招商证券债券承销、招商证券直接投资业务、招商证券自营业务",
+              "revenueComposition": "证券经纪业务:55.36%;证券投资业务:27.79%;其他:8.9%;投资银行业务:4.13%;资产管理业务:3.82%",
+              "revenueSegments": [
+                {
+                  "name": "证券经纪业务",
+                  "sharePct": 55.36,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "证券投资业务",
+                  "sharePct": 27.79,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 4.13,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "资产管理业务",
+                  "sharePct": 3.82,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券研究咨询业务",
+                    "category": "投资咨询业务"
+                  },
+                  {
+                    "name": "证券经纪业务",
+                    "category": "证券经纪业务"
+                  }
+                ],
+                "knownProducts": [
+                  "公募基金管理业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务",
+                  "证券经纪业务",
+                  "信用交易业务",
+                  "证券研究咨询业务",
+                  "证券自营业务"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "招商证券与事件的关系已经落在存量主业，而非远期概念：证券经纪业务（55.36%）、证券投资业务（27.79%）合计约占收入的87.28%。公司在产业链中的具体抓手是：发布2026上半年业绩预增公告，净利润同比预增近1倍，创历史新高，是券商板块景气度核心风向标。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 22369,
+            "stockCode": "600030.SH",
+            "stockName": "中信证券",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "作为行业绝对龙头，全面受益于资本市场回暖和改革红利，业绩确定性强。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600030.SH",
+              "companyName": "中信证券",
+              "companyProfile": "公司是国内规模最大的证券公司。主营业务范围为：证券经纪；证券投资咨询；与证券交易、证券投资活动有关的财务顾问；证券承销与保荐；证券自营；证券资产管理；融资融券；证券投资基金代销；为期货公司提供中间介绍业务。中信证券在若干业务领域保持或取得领先地位。公司紧紧围绕服务实体经济这一个中心，进一步完善融资安排者、财富管理者、交易服务与流动性提供者、市场重要投资者和风险管理者五大角色，不断重塑并巩固核心竞争力。公司依托第一大股东与中信银行、中信信托、信诚人寿保险等公司共同组成中信控股之综合经营模式，并与中信国际金融控股共同为客户提供境内外全面金融服务。",
+              "profileSummary": "主营业务范围为：证券经纪；证券投资咨询；与证券交易、证券投资活动有关的财务顾问；证券承销与保荐；证券自营；证券资产管理；融资融券；证券投资基金代销；为期货公司提供中间介绍业务。公司紧紧围绕服务实体经济这一个中心，进一步完善融资安排者、财富管理者、交易服务与流动性提供者、市场重要投资者和风险管理者五大角色，不断重塑并巩固核心竞争力。",
+              "majorProducts": "中信报价股份转让、中信避险共赢集合资产管理计划、中信代办股份转让、中信经纪业务、中信理财2号、中信理财3号、中信企业并购业务、中信吴中专项计划、中信债券结构融资业务、中信证券代理交易佣金、中信证券股票承销佣金、中信证券集合理财业务、中信证券投行业务、中信证券自营业务",
+              "revenueComposition": "证券投资业务:36.88%;证券经纪业务:27.77%;资产管理业务:19.1%;其他业务:8.17%;投资银行业务:8.09%",
+              "revenueSegments": [
+                {
+                  "name": "证券投资业务",
+                  "sharePct": 36.88,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "证券经纪业务",
+                  "sharePct": 27.77,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "资产管理业务",
+                  "sharePct": 19.1,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 8.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 8.09,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券研究咨询业务",
+                    "category": "投资咨询业务"
+                  },
+                  {
+                    "name": "证券经纪业务",
+                    "category": "证券经纪业务"
+                  }
+                ],
+                "knownProducts": [
+                  "基金代销业务",
+                  "公募基金管理业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务",
+                  "证券经纪业务",
+                  "信用交易业务",
+                  "证券研究咨询业务"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中信证券与事件的关系已经落在存量主业，而非远期概念：证券投资业务（36.88%）、证券经纪业务（27.77%）合计约占收入的72.74%。公司在产业链中的具体抓手是：作为行业绝对龙头，全面受益于资本市场回暖和改革红利，业绩确定性强。本次事件若改变政策约束与需求释放节奏，影响会沿着“政策先改变客户采购意愿或行业准入，再通过项目落地、订单转化和成本变化影响经营结果”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；政策细则、招投标规模、项目开工率和回款进度比主题热度更有解释力。若政策执行弱于预期、补贴退坡或项目回款周期拉长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 7,
+        "stocks": [
+          {
+            "sourceRowNumber": 22370,
+            "stockCode": "601211.SH",
+            "stockName": "国泰海通",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "作为A股估值最低的科创投行主线核心标的之一，上半年业绩预告超预期，具备翻倍上行空间。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601211.SH",
+              "companyName": "国泰海通",
+              "companyProfile": "公司由国泰君安与海通证券合并而成，是中国资本市场长期、持续、全面领先的综合金融服务商。作为中国证券行业最早的一批探索者，海通证券成立于1988年，国泰证券、君安证券均成立于1992年，并于1999年8月合并成立国泰君安。2024年9月，国泰君安与海通证券积极响应国家战略，基于“强强联合、优势互补、对等合并”原则实施合并重组，并于2025年4月正式更名为国泰海通，开启了公司发展的崭新一页。公司以“新战略”“新文化”“新架构”绘就高质量发展新蓝图，加快打造具备国际竞争力与市场引领力的一流投资银行。公司将始终坚持“以客户为中心”的经营理念，持续深化改革，不断强化服务的专业性、业务的协同性、战略的敏捷性，充分发挥直接融资“服务商”、资本市场“看门人”、社会财富“管理者”功能作用，扎实做好“五篇大文章”，全力当好金融强国建设和上海国际金融中心建设的排头兵，为以中国式现代化全面推进强国建设和民族复兴伟业贡献更大的金融力量。",
+              "profileSummary": "公司由国泰君安与海通证券合并而成，是中国资本市场长期、持续、全面领先的综合金融服务商。公司将始终坚持“以客户为中心”的经营理念，持续深化改革，不断强化服务的专业性、业务的协同性、战略的敏捷性，充分发挥直接融资“服务商”、资本市场“看门人”、社会财富“管理者”功能作用，扎实做好“五篇大文章”，全力当好金融强国建设和上海国际金融中心建设的排头兵，为以中国式现代化全面推进强国建设和民族复兴伟业贡献更大的金融力量。",
+              "majorProducts": "场外市场、投资银行、证券交易投资、证券经纪、证券信用交易、证券研究",
+              "revenueComposition": "证券经纪业务:39.54%;机构金融:机构投资者服务:31.05%;资产管理业务:12.07%;融资租赁:8.7%;投资银行业务:7.52%;其他业务:1.12%",
+              "revenueSegments": [
+                {
+                  "name": "证券经纪业务",
+                  "sharePct": 39.54,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "机构金融:机构投资者服务",
+                  "sharePct": 31.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "资产管理业务",
+                  "sharePct": 12.07,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "融资租赁",
+                  "sharePct": 8.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 7.52,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "期货经纪业务",
+                    "category": "期货经纪业务"
+                  },
+                  {
+                    "name": "虚拟资产交易服务",
+                    "category": "境外金融服务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  }
+                ],
+                "knownProducts": [
+                  "基金代销业务",
+                  "公募基金管理业务",
+                  "虚拟资产交易服务",
+                  "期货经纪业务",
+                  "融资租赁业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "国泰海通已经参与事件相关业务，但收入基数仍小：投资银行业务占收入的7.52%，说明公司已有业务抓手，但“作为A股估值最低的科创投行主线核心标的之一，上半年业绩预告超预期，具备翻倍上行空间”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于事件能否转化为可确认的经营增量能否驱动“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，从而推动业务跨过小规模阶段。在此之前，订单、收入确认、产品结构和毛利率变化比总收入增速更值得跟踪；若事件关联停留在主题层面，未形成可持续订单或利润贡献，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 22371,
+            "stockCode": "601995.SH",
+            "stockName": "中金公司",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "投行业务龙头，充分受益于科创板IPO及并购重组业务修复，业绩弹性大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601995.SH",
+              "companyName": "中金公司",
+              "companyProfile": "公司成立于1995年，凭借率先采用市场最佳实践以及深厚的专业知识，我们完成了众多开创先河的交易，并深度参与中国经济改革和发展，与客户共同成长。我们的目标是打造成为具有国际竞争力的一流投资银行。我们一直致力于为多元化的客户群体提供高质量金融增值服务，建立了以研究和信息技术为基础，投资银行、股票业务、固定收益、资产管理、私募股权和财富管理全方位发展的均衡业务结构。凭借深厚的经济、行业、法律、法规等领域的专业知识，我们优质的服务获得了广泛认可。与此同时，可持续发展始终是我们的核心理念之一，我们期望为社会创造长期价值，以行业高标准积极践行企业社会责任。2015年，公司在香港联交所主板成功挂牌上市。2017年，公司与原中国中投证券的战略重组完成，本次交易使公司规模显著扩大，实现了对大、中小企业及机构、个人客户更为深度的覆盖，构建了更为均衡的一二级市场业务结构。2020年，公司在上交所主板成功挂牌上市。集团总部位于北京，在境内拥有多家子公司，并在上海、深圳、厦门、成都、杭州、济南、重庆、沈阳、南京、苏州设有分公司，集团及下属子公司在中国大陆28个省、自治区、直辖市拥有200多个证券营业部。集团亦积极开拓境外市场，在中国香港、纽约、伦敦、新加坡、法兰克福、东京、越南、迪拜等地设有子公司或分支机构。秉承“植根中国，融通世界”的理念，通过广泛的业务网络及杰出的跨境能力，公司将持续为客户提供一流的金融服务，协助客户实现其战略发展目标。",
+              "profileSummary": "我们一直致力于为多元化的客户群体提供高质量金融增值服务，建立了以研究和信息技术为基础，投资银行、股票业务、固定收益、资产管理、私募股权和财富管理全方位发展的均衡业务结构。秉承“植根中国，融通世界”的理念，通过广泛的业务网络及杰出的跨境能力，公司将持续为客户提供一流的金融服务，协助客户实现其战略发展目标。",
+              "majorProducts": "财富管理业务、股票业务、固定收益业务、投资管理业务、投资银行业务、研究业务",
+              "revenueComposition": "财富管理业务:33.32%;股票业务:25.79%;投资银行业务:16.14%;固定收益业务:10.8%;其他:5.74%;资产管理业务:4.48%;私募股权:3.74%",
+              "revenueSegments": [
+                {
+                  "name": "财富管理业务",
+                  "sharePct": 33.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "股票业务",
+                  "sharePct": 25.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 16.14,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "固定收益业务",
+                  "sharePct": 10.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 5.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "资产管理业务",
+                  "sharePct": 4.48,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "私募股权",
+                  "sharePct": 3.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "期货经纪业务",
+                    "category": "期货经纪业务"
+                  },
+                  {
+                    "name": "股权投资业务",
+                    "category": "资产管理业务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  }
+                ],
+                "knownProducts": [
+                  "基金代销业务",
+                  "公募基金管理业务",
+                  "期货经纪业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务",
+                  "证券经纪业务",
+                  "信用交易业务"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对中金公司而言，投行业务龙头，充分受益于科创板IPO及并购重组业务修复，业绩弹性大并非纯概念映射，因为投资银行业务（16.14%）、资产管理业务（4.48%）合计约占收入的20.62%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是事件能否转化为可确认的经营增量，传导效率取决于“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由订单、收入确认、产品结构和毛利率变化来区分；若事件关联停留在主题层面，未形成可持续订单或利润贡献，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 22372,
+            "stockCode": "601066.SH",
+            "stockName": "中信建投",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "投行业务领先，深度参与科创板项目，业绩弹性大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601066.SH",
+              "companyName": "中信建投",
+              "companyProfile": "公司是经中国证监会批准设立的全国性大型综合证券公司。主要业务范围包括：证券承销与保荐、证券经纪、与证券交易和证券投资活动有关的财务顾问、证券投资咨询、证券自营、证券资产管理、证券投资基金代销、为期货公司提供中间介绍业务、融资融券业务、代销金融产品业务、保险兼业代理业务、期权做市业务、证券投资基金托管、销售贵金属制品以及监管部门批准的其它业务。自成立以来，中信建投证券各项业务快速发展，在企业融资、收购兼并、证券经纪、证券金融、固定收益、资产管理、股票及衍生品交易等领域形成了自身特色和核心业务优势，并搭建了研究咨询、信息技术、运营管理、风险管理、合规管理等专业高效的业务支持体系。",
+              "profileSummary": "主要业务范围包括：证券承销与保荐、证券经纪、与证券交易和证券投资活动有关的财务顾问、证券投资咨询、证券自营、证券资产管理、证券投资基金代销、为期货公司提供中间介绍业务、融资融券业务、代销金融产品业务、保险兼业代理业务、期权做市业务、证券投资基金托管、销售贵金属制品以及监管部门批准的其它业务。自成立以来，中信建投证券各项业务快速发展，在企业融资、收购兼并、证券经纪、证券金融、固定收益、资产管理、股票及衍生品交易等领域形成了自身特色和核心…",
+              "majorProducts": "财务顾问服务、股权融资、回购业务、基金管理、金融产品销售、融资融券、私募股权投资管理、投资研究、债务融资、证券经纪、资产管理、自营交易",
+              "revenueComposition": "证券投资业务:41.7%;证券经纪业务:35.25%;投资银行业务:13.43%;资产管理业务:6.12%;其他业务:3.5%",
+              "revenueSegments": [
+                {
+                  "name": "证券投资业务",
+                  "sharePct": 41.7,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "证券经纪业务",
+                  "sharePct": 35.25,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 13.43,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "资产管理业务",
+                  "sharePct": 6.12,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "期货经纪业务",
+                    "category": "期货经纪业务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券研究咨询业务",
+                    "category": "投资咨询业务"
+                  }
+                ],
+                "knownProducts": [
+                  "基金代销业务",
+                  "公募基金管理业务",
+                  "期货经纪业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务",
+                  "证券经纪业务",
+                  "信用交易业务"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "中信建投的相关业务已决定公司大部分经营表现：证券投资业务（41.7%）、投资银行业务（13.43%）合计约占收入的55.13%。公司与事件的直接业务联系是：投行业务领先，深度参与科创板项目，业绩弹性大，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 22373,
+            "stockCode": "601688.SH",
+            "stockName": "华泰证券",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "头部综合券商，国际化与财富管理业务构筑护城河，受益于行业Beta逻辑兑现。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601688.SH",
+              "companyName": "华泰证券",
+              "companyProfile": "公司是中国领先的综合性证券集团，具有庞大的客户基础、领先的互联网平台和敏捷协同的全业务链体系，是中国证监会首批批准的综合类券商，全国最早获得创新试点资格券商。目前，公司在境内控股华泰联合证券有限责任公司、华泰期货有限公司、江苏股权交易中心有限责任公司；在境内外全资设立华泰金融控股(香港)有限公司、华泰紫金投资有限责任公司、华泰创新投资有限公司、华泰证券(上海)资产管理有限公司；参股南方基金管理有限公司、华泰柏瑞基金管理有限公司、江苏银行股份有限公司、金浦产业投资基金管理有限公司、证通股份有限公司。近年来，公司着力为客户提供全生命周期综合金融服务，逐步形成了以投资银行业务为龙头，以经纪与财富管理业务为基础，以投资与交易业务和资产管理业务为两翼的全业务链业务体系。",
+              "profileSummary": "目前，公司在境内控股华泰联合证券有限责任公司、华泰期货有限公司、江苏股权交易中心有限责任公司；在境内外全资设立华泰金融控股(香港)有限公司、华泰紫金投资有限责任公司、华泰创新投资有限公司、华泰证券(上海)资产管理有限公司；参股南方基金管理有限公司、华泰柏瑞基金管理有限公司、江苏银行股份有限公司、金浦产业投资基金管理有限公司、证通股份有限公司。近年来，公司着力为客户提供全生命周期综合金融服务，逐步形成了以投资银行业务为龙头，以经纪与财富…",
+              "majorProducts": "财务顾问、证券承销与保荐业务、证券交易、证券经纪业务、证券投资咨询、证券资产管理、证券自营、直接投资业务",
+              "revenueComposition": "证券经纪业务:44.3%;机构服务:19.36%;其他业务:16.53%;资产管理业务:11.06%;其他:9.31%;内部抵销:-0.56%",
+              "revenueSegments": [
+                {
+                  "name": "证券经纪业务",
+                  "sharePct": 44.3,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "机构服务",
+                  "sharePct": 19.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 16.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "资产管理业务",
+                  "sharePct": 11.06,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -0.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "期货经纪业务",
+                    "category": "期货经纪业务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券研究咨询业务",
+                    "category": "投资咨询业务"
+                  }
+                ],
+                "knownProducts": [
+                  "公募基金管理业务",
+                  "期货经纪业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务",
+                  "证券经纪业务",
+                  "信用交易业务",
+                  "证券研究咨询业务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "华泰证券的证券经纪业务（44.3%）、资产管理业务（11.06%）覆盖范围较宽，其中能够承载信用交易业务、债券承销业务、期货经纪业务，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：头部综合券商，国际化与财富管理业务构筑护城河，受益于行业Beta逻辑兑现。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 22374,
+            "stockCode": "000776.SZ",
+            "stockName": "广发证券",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "财富管理特色券商，受益于市场活跃度和居民资产配置需求，业绩弹性较好。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000776.SZ",
+              "companyName": "广发证券",
+              "companyProfile": "公司是国内首批综合类证券公司。公司先后于2010年和2015年分别在深圳证券交易所及香港联合交易所主板上市。公司是定位于专注中国优质企业及富裕人群，拥有行业领先创新能力的资本市场综合服务商。公司提供多元化业务以满足企业、个人(尤其是富裕人群)及机构投资者、金融机构及政府客户的多样化需求。公司拥有投资银行、财富管理、交易及机构客户服务、投资管理等全业务牌照，各项主要业务相对均衡发展，均取得了靠前的行业排名。同时，公司控股广发期货、广发基金、广发控股香港、广发信德、广发乾和及广发资管，投资参股易方达基金(并列第一大股东)、证通公司、中证信用增进股份有限公司和中证机构间报价系统股份有限公司，并积极探索发展融资租赁、PPP和QDLP等业务，形成了初步的金融集团化架构。",
+              "profileSummary": "公司提供多元化业务以满足企业、个人(尤其是富裕人群)及机构投资者、金融机构及政府客户的多样化需求。公司拥有投资银行、财富管理、交易及机构客户服务、投资管理等全业务牌照，各项主要业务相对均衡发展，均取得了靠前的行业排名。",
+              "majorProducts": "财富管理及经纪业务、财务顾问、公募基金管理、股权融资、股权衍生品销售及交易、固定收益销售及交易、回购交易、另类投资、期货经纪业务、权益投资及交易、融资融券、融资租赁、私募基金管理、投资研究、债务融资、资产管理、资产托管",
+              "revenueComposition": "财富管理业务:39.64%;证券投资业务:31.47%;资产管理:26.04%;投资银行业务:2.53%;其他-其他:0.32%",
+              "revenueSegments": [
+                {
+                  "name": "财富管理业务",
+                  "sharePct": 39.64,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "证券投资业务",
+                  "sharePct": 31.47,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "资产管理",
+                  "sharePct": 26.04,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 2.53,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他-其他",
+                  "sharePct": 0.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券研究咨询业务",
+                    "category": "投资咨询业务"
+                  },
+                  {
+                    "name": "证券经纪业务",
+                    "category": "证券经纪业务"
+                  }
+                ],
+                "knownProducts": [
+                  "公募基金管理业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务",
+                  "证券经纪业务",
+                  "信用交易业务",
+                  "证券研究咨询业务",
+                  "证券自营业务"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "广发证券的事件暴露较为直接：财富管理业务（39.64%）、证券投资业务（31.47%）合计约占收入的73.64%，相关业务不是边缘尝试；具体业务抓手是：财富管理特色券商，受益于市场活跃度和居民资产配置需求，业绩弹性较好。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，尤其需要用终端销量、客户采购量、公司出货和相关产品收入增速区分行业普涨与公司自身竞争力。如果终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 22375,
+            "stockCode": "600837.SH",
+            "stockName": "海通证券",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "作为头部券商，受益于行业景气度回升，且与国泰君安整合效应受关注。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": false,
+              "matchMethod": "none",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "",
+              "companyName": "",
+              "companyProfile": "",
+              "profileSummary": "",
+              "majorProducts": "",
+              "revenueComposition": "",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "unavailable",
+                "relevantProducts": [],
+                "knownProducts": [],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "海通证券具备事件相关的业务抓手：作为头部券商，受益于行业景气度回升，且与国泰君安整合效应受关注，但相关业务的收入权重和利润贡献尚不清楚。即使终端需求与渗透率变化改善，也要经过终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润，才可能形成公司层面的业绩变化。因此，当前更适合把终端销量、客户采购量、公司出货和相关产品收入增速作为经营兑现的关键刻度；这些信号持续改善，相关业务才可能从产业链布局上升为利润增量。反之，终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使市场预期先于基本面回落。"
+          },
+          {
+            "sourceRowNumber": 22377,
+            "stockCode": "300059.SZ",
+            "stockName": "东方财富",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "互联网券商龙头，业绩与市场活跃度高度相关，弹性大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300059.SZ",
+              "companyName": "东方财富",
+              "companyProfile": "公司成立于2005年，是中国专业的互联网财富管理综合运营商，为海量用户提供基于互联网的财经资讯、数据、交易等服务。公司总部位于上海，并在北京、广州、深圳、成都、南京、扬州、拉萨、香港等地设有子公司。自公司成立以来，公司坚持“为用户创造更多价值”的经营理念，取得了快速、稳步的发展。公司旗下现拥有“东方财富网”、“天天基金网”、“股吧”、“东方财富证券”、“Choice数据”、“哈富证券”、“东方财富期货”、“东财基金”、“妙想”等知名互联网产品及业务板块。其中公司运营的“东方财富网”于2004年上线，2007年“天天基金网”上线，2012年2月天天基金首批获得中国证监会颁发的基金销售牌照。自2015年至今，公司通过资本市场收购，全资控股了哈富证券、东方财富证券。2019年公司旗下东财基金获批公募基金牌照，公司迈向互联网财富管理领域，公司旗下子公司现已拥有券商牌照、期货牌照和公募基金牌照等。公司致力于构建人与财富的金融生态圈，提供财经、证券、基金、期货、社交服务等一站式互联网财富管理服务，为用户创造更多价值。",
+              "profileSummary": "公司成立于2005年，是中国专业的互联网财富管理综合运营商，为海量用户提供基于互联网的财经资讯、数据、交易等服务。公司旗下现拥有“东方财富网”、“天天基金网”、“股吧”、“东方财富证券”、“Choice数据”、“哈富证券”、“东方财富期货”、“东财基金”、“妙想”等知名互联网产品及业务板块。",
+              "majorProducts": "东方财富网、付费金融数据服务、互联网广告服务",
+              "revenueComposition": "证券经纪业务:48.07%;利息净收入:21.38%;金融电子商务服务:19.8%;期货经纪业务:5.84%;金融数据服务:1.5%;投资咨询业务:1.12%;资产管理业务:0.83%;其他服务:0.68%;基金管理业务:0.57%;投资银行业务:0.17%;证券其他业务:0.03%",
+              "revenueSegments": [
+                {
+                  "name": "证券经纪业务",
+                  "sharePct": 48.07,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "利息净收入",
+                  "sharePct": 21.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金融电子商务服务",
+                  "sharePct": 19.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "期货经纪业务",
+                  "sharePct": 5.84,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "金融数据服务",
+                  "sharePct": 1.5,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "投资咨询业务",
+                  "sharePct": 1.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "资产管理业务",
+                  "sharePct": 0.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他服务",
+                  "sharePct": 0.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "基金管理业务",
+                  "sharePct": 0.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 0.17,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "证券其他业务",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "增值付费证券分析软件",
+                    "category": "证券IT"
+                  },
+                  {
+                    "name": "期货经纪业务",
+                    "category": "期货经纪业务"
+                  },
+                  {
+                    "name": "证券经纪业务",
+                    "category": "证券经纪业务"
+                  },
+                  {
+                    "name": "证券行情交易软件",
+                    "category": "证券IT"
+                  },
+                  {
+                    "name": "金融数据服务",
+                    "category": "证券IT"
+                  }
+                ],
+                "knownProducts": [
+                  "互联网广告",
+                  "增值付费证券分析软件",
+                  "证券行情交易软件",
+                  "金融数据服务",
+                  "基金代销业务",
+                  "期货经纪业务",
+                  "证券经纪业务",
+                  "信用交易业务"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "东方财富的相关业务已决定公司大部分经营表现：证券经纪业务（48.07%）、期货经纪业务（5.84%）合计约占收入的55.41%。公司与事件的直接业务联系是：互联网券商龙头，业绩与市场活跃度高度相关，弹性大，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 22376,
+            "stockCode": "601881.SH",
+            "stockName": "中国银河",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "头部券商之一，经纪业务市占率高，受益于市场交投活跃。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601881.SH",
+              "companyName": "中国银河",
+              "companyProfile": "公司是中国证券行业领先的综合性金融服务提供商，提供经纪、销售和交易、投资银行等综合证券服务。公司经营模式为：以大交易领先为核心，以投资银行和资产管理业务为两翼，各项主要业务协同均衡发展，即“一核两翼、协同发展”。公司旗下拥有银河创新资本管理有限公司、中国银河国际金融控股有限公司、银河期货有限公司和银河金汇证券资产管理有限公司。公司于2013年5月22日在中国香港联合交易所上市，控股股东为中国银河金融控股有限责任公司。",
+              "profileSummary": "公司是中国证券行业领先的综合性金融服务提供商，提供经纪、销售和交易、投资银行等综合证券服务。公司经营模式为：以大交易领先为核心，以投资银行和资产管理业务为两翼，各项主要业务协同均衡发展，即“一核两翼、协同发展”。",
+              "majorProducts": "财务顾问、代销金融产品、融资融券、证券承销与保荐、证券交易、证券经纪、证券投资基金代销、证券投资咨询、证券自营、中间介绍业务",
+              "revenueComposition": "证券经纪业务:47.6%;投资交易业务:24.82%;其他母子公司一体化业务:9.77%;海外业务:9.08%;机构业务:6.06%;投资银行业务:2.07%;其他业务:1.53%;内部抵销:-0.93%",
+              "revenueSegments": [
+                {
+                  "name": "证券经纪业务",
+                  "sharePct": 47.6,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "投资交易业务",
+                  "sharePct": 24.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他母子公司一体化业务",
+                  "sharePct": 9.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "海外业务",
+                  "sharePct": 9.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "机构业务",
+                  "sharePct": 6.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 2.07,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -0.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "期货经纪业务",
+                    "category": "期货经纪业务"
+                  },
+                  {
+                    "name": "股权投资业务",
+                    "category": "资产管理业务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  }
+                ],
+                "knownProducts": [
+                  "基金代销业务",
+                  "期货经纪业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务",
+                  "证券经纪业务",
+                  "信用交易业务",
+                  "证券研究咨询业务"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中国银河更接近“小基数、高弹性”的事件期权，而不是当前利润主线。投资银行业务占收入的2.07%，公司在产业链中的具体抓手是：头部券商之一，经纪业务市占率高，受益于市场交投活跃。若事件能否转化为可确认的经营增量沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”兑现，相关业务增速可能很高，但较低的收入基数意味着短期贡献未必足以改变公司整体业绩。这类标的最重要的不是行业空间叙事，而是订单、收入确认、产品结构和毛利率变化能否证明业务开始跨越规模门槛；若事件关联停留在主题层面，未形成可持续订单或利润贡献，估值弹性往往会先于报表弹性消退。"
+          },
+          {
+            "sourceRowNumber": 22378,
+            "stockCode": "600109.SH",
+            "stockName": "国金证券",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为特色精品券商，在部分投行业务领域具备竞争力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600109.SH",
+              "companyName": "国金证券",
+              "companyProfile": "公司前身为成都证券，经中国人民银行批准，成立于1990年12月，注册地位于四川省成都市，是一家资产质量优良、专业团队精干、创新能力突出的上市证券公司。公司下设多家分公司及证券营业部，分布在全国重要中心城市，同时控股多家资产管理、期货、投资及基金子公司，并参股相关金融机构。公司秉承“让金融服务更高效、更可靠”的使命，追求“成为举足轻重的金融服务机构”的企业愿景，遵循“客户至上、视人才为公司最重要的资本、以开放的心态真诚沟通、团队合作、专业规范、持续优化、追求卓越”的核心价值观，努力将公司建设成为“治理健全、管理规范、业务精湛、资质齐备、技术领先”的国内证券行业具有一流竞争力和影响力的上市券商。",
+              "profileSummary": "公司秉承“让金融服务更高效、更可靠”的使命，追求“成为举足轻重的金融服务机构”的企业愿景，遵循“客户至上、视人才为公司最重要的资本、以开放的心态真诚沟通、团队合作、专业规范、持续优化、追求卓越”的核心价值观，努力将公司建设成为“治理健全、管理规范、业务精湛、资质齐备、技术领先”的国内证券行业具有一流竞争力和影响力的上市券商。",
+              "majorProducts": "财富管理、机构服务、投资银行、资产管理、自营投资",
+              "revenueComposition": "财富管理业务:48.86%;证券投资业务:19.19%;投资银行业务:12%;资产管理业务:8.77%;机构服务业务:6.86%;其他业务:5.33%;分部间抵销:-1.02%",
+              "revenueSegments": [
+                {
+                  "name": "财富管理业务",
+                  "sharePct": 48.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "证券投资业务",
+                  "sharePct": 19.19,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 12.0,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "资产管理业务",
+                  "sharePct": 8.77,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "机构服务业务",
+                  "sharePct": 6.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "分部间抵销",
+                  "sharePct": -1.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券研究咨询业务",
+                    "category": "投资咨询业务"
+                  },
+                  {
+                    "name": "证券经纪业务",
+                    "category": "证券经纪业务"
+                  }
+                ],
+                "knownProducts": [
+                  "公募基金管理业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务",
+                  "证券经纪业务",
+                  "信用交易业务",
+                  "证券研究咨询业务",
+                  "证券自营业务"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "国金证券已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：证券投资业务（19.19%）、投资银行业务（12%）合计约占收入的31.19%。公司在产业链中的位置是：作为特色精品券商，在部分投行业务领域具备竞争力，事件能否转化为可确认的经营增量则决定增量大小。只有完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，相关业务的增长才可能改善公司整体盈利。订单、收入确认、产品结构和毛利率变化还需与其他主业表现同时改善；事件关联停留在主题层面，未形成可持续订单或利润贡献会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 22379,
+            "stockCode": "600909.SH",
+            "stockName": "华安证券",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "间接参股长鑫科技，具备科创投资主题催化。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600909.SH",
+              "companyName": "华安证券",
+              "companyProfile": "公司主要从事证券经纪、证券投资咨询、与证券交易和证券投资活动有关的财务顾问、证券承销与保荐、证券自营、证券资产管理、融资融券、代销金融产品、证券投资基金代销、为期货公司提供中间介绍业务等业务。业务主要立足安徽，辐射全国，营业网点遍布安徽省各地级市以及70%以上县城，并在北京、上海、深圳和广州等主要城市设有家营业部以及投资银行、证券投资、资产管理、固定收益等业务部门。客户结构以中小散户为主，拥有一百多家证券营业部。近年来，公司抢抓市场机遇，坚持规范经营，深化内部改革和管理创新，做实传统业务和布局创新领域并重，在保持各项传统业务良好发展势头基础上，先后还取得直接投资业务资格、融资融券业务和中小企业私募债业务等资格。",
+              "profileSummary": "公司主要从事证券经纪、证券投资咨询、与证券交易和证券投资活动有关的财务顾问、证券承销与保荐、证券自营、证券资产管理、融资融券、代销金融产品、证券投资基金代销、为期货公司提供中间介绍业务等业务。近年来，公司抢抓市场机遇，坚持规范经营，深化内部改革和管理创新，做实传统业务和布局创新领域并重，在保持各项传统业务良好发展势头基础上，先后还取得直接投资业务资格、融资融券业务和中小企业私募债业务等资格。",
+              "majorProducts": "代销金融产品、融资融券、为期货公司提供中间介绍业务、证券承销与保荐、证券交易、证券经纪、证券投资活动有关的财务顾问、证券投资基金代销、证券投资咨询、证券资产管理、证券自营",
+              "revenueComposition": "证券经纪业务:34.63%;证券投资业务:30.57%;资产管理业务:13.67%;信用交易业务:13.56%;期货经纪业务:4.54%;投资银行业务:3.35%;公司总部及其他:1.01%;内部抵销:-1.33%",
+              "revenueSegments": [
+                {
+                  "name": "证券经纪业务",
+                  "sharePct": 34.63,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "证券投资业务",
+                  "sharePct": 30.57,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "资产管理业务",
+                  "sharePct": 13.67,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "信用交易业务",
+                  "sharePct": 13.56,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "期货经纪业务",
+                  "sharePct": 4.54,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "投资银行业务",
+                  "sharePct": 3.35,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "公司总部及其他",
+                  "sharePct": 1.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -1.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "信用交易业务",
+                    "category": "信用交易业务"
+                  },
+                  {
+                    "name": "债券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "期货经纪业务",
+                    "category": "期货经纪业务"
+                  },
+                  {
+                    "name": "证券保荐业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券承销业务",
+                    "category": "证券投资银行业务"
+                  },
+                  {
+                    "name": "证券经纪业务",
+                    "category": "证券经纪业务"
+                  }
+                ],
+                "knownProducts": [
+                  "期货经纪业务",
+                  "债券承销业务",
+                  "证券保荐业务",
+                  "证券承销业务",
+                  "证券经纪业务",
+                  "信用交易业务",
+                  "证券自营业务",
+                  "证券资管业务"
+                ],
+                "directSegmentCount": 5,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "华安证券的相关业务已决定公司大部分经营表现：证券经纪业务（34.63%）、证券投资业务（30.57%）合计约占收入的86.65%。公司与事件的直接业务联系是：间接参股长鑫科技，具备科创投资主题催化，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "1条低于3星的源记录已按当前关注口径排除。",
+      "1只标的未匹配到A股2025年报公司资料，多为非A股、未上市或新近上市公司。"
+    ]
   },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "7只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

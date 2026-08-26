@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
-  "status": "no_company_product_mapping",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
+  "status": "no_four_star_stocks",
   "event": {
     "mainId": "26350",
     "uid": "0RB7WE8A315HB",
@@ -9,65 +9,121 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 0,
     "mappedStockCount": 0,
-    "unmappedStockCount": 2,
-    "stocks": [
-      {
-        "sourceRowNumber": 1799,
-        "stockCode": "03813.HK",
-        "stockName": "宝胜国际",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1801,
-        "stockCode": "ADS.DE",
-        "stockName": "阿迪达斯 (adidas)",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 1799,
-        "stockCode": "03813.HK",
-        "stockName": "宝胜国际",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1801,
-        "stockCode": "ADS.DE",
-        "stockName": "阿迪达斯 (adidas)",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStockCount": 0,
+    "stocks": [],
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 0,
     "selectedCoreProductCount": 0,
     "selectedCompanyCoreProductCount": 0,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 0,
-    "downstreamCandidateCount": 0,
-    "shownUpstreamCount": 0,
-    "shownDownstreamCount": 0
+    "level7ProductCount": 1,
+    "relatedIndustryCandidateCount": 1,
+    "shownRelatedIndustryCount": 1
   },
-  "chain": {
-    "upstream": [],
-    "core": [],
-    "downstream": []
+  "productIndustryMap": {
+    "coreProducts": [],
+    "relatedIndustries": [
+      {
+        "code": "1210002781",
+        "name": "鞋服代工",
+        "description": "鞋服代工指为品牌提供生产制造服务。因具备全球供应链优势、业绩稳健及高分红潜力，且受益于海外去库存结束及订单回暖，其确定性与估值性价比受资金青睐，成为A股中兼具防御与成长属性的关注焦点。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "300979.SZ",
+            "stockName": "华利集团",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140194573",
+            "name": "鞋品代工",
+            "hierarchyPath": "纺织服装 > 服装家纺 > 鞋帽及其他 > 鞋服代工 > 鞋品代工 > 鞋品代工",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300979.SZ",
+                "stockName": "华利集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 1,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 1,
+    "candidateIndustryCount": 1,
+    "relatedIndustryCount": 1,
+    "stocks": [
+      {
+        "sourceRowNumber": 1806,
+        "stockCode": "300979.SZ",
+        "stockName": "华利集团",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210002781",
+        "name": "鞋服代工",
+        "description": "鞋服代工指为品牌提供生产制造服务。因具备全球供应链优势、业绩稳健及高分红潜力，且受益于海外去库存结束及订单回暖，其确定性与估值性价比受资金青睐，成为A股中兼具防御与成长属性的关注焦点。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "300979.SZ",
+            "stockName": "华利集团",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140194573",
+            "name": "鞋品代工",
+            "hierarchyPath": "纺织服装 > 服装家纺 > 鞋帽及其他 > 鞋服代工 > 鞋品代工 > 鞋品代工",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300979.SZ",
+                "stockName": "华利集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      }
+    ]
   },
   "industryAnalysis": {
     "status": "unavailable",
@@ -77,10 +133,105 @@
     "researchSources": [],
     "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 12,
+    "eligibleSourceRowCount": 1,
+    "totalStockCount": 1,
+    "groupCount": 1,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 3,
+    "excludedNonAShareCount": 8,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 1,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 1806,
+            "stockCode": "300979.SZ",
+            "stockName": "华利集团",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球领先的运动鞋履制造商，耐克是其核心客户之一，品牌订单波动对其产能利用率和盈利有直接影响。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300979.SZ",
+              "companyName": "华利集团",
+              "companyProfile": "公司从事运动鞋的产品开发设计、生产与销售，作为全球领先的运动鞋专业制造商，是国际知名运动休闲品牌的重要合作伙伴。公司主要产品包括运动休闲鞋、户外靴鞋、运动凉鞋/拖鞋等，覆盖跑步、健步、越野、徒步、球类、滑板、滑雪等专业运动、大众运动及日常通勤、时尚穿搭等着装场合。公司管理总部及开发设计中心位于广东中山，生产制造工厂位于中国、越南、印度尼西亚、多米尼加及缅甸等地，贸易中心设于香港及中山，是全球多家知名运动鞋履品牌的主要制造商和策略合作伙伴。集团拥有经验丰富的开发设计及技术团队，积累和沉淀了深厚的鞋履开发和制造功底，在鞋履开发和工艺流程方面拥有行业领先的技术水平。务实创新的管理团队和经验丰富、训练有素、热诚敬业的员工造就了集团长期稳定的经营，集团凭借良好的产品品质、突出的开发设计能力、快速响应能力和优质的服务成为客户的策略性联盟和伙伴。展望未来，我们仍将继续秉持“以人为本、快乐制鞋、科技管理、创造利润、代代相传、永续经营”的理念，在强化制鞋核心技术、改善生产制造过程、提供优质服务的同时，更肩负保障员工利益，有效利用地球资源的责任，以增进企业与员工、企业与环境的平衡和谐，打造最值得信赖的鞋类生产制造典范，成为全球鞋履制造业的领航者。",
+              "profileSummary": "公司从事运动鞋的产品开发设计、生产与销售，作为全球领先的运动鞋专业制造商，是国际知名运动休闲品牌的重要合作伙伴。公司主要产品包括运动休闲鞋、户外靴鞋、运动凉鞋/拖鞋等，覆盖跑步、健步、越野、徒步、球类、滑板、滑雪等专业运动、大众运动及日常通勤、时尚穿搭等着装场合。",
+              "majorProducts": "户外靴鞋、运动凉鞋/拖鞋、运动休闲鞋",
+              "revenueComposition": "运动休闲鞋:88.53%;运动凉鞋/拖鞋及其他:9.26%;户外鞋靴:2.14%;其他业务:0.08%",
+              "revenueSegments": [
+                {
+                  "name": "运动休闲鞋",
+                  "sharePct": 88.53,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "运动凉鞋/拖鞋及其他",
+                  "sharePct": 9.26,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "户外鞋靴",
+                  "sharePct": 2.14,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "鞋品代工",
+                    "category": "鞋品代工"
+                  }
+                ],
+                "knownProducts": [
+                  "鞋品代工"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "华利集团已经具备鞋品代工等业务能力，全球领先的运动鞋履制造商，耐克是其核心客户之一，品牌订单波动对其产能利用率和盈利有直接影响并非单纯概念映射。当前对应的收入被归入运动休闲鞋（88.53%）、运动凉鞋/拖鞋及其他（9.26%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，并最终反映在客户认证、新增订单、交付节奏、相关业务收入和毛利率上；客户验证或交付节奏低于预期，订单停留在小批量阶段会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "3条低于3星的源记录已按当前关注口径排除。",
+      "8条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26334",
@@ -9,10 +9,10 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 2,
-    "mappedStockCount": 2,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 1,
     "stocks": [
       {
         "sourceRowNumber": 1275,
@@ -20,8 +20,8 @@
         "stockName": "时代电气",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 27
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 1291,
@@ -30,342 +30,70 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 21
+        "anchorProductCount": 6
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 1275,
+        "stockCode": "688187.SH",
+        "stockName": "时代电气",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 48,
     "selectedCoreProductCount": 6,
     "selectedCompanyCoreProductCount": 6,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 42,
-    "downstreamCandidateCount": 68,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 59,
+    "relatedIndustryCandidateCount": 19,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
-        "code": "1140030801",
-        "name": "绕组",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140010600",
-          "1140032469"
-        ],
-        "linkedCoreProductNames": [
-          "油浸式变压器",
-          "电抗器"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140010191",
-        "name": "铁芯",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101",
-          "1140010600"
-        ],
-        "linkedCoreProductNames": [
-          "干式变压器",
-          "油浸式变压器"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140033394",
-        "name": "环氧绝缘件",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101",
-          "1140039977"
-        ],
-        "linkedCoreProductNames": [
-          "干式变压器",
-          "隔离开关"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140167762",
-        "name": "SF6绝缘气体",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140039977"
-        ],
-        "linkedCoreProductNames": [
-          "隔离开关"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140167859",
-        "name": "主拐臂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140039977"
-        ],
-        "linkedCoreProductNames": [
-          "隔离开关"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030831",
-        "name": "分接开关",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140010600"
-        ],
-        "linkedCoreProductNames": [
-          "油浸式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140167860",
-        "name": "单机输出拐臂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140039977"
-        ],
-        "linkedCoreProductNames": [
-          "隔离开关"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140055587",
-        "name": "垫块",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
-        ],
-        "linkedCoreProductNames": [
-          "干式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140031011",
-        "name": "接线座",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140039977"
-        ],
-        "linkedCoreProductNames": [
-          "隔离开关"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140167857",
-        "name": "操作绝缘子",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140039977"
-        ],
-        "linkedCoreProductNames": [
-          "隔离开关"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140031046",
-        "name": "支持绝缘子",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140039977"
-        ],
-        "linkedCoreProductNames": [
-          "隔离开关"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023555",
-        "name": "气体继电器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140010600"
-        ],
-        "linkedCoreProductNames": [
-          "油浸式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030829",
-        "name": "油枕",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140010600"
-        ],
-        "linkedCoreProductNames": [
-          "油浸式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140054611",
-        "name": "油箱",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140010600"
-        ],
-        "linkedCoreProductNames": [
-          "油浸式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140039977",
-        "name": "隔离开关",
-        "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 隔离开关",
+        "code": "1140029197",
+        "name": "复合绝缘子",
+        "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 绝缘子 > 绝缘子 > 复合绝缘子",
         "industryPath": [
           "电气设备",
           "电网设备",
-          "输变电设备",
-          "开关设备",
-          "开关设备",
-          "隔离开关"
+          "线缆部件及其他",
+          "绝缘子",
+          "绝缘子",
+          "复合绝缘子"
         ],
         "level5Industry": {
-          "code": "1210000339",
-          "name": "开关设备"
+          "code": "1210000345",
+          "name": "绝缘子"
         },
         "level6Industry": {
-          "code": "1210000559",
-          "name": "开关设备"
+          "code": "1200002762",
+          "name": "绝缘子"
         },
         "level7Product": {
-          "code": "1140039977",
-          "name": "隔离开关"
+          "code": "1140029197",
+          "name": "复合绝缘子"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002028.SZ",
             "stockName": "思源电气",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 22,
-        "downstreamCount": 24,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
-          "开关设备",
-          "输变电设备",
-          "电网设备"
-        ]
-      },
-      {
-        "code": "1140032469",
-        "name": "电抗器",
-        "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 电抗器 > 电抗器 > 电抗器",
-        "industryPath": [
-          "电气设备",
-          "电网设备",
-          "输变电设备",
-          "电抗器",
-          "电抗器",
-          "电抗器"
-        ],
-        "level5Industry": {
-          "code": "1210003126",
-          "name": "电抗器"
-        },
-        "level6Industry": {
-          "code": "1210003202",
-          "name": "电抗器"
-        },
-        "level7Product": {
-          "code": "1140032469",
-          "name": "电抗器"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "002028.SZ",
-            "stockName": "思源电气",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 5,
-        "downstreamCount": 24,
-        "relevanceScore": 11,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "电抗器",
-          "输变电设备",
+          "绝缘子",
+          "线缆部件及其他",
           "电网设备"
         ]
       },
@@ -394,18 +122,15 @@
           "name": "干式变压器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002028.SZ",
             "stockName": "思源电气",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 8,
-        "downstreamCount": 13,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -439,22 +164,61 @@
           "name": "油浸式变压器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002028.SZ",
             "stockName": "思源电气",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 7,
-        "downstreamCount": 1,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
           "变压器",
+          "输变电设备",
+          "电网设备"
+        ]
+      },
+      {
+        "code": "1140032469",
+        "name": "电抗器",
+        "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 电抗器 > 电抗器 > 电抗器",
+        "industryPath": [
+          "电气设备",
+          "电网设备",
+          "输变电设备",
+          "电抗器",
+          "电抗器",
+          "电抗器"
+        ],
+        "level5Industry": {
+          "code": "1210003126",
+          "name": "电抗器"
+        },
+        "level6Industry": {
+          "code": "1210003202",
+          "name": "电抗器"
+        },
+        "level7Product": {
+          "code": "1140032469",
+          "name": "电抗器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002028.SZ",
+            "stockName": "思源电气",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 11,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "电抗器",
           "输变电设备",
           "电网设备"
         ]
@@ -484,18 +248,15 @@
           "name": "陶瓷绝缘子"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002028.SZ",
             "stockName": "思源电气",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 4,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -505,275 +266,624 @@
         ]
       },
       {
-        "code": "1140029197",
-        "name": "复合绝缘子",
-        "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 绝缘子 > 绝缘子 > 复合绝缘子",
+        "code": "1140039977",
+        "name": "隔离开关",
+        "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 隔离开关",
         "industryPath": [
           "电气设备",
           "电网设备",
-          "线缆部件及其他",
-          "绝缘子",
-          "绝缘子",
-          "复合绝缘子"
+          "输变电设备",
+          "开关设备",
+          "开关设备",
+          "隔离开关"
         ],
         "level5Industry": {
-          "code": "1210000345",
-          "name": "绝缘子"
+          "code": "1210000339",
+          "name": "开关设备"
         },
         "level6Industry": {
-          "code": "1200002762",
-          "name": "绝缘子"
+          "code": "1210000559",
+          "name": "开关设备"
         },
         "level7Product": {
-          "code": "1140029197",
-          "name": "复合绝缘子"
+          "code": "1140039977",
+          "name": "隔离开关"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002028.SZ",
             "stockName": "思源电气",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 2,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
-          "绝缘子",
-          "线缆部件及其他",
+          "开关设备",
+          "输变电设备",
           "电网设备"
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140032122",
-        "name": "供配电系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140010600"
+        "code": "1210000339",
+        "name": "开关设备",
+        "description": "开关设备指控制电路通断的电力装置。A股中该行业受关注，主要因电网升级、新能源并网及特高压建设带来强劲需求，叠加国产替代与技术迭代预期，具备高景气度与成长潜力，是电力基础设施投资的核心受益板块。",
+        "stockCount": 5,
+        "starWeight": 22,
+        "level7ProductCount": 7,
+        "relevanceScore": 246,
+        "stocks": [
+          {
+            "stockCode": "601179.SH",
+            "stockName": "中国西电",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600312.SH",
+            "stockName": "平高电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000400.SZ",
+            "stockName": "许继电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002028.SZ",
+            "stockName": "思源电气",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002452.SZ",
+            "stockName": "长高电气",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "油浸式变压器"
+        "products": [
+          {
+            "code": "1140039977",
+            "name": "隔离开关",
+            "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 隔离开关",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "601179.SH",
+                "stockName": "中国西电",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600312.SH",
+                "stockName": "平高电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002028.SZ",
+                "stockName": "思源电气",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002452.SZ",
+                "stockName": "长高电气",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 28,
+            "matchedTerms": [
+              "开关设备",
+              "隔离开关"
+            ]
+          },
+          {
+            "code": "1140166300",
+            "name": "气体绝缘金属封闭开关设备(GIS)",
+            "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 气体绝缘金属封闭开关设备(GIS)",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600312.SH",
+                "stockName": "平高电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000400.SZ",
+                "stockName": "许继电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002452.SZ",
+                "stockName": "长高电气",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "开关设备",
+              "gis"
+            ]
+          },
+          {
+            "code": "1140031957",
+            "name": "高压成套开关设备",
+            "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 高压成套开关设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601179.SH",
+                "stockName": "中国西电",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "开关设备"
+            ]
+          },
+          {
+            "code": "1140010603",
+            "name": "低压成套设备",
+            "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 低压成套设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002452.SZ",
+                "stockName": "长高电气",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "开关设备"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140010488",
-        "name": "储能系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
+        "code": "1200000371",
+        "name": "通用电控设备",
+        "description": "通用电控指电机控制与驱动系统，是工业自动化核心。因契合智能制造、机器人及新能源高景气赛道，具备国产替代潜力，业绩增长确定性强，故备受市场关注。",
+        "stockCount": 3,
+        "starWeight": 15,
+        "level7ProductCount": 2,
+        "relevanceScore": 36,
+        "stocks": [
+          {
+            "stockCode": "601179.SH",
+            "stockName": "中国西电",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600406.SH",
+            "stockName": "国电南瑞",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000400.SZ",
+            "stockName": "许继电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
         ],
-        "linkedCoreProductNames": [
-          "干式变压器"
+        "products": [
+          {
+            "code": "1140132592",
+            "name": "柔性直流输电换流阀",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变流器 > 柔性直流输电换流阀",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "601179.SH",
+                "stockName": "中国西电",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600406.SH",
+                "stockName": "国电南瑞",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000400.SZ",
+                "stockName": "许继电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": [
+              "换流阀"
+            ]
+          },
+          {
+            "code": "1140132593",
+            "name": "高压直流输电换流阀",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变流器 > 高压直流输电换流阀",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000400.SZ",
+                "stockName": "许继电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 11,
+    "mappedStockCount": 10,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 59,
+    "candidateIndustryCount": 19,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 1275,
+        "stockCode": "688187.SH",
+        "stockName": "时代电气",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140032115",
-        "name": "光伏能源发电站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
-        ],
-        "linkedCoreProductNames": [
-          "干式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1276,
+        "stockCode": "300831.SZ",
+        "stockName": "ST派瑞",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 10
       },
       {
-        "code": "1140077776",
-        "name": "发电厂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140039977"
-        ],
-        "linkedCoreProductNames": [
-          "隔离开关"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1278,
+        "stockCode": "833394.BJ",
+        "stockName": "民士达",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140164928",
-        "name": "变频电器系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032469"
-        ],
-        "linkedCoreProductNames": [
-          "电抗器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1288,
+        "stockCode": "600312.SH",
+        "stockName": "平高电气",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140032119",
-        "name": "商业民用建筑配电站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
-        ],
-        "linkedCoreProductNames": [
-          "干式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1289,
+        "stockCode": "601179.SH",
+        "stockName": "中国西电",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 18
       },
       {
-        "code": "1140032117",
-        "name": "岸电系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
-        ],
-        "linkedCoreProductNames": [
-          "干式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1290,
+        "stockCode": "000400.SZ",
+        "stockName": "许继电气",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140022470",
-        "name": "工矿企业",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
-        ],
-        "linkedCoreProductNames": [
-          "干式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1291,
+        "stockCode": "002028.SZ",
+        "stockName": "思源电气",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 21
       },
       {
-        "code": "1140011108",
-        "name": "悬式绝缘子",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140010670"
-        ],
-        "linkedCoreProductNames": [
-          "陶瓷绝缘子"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1292,
+        "stockCode": "002452.SZ",
+        "stockName": "长高电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140011420",
-        "name": "拉线绝缘子",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140010670"
-        ],
-        "linkedCoreProductNames": [
-          "陶瓷绝缘子"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1294,
+        "stockCode": "600089.SH",
+        "stockName": "特变电工",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140077179",
-        "name": "数据中心",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
-        ],
-        "linkedCoreProductNames": [
-          "干式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1295,
+        "stockCode": "600550.SH",
+        "stockName": "保变电气",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140032116",
-        "name": "核反应堆电站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
+        "sourceRowNumber": 1297,
+        "stockCode": "600406.SH",
+        "stockName": "国电南瑞",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 6
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210000339",
+        "name": "开关设备",
+        "description": "开关设备指控制电路通断的电力装置。A股中该行业受关注，主要因电网升级、新能源并网及特高压建设带来强劲需求，叠加国产替代与技术迭代预期，具备高景气度与成长潜力，是电力基础设施投资的核心受益板块。",
+        "stockCount": 5,
+        "starWeight": 22,
+        "level7ProductCount": 7,
+        "relevanceScore": 246,
+        "stocks": [
+          {
+            "stockCode": "601179.SH",
+            "stockName": "中国西电",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600312.SH",
+            "stockName": "平高电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000400.SZ",
+            "stockName": "许继电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002028.SZ",
+            "stockName": "思源电气",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002452.SZ",
+            "stockName": "长高电气",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "干式变压器"
+        "products": [
+          {
+            "code": "1140039977",
+            "name": "隔离开关",
+            "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 隔离开关",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "601179.SH",
+                "stockName": "中国西电",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600312.SH",
+                "stockName": "平高电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002028.SZ",
+                "stockName": "思源电气",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002452.SZ",
+                "stockName": "长高电气",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 28,
+            "matchedTerms": [
+              "开关设备",
+              "隔离开关"
+            ]
+          },
+          {
+            "code": "1140166300",
+            "name": "气体绝缘金属封闭开关设备(GIS)",
+            "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 气体绝缘金属封闭开关设备(GIS)",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600312.SH",
+                "stockName": "平高电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000400.SZ",
+                "stockName": "许继电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002452.SZ",
+                "stockName": "长高电气",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 26,
+            "matchedTerms": [
+              "开关设备",
+              "gis"
+            ]
+          },
+          {
+            "code": "1140031957",
+            "name": "高压成套开关设备",
+            "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 高压成套开关设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601179.SH",
+                "stockName": "中国西电",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "开关设备"
+            ]
+          },
+          {
+            "code": "1140010603",
+            "name": "低压成套设备",
+            "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 低压成套设备",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002452.SZ",
+                "stockName": "长高电气",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "开关设备"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140055106",
-        "name": "水力发电站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
+        "code": "1200000371",
+        "name": "通用电控设备",
+        "description": "通用电控指电机控制与驱动系统，是工业自动化核心。因契合智能制造、机器人及新能源高景气赛道，具备国产替代潜力，业绩增长确定性强，故备受市场关注。",
+        "stockCount": 3,
+        "starWeight": 15,
+        "level7ProductCount": 2,
+        "relevanceScore": 36,
+        "stocks": [
+          {
+            "stockCode": "601179.SH",
+            "stockName": "中国西电",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600406.SH",
+            "stockName": "国电南瑞",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000400.SZ",
+            "stockName": "许继电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
         ],
-        "linkedCoreProductNames": [
-          "干式变压器"
+        "products": [
+          {
+            "code": "1140132592",
+            "name": "柔性直流输电换流阀",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变流器 > 柔性直流输电换流阀",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "601179.SH",
+                "stockName": "中国西电",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600406.SH",
+                "stockName": "国电南瑞",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000400.SZ",
+                "stockName": "许继电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": [
+              "换流阀"
+            ]
+          },
+          {
+            "code": "1140132593",
+            "name": "高压直流输电换流阀",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变流器 > 高压直流输电换流阀",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000400.SZ",
+                "stockName": "许继电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140032114",
-        "name": "火力发电站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1137000101"
-        ],
-        "linkedCoreProductNames": [
-          "干式变压器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -788,9 +898,1033 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 38,
+    "eligibleSourceRowCount": 11,
+    "totalStockCount": 11,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 27,
+    "excludedNonAShareCount": 0,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 11,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 1288,
+            "stockCode": "600312.SH",
+            "stockName": "平高电气",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内高压、特高压开关龙头企业，在国网特高压招标中持续高份额中标。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600312.SH",
+              "companyName": "平高电气",
+              "companyProfile": "公司是中国电气装备集团有限公司控股的上市公司，于2001年2月21日在上海证券交易所挂牌上市。公司是国家电工行业重大技术装备支柱企业，我国高压、超高压、特高压开关及电站成套设备研发、制造基地。公司先后荣获“全国五一劳动奖章”“中国电气产品制造十大领军企业”“中国电力设备十佳服务明星企业”“中国企业信息化500强”“国家级守合同重信用单位”“国家火炬计划重点高新技术企业”“全国质量管理创新基地”“国家电网特高压交流试验示范工程特殊贡献单位”“国家级绿色工厂”“国家绿色供应链管理企业”“全国质量奖”“国家级制造业单项冠军企业”等荣誉。",
+              "profileSummary": "公司先后荣获“全国五一劳动奖章”“中国电气产品制造十大领军企业”“中国电力设备十佳服务明星企业”“中国企业信息化500强”“国家级守合同重信用单位”“国家火炬计划重点高新技术企业”“全国质量管理创新基地”“国家电网特高压交流试验示范工程特殊贡献单位”“国家级绿色工厂”“国家绿色供应链管理企业”“全国质量奖”“国家级制造业单项冠军企业”等荣誉。",
+              "majorProducts": "10kV 高效节能配电变压器、10kV～1100kV 交流隔离开关及接地开关、10kV～1120kV 直流隔离开关及接地开关、72.5～1100kV SF6 气体绝缘封闭式组合电器(GIS/H-GIS)、72.5～1100kV 敞开式 SF6 断路器、72.5～1100kV 六氟化硫罐式断路器开关设备(T-GCB)、SF6 气体回收充放装置、低压成套、复合绝缘子、液压/弹簧机构、预装式变电站、真空灭弧室等开关核心配套零部件、智能配电自动化终端",
+              "revenueComposition": "高压板块:61.89%;配网板块:26.08%;运维检修及其他:9.37%;国际业务板块:2.06%;其他业务:0.6%",
+              "revenueSegments": [
+                {
+                  "name": "高压板块",
+                  "sharePct": 61.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配网板块",
+                  "sharePct": 26.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运维检修及其他",
+                  "sharePct": 9.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "国际业务板块",
+                  "sharePct": 2.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "开关产品运维检修",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "接地开关",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "气体绝缘金属封闭开关设备(GIS)",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "隔离开关",
+                    "category": "开关设备"
+                  }
+                ],
+                "knownProducts": [
+                  "电极锅炉",
+                  "气体绝缘金属封闭线路(GIL)",
+                  "SF6瓷柱式断路器",
+                  "SF6罐式断路器",
+                  "真空断路器",
+                  "隔离断路器",
+                  "配电变压器",
+                  "预装式变电站"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "平高电气拥有开关产品运维检修、接地开关、气体绝缘金属封闭开关设备(GIS)，其产业链位置与国内高压、特高压开关龙头企业，在国网特高压招标中持续高份额中标一致；当前的高压板块（61.89%）、配网板块（26.08%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由商业化进度和订单兑现决定，并需完成“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”。只有客户认证、新增订单、交付节奏、相关业务收入和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；客户验证或交付节奏低于预期，订单停留在小批量阶段则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 1289,
+            "stockCode": "601179.SH",
+            "stockName": "中国西电",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内输配电装备制造龙头，产品覆盖特高压交直流输电核心设备，持续高额中标国网项目。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601179.SH",
+              "companyName": "中国西电",
+              "companyProfile": "公司是央企中国电气装备集团有限公司直接控股的上市公司，是以我国“一五”计划期间重点建设工程项目为基础发展形成的，集科研、开发、制造、服务、贸易、金融为一体的输配电装备产业集团，是我国产品种类最全、成套能力最强的高压、超高压、特高压交直流输变电产品研发生产制造基地。公司具有参与全球各类型输配电工程技术服务项目的全套技术实力，总体技术能力已达世界先进水平。公司依托国家能源战略，紧扣国家电力建设和电力输送需要，产品曾先后用于我国第一条330kV、550kV高压交流输电工程，第一条750kV超高压交流输电工程，第一条±100kV直流输电工程，第一条±500kV超高压直流输电工程，第一条±800kV特高压直流输电工程，第一个西北至华北联网背靠背直流输电工程以及“三峡工程”“西电东送”等国家重点工程项目。其中，750kV变压器、电抗器、避雷器、电容式电压互感器和800kV隔离开关等产品已在西北750kV示范工程成功运行，国内首台800kV双断口罐式断路器在银川东变电站已经投入运行。公司还在国内首先进行了交流1100kV和直流±800kV特高压产品的研发和技术储备，为国家百万伏示范线路“晋东南－南阳－荆门示范工程”提供了1000kVGIS、电抗器、电容式电压互感器、避雷器、接地开关、绝缘子等产品，为“云南－广州”±800kV特高压直流输电工程提供了变压器、换流阀、电容器、避雷器等产品，为我国国民经济建设作出了突出贡献。作为我国输配电装备制造业中走出去的重要力量，公司为80多个国家和地区提供了可靠的产品和优质的服务，在全球市场建立了“XD”品牌良好的声誉和形象。",
+              "profileSummary": "公司是央企中国电气装备集团有限公司直接控股的上市公司，是以我国“一五”计划期间重点建设工程项目为基础发展形成的，集科研、开发、制造、服务、贸易、金融为一体的输配电装备产业集团，是我国产品种类最全、成套能力最强的高压、超高压、特高压交直流输变电产品研发生产制造基地。作为我国输配电装备制造业中走出去的重要力量，公司为80多个国家和地区提供了可靠的产品和优质的服务，在全球市场建立了“XD”品牌良好的声誉和形象。",
+              "majorProducts": "CT、CVT、GCB、GIS、PT、并联电抗器、电力变压器、电力电容器、隔离开关、换流变压器、接地开关、绝缘子、平波电抗器、套管、氧化锌避雷器、直流输电换流阀",
+              "revenueComposition": "变压器:42.33%;开关:36.54%;电力电子器件:16.68%;研发检测及二次设备:3.06%;其他业务:1.39%",
+              "revenueSegments": [
+                {
+                  "name": "变压器",
+                  "sharePct": 42.33,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "开关",
+                  "sharePct": 36.54,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电力电子器件",
+                  "sharePct": 16.68,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "研发检测及二次设备",
+                  "sharePct": 3.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "隔离开关",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "高压成套开关设备",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "互感器",
+                    "category": "电网设备零部件"
+                  },
+                  {
+                    "name": "复合绝缘子",
+                    "category": "绝缘子"
+                  },
+                  {
+                    "name": "干式变压器",
+                    "category": "干式变压器"
+                  },
+                  {
+                    "name": "有源电力滤波器(APF)",
+                    "category": "电能质量治理设备"
+                  }
+                ],
+                "knownProducts": [
+                  "输变电工程",
+                  "互感器",
+                  "电力系统用避雷器",
+                  "电容式电压互感器",
+                  "超/特高压直流输电晶闸管换流阀",
+                  "高压断路器",
+                  "复合绝缘子",
+                  "陶瓷绝缘子"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中国西电的事件暴露较为直接：变压器（42.33%）、开关（36.54%）合计约占收入的78.87%，相关业务不是边缘尝试；具体业务抓手是：国内输配电装备制造龙头，产品覆盖特高压交直流输电核心设备，持续高额中标国网项目。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，尤其需要用客户认证、新增订单、交付节奏、相关业务收入和毛利率区分行业普涨与公司自身竞争力。如果客户验证或交付节奏低于预期，订单停留在小批量阶段，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 1290,
+            "stockCode": "000400.SZ",
+            "stockName": "许继电气",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内电力装备龙头，特高压换流阀和直流控制保护系统核心供应商，在国网招标中持续中标。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000400.SZ",
+              "companyName": "许继电气",
+              "companyProfile": "公司是中国电气装备集团有限公司控股的上市公司，1997年在深圳证券交易所挂牌上市。公司聚焦特高压、智能电网、新能源、电动汽车充换电、轨道交通及工业智能化等核心业务，综合能源服务、智能运维、电力物联网等新兴业务，产业链条涵盖发、输、变、配、用各环节，产品技术贯穿全电压、交直流、一二次、软硬件，是我国电力装备行业技术门类全、产品多、综合配套能力强的高科技企业。公司是全国首批创新型企业和国家技术创新示范企业，先后荣获“国家科技进步特等奖”、首届“中国工业大奖”表彰奖、中国驰名商标、“河南省省长质量奖”、中国电气工业百强、中国电气工业领军企业、中国机械工业大型重点骨干企业、中国电子信息百强企业、国家安全生产标准化二级企业、2024中国电气工业数智化创新解决方案TOP10、“央企ESG·先锋100指数”、河南省头雁企业、河南高成长性企业100强、河南企业100强、河南制造业企业100强等多项荣誉。连续12年荣获深圳证券交易所信息披露工作“优秀”评价。面向未来，公司将积极服务“双碳”和新型电力系统建设，立足新发展阶段，贯彻新发展理念，构建新发展格局，强化管理、提质增效，加快建设世界一流企业，为我国电力装备事业高质量发展贡献积极力量。",
+              "profileSummary": "公司聚焦特高压、智能电网、新能源、电动汽车充换电、轨道交通及工业智能化等核心业务，综合能源服务、智能运维、电力物联网等新兴业务，产业链条涵盖发、输、变、配、用各环节，产品技术贯穿全电压、交直流、一二次、软硬件，是我国电力装备行业技术门类全、产品多、综合配套能力强的高科技企业。面向未来，公司将积极服务“双碳”和新型电力系统建设，立足新发展阶段，贯彻新发展理念，构建新发展格局，强化管理、提质增效，加快建设世界一流企业，为我国电力装备事业高…",
+              "majorProducts": "顺特干式变压器、许继EMS加工服务、许继WGL-800故障录波分析装置、许继电力系统线路保护成套装置、许继电铁二次设备及城市轻轨控制设备、许继电子式、感应式电能表、许继电子式电度表、许继继电保护测试设备、许继继电保护及故障信息系统、许继继电器、许继母线保护及其他、许继全数字化变电站、许继微机综合保护装置、许继箱式变电站、许继中、低压开关设备",
+              "revenueComposition": "智能变配电系统:27.39%;智能电表:26.32%;智能中压供用电设备:21.01%;新能源及系统集成:9.48%;充换电设备及其它制造服务:9.01%;直流输电系统:6.79%",
+              "revenueSegments": [
+                {
+                  "name": "智能变配电系统",
+                  "sharePct": 27.39,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "智能电表",
+                  "sharePct": 26.32,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "智能中压供用电设备",
+                  "sharePct": 21.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源及系统集成",
+                  "sharePct": 9.48,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "充换电设备及其它制造服务",
+                  "sharePct": 9.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "直流输电系统",
+                  "sharePct": 6.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "气体绝缘金属封闭开关设备(GIS)",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "交流充电桩",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "智慧配网终端",
+                    "category": "电力IT"
+                  },
+                  {
+                    "name": "智能电表",
+                    "category": "电表"
+                  },
+                  {
+                    "name": "柔性直流输电换流阀",
+                    "category": "变流器"
+                  },
+                  {
+                    "name": "直流充电桩",
+                    "category": "充电桩"
+                  }
+                ],
+                "knownProducts": [
+                  "电子制造加工服务(EMS)",
+                  "交流充电桩",
+                  "直流充电桩",
+                  "岸电电源",
+                  "智能电表",
+                  "配电自动化系统",
+                  "全光纤直流电流互感器",
+                  "直流分压器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "许继电气的事件逻辑具备真实业务底座，但尚不足以代表全部公司：智能电表占收入的26.32%。公司与事件的具体联系在于：国内电力装备龙头，特高压换流阀和直流控制保护系统核心供应商，在国网招标中持续中标，对应的核心变量是商业化进度和订单兑现。若这一变量沿着“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，客户认证、新增订单、交付节奏、相关业务收入和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；客户验证或交付节奏低于预期，订单停留在小批量阶段则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 1294,
+            "stockCode": "600089.SH",
+            "stockName": "特变电工",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球领先的输变电解决方案服务商，特高压变压器、电抗器等核心设备供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600089.SH",
+              "companyName": "特变电工",
+              "companyProfile": "公司成立于1993年，1997年6月18日在上海证券交易所挂牌上市。公司是为全球能源事业提供绿色智慧系统解决方案的服务商，致力于“绿色发展、低碳发展”，是国家级高新技术企业集团和中国大型能源装备制造企业集团，打造了以优势清洁能源资源为基础，输变电高端装备智造、硅基新能源、铝电子新材料“一高两新”国家战略性循环经济产业链。",
+              "profileSummary": "公司是为全球能源事业提供绿色智慧系统解决方案的服务商，致力于“绿色发展、低碳发展”，是国家级高新技术企业集团和中国大型能源装备制造企业集团，打造了以优势清洁能源资源为基础，输变电高端装备智造、硅基新能源、铝电子新材料“一高两新”国家战略性循环经济产业链。",
+              "majorProducts": "变压器、电极箔、电力及热力生产与供应、电线电缆、电子铝箔、多晶硅生产、风电、光伏电站的建设及运营、高纯铝、国际成套系统集成、铝及合金制品、煤炭、逆变器",
+              "revenueComposition": "电气设备:27.5%;煤炭业务:17.43%;电线电缆:16%;新能源产品及工程:13.93%;发电业务:7.38%;铝电子新材料、铝及合金制品:6.48%;输变电成套工程:5.06%;黄金:2.54%;其他业务:1.71%;其他:1.41%;物流贸易:0.57%",
+              "revenueSegments": [
+                {
+                  "name": "电气设备",
+                  "sharePct": 27.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "煤炭业务",
+                  "sharePct": 17.43,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电线电缆",
+                  "sharePct": 16.0,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "新能源产品及工程",
+                  "sharePct": 13.93,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "发电业务",
+                  "sharePct": 7.38,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "铝电子新材料、铝及合金制品",
+                  "sharePct": 6.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "输变电成套工程",
+                  "sharePct": 5.06,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "黄金",
+                  "sharePct": 2.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物流贸易",
+                  "sharePct": 0.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "干式变压器",
+                    "category": "干式变压器"
+                  },
+                  {
+                    "name": "油浸式变压器",
+                    "category": "油浸式变压器"
+                  },
+                  {
+                    "name": "电线电缆",
+                    "category": "普通电力电缆"
+                  },
+                  {
+                    "name": "输变电工程",
+                    "category": "输变电工程"
+                  }
+                ],
+                "knownProducts": [
+                  "燃煤发电",
+                  "光伏电站工程",
+                  "风电场工程",
+                  "输变电工程",
+                  "高纯铝",
+                  "电子铝箔",
+                  "电极铝箔",
+                  "铝合金"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 4
+              }
+            },
+            "analysis": "特变电工的事件逻辑具备真实业务底座，但尚不足以代表全部公司：电线电缆占收入的16%。公司与事件的具体联系在于：全球领先的输变电解决方案服务商，特高压变压器、电抗器等核心设备供应商，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 1297,
+            "stockCode": "600406.SH",
+            "stockName": "国电南瑞",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "电网自动化及保护领域绝对龙头，特高压换流阀及直流控制保护系统核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600406.SH",
+              "companyName": "国电南瑞",
+              "companyProfile": "公司以能源电力智能化为核心，致力于成为能源互联网整体解决方案提供商。公司深耕自动化技术、柔性技术和数字技术，为能源电力、市政公用、水利水务、轨道交通、石化工矿等多领域提供高价值软硬件产品与整体解决方案，产品和服务覆盖全国及100多个国家和地区。凭借深厚的技术积淀与品牌壁垒，公司在电网调度自动化、继电保护、柔性输电、新能源并网控制等核心细分领域市场份额行业领先，竞争优势明显。公司获得多项国家级资质认定，软件产品入选“中国十大创新软件产品”；所属多家单位获得国家级制造业单项冠军荣誉，数量位居行业首位，充分彰显了公司的行业引领力与技术硬实力。",
+              "profileSummary": "公司以能源电力智能化为核心，致力于成为能源互联网整体解决方案提供商。公司深耕自动化技术、柔性技术和数字技术，为能源电力、市政公用、水利水务、轨道交通、石化工矿等多领域提供高价值软硬件产品与整体解决方案，产品和服务覆盖全国及100多个国家和地区。",
+              "majorProducts": "国电南瑞AGC自动发电控制软件包、国电南瑞变电站自动化系统、国电南瑞电力市场、国电南瑞电网调度自动化、国电南瑞轨道交通自动化、国电南瑞能量管理系统、国电南瑞农电自动化、国电南瑞配网自动化、国电南瑞实时分布监控系统、国电南瑞市政及工业控制自动化",
+              "revenueComposition": "智能电网:50.46%;能源低碳:25.26%;数能融合:18.58%;工业互联:4.55%;集成及其他:1.04%;其他业务:0.11%",
+              "revenueSegments": [
+                {
+                  "name": "智能电网",
+                  "sharePct": 50.46,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "能源低碳",
+                  "sharePct": 25.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "数能融合",
+                  "sharePct": 18.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业互联",
+                  "sharePct": 4.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "集成及其他",
+                  "sharePct": 1.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "柔性直流输电换流阀",
+                    "category": "变流器"
+                  },
+                  {
+                    "name": "变电站综合自动化系统",
+                    "category": "电网自动化"
+                  },
+                  {
+                    "name": "电网调度系统",
+                    "category": "电网自动化"
+                  },
+                  {
+                    "name": "输变电自动化系统",
+                    "category": "电网自动化"
+                  },
+                  {
+                    "name": "配电自动化系统",
+                    "category": "电网自动化"
+                  },
+                  {
+                    "name": "电压电流监测装置",
+                    "category": "电流电压测量仪器"
+                  }
+                ],
+                "knownProducts": [
+                  "发电机励磁系统",
+                  "抽水蓄能机组",
+                  "电压电流监测装置",
+                  "变电站综合自动化系统",
+                  "电网调度系统",
+                  "输变电自动化系统",
+                  "配电自动化系统",
+                  "断路器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "国电南瑞的智能电网（50.46%）覆盖范围较宽，其中能够承载柔性直流输电换流阀、变电站综合自动化系统、电网调度系统，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：电网自动化及保护领域绝对龙头，特高压换流阀及直流控制保护系统核心供应商。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 1275,
+            "stockCode": "688187.SH",
+            "stockName": "时代电气",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内大功率半导体器件领先企业，高压IGBT产品是特高压柔直换流阀核心器件，打破国外垄断。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688187.SH",
+              "companyName": "时代电气",
+              "companyProfile": "公司立足于交通和能源两大赛道，以创一流和高质量发展为目标，始终坚持创新驱动和同心多元化发展，致力于为社会提供安全、智能、绿色、舒适的高端装备，励志成为交通与能源领域电气系统全面解决方案全球首选供应商和世界一流专业领军示范企业。经过长期的积淀与发展，目前已形成了“基础器件+装置与系统+整机与工程”的完整产业链结构，产业涉及轨道交通、新能源发电、电力电子器件、乘用车电驱、传感器、工业传动、海工装备等领域；具备完备的供应链体系、生产制造体系、营销及售后服务网络，业务遍及全球20多个国家和地区；主导制定了多项国际标准，累计获得中国专利金奖、国家科学进步二等奖等各类科技奖励百余项，锤炼了一支以院士为核心的高端技术人才队伍，是一家拥有自主知识产权的高科技企业，具有广阔的发展空间和前景。公司始终践行央企担当，积极投身国家重大战略。作为中国电气化铁路装备事业的开拓者和领先者，致力于被誉为列车“心脏”和“大脑”的牵引传动和控制系统自主研发及产业化，持续领跑国内轨道交通电气系统市场，支撑了我国“一带一路”、“高端装备走出去的”目标；在建设现代化产业体系，加快构建新发展格局的新时期，牢牢把握新一轮科技革命和产业变革历史发展机遇，纵深推进战略性新兴产业发展，半导体领域已成为国内头部企业；新能源发电、新能源汽车等绿色装备进入了行业第一梯队，充分发挥了国企在构建安全稳健、自主可控的产业链供应链上发挥了积极作用。",
+              "profileSummary": "公司立足于交通和能源两大赛道，以创一流和高质量发展为目标，始终坚持创新驱动和同心多元化发展，致力于为社会提供安全、智能、绿色、舒适的高端装备，励志成为交通与能源领域电气系统全面解决方案全球首选供应商和世界一流专业领军示范企业。经过长期的积淀与发展，目前已形成了“基础器件+装置与系统+整机与工程”的完整产业链结构，产业涉及轨道交通、新能源发电、电力电子器件、乘用车电驱、传感器、工业传动、海工装备等领域；具备完备的供应链体系、生产制造体系…",
+              "majorProducts": "功率半导体器件、轨道工程机械、轨道交通电气装备、通信信号系统",
+              "revenueComposition": "轨道交通装备:55.07%;新兴装备:44.53%;其他业务:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "轨道交通装备",
+                  "sharePct": 55.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新兴装备",
+                  "sharePct": 44.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "IGBT模块",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "IGBT芯片",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "碳化硅MOSFET(氧化物场效应晶体管)",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "碳化硅SBD(肖特基二极管)",
+                    "category": "功率二极管"
+                  }
+                ],
+                "knownProducts": [
+                  "接触网作业车",
+                  "动车组车载接触网运行状态检测装置(3C)",
+                  "机车无线重联控制系统",
+                  "机车自动驾驶系统",
+                  "机车车载安全防护系统(6A)",
+                  "轨道交通再生能量回馈装置",
+                  "轨道交通智能供电系统",
+                  "轨道交通智能电分相装置"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "时代电气与新闻之间有明确产品抓手：IGBT模块、IGBT芯片、碳化硅MOSFET(氧化物场效应晶体管)，对应国内大功率半导体器件领先企业，高压IGBT产品是特高压柔直换流阀核心器件，打破国外垄断。收入主体目前是轨道交通装备（55.07%）、新兴装备（44.53%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 1291,
+            "stockCode": "002028.SZ",
+            "stockName": "思源电气",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内领先的电力设备制造商，产品覆盖特高压开关、变压器等，海外业务增长迅速。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002028.SZ",
+              "companyName": "思源电气",
+              "companyProfile": "公司主营业务为输配电设备的研发、生产、销售及服务。公司是目前输配电设备行业中少数几家具备电力系统一次设备(传统机械类电力设备)、二次设备(控制类电力设备)、电力电子设备等产品的研发、制造和解决方案能力的厂家之一。同时，公司大力发展数字电网与电力电子融合技术，积极拓展静止同步调相机(SSC)、构网型SVG和储能成套系统、宽频振荡抑制、高压有源滤波等相关业务；公司积极探索交直流混合配用电领域应用，积极发展分布式新能源多功能融合一体化解决方案、低压直流开关元件、户用光储充一体化系统等相关业务；公司坚持探索功率型储能元件的应用，积极发展汽车电子电器、配网后备电源、混合调频成套系统等相关业务。公司有着二十多年的行业经验，积累了丰富且成熟的产品开发和制造经验，对行业的现状和发展有着深刻的理解和把握，参与了多项国家标准和行业标准的制定，拥有多项行业领先的核心技术，并积极开展自主可控国产化设备的研发工作，目前在同行业处于领先地位。",
+              "profileSummary": "公司主营业务为输配电设备的研发、生产、销售及服务。公司是目前输配电设备行业中少数几家具备电力系统一次设备(传统机械类电力设备)、二次设备(控制类电力设备)、电力电子设备等产品的研发、制造和解决方案能力的厂家之一。",
+              "majorProducts": "110kV-500kVGIS及SF6开关耐压试验系统、110kV-500kV交联电缆耐压试验系统、BKSC系列环氧浇注铁心并联电抗器、BKS系列油浸式铁心并联电抗器、CI—2000型电容电流测试仪、CKSC系列环氧浇注铁心串联电抗器、DWKN—I型动态无功补偿及电能质量监控装置、GZF-I型GIS工频耐压及局放测试系统、JC1MOA在线监测仪、LP—I移频线路参数测试仪、M—8000I型变频介质测试仪、OSM—1000高压设备绝缘在线监测系统、TROM—600变压器油色谱在线监测系统、磁控电抗器(MCR)型SVC、高压隔离开关、高压交直流互感器、光电互感器、思源电气变频串联谐振成套试验装置、思源电气变压器感应耐压及局放测试系统、思源电气便携式高电压变频谐振耐压试验装置、思源电气电容式电压互感器、思源电气干式互感器、思源电气高压并联电容器、思源电气户外高压交流隔离开关、思源电气户外高压交流接地开关、思源电气户外高压交流中性点隔离开关、思源电气集合式高压并联电容器、思源电气交流高压六氟化硫断路器、思源电气交流高压真空断路器、思源电气接地变压器、思源电气耦合电容器、思源电气微机小电流接地选线成套设备、思源电气消弧线圈自动调谐及接地选线成套装置、思源电气自能式高压六氟化硫断路器",
+              "revenueComposition": "开关类业务:41.48%;变压器类业务:21.51%;保护及自动化类业务:11.8%;EPC类业务:10.83%;储能系统及元件类业务:7.11%;电力电子类业务:7.08%;租赁业务:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "开关类业务",
+                  "sharePct": 41.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "变压器类业务",
+                  "sharePct": 21.51,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "保护及自动化类业务",
+                  "sharePct": 11.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "EPC类业务",
+                  "sharePct": 10.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "储能系统及元件类业务",
+                  "sharePct": 7.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力电子类业务",
+                  "sharePct": 7.08,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "租赁业务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "隔离开关",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "有源电力滤波器(APF)",
+                    "category": "电能质量治理设备"
+                  },
+                  {
+                    "name": "电力电容器",
+                    "category": "电力电容器"
+                  },
+                  {
+                    "name": "直流充电机",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "直流充电桩",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "中性点接地成套装置",
+                    "category": "电网设备零部件"
+                  }
+                ],
+                "knownProducts": [
+                  "变电站工程",
+                  "直流充电机",
+                  "直流充电桩",
+                  "中性点接地成套装置",
+                  "互感器",
+                  "油色谱在线监测装置",
+                  "消弧线圈",
+                  "罐式断路器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "思源电气已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：变压器类业务占收入的21.51%。公司在产业链中的位置是：国内领先的电力设备制造商，产品覆盖特高压开关、变压器等，海外业务增长迅速，终端需求与渗透率变化则决定增量大小。只有完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，相关业务的增长才可能改善公司整体盈利。终端销量、客户采购量、公司出货和相关产品收入增速还需与其他主业表现同时改善；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使局部业务亮点难以转化为公司层面的业绩变化。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 1276,
+            "stockCode": "300831.SZ",
+            "stockName": "ST派瑞",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是国内领先的功率半导体器件供应商，产品应用于特高压直流输电工程核心设备换流阀。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300831.SZ",
+              "companyName": "派瑞股份",
+              "companyProfile": "公司是一家国家高新技术企业,主要从事电力半导体器件和装置的研发、生产、实验调试和销售服务，公司产品可分为高压直流阀用晶闸管、普通元器件及电力电子装置三大类。高压直流阀用晶闸管包括直流输电用大功率电控晶闸管和光控晶闸管，主要应用于超高压、特高压直流输电工程，服务于国家能源输送及调配、绿色能源并网输电等重点能源建设领域，是并网和远距离输送不可替代的器件,公司是西电所控股子公司。西电所是我国电力半导体器件的发源地，我国第一只整流管、晶闸管、快速晶闸管、双向晶闸管、逆导晶闸管、可关断晶闸管(GTO)、光控晶闸管等电力半导体器件均由西电所研发。西电所是中国电器工业协会电力电子协会、中国电工技术学会电力电子学会、全国电力电子学标准化技术委员会秘书处所在地，是国家电力电子产品质量监督检验中心挂靠单位,目前，公司生产的高压直流阀用晶闸管在国内超高压和特高压直流输电工程中拥有较高的市场份额，经过多年的技术创新和生产技术积累，公司在电力半导体器件领域，特别是直流输电产业链中，掌握了多项核心技术与核心生产工艺。",
+              "profileSummary": "公司是一家国家高新技术企业,主要从事电力半导体器件和装置的研发、生产、实验调试和销售服务，公司产品可分为高压直流阀用晶闸管、普通元器件及电力电子装置三大类。西电所是中国电器工业协会电力电子协会、中国电工技术学会电力电子学会、全国电力电子学标准化技术委员会秘书处所在地，是国家电力电子产品质量监督检验中心挂靠单位,目前，公司生产的高压直流阀用晶闸管在国内超高压和特高压直流输电工程中拥有较高的市场份额，经过多年的技术创新和生产技术积累，公司…",
+              "majorProducts": "5英寸电控晶闸管、5英寸光控晶闸管、6英寸电控晶闸管、IGBT参数综合测试台、大功率IGBT开关电源、电力半导体模块、非同相逆并联上下分极式整流柜、高温阻断试验台、化工电解整流柜、晶闸管静态及动态参数综合测试台、快速晶闸管、浪涌电流试验台、门极触发特性及维持电流测试仪、普通晶闸管、普通整流管、通态电流临界上升率试验台、通态及正向峰值电压测试台、同相逆并联带柜体整流柜、同相逆并联绝缘自支撑式整流柜、直流试验站电源、阻断特性测试仪",
+              "revenueComposition": "电力电子器件:87.07%;电力电子设备:10.83%;其他业务:2.1%",
+              "revenueSegments": [
+                {
+                  "name": "电力电子器件",
+                  "sharePct": 87.07,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电力电子设备",
+                  "sharePct": 10.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "IGBT参数综合测试台",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "大功率IGBT开关电源",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "晶闸管静态及动态参数综合测试台",
+                    "category": "电子检测试验设备"
+                  },
+                  {
+                    "name": "浪涌电流试验台",
+                    "category": "电子检测试验设备"
+                  },
+                  {
+                    "name": "电力半导体模块",
+                    "category": "晶闸管"
+                  },
+                  {
+                    "name": "通态及正向峰值电压测试台",
+                    "category": "电子检测试验设备"
+                  }
+                ],
+                "knownProducts": [
+                  "晶闸管静态及动态参数综合测试台",
+                  "浪涌电流试验台",
+                  "通态及正向峰值电压测试台",
+                  "通态电流临界上升率试验台",
+                  "门极触发特性及维持电流测试仪",
+                  "阻断特性测试仪",
+                  "高温阻断试验台",
+                  "光控晶闸管"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "ST派瑞已经具备IGBT参数综合测试台、大功率IGBT开关电源、晶闸管静态及动态参数综合测试台等业务能力，公司是国内领先的功率半导体器件供应商，产品应用于特高压直流输电工程核心设备换流阀并非单纯概念映射。当前对应的收入被归入电力电子器件（87.07%）、电力电子设备（10.83%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 1278,
+            "stockCode": "833394.BJ",
+            "stockName": "民士达",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司核心产品芳纶纸是特高压变压器、电抗器等设备的核心绝缘材料。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_name",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "920394.BJ",
+              "companyName": "民士达",
+              "companyProfile": "公司(原烟台美士达特种纸业股份有限公司)是在烟台泰和新材集团(原烟台氨纶集团)芳纶纸项目基础上组建而成的国有股份制企业，专业生产销售芳纶纸及其衍生产品。公司的经营范围：芳纶纸及其衍生产品的制造、销售；货物和技术的进出口；以自有资金投资(未经金融监管部门批准，不得从事吸收存款、融资担保、代客理财等金融业务)。主营业务：芳纶纸及其衍生产品的制造、销售。",
+              "profileSummary": "公司的经营范围：芳纶纸及其衍生产品的制造、销售；货物和技术的进出口；以自有资金投资(未经金融监管部门批准，不得从事吸收存款、融资担保、代客理财等金融业务)。主营业务：芳纶纸及其衍生产品的制造、销售。",
+              "majorProducts": "民士达对位芳纶纸、民士达间位芳纶纸",
+              "revenueComposition": "芳纶纸:95.15%;芳纶纸复合材料:4.76%;其他业务:0.09%",
+              "revenueSegments": [
+                {
+                  "name": "芳纶纸",
+                  "sharePct": 95.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "芳纶纸复合材料",
+                  "sharePct": 4.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "对位芳纶纸",
+                  "间位芳纶纸"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "民士达的事件主线是：公司核心产品芳纶纸是特高压变压器、电抗器等设备的核心绝缘材料，但当前收入结构尚未体现其重要性，收入重心仍是芳纶纸（95.15%）、芳纶纸复合材料（4.76%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，并在终端销量、客户采购量、公司出货和相关产品收入增速上留下可核验痕迹。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 1292,
+            "stockCode": "002452.SZ",
+            "stockName": "长高电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内高压隔离开关主要生产企业，产品向特高压GIS领域拓展。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002452.SZ",
+              "companyName": "长高电新",
+              "companyProfile": "公司成立于1998年，于2010年7月在深交所挂牌上市，是一家以“电”为核心业务的高新技术企业。公司经营的主要业务包括输变电一二次设备的研发、生产和销售，电力设计和工程服务以及新能源电力开发。公司有着丰富的产品开发和制造行业经验，业务遍布全国各省及部分海外国家。主要为我国的电网系统提供高压隔离开关(DS)、组合电器(GIS)、断路器(CB)、成套开关柜、环网柜、柱上断路器、配电自动化终端等电力设备一次及二次产品，以及为客户提供电力工程设计和EPC总包等服务，公司业务和产品聚焦于输变电设备及新能源电力和储能的相关产业。公司以“电”为核心，聚焦主业纵深发展，产品及业务遍布电力行业的发电、输电、配电等环节，致力于形成输变电设备制造和电力设计与工程服务两大板块的业务发展格局。公司紧跟国家政策和行业发展趋势，以“一核四向”的战略规划持续夯实竞争优势，坚持“电力能源综合服务商”的战略定位，以“绿色化”、“智慧化”、“特高压”、“新能源电力”为方向驱动公司高质量发展。公司被国家工业和信息化部评为国家技术创新示范企业；公司的隔离开关产品被评为全国制造业单项冠军产品，拥有国家科技进步奖特等奖、中国机械工业科学技术奖特等奖等荣誉，具备500kV高海拔(大于4000m)、750kV交流超高压、1000kV交流特高压、±800kV直流特高压、±1100kV直流特高压、±500kV柔性直流隔离开关等多项前沿技术自主研发和系列产品工程化的研发及生产能力，处于高压开关研发及制造的领先水平，能生产全系列、全电压等级的产品。",
+              "profileSummary": "主要为我国的电网系统提供高压隔离开关(DS)、组合电器(GIS)、断路器(CB)、成套开关柜、环网柜、柱上断路器、配电自动化终端等电力设备一次及二次产品，以及为客户提供电力工程设计和EPC总包等服务，公司业务和产品聚焦于输变电设备及新能源电力和储能的相关产业。公司以“电”为核心，聚焦主业纵深发展，产品及业务遍布电力行业的发电、输电、配电等环节，致力于形成输变电设备制造和电力设计与工程服务两大板块的业务发展格局。",
+              "majorProducts": "CJ6电动操动机、GW4系列户外交流高压隔离开关、GW7C（翻转式）系列户外交流高压隔离开关、GW9系列户外交流高压隔离开关、JW2、JW6型接地开关、PRWG2型户外交流高压跌落式熔断器、变压器、成套电器、电力设计和工程服务业务、断路器、配电自动化终端、新型GW35系列户外超高压隔离开关、组合电器",
+              "revenueComposition": "输变电设备产品:94.19%;工程施工:2.52%;电力设计与服务:1.78%;其他:0.79%;新能源发电:0.72%",
+              "revenueSegments": [
+                {
+                  "name": "输变电设备产品",
+                  "sharePct": 94.19,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "工程施工",
+                  "sharePct": 2.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力设计与服务",
+                  "sharePct": 1.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源发电",
+                  "sharePct": 0.72,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "隔离开关",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "气体绝缘金属封闭开关设备(GIS)",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "低压成套设备",
+                    "category": "开关设备"
+                  },
+                  {
+                    "name": "高压成套设备",
+                    "category": "开关设备"
+                  }
+                ],
+                "knownProducts": [
+                  "光伏电站工程",
+                  "风力场工程",
+                  "输变电工程",
+                  "耐磨衬板",
+                  "断路器",
+                  "低压成套设备",
+                  "气体绝缘金属封闭开关设备(GIS)",
+                  "隔离开关"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "长高电气已经具备隔离开关、气体绝缘金属封闭开关设备(GIS)、低压成套设备等业务能力，国内高压隔离开关主要生产企业，产品向特高压GIS领域拓展并非单纯概念映射。当前对应的收入被归入输变电设备产品（94.19%）、新能源发电（0.72%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 1295,
+            "stockCode": "600550.SH",
+            "stockName": "保变电气",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是国内特高压、核电等高端变压器领域的核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600550.SH",
+              "companyName": "保变电气",
+              "companyProfile": "公司于2001年在沪市A股上市。自成立以来，注重企业自主发展、集约经营，以卓越的科技创新能力、良好的企业声誉、可靠的产品品牌在大型变压器产品电压等级、容量、技术性能指标等方面保持着国内同行业领先地位，许多重点产品填补了国家空白，科研成果居国内领先水平，其中多项成果达国际领先和国际先进水平，成为中国特高压、核电、火电、水电、新能源变压器及特种变压器等电力设备的重要科研、制造基地，推动了重大技术装备国产化，为我国电力建设事业快速发展做出了积极贡献。",
+              "profileSummary": "自成立以来，注重企业自主发展、集约经营，以卓越的科技创新能力、良好的企业声誉、可靠的产品品牌在大型变压器产品电压等级、容量、技术性能指标等方面保持着国内同行业领先地位，许多重点产品填补了国家空白，科研成果居国内领先水平，其中多项成果达国际领先和国际先进水平，成为中国特高压、核电、火电、水电、新能源变压器及特种变压器等电力设备的重要科研、制造基地，推动了重大技术装备国产化，为我国电力建设事业快速发展做出了积极贡献。",
+              "majorProducts": "天威保变备用、厂用变压器、天威保变火电机组变压器、天威保变壳式并联电抗器、天威保变空冷器风机、天威保变输变电变压器、天威保变水冷风机、天威保变太阳能电池组件、天威保变太阳能硅片、天威保变新型平衡牵引变压器",
+              "revenueComposition": "输变电:98.89%;其他:0.6%;材料销售:0.5%",
+              "revenueSegments": [
+                {
+                  "name": "输变电",
+                  "sharePct": 98.89,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "材料销售",
+                  "sharePct": 0.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电抗器",
+                    "category": "电抗器"
+                  },
+                  {
+                    "name": "干式变压器",
+                    "category": "干式变压器"
+                  },
+                  {
+                    "name": "油浸式变压器",
+                    "category": "油浸式变压器"
+                  },
+                  {
+                    "name": "互感器",
+                    "category": "电网设备零部件"
+                  }
+                ],
+                "knownProducts": [
+                  "互感器",
+                  "干式变压器",
+                  "油浸式变压器",
+                  "电抗器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "保变电气与事件存在真实业务交集：公司已有电抗器、干式变压器、油浸式变压器，与公司是国内特高压、核电等高端变压器领域的核心供应商所处的产业环节一致。输变电（98.89%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响终端需求与渗透率变化，只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，才会形成可确认的收入和利润增量。终端销量、客户采购量、公司出货和相关产品收入增速能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "27条低于3星的源记录已按当前关注口径排除。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

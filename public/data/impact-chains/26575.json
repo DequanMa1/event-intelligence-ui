@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26575",
@@ -9,10 +9,10 @@
     "date": "2026-06-29"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 2,
-    "mappedStockCount": 2,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 1,
     "stocks": [
       {
         "sourceRowNumber": 8024,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 14
+        "anchorProductCount": 6
       },
       {
         "sourceRowNumber": 8025,
@@ -29,87 +29,32 @@
         "stockName": "天山电子",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 3
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 8025,
+        "stockCode": "301379.SZ",
+        "stockName": "天山电子",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 17,
-    "selectedCoreProductCount": 7,
+    "selectedCoreProductCount": 6,
     "selectedCompanyCoreProductCount": 6,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 1,
-    "downstreamCandidateCount": 7,
-    "shownUpstreamCount": 1,
-    "shownDownstreamCount": 7
+    "level7ProductCount": 6,
+    "relatedIndustryCandidateCount": 0,
+    "shownRelatedIndustryCount": 0
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140057934",
-        "name": "打印机耗材零部件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014471"
-        ],
-        "linkedCoreProductNames": [
-          "打印机耗材"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140096656",
-        "name": "通用型MCU",
-        "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 通用型MCU",
-        "industryPath": [
-          "电子",
-          "半导体",
-          "集成电路",
-          "IC设计",
-          "计算控制芯片",
-          "通用型MCU"
-        ],
-        "level5Industry": {
-          "code": "1200001282",
-          "name": "IC设计"
-        },
-        "level6Industry": {
-          "code": "1210003412",
-          "name": "计算控制芯片"
-        },
-        "level7Product": {
-          "code": "1140096656",
-          "name": "通用型MCU"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "002180.SZ",
-            "stockName": "奔图科技",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 1,
-        "relevanceScore": 9,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "设计",
-          "半导体",
-          "电子"
-        ]
-      },
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140215360",
         "name": "打印机主控SoC",
@@ -135,18 +80,15 @@
           "name": "打印机主控SoC"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002180.SZ",
             "stockName": "奔图科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -180,18 +122,15 @@
           "name": "打印机耗材芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002180.SZ",
             "stockName": "奔图科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -225,18 +164,15 @@
           "name": "模拟前端芯片AFE"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002180.SZ",
             "stockName": "奔图科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -270,18 +206,15 @@
           "name": "电机控制MCU"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002180.SZ",
             "stockName": "奔图科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -315,18 +248,15 @@
           "name": "车规级MCU"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002180.SZ",
             "stockName": "奔图科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -336,154 +266,79 @@
         ]
       },
       {
-        "code": "1140014471",
-        "name": "打印机耗材",
-        "hierarchyPath": "",
-        "industryPath": [],
+        "code": "1140096656",
+        "name": "通用型MCU",
+        "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 通用型MCU",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "集成电路",
+          "IC设计",
+          "计算控制芯片",
+          "通用型MCU"
+        ],
         "level5Industry": {
-          "code": "",
-          "name": ""
+          "code": "1200001282",
+          "name": "IC设计"
         },
         "level6Industry": {
-          "code": "",
-          "name": ""
+          "code": "1210003412",
+          "name": "计算控制芯片"
         },
         "level7Product": {
-          "code": "",
-          "name": ""
+          "code": "1140096656",
+          "name": "通用型MCU"
         },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:打印机耗材芯片",
+        "matchedSourceLevel": 7,
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002180.SZ",
             "stockName": "奔图科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 6,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
+        "relevanceScore": 9,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "设计",
+          "半导体",
+          "电子"
+        ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": []
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 2,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 6,
+    "candidateIndustryCount": 0,
+    "relatedIndustryCount": 0,
+    "stocks": [
       {
-        "code": "1140014413",
-        "name": "墨水",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014471"
-        ],
-        "linkedCoreProductNames": [
-          "打印机耗材"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 8024,
+        "stockCode": "002180.SZ",
+        "stockName": "奔图科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140023084",
-        "name": "碳粉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014471"
-        ],
-        "linkedCoreProductNames": [
-          "打印机耗材"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140018568",
-        "name": "色带",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014471"
-        ],
-        "linkedCoreProductNames": [
-          "打印机耗材"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140018567",
-        "name": "通用墨盒",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014471"
-        ],
-        "linkedCoreProductNames": [
-          "打印机耗材"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140018566",
-        "name": "通用硒鼓",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014471"
-        ],
-        "linkedCoreProductNames": [
-          "打印机耗材"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140088953",
-        "name": "打印机技术服务",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140014471"
-        ],
-        "linkedCoreProductNames": [
-          "打印机耗材"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140027193",
-        "name": "智能控制",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140096656"
-        ],
-        "linkedCoreProductNames": [
-          "通用型MCU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 8025,
+        "stockCode": "301379.SZ",
+        "stockName": "天山电子",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       }
-    ]
+    ],
+    "relatedIndustries": []
   },
   "industryAnalysis": {
     "status": "research_pending",
@@ -496,10 +351,203 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 8,
+    "eligibleSourceRowCount": 2,
+    "totalStockCount": 2,
+    "groupCount": 1,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 3,
+    "excludedNonAShareCount": 3,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 2,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 8024,
+            "stockCode": "002180.SZ",
+            "stockName": "奔图科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "控股子公司极海半导体与上海新储合作开发PCM芯片产品，切入新型存储赛道。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002180.SZ",
+              "companyName": "纳思达",
+              "companyProfile": "公司成立于2000年，连续3年上榜中国上市企业500强。公司专注打印显像行业23年，目前已成为全球第4的激光打印机厂商和行业内优秀的集成电路设计企业。公司已实现打印全产业链覆盖，业务遍及全球150多个国家和地区，拥有包括“奔图(PANTUM)”“极海微(Geehy)”“艾派克(APEXMIC)”“格之格”“G&G”史丹迪(Static Control)“利盟国际(LEXMARK)”等多个行业内的知名品牌。公司在全球建立了9大研发中心、拥有国家级博士后科研工作站、行业内第一个精细化工国家重点实验室(珠海研发中心)、行业内第一个CNAS认可实验室，同时拥有国家级、省级、市级创新平台17个，产学研合作平台、自主创新平台等30个。我们希望可以通过技术创新和专利建设，致力以技术引领业务发展，创造新的价值。公司产品技术涵盖激光打印机及配套原装耗材、打印机主控芯片、打印耗材芯片、打印机核心零部件、通用微控制单元、打印通用耗材等领域。全球范围内持有自主研发专利5,862项，其中发明专利3,500项，获得“国家知识产权优势企业”称号。",
+              "profileSummary": "公司已实现打印全产业链覆盖，业务遍及全球150多个国家和地区，拥有包括“奔图(PANTUM)”“极海微(Geehy)”“艾派克(APEXMIC)”“格之格”“G&G”史丹迪(Static Control)“利盟国际(LEXMARK)”等多个行业内的知名品牌。我们希望可以通过技术创新和专利建设，致力以技术引领业务发展，创造新的价值。",
+              "majorProducts": "ASIC芯片、SoC芯片、Unismart、打印机整机、打印影像芯片、工控安全芯片、激光打印机及打印管理服务、墨水、企业内容管理软件、汽车电子芯片、色带、碳粉、通用墨盒、通用硒鼓、消费级产品芯片、新能源芯片、原装硒鼓",
+              "revenueComposition": "原装打印机及耗材:65.94%;通用耗材及配件:25.55%;其他:4.77%;芯片:3.74%",
+              "revenueSegments": [
+                {
+                  "name": "原装打印机及耗材",
+                  "sharePct": 65.94,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "通用耗材及配件",
+                  "sharePct": 25.55,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "芯片",
+                  "sharePct": 3.74,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "打印机主控SoC",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "打印机耗材芯片",
+                    "category": "安全芯片"
+                  },
+                  {
+                    "name": "模拟前端芯片AFE",
+                    "category": "信号链芯片"
+                  },
+                  {
+                    "name": "电机控制MCU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "车规级MCU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "通用型MCU",
+                    "category": "计算控制芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "办公产品销售",
+                  "硒鼓",
+                  "墨水",
+                  "墨盒",
+                  "碳粉",
+                  "色带",
+                  "激光打印机",
+                  "模拟前端芯片AFE"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "奔图科技的原装打印机及耗材（65.94%）、通用耗材及配件（25.55%）覆盖范围较宽，其中能够承载打印机主控SoC、打印机耗材芯片、模拟前端芯片AFE，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：控股子公司极海半导体与上海新储合作开发PCM芯片产品，切入新型存储赛道。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 8025,
+            "stockCode": "301379.SZ",
+            "stockName": "天山电子",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "通过产业基金投资新存科技（PCM芯片）和天链芯（PCM主控），负责PCM存储模组制造和项目管理。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301379.SZ",
+              "companyName": "天山电子",
+              "companyProfile": "公司成立于2005年，是一家专业研发、设计、生产各类LCD液晶显示屏、LCM黑白模组、TFT彩屏模组、复杂模组及TP触摸屏的高科技企业。制造中心位于广西钦州市灵山县，营销中心位于广东深圳市，并于2022年在深交所挂牌上市。经过多年的发展，公司具备大型生产规模，拥有雄厚的技术力量及稳定的管理团队。制造中心面积达20万平方米，拥有全自动STN规格LCD生产线、全自动LCM生产线、全自动TFT模组生产线以及触摸屏/盖板全贴合生产线，实现了液晶显示屏从前到后的一站式生产。公司先后获得广西授予的金种子企业、高新技术企业等荣誉。公司本着“追求卓越、超越自我”的方向，在管理层带领下组建了完善的管理架构，培养了大量管理干部及专业技术人员。在核心队伍带领下，员工稳定，业务持续发展。公司一直注重管理体系建设和产品品质提升，先后取得了ISO9001、ISO14001、SONY绿色伙伴、车载体系IATF16949等认证。在产品品质、生产能力、公司规模、服务能力上，公司均具备为国内外一流客户服务的级别。公司以服务国内优质客户、拓展海外市场为主导方向，调整产品结构，向高端产品、多元化转型。公司具备了从LCD至LCM/TFT模组的配套产业链，在成本与品质上更具竞争力，能够稳健承接国际中高端市场的需求。",
+              "profileSummary": "在产品品质、生产能力、公司规模、服务能力上，公司均具备为国内外一流客户服务的级别。公司以服务国内优质客户、拓展海外市场为主导方向，调整产品结构，向高端产品、多元化转型。",
+              "majorProducts": "彩色液晶显示模组、触摸屏、单色液晶显示模组、单色液晶显示屏",
+              "revenueComposition": "彩色液晶显示模组:66.53%;单色液晶显示模组:20.08%;单色液晶显示屏:8.95%;复杂模组:1.95%;触摸屏:1.72%;其他:0.76%",
+              "revenueSegments": [
+                {
+                  "name": "彩色液晶显示模组",
+                  "sharePct": 66.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "单色液晶显示模组",
+                  "sharePct": 20.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "单色液晶显示屏",
+                  "sharePct": 8.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "复杂模组",
+                  "sharePct": 1.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "触摸屏",
+                  "sharePct": 1.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "单色液晶显示屏",
+                  "LCD液晶显示模组",
+                  "单色液晶显示模组"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "天山电子的主要经营内容是彩色液晶显示模组（66.53%）、单色液晶显示模组（20.08%），具体产品集中在单色液晶显示屏、LCD液晶显示模组、单色液晶显示模组。“通过产业基金投资新存科技（PCM芯片）和天链芯（PCM主控），负责PCM存储模组制造和项目管理”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善事件能否转化为可确认的经营增量，也需要先补上产品落地和客户导入，再经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才可能影响业绩。订单、收入确认、产品结构和毛利率变化没有同步改善时，股价反应更可能来自主题交易；若事件关联停留在主题层面，未形成可持续订单或利润贡献，基本面解释力会继续下降。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "3条低于3星的源记录已按当前关注口径排除。",
+      "3条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

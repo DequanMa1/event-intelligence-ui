@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26538",
@@ -9,9 +9,9 @@
     "date": "2026-06-29"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 10,
-    "mappedStockCount": 8,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 8,
+    "mappedStockCount": 6,
     "unmappedStockCount": 2,
     "stocks": [
       {
@@ -21,7 +21,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 15
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 6708,
@@ -29,8 +29,8 @@
         "stockName": "博迁新材",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 6
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 6710,
@@ -39,25 +39,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 11
-      },
-      {
-        "sourceRowNumber": 6721,
-        "stockCode": "2327.TW",
-        "stockName": "国巨",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 6722,
-        "stockCode": "6762.T",
-        "stockName": "TDK",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 6724,
@@ -66,7 +48,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 14
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 6725,
@@ -75,7 +57,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 17
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 6726,
@@ -84,7 +66,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 6727,
@@ -93,7 +75,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 15
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 6737,
@@ -101,24 +83,24 @@
         "stockName": "商络电子",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 1
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 6721,
-        "stockCode": "2327.TW",
-        "stockName": "国巨",
-        "rating": "★★★★☆",
+        "sourceRowNumber": 6708,
+        "stockCode": "605376.SH",
+        "stockName": "博迁新材",
+        "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       },
       {
-        "sourceRowNumber": 6722,
-        "stockCode": "6762.T",
-        "stockName": "TDK",
+        "sourceRowNumber": 6737,
+        "stockCode": "300975.SZ",
+        "stockName": "商络电子",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -130,48 +112,12 @@
     "candidateCoreProductCount": 78,
     "selectedCoreProductCount": 3,
     "selectedCompanyCoreProductCount": 3,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 2,
-    "downstreamCandidateCount": 4,
-    "shownUpstreamCount": 2,
-    "shownDownstreamCount": 4
+    "level7ProductCount": 28,
+    "relatedIndustryCandidateCount": 10,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140007480",
-        "name": "钛酸钡",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007261"
-        ],
-        "linkedCoreProductNames": [
-          "MLCC陶瓷粉体"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140007481",
-        "name": "锆酸锶",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007261"
-        ],
-        "linkedCoreProductNames": [
-          "MLCC陶瓷粉体"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140007261",
         "name": "MLCC陶瓷粉体",
@@ -197,18 +143,15 @@
           "name": "MLCC陶瓷粉体"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300285.SZ",
             "stockName": "国瓷材料",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 4,
         "relevanceScore": 19,
         "strongRelevanceScore": 14,
         "matchedTerms": [
@@ -243,33 +186,33 @@
           "name": "多层片式陶瓷电容器(MLCC)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 4,
         "stocks": [
           {
             "stockCode": "300408.SZ",
             "stockName": "三环集团",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "300136.SZ",
             "stockName": "信维通信",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "603678.SH",
             "stockName": "火炬电子",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "000636.SZ",
             "stockName": "风华高科",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 14,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -304,18 +247,15 @@
           "name": "MLCC离型膜"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002859.SZ",
             "stockName": "洁美科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 13,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -326,70 +266,376 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140027236",
-        "name": "工业",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007261"
+        "code": "1200001355",
+        "name": "射频器件",
+        "description": "射频器件负责无线信号收发，是通信核心。因5G、卫星互联网及AI终端普及，市场需求爆发式增长，技术壁垒高且国产替代空间大，具备高成长性与战略价值，故备受投资者青睐。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 2,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "000636.SZ",
+            "stockName": "风华高科",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300726.SZ",
+            "stockName": "宏达电子",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "MLCC陶瓷粉体"
+        "products": [
+          {
+            "code": "1140172427",
+            "name": "LTCC滤波器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 射频器件 > 滤波器 > LTCC滤波器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300726.SZ",
+                "stockName": "宏达电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140022847",
+            "name": "陶瓷滤波器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 射频器件 > 滤波器 > 陶瓷滤波器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140014916",
-        "name": "汽车",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007261"
+        "code": "1200005635",
+        "name": "电子元件销售",
+        "description": "电子元件销售指分销电阻、电容等基础器件。因处于产业链枢纽，直接反映下游消费电子、汽车电子景气度，且具备高周转特性，其业绩波动常作为行业复苏先行指标，故受投资者密切关注以预判科技周期走向。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 2,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000062.SZ",
+            "stockName": "深圳华强",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "MLCC陶瓷粉体"
+        "products": [
+          {
+            "code": "1140057926",
+            "name": "电子元器件线下分销",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电子元件销售 > 电子元件销售 > 电子元器件线下分销",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000062.SZ",
+                "stockName": "深圳华强",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140078911",
+            "name": "电子元器件贸易",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电子元件销售 > 电子元件销售 > 电子元器件贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 13,
+    "mappedStockCount": 10,
+    "unmappedStockCount": 3,
+    "level7ProductCount": 28,
+    "candidateIndustryCount": 10,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 6705,
+        "stockCode": "300285.SZ",
+        "stockName": "国瓷材料",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140007704",
-        "name": "消费电子产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007261"
-        ],
-        "linkedCoreProductNames": [
-          "MLCC陶瓷粉体"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 6708,
+        "stockCode": "605376.SH",
+        "stockName": "博迁新材",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140021148",
-        "name": "通信产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007261"
+        "sourceRowNumber": 6710,
+        "stockCode": "002859.SZ",
+        "stockName": "洁美科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 6724,
+        "stockCode": "000636.SZ",
+        "stockName": "风华高科",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 14
+      },
+      {
+        "sourceRowNumber": 6725,
+        "stockCode": "300408.SZ",
+        "stockName": "三环集团",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 6726,
+        "stockCode": "603678.SH",
+        "stockName": "火炬电子",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 6727,
+        "stockCode": "300136.SZ",
+        "stockName": "信维通信",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 6728,
+        "stockCode": "002138.SZ",
+        "stockName": "顺络电子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 6729,
+        "stockCode": "688260.SH",
+        "stockName": "昀冢科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 6730,
+        "stockCode": "300726.SZ",
+        "stockName": "宏达电子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 6737,
+        "stockCode": "300975.SZ",
+        "stockName": "商络电子",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 6738,
+        "stockCode": "301099.SZ",
+        "stockName": "雅创电子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 6739,
+        "stockCode": "000062.SZ",
+        "stockName": "深圳华强",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001355",
+        "name": "射频器件",
+        "description": "射频器件负责无线信号收发，是通信核心。因5G、卫星互联网及AI终端普及，市场需求爆发式增长，技术壁垒高且国产替代空间大，具备高成长性与战略价值，故备受投资者青睐。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 2,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "000636.SZ",
+            "stockName": "风华高科",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300726.SZ",
+            "stockName": "宏达电子",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "MLCC陶瓷粉体"
+        "products": [
+          {
+            "code": "1140172427",
+            "name": "LTCC滤波器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 射频器件 > 滤波器 > LTCC滤波器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300726.SZ",
+                "stockName": "宏达电子",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140022847",
+            "name": "陶瓷滤波器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 射频器件 > 滤波器 > 陶瓷滤波器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200005635",
+        "name": "电子元件销售",
+        "description": "电子元件销售指分销电阻、电容等基础器件。因处于产业链枢纽，直接反映下游消费电子、汽车电子景气度，且具备高周转特性，其业绩波动常作为行业复苏先行指标，故受投资者密切关注以预判科技周期走向。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 2,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000062.SZ",
+            "stockName": "深圳华强",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140057926",
+            "name": "电子元器件线下分销",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电子元件销售 > 电子元件销售 > 电子元器件线下分销",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000062.SZ",
+                "stockName": "深圳华强",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140078911",
+            "name": "电子元器件贸易",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电子元件销售 > 电子元件销售 > 电子元器件贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -404,10 +650,960 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 36,
+    "eligibleSourceRowCount": 13,
+    "totalStockCount": 13,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 16,
+    "excludedNonAShareCount": 7,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 13,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 8,
+        "stocks": [
+          {
+            "sourceRowNumber": 6705,
+            "stockCode": "300285.SZ",
+            "stockName": "国瓷材料",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "作为MLCC核心原材料陶瓷粉体的龙头供应商，直接受益于下游扩产和对高端材料的需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300285.SZ",
+              "companyName": "国瓷材料",
+              "companyProfile": "公司以“实现员工价值的、卓越材料的领导者”为愿景，持续推动材料科技创新与产业升级。公司创立于2005年4月，现已形成以山东东营总部为核心，辐射环渤海、长三角、珠三角的国内产业网络，并在欧洲、美洲等设立办事处、研发中心、生产基地等，构建全球化客户服务体系的战略布局。作为“一代材料、一代产业”的践行者，公司聚焦高端功能陶瓷材料的研发与产业化，通过持续的科技创新与国际化布局，已构建涵盖电子材料、催化材料、生物医疗材料、新能源材料、精密陶瓷、数码打印及其他材料在内的六大业务板块。创新成果深度渗透消费电子及5G通信、汽车尾气治理、口腔医疗、新能源动力系统、半导体封装、环保建材、光伏储能等战略性新兴产业。公司持续为客户提供定制化解决方案，以材料科技赋能产业升级，践行“好材料好生活”的企业使命，致力成为新材料领域具有全球影响力的价值创造者。",
+              "profileSummary": "公司创立于2005年4月，现已形成以山东东营总部为核心，辐射环渤海、长三角、珠三角的国内产业网络，并在欧洲、美洲等设立办事处、研发中心、生产基地等，构建全球化客户服务体系的战略布局。作为“一代材料、一代产业”的践行者，公司聚焦高端功能陶瓷材料的研发与产业化，通过持续的科技创新与国际化布局，已构建涵盖电子材料、催化材料、生物医疗材料、新能源材料、精密陶瓷、数码打印及其他材料在内的六大业务板块。",
+              "majorProducts": "MLCC介质瓷粉、玻璃陶瓷瓷块、勃姆石、电子浆料、电子用纳米级复合氧化锆粉体、分子筛、复合树脂陶瓷、高纯超细氧化铝、碱水制氢用纳米粉体、颗粒捕捉器（DPF、GPF）、锂电池正负极研磨用氧化锆微珠、锂电池正极添加剂、三元催化转化器载体（TWC）、铈锆固溶体氧化物、陶瓷管壳、陶瓷基板及金属化、陶瓷墨水、陶瓷色釉料、陶瓷套筒、陶瓷插芯等结构件、陶瓷轴承球、选择性催化还原载体（SCR）、牙科用纳米级复合氧化锆粉体、氧化锆瓷块、氧化性催化转化器载体（DOC）",
+              "revenueComposition": "数码打印及其他材料板块-建筑陶瓷:22.19%;催化材料板块:20.81%;生物医疗材料板块:20.29%;电子材料板块:15.13%;新能源材料板块:11.03%;精密陶瓷板块:9.1%",
+              "revenueSegments": [
+                {
+                  "name": "数码打印及其他材料板块-建筑陶瓷",
+                  "sharePct": 22.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "催化材料板块",
+                  "sharePct": 20.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生物医疗材料板块",
+                  "sharePct": 20.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子材料板块",
+                  "sharePct": 15.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源材料板块",
+                  "sharePct": 11.03,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "精密陶瓷板块",
+                  "sharePct": 9.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "MLCC陶瓷粉体",
+                    "category": "化学陶瓷"
+                  },
+                  {
+                    "name": "纳米级复合氧化锆粉体材料",
+                    "category": "金属氧化物"
+                  }
+                ],
+                "knownProducts": [
+                  "MLCC陶瓷粉体",
+                  "全瓷义齿",
+                  "氧化铝陶瓷材料",
+                  "氧化锆陶瓷材料",
+                  "蜂窝陶瓷",
+                  "高端陶瓷球",
+                  "陶瓷墨水",
+                  "纳米级复合氧化锆粉体材料"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "国瓷材料已经具备MLCC陶瓷粉体、纳米级复合氧化锆粉体材料等业务能力，作为MLCC核心原材料陶瓷粉体的龙头供应商，直接受益于下游扩产和对高端材料的需求增长并非单纯概念映射。当前对应的收入被归入新能源材料板块（11.03%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 6708,
+            "stockCode": "605376.SH",
+            "stockName": "博迁新材",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "作为MLCC内电极核心材料纳米镍粉的供应商，受益于MLCC行业量价齐升及国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "605376.SH",
+              "companyName": "博迁新材",
+              "companyProfile": "公司成立于2010年，是一家集高端纳米金属粉体材料研发、生产、销售为一体的国家高新技术企业，是中国纳米金属材料研发与产业化应用的开拓者之一。自设立初始公司一直致力于纳米金属材料的前瞻性研发，拥有专业的研发团队，旨在为客户提供轻量化、小型化产品整体方案，开发的新材料在消费电子、汽车电子、通信以及工业自动化、航空航天等领域拥有良好的应用前景。公司采用常压下物理气相冷凝法(PVD)制备超细金属粉末，填补了国内该技术产业化的空白，并且公司作为唯一起草单位，起草与制定了我国第一项电容器电极镍粉行业标准，是目前全球领先的实现纳米级电子专用高端金属粉体材料规模化量产及商业销售的企业。",
+              "profileSummary": "自设立初始公司一直致力于纳米金属材料的前瞻性研发，拥有专业的研发团队，旨在为客户提供轻量化、小型化产品整体方案，开发的新材料在消费电子、汽车电子、通信以及工业自动化、航空航天等领域拥有良好的应用前景。公司采用常压下物理气相冷凝法(PVD)制备超细金属粉末，填补了国内该技术产业化的空白，并且公司作为唯一起草单位，起草与制定了我国第一项电容器电极镍粉行业标准，是目前全球领先的实现纳米级电子专用高端金属粉体材料规模化量产及商业销售的企业。",
+              "majorProducts": "博迁新材(挂牌终止)镍铬合金粉、博迁新材(挂牌终止)镍铁合金粉、博迁新材(挂牌终止)镍锡合金粉、博迁新材3D打印金属粉、博迁新材纳米镍粉、博迁新材纳米铜粉、博迁新材纳米银粉、博迁新材锡膏",
+              "revenueComposition": "镍粉:74.82%;铜粉:10.54%;其他业务:7.76%;银粉:4.57%;合金:2.31%",
+              "revenueSegments": [
+                {
+                  "name": "镍粉",
+                  "sharePct": 74.82,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铜粉",
+                  "sharePct": 10.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 7.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "银粉",
+                  "sharePct": 4.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "合金",
+                  "sharePct": 2.31,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "镍铁合金粉",
+                    "category": "合金粉末"
+                  },
+                  {
+                    "name": "镍铬合金粉",
+                    "category": "合金粉末"
+                  },
+                  {
+                    "name": "镍锡合金粉",
+                    "category": "合金粉末"
+                  }
+                ],
+                "knownProducts": [
+                  "铜粉",
+                  "镍粉",
+                  "银粉",
+                  "镍铁合金粉",
+                  "镍铬合金粉",
+                  "镍锡合金粉"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "博迁新材与事件的关系已经落在存量主业，而非远期概念：镍粉（74.82%）、合金（2.31%）合计约占收入的77.13%。公司在产业链中的具体抓手是：作为MLCC内电极核心材料纳米镍粉的供应商，受益于MLCC行业量价齐升及国产替代。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 6710,
+            "stockCode": "002859.SZ",
+            "stockName": "洁美科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司是MLCC生产所需核心耗材纸质载带和离型膜的龙头企业，深度受益于MLCC厂商扩产和稼动率提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002859.SZ",
+              "companyName": "洁美科技",
+              "companyProfile": "公司成立于2001年4月，是一家致力于成为全球电子元器件封装及制程所需耗材一站式服务和整体解决方案的国家级高新技术企业。公司总部位于浙江省湖州市安吉县阳光工业园区，并在国内多地设立产研基地、研发中心和投资中心。2017年4月7日，公司在深圳证券交易所成功上市。洁美科技属于电子元器件行业，主营业务为电子元器件封装及制程材料的研发、生产和销售，产品主要包括电子封装薄型载带(纸质载带、塑料载带)、电子封装胶带、电子级薄膜材料(离型膜、流延膜)、芯片承载盘(IC-tray盘)等系列产品，广泛应用于集成电路、片式电子元器件、半导体、光电显示领域及新能源领域，最终应用于智能终端、5G、人工智能(AI)、工业互联网、算力、新能源、电动汽车等重点市场。公司为集成电路、电子元器件、偏光片企业配套生产系列产品，以现有电子薄型载带、上下胶带及离型膜为基础，并向新能源材料领域延伸，致力于成为全球电子元器件封装及制程所需耗材一站式服务和整体解决方案提供商，并成为功能膜材料、电子化学品、新能源相关材料领域的领先企业。公司以深厚的技术积累和卓越的产品质量在全球市场占据重要地位并享有良好声誉。国内外大型知名企业如三星电机、村田制作所、风华高科、松下机电株式会社等都是我们的战略合作伙伴。为贴近客户，快速响应客户需求，公司在国内设立10余家分子公司，并于马来西亚及菲律宾设立海外生产基地，为东南亚客户提供产品。",
+              "profileSummary": "洁美科技属于电子元器件行业，主营业务为电子元器件封装及制程材料的研发、生产和销售，产品主要包括电子封装薄型载带(纸质载带、塑料载带)、电子封装胶带、电子级薄膜材料(离型膜、流延膜)、芯片承载盘(IC-tray盘)等系列产品，广泛应用于集成电路、片式电子元器件、半导体、光电显示领域及新能源领域，最终应用于智能终端、5G、人工智能(AI)、工业互联网、算力、新能源、电动汽车等重点市场。公司为集成电路、电子元器件、偏光片企业配套生产系列产品…",
+              "majorProducts": "流延膜、上下胶带、塑料载带、芯片承载盘（IC-tray 盘）、纸质载带、转移胶带（离型膜）",
+              "revenueComposition": "电子封装材料:82.8%;电子级薄膜材料:12.37%;其他:4.83%",
+              "revenueSegments": [
+                {
+                  "name": "电子封装材料",
+                  "sharePct": 82.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子级薄膜材料",
+                  "sharePct": 12.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "MLCC离型膜",
+                    "category": "其他光学膜"
+                  }
+                ],
+                "knownProducts": [
+                  "透明离型膜",
+                  "上胶带",
+                  "下胶带",
+                  "分切纸带",
+                  "压孔纸带",
+                  "塑料载带",
+                  "打孔纸带",
+                  "MLCC离型膜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "洁美科技与新闻之间有明确产品抓手：MLCC离型膜，对应公司是MLCC生产所需核心耗材纸质载带和离型膜的龙头企业，深度受益于MLCC厂商扩产和稼动率提升。收入主体目前是电子封装材料（82.8%）、电子级薄膜材料（12.37%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 6724,
+            "stockCode": "000636.SZ",
+            "stockName": "风华高科",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内MLCC龙头，祥和工业园高端电容基地已全面达产，将充分受益于行业涨价与国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000636.SZ",
+              "companyName": "风华高科",
+              "companyProfile": "公司是从事电子元器件及电子材料研发、生产、销售的国有控股上市公司。1984年成立，1996年在深交所挂牌上市，2008年广东省广晟控股集团有限公司入主风华高科。经过40年的专注发展，风华高科已成为内资企业中创新能力领先、综合规模较大、产品种类较全的电子元器件整合配套供应商，在国内率先突破多项核心材料关键技术。公司的主营业务为研制、生产、销售电子元器件及电子材料等。主营产品包括MLCC、片式电阻器、电感器、陶瓷滤波器、压敏电阻器、热敏电阻器、铝电解电容器、圆片电容器、超级电容器等，产品广泛应用于包括汽车电子、工业及控制自动化、消费电子、通讯、PC、物联网、新能源、医疗等领域。另外，公司产品还包括电子浆料、瓷粉等电子功能材料系列产品。公司跻身全球知名片式元器件制造商前列，是“国家重点高新技术企业”“国家首批创新型企业”“国家知识产权示范企业”，入选国务院国资委“创建世界一流专业领军示范企业”，同时也是唯一一家进入CDP(美国介电压电材料研究中心)联盟的内资企业。公司科技创新成果获得国家、省市级科技奖近百项，荣获有中国工业“奥斯卡”之称的中国工业大奖；公司主营产品继片阻获得国家制造业单项冠军产品后，MLCC又获评国家制造业单项冠军产品。",
+              "profileSummary": "主营产品包括MLCC、片式电阻器、电感器、陶瓷滤波器、压敏电阻器、热敏电阻器、铝电解电容器、圆片电容器、超级电容器等，产品广泛应用于包括汽车电子、工业及控制自动化、消费电子、通讯、PC、物联网、新能源、医疗等领域。公司科技创新成果获得国家、省市级科技奖近百项，荣获有中国工业“奥斯卡”之称的中国工业大奖；公司主营产品继片阻获得国家制造业单项冠军产品后，MLCC又获评国家制造业单项冠军产品。",
+              "majorProducts": "MLCC、超级电容器、电感器、铝电解电容器、片式电阻器、热敏电阻器、陶瓷滤波器、压敏电阻器、圆片电容器",
+              "revenueComposition": "电子元器件及电子材料:98.19%;其他业务:1.81%",
+              "revenueSegments": [
+                {
+                  "name": "电子元器件及电子材料",
+                  "sharePct": 98.19,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "FPC(柔性电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "NTC热敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "PTC热敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "单层陶瓷电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "压敏电阻",
+                    "category": "电阻器"
+                  }
+                ],
+                "knownProducts": [
+                  "FPC(柔性电路板)",
+                  "陶瓷滤波器",
+                  "单层陶瓷电容器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "超级电容器",
+                  "钽电容器",
+                  "铝电解电容器",
+                  "叠层片式电感器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "风华高科的电子元器件及电子材料（98.19%）覆盖范围较宽，其中能够承载多层片式陶瓷电容器(MLCC)、FPC(柔性电路板)、NTC热敏电阻，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国内MLCC龙头，祥和工业园高端电容基地已全面达产，将充分受益于行业涨价与国产替代。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 6725,
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内MLCC龙头之一，具备从陶瓷粉体到MLCC成品的一体化生产能力，成本优势显著，充分受益于涨价周期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300408.SZ",
+              "companyName": "三环集团",
+              "companyProfile": "公司成立于1970年，2014年在深交所上市，是一家专注于先进材料研发、生产及销售的综合性高新技术企业。产品覆盖通信、电子、新能源、半导体、移动智能终端等众多应用领域。其中，光通信用陶瓷插芯、片式电阻用氧化铝陶瓷基板、半导体陶瓷封装基座等产品产销量均居全球前列，多项产品先后荣获国家优质产品金奖。公司被认定为国家高新技术企业、国家技术创新示范企业、国家企业技术中心、中国制造业单项冠军示范企业，连续多年入选中国电子元件百强企业。",
+              "profileSummary": "产品覆盖通信、电子、新能源、半导体、移动智能终端等众多应用领域。公司被认定为国家高新技术企业、国家技术创新示范企业、国家企业技术中心、中国制造业单项冠军示范企业，连续多年入选中国电子元件百强企业。",
+              "majorProducts": "三环MLCC、三环电阻、三环光纤陶瓷插芯及套筒、三环接线端子、三环燃料电池隔膜板、三环陶瓷封装基座、三环陶瓷基片、三环陶瓷基体",
+              "revenueComposition": "电子元件:36.73%;通信器件:28.8%;电子及陶瓷材料:21.75%;设备组件:6.68%;其他:4.5%;其他业务:1.54%",
+              "revenueSegments": [
+                {
+                  "name": "电子元件",
+                  "sharePct": 36.73,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "通信器件",
+                  "sharePct": 28.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子及陶瓷材料",
+                  "sharePct": 21.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备组件",
+                  "sharePct": 6.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "氧化铝陶瓷基板",
+                  "氮化铝陶瓷基板",
+                  "陶瓷封装基座(PKG)",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "半导体封装点胶机",
+                  "刻蚀环",
+                  "压缩机接线端子",
+                  "沉积室衬垫"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "三环集团已经具备多层片式陶瓷电容器(MLCC)等业务能力，国内MLCC龙头之一，具备从陶瓷粉体到MLCC成品的一体化生产能力，成本优势显著，充分受益于涨价周期并非单纯概念映射。当前对应的收入被归入电子元件（36.73%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 6726,
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司MLCC业务兼具自产和代理，弹性大，同时布局薄膜电容、超级电容等，是A股唯一多品类电容平台型公司。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603678.SH",
+              "companyName": "火炬电子",
+              "companyProfile": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。2015年1月，公司在上海证券交易所上市。公司系国家高新技术企业，连续13年位列中国电子元器件百强企业榜单。拥有CNAS实验室认可的火炬电子实验室、省级企业技术中心、省级工程研究中心，设立国家博士后科研工作站，先后通过ISO9001质量管理体系、ISO14001环境管理体系、ISO45001职业健康安全管理体系、SA8000社会责任管理体系认证和IATF16949质量管理体系等资质认证。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。全力推进产品核心技术的自主研发，在推动内生增长的同时，积极向具有渠道和技术协同效应的其他类型元器件产品延伸，以“传承创新、百年火炬”为企业愿景，用高质量、高效率的发展促进产业升级，为我国电子元器件和新材料产业的发展做出贡献。",
+              "profileSummary": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。",
+              "majorProducts": "EMI 电源滤波器、IGBT、MOSFET、SIP模块、薄膜电路、薄膜无源集成器件、超级电容器、第三代功率器件、电阻器、定制化特种元器件、火炬电子多芯组陶瓷电容器、火炬电子片式多层陶瓷电容器、火炬电子引线式多层陶瓷电容器、模拟IC、钽电容器、陶瓷电容器、微波介质频率器件、微波芯片电容器",
+              "revenueComposition": "国际贸易业务:61.43%;元器件贸易:33.08%;陶瓷材料:4.96%;其他业务:0.53%",
+              "revenueSegments": [
+                {
+                  "name": "国际贸易业务",
+                  "sharePct": 61.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "元器件贸易",
+                  "sharePct": 33.08,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "陶瓷材料",
+                  "sharePct": 4.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "单层陶瓷电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "微波天线",
+                    "category": "天线"
+                  },
+                  {
+                    "name": "电子元器件贸易",
+                    "category": "电子元件销售"
+                  },
+                  {
+                    "name": "超级电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "钽电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "聚碳硅烷",
+                  "电子元器件贸易",
+                  "单层陶瓷电容器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "超级电容器",
+                  "钽电容器",
+                  "射频薄膜无源集成器件",
+                  "微波天线"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对火炬电子而言，公司MLCC业务兼具自产和代理，弹性大，同时布局薄膜电容、超级电容等，是A股唯一多品类电容平台型公司并非纯概念映射，因为元器件贸易占收入的33.08%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是供需缺口与产品价格，传导效率取决于“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由产品报价、订单排期、产销率和毛利率来区分；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 6727,
+            "stockCode": "300136.SZ",
+            "stockName": "信维通信",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "通过参股公司信维电科布局高端MLCC，产品已通过国内主流客户认证并批量交付，正送样北美大客户。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300136.SZ",
+              "companyName": "信维通信",
+              "companyProfile": "公司成立于2006年，是首批国家级高新技术企业之一，专注于生产与射频相关的各类电子元器件及模组。2010年，公司在深圳证券交易所创业板成功上市。2012年，信维通信通过收购世界知名天线厂商英资莱尔德(北京)，开启了国际化战略布局，搭建了可对接世界一流移动终端厂商的大客户平台。如今，信维通信的业务版图已遍布7个国家17个地区，完成了全球多个分部的建设。公司持续引进优秀人才，提升自身技术竞争力，以契合全球客户日益增长的需求。未来，信维通信将坚守初心，专注于基础材料、基础技术研究，致力于打造值得信赖的创新产品与解决方案，为客户创造价值。",
+              "profileSummary": "2012年，信维通信通过收购世界知名天线厂商英资莱尔德(北京)，开启了国际化战略布局，搭建了可对接世界一流移动终端厂商的大客户平台。如今，信维通信的业务版图已遍布7个国家17个地区，完成了全球多个分部的建设。",
+              "majorProducts": "EMI\\EMC器件、被动元件、高精密连接器、汽车互联产品、天线及模组、无线充电及模组",
+              "revenueComposition": "移动终端天线及附件:100%",
+              "revenueSegments": [
+                {
+                  "name": "移动终端天线及附件",
+                  "sharePct": 100.0,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "星载相控阵天线",
+                  "射频前端器件",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "LCP薄膜",
+                  "射频连接器",
+                  "电磁兼容性EMC器件",
+                  "电磁干扰EMI器件",
+                  "无线充电模组"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "信维通信已经具备多层片式陶瓷电容器(MLCC)等业务能力，通过参股公司信维电科布局高端MLCC，产品已通过国内主流客户认证并批量交付，正送样北美大客户并非单纯概念映射。当前对应的收入被归入移动终端天线及附件（100%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 6737,
+            "stockCode": "300975.SZ",
+            "stockName": "商络电子",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "作为多家MLCC原厂授权分销商，直接受益于MLCC涨价和供应紧张带来的渠道价值提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300975.SZ",
+              "companyName": "商络电子",
+              "companyProfile": "公司创建于1999年8月，是一家电子元器件供应链整合及增值服务型企业，于2021年4月正式登陆A股市场。公司业务领域涉及新能源、汽车电子、通信系统、工业控制、AI智能、消费电子等多个板块，在产品链中处于分销环节，目前拥有超过110项知名原厂的授权，交易客户总数近5000家，其中核心客户2000余家。公司布局全球，以南京总部为依托，在新加坡、日本、泰国、马来西亚等海外地区，及北京、天津、深圳、上海、苏州、海南、台湾、香港等国内二十多个城市或地区设立子公司或办事处，通过全面的布局,公司充分发挥各业务体系之间的协同效应,提升业务规模和市场竞争力,更全面及时为客户提供服务与支持。",
+              "profileSummary": "公司业务领域涉及新能源、汽车电子、通信系统、工业控制、AI智能、消费电子等多个板块，在产品链中处于分销环节，目前拥有超过110项知名原厂的授权，交易客户总数近5000家，其中核心客户2000余家。公司布局全球，以南京总部为依托，在新加坡、日本、泰国、马来西亚等海外地区，及北京、天津、深圳、上海、苏州、海南、台湾、香港等国内二十多个城市或地区设立子公司或办事处，通过全面的布局,公司充分发挥各业务体系之间的协同效应,提升业务规模和市场竞争…",
+              "majorProducts": "Fakra、FPC连接器、LTCC滤波器、MOS管、NOR Flash、被动晶体、车载陶瓷电容、电力电容、叠层功率电感、叠层射频电感、防硫化电阻、高速高频连接器、工业陶瓷电容、合金电阻、继电器、介质滤波器、开关电源变压器、螺栓铝电解电容、牛角铝电解电容、普通薄膜电阻、普通陶瓷电容、气体放电管、汽车应用连接器、绕线功率电感、热敏电阻、商络电子二极管、商络电子三极管、射频连接器、声表面滤波器、天线、贴片铝电解电容、通讯模块、网络变压器、线到板连接器、小间距板到板、压敏电阻、一体成型电感、引线铝电解电容、整流桥、直流薄膜电容、主动晶振",
+              "revenueComposition": "主动及其他电子元器件:60.54%;被动电子元器件:39.45%;其他业务:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "主动及其他电子元器件",
+                  "sharePct": 60.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "被动电子元器件",
+                  "sharePct": 39.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "电子元器件分销"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "商络电子目前更依赖主动及其他电子元器件（60.54%）、被动电子元器件（39.45%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：作为多家MLCC原厂授权分销商，直接受益于MLCC涨价和供应紧张带来的渠道价值提升，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变供需缺口与产品价格；公司的产业链位置只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能转化为收入。现阶段可以用产品报价、订单排期、产销率和毛利率判断预期差方向；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，短期主题弹性与中期业绩贡献可能明显背离。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 6728,
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是电感龙头，同时布局钽电容等被动元件，受益于AI服务器垂直供电架构升级和被动元件整体景气度提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002138.SZ",
+              "companyName": "顺络电子",
+              "companyProfile": "公司是一家专业从事各类片式电子元件研发、生产和销售的高新技术企业，主要产品包括叠层片式电感器、绕线片式电感器、共模扼流器、压敏电阻器、NTC热敏电阻器、LC滤波器、各类天线、NFC磁片、无线充电线圈组件、电容、电子变压器等电子元件。产品广泛应用于通讯、消费类电子、计算机、LED照明、安防、智能电网、医疗设备以及汽车电子等领域。秉承“遵偱标准、科技创新、持续改进，向全球客户提供优异的产品和完善的服务”的经营理念，凭借先进的管理体系、雄厚的开发能力、优异的产品质量和完善的服务，公司已成为众多国内知名企业的电子元件供应商。在电感细分领域内，公司在中国市场以及国际市场上均占有较高的市场占用率，技术和规模处于领先地位，公司的客户遍布全球，已成为国际电子产业链中不可或缺的供应商，为中国电子信息产业作出了贡献。",
+              "profileSummary": "公司是一家专业从事各类片式电子元件研发、生产和销售的高新技术企业，主要产品包括叠层片式电感器、绕线片式电感器、共模扼流器、压敏电阻器、NTC热敏电阻器、LC滤波器、各类天线、NFC磁片、无线充电线圈组件、电容、电子变压器等电子元件。秉承“遵偱标准、科技创新、持续改进，向全球客户提供优异的产品和完善的服务”的经营理念，凭借先进的管理体系、雄厚的开发能力、优异的产品质量和完善的服务，公司已成为众多国内知名企业的电子元件供应商。",
+              "majorProducts": "HDI板、NFC天线、半孔PCB、传感器系列、低温共烧陶瓷（LTCC）元器件系列、电磁兼容元器件系列、电感系列、电路保护器件系列、电子变压器系列、非晶材料磁板、功率磁性器件系列、精密陶瓷系列、顺络电子NTC热敏电阻器、顺络电子SMT功率电感、顺络电子叠层片式LC滤波器、顺络电子叠层片式天线、顺络电子叠层片式铁氧体磁珠、顺络电子共模轭流线圈、顺络电子片式磁珠、顺络电子片式叠层介质滤波器、顺络电子片式高频电感、顺络电子片式三端EMI滤波器、顺络电子片式陶瓷体电感、顺络电子片式陶瓷体绕线电感、顺络电子片式铁氧体电感、顺络电子片式铁氧体绕线电感、顺络电子片式压敏电阻器、顺络电子绕线贴片功率电感、通孔板、无线充电线圈",
+              "revenueComposition": "片式电子元件:99.28%;其他业务:0.72%",
+              "revenueSegments": [
+                {
+                  "name": "片式电子元件",
+                  "sharePct": 99.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "电动汽车BMS变压器",
+                  "倒车雷达变压器",
+                  "共模扼流器",
+                  "无源滤波器",
+                  "微波器件",
+                  "NFC磁片",
+                  "一体成型电感器",
+                  "叠层片式电感器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "顺络电子的业务范围能够覆盖公司是电感龙头，同时布局钽电容等被动元件，受益于AI服务器垂直供电架构升级和被动元件整体景气度提升所处的产业环节，但当前片式电子元件（99.28%）、其他业务（0.72%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。供需缺口与产品价格需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”完成兑现，并在产品报价、订单排期、产销率和毛利率上形成持续改善；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 6729,
+            "stockCode": "688260.SH",
+            "stockName": "昀冢科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为国内MLCC二线厂商，受益于行业景气上行和国产替代，具备较大业绩弹性。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688260.SH",
+              "companyName": "昀冢科技",
+              "companyProfile": "公司成立于2013年，是一家专注于消费电子、汽车电子和电子陶瓷等领域核心技术研发的高新技术企业。公司于2021年4月6日成功登陆上海证券交易所科创板，总部位于江苏省昆山市。秉持品质优良，技术专业，服务周到，永续经营的经营理念。从设计到制造生产采用一条龙作业，为客户提供各类电子零部件、高精密注塑件及Insert Molding等优质产品。公司拥有一支工作高效，品质一流的专业队伍。与客户互利合作，以品质、价格、交期、服务上，打造良好的公司信誉，为客户提供满意的服务。",
+              "profileSummary": "公司成立于2013年，是一家专注于消费电子、汽车电子和电子陶瓷等领域核心技术研发的高新技术企业。从设计到制造生产采用一条龙作业，为客户提供各类电子零部件、高精密注塑件及Insert Molding等优质产品。",
+              "majorProducts": "ABS、CM（基座）（创新产品）、CMI件、DPC、ESC、IM件、IR红外滤光片组件（创新产品）、MLCC、ONE BOX、SL件、YOKE、电气盖盒、基座、角接触球轴承保持架、金属冲压件、精密冲压模具、精密注塑模具、镜筒、汽车电子模块、绕线载体、绕线载体（创新产品）、摄像头模组CCM、双摄/多摄模组框架、载体、支架、转向系统部件",
+              "revenueComposition": "电子陶瓷器件:29.32%;其他:26.58%;CMI件:21.98%;金属插入成型件:12.38%;纯塑料件:8.78%;其他业务:0.96%",
+              "revenueSegments": [
+                {
+                  "name": "电子陶瓷器件",
+                  "sharePct": 29.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 26.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "CMI件",
+                  "sharePct": 21.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金属插入成型件",
+                  "sharePct": 12.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "纯塑料件",
+                  "sharePct": 8.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "家电电气盖盒",
+                  "电子零部件精密冲压模具",
+                  "电子零部件精密注塑模具",
+                  "制动压力调节器",
+                  "电子驻车制动控制单元",
+                  "汽车稳定杆衬套",
+                  "汽车电子齿条挡块",
+                  "引擎盖塑料把手"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "昀冢科技拥有多层片式陶瓷电容器(MLCC)，其产业链位置与作为国内MLCC二线厂商，受益于行业景气上行和国产替代，具备较大业绩弹性一致；当前的电子陶瓷器件（29.32%）、其他（26.58%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 6730,
+            "stockCode": "300726.SZ",
+            "stockName": "宏达电子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是军工钽电容龙头，民用MLCC业务规模虽小，但正积极拓展，受益于行业景气及国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300726.SZ",
+              "companyName": "宏达电子",
+              "companyProfile": "公司是总装备部军用电子元器件配套定点研制生产军用钽电解电容器的专业厂家，属工信部国防科工局管理。公司拥有30多年的生产钽电解电容器的经验和历史，有五条成熟的、先进的钽电解电容器生产线及两个较大规模的生产基地，拥有从美国、日本、韩国以及欧盟引进的先进生产线设备。公司的钽电解电容器生产工艺先进、技术力量雄厚，设备精良，拥有国内一流的新品研发能力，拥有完善的质量检测体系和完整的钽电解电容器环境试验、例行试验手段。公司以质量为生命，追求高标准、零缺陷，在长期的研制生产过程中，同国内外先进企业和高等院校有着广泛的合作。公司是以电容器为主导产品，集研发、生产、销售、服务为一体的高技术企业，以钽电解电容器品种全、质量好、信誉高和服务优而享誉国内外市场。公司通过了质量管理体系认证，不断加强技术创新和质量管理工作，持续改进和提升质量水平。随着公司产品不断进入军工配套领域，公司非固体电解质钽电容器生产线、片式固体电解质钽电容器生产线、固体电解质钽电容器生产线贯彻国军标，产品列入了相关军用电子元器件合格产品目录(QPL)。",
+              "profileSummary": "公司是以电容器为主导产品，集研发、生产、销售、服务为一体的高技术企业，以钽电解电容器品种全、质量好、信誉高和服务优而享誉国内外市场。随着公司产品不断进入军工配套领域，公司非固体电解质钽电容器生产线、片式固体电解质钽电容器生产线、固体电解质钽电容器生产线贯彻国军标，产品列入了相关军用电子元器件合格产品目录(QPL)。",
+              "majorProducts": "I/F转换器、LTCC滤波器、薄膜电容器、变压器、超级电容器、磁珠、单层瓷介电容器、电感器、电源管理芯片、电源模块、电阻、多层瓷介电容器、多层片式瓷介电容器系列、非片式固体电解质钽电容器系列（CA、CA42系列）、高分子片式铝电容器、环形器与隔离器、片式高分子固体电解质钽电容器系列（CA55系列）、片式固体电解质钽电容器系列（CA45系列）、嵌入式计算机板卡、钽电容器、钽外壳封装系列（THC、CA39、CA38系列）、陶瓷薄膜电路、微波器件组件、温度传感器、银外壳封装系列（CA30、CA35系列）",
+              "revenueComposition": "元器件:73.95%;模块及其他产品:26.05%",
+              "revenueSegments": [
+                {
+                  "name": "元器件",
+                  "sharePct": 73.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "模块及其他产品",
+                  "sharePct": 26.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "I/F转换器",
+                    "category": "转换器"
+                  },
+                  {
+                    "name": "LTCC滤波器",
+                    "category": "滤波器"
+                  },
+                  {
+                    "name": "嵌入式计算机板卡",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "电力电子电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "薄膜电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "嵌入式计算机板卡",
+                  "LTCC滤波器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "电力电子电容器",
+                  "薄膜电容器",
+                  "钽电容器",
+                  "I/F转换器",
+                  "温度传感器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "宏达电子与新闻之间有明确产品抓手：多层片式陶瓷电容器(MLCC)、I/F转换器、LTCC滤波器，对应公司是军工钽电容龙头，民用MLCC业务规模虽小，但正积极拓展，受益于行业景气及国产替代。收入主体目前是元器件（73.95%）、模块及其他产品（26.05%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 6738,
+            "stockCode": "301099.SZ",
+            "stockName": "雅创电子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司及子公司是村田的代理商，分销其MLCC等产品，受益于行业景气度回暖。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301099.SZ",
+              "companyName": "雅创电子",
+              "companyProfile": "发行人是国内知名的电子元器件授权分销商，主要分销东芝、首尔半导体、村田、松下、LG等国际著名电子元器件设计制造商的产品。具体产品包括光电器件、存储芯片、被动元件和分立半导体等，产品主要应用于汽车电子领域。发行人通过为客户提供包括供应链服务和技术服务在内的产品方案以实现产品销售，主要客户包括延锋伟世通、亿咖通、金来奥、法雷奥、现代摩比斯等国内外汽车电子零部件制造商。除汽车电子领域外，发行人销售产品的其他应用领域主要有消费电子、大数据存储、电力电子等，其他主要客户还包括宝存科技、南京德朔等。同时，发行人基于汽车电子领域多年积累，并结合下游客户需求，开展了电源管理IC的自主研发设计业务。发行人自主研发设计的多款电源管理IC产品已经通过AEC-Q100等车规级认证，并在现代汽车、克莱斯勒等全球知名车企的相关车型上得到批量使用。",
+              "profileSummary": "具体产品包括光电器件、存储芯片、被动元件和分立半导体等，产品主要应用于汽车电子领域。发行人通过为客户提供包括供应链服务和技术服务在内的产品方案以实现产品销售，主要客户包括延锋伟世通、亿咖通、金来奥、法雷奥、现代摩比斯等国内外汽车电子零部件制造商。",
+              "majorProducts": "DRAM芯片、LED颗粒、NANDFlash闪存芯片、被动元件、电池、非存储IC、分立半导体、光电耦合器、液晶屏",
+              "revenueComposition": "电子元器分销:94.93%;电源管理IC设计:4.98%;版权费收入:0.03%;其他业务:0.03%;电子元器件技术服务:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "电子元器分销",
+                  "sharePct": 94.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电源管理IC设计",
+                  "sharePct": 4.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "版权费收入",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子元器件技术服务",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "液晶面板销售",
+                  "被动元件销售",
+                  "照明LED器件",
+                  "光电耦合器销售",
+                  "分立半导体销售",
+                  "BDC电机驱动芯片",
+                  "LED车灯驱动芯片",
+                  "低压差线性稳压器LDO"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "雅创电子目前更依赖电子元器分销（94.93%）、电源管理IC设计（4.98%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：公司及子公司是村田的代理商，分销其MLCC等产品，受益于行业景气度回暖，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变供需缺口与产品价格；公司的产业链位置只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能转化为收入。现阶段可以用产品报价、订单排期、产销率和毛利率判断预期差方向；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 6739,
+            "stockCode": "000062.SZ",
+            "stockName": "深圳华强",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是村田的主要分销商，授权分销村田的MLCC、硅电容、电感、电阻等多种元器件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000062.SZ",
+              "companyName": "深圳华强",
+              "companyProfile": "公司成立于1994年，1997年1月在深圳证券交易所上市，公司围绕电子信息产业，不断创新服务模式，拓展服务内容，升级服务品质，在电子元器件分销、应用方案研发、技术支持保障、产业互联网等诸多方面整合创新，确立了全面立体的竞争优势，并已打造形成中国本土最大的综合性电子元器件交易服务平台。公司的交易服务平台提供了多渠道、多类型的交易模式，公司不仅是中国最大的多品类电子元器件授权分销企业，同时还拥有电子元器件产业互联网平台，以及中国乃至全球最大的电子元器件及电子终端产品实体交易市场。公司围绕电子信息产业，不断创新服务模式，拓展服务内容，升级服务品质，在电子元器件分销、应用方案研发、技术支持保障、行业资讯服务等诸多方面整合创新，确立了全面立体的竞争优势，并已打造形成中国本土最大的综合性电子元器件交易服务平台。公司不仅是中国最大的多品类电子元器件授权分销企业(华强半导体集团)，同时还拥有中国乃至全球最大的电子元器件实体专业市场(华强电子世界)，以及业内领先的电子元器件产业互联网平台(华强电子网集团)。",
+              "profileSummary": "公司成立于1994年，1997年1月在深圳证券交易所上市，公司围绕电子信息产业，不断创新服务模式，拓展服务内容，升级服务品质，在电子元器件分销、应用方案研发、技术支持保障、产业互联网等诸多方面整合创新，确立了全面立体的竞争优势，并已打造形成中国本土最大的综合性电子元器件交易服务平台。公司的交易服务平台提供了多渠道、多类型的交易模式，公司不仅是中国最大的多品类电子元器件授权分销企业，同时还拥有电子元器件产业互联网平台，以及中国乃至全球最…",
+              "majorProducts": "电子元器件及电子终端产品线下交易、电子元器件线上交易、电子元器件线下分销、品牌终端产品线上分销、深圳华强广场、深圳华强广场酒店",
+              "revenueComposition": "电子元器件分销:96.67%;电子专业市场经营与服务:2.23%;物业经营及其他分部:1.1%",
+              "revenueSegments": [
+                {
+                  "name": "电子元器件分销",
+                  "sharePct": 96.67,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电子专业市场经营与服务",
+                  "sharePct": 2.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物业经营及其他分部",
+                  "sharePct": 1.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电子元器件线下分销",
+                    "category": "电子元件销售"
+                  }
+                ],
+                "knownProducts": [
+                  "自有物业管理服务",
+                  "电子终端产品市场经营",
+                  "电子信息产业供应链服务",
+                  "产业园区运营",
+                  "电子元器件线下分销",
+                  "股权投资业务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "深圳华强的电子元器件分销（96.67%）覆盖范围较宽，其中能够承载电子元器件线下分销，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司是村田的主要分销商，授权分销村田的MLCC、硅电容、电感、电阻等多种元器件。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "16条低于3星的源记录已按当前关注口径排除。",
+      "7条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

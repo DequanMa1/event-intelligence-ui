@@ -7,6 +7,7 @@ type ImpactStock = {
   stockCode: string;
   stockName: string;
   rating: string;
+  filledStars: number;
   mapped: boolean;
   anchorProductCount: number;
 };
@@ -18,20 +19,42 @@ type ImpactCoreProduct = {
   level5Industry: { code: string; name: string };
   level6Industry: { code: string; name: string };
   level7Product: { code: string; name: string };
-  mappingType: "company_product" | "semantic_bridge";
-  bridgeBasis: string;
+  matchedSourceLevel: 7;
   stockCount: number;
-  stocks: Array<Pick<ImpactStock, "stockCode" | "stockName" | "rating">>;
-  upstreamCount: number;
-  downstreamCount: number;
+  stocks: Array<Pick<ImpactStock, "stockCode" | "stockName" | "rating" | "filledStars">>;
 };
 
-type ImpactRelatedProduct = {
+type RelatedIndustryProduct = {
   code: string;
   name: string;
-  anchorCount: number;
+  hierarchyPath: string;
+  matchedSourceLevel: 7;
   stockCount: number;
-  linkedCoreProductNames: string[];
+  stocks: Array<Pick<ImpactStock, "stockCode" | "stockName" | "rating" | "filledStars">>;
+};
+
+type RelatedIndustry = {
+  rank: number;
+  code: string;
+  name: string;
+  description: string;
+  stockCount: number;
+  starWeight: number;
+  level7ProductCount: number;
+  stocks: Array<Pick<ImpactStock, "stockCode" | "stockName" | "rating" | "filledStars">>;
+  products: RelatedIndustryProduct[];
+};
+
+type IndustryPortfolio = {
+  rule: string;
+  sourceStockCount: number;
+  mappedStockCount: number;
+  unmappedStockCount: number;
+  level7ProductCount: number;
+  candidateIndustryCount: number;
+  relatedIndustryCount: number;
+  stocks: ImpactStock[];
+  relatedIndustries: RelatedIndustry[];
 };
 
 type IndustryAnalysisTarget = {
@@ -58,8 +81,70 @@ type ImpactIndustryAnalysis = {
   reason: string;
 };
 
+type InvestmentStock = {
+  sourceRowNumber: number;
+  stockCode: string;
+  stockName: string;
+  rating: string;
+  filledStars: number;
+  reason: string;
+  reasonSourceAvailable: boolean;
+  companyEvidence: {
+    matched: boolean;
+    matchMethod: "stock_code" | "stock_name" | "none";
+    sourceWorkbook: string;
+    companyCode: string;
+    companyName: string;
+    companyProfile: string;
+    profileSummary: string;
+    majorProducts: string;
+    revenueComposition: string;
+    revenueSegments: Array<{
+      name: string;
+      sharePct: number;
+      relatedToEvent: boolean;
+      relationType: "direct" | "contained" | "unrelated";
+    }>;
+    businessRelation: {
+      status: "direct_segment" | "broad_segment" | "product_confirmed" | "profile_supported" | "business_mismatch" | "unverified" | "unavailable";
+      relevantProducts: Array<{ name: string; category: string }>;
+      knownProducts: string[];
+      directSegmentCount: number;
+      containedSegmentCount: number;
+    };
+  };
+  analysis: string;
+};
+
+type InvestmentGroup = {
+  filledStars: number;
+  rating: string;
+  name: string;
+  relevance: string;
+  stockCount: number;
+  stocks: InvestmentStock[];
+};
+
+type InvestmentOpportunities = {
+  status: "ready" | "no_a_share_stocks";
+  sourceRowCount: number;
+  eligibleSourceRowCount: number;
+  totalStockCount: number;
+  groupCount: number;
+  invalidRatingCount: number;
+  excludedLowStarCount: number;
+  excludedNonAShareCount: number;
+  missingReasonCount: number;
+  companyProfileMatchedCount: number;
+  companyProfileUnmatchedCount: number;
+  sourceWorkbook: string;
+  analysisPromptVersion: string;
+  groups: InvestmentGroup[];
+  caveats: string[];
+};
+
 type ImpactChainRecord = {
-  status: "ready" | "core_products_only" | "no_four_star_stocks" | "no_company_product_mapping" | "no_relevant_core_products";
+  status: "ready" | "no_four_star_stocks" | "no_company_product_mapping" | "no_relevant_core_products";
   event: { mainId: string; uid: string; title: string; date: string };
   selection: {
     sourceStockCount: number;
@@ -72,18 +157,17 @@ type ImpactChainRecord = {
     candidateCoreProductCount: number;
     selectedCoreProductCount: number;
     selectedCompanyCoreProductCount: number;
-    semanticBridgeCount: number;
-    upstreamCandidateCount: number;
-    downstreamCandidateCount: number;
-    shownUpstreamCount: number;
-    shownDownstreamCount: number;
+    level7ProductCount: number;
+    relatedIndustryCandidateCount: number;
+    shownRelatedIndustryCount: number;
   };
-  chain: {
-    upstream: ImpactRelatedProduct[];
-    core: ImpactCoreProduct[];
-    downstream: ImpactRelatedProduct[];
+  productIndustryMap: {
+    coreProducts: ImpactCoreProduct[];
+    relatedIndustries: RelatedIndustry[];
   };
+  industryPortfolio: IndustryPortfolio;
   industryAnalysis: ImpactIndustryAnalysis;
+  investmentOpportunities: InvestmentOpportunities;
   caveats: string[];
 };
 
@@ -105,18 +189,25 @@ function getNewsOriginal(sourceReason: string) {
 }
 
 function impactStatusText(status: ImpactChainRecord["status"]) {
-  if (status === "no_four_star_stocks") return "该新闻没有恰好4个实心星的标的";
-  if (status === "no_company_product_mapping") return "4星标的尚未穿透到本地公司产品图谱";
-  if (status === "no_relevant_core_products") return "尚未筛出与新闻主题一致的核心产品";
-  if (status === "core_products_only") return "已找到核心产品，但图谱暂无直接上下游关系";
+  if (status === "no_four_star_stocks") return "该新闻没有4星A股核心标的";
+  if (status === "no_company_product_mapping") return "4星A股标的尚未穿透到真实七级产品";
+  if (status === "no_relevant_core_products") return "尚未筛出与新闻主题一致的七级核心产品";
   return "";
 }
 
 function createImpactPlainText(impact: ImpactChainRecord | null) {
   if (!impact) return "（二）影响产业链\n\n产业链数据暂未加载。";
-  if (!impact.chain.core.length) return `（二）影响产业链\n\n${impactStatusText(impact.status)}`;
+  if (!impact.productIndustryMap.coreProducts.length) return `（二）影响产业链\n\n${impactStatusText(impact.status)}`;
 
-  const names = (values: Array<{ name: string }>) => values.map((item) => item.name).join("、") || "暂无直接关系";
+  const names = (values: Array<{ name?: string; stockName?: string }>) => values
+    .map((item) => item.name ?? item.stockName ?? "")
+    .filter(Boolean)
+    .join("、") || "暂无";
+  const relatedIndustries = impact.productIndustryMap.relatedIndustries.flatMap((industry, index) => [
+    `相关产业${index + 1}：${industry.name}`,
+    `七级产品：${names(industry.products)}`,
+    `关联标的：${names(industry.stocks)}`,
+  ]);
   const industryAnalysis = impact.industryAnalysis.status === "ready" && impact.industryAnalysis.target && impact.industryAnalysis.overview && impact.industryAnalysis.impact
     ? [
         "",
@@ -128,44 +219,44 @@ function createImpactPlainText(impact: ImpactChainRecord | null) {
   return [
     "（二）影响产业链",
     "",
-    `筛选口径：origin_star_num 中恰好4个实心星；图谱穿透 ${impact.selection.mappedStockCount}/${impact.selection.sourceStockCount} 只标的。`,
-    `上游：${names(impact.chain.upstream)}`,
-    `核心产品：${names(impact.chain.core)}`,
-    `下游：${names(impact.chain.downstream)}`,
+    `核心产品口径：4星A股标的；七级产品穿透 ${impact.selection.mappedStockCount}/${impact.selection.sourceStockCount} 只。`,
+    `相关产业口径：3—5星A股标的；七级产品穿透 ${impact.industryPortfolio.mappedStockCount}/${impact.industryPortfolio.sourceStockCount} 只，再上卷至五级产业。`,
+    `核心产品：${names(impact.productIndustryMap.coreProducts)}`,
+    ...relatedIndustries,
     ...industryAnalysis,
   ].join("\n");
 }
 
-function RelatedProductColumn({
-  eyebrow,
-  title,
-  products,
+function RelatedIndustryColumn({
+  industry,
   expanded,
 }: {
-  eyebrow: string;
-  title: string;
-  products: ImpactRelatedProduct[];
+  industry: RelatedIndustry;
   expanded: boolean;
 }) {
-  const visible = expanded ? products : products.slice(0, 6);
+  const visible = expanded ? industry.products : industry.products.slice(0, 4);
   return (
-    <section className="chain-column related-column">
+    <section className="mapping-column related-industry-column">
       <header>
-        <span>{eyebrow}</span>
-        <h3>{title}</h3>
-        <small>{products.length} 个直接节点</small>
+        <span>相关产业 {String(industry.rank).padStart(2, "0")}</span>
+        <h3>{industry.name}</h3>
+        <small>{industry.stockCount}只标的 · {industry.level7ProductCount}个七级产品</small>
       </header>
+      {industry.description && <p className="industry-description">{industry.description}</p>}
       {visible.length > 0 ? (
-        <ol className="chain-node-list">
+        <ol className="mapping-node-list">
           {visible.map((product) => (
-            <li key={product.code} className="chain-node related-node" title={`连接：${product.linkedCoreProductNames.join("、")}`}>
+            <li key={product.code} className="mapping-node industry-product-node" title={product.hierarchyPath}>
               <strong>{product.name}</strong>
-              <span>连接 {product.anchorCount} 个核心产品</span>
+              <div className="stock-tags">
+                {product.stocks.slice(0, 4).map((stock) => <span key={`${product.code}-${stock.stockCode}`}>{stock.stockName}</span>)}
+                {product.stocks.length > 4 && <span>+{product.stocks.length - 4}</span>}
+              </div>
             </li>
           ))}
         </ol>
       ) : (
-        <p className="chain-column-empty">暂无直接{title}关系</p>
+        <p className="mapping-column-empty">暂无可核验的七级产品</p>
       )}
     </section>
   );
@@ -174,18 +265,18 @@ function RelatedProductColumn({
 function CoreProductColumn({ products, expanded }: { products: ImpactCoreProduct[]; expanded: boolean }) {
   const visible = expanded ? products : products.slice(0, 8);
   return (
-    <section className="chain-column core-column">
+    <section className="mapping-column core-column">
       <header>
-        <span>4星标的落点</span>
+        <span>4星A股核心落点</span>
         <h3>核心产品</h3>
-        <small>{products.length} 个主题产品</small>
+        <small>{products.length} 个事件相关七级产品</small>
       </header>
-      <ol className="chain-node-list">
+      <ol className="mapping-node-list">
         {visible.map((product) => (
-          <li key={product.code} className={`chain-node core-node ${product.mappingType === "semantic_bridge" ? "bridge" : ""}`} title={product.hierarchyPath || "由同名主题/上位产品桥接至关系图谱"}>
+          <li key={product.code} className="mapping-node core-node" title={product.hierarchyPath}>
             <div className="core-node-title">
               <strong>{product.name}</strong>
-              {product.mappingType === "semantic_bridge" && <em>关系桥接</em>}
+              <em>{product.level5Industry.name}</em>
             </div>
             <div className="stock-tags">
               {product.stocks.slice(0, 4).map((stock) => <span key={`${product.code}-${stock.stockCode}`}>{stock.stockName}</span>)}
@@ -218,18 +309,155 @@ function IndustryAnalysisPanel({ analysis }: { analysis: ImpactIndustryAnalysis 
   );
 }
 
+function createInvestmentPlainText(impact: ImpactChainRecord | null) {
+  if (!impact) return "（三）投资机会\n\n投资机会数据暂未加载。";
+  const opportunities = impact.investmentOpportunities;
+  if (!opportunities.groups.length) return "（三）投资机会\n\n该新闻没有3至5星的A股标的。";
+
+  const groups = opportunities.groups.flatMap((group) => [
+    `【${group.filledStars}星｜${group.name}｜${group.stockCount}只】`,
+    ...group.stocks.flatMap((stock) => {
+      const evidence = stock.companyEvidence;
+      const revenue = evidence.revenueSegments
+        .slice(0, 6)
+        .map((segment) => `${segment.name} ${segment.sharePct.toFixed(2).replace(/\.00$/, "")}%`)
+        .join("、");
+      return [
+        `${stock.stockName}${stock.stockCode ? `（${stock.stockCode}）` : ""} · ${stock.rating}`,
+        stock.analysis,
+        evidence.matched ? `公司概况：${evidence.profileSummary || evidence.companyProfile}` : "公司概况：暂缺。",
+        evidence.matched ? `主营业务结构：${revenue || "暂无可展示的分部占比"}` : "",
+        "",
+      ].filter(Boolean);
+    }),
+  ]);
+  return [
+    "（三）投资机会",
+    "",
+    `共 ${opportunities.totalStockCount} 只3至5星A股标的，按实心星从高到低分为 ${opportunities.groupCount} 组。`,
+    "",
+    ...groups,
+  ].join("\n").trimEnd();
+}
+
+function InvestmentOpportunitiesPanel({ opportunities }: { opportunities: InvestmentOpportunities }) {
+  if (!opportunities.groups.length) {
+    return (
+      <div className="impact-empty">
+        <strong>该新闻没有3至5星的A股标的</strong>
+        <p>海外、港股、未上市公司以及低于3星的标的均已排除。</p>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div className="investment-summary" aria-label="投资机会组合概览">
+        <div><span>A股标的</span><strong>{opportunities.totalStockCount}</strong><small>沪深北 · 3至5星</small></div>
+        <div><span>星级组合</span><strong>{opportunities.groupCount}</strong><small>按实心星降序</small></div>
+        <div><span>业务资料</span><strong>{opportunities.companyProfileMatchedCount}/{opportunities.totalStockCount}</strong><small>公司概况与业务结构</small></div>
+        <div><span>海外排除</span><strong>{opportunities.excludedNonAShareCount}</strong><small>仅展示A股标的</small></div>
+      </div>
+
+      <div className="investment-groups">
+        {opportunities.groups.map((group) => (
+          <section className={`investment-group stars-${group.filledStars}`} key={group.filledStars} aria-labelledby={`investment-group-${group.filledStars}`}>
+            <header>
+              <div>
+                <span className="investment-stars" aria-label={`${group.filledStars}个实心星`}>{group.rating}</span>
+                <h3 id={`investment-group-${group.filledStars}`}>{group.name}</h3>
+              </div>
+              <div className="investment-group-meta">
+                <strong>{group.relevance}</strong>
+                <small>{group.stockCount} 只标的</small>
+              </div>
+            </header>
+            <div className="investment-stock-cards">
+              {group.stocks.map((stock) => (
+                <article className="investment-stock" key={`${stock.stockCode}-${stock.stockName}-${stock.sourceRowNumber}`}>
+                  <header>
+                    <div>
+                      <h4>{stock.stockName}</h4>
+                      {stock.stockCode && <span>{stock.stockCode}</span>}
+                    </div>
+                    <span className="stock-rating">{stock.rating}</span>
+                  </header>
+                  <div className="investment-analysis-block">
+                    <span>研究判断</span>
+                    <p className="investment-analysis">{stock.analysis}</p>
+                  </div>
+
+                  {stock.companyEvidence.matched ? (
+                    <div className="company-evidence">
+                      <section className="company-profile-block">
+                        <header>
+                          <span>公司概况</span>
+                        </header>
+                        <p>{stock.companyEvidence.profileSummary || stock.companyEvidence.companyProfile}</p>
+                        {stock.companyEvidence.companyProfile !== stock.companyEvidence.profileSummary && (
+                          <details>
+                            <summary>查看完整公司概况</summary>
+                            <p>{stock.companyEvidence.companyProfile}</p>
+                          </details>
+                        )}
+                      </section>
+
+                      <section className="revenue-mix-block">
+                        <header>
+                          <span>主营业务结构</span>
+                        </header>
+                        {stock.companyEvidence.revenueSegments.length > 0 ? (
+                          <div className="revenue-segments">
+                            {stock.companyEvidence.revenueSegments.slice(0, 6).map((segment) => {
+                              const barWidth = Math.max(0, Math.min(100, segment.sharePct));
+                              return (
+                                <div
+                                  className={segment.relationType === "direct" ? "revenue-segment related" : segment.relationType === "contained" ? "revenue-segment contained" : "revenue-segment"}
+                                  key={`${segment.name}-${segment.sharePct}`}
+                                >
+                                  <div><span>{segment.name}</span><strong>{segment.sharePct.toFixed(2).replace(/\.00$/, "")}%</strong></div>
+                                  <i aria-hidden="true"><b style={{ width: `${barWidth}%` }} /></i>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        ) : (
+                          <p className="evidence-note">暂无可展示的主营收入分部。</p>
+                        )}
+                        {stock.companyEvidence.revenueSegments.length > 6 && (
+                          <details>
+                            <summary>查看完整收入构成</summary>
+                            <p>{stock.companyEvidence.revenueComposition}</p>
+                          </details>
+                        )}
+                      </section>
+                    </div>
+                  ) : (
+                    <p className="company-evidence-missing">相关业务收入权重尚未明确，因此不进一步外推利润弹性。</p>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+    </>
+  );
+}
+
 function createPlainText(event: EventRecord, impact: ImpactChainRecord | null) {
   const sections = event.sections
     .map((section) => `【${section.number} ${section.kicker}】\n${section.body}`)
     .join("\n\n");
 
-  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n【新闻原文】\n${getNewsOriginal(event.sourceReason)}\n\n${sections}\n\n${createImpactPlainText(impact)}\n\n（三）投资机会｜待接入\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
+  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n【新闻原文】\n${getNewsOriginal(event.sourceReason)}\n\n${sections}\n\n${createImpactPlainText(impact)}\n\n${createInvestmentPlainText(impact)}\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
 }
 
 const reportParts = [
   { number: "一", title: "事件基本情况", description: "AI事件事实与关联研报摘要", state: "已接入" },
-  { number: "二", title: "影响产业链", description: "4星标的、产业说明与利好利空判断", state: "已接入" },
-  { number: "三", title: "投资机会", description: "公司映射、指标与风险", state: "待接入" },
+  { number: "二", title: "影响产业链", description: "核心产品、两个相关产业与利好利空判断", state: "已接入" },
+  { number: "三", title: "投资机会", description: "A股3—5星组合与逐股研究判断", state: "已接入" },
 ] as const;
 
 export default function Home() {
@@ -238,13 +466,13 @@ export default function Home() {
   const [filter, setFilter] = useState<"全部" | "热度 8—10">("全部");
   const [navOpen, setNavOpen] = useState(false);
   const [toast, setToast] = useState("");
-  const [activePart, setActivePart] = useState<"一" | "二">("一");
+  const [activePart, setActivePart] = useState<"一" | "二" | "三">("一");
   const [impactResult, setImpactResult] = useState<{
     mainId: string;
     state: "ready" | "error";
     data: ImpactChainRecord | null;
   } | null>(null);
-  const [chainExpanded, setChainExpanded] = useState(false);
+  const [mappingExpanded, setMappingExpanded] = useState(false);
 
   const selected = events.find((event) => event.id === selectedId) ?? events[0];
   const filteredEvents = useMemo(() => {
@@ -281,11 +509,10 @@ export default function Home() {
   const impactChain = impactResult?.mainId === selected.apiMainId ? impactResult.data : null;
   const impactLoadState = impactResult?.mainId === selected.apiMainId ? impactResult.state : "loading";
 
-  const canExpandChain = Boolean(
+  const canExpandMapping = Boolean(
     impactChain
-      && (impactChain.chain.upstream.length > 6
-        || impactChain.chain.core.length > 8
-        || impactChain.chain.downstream.length > 6),
+      && (impactChain.productIndustryMap.coreProducts.length > 8
+        || impactChain.productIndustryMap.relatedIndustries.some((industry) => industry.products.length > 4)),
   );
 
   const notify = (message: string) => {
@@ -315,18 +542,18 @@ export default function Home() {
   const chooseEvent = (id: string) => {
     setSelectedId(id);
     setActivePart("一");
-    setChainExpanded(false);
+    setMappingExpanded(false);
     setNavOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const chooseReportPart = (number: "一" | "二" | "三") => {
-    if (number === "三") {
-      notify("投资机会将在后续接入");
-      return;
-    }
     setActivePart(number);
-    const target = number === "一" ? "top" : `${selected.id}-impact-chain`;
+    const target = number === "一"
+      ? "top"
+      : number === "二"
+        ? `${selected.id}-impact-chain`
+        : `${selected.id}-investment-opportunities`;
     document.getElementById(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -379,7 +606,7 @@ export default function Home() {
             {reportParts.map((part) => (
               <button
                 key={part.number}
-                className={`report-part ${part.number === activePart ? "active" : part.number === "三" ? "pending" : "ready"}`}
+                className={`report-part ${part.number === activePart ? "active" : "ready"}`}
                 onClick={() => chooseReportPart(part.number)}
                 aria-current={part.number === activePart ? "page" : undefined}
               >
@@ -419,10 +646,10 @@ export default function Home() {
               <header className="impact-heading">
                 <div>
                   <p className="article-kicker">第二部分 · 影响产业链</p>
-                  <h2 id={`${selected.id}-impact-title`}>4星标的产业链传导</h2>
-                  <p>以新闻中恰好4个实心星的标的为锚点，穿透到主题相关产品，并展示直接一跳上游与下游。</p>
+                  <h2 id={`${selected.id}-impact-title`}>核心产品与相关产业</h2>
+                  <p>先由4星A股标的锚定核心产品，再将3—5星A股的事件相关七级产品上卷至五级产业，补充两个不与核心产业重复的相关产业。</p>
                 </div>
-                <span className="impact-method">公司产品映射 · 双向补全关系</span>
+                <span className="impact-method">七级产品 → 五级产业 · 仅A股</span>
               </header>
 
               {impactLoadState === "loading" && (
@@ -442,41 +669,42 @@ export default function Home() {
               {impactLoadState === "ready" && impactChain && (
                 <>
                   <div className="impact-stats" aria-label="产业链映射概览">
-                    <div><span>4星标的</span><strong>{impactChain.selection.sourceStockCount}</strong><small>恰好4个实心星</small></div>
-                    <div><span>图谱穿透</span><strong>{impactChain.selection.mappedStockCount}/{impactChain.selection.sourceStockCount}</strong><small>公司—产品可追溯</small></div>
+                    <div><span>4星核心标的</span><strong>{impactChain.selection.sourceStockCount}</strong><small>仅沪深北A股</small></div>
+                    <div><span>3—5星A股</span><strong>{impactChain.industryPortfolio.mappedStockCount}/{impactChain.industryPortfolio.sourceStockCount}</strong><small>穿透到相关七级产品</small></div>
                     <div><span>核心产品</span><strong>{impactChain.totals.selectedCompanyCoreProductCount}</strong><small>主题相关落点</small></div>
-                    <div><span>上下游节点</span><strong>{impactChain.chain.upstream.length + impactChain.chain.downstream.length}</strong><small>直接一跳关系</small></div>
+                    <div><span>相关产业</span><strong>{impactChain.productIndustryMap.relatedIndustries.length}</strong><small>排除核心产业后的五级产业</small></div>
                   </div>
 
-                  {impactChain.chain.core.length > 0 ? (
+                  {impactChain.productIndustryMap.coreProducts.length > 0 ? (
                     <>
-                      <div className="chain-flow" aria-label="上游、核心产品和下游的产业链关系">
-                        <RelatedProductColumn eyebrow="供给与支撑" title="上游" products={impactChain.chain.upstream} expanded={chainExpanded} />
-                        <CoreProductColumn products={impactChain.chain.core} expanded={chainExpanded} />
-                        <RelatedProductColumn eyebrow="需求与应用" title="下游" products={impactChain.chain.downstream} expanded={chainExpanded} />
+                      <div className="product-industry-grid" aria-label="核心产品和两个相关五级产业">
+                        <CoreProductColumn products={impactChain.productIndustryMap.coreProducts} expanded={mappingExpanded} />
+                        {impactChain.productIndustryMap.relatedIndustries.map((industry) => (
+                          <RelatedIndustryColumn key={industry.code} industry={industry} expanded={mappingExpanded} />
+                        ))}
                       </div>
-                      {canExpandChain && (
-                        <button className="chain-expand" onClick={() => setChainExpanded((value) => !value)}>
-                          {chainExpanded ? "收起产业链" : "展开更多节点"}
+                      {canExpandMapping && (
+                        <button className="mapping-expand" onClick={() => setMappingExpanded((value) => !value)}>
+                          {mappingExpanded ? "收起产品明细" : "展开更多产品"}
                         </button>
                       )}
                     </>
                   ) : (
                     <div className="impact-empty">
                       <strong>{impactStatusText(impactChain.status)}</strong>
-                      <p>该状态会保留在数据中，避免用事件标签冒充个股产品关系。</p>
+                      <p>仅采用可追溯的七级产品关系，证据不足时不会用事件标签替代。</p>
                     </div>
                   )}
 
                   <IndustryAnalysisPanel analysis={impactChain.industryAnalysis} />
 
                   <details className="impact-audit">
-                    <summary>4星标的与映射说明</summary>
+                    <summary>3—5星A股与七级产品映射说明</summary>
                     <div className="impact-stock-list">
-                      {impactChain.selection.stocks.map((stock) => (
+                      {impactChain.industryPortfolio.stocks.map((stock) => (
                         <span key={`${stock.stockCode}-${stock.stockName}`} className={stock.mapped ? "mapped" : "unmapped"}>
                           <b>{stock.stockName}</b>
-                          <small>{stock.stockCode} · {stock.rating} · {stock.mapped ? `${stock.anchorProductCount}个产品` : "未穿透"}</small>
+                          <small>{stock.stockCode} · {stock.rating} · {stock.mapped ? `${stock.anchorProductCount}个七级产品` : "无事件相关七级产品"}</small>
                         </span>
                       ))}
                     </div>
@@ -485,6 +713,35 @@ export default function Home() {
                     </ul>
                   </details>
                 </>
+              )}
+            </section>
+
+            <section className="investment-section" id={`${selected.id}-investment-opportunities`} aria-labelledby={`${selected.id}-investment-title`}>
+              <header className="impact-heading">
+                <div>
+                  <p className="article-kicker">第三部分 · 投资机会</p>
+                  <h2 id={`${selected.id}-investment-title`}>A股3—5星事件投资组合</h2>
+                  <p>只保留沪深北交易所的3至5星A股标的，按相关强度从高到低分组，并给出逐股的业务联系、业绩传导与关键约束。</p>
+                </div>
+                <span className="impact-method">仅限A股 · 3—5星 · 分组研判</span>
+              </header>
+
+              {impactLoadState === "loading" && (
+                <div className="impact-loading" role="status">
+                  <span />
+                  <p>正在装载该新闻的投资机会组合…</p>
+                </div>
+              )}
+
+              {impactLoadState === "error" && (
+                <div className="impact-empty" role="alert">
+                  <strong>投资机会数据暂时无法读取</strong>
+                  <p>请先重新运行事件聚合脚本，再刷新页面。</p>
+                </div>
+              )}
+
+              {impactLoadState === "ready" && impactChain && (
+                <InvestmentOpportunitiesPanel opportunities={impactChain.investmentOpportunities} />
               )}
             </section>
 

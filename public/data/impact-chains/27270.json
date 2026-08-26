@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27270",
@@ -9,10 +9,10 @@
     "date": "2026-07-09"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 8,
-    "mappedStockCount": 7,
-    "unmappedStockCount": 1,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 7,
+    "mappedStockCount": 5,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 23450,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 10
+        "anchorProductCount": 3
       },
       {
         "sourceRowNumber": 23451,
@@ -30,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 23452,
@@ -39,16 +39,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
-      },
-      {
-        "sourceRowNumber": 23453,
-        "stockCode": "01258.HK",
-        "stockName": "中国有色矿业",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 4
       },
       {
         "sourceRowNumber": 23469,
@@ -57,7 +48,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 13
+        "anchorProductCount": 3
       },
       {
         "sourceRowNumber": 23471,
@@ -65,8 +56,8 @@
         "stockName": "中国铝业",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 7
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 23473,
@@ -75,7 +66,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 23477,
@@ -83,15 +74,24 @@
         "stockName": "高能环境",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 6
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 23453,
-        "stockCode": "01258.HK",
-        "stockName": "中国有色矿业",
+        "sourceRowNumber": 23471,
+        "stockCode": "601600.SH",
+        "stockName": "中国铝业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23477,
+        "stockCode": "603588.SH",
+        "stockName": "高能环境",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -103,114 +103,12 @@
     "candidateCoreProductCount": 48,
     "selectedCoreProductCount": 6,
     "selectedCompanyCoreProductCount": 6,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 6,
-    "downstreamCandidateCount": 38,
-    "shownUpstreamCount": 6,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 49,
+    "relatedIndustryCandidateCount": 24,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140166162",
-        "name": "铅锌精矿",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1114000043",
-          "1130000608"
-        ],
-        "linkedCoreProductNames": [
-          "铅精矿",
-          "锌精矿"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140005159",
-        "name": "电解锌",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1114000081",
-        "name": "锌矿石",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1114000043"
-        ],
-        "linkedCoreProductNames": [
-          "锌精矿"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1114000053",
-        "name": "铅锑精矿",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1130000608"
-        ],
-        "linkedCoreProductNames": [
-          "铅精矿"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1114000048",
-        "name": "粗铅",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000609"
-        ],
-        "linkedCoreProductNames": [
-          "电解铅"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1114000045",
-        "name": "精铅",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000609"
-        ],
-        "linkedCoreProductNames": [
-          "电解铅"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1137000010",
         "name": "锌锭",
@@ -236,28 +134,27 @@
           "name": "锌锭"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "601899.SH",
             "stockName": "紫金矿业",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "600362.SZ",
             "stockName": "西部矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "000960.SZ",
             "stockName": "锡业股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 18,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -291,23 +188,21 @@
           "name": "金锭"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "601899.SH",
             "stockName": "紫金矿业",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "600988.SH",
             "stockName": "赤峰黄金",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 3,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -341,18 +236,15 @@
           "name": "电解铅"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600362.SZ",
             "stockName": "西部矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 9,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -386,28 +278,27 @@
           "name": "锌精矿"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "601899.SH",
             "stockName": "紫金矿业",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "600362.SZ",
             "stockName": "西部矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "600988.SH",
             "stockName": "赤峰黄金",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 7,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -440,23 +331,21 @@
           "name": "铅精矿"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600362.SZ",
             "stockName": "西部矿业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "600988.SH",
             "stockName": "赤峰黄金",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 3,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -489,18 +378,15 @@
           "name": "钨精矿"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603993.SH",
             "stockName": "洛阳钼业",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 2,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -509,234 +395,731 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1114000093",
-        "name": "氧化锌",
-        "anchorCount": 2,
-        "stockCount": 4,
-        "linkedCoreProductCodes": [
-          "1114000043",
-          "1137000010"
+        "code": "1200001053",
+        "name": "黄金产品",
+        "description": "A股黄金行业涵盖采掘、冶炼及零售。因黄金具避险与抗通胀属性，在地缘动荡或经济不确定性高时受资金追捧。该板块与金价高度联动，是投资者对冲风险、保值增值的重要配置标的，市场关注度随宏观环境波动而显著变化。",
+        "stockCount": 6,
+        "starWeight": 21,
+        "level7ProductCount": 2,
+        "relevanceScore": 92,
+        "stocks": [
+          {
+            "stockCode": "600362.SH",
+            "stockName": "江西铜业",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600988.SH",
+            "stockName": "赤峰黄金",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000878.SZ",
+            "stockName": "云南铜业",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600547.SH",
+            "stockName": "山东黄金",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000630.SZ",
+            "stockName": "铜陵有色",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "锌精矿",
-          "锌锭"
+        "products": [
+          {
+            "code": "1140070289",
+            "name": "金锭",
+            "hierarchyPath": "有色金属 > 贵金属 > 黄金 > 黄金产品 > 黄金产品 > 金锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 6,
+            "stocks": [
+              {
+                "stockCode": "600362.SH",
+                "stockName": "江西铜业",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600988.SH",
+                "stockName": "赤峰黄金",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000878.SZ",
+                "stockName": "云南铜业",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600547.SH",
+                "stockName": "山东黄金",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000630.SZ",
+                "stockName": "铜陵有色",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "黄金"
+            ]
+          },
+          {
+            "code": "1140070290",
+            "name": "金条",
+            "hierarchyPath": "有色金属 > 贵金属 > 黄金 > 黄金产品 > 黄金产品 > 金条",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600547.SH",
+                "stockName": "山东黄金",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "黄金"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140165635",
-        "name": "黄铜管",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1130000609",
-          "1137000010"
+        "code": "1210000329",
+        "name": "其他小金属及合金",
+        "description": "该行业涵盖钨、钼、锑等小众金属及其合金。因具备稀缺性及在军工、新能源、半导体等领域的关键应用，受地缘政治与供需错配影响大。其战略价值凸显，价格弹性高，常随政策变动或技术突破成为市场炒作热点。",
+        "stockCount": 5,
+        "starWeight": 19,
+        "level7ProductCount": 5,
+        "relevanceScore": 76,
+        "stocks": [
+          {
+            "stockCode": "600362.SH",
+            "stockName": "江西铜业",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600988.SH",
+            "stockName": "赤峰黄金",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000960.SZ",
+            "stockName": "锡业股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000878.SZ",
+            "stockName": "云南铜业",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "电解铅",
-          "锌锭"
+        "products": [
+          {
+            "code": "1114000071",
+            "name": "回收金属铋",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 回收金属铋",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600988.SH",
+                "stockName": "赤峰黄金",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "其他有色金属"
+            ]
+          },
+          {
+            "code": "1114000068",
+            "name": "铟锭",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 铟锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000960.SZ",
+                "stockName": "锡业股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "其他有色金属"
+            ]
+          },
+          {
+            "code": "1140217994",
+            "name": "镉锭",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 镉锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "其他有色金属"
+            ]
+          },
+          {
+            "code": "1140089252",
+            "name": "铼",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 铼",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600362.SH",
+                "stockName": "江西铜业",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000878.SZ",
+                "stockName": "云南铜业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 24,
+    "mappedStockCount": 12,
+    "unmappedStockCount": 12,
+    "level7ProductCount": 49,
+    "candidateIndustryCount": 24,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 23449,
+        "stockCode": "600362.SH",
+        "stockName": "江西铜业",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1114000042",
-        "name": "锌合金",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23450,
+        "stockCode": "601899.SH",
+        "stockName": "紫金矿业",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140035392",
-        "name": "黄铜",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23451,
+        "stockCode": "603993.SH",
+        "stockName": "洛阳钼业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140034047",
-        "name": "不锈钢丝",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 23452,
+        "stockCode": "600362.SZ",
+        "stockName": "西部矿业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140075729",
-        "name": "仪器售后维修服务",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 23454,
+        "stockCode": "000408.SZ",
+        "stockName": "藏格矿业",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140127397",
-        "name": "方矩镀锌管",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 23455,
+        "stockCode": "603979.SH",
+        "stockName": "金诚信",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1113000030",
-        "name": "热浸镀锌钢管",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 23457,
+        "stockCode": "601390.SH",
+        "stockName": "中国中铁",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1114000041",
-        "name": "热镀锌",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 23458,
+        "stockCode": "000737.SZ",
+        "stockName": "北方铜业",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140058531",
-        "name": "电池锌粉",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1114000043"
-        ],
-        "linkedCoreProductNames": [
-          "锌精矿"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 23462,
+        "stockCode": "000630.SZ",
+        "stockName": "铜陵有色",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140005159",
-        "name": "电解锌",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1114000043"
-        ],
-        "linkedCoreProductNames": [
-          "锌精矿"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 23463,
+        "stockCode": "000878.SZ",
+        "stockName": "云南铜业",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140132834",
-        "name": "电镀锌钢板",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 23465,
+        "stockCode": "301217.SZ",
+        "stockName": "铜冠铜箔",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140135981",
-        "name": "金属锌锭贸易",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 23466,
+        "stockCode": "301518.SZ",
+        "stockName": "长华化学",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140061264",
-        "name": "铝合金管",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1137000010"
+        "sourceRowNumber": 23467,
+        "stockCode": "688629.SH",
+        "stockName": "华丰科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23468,
+        "stockCode": "002130.SZ",
+        "stockName": "沃尔核材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23469,
+        "stockCode": "600988.SH",
+        "stockName": "赤峰黄金",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 12
+      },
+      {
+        "sourceRowNumber": 23470,
+        "stockCode": "600547.SH",
+        "stockName": "山东黄金",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 23471,
+        "stockCode": "601600.SH",
+        "stockName": "中国铝业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 23472,
+        "stockCode": "600219.SH",
+        "stockName": "南山铝业",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 23473,
+        "stockCode": "000960.SZ",
+        "stockName": "锡业股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 23474,
+        "stockCode": "000969.SZ",
+        "stockName": "安泰科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 23475,
+        "stockCode": "688480.SH",
+        "stockName": "赛恩斯",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23476,
+        "stockCode": "600961.SH",
+        "stockName": "株冶集团",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 9
+      },
+      {
+        "sourceRowNumber": 23477,
+        "stockCode": "603588.SH",
+        "stockName": "高能环境",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23478,
+        "stockCode": "002266.SZ",
+        "stockName": "浙富控股",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001053",
+        "name": "黄金产品",
+        "description": "A股黄金行业涵盖采掘、冶炼及零售。因黄金具避险与抗通胀属性，在地缘动荡或经济不确定性高时受资金追捧。该板块与金价高度联动，是投资者对冲风险、保值增值的重要配置标的，市场关注度随宏观环境波动而显著变化。",
+        "stockCount": 6,
+        "starWeight": 21,
+        "level7ProductCount": 2,
+        "relevanceScore": 92,
+        "stocks": [
+          {
+            "stockCode": "600362.SH",
+            "stockName": "江西铜业",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600988.SH",
+            "stockName": "赤峰黄金",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000878.SZ",
+            "stockName": "云南铜业",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600547.SH",
+            "stockName": "山东黄金",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000630.SZ",
+            "stockName": "铜陵有色",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "锌锭"
+        "products": [
+          {
+            "code": "1140070289",
+            "name": "金锭",
+            "hierarchyPath": "有色金属 > 贵金属 > 黄金 > 黄金产品 > 黄金产品 > 金锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 6,
+            "stocks": [
+              {
+                "stockCode": "600362.SH",
+                "stockName": "江西铜业",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600988.SH",
+                "stockName": "赤峰黄金",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000878.SZ",
+                "stockName": "云南铜业",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600547.SH",
+                "stockName": "山东黄金",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000630.SZ",
+                "stockName": "铜陵有色",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "黄金"
+            ]
+          },
+          {
+            "code": "1140070290",
+            "name": "金条",
+            "hierarchyPath": "有色金属 > 贵金属 > 黄金 > 黄金产品 > 黄金产品 > 金条",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600547.SH",
+                "stockName": "山东黄金",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "黄金"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1210000329",
+        "name": "其他小金属及合金",
+        "description": "该行业涵盖钨、钼、锑等小众金属及其合金。因具备稀缺性及在军工、新能源、半导体等领域的关键应用，受地缘政治与供需错配影响大。其战略价值凸显，价格弹性高，常随政策变动或技术突破成为市场炒作热点。",
+        "stockCount": 5,
+        "starWeight": 19,
+        "level7ProductCount": 5,
+        "relevanceScore": 76,
+        "stocks": [
+          {
+            "stockCode": "600362.SH",
+            "stockName": "江西铜业",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600988.SH",
+            "stockName": "赤峰黄金",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000960.SZ",
+            "stockName": "锡业股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000878.SZ",
+            "stockName": "云南铜业",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1114000071",
+            "name": "回收金属铋",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 回收金属铋",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600988.SH",
+                "stockName": "赤峰黄金",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "其他有色金属"
+            ]
+          },
+          {
+            "code": "1114000068",
+            "name": "铟锭",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 铟锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000960.SZ",
+                "stockName": "锡业股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "其他有色金属"
+            ]
+          },
+          {
+            "code": "1140217994",
+            "name": "镉锭",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 镉锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "其他有色金属"
+            ]
+          },
+          {
+            "code": "1140089252",
+            "name": "铼",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 铼",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600362.SH",
+                "stockName": "江西铜业",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000878.SZ",
+                "stockName": "云南铜业",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -751,10 +1134,2168 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 30,
+    "eligibleSourceRowCount": 24,
+    "totalStockCount": 24,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 1,
+    "excludedNonAShareCount": 5,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 24,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 23449,
+            "stockCode": "600362.SH",
+            "stockName": "江西铜业",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "用户问题核心标的，国内铜业龙头，覆盖采选、冶炼、加工全产业链，直接受益于铜价上涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600362.SH",
+              "companyName": "江西铜业",
+              "companyProfile": "公司是集采矿、选矿、冶炼、贸易、技术为一体的国内最大的综合性铜生产企业，多元化的业务包括铜、金、银、稀土、铅、锌等多金属矿业开发，以及支持矿业发展的金融、投资、贸易、物流、技术支持等增值服务体系。公司不仅是中国最大的铜生产基地，也是中国最大的伴生金、银生产基地，还是中国重要的化工基地。公司生产的阴极铜在伦敦金属交易所和上海期货交易所注册，是期货市场主要交割品牌之一。公司已建立阴极铜、硫酸、电金、电银等产品质量保证体系，通过了ISO9002国际质量体系认证。",
+              "profileSummary": "公司是集采矿、选矿、冶炼、贸易、技术为一体的国内最大的综合性铜生产企业，多元化的业务包括铜、金、银、稀土、铅、锌等多金属矿业开发，以及支持矿业发展的金融、投资、贸易、物流、技术支持等增值服务体系。公司已建立阴极铜、硫酸、电金、电银等产品质量保证体系，通过了ISO9002国际质量体系认证。",
+              "majorProducts": "白银、黄金、硫酸、铜杆线、阴极铜",
+              "revenueComposition": "阴极铜:44.24%;铜杆线:23.44%;黄金:17.36%;稀散及其他有色金属:4.52%;白银:3.92%;铜加工产品:2.74%;其他:2.24%;化工产品:1.02%;其他业务:0.52%",
+              "revenueSegments": [
+                {
+                  "name": "阴极铜",
+                  "sharePct": 44.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜杆线",
+                  "sharePct": 23.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "黄金",
+                  "sharePct": 17.36,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "稀散及其他有色金属",
+                  "sharePct": 4.52,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "白银",
+                  "sharePct": 3.92,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铜加工产品",
+                  "sharePct": 2.74,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "化工产品",
+                  "sharePct": 1.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电解铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "白银",
+                    "category": "白银产品"
+                  },
+                  {
+                    "name": "精密传热铜管",
+                    "category": "铜合金压延加工"
+                  },
+                  {
+                    "name": "金锭",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "铋",
+                    "category": "其他小金属及合金"
+                  },
+                  {
+                    "name": "铜杆",
+                    "category": "铜压延加工"
+                  }
+                ],
+                "knownProducts": [
+                  "工业硫酸",
+                  "硒",
+                  "碲",
+                  "铋",
+                  "铼",
+                  "电解铜",
+                  "铜杆",
+                  "精密传热铜管"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "江西铜业的事件逻辑具备真实业务底座，但尚不足以代表全部公司：黄金（17.36%）、白银（3.92%）合计约占收入的24.02%。公司与事件的具体联系在于：用户问题核心标的，国内铜业龙头，覆盖采选、冶炼、加工全产业链，直接受益于铜价上涨，对应的核心变量是事件能否转化为可确认的经营增量。若这一变量沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，订单、收入确认、产品结构和毛利率变化既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；事件关联停留在主题层面，未形成可持续订单或利润贡献则可能令增量低于预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 7,
+        "stocks": [
+          {
+            "sourceRowNumber": 23450,
+            "stockCode": "601899.SH",
+            "stockName": "紫金矿业",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "全球矿业巨头，铜、金资源储量丰富，业绩与金属价格高度相关，是板块核心标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601899.SH",
+              "companyName": "紫金矿业",
+              "companyProfile": "公司是一家在全球范围内从事铜、金、锌、锂、银、钼等金属矿产资源勘查、开发及工程设计、技术应用研究的大型跨国矿业集团，在香港H股和上海A股整体上市。公司在中国17个省(区)和境外17个国家拥有重要矿业投资项目，包括境内的西藏巨龙铜矿及朱诺铜矿、黑龙江多宝山铜山铜矿、福建紫金山铜金矿、山西紫金、贵州紫金、陇南紫金等，境外的塞尔维亚丘卡卢-佩吉铜金矿及博尔铜矿、刚果(金)卡莫阿铜矿及科卢韦齐铜矿、苏里南罗斯贝尔金矿、哥伦比亚武里蒂卡金矿等；公司加速进军新能源新材料产业，拥有阿根廷3Q盐湖锂矿、西藏拉果错盐湖锂矿、湖南道县湘源硬岩锂多金属矿，并受邀主导开发刚果(金)马诺诺锂矿东北部项目。公司坚持以创新尤其是科技创新为核心竞争力，在地质勘查评价、开采技术、低品位难选冶资源综合回收利用、大规模工程化开发及环保等方面具有行业领先的技术优势和丰富的实践经验。公司创立“矿石流五环归一”矿业工程管理模式，创建“低品位难处理黄金资源综合利用国家重点实验室”，建立完整的地、采、选、冶、环科技体系，以系统工程和经济矿业思想指导项目建设和运营，在投资和成本控制方面形成明显的竞争优势，成功开辟资源绿色高效开发新路，形成矿业工程全球竞争力。公司坚持“开发矿业、造福社会”的共同发展理念，努力让更多人因紫金矿业的存在而获益，先后四次荣获“中华慈善奖”。公司作为全球矿业市场的重要参与者，致力于打造“绿色高技术超一流国际矿业集团”，以优质矿物原料为中国及全球经济增长和可持续发展助力。",
+              "profileSummary": "公司是一家在全球范围内从事铜、金、锌、锂、银、钼等金属矿产资源勘查、开发及工程设计、技术应用研究的大型跨国矿业集团，在香港H股和上海A股整体上市。公司在中国17个省(区)和境外17个国家拥有重要矿业投资项目，包括境内的西藏巨龙铜矿及朱诺铜矿、黑龙江多宝山铜山铜矿、福建紫金山铜金矿、山西紫金、贵州紫金、陇南紫金等，境外的塞尔维亚丘卡卢-佩吉铜金矿及博尔铜矿、刚果(金)卡莫阿铜矿及科卢韦齐铜矿、苏里南罗斯贝尔金矿、哥伦比亚武里蒂卡金矿等…",
+              "majorProducts": "紫金标准金锭、紫金标准银锭、紫金高精度铜及铜合金带材、紫金镉锭、紫金金条、紫金金盐、紫金矿产金精矿、紫金矿产银、紫金硫酸、紫金铁精矿、紫金铜精矿、紫金锌锭、紫金锌基合金、紫金锌精矿、紫金阴极铜",
+              "revenueComposition": "其他:76.94%;加工、冶炼及贸易金:36.04%;冶炼产铜:14.31%;铜精矿:12.14%;金锭:11.39%;金精矿:7.14%;矿山产电解铜:2.52%;冶炼产锌:2.35%;矿山产电积铜:1.91%;矿山产锌:1.51%;矿山产银:0.85%;铁精矿:0.21%;内部抵销:-67.31%",
+              "revenueSegments": [
+                {
+                  "name": "其他",
+                  "sharePct": 76.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "加工、冶炼及贸易金",
+                  "sharePct": 36.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "冶炼产铜",
+                  "sharePct": 14.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜精矿",
+                  "sharePct": 12.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金锭",
+                  "sharePct": 11.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金精矿",
+                  "sharePct": 7.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山产电解铜",
+                  "sharePct": 2.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "冶炼产锌",
+                  "sharePct": 2.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山产电积铜",
+                  "sharePct": 1.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山产锌",
+                  "sharePct": 1.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山产银",
+                  "sharePct": 0.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铁精矿",
+                  "sharePct": 0.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -67.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "有色金属贸易",
+                  "锌锭",
+                  "电解铜",
+                  "碳酸锂",
+                  "金锭",
+                  "锌精矿",
+                  "铜精矿",
+                  "金精矿"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "紫金矿业的事件主线是：全球矿业巨头，铜、金资源储量丰富，业绩与金属价格高度相关，是板块核心标的，但当前收入结构尚未体现其重要性，收入重心仍是其他（76.94%）、加工、冶炼及贸易金（36.04%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，供需缺口与产品价格需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，并在产品报价、订单排期、产销率和毛利率上留下可核验痕迹。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 23451,
+            "stockCode": "603993.SH",
+            "stockName": "洛阳钼业",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球重要的铜、钴资源供应商，铜价上涨及新能源金属需求为其核心驱动力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603993.SH",
+              "companyName": "洛阳钼业",
+              "companyProfile": "公司的前身创立于1969年，2004年和2014年进行两次混合所有制改革，目前是民营控股的股份制公司。2007年于香港联合交易所上市。2012年于上海证券交易所上市。本公司属于有色金属矿采选业，主要从事基本金属、稀有金属的采、选、冶等矿山采掘及加工业务和矿产贸易业务。目前公司主要业务分布于亚洲、非洲、南美洲和欧洲，是全球领先的铜、钴、钼、钨、铌生产商，亦是巴西领先的磷肥生产商，同时公司金属贸易业务位居全球前列。公司的愿景是成为受人尊敬的、现代化、世界级资源公司，公司形成了“矿山+贸易”双轮驱动的发展模式。为适应全球“双碳”战略机遇，实现公司远景目标，公司明确了“三步走”的发展目标：第一步“打基础”降本增效，通过组织升级和全球管控模式的建立，构建系统，完善机制，筑巢引凤，吸引矿业精英，做好储备。第二步“上台阶”产能倍增，加快TFM混合矿、KFM铜钴矿两个世界级项目建设和投产。伴随产能的提升，队伍在建设世界级项目中得到锤炼。用现代化的治理方式，更加有效地管控分子公司，全球治理水平全面上台阶。第三步“大跨越”创世界一流，企业规模、现金流水平达到新高度，人才队伍和项目储备达到新要求，围绕重点区域和重点品种，谋求更大的发展，实现愿景目标。",
+              "profileSummary": "本公司属于有色金属矿采选业，主要从事基本金属、稀有金属的采、选、冶等矿山采掘及加工业务和矿产贸易业务。目前公司主要业务分布于亚洲、非洲、南美洲和欧洲，是全球领先的铜、钴、钼、钨、铌生产商，亦是巴西领先的磷肥生产商，同时公司金属贸易业务位居全球前列。",
+              "majorProducts": "金精矿、钼粉、钼精矿、钼酸铵、钼条、钼铁、钨精矿、阳极泥、氧化钼",
+              "revenueComposition": "精炼金属贸易:49.95%;精矿产品:37.18%;铜金相关产品:26.66%;钼相关产品:3.06%;钴:2.99%;磷相关产品:1.97%;铌相关产品:1.75%;钨相关产品:1.17%;其他业务:0.12%;内部交易抵销:-24.84%",
+              "revenueSegments": [
+                {
+                  "name": "精炼金属贸易",
+                  "sharePct": 49.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精矿产品",
+                  "sharePct": 37.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜金相关产品",
+                  "sharePct": 26.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "钼相关产品",
+                  "sharePct": 3.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "钴",
+                  "sharePct": 2.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "磷相关产品",
+                  "sharePct": 1.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铌相关产品",
+                  "sharePct": 1.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "钨相关产品",
+                  "sharePct": 1.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部交易抵销",
+                  "sharePct": -24.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "氮磷硫复合肥",
+                  "多元碱性钙镁磷肥",
+                  "磷酸一铵",
+                  "过磷酸钙",
+                  "有色金属贸易",
+                  "铌铁",
+                  "仲钨酸铵(APT)",
+                  "电解铜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "洛阳钼业当前收入集中在精炼金属贸易（49.95%）、精矿产品（37.18%），而全球重要的铜、钴资源供应商，铜价上涨及新能源金属需求为其核心驱动力所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响终端需求与渗透率变化预期，业务端仍需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导后才能确认。终端销量、客户采购量、公司出货和相关产品收入增速如果持续改善，相关业务可能从产业布局转为实际增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 23452,
+            "stockCode": "600362.SZ",
+            "stockName": "西部矿业",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内重要的铜、铅、锌矿产企业，玉龙铜矿是其核心资产和未来主要增长点。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_name",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601168.SH",
+              "companyName": "西部矿业",
+              "companyProfile": "公司由青海大柴旦锡铁山矿务局改制成立，总部位于青海省西宁市，2007年7月12日在上海证券交易所挂牌上市。在全国11个省、市、自治区拥有30余家(分)子公司和控股公司，业务范围涵盖矿山采选、有色冶炼、金融贸易、盐湖化工等领域。公司主要从事铜、铅、锌、铁、镍、钒、钼等基本有色金属、黑色金属的采选、冶炼、贸易等业务，以及黄金、白银等稀贵金属和硫精矿等产品的生产及销售。",
+              "profileSummary": "在全国11个省、市、自治区拥有30余家(分)子公司和控股公司，业务范围涵盖矿山采选、有色冶炼、金融贸易、盐湖化工等领域。公司主要从事铜、铅、锌、铁、镍、钒、钼等基本有色金属、黑色金属的采选、冶炼、贸易等业务，以及黄金、白银等稀贵金属和硫精矿等产品的生产及销售。",
+              "majorProducts": "电解铜（含湿法铜）、电铅、精矿含金、精矿含银、钼精矿、铅精矿、球团、铁精粉、铜精矿、锌锭、锌精矿",
+              "revenueComposition": "铜类产品:70.1%;金锭:6.24%;锌类产品:6.2%;铅类产品:3.84%;银锭:3.18%;阳极泥:2.57%;其他产品:2.43%;钼精矿:2.16%;铁产品:1.6%;镁类产品:0.88%;其他业务:0.81%",
+              "revenueSegments": [
+                {
+                  "name": "铜类产品",
+                  "sharePct": 70.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金锭",
+                  "sharePct": 6.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锌类产品",
+                  "sharePct": 6.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铅类产品",
+                  "sharePct": 3.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "银锭",
+                  "sharePct": 3.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "阳极泥",
+                  "sharePct": 2.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 2.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "钼精矿",
+                  "sharePct": 2.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铁产品",
+                  "sharePct": 1.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "镁类产品",
+                  "sharePct": 0.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "有色金属贸易",
+                  "电解铅",
+                  "锌锭",
+                  "电解铜",
+                  "铅精矿",
+                  "锌精矿",
+                  "铜精矿",
+                  "铁精矿"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "西部矿业目前更依赖铜类产品（70.1%）、金锭（6.24%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：国内重要的铜、铅、锌矿产企业，玉龙铜矿是其核心资产和未来主要增长点，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变终端需求与渗透率变化；公司的产业链位置只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能转化为收入。现阶段可以用终端销量、客户采购量、公司出货和相关产品收入增速判断预期差方向；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 23469,
+            "stockCode": "600988.SH",
+            "stockName": "赤峰黄金",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "业绩弹性较大的黄金股，前期跌幅较深，在金价反弹周期中修复空间较大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600988.SH",
+              "companyName": "赤峰黄金",
+              "companyProfile": "公司是一家快速成长的国际化黄金生产商，主要从事在全球范围内的黄金采、选和销售业务。公司拥有中国、东南亚和西非的7个矿业投资项目和1个资源综合回收利用项目。矿业投资项目包括中国境内的吉隆矿业—撰山子金矿、五龙矿业—五龙金矿、华泰矿业—红花沟金矿、锦泰矿业—溪灯坪金矿、瀚丰矿业—天宝山锌铅铜钼多金属矿；境外的万象矿业—塞班金铜矿、金星资源—瓦萨金矿；资源综合回收利用项目是位于中国安徽省合肥市的广源科技，从事废弃电器电子产品的拆解业务。我们秉承“让更多的人因公司的发展而受益”的核心价值观，高度重视环境、安全，重视人文关怀，承担社会责任。我们始终以高“ESG”标准坚持高质量可持续发展，致力于遵循相关行业最高标准及最佳实践。作为一家成长中的黄金上市公司，公司致力于“做专注、专业的黄金矿山公司”，通过不断创新管理机制，坚持低成本运营，加大对黄金资源的收购整合力度，实现资源的有效利用和合理开发，坚持国际化道路，努力成为全球欢迎的主要黄金生产商。",
+              "profileSummary": "公司是一家快速成长的国际化黄金生产商，主要从事在全球范围内的黄金采、选和销售业务。矿业投资项目包括中国境内的吉隆矿业—撰山子金矿、五龙矿业—五龙金矿、华泰矿业—红花沟金矿、锦泰矿业—溪灯坪金矿、瀚丰矿业—天宝山锌铅铜钼多金属矿；境外的万象矿业—塞班金铜矿、金星资源—瓦萨金矿；资源综合回收利用项目是位于中国安徽省合肥市的广源科技，从事废弃电器电子产品的拆解业务。",
+              "majorProducts": "白银、废弃电器电子产品处理、金锭、铜采选、锌、铅、铜、钼采选",
+              "revenueComposition": "黄金:89.72%;电解铜:4%;资源综合回收利用类:1.67%;锌精粉:1.6%;稀土产品:1.14%;钼精粉:0.77%;铜精粉:0.57%;铅精粉:0.42%;其他业务:0.12%",
+              "revenueSegments": [
+                {
+                  "name": "黄金",
+                  "sharePct": 89.72,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电解铜",
+                  "sharePct": 4.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "资源综合回收利用类",
+                  "sharePct": 1.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锌精粉",
+                  "sharePct": 1.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "稀土产品",
+                  "sharePct": 1.14,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "钼精粉",
+                  "sharePct": 0.77,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "铜精粉",
+                  "sharePct": 0.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铅精粉",
+                  "sharePct": 0.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "回收金属铋",
+                    "category": "其他小金属及合金"
+                  },
+                  {
+                    "name": "金锭",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "铅精矿",
+                    "category": "铅锌矿采选"
+                  },
+                  {
+                    "name": "锌精矿",
+                    "category": "铅锌矿采选"
+                  },
+                  {
+                    "name": "二氧化锗",
+                    "category": "锗及锗合金"
+                  },
+                  {
+                    "name": "回收金属钯",
+                    "category": "钯及钯合金"
+                  }
+                ],
+                "knownProducts": [
+                  "回收金属铋",
+                  "回收金属钯",
+                  "二氧化锗",
+                  "回收金属锡",
+                  "稀土氧化物",
+                  "钼粉",
+                  "电解铜",
+                  "铜精粉"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "赤峰黄金与事件的关系已经落在存量主业，而非远期概念：黄金占收入的89.72%。公司在产业链中的具体抓手是：业绩弹性较大的黄金股，前期跌幅较深，在金价反弹周期中修复空间较大。本次事件若改变事件能否转化为可确认的经营增量，影响会沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；订单、收入确认、产品结构和毛利率变化比主题热度更有解释力。若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 23471,
+            "stockCode": "601600.SH",
+            "stockName": "中国铝业",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "中国铝业龙头，全产业链布局，充分受益于铝价上涨和行业景气度提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601600.SH",
+              "companyName": "中国铝业",
+              "companyProfile": "公司是中国有色金属行业的龙头企业，综合实力位居全球铝行业前列，也是中国铝行业唯一集铝土矿、煤炭等资源勘探开采，氧化铝、原铝和铝合金产品生产、销售、技术研发，国际贸易，物流产业，火力发电、新能源发电于一体的大型生产经营企业。公司以保障国家战略资源开发和利用为己任，在军工用铝、航空航天、轨道交通、民用高端合金等方面发挥了极为重要的作用，先后为中国第一颗人造卫星、第一座核反应堆、第一艘核潜艇以及长征系列火箭、神舟系列飞船、嫦娥工程、大飞机、航空母舰、高铁动车等国防军工、建筑交通等提供了大量的高品质的关键型材。",
+              "profileSummary": "公司是中国有色金属行业的龙头企业，综合实力位居全球铝行业前列，也是中国铝行业唯一集铝土矿、煤炭等资源勘探开采，氧化铝、原铝和铝合金产品生产、销售、技术研发，国际贸易，物流产业，火力发电、新能源发电于一体的大型生产经营企业。公司以保障国家战略资源开发和利用为己任，在军工用铝、航空航天、轨道交通、民用高端合金等方面发挥了极为重要的作用，先后为中国第一颗人造卫星、第一座核反应堆、第一艘核潜艇以及长征系列火箭、神舟系列飞船、嫦娥工程、大飞机、…",
+              "majorProducts": "电力、煤炭、中铝高纯铝和铝合金、中铝金属镓和氧化镓、中铝铝锭、中铝氢氧化铝、中铝炭素制品、中铝氧化铝",
+              "revenueComposition": "原铝板块:59.39%;贸易板块:58.89%;氧化铝板块:25.06%;能源板块:3.37%;其他业务:1.51%;其他板块:0.55%;内部抵销:-48.77%",
+              "revenueSegments": [
+                {
+                  "name": "原铝板块",
+                  "sharePct": 59.39,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "贸易板块",
+                  "sharePct": 58.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氧化铝板块",
+                  "sharePct": 25.06,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "能源板块",
+                  "sharePct": 3.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他板块",
+                  "sharePct": 0.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -48.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "有色金属贸易",
+                    "category": "有色金属贸易"
+                  },
+                  {
+                    "name": "氧化铝",
+                    "category": "铝冶炼"
+                  },
+                  {
+                    "name": "电解铝",
+                    "category": "铝冶炼"
+                  },
+                  {
+                    "name": "铝合金",
+                    "category": "铝合金"
+                  }
+                ],
+                "knownProducts": [
+                  "燃煤发电",
+                  "有色金属贸易",
+                  "氧化铝",
+                  "电解铝",
+                  "铝合金",
+                  "不粘煤",
+                  "长焰煤"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中国铝业已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：氧化铝板块占收入的25.06%。公司在产业链中的位置是：中国铝业龙头，全产业链布局，充分受益于铝价上涨和行业景气度提升，终端需求与渗透率变化则决定增量大小。只有完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，相关业务的增长才可能改善公司整体盈利。终端销量、客户采购量、公司出货和相关产品收入增速还需与其他主业表现同时改善；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 23473,
+            "stockCode": "000960.SZ",
+            "stockName": "锡业股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球锡业龙头，受益于AI服务器需求增长及供给端扰动带来的锡价上涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000960.SZ",
+              "companyName": "锡业股份",
+              "companyProfile": "公司是云南锡业集团(控股)有限责任公司控股的国有上市公司。1998年，经云南省人民政府批准，由云南锡业公司、个旧锡都有色金属加工厂、个旧银冠锡工艺美术厂、个旧锡资工业公司、个旧聚源工矿公司作为发起人，以发起方式设立。1999年10月经中国证券监督管理委员会批准，首次向社会公众发行人民币普通股，并于2000年2月在深圳证券交易所挂牌上市，是A股唯一的锡全产业链上市公司。公司具有集锡、铟、锌、铜等有色金属勘探、开采、选矿和冶炼等全产业链供应链一体化的产业格局，锡、铟资源储量均居全球第一。公司是世界锡行业的龙头企业，拥有中国最大的锡生产、加工基地，拥有世界上最长、最完整的锡产业链，代表着世界锡工业的领先水平。公司主要产品有锡锭、阴极铜、锌锭、压铸锌合金、铟锭，重要参股企业云锡新材料有限公司拥有锡材及锡化工产品等。在伦敦金属交易所注册的“YT”商标是国际知名品牌，自2005年以来锡产品销量稳居全球第一。",
+              "profileSummary": "1998年，经云南省人民政府批准，由云南锡业公司、个旧锡都有色金属加工厂、个旧银冠锡工艺美术厂、个旧锡资工业公司、个旧聚源工矿公司作为发起人，以发起方式设立。公司具有集锡、铟、锌、铜等有色金属勘探、开采、选矿和冶炼等全产业链供应链一体化的产业格局，锡、铟资源储量均居全球第一。",
+              "majorProducts": "锌锭、压铸锌合金、阴极铜、云锡铋锭、云锡焊锡锭、云锡金锭、云锡铅锭、云锡铜精矿、云锡锡锭及锡产品、云锡锡铅焊料、云锡铟锭、云锡银锭",
+              "revenueComposition": "锡锭:44.38%;铜产品:21.11%;其他:9.49%;铜产品(贸易):7.49%;锌产品:6.28%;锡锭(贸易):6.12%;锡材产品:2.54%;贸易-其他产品:2.24%;其他业务:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "锡锭",
+                  "sharePct": 44.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜产品",
+                  "sharePct": 21.11,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜产品(贸易)",
+                  "sharePct": 7.49,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "锌产品",
+                  "sharePct": 6.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锡锭(贸易)",
+                  "sharePct": 6.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锡材产品",
+                  "sharePct": 2.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易-其他产品",
+                  "sharePct": 2.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "铟锭",
+                    "category": "其他小金属及合金"
+                  }
+                ],
+                "knownProducts": [
+                  "电解铜贸易",
+                  "锡锭贸易",
+                  "铟锭",
+                  "锡基焊料",
+                  "锡锭",
+                  "锡阳极",
+                  "锌锭",
+                  "电解铜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "锡业股份与事件存在真实业务交集：公司已有铟锭，与全球锡业龙头，受益于AI服务器需求增长及供给端扰动带来的锡价上涨所处的产业环节一致。铜产品（21.11%）、铜产品(贸易)（7.49%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响终端需求与渗透率变化，只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，才会形成可确认的收入和利润增量。终端销量、客户采购量、公司出货和相关产品收入增速能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 23477,
+            "stockCode": "603588.SH",
+            "stockName": "高能环境",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "具备从低品位废料中提取多种高价值AI相关小金属的能力，成本优势显著，业绩弹性高。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603588.SH",
+              "companyName": "高能环境",
+              "companyProfile": "公司2014年在A股主板上市；2016年，入列国家企业技术中心；2017年，核心技术获评“国家科学技术进步二等奖”；2022年，总资产超200亿。公司与国内外知名的科研院所及环保企业建立了长期的战略合作关系，并获批成立“中关村科技园区海淀园博士后工作站分站”经过30余年的沉潜，高能环境以技术创新推动产业转型升级，形成以固废危废资源化利用、生活垃圾处理、环境修复为核心业务板块，兼顾固废危废无害化处置、水处理、大气污染治理、有机垃圾治理等多领域协同发展的综合型环保服务平台。公司以再生资源循环利用全产业链建设为核心战略，固废危废资源化利用业务覆盖甘肃、湖北、贵州、重庆、浙江、江西等地，回收利用品类涵盖铜、镍、铅、锌、锡及多种稀贵金属，并拓展至废橡胶、废轮胎等非金属领域，产业链延伸至深加工产品及新能源材料领域，成功入列固废危废资源化利用标杆企业。公司深入布局生活垃圾治理综合系统服务，建设运营了十余座生活垃圾焚烧发电精品项目，日焚烧处置能力达11000吨，并实现垃圾焚烧协同污泥、餐厨垃圾、有机垃圾的无害化、资源化处置，岳阳生活垃圾焚烧发电项目更是被评为全国生活垃圾处理设施无害化AAA级生活垃圾焚烧厂。公司深耕环境修复领域，在国内完成百余个成功标杆案例，业务覆盖污染土壤修复、地下水修复、矿山修复、农田修复、流域治理等领域，稳居国内环境修复领域第一梯队。公司牢牢树立“科技保障安全”的经营理念，秉承“科技创新、服务利人”的指导原则，专注专行，打造中华领先、国际一流的环境技术企业，全面践行“为人类为社会创造持久安全的环境”的企业使命。",
+              "profileSummary": "公司与国内外知名的科研院所及环保企业建立了长期的战略合作关系，并获批成立“中关村科技园区海淀园博士后工作站分站”经过30余年的沉潜，高能环境以技术创新推动产业转型升级，形成以固废危废资源化利用、生活垃圾处理、环境修复为核心业务板块，兼顾固废危废无害化处置、水处理、大气污染治理、有机垃圾治理等多领域协同发展的综合型环保服务平台。公司以再生资源循环利用全产业链建设为核心战略，固废危废资源化利用业务覆盖甘肃、湖北、贵州、重庆、浙江、江西等地…",
+              "majorProducts": "高能环境垂直生态屏障系统、高能环境废液厌氧屏障系统、高能环境封场生态屏障系统、高能环境固体废物填埋屏障系统、高能环境水体生态屏障系统、高能环境土壤和地下水修复系统",
+              "revenueComposition": "资源化:80.77%;运营服务:11.68%;工程承包:7.55%",
+              "revenueSegments": [
+                {
+                  "name": "资源化",
+                  "sharePct": 80.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运营服务",
+                  "sharePct": 11.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程承包",
+                  "sharePct": 7.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "危废处理",
+                  "生活垃圾处理",
+                  "土壤修复工程",
+                  "土壤矿山修复",
+                  "地下水修复",
+                  "垃圾焚烧发电"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "高能环境现有业务与具备从低品位废料中提取多种高价值AI相关小金属的能力，成本优势显著，业绩弹性高处于同一产业方向，收入主体为资源化（80.77%）、运营服务（11.68%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变事件能否转化为可确认的经营增量，只有经由“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，业务交集才会转化为业绩增量。订单、收入确认、产品结构和毛利率变化若逐步增强，相关业务的重要性会提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，影响仍可能局限在估值预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 16,
+        "stocks": [
+          {
+            "sourceRowNumber": 23454,
+            "stockCode": "000408.SZ",
+            "stockName": "藏格矿业",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "从钾锂业务切入铜矿领域，巨龙铜矿权益带来显著的业绩弹性。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000408.SZ",
+              "companyName": "藏格矿业",
+              "companyProfile": "公司成立于1996年6月25日。2017年6月13日经国家工商总局核准，青海省工商行政管理局批准由原公司名称“金谷源控股股份有限公司”更名为“藏格控股股份有限公司”。根据公司业务发展需要，2021年12月3日经国家工商总局核准，青海省市场监督管理局批准公司名称由“藏格控股股份有限公司”更名为“藏格矿业股份有限公司”。公司位于青海省格尔木市昆仑南路15-02号。下属全资子公司格尔木藏格钾肥有限公司主要从事氯化钾的生产和销售。子公司现已发展成为国内氯化钾行业第二大生产企业，青海省30家重点企业之一，氯化钾产品国家标准起草单位之一，国家绿色矿山试点单位之一。2017年成立藏格矿业全资孙公司格尔木藏格锂业有限公司，主要从事电池级碳酸锂的生产、销售和技术咨询。公司始终坚持“诚信经营，科学发展，优质高效，服务社会，为社会创造价值，实现公司、股东和员工利益最大化”的经营宗旨。随着公司盐湖钠、镁、锂、硼综合利用技术工艺日益成熟及市场条件的逐渐改善，公司未来也将按照“以钾为主，综合开发”的原则立足盐湖资源，走综合开发合理利用，固基做强的科学发展之路。经过多年的发展，公司建立了完善的法人治理结构，现有内部控制体系健全，能适应生产经营和管理需要。在生产和管理方面已经积累了丰富的经验和技术储备，为产业结构的优化升级，稳步推进多元化发展奠定了坚实的基础。公司的发展在资源整合及盐湖资源的综合利用、工艺开发、技术创新和环境保护领域大有可为。",
+              "profileSummary": "根据公司业务发展需要，2021年12月3日经国家工商总局核准，青海省市场监督管理局批准公司名称由“藏格控股股份有限公司”更名为“藏格矿业股份有限公司”。下属全资子公司格尔木藏格钾肥有限公司主要从事氯化钾的生产和销售。",
+              "majorProducts": "氯化钾、碳酸锂",
+              "revenueComposition": "氯化钾:82.44%;碳酸锂:16.57%;其他业务:0.98%",
+              "revenueSegments": [
+                {
+                  "name": "氯化钾",
+                  "sharePct": 82.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "碳酸锂",
+                  "sharePct": 16.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "农业用氯化钾",
+                  "碳酸锂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "藏格矿业的事件主线是：从钾锂业务切入铜矿领域，巨龙铜矿权益带来显著的业绩弹性，但当前收入结构尚未体现其重要性，收入重心仍是氯化钾（82.44%）、碳酸锂（16.57%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，并在订单、收入确认、产品结构和毛利率变化上留下可核验痕迹。若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 23455,
+            "stockCode": "603979.SH",
+            "stockName": "金诚信",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "从矿服向资源开发转型，铜矿项目是其重要增长点。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603979.SH",
+              "companyName": "金诚信",
+              "companyProfile": "公司以“传承矿业梦想、成就百年老店”为使命、以“成为国际知名、国内领先的安全矿山、生态矿山、智慧矿山的规划者、建设者和运营者”为愿景，紧扣外部发展机遇，坚持国内和海外“两个市场”发展方向，在继续夯实矿山服务业务领先地位的基础上，重点培育矿山资源开发成为公司第二大核心业务，力求充分利用和发挥自身的人才、技术、管理、市场等优势，以“矿山服务”及“资源开发”双轮驱动的商业模式，推动公司从单一的矿山服务企业向集团化的矿业公司全面转型。",
+              "profileSummary": "公司以“传承矿业梦想、成就百年老店”为使命、以“成为国际知名、国内领先的安全矿山、生态矿山、智慧矿山的规划者、建设者和运营者”为愿景，紧扣外部发展机遇，坚持国内和海外“两个市场”发展方向，在继续夯实矿山服务业务领先地位的基础上，重点培育矿山资源开发成为公司第二大核心业务，力求充分利用和发挥自身的人才、技术、管理、市场等优势，以“矿山服务”及“资源开发”双轮驱动的商业模式，推动公司从单一的矿山服务企业向集团化的矿业公司全面转型。",
+              "majorProducts": "采矿运营管理、矿山工程建设业务",
+              "revenueComposition": "铜精矿及磷矿石销售:50.28%;采矿运营管理:35.42%;矿山工程建设:10.83%;其他业务:2.12%;矿山机械设备制造:1.18%;矿山工程设计:0.16%",
+              "revenueSegments": [
+                {
+                  "name": "铜精矿及磷矿石销售",
+                  "sharePct": 50.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "采矿运营管理",
+                  "sharePct": 35.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山工程建设",
+                  "sharePct": 10.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山机械设备制造",
+                  "sharePct": 1.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山工程设计",
+                  "sharePct": 0.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "矿山工程设计",
+                  "铜精矿",
+                  "磷矿石",
+                  "矿山工程",
+                  "采矿运营管理"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "金诚信的事件主线是：从矿服向资源开发转型，铜矿项目是其重要增长点，但当前收入结构尚未体现其重要性，收入重心仍是铜精矿及磷矿石销售（50.28%）、采矿运营管理（35.42%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，并在终端销量、客户采购量、公司出货和相关产品收入增速上留下可核验痕迹。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 23457,
+            "stockCode": "601390.SH",
+            "stockName": "中国中铁",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "基建巨头旗下的矿产资源板块，铜钴资源成为其第二增长曲线，具备价值重估潜力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601390.SH",
+              "companyName": "中国中铁",
+              "companyProfile": "公司是集勘察设计、施工安装、工业制造、房地产开发、资源利用、金融投资和其他新兴业务于一体的特大型企业集团，总部设在中国北京。作为全球最大建筑工程承包商之一，公司连续18年进入世界企业500强，2023年在《财富》世界500强企业排名第39位，在中国企业500强排名第10位。公司拥有一百多年的历史源流。1950年3月为中国铁道部工程总局和设计总局，后变更为铁道部基本建设总局。1989年7月，经国务院批准撤销基本建设总局，组建中国铁路工程总公司。2000年9月，与铁道部实行政企分开，整体移交中央大型企业工作委员会管理。2003年5月由国务院国资委履行出资人职能。2007年9月12日，中国铁路工程总公司独家发起设立公司，并于2007年12月3日和12月7日，分别在上海证券交易所和香港联合交易所上市。2017年12月由全民所有制企业改制为国有独资公司，更名为中国铁路工程集团有限公司。公司具有中国国家住房和城乡建设部批准的铁路工程施工总承包特级资质、公路工程施工总承包特级资质、市政公用工程施工总承包一级资质以及桥梁工程、隧道工程、公路路基、路面工程专业承包一级资质，公路行业甲级设计资质，拥有中华人民共和国对外经济合作经营资格证书和进出口企业资格证书。公司先后参与建设的铁路占中国铁路总里程的三分之二以上；建成电气化铁路占中国电气化铁路的90%；参与建设的高速公路约占中国高速公路总里程的八分之一；建设了中国五分之三的城市轨道工程。公司业务范围涵盖了几乎所有基本建设领域，包括铁路、公路、市政、房建、城市轨道交通、水利水电、机场、港口、码头，等等，能够提供建筑业“纵向一体化”的一揽子交钥匙服务。",
+              "profileSummary": "公司是集勘察设计、施工安装、工业制造、房地产开发、资源利用、金融投资和其他新兴业务于一体的特大型企业集团，总部设在中国北京。公司业务范围涵盖了几乎所有基本建设领域，包括铁路、公路、市政、房建、城市轨道交通、水利水电、机场、港口、码头，等等，能够提供建筑业“纵向一体化”的一揽子交钥匙服务。",
+              "majorProducts": "工程建造、金融物贸、设计咨询、特色地产、新兴业务、装备制造、资产经营、资源利用",
+              "revenueComposition": "市政:42.35%;铁路:27.92%;公路:14.35%;其他:6.01%;房地产开发:4.08%;工程设备和零部件制造:2.53%;勘察设计与咨询服务:1.54%;其他收入:0.32%;产品材料销售:0.31%;其他业务:0.26%;租赁收入:0.24%;技术服务咨询:0.05%;运输:0.03%",
+              "revenueSegments": [
+                {
+                  "name": "市政",
+                  "sharePct": 42.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铁路",
+                  "sharePct": 27.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "公路",
+                  "sharePct": 14.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 6.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "房地产开发",
+                  "sharePct": 4.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程设备和零部件制造",
+                  "sharePct": 2.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "勘察设计与咨询服务",
+                  "sharePct": 1.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他收入",
+                  "sharePct": 0.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "产品材料销售",
+                  "sharePct": 0.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁收入",
+                  "sharePct": 0.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务咨询",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运输",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "水电工程",
+                  "建筑钢结构",
+                  "桥梁钢结构",
+                  "公路工程",
+                  "机场工程",
+                  "航道和港口工程",
+                  "城市轨道交通工程",
+                  "铁路工程"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中国中铁目前更依赖市政（42.35%）、铁路（27.92%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：基建巨头旗下的矿产资源板块，铜钴资源成为其第二增长曲线，具备价值重估潜力，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变终端需求与渗透率变化；公司的产业链位置只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能转化为收入。现阶段可以用终端销量、客户采购量、公司出货和相关产品收入增速判断预期差方向；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 23458,
+            "stockCode": "000737.SZ",
+            "stockName": "北方铜业",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "拥有铜矿峪矿等铜矿资源，并向下游铜材深加工延伸。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000737.SZ",
+              "companyName": "北方铜业",
+              "companyProfile": "公司是一个跨省区、跨行业的集团公司，是山西云时代技术有限公司的控股子公司。公司主营铜金属的开采、选矿、冶炼及压延加工等，自有一座矿山铜矿峪矿，两家冶炼厂。公司的业务覆盖铜业务主要产业链，是具有深厚行业积淀的有色金属企业。公司主要产品为阴极铜、金锭、银锭，副产品为硫酸、海绵金、海绵钯等。公司新建高性能压延铜带箔和覆铜板项目主要产品为铜及铜合金带材、压延铜箔，广泛用于电脑、5G通讯、汽车电子、航空航天、新能源等领域。公司作为山西省属唯一从事铜业务的省属国有企业，得到了省委、省政府的大力支持，控股股东成功入选山西省重点产业链“链主”企业，承担着山西省委赋予的“打造有色金属行业一流标杆企业,引领推动山西省铜产业高质量发展”的重大使命。铜矿峪矿资源深部探矿已被列入国家“十四五”重点规划的项目，我们将在现有勘探规模上加大投入，力争在外围和深部再取得新的资源目标，为公司发展提供可靠的资源保障。",
+              "profileSummary": "公司的业务覆盖铜业务主要产业链，是具有深厚行业积淀的有色金属企业。公司作为山西省属唯一从事铜业务的省属国有企业，得到了省委、省政府的大力支持，控股股东成功入选山西省重点产业链“链主”企业，承担着山西省委赋予的“打造有色金属行业一流标杆企业,引领推动山西省铜产业高质量发展”的重大使命。",
+              "majorProducts": "白银、工业硫酸、黄金、硫化碱、硫酸钡、硫酸镁、奇强元明粉、铜合金带材、压延铜箔、阴极铜",
+              "revenueComposition": "阴极铜:74.14%;贵金属:18.83%;铜带及压延铜箔:5.17%;硫酸:1.14%;其他:0.72%",
+              "revenueSegments": [
+                {
+                  "name": "阴极铜",
+                  "sharePct": 74.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贵金属",
+                  "sharePct": 18.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜带及压延铜箔",
+                  "sharePct": 5.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硫酸",
+                  "sharePct": 1.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "工业硫酸",
+                  "电解铜",
+                  "紫铜板带",
+                  "覆铜板铜箔",
+                  "白银",
+                  "金锭"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "北方铜业当前收入集中在阴极铜（74.14%）、贵金属（18.83%），而拥有铜矿峪矿等铜矿资源，并向下游铜材深加工延伸所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响事件能否转化为可确认的经营增量预期，业务端仍需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导后才能确认。订单、收入确认、产品结构和毛利率变化如果持续改善，相关业务可能从产业布局转为实际增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 23462,
+            "stockCode": "000630.SZ",
+            "stockName": "铜陵有色",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "铜价及硫酸等副产品价格是影响其冶炼业务盈利的关键。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000630.SZ",
+              "companyName": "铜陵有色",
+              "companyProfile": "公司于1992年6月经安徽省体改委批准成立，1996年11月20日在深圳证券交易所上市，成为中国铜工业板块第一股。公司为国家发改委首批列入符合《铜冶炼行业准入条件》的企业之一。主要从事铜矿勘探、采选、冶炼和深加工等业务，是国内产业链最为完整的综合性铜业生产企业之一，其在矿产资源储备、铜冶炼、加工等方面的独特竞争优势，完善的产业资本结构布局，使公司具备很强抗风险能力。公司是一个国际化开放型的现代企业集团。公司产品服务于国内外市场，是最早与国际市场融通接轨的有色金属企业之一，与世界30多个国家和地区建立了经济技术和贸易合作关系，进出口贸易总额连续多年保持全国铜行业和安徽省首位。公司先后与清华大学、中南大学等多所院校建设合作关系，成为国家创新型企业、全国技术创新示范企业，拥有国家级技术中心和国家认可试验室。长期以来，公司传承产业报国的炽热情怀，践行绿色发展的价值取向，努力以优质的产品、丰厚的税收、稳定的就业、无私的奉献贡献社会进步，诠释了一个优秀企业公民的特质，进而成为社会尊敬、客户信赖、员工自豪、政府放心的优秀企业，为公司可持续发展赢得了广泛支持。站在新的起点上，面对有色金属行业发展大势，公司将抓住“一带一路”、“长三角一体化”等重大战略机遇，坚持创新驱动，加快调结构、转方式、促升级步伐，建设一流的阴极铜生产基地、铜基新材料加工基地、资源综合利用示范基地，打造全球知名的“铜冠”品牌。",
+              "profileSummary": "主要从事铜矿勘探、采选、冶炼和深加工等业务，是国内产业链最为完整的综合性铜业生产企业之一，其在矿产资源储备、铜冶炼、加工等方面的独特竞争优势，完善的产业资本结构布局，使公司具备很强抗风险能力。公司产品服务于国内外市场，是最早与国际市场融通接轨的有色金属企业之一，与世界30多个国家和地区建立了经济技术和贸易合作关系，进出口贸易总额连续多年保持全国铜行业和安徽省首位。",
+              "majorProducts": "白银、黄金、硫酸、铜板带、铜箔、阴极铜",
+              "revenueComposition": "铜产品:82.51%;黄金等副产品:14.62%;化工及其他产品:2.44%;其他业务:0.42%",
+              "revenueSegments": [
+                {
+                  "name": "铜产品",
+                  "sharePct": 82.51,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "黄金等副产品",
+                  "sharePct": 14.62,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "化工及其他产品",
+                  "sharePct": 2.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "印刷电路板铜箔",
+                    "category": "铜压延加工"
+                  },
+                  {
+                    "name": "电解铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "白铜板带",
+                    "category": "铜合金压延加工"
+                  },
+                  {
+                    "name": "紫铜板带",
+                    "category": "铜压延加工"
+                  },
+                  {
+                    "name": "金锭",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "青铜板带",
+                    "category": "铜合金压延加工"
+                  }
+                ],
+                "knownProducts": [
+                  "工业硫酸",
+                  "电解铜",
+                  "印刷电路板铜箔",
+                  "紫铜板带",
+                  "白铜板带",
+                  "青铜板带",
+                  "黄铜板带",
+                  "金锭"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "铜陵有色的铜产品（82.51%）、黄金等副产品（14.62%）覆盖范围较宽，其中能够承载印刷电路板铜箔、电解铜、白铜板带，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：铜价及硫酸等副产品价格是影响其冶炼业务盈利的关键。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 23463,
+            "stockCode": "000878.SZ",
+            "stockName": "云南铜业",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "冶炼业务受铜精矿加工费（TC/RC）影响显著，正努力提升资源自给率。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000878.SZ",
+              "companyName": "云南铜业",
+              "companyProfile": "公司为云南铜业(集团)有限公司控股的上市公司，前身为成立于1958年、国家第一个五年计划156项重点建设项目之一的云南冶炼厂，1998年改制为股份制上市公司，同年6月2日在深圳证券交易所上市。公司主要业务涵盖了铜的勘探、采选、冶炼，贵金属和稀散金属的提取与加工，硫化工以及贸易等领域，是中国重要的铜、金、银和硫化工生产基地，在铜以及相关有色金属领域建立了较为完善的产业链，是具有深厚行业积淀的铜企业。公司主要产品包括：阴极铜、黄金、白银、工业硫酸、铂、钯、硒、碲、铼等。公司主产品均采用国际标准组织生产，按照国际ISO9001质量管理体系有效运行，保证产品受到严格的质量控制。公司主产品阴极铜广泛应用于电气、轻工、机械制造、建筑、国防等领域；黄金和白银用于金融、珠宝饰品、电子材料等；工业硫酸用于化工产品原料以及其他国民经济部门。公司“铁峰牌”阴极铜在上海期货交易所和伦敦金属交易所注册，“铁峰牌”黄金在上海黄金交易所、上海期货交易所注册，“铁峰牌”白银在上海黄金交易所、上海期货交易所、伦敦贵金属市场协会注册。公司已建成西南、东南、北方三大铜冶炼基地，拥有世界最先进的铜冶炼生产工艺，普朗铜矿为国内最大的采用井下自然崩落法采矿的铜矿山。公司在铜以及相关有色金属领域建立了较为完善的产业链，是具有深厚行业积淀的铜产业企业。",
+              "profileSummary": "公司主要业务涵盖了铜的勘探、采选、冶炼，贵金属和稀散金属的提取与加工，硫化工以及贸易等领域，是中国重要的铜、金、银和硫化工生产基地，在铜以及相关有色金属领域建立了较为完善的产业链，是具有深厚行业积淀的铜企业。公司主要产品包括：阴极铜、黄金、白银、工业硫酸、铂、钯、硒、碲、铼等。",
+              "majorProducts": "钯、白银、铂、碲、工业硫酸、黄金、铼、硒、阴极铜",
+              "revenueComposition": "阴极铜:76.59%;贵金属:15.42%;其他:6.27%;硫酸:1.71%",
+              "revenueSegments": [
+                {
+                  "name": "阴极铜",
+                  "sharePct": 76.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贵金属",
+                  "sharePct": 15.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 6.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硫酸",
+                  "sharePct": 1.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "海绵钯",
+                    "category": "钯及钯合金"
+                  },
+                  {
+                    "name": "海绵铂",
+                    "category": "铂及铂合金"
+                  },
+                  {
+                    "name": "电解铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "白银",
+                    "category": "白银产品"
+                  },
+                  {
+                    "name": "金锭",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "铼",
+                    "category": "其他小金属及合金"
+                  }
+                ],
+                "knownProducts": [
+                  "工业硫酸",
+                  "硒",
+                  "碲",
+                  "铼",
+                  "海绵钯",
+                  "海绵铂",
+                  "电解铜",
+                  "白银"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "云南铜业拥有海绵钯、海绵铂、电解铜，其产业链位置与冶炼业务受铜精矿加工费（TC/RC）影响显著，正努力提升资源自给率一致；当前的阴极铜（76.59%）、贵金属（15.42%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由事件能否转化为可确认的经营增量决定，并需完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。只有订单、收入确认、产品结构和毛利率变化持续改善，产品能力才会转化为公司层面的收入和盈利提升；事件关联停留在主题层面，未形成可持续订单或利润贡献则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 23465,
+            "stockCode": "301217.SZ",
+            "stockName": "铜冠铜箔",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "PCB和锂电池铜箔是电子和新能源产业的关键材料，受益于下游高景气。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301217.SZ",
+              "companyName": "铜冠铜箔",
+              "companyProfile": "公司成立于2010年，是铜陵有色金属集团股份有限公司控股子公司，主要从事各类高精度电子铜箔研发、制造和销售的高新技术企业。2022年于深圳证券交易所正式挂牌上市，是安徽省第一家分拆上市企业。公司技术工艺水平居国内前列、国际先进，是中国电子材料行业协会副理事长单位、电子铜箔分会理事长单位。公司相继获得国家级“绿色工厂”称号，连续多届获“中国电子材料行业五十强企业”和“中国电子材料行业电子铜箔专业十强”荣誉称号，被安徽省国资委遴选为创新改革试点单位，入选国务院国资委“国企双百行动”企业名单。作为国家标准《印制板用电解铜箔》主持修订单位，以及国家标准《印刷电路用金属箔通用规范》及行业标准《锂离子电池用电解铜箔》主要参与制定者，铜冠铜箔具有较高的行业地位和知名度。",
+              "profileSummary": "公司成立于2010年，是铜陵有色金属集团股份有限公司控股子公司，主要从事各类高精度电子铜箔研发、制造和销售的高新技术企业。作为国家标准《印制板用电解铜箔》主持修订单位，以及国家标准《印刷电路用金属箔通用规范》及行业标准《锂离子电池用电解铜箔》主要参与制定者，铜冠铜箔具有较高的行业地位和知名度。",
+              "majorProducts": "PCB铜箔、锂电池铜箔",
+              "revenueComposition": "PCB铜箔:55.37%;锂电池铜箔:39.19%;铜扁线等:4.6%;其他业务:0.84%",
+              "revenueSegments": [
+                {
+                  "name": "PCB铜箔",
+                  "sharePct": 55.37,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "锂电池铜箔",
+                  "sharePct": 39.19,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铜扁线等",
+                  "sharePct": 4.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "印刷电路板铜箔",
+                    "category": "铜压延加工"
+                  }
+                ],
+                "knownProducts": [
+                  "印刷电路板铜箔",
+                  "锂电铜箔",
+                  "漆包铜扁线"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "铜冠铜箔的事件逻辑具备真实业务底座，但尚不足以代表全部公司：锂电池铜箔占收入的39.19%。公司与事件的具体联系在于：PCB和锂电池铜箔是电子和新能源产业的关键材料，受益于下游高景气，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 23466,
+            "stockCode": "301518.SZ",
+            "stockName": "长华化学",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "AI及新能源需求带动高端铜箔需求，公司积极扩产以满足市场。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301518.SZ",
+              "companyName": "长华化学",
+              "companyProfile": "公司成立于2010年，总部位于江苏省张家港市扬子江国际化工园，于2023年在深交所创业板上市。公司产品涵盖软泡用聚醚、CASE用聚醚及特种聚醚，其中高性能Hiclaim®系列、抗菌防螨功能型系列聚醚等绿色新产品逐步投放市场，特种聚醚等高附加值产品销售占比不断提高。公司产品在低气味、低VOCs、低醛等方面具有较高的技术优势，广泛应用于国内外中高端的软体家居、汽车等领域，在国内外市场占有率位于前列。公司在分子结构设计、聚合工艺突破、性能定向开发等关键领域持续攻坚，构建起从基础研究、中试验证到产业化落地的全链条技术体系，形成行业领先的核心技术能力。长华化学持续秉持“创造绿色化学，碳塑美好未来”这一企业使命，积极推动落实“二氧化碳聚醚及高性能多元醇项目”。该项目致力于打造全球首套采用低温低压工艺技术的年产8万吨二氧化碳聚醚生产线，以工业废气中捕集的二氧化碳为原料替代部分石化原料，不仅在技术上实现创新突破，更将碳减排与新材料进行了有效结合。长华化学新建的二氧化碳聚醚项目，不仅能助力公司提高市场竞争力，推动企业绿色转型，实现可持续发展，更全力助推聚醚产业的绿色转型，为行业树立可持续发展的典范，彰显了长华化学在推动化工行业低碳发展中的责任与担当。",
+              "profileSummary": "公司产品涵盖软泡用聚醚、CASE用聚醚及特种聚醚，其中高性能Hiclaim®系列、抗菌防螨功能型系列聚醚等绿色新产品逐步投放市场，特种聚醚等高附加值产品销售占比不断提高。公司产品在低气味、低VOCs、低醛等方面具有较高的技术优势，广泛应用于国内外中高端的软体家居、汽车等领域，在国内外市场占有率位于前列。",
+              "majorProducts": "CASE用聚醚及特种聚醚、POP、软泡用聚醚",
+              "revenueComposition": "普通聚合物多元醇:65.46%;高活性聚合物多元醇:26%;软泡及CASE类聚醚多元醇:7.46%;其他业务:1.09%",
+              "revenueSegments": [
+                {
+                  "name": "普通聚合物多元醇",
+                  "sharePct": 65.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高活性聚合物多元醇",
+                  "sharePct": 26.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "软泡及CASE类聚醚多元醇",
+                  "sharePct": 7.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "聚合物多元醇",
+                  "CASE聚醚",
+                  "慢回弹聚醚(PPG)",
+                  "通用软泡聚醚(PPG)",
+                  "高回弹聚醚(PPG)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长华化学现有业务与AI及新能源需求带动高端铜箔需求，公司积极扩产以满足市场处于同一产业方向，收入主体为普通聚合物多元醇（65.46%）、高活性聚合物多元醇（26%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变产能释放与行业供给变化，只有经由“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”，业务交集才会转化为业绩增量。在建工程转固、产能利用率、产销率、库存和产品价格若逐步增强，相关业务的重要性会提高；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 23467,
+            "stockCode": "688629.SH",
+            "stockName": "华丰科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "AI服务器超节点架构升级，带动高速铜连接器量价齐升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688629.SH",
+              "companyName": "华丰科技",
+              "companyProfile": "公司是全球光电连接器及互连方案提供商。我们搭建连接器正向研发平台，重点研制背板总线、印制板夹层总线与I/O总线的高速连接器及光模块，20余年持续研发，提供传输速率1.25Gbps至112Gbps的高速互连方案，在高速率传输同时提升在高振动环境中的高可靠性，满足通信装备的快速发展应用需求。研制装备整体互连解决方案的“系统互连”产品，可将装备信息系统的高速、射频、电源、光等多种信号进行识别处理和集成传输，实现装备系统间、系统内设备间以无缆化、模块化、无线化、总线化和智能化的快速连接，解决设备的电磁防护、小型化、快速维护维修等问题。研制装备系统间互连电缆网和柔性电缆网，根据用户需求设计电路，抗电磁干扰性能优异、连接可靠性高、重量轻。研制的连接器从低频到高频、从电口到光口，从标准型到特殊定制，能适应深海环境(70兆帕)、高压环境(100千伏)、高振动冲击环境、电磁波干扰环境、高低温环境(-70℃～+700℃)、太空宇航环境等多种特殊环境。为用户提供互连解决方案一站式服务。秉承“可靠连接源于华丰”的“可靠”文化。建有连接器制造全工序的智能化工厂和完善的质量保证体系，从连接器的接触件制造、绝缘体塑压、壳体加工、表面处理、装配、包装全工序实现自动化生产、自动完成检测分拣，质量可控可追溯。我们努力追求连接器的高可靠性、安全性、环保性，致力于向全球防务装备、通讯装备、轨道交通装备和新能源汽车提供更专业、更可靠、更智能的互连技术和产品。",
+              "profileSummary": "为用户提供互连解决方案一站式服务。我们努力追求连接器的高可靠性、安全性、环保性，致力于向全球防务装备、通讯装备、轨道交通装备和新能源汽车提供更专业、更可靠、更智能的互连技术和产品。",
+              "majorProducts": "BDU/PDU充配电系统总成、电气车钩总成、电源类连接器、防务连接器、高速连接器、高压线束、光通讯连接器、轨道交通连接器、射频类连接器、系统互连产品、线缆组件、印制板连接器、组件",
+              "revenueComposition": "组件:61.53%;连接器:28.72%;系统互连产品:5.32%;其他配套件:3.27%;其他业务:1.16%",
+              "revenueSegments": [
+                {
+                  "name": "组件",
+                  "sharePct": 61.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "连接器",
+                  "sharePct": 28.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "系统互连产品",
+                  "sharePct": 5.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他配套件",
+                  "sharePct": 3.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "电池切断单元(BDU)",
+                  "电源分配单元(PDU)",
+                  "新能源汽车高压线束",
+                  "防务连接器",
+                  "EVS信号控制系统连接器",
+                  "PDU连接器",
+                  "新能源汽车充电连接器",
+                  "新能源汽车高压互锁连接器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华丰科技现有业务与AI服务器超节点架构升级，带动高速铜连接器量价齐升处于同一产业方向，收入主体为组件（61.53%）、连接器（28.72%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变供需缺口与产品价格，只有经由“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，业务交集才会转化为业绩增量。产品报价、订单排期、产销率和毛利率若逐步增强，相关业务的重要性会提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 23468,
+            "stockCode": "002130.SZ",
+            "stockName": "沃尔核材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "AI数据中心建设拉动高速铜缆需求，公司作为上游核心材料供应商直接受益。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002130.SZ",
+              "companyName": "沃尔核材",
+              "companyProfile": "公司是国家重点支持发展的高新技术企业，主营业务为高分子核辐射改性新材料及系列电子、电力、电线产品的研发、制造和销售，开发运营风力发电、布局新能源汽车、智能制造等相关产业。公司产品包括：热缩套管、热缩母排、热缩电缆附件、冷缩电缆附件、电缆分支箱、环网柜、高低压开关柜、WQFB全绝缘封闭母线、环保高温硅胶电线、耐高温聚四氟乙烯套管、导体连接管、热缩复合双壁管、硅橡胶管、聚四氟乙烯套管、民用防滑花纹管、无卤环保PE交联电线等多种产品，广泛应用于电子、电力、冶金、石化、汽车、高铁、煤矿及航天航空等领域，销售分公司遍及全国多个大中城市，产品远销欧美、东南亚等多个国家和地区，其质量稳定、性能可靠，已形成沃尔品牌效应。公司将秉持“企业成功、员工幸福、保护环境、回报社会”的核心文化理念，凭借品牌、技术、人才、市场、服务等强大实力，恪守“诚信、尊重、高效、合作、创新”的核心价值观，全力打造一个行业地位领先、竞争优势显著、企业特色鲜明、受社会尊重、引员工自豪的优质企业。",
+              "profileSummary": "公司是国家重点支持发展的高新技术企业，主营业务为高分子核辐射改性新材料及系列电子、电力、电线产品的研发、制造和销售，开发运营风力发电、布局新能源汽车、智能制造等相关产业。公司产品包括：热缩套管、热缩母排、热缩电缆附件、冷缩电缆附件、电缆分支箱、环网柜、高低压开关柜、WQFB全绝缘封闭母线、环保高温硅胶电线、耐高温聚四氟乙烯套管、导体连接管、热缩复合双壁管、硅橡胶管、聚四氟乙烯套管、民用防滑花纹管、无卤环保PE交联电线等多种产品，广泛应…",
+              "majorProducts": "标识管、车内高压线束、充电座、电动汽车充电枪、高速通信线、高压电缆附件、高压连接器、工业线、国际交直流充电座、核级电缆附件、可分离连接器、冷、热缩电缆附件、连续母排保护套管、汽车线、热缩管、双壁管、消费电子线",
+              "revenueComposition": "电子材料:33.74%;通信线缆:30.18%;新能源汽车:20.19%;电力产品:12.16%;其他业务:2.06%;风力发电:1.67%",
+              "revenueSegments": [
+                {
+                  "name": "电子材料",
+                  "sharePct": 33.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "通信线缆",
+                  "sharePct": 30.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源汽车",
+                  "sharePct": 20.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力产品",
+                  "sharePct": 12.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "风力发电",
+                  "sharePct": 1.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "风力发电",
+                  "双壁热缩管",
+                  "新能源汽车高压线束",
+                  "新能源汽车充电连接器",
+                  "新能源汽车高压互锁连接器",
+                  "新能源汽车充电枪",
+                  "电线电缆",
+                  "高速线缆(DAC)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "沃尔核材的主要经营内容是电子材料（33.74%）、通信线缆（30.18%），具体产品集中在风力发电、双壁热缩管、新能源汽车高压线束、新能源汽车充电连接器。“AI数据中心建设拉动高速铜缆需求，公司作为上游核心材料供应商直接受益”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善终端需求与渗透率变化，也需要先补上产品落地和客户导入，再经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才可能影响业绩。终端销量、客户采购量、公司出货和相关产品收入增速没有同步改善时，股价反应更可能来自主题交易；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 23470,
+            "stockCode": "600547.SH",
+            "stockName": "山东黄金",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "A股黄金板块龙头，市值大，适合大资金参与黄金板块的贝塔行情。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600547.SH",
+              "companyName": "山东黄金",
+              "companyProfile": "公司以黄金开采为主业，拥有勘探、采矿、选矿、冶炼(精炼)和黄金产品深加工、销售于一体的完整产业链，并拥有与之配套的科技研发体系，黄金产量、资源储备、经济效益、科技水平及人才优势均居国内黄金行业领先地位。所辖矿山企业分布于中国山东、福建、内蒙古、甘肃、新疆、青海、黑龙江、吉林、云南等省份(自治区)以及南美洲阿根廷、非洲加纳、纳米比亚等地。公司所属三山岛金矿、焦家金矿、新城金矿、青海大柴旦矿业连续多年上榜“中国黄金生产十大矿山”，与巴理克黄金公司按照50%-50%基准共同经营阿根廷最大的金矿贝拉德罗金矿。公司是国内唯一拥有4座矿山累计产金突破百吨的企业，所控股的山金国际黄金股份有限公司下辖5家矿山企业，涵盖金、银、铅、锌等有色金属生产，与公司形成优势互补，发挥协同效应。公司旗下的山东黄金冶炼有限公司是上海黄金交易所首批认证的全国十家“可提供标准金锭企业”之一和上海期货交易所首批金锭品牌注册企业，连续多年位列“中国黄金冶炼十大企业”。公司紧紧围绕“平安山金、生态山金、活力山金、人文山金”发展理念，以掌握矿业前沿核心技术为重点，加大科技研发投入，以科技创新引领发展；致力于打造安全的绿色矿山，不断巩固绿色矿山建设成果，树立了“山东黄金生态矿业”的品牌形象；关心关爱员工、致力和谐社区建设，积极承担社会责任，热心参与公益事业，以实际行动服务社会、影响社会，实现经济、环境和社会效益共赢。",
+              "profileSummary": "公司以黄金开采为主业，拥有勘探、采矿、选矿、冶炼(精炼)和黄金产品深加工、销售于一体的完整产业链，并拥有与之配套的科技研发体系，黄金产量、资源储备、经济效益、科技水平及人才优势均居国内黄金行业领先地位。公司是国内唯一拥有4座矿山累计产金突破百吨的企业，所控股的山金国际黄金股份有限公司下辖5家矿山企业，涵盖金、银、铅、锌等有色金属生产，与公司形成优势互补，发挥协同效应。",
+              "majorProducts": "标准金锭、合质金、投资金条、银锭",
+              "revenueComposition": "外购合质金:41.42%;自产金:36.82%;小金条:9.95%;贸易:9.57%;其他:2.25%",
+              "revenueSegments": [
+                {
+                  "name": "外购合质金",
+                  "sharePct": 41.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自产金",
+                  "sharePct": 36.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "小金条",
+                  "sharePct": 9.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易",
+                  "sharePct": 9.57,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "金条",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "金锭",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "黄金贸易",
+                    "category": "有色金属贸易"
+                  }
+                ],
+                "knownProducts": [
+                  "黄金贸易",
+                  "金条",
+                  "金锭",
+                  "矿产金"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "山东黄金已经参与事件相关业务，但收入基数仍小：贸易占收入的9.57%，说明公司已有业务抓手，但“A股黄金板块龙头，市值大，适合大资金参与黄金板块的贝塔行情”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于事件能否转化为可确认的经营增量能否驱动“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，从而推动业务跨过小规模阶段。在此之前，订单、收入确认、产品结构和毛利率变化比总收入增速更值得跟踪；若事件关联停留在主题层面，未形成可持续订单或利润贡献，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 23472,
+            "stockCode": "600219.SH",
+            "stockName": "南山铝业",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "成本优势显著，风光储项目及煤矿投运将带来持续降本，兼具成长与分红优势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600219.SH",
+              "companyName": "南山铝业",
+              "companyProfile": "公司形成从热电-氧化铝-电解铝-熔铸-(铝型材/热轧-冷轧-箔轧/锻压)的完整的铝产业链生产线，公司主要产品包括上游产品电力、蒸汽、氧化铝、铝合金锭，下游产品铝板带箔、挤压型材、压延材及大型机械深加工结构件。产品用于加工铝合金门窗、幕墙、集装箱、电力管棒、铁路货运列车、高速列车、城市地铁、客车、新能源汽车、手机、电脑以及大型机械，航空、汽车、船舶用中厚板，罐料、高档PS版基、铝箔坯料、高档铝塑复合板，食品软包装、香烟包装、医药包装、空调箔、动力电池箔，飞机、高速列车、汽车、大型机械深加工结构件等。公司构建了以电力、氧化铝、电解铝、铝挤压材、铝压延材、锻造及相关材料的精深加工为主体的产业链经营模式，业务包括铝土矿冶炼、电解铝生产、铝挤压材和铝压延材研发、加工与销售等多个环节，公司高端制造战略取得重大进展，高技术、高附加值产品的产能持续释放，订单持续增长。",
+              "profileSummary": "公司形成从热电-氧化铝-电解铝-熔铸-(铝型材/热轧-冷轧-箔轧/锻压)的完整的铝产业链生产线，公司主要产品包括上游产品电力、蒸汽、氧化铝、铝合金锭，下游产品铝板带箔、挤压型材、压延材及大型机械深加工结构件。公司构建了以电力、氧化铝、电解铝、铝挤压材、铝压延材、锻造及相关材料的精深加工为主体的产业链经营模式，业务包括铝土矿冶炼、电解铝生产、铝挤压材和铝压延材研发、加工与销售等多个环节，公司高端制造战略取得重大进展，高技术、高附加值产品…",
+              "majorProducts": "南山扁锭、南山玻璃幕墙、南山地弹门、南山电解铝、南山高精度铝箔、南山铝业天然气供应、南山热轧卷、南山推拉窗、南山氧化铝、南山折叠门",
+              "revenueComposition": "冷轧产品:51.88%;氧化铝:25.65%;铝、型材产品:10.32%;铝合金锭:4.68%;高精度铝箔:3.74%;热轧卷:2.17%;其他业务:1.06%;天然气:0.34%;电、汽:0.15%",
+              "revenueSegments": [
+                {
+                  "name": "冷轧产品",
+                  "sharePct": 51.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氧化铝",
+                  "sharePct": 25.65,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铝、型材产品",
+                  "sharePct": 10.32,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铝合金锭",
+                  "sharePct": 4.68,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "高精度铝箔",
+                  "sharePct": 3.74,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "热轧卷",
+                  "sharePct": 2.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "天然气",
+                  "sharePct": 0.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电、汽",
+                  "sharePct": 0.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "冷轧铝板带",
+                    "category": "铝合金压延加工"
+                  },
+                  {
+                    "name": "氧化铝",
+                    "category": "铝冶炼"
+                  },
+                  {
+                    "name": "热轧铝板带",
+                    "category": "铝合金压延加工"
+                  },
+                  {
+                    "name": "电池铝箔",
+                    "category": "正极集流体"
+                  },
+                  {
+                    "name": "铝合金",
+                    "category": "铝合金"
+                  },
+                  {
+                    "name": "铝型材",
+                    "category": "铝合金压延加工"
+                  }
+                ],
+                "knownProducts": [
+                  "天然气销售",
+                  "热电联产(电力)",
+                  "氧化铝",
+                  "铝箔坯料",
+                  "食品铝箔",
+                  "铝合金",
+                  "冷轧铝板带",
+                  "热轧铝板带"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "南山铝业已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：氧化铝（25.65%）、铝、型材产品（10.32%）合计约占收入的40.65%。公司在产业链中的位置是：成本优势显著，风光储项目及煤矿投运将带来持续降本，兼具成长与分红优势，事件能否转化为可确认的经营增量则决定增量大小。只有完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，相关业务的增长才可能改善公司整体盈利。订单、收入确认、产品结构和毛利率变化还需与其他主业表现同时改善；事件关联停留在主题层面，未形成可持续订单或利润贡献会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 23474,
+            "stockCode": "000969.SZ",
+            "stockName": "安泰科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "难熔钨钼材料龙头，受益于泛半导体领域钨钼溅射靶材需求快速提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000969.SZ",
+              "companyName": "安泰科技",
+              "companyProfile": "公司是中央企业—中国钢研科技集团有限公司(以下简称“中国钢研”或“集团公司”)的控股上市公司，是国家科技部及中科院联合认定的国家高新技术企业，也是北京市科学技术委员会认定的骨干高新技术企业。公司成立于1998年12月，于2000年5月在深圳证券交易所挂牌上市。公司是我国先进新材料行业的领军企业之一，以先进金属新材料及制品的研发、生产和销售为主业，重点面向人工智能、新能源、新一代电子信息、高端装备制造及航空航天、核电等领域提供先进金属材料、关键部件及系统解决方案，是众多国内外知名企业的关键材料与核心部件供应商。公司长期深耕新材料及部件行业，引领我国新材料产业从无到有、从弱到强，从进口依赖到实现国产替代和走向国际化，为我国新材料产业发展壮大和关键材料国产化保障做出了突出贡献，成为中国金属新材料领域行业公认的头部创新引领企业之一。公司加快创新转型，聚焦新能源行业、高端智能制造行业等国家战略性、前瞻性新兴产业，积极对接市场需求，不断开拓新领域、新业务、新市场、新产品，为公司高质量发展提供不竭动力。公司主动适应新常态，注入新动力，围绕总体战略规划，编制了《碳达峰行动方案》，以创新驱动促进可持续发展，以实际行动推进数字化转型与绿色发展，把可持续发展理念全方位融入公司长期发展战略、经营方略和企业文化中，努力践行社会责任以促进公司高质量发展与社会和谐。",
+              "profileSummary": "公司是我国先进新材料行业的领军企业之一，以先进金属新材料及制品的研发、生产和销售为主业，重点面向人工智能、新能源、新一代电子信息、高端装备制造及航空航天、核电等领域提供先进金属材料、关键部件及系统解决方案，是众多国内外知名企业的关键材料与核心部件供应商。公司加快创新转型，聚焦新能源行业、高端智能制造行业等国家战略性、前瞻性新兴产业，积极对接市场需求，不断开拓新领域、新业务、新市场、新产品，为公司高质量发展提供不竭动力。",
+              "majorProducts": "安泰科技焊丝、焊条、安泰科技金刚石工具、超硬材料及制品、磁性材料及制品、非晶/纳米晶带材及制品、粉末材料及制品、高速工具钢及工具、焊接材料及制品、环保装备与工程、难熔金属材料、稀土钕铁硼永磁体",
+              "revenueComposition": "先进功能材料及器件:39.04%;钢铁粉末及制品:37.53%;高品质特钢及焊接材料:23.43%",
+              "revenueSegments": [
+                {
+                  "name": "先进功能材料及器件",
+                  "sharePct": 39.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "钢铁粉末及制品",
+                  "sharePct": 37.53,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "高品质特钢及焊接材料",
+                  "sharePct": 23.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "烧结钕铁硼永磁体",
+                    "category": "稀土永磁"
+                  },
+                  {
+                    "name": "粘结钕铁硼永磁体",
+                    "category": "稀土永磁"
+                  },
+                  {
+                    "name": "纳米晶合金带",
+                    "category": "纳米晶合金"
+                  },
+                  {
+                    "name": "钼钨合金管",
+                    "category": "钼合金压延加工"
+                  },
+                  {
+                    "name": "非晶合金薄带",
+                    "category": "非晶合金"
+                  },
+                  {
+                    "name": "钨硼中子屏蔽材料",
+                    "category": "核电设备"
+                  }
+                ],
+                "knownProducts": [
+                  "钼钨合金管",
+                  "纳米晶合金带",
+                  "非晶合金薄带",
+                  "烧结钕铁硼永磁体",
+                  "粘结钕铁硼永磁体",
+                  "钨硼中子屏蔽材料",
+                  "钨铜偏滤器",
+                  "高速钢"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "安泰科技的钢铁粉末及制品（37.53%）覆盖范围较宽，其中能够承载烧结钕铁硼永磁体、粘结钕铁硼永磁体、纳米晶合金带，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：难熔钨钼材料龙头，受益于泛半导体领域钨钼溅射靶材需求快速提升。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 23475,
+            "stockCode": "688480.SH",
+            "stockName": "赛恩斯",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "深度绑定上游资源，在战略小金属铼领域具备技术和资源双重优势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688480.SH",
+              "companyName": "赛恩斯",
+              "companyProfile": "公司是一家专业从事重金属污染防治的高新技术企业，以成为重金属污染防治领域的领航者为核心发展目标，长期坚持研发与创新，以“资源化、减量化、无害化、经济适用”技术研发原则，构建起重金属污染防治综合解决方案、环保产品、运营服务“三位一体”的经营体系，公司产品和服务在全国上百家采、选、冶等大中型有色企业应用。公司为国家重金属污染防治工程技术研究中心产业化基地，拥有博士后科研工作站、中国有色行业污染治理与装备工程技术研究中心、湖南有色行业重金属污染治理技术与装备工程技术中心、湖南省企业技术中心等科研平台，是国家级“专精特新”小巨人企业，参与国家重点研发计划4项，承担了10余项国家级、省部级等研究课题。公司通过自主研发，同时以产学研合作为辅助的方式，与中南大学、湖南农业大学、湖南省环境保护研究院等高校、科研院所建立了产学研合作关系，持续开展研发活动。公司四大核心技术：污酸资源化治理系列技术、重金属废水深度处理与回用系列技术、含砷危废矿化解毒系列技术和重金属污染环境修复技术，实现了规模化、产业化应用。多项技术获国家技术发明二等奖、环境保护科学技术二等奖、中国专利奖、中国有色金属工业科学技术一等奖等奖项。",
+              "profileSummary": "公司是一家专业从事重金属污染防治的高新技术企业，以成为重金属污染防治领域的领航者为核心发展目标，长期坚持研发与创新，以“资源化、减量化、无害化、经济适用”技术研发原则，构建起重金属污染防治综合解决方案、环保产品、运营服务“三位一体”的经营体系，公司产品和服务在全国上百家采、选、冶等大中型有色企业应用。",
+              "majorProducts": "高分子吸附剂、含砷危废矿化解毒系列技术与装备、矿化剂、生物制剂、生物制剂脱铊技术与装备、生物制剂协同氧化技术与装备、铜萃取剂、土壤修复剂、稳定剂、污酸资源化治理系列技术与装备、氧化剂、重金属污染环境修复系列技术与装备",
+              "revenueComposition": "运营服务:36.71%;重金属污染防治综合解决方案:34.31%;精细化工新材料-铜萃取剂产品:17.37%;销售产品:9.69%;精细化工新材料-其他产品:0.88%;其他:0.74%;其他业务:0.29%",
+              "revenueSegments": [
+                {
+                  "name": "运营服务",
+                  "sharePct": 36.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "重金属污染防治综合解决方案",
+                  "sharePct": 34.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精细化工新材料-铜萃取剂产品",
+                  "sharePct": 17.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "销售产品",
+                  "sharePct": 9.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精细化工新材料-其他产品",
+                  "sharePct": 0.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "含砷危废矿化解毒处理",
+                  "含砷危废矿化解毒处理解决方案",
+                  "重金属废水深度处理解决方案",
+                  "重金属污酸资源化治理",
+                  "重金属废水深度处理",
+                  "重金属污酸资源化治理解决方案",
+                  "重金属污染环境修复处理解决方案",
+                  "含砷危废处理矿化剂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "赛恩斯的业务范围能够覆盖深度绑定上游资源，在战略小金属铼领域具备技术和资源双重优势所处的产业环节，但当前运营服务（36.71%）、重金属污染防治综合解决方案（34.31%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。技术商业化与产品迭代速度需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”完成兑现，并在客户认证、量产良率、订单规模、产品收入占比和毛利率上形成持续改善；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 23476,
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内重要的铅锌冶炼企业，受益于铅锌价格上涨及副产品价值提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600961.SH",
+              "companyName": "株冶集团",
+              "companyProfile": "公司源于1956年始建的株洲冶炼厂，是国家“一五”计划第一批重点建设企业，2004年在上海证券交易所上市，2009年并入中国五矿，成为央企骨干子企业。株冶集团是一家拥有铅锌矿产资源和采选、黄金白银和铅锌冶炼的全产业链公司。公司具备86万吨铅锌铜采选、68万吨锌产品、10万吨铅冶炼的生产能力，并拥有4500公斤黄金、470吨白银的生产能力。公司“火炬”“水口山”商标为中国驰名商标，所产锌锭、铅锭、银锭为伦敦金属交易所和上交所注册品牌，也是国家出口免检产品。",
+              "profileSummary": "株冶集团是一家拥有铅锌矿产资源和采选、黄金白银和铅锌冶炼的全产业链公司。公司具备86万吨铅锌铜采选、68万吨锌产品、10万吨铅冶炼的生产能力，并拥有4500公斤黄金、470吨白银的生产能力。",
+              "majorProducts": "火炬铋锭、火炬海绵铂、火炬海绵钯、火炬金锭、火炬硫酸、火炬铅锭、火炬锌锭、火炬氧化钴、火炬银锭",
+              "revenueComposition": "锌产品:56.66%;金锭:17.92%;银锭:12.39%;铅产品:7.63%;其他:2.41%;硫酸:1.38%;铜精矿及含铜物料:0.99%;铟锭:0.42%;镉锭:0.14%;自营贸易:0.05%",
+              "revenueSegments": [
+                {
+                  "name": "锌产品",
+                  "sharePct": 56.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金锭",
+                  "sharePct": 17.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "银锭",
+                  "sharePct": 12.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铅产品",
+                  "sharePct": 7.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硫酸",
+                  "sharePct": 1.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜精矿及含铜物料",
+                  "sharePct": 0.99,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铟锭",
+                  "sharePct": 0.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "镉锭",
+                  "sharePct": 0.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自营贸易",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "锌锭",
+                    "category": "锌冶炼"
+                  },
+                  {
+                    "name": "电解铅",
+                    "category": "铅冶炼"
+                  },
+                  {
+                    "name": "铜精矿",
+                    "category": "铜矿采选"
+                  },
+                  {
+                    "name": "铟锭",
+                    "category": "其他小金属及合金"
+                  },
+                  {
+                    "name": "锌合金",
+                    "category": "锌合金及制品"
+                  },
+                  {
+                    "name": "镉锭",
+                    "category": "其他小金属及合金"
+                  }
+                ],
+                "knownProducts": [
+                  "工业硫酸",
+                  "有色金属贸易",
+                  "铟锭",
+                  "镉锭",
+                  "电解铅",
+                  "锌锭",
+                  "锌合金",
+                  "白银"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "株冶集团在事件链条中的位置是：国内重要的铅锌冶炼企业，受益于铅锌价格上涨及副产品价值提升；铜精矿及含铜物料占收入的0.99%，目前仍是较小的收入来源。因此，本次事件首先改变的可能是市场对业务上限的估计，随后才是供需缺口与产品价格经由“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”带来的实际利润。小基数提供增速弹性，也放大了预期与兑现之间的落差。产品报价、订单排期、产销率和毛利率若迟迟不能改善，或出现供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，这条逻辑就难以从期权走向主业。"
+          },
+          {
+            "sourceRowNumber": 23478,
+            "stockCode": "002266.SZ",
+            "stockName": "浙富控股",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "战略升级为AI关键战略金属循环平台，高纯铟、铑钌铱等小金属项目将贡献显著增量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002266.SZ",
+              "companyName": "浙富控股",
+              "companyProfile": "公司成立于2004年，2008年在深圳证券交易所上市，是一家大型集团化运作、多元化布局、国际化经营的上市公司，以新时代绿色发展理念“绿水青山就是金山银山”为基准，业务领域涉及危险废物无害化处理及再生资源回收利用、大型清洁能源装备的研发和制造、多领域产业投资等诸多板块。公司在“清洁能源、大环保”发展战略指引下，聚焦危险废物无害化处置及资源化回收利用领域，拥有集危险废物“收集-贮存-无害化处理-资源深加工”前后端一体化的全产业链危废综合处理技术与设施。同时，公司在水电、核电等领域已拥有行业领先的技术研发、市场开拓、产品设计和制造能力，产品远销海外多个国家。公司不断完善“绿色产业”领域战略布局，目前已成为清洁能源装备业务与环保业务协调发展的大型企业集团。公司将继续以新时代绿色发展理念为基准，深耕绿色经济，为客户提供更具竞争力的产品、更优质的解决方案以及更卓越的技术服务，为助力我国生态文明建设和实现高质量发展贡献力量。",
+              "profileSummary": "公司不断完善“绿色产业”领域战略布局，目前已成为清洁能源装备业务与环保业务协调发展的大型企业集团。公司将继续以新时代绿色发展理念为基准，深耕绿色经济，为客户提供更具竞争力的产品、更优质的解决方案以及更卓越的技术服务，为助力我国生态文明建设和实现高质量发展贡献力量。",
+              "majorProducts": "核电设备、水电设备、浙富股份常规水轮发电机、浙富股份大流量轴伸泵、浙富股份灯泡式发电机、浙富股份贯流式水轮发电机组、浙富股份混流式水轮发电机组、浙富股份轴流式水轮发电机组",
+              "revenueComposition": "危险废物处置及资源化产品:94.4%;清洁能源设备:5.32%;其他:0.26%;石油采掘:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "危险废物处置及资源化产品",
+                  "sharePct": 94.4,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "清洁能源设备",
+                  "sharePct": 5.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "石油采掘",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "贵金属回收",
+                    "category": "资源回收加工服务"
+                  }
+                ],
+                "knownProducts": [
+                  "危废处理",
+                  "贱金属回收",
+                  "贵金属回收",
+                  "控制棒驱动机构",
+                  "水轮机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "浙富控股的危险废物处置及资源化产品（94.4%）覆盖范围较宽，其中能够承载贵金属回收，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：战略升级为AI关键战略金属循环平台，高纯铟、铑钌铱等小金属项目将贡献显著增量。现阶段无法用整个分部占比直接衡量受益程度，因为技术商业化与产品迭代速度还需沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、量产良率、订单规模、产品收入占比和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "1条低于3星的源记录已按当前关注口径排除。",
+      "5条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

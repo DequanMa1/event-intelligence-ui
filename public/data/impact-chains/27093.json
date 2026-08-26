@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27093",
@@ -9,28 +9,19 @@
     "date": "2026-07-07"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 4,
-    "mappedStockCount": 3,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
+    "mappedStockCount": 2,
     "unmappedStockCount": 1,
     "stocks": [
-      {
-        "sourceRowNumber": 19566,
-        "stockCode": "未上市",
-        "stockName": "华为",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 19570,
         "stockCode": "301165.SZ",
         "stockName": "锐捷网络",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 17
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 19571,
@@ -39,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 20
+        "anchorProductCount": 3
       },
       {
         "sourceRowNumber": 19578,
@@ -48,14 +39,14 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 18
+        "anchorProductCount": 11
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 19566,
-        "stockCode": "未上市",
-        "stockName": "华为",
+        "sourceRowNumber": 19570,
+        "stockCode": "301165.SZ",
+        "stockName": "锐捷网络",
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
@@ -67,248 +58,12 @@
     "candidateCoreProductCount": 51,
     "selectedCoreProductCount": 14,
     "selectedCompanyCoreProductCount": 14,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 162,
-    "downstreamCandidateCount": 39,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 80,
+    "relatedIndustryCandidateCount": 16,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140023411",
-        "name": "GPU",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000205",
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器",
-          "笔记本电脑"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140096330",
-        "name": "中央处理器(CPU)",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000205",
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器",
-          "笔记本电脑"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140000449",
-        "name": "主板",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000205",
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器",
-          "笔记本电脑"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140024672",
-        "name": "内存",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000205",
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器",
-          "笔记本电脑"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140119146",
-        "name": "AI",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015607"
-        ],
-        "linkedCoreProductNames": [
-          "AI防火墙"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140021620",
-        "name": "中继器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140005720"
-        ],
-        "linkedCoreProductNames": [
-          "射频连接器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1130000647",
-        "name": "光源",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140005720"
-        ],
-        "linkedCoreProductNames": [
-          "射频连接器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140082336",
-        "name": "光驱",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140024895",
-        "name": "卡圈",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033407"
-        ],
-        "linkedCoreProductNames": [
-          "轨道交通连接器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1137000022",
-        "name": "变压器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140091718",
-        "name": "声卡",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000205"
-        ],
-        "linkedCoreProductNames": [
-          "笔记本电脑"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140087088",
-        "name": "外套筒",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052849"
-        ],
-        "linkedCoreProductNames": [
-          "新能源汽车充电连接器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140108093",
-        "name": "存储",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140024897",
-        "name": "定位销",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033407"
-        ],
-        "linkedCoreProductNames": [
-          "轨道交通连接器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140190158",
         "name": "高速背板连接器",
@@ -334,18 +89,15 @@
           "name": "高速背板连接器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688629.SH",
             "stockName": "华丰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 12,
         "strongRelevanceScore": 10,
         "matchedTerms": [
@@ -380,18 +132,15 @@
           "name": "AI服务器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000938.SZ",
             "stockName": "紫光股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 10,
-        "downstreamCount": 12,
         "relevanceScore": 11,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -425,18 +174,15 @@
           "name": "AI防火墙"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000938.SZ",
             "stockName": "紫光股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 3,
         "relevanceScore": 9,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -469,18 +215,15 @@
           "name": "笔记本电脑"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000938.SZ",
             "stockName": "紫光股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 128,
-        "downstreamCount": 9,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -514,68 +257,20 @@
           "name": "光纤连接器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688629.SH",
             "stockName": "华丰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 5,
         "relevanceScore": 8,
         "strongRelevanceScore": 5,
         "matchedTerms": [
           "连接器",
           "通信设备",
-          "通信"
-        ]
-      },
-      {
-        "code": "1140005720",
-        "name": "射频连接器",
-        "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 通信连接器 > 射频连接器",
-        "industryPath": [
-          "电子",
-          "元件",
-          "被动元件",
-          "连接器",
-          "通信连接器",
-          "射频连接器"
-        ],
-        "level5Industry": {
-          "code": "1210003144",
-          "name": "连接器"
-        },
-        "level6Industry": {
-          "code": "1210003266",
-          "name": "通信连接器"
-        },
-        "level7Product": {
-          "code": "1140005720",
-          "name": "射频连接器"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688629.SH",
-            "stockName": "华丰科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 5,
-        "relevanceScore": 7,
-        "strongRelevanceScore": 5,
-        "matchedTerms": [
-          "连接器",
-          "电子",
           "通信"
         ]
       },
@@ -604,18 +299,57 @@
           "name": "交换机连接器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688629.SH",
             "stockName": "华丰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 7,
+        "strongRelevanceScore": 5,
+        "matchedTerms": [
+          "连接器",
+          "电子",
+          "通信"
+        ]
+      },
+      {
+        "code": "1140005720",
+        "name": "射频连接器",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 通信连接器 > 射频连接器",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "连接器",
+          "通信连接器",
+          "射频连接器"
+        ],
+        "level5Industry": {
+          "code": "1210003144",
+          "name": "连接器"
+        },
+        "level6Industry": {
+          "code": "1210003266",
+          "name": "通信连接器"
+        },
+        "level7Product": {
+          "code": "1140005720",
+          "name": "射频连接器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688629.SH",
+            "stockName": "华丰科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 7,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -649,112 +383,21 @@
           "name": "通讯电源连接器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688629.SH",
             "stockName": "华丰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 5,
         "matchedTerms": [
           "连接器",
           "电子",
           "通信"
-        ]
-      },
-      {
-        "code": "1140033407",
-        "name": "轨道交通连接器",
-        "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 电气连接器 > 轨道交通连接器",
-        "industryPath": [
-          "电子",
-          "元件",
-          "被动元件",
-          "连接器",
-          "电气连接器",
-          "轨道交通连接器"
-        ],
-        "level5Industry": {
-          "code": "1210003144",
-          "name": "连接器"
-        },
-        "level6Industry": {
-          "code": "1210003270",
-          "name": "电气连接器"
-        },
-        "level7Product": {
-          "code": "1140033407",
-          "name": "轨道交通连接器"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688629.SH",
-            "stockName": "华丰科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 15,
-        "downstreamCount": 5,
-        "relevanceScore": 6,
-        "strongRelevanceScore": 5,
-        "matchedTerms": [
-          "连接器",
-          "电子"
-        ]
-      },
-      {
-        "code": "1140052849",
-        "name": "新能源汽车充电连接器",
-        "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 新能源汽车连接器 > 新能源汽车充电连接器",
-        "industryPath": [
-          "电子",
-          "元件",
-          "被动元件",
-          "连接器",
-          "新能源汽车连接器",
-          "新能源汽车充电连接器"
-        ],
-        "level5Industry": {
-          "code": "1210003144",
-          "name": "连接器"
-        },
-        "level6Industry": {
-          "code": "1210003264",
-          "name": "新能源汽车连接器"
-        },
-        "level7Product": {
-          "code": "1140052849",
-          "name": "新能源汽车充电连接器"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688629.SH",
-            "stockName": "华丰科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 1,
-        "relevanceScore": 6,
-        "strongRelevanceScore": 5,
-        "matchedTerms": [
-          "连接器",
-          "电子"
         ]
       },
       {
@@ -782,18 +425,15 @@
           "name": "EVS信号控制系统连接器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688629.SH",
             "stockName": "华丰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -826,18 +466,56 @@
           "name": "PDU连接器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688629.SH",
             "stockName": "华丰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 5,
+        "matchedTerms": [
+          "连接器",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140052849",
+        "name": "新能源汽车充电连接器",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 新能源汽车连接器 > 新能源汽车充电连接器",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "连接器",
+          "新能源汽车连接器",
+          "新能源汽车充电连接器"
+        ],
+        "level5Industry": {
+          "code": "1210003144",
+          "name": "连接器"
+        },
+        "level6Industry": {
+          "code": "1210003264",
+          "name": "新能源汽车连接器"
+        },
+        "level7Product": {
+          "code": "1140052849",
+          "name": "新能源汽车充电连接器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688629.SH",
+            "stockName": "华丰科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -870,18 +548,56 @@
           "name": "新能源汽车高压互锁连接器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688629.SH",
             "stockName": "华丰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 5,
+        "matchedTerms": [
+          "连接器",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140033407",
+        "name": "轨道交通连接器",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 电气连接器 > 轨道交通连接器",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "连接器",
+          "电气连接器",
+          "轨道交通连接器"
+        ],
+        "level5Industry": {
+          "code": "1210003144",
+          "name": "连接器"
+        },
+        "level6Industry": {
+          "code": "1210003270",
+          "name": "电气连接器"
+        },
+        "level7Product": {
+          "code": "1140033407",
+          "name": "轨道交通连接器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688629.SH",
+            "stockName": "华丰科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -914,18 +630,15 @@
           "name": "防务连接器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688629.SH",
             "stockName": "华丰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -934,232 +647,882 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140021081",
-        "name": "云计算",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015607",
-          "1140112576"
+        "code": "1200001395",
+        "name": "网络设备",
+        "description": "A股网络设备指路由器、交换机等通信基础设施。受5G、算力网络及AI驱动，它是数字经济的底座。因技术迭代快、国产替代加速及数据中心扩容需求，该行业具备高成长性与战略价值，备受市场关注。",
+        "stockCount": 9,
+        "starWeight": 31,
+        "level7ProductCount": 28,
+        "relevanceScore": 538,
+        "stocks": [
+          {
+            "stockCode": "688702.SH",
+            "stockName": "盛科通信",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603296.SH",
+            "stockName": "华勤技术",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601138.SH",
+            "stockName": "工业富联",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002396.SZ",
+            "stockName": "星网锐捷",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301191.SZ",
+            "stockName": "菲菱科思",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "AI服务器",
-          "AI防火墙"
+        "products": [
+          {
+            "code": "1140193316",
+            "name": "以太网交换芯片模组",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 以太网交换芯片模组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688702.SH",
+                "stockName": "盛科通信",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": [
+              "交换芯片"
+            ]
+          },
+          {
+            "code": "1140021187",
+            "name": "数据中心交换机",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 数据中心交换机",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "数据中心交换机"
+            ]
+          },
+          {
+            "code": "1140216095",
+            "name": "IPv6交换机",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > IPv6交换机",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140216096",
+            "name": "IPv6路由器",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > IPv6路由器",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140019826",
-        "name": "VR/AR",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
+        "code": "1200001368",
+        "name": "硬件设备",
+        "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "stockCount": 5,
+        "starWeight": 16,
+        "level7ProductCount": 7,
+        "relevanceScore": 468,
+        "stocks": [
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603296.SH",
+            "stockName": "华勤技术",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601138.SH",
+            "stockName": "工业富联",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "AI服务器"
+        "products": [
+          {
+            "code": "1140112576",
+            "name": "AI服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > AI服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603296.SH",
+                "stockName": "华勤技术",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 52,
+            "matchedTerms": [
+              "ai",
+              "服务器",
+              "ai服务器"
+            ]
+          },
+          {
+            "code": "1140119057",
+            "name": "通用服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 通用服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603296.SH",
+                "stockName": "华勤技术",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140220847",
+            "name": "超节点服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 超节点服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603296.SH",
+                "stockName": "华勤技术",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140112577",
+            "name": "边缘服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 边缘服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 11,
+    "mappedStockCount": 10,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 80,
+    "candidateIndustryCount": 16,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 19565,
+        "stockCode": "688702.SH",
+        "stockName": "盛科通信",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140025339",
-        "name": "云服务平台",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19567,
+        "stockCode": "000063.SZ",
+        "stockName": "中兴通讯",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 28
       },
       {
-        "code": "1140008178",
-        "name": "动车组",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033407"
-        ],
-        "linkedCoreProductNames": [
-          "轨道交通连接器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19568,
+        "stockCode": "600246.SH",
+        "stockName": "万通发展",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140053087",
-        "name": "品牌专卖店",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000205"
-        ],
-        "linkedCoreProductNames": [
-          "笔记本电脑"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19570,
+        "stockCode": "301165.SZ",
+        "stockName": "锐捷网络",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 15
       },
       {
-        "code": "1140008174",
-        "name": "城轨",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033407"
-        ],
-        "linkedCoreProductNames": [
-          "轨道交通连接器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19571,
+        "stockCode": "000938.SZ",
+        "stockName": "紫光股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 18
       },
       {
-        "code": "1140023274",
-        "name": "工业互联网",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19572,
+        "stockCode": "000977.SZ",
+        "stockName": "浪潮信息",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 9
       },
       {
-        "code": "1140077179",
-        "name": "数据中心",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19573,
+        "stockCode": "002396.SZ",
+        "stockName": "星网锐捷",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140053125",
-        "name": "新能源汽车充电系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052849"
-        ],
-        "linkedCoreProductNames": [
-          "新能源汽车充电连接器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19575,
+        "stockCode": "301191.SZ",
+        "stockName": "菲菱科思",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140014795",
-        "name": "智慧医疗",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19576,
+        "stockCode": "601138.SH",
+        "stockName": "工业富联",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140014588",
-        "name": "智慧城市",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19577,
+        "stockCode": "603296.SH",
+        "stockName": "华勤技术",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140026158",
-        "name": "智能零售",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
+        "sourceRowNumber": 19578,
+        "stockCode": "688629.SH",
+        "stockName": "华丰科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 11
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001395",
+        "name": "网络设备",
+        "description": "A股网络设备指路由器、交换机等通信基础设施。受5G、算力网络及AI驱动，它是数字经济的底座。因技术迭代快、国产替代加速及数据中心扩容需求，该行业具备高成长性与战略价值，备受市场关注。",
+        "stockCount": 9,
+        "starWeight": 31,
+        "level7ProductCount": 28,
+        "relevanceScore": 538,
+        "stocks": [
+          {
+            "stockCode": "688702.SH",
+            "stockName": "盛科通信",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603296.SH",
+            "stockName": "华勤技术",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601138.SH",
+            "stockName": "工业富联",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002396.SZ",
+            "stockName": "星网锐捷",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301191.SZ",
+            "stockName": "菲菱科思",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "AI服务器"
+        "products": [
+          {
+            "code": "1140193316",
+            "name": "以太网交换芯片模组",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 以太网交换芯片模组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688702.SH",
+                "stockName": "盛科通信",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": [
+              "交换芯片"
+            ]
+          },
+          {
+            "code": "1140021187",
+            "name": "数据中心交换机",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 数据中心交换机",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "数据中心交换机"
+            ]
+          },
+          {
+            "code": "1140216095",
+            "name": "IPv6交换机",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > IPv6交换机",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140216096",
+            "name": "IPv6路由器",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > IPv6路由器",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140033830",
-        "name": "机车",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033407"
+        "code": "1200001368",
+        "name": "硬件设备",
+        "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "stockCount": 5,
+        "starWeight": 16,
+        "level7ProductCount": 7,
+        "relevanceScore": 468,
+        "stocks": [
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603296.SH",
+            "stockName": "华勤技术",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601138.SH",
+            "stockName": "工业富联",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "轨道交通连接器"
+        "products": [
+          {
+            "code": "1140112576",
+            "name": "AI服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > AI服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603296.SH",
+                "stockName": "华勤技术",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 52,
+            "matchedTerms": [
+              "ai",
+              "服务器",
+              "ai服务器"
+            ]
+          },
+          {
+            "code": "1140119057",
+            "name": "通用服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 通用服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603296.SH",
+                "stockName": "华勤技术",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601138.SH",
+                "stockName": "工业富联",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140220847",
+            "name": "超节点服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 超节点服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603296.SH",
+                "stockName": "华勤技术",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140112577",
+            "name": "边缘服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 边缘服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140006045",
-        "name": "物联网",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140112576"
-        ],
-        "linkedCoreProductNames": [
-          "AI服务器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -1174,10 +1537,989 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 15,
+    "eligibleSourceRowCount": 11,
+    "totalStockCount": 11,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 3,
+    "excludedNonAShareCount": 1,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 11,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 19565,
+            "stockCode": "688702.SH",
+            "stockName": "盛科通信",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "A股唯一独立商用高端以太网交换芯片龙头，深度受益于超节点需求爆发与国产替代双重逻辑。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688702.SH",
+              "companyName": "盛科通信-U",
+              "companyProfile": "公司2005年1月31日成立，为国内领先的以太网交换芯片设计企业，主营业务为以太网交换芯片及配套产品的研发、设计和销售。以太网交换芯片是构建企业网络、运营商网络、数据中心网络和工业网络的核心平台型芯片。公司现已形成丰富的以太网交换芯片产品序列，覆盖从接入层到核心层的以太网交换产品，为我国数字化网络建设提供了完整的芯片解决方案。公司面向国家数字化网络建设需求，坚持自主研发，形成了高性能交换架构、高性能端口设计、多特性流水线等11项核心技术，目标成为全互联时代以太网交换芯片引领者，提供可靠、高质量、有竞争力的系列以太网交换芯片，形成自主开放的软硬件生态，为客户提供多样化选择。在全互联时代，公司将以引领以太网交换芯片技术发展为目标，聚焦以太网交换芯片业务，提升已有芯片产品线的市场竞争力，延展以太网交换芯片产品线深度。同时拓宽产品类别广度，布局全产业链，进一步提升公司市场规模。",
+              "profileSummary": "公司2005年1月31日成立，为国内领先的以太网交换芯片设计企业，主营业务为以太网交换芯片及配套产品的研发、设计和销售。公司现已形成丰富的以太网交换芯片产品序列，覆盖从接入层到核心层的以太网交换产品，为我国数字化网络建设提供了完整的芯片解决方案。",
+              "majorProducts": "Duet2 系列芯片、E350/V350系列三层以太网交换机、E530/V530系列三层以太网交换机、E550/V550系列三层以太网交换机、E580/V580系列三层以太网交换机、E680/V680系列三层以太网交换机、GoldenGate 系列芯片、GreatBelt 系列芯片、Humber 系列芯片、TsingMa 系列芯片、TsingMa.MX 系列芯片",
+              "revenueComposition": "以太网交换芯片:72.26%;以太网交换芯片模组:10.95%;以太网交换机:9.3%;授权许可:5.34%;定制化解决方案及其他:2.15%",
+              "revenueSegments": [
+                {
+                  "name": "以太网交换芯片",
+                  "sharePct": 72.26,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "以太网交换芯片模组",
+                  "sharePct": 10.95,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "以太网交换机",
+                  "sharePct": 9.3,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "授权许可",
+                  "sharePct": 5.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "定制化解决方案及其他",
+                  "sharePct": 2.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "以太网交换芯片模组",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "以太网交换芯片",
+                    "category": "通信芯片"
+                  },
+                  {
+                    "name": "以太网交换机",
+                    "category": "网络分流设备"
+                  }
+                ],
+                "knownProducts": [
+                  "以太网交换芯片",
+                  "以太网交换机",
+                  "以太网交换芯片模组"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "盛科通信的相关业务已决定公司大部分经营表现：以太网交换芯片（72.26%）、以太网交换芯片模组（10.95%）合计约占收入的92.51%。公司与事件的直接业务联系是：A股唯一独立商用高端以太网交换芯片龙头，深度受益于超节点需求爆发与国产替代双重逻辑，真正的增量取决于终端需求与渗透率变化，并需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，终端销量、客户采购量、公司出货和相关产品收入增速需要显示公司获得超越行业的增量。终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是这条逻辑最主要的反向约束。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 19570,
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内数据中心交换机领军企业，互联网行业市占率第一，深度绑定头部云厂商AI集群建设需求，业绩已进入高速兑现期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301165.SZ",
+              "companyName": "锐捷网络",
+              "companyProfile": "公司是行业领先的ICT基础设施及行业解决方案提供商，主营业务为网络设备、网络安全产品及云桌面解决方案的研发、设计和销售。自2003年成立以来，公司致力于将技术与场景应用充分融合，贴近用户进行产品方案设计和创新，助力各行业用户实现数字化转型和业务价值创新。经过近二十年的发展，凭借扎实的自主创新实力、贴近用户的解决方案和专业快捷的客户服务，公司产品和方案现已广泛应用于政府、运营商、金融、互联网、教育、医疗、能源、交通、商业、制造业等行业信息化建设领域，业务范围覆盖50多个国家和地区。至目前，公司在交换机、无线产品、云桌面、IT运维管理等多个领域位居市场前列，根据IDC数据统计，2019年及2020年上半年，锐捷网络在中国以太网交换机市场占有率排名第三；2019年中国企业级WLAN市场占有率排名第二，其中Wi-Fi6产品出货量排名第一；2015年至2019年连续5年中国企业级终端VDI市场占有率排名第一；2019年中国IT基础设施运维软件市场占有率排名第一。",
+              "profileSummary": "公司是行业领先的ICT基础设施及行业解决方案提供商，主营业务为网络设备、网络安全产品及云桌面解决方案的研发、设计和销售。经过近二十年的发展，凭借扎实的自主创新实力、贴近用户的解决方案和专业快捷的客户服务，公司产品和方案现已广泛应用于政府、运营商、金融、互联网、教育、医疗、能源、交通、商业、制造业等行业信息化建设领域，业务范围覆盖50多个国家和地区。",
+              "majorProducts": "SMB交换机、SMB无线接入点、场景化部署无线接入点、放装型无线接入点、路由器、数据中心交换机、无线管理与应用系统（WIS）、无线控制器、园区与城域网交换机",
+              "revenueComposition": "网络设备:87.46%;其他主营业务:5.09%;云桌面解决方案:4%;网络安全产品:3.45%",
+              "revenueSegments": [
+                {
+                  "name": "网络设备",
+                  "sharePct": 87.46,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他主营业务",
+                  "sharePct": 5.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "云桌面解决方案",
+                  "sharePct": 4.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "网络安全产品",
+                  "sharePct": 3.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "云服务器",
+                    "category": "IaaS"
+                  },
+                  {
+                    "name": "数据中心交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IPv6交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IPv6路由器",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "SMB交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "SMB网关硬件",
+                    "category": "网络分流设备"
+                  }
+                ],
+                "knownProducts": [
+                  "数据库安全审计设备",
+                  "云服务器",
+                  "云桌面终端",
+                  "下一代防火墙",
+                  "身份管理软件",
+                  "数据安全态势感知平台",
+                  "IPv6交换机",
+                  "IPv6路由器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "锐捷网络的网络设备（87.46%）覆盖范围较宽，其中能够承载云服务器、数据中心交换机、IPv6交换机，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国内数据中心交换机领军企业，互联网行业市占率第一，深度绑定头部云厂商AI集群建设需求，业绩已进入高速兑现期。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 19571,
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "旗下新华三是国内数据中心交换机市场双寡头之一，提供从交换机到服务器的AI全栈解决方案，深度参与国产超节点建设。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000938.SZ",
+              "companyName": "紫光股份",
+              "companyProfile": "公司成立于1999年，经过二十余载的不断创新发展，已成为新一代信息通信领域的领军企业。公司深度布局“云—网—安—算—存—端”全产业链，面向政府、运营商、互联网、金融、教育、医疗、农业、交通、能源、制造等众多行业用户，提供网络设备、服务器、存储产品、网络安全产品及服务、云计算与云服务、智能终端等全栈ICT基础设施和数字化解决方案。公司聚焦技术创新、应用创新和模式创新，为行业客户提供先进、智能、绿色的ICT基础设施，以“AI+场景化解决方案”深度赋能行业客户的数字化转型和智能化升级。公司积极把握数字经济发展机遇，围绕AIGC私域大模型、多元异构算力平台、高品质网络、云与智能产品、主动安全方案、智能高能耗治理、智能运维等方向进行创新引领，为AIGC全面应用构筑坚实的云智原生数字平台和智算解决方案。在持续深耕国内行业市场的同时，公司加强国际化布局，在亚洲、欧洲、非洲、拉美等地区已设立多个海外分支机构，为全球客户提供高质量的产品和服务。",
+              "profileSummary": "公司深度布局“云—网—安—算—存—端”全产业链，面向政府、运营商、互联网、金融、教育、医疗、农业、交通、能源、制造等众多行业用户，提供网络设备、服务器、存储产品、网络安全产品及服务、云计算与云服务、智能终端等全栈ICT基础设施和数字化解决方案。公司聚焦技术创新、应用创新和模式创新，为行业客户提供先进、智能、绿色的ICT基础设施，以“AI+场景化解决方案”深度赋能行业客户的数字化转型和智能化升级。",
+              "majorProducts": "存储产品、服务器、网络安全产品及服务、网络设备、云计算与云服务、智能终端、紫光IBM IT产品销售、紫光IPv4／v6双栈核心路由器、紫光笔记本电脑、紫光耗材、紫光红外测温仪、紫光惠普IT产品销售、紫光家用消毒机、紫光刻录光盘、紫光苹果IT产品销售、紫光扫描仪、紫光数码相机、紫光台式电脑、紫光投影仪",
+              "revenueComposition": "ICT基础设施及服务:79.43%;IT产品分销与供应链服务:26.42%;其他业务:0.5%;合并抵消:-6.35%",
+              "revenueSegments": [
+                {
+                  "name": "ICT基础设施及服务",
+                  "sharePct": 79.43,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "IT产品分销与供应链服务",
+                  "sharePct": 26.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "合并抵消",
+                  "sharePct": -6.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "超节点服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "边缘服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "通用服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "AI防火墙",
+                    "category": "信息安全软件"
+                  },
+                  {
+                    "name": "IPv6交换机",
+                    "category": "网络分流设备"
+                  }
+                ],
+                "knownProducts": [
+                  "笔记本电脑",
+                  "云存储服务",
+                  "云基础资源虚拟化平台",
+                  "超融合平台",
+                  "大模型一体机",
+                  "生成式大模型一体机",
+                  "IT产品分销",
+                  "AI防火墙"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "紫光股份与事件存在真实业务交集：公司已有AI服务器、超节点服务器、边缘服务器，与旗下新华三是国内数据中心交换机市场双寡头之一，提供从交换机到服务器的AI全栈解决方案，深度参与国产超节点建设所处的产业环节一致。ICT基础设施及服务（79.43%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响终端需求与渗透率变化，只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，才会形成可确认的收入和利润增量。终端销量、客户采购量、公司出货和相关产品收入增速能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 19578,
+            "stockCode": "688629.SH",
+            "stockName": "华丰科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "华为昇腾超节点高速连接器核心供应商，并已切入阿里、字节、海光等国内主要超节点产业链，卡位核心增量环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688629.SH",
+              "companyName": "华丰科技",
+              "companyProfile": "公司是全球光电连接器及互连方案提供商。我们搭建连接器正向研发平台，重点研制背板总线、印制板夹层总线与I/O总线的高速连接器及光模块，20余年持续研发，提供传输速率1.25Gbps至112Gbps的高速互连方案，在高速率传输同时提升在高振动环境中的高可靠性，满足通信装备的快速发展应用需求。研制装备整体互连解决方案的“系统互连”产品，可将装备信息系统的高速、射频、电源、光等多种信号进行识别处理和集成传输，实现装备系统间、系统内设备间以无缆化、模块化、无线化、总线化和智能化的快速连接，解决设备的电磁防护、小型化、快速维护维修等问题。研制装备系统间互连电缆网和柔性电缆网，根据用户需求设计电路，抗电磁干扰性能优异、连接可靠性高、重量轻。研制的连接器从低频到高频、从电口到光口，从标准型到特殊定制，能适应深海环境(70兆帕)、高压环境(100千伏)、高振动冲击环境、电磁波干扰环境、高低温环境(-70℃～+700℃)、太空宇航环境等多种特殊环境。为用户提供互连解决方案一站式服务。秉承“可靠连接源于华丰”的“可靠”文化。建有连接器制造全工序的智能化工厂和完善的质量保证体系，从连接器的接触件制造、绝缘体塑压、壳体加工、表面处理、装配、包装全工序实现自动化生产、自动完成检测分拣，质量可控可追溯。我们努力追求连接器的高可靠性、安全性、环保性，致力于向全球防务装备、通讯装备、轨道交通装备和新能源汽车提供更专业、更可靠、更智能的互连技术和产品。",
+              "profileSummary": "我们搭建连接器正向研发平台，重点研制背板总线、印制板夹层总线与I/O总线的高速连接器及光模块，20余年持续研发，提供传输速率1.25Gbps至112Gbps的高速互连方案，在高速率传输同时提升在高振动环境中的高可靠性，满足通信装备的快速发展应用需求。我们努力追求连接器的高可靠性、安全性、环保性，致力于向全球防务装备、通讯装备、轨道交通装备和新能源汽车提供更专业、更可靠、更智能的互连技术和产品。",
+              "majorProducts": "BDU/PDU充配电系统总成、电气车钩总成、电源类连接器、防务连接器、高速连接器、高压线束、光通讯连接器、轨道交通连接器、射频类连接器、系统互连产品、线缆组件、印制板连接器、组件",
+              "revenueComposition": "组件:61.53%;连接器:28.72%;系统互连产品:5.32%;其他配套件:3.27%;其他业务:1.16%",
+              "revenueSegments": [
+                {
+                  "name": "组件",
+                  "sharePct": 61.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "连接器",
+                  "sharePct": 28.72,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "系统互连产品",
+                  "sharePct": 5.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他配套件",
+                  "sharePct": 3.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "高速背板连接器",
+                    "category": "计算机连接器"
+                  },
+                  {
+                    "name": "交换机连接器",
+                    "category": "通信连接器"
+                  },
+                  {
+                    "name": "EVS信号控制系统连接器",
+                    "category": "新能源汽车连接器"
+                  },
+                  {
+                    "name": "PDU连接器",
+                    "category": "新能源汽车连接器"
+                  },
+                  {
+                    "name": "光纤连接器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "射频连接器",
+                    "category": "通信连接器"
+                  }
+                ],
+                "knownProducts": [
+                  "电池切断单元(BDU)",
+                  "电源分配单元(PDU)",
+                  "新能源汽车高压线束",
+                  "防务连接器",
+                  "EVS信号控制系统连接器",
+                  "PDU连接器",
+                  "新能源汽车充电连接器",
+                  "新能源汽车高压互锁连接器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华丰科技的事件逻辑具备真实业务底座，但尚不足以代表全部公司：连接器占收入的28.72%。公司与事件的具体联系在于：华为昇腾超节点高速连接器核心供应商，并已切入阿里、字节、海光等国内主要超节点产业链，卡位核心增量环节，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 7,
+        "stocks": [
+          {
+            "sourceRowNumber": 19567,
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "具备从自研交换芯片到服务器、超节点整机的全栈智算解决方案能力，深度参与运营商及政企智算中心建设。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000063.SZ",
+              "companyName": "中兴通讯",
+              "companyProfile": "公司是一家全球领先的综合信息与通信技术解决方案提供商，为全球电信运营商、政企客户及个人消费者提供创新的技术与产品解决方案。公司成立于1985年，在香港和深圳两地上市，服务全球1/4以上人口，致力于实现更加智能、高效、可持续的数智未来。公司拥有ICT行业完整的、端到端的产品和综合解决方案，通过全系列的无线、有线、算力、能源、终端等产品方案及专业服务，灵活满足全球不同运营商和政企客户的差异化及快速创新的需求。数字经济大势所趋，成为推动全球经济持续稳定增长的关键动力，作为全球领先的大型综合通信信息解决方案提供商，在数字经济大潮中，公司致力于成为“数字经济筑路者”，用创新的ICT科技，支撑全球数字化转型。公司坚持向下扎根，持续增强研发投入，不断强化核心竞争力。公司坚持在全球范围内贯彻可持续发展理念，实现社会、环境及利益相关者的和谐共生；运用通信技术帮助不同地区的人们享有平等的通信自由；将“创新、融合、绿色”理念贯穿到整个产品生命周期，以及研发、生产、物流、客户服务等全流程，为实现全球性降低能耗和二氧化碳排放不懈努力；在全球范围内开展社区公益和救助行动。公司是联合国全球契约组织以及全球电子可持续发展协会的成员，同时也是国际电信联盟发起的Partner2Connect数字联盟项目的重要参与方和首批领军者。",
+              "profileSummary": "公司是一家全球领先的综合信息与通信技术解决方案提供商，为全球电信运营商、政企客户及个人消费者提供创新的技术与产品解决方案。公司坚持在全球范围内贯彻可持续发展理念，实现社会、环境及利益相关者的和谐共生；运用通信技术帮助不同地区的人们享有平等的通信自由；将“创新、融合、绿色”理念贯穿到整个产品生命周期，以及研发、生产、物流、客户服务等全流程，为实现全球性降低能耗和二氧化碳排放不懈努力；在全球范围内开展社区公益和救助行动。",
+              "majorProducts": "中兴xDSL终端、中兴刀片服务器、中兴多业务节点设备、中兴机架服务器、中兴基站、中兴基站监控系统、中兴计费结算系统、中兴家庭网关、中兴宽带网关、中兴宽带网络机顶盒、中兴路由交换机、中兴路由器、中兴模块电源、中兴手机、中兴通讯终端&业务管理平台（ZXCSM）系统、中兴网管系统、中兴小容量中继网关、中兴综合接入设备（IAD）",
+              "revenueComposition": "运营商网络:46.94%;政企业务:27.8%;消费者业务:25.26%",
+              "revenueSegments": [
+                {
+                  "name": "运营商网络",
+                  "sharePct": 46.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "政企业务",
+                  "sharePct": 27.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "消费者业务",
+                  "sharePct": 25.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "交换机用ASIC",
+                    "category": "专用芯片"
+                  },
+                  {
+                    "name": "存储服务器",
+                    "category": "数据管理系统"
+                  },
+                  {
+                    "name": "超节点服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "通用服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "AI智算训推平台",
+                    "category": "人工智能"
+                  }
+                ],
+                "knownProducts": [
+                  "交换机用ASIC",
+                  "光模块用数字信号处理(O-DSP)芯片",
+                  "智能手机",
+                  "云桌面终端",
+                  "AI智算训推平台",
+                  "城轨大模型",
+                  "城轨智能体",
+                  "工业智能体"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中兴通讯实际经营中已有AI服务器、交换机用ASIC、存储服务器，与事件指向的具备从自研交换芯片到服务器、超节点整机的全栈智算解决方案能力，深度参与运营商及政企智算中心建设能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在运营商网络（46.94%）、政企业务（27.8%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 19568,
+            "stockCode": "600246.SH",
+            "stockName": "万通发展",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "通过控股子公司数渡科技切入PCIe高速交换芯片赛道，该芯片是AI服务器内部互联的关键部件，受益于CPU与GPU配比提升带来的需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600246.SH",
+              "companyName": "万通发展",
+              "companyProfile": "公司是一家专业化地产公司，发展以住宅开发和商用物业为核心的业务体系，主营方向为高档住宅物业开发与经营，具备一级开发资质。公司是中国房地产行业领导品牌企业之一，是最受尊敬的行业品牌之一，也是“中国城市房地产开发商策略联盟”的联合创始企业和轮值主席单位，是全国工商联房地产商会轮值主席单位。公司以绿色公司战略来规范企业的持续发展，并不拘泥于以往的成就，积极从自身创新出发，激发企业活力，以房地产业务为基础，致力探索并力行传统房地产由第二产业生产型向服务型的第三产业转化。万通地产正以全新形象展现在公众面前，它是绿色地产行业的领先者，会成为资本市场上投资者认可的优质企业。",
+              "profileSummary": "公司是一家专业化地产公司，发展以住宅开发和商用物业为核心的业务体系，主营方向为高档住宅物业开发与经营，具备一级开发资质。公司是中国房地产行业领导品牌企业之一，是最受尊敬的行业品牌之一，也是“中国城市房地产开发商策略联盟”的联合创始企业和轮值主席单位，是全国工商联房地产商会轮值主席单位。",
+              "majorProducts": "天津万通华府、天津万通上游国际、天津万通新城国际、万通地产北京龙山新新家园、万通地产北京新城国际、万通地产北京亚运新新家园、万通地产天津空港项目、万通地产天津上北新新家园、万通地产天津新城国际、万通地产物业出租",
+              "revenueComposition": "销售开发产品:50.37%;物业出租:39.71%;数字科技:9.86%;其他业务:0.06%",
+              "revenueSegments": [
+                {
+                  "name": "销售开发产品",
+                  "sharePct": 50.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物业出租",
+                  "sharePct": 39.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "数字科技",
+                  "sharePct": 9.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "产业园区运营",
+                  "房地产开发(住宅-北京)",
+                  "房地产开发(住宅-天津)",
+                  "房地产开发(住宅-杭州)",
+                  "房地产开发(办公楼-上海)",
+                  "房地产开发(办公楼-杭州)",
+                  "房地产开发(商业-北京)",
+                  "房地产开发(商业-天津)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "万通发展的主要经营内容是销售开发产品（50.37%）、物业出租（39.71%），具体产品集中在产业园区运营、房地产开发(住宅-北京)、房地产开发(住宅-天津)、房地产开发(住宅-杭州)。“通过控股子公司数渡科技切入PCIe高速交换芯片赛道，该芯片是AI服务器内部互联的关键部件，受益于CPU与GPU配比提升带来的需求增长”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善终端需求与渗透率变化，也需要先补上产品落地和客户导入，再经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才可能影响业绩。终端销量、客户采购量、公司出货和相关产品收入增速没有同步改善时，股价反应更可能来自主题交易；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 19572,
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内AI服务器龙头，同时作为超节点OEM厂商，为国内外客户提供整机代工服务，深度参与国产超节点放量进程。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000977.SZ",
+              "companyName": "浪潮信息",
+              "companyProfile": "公司作为全球领先的IT基础设施产品、方案和服务提供商，公司秉持“计算力就是生产力，智算力就是创新力”的核心理念，致力于智慧计算技术的创新和应用，为全球注入高质量算力，加速数字世界与实体世界的融合，激发智慧潜能，从而让人们的生活更加美好，企业的经营更为高效，社会治理更加完善，人与自然的关系更加和谐。一直坚持开放融合的业务战略，积极发展开放融合的全球计算产业。在开放开源的模式下，加快技术创新和应用，为客户提供领先的云计算、大数据、人工智能、边缘计算等各类创新产品和解决方案，助力客户在数字化时代实现转型升级。公司始终坚持“以应用为导向，以系统为核心”，全面推进算法、算力、数据和互连技术的创新，加速“人工智能+”的落地。算法方面，积极探索各类大模型算法，持续提升模型算力效率，探索智能边界；落实绿色可持续的发展理念，积极推动数据中心建设和运行模式的升级，提高数据中心的能源利用水平，降低碳排放。公司全线服务器支持液冷，建成了亚洲最大的液冷数据中心研发生产基地，具备业界领先的液冷数据中心交付能力，为数据中心的绿色、高效运行提供了坚实保障。公司坚持“伙伴第一”的原则，携手众多合作伙伴，共同打造共融共生的计算产业生态。通过与合作伙伴的紧密协作，为客户提供全栈式、一体化的智算解决方案，加速各行业的智能化转型，助力客户在智慧时代把握变革机遇，开创发展新局面，实现互利共赢，共同推动计算产业的繁荣发展。",
+              "profileSummary": "公司作为全球领先的IT基础设施产品、方案和服务提供商，公司秉持“计算力就是生产力，智算力就是创新力”的核心理念，致力于智慧计算技术的创新和应用，为全球注入高质量算力，加速数字世界与实体世界的融合，激发智慧潜能，从而让人们的生活更加美好，企业的经营更为高效，社会治理更加完善，人与自然的关系更加和谐。在开放开源的模式下，加快技术创新和应用，为客户提供领先的云计算、大数据、人工智能、边缘计算等各类创新产品和解决方案，助力客户在数字化时代实现…",
+              "majorProducts": "互联网设备制造与销售、计算机软硬件及外围设备制造与销售、浪潮ERP软件、浪潮服务器、浪潮税控打印机、浪潮税控收款机、浪潮税务软件、浪潮台式电脑、浪潮行业专用软件、浪潮英信存储器、通信设备制造与销售、网络技术服务、信息安全设备制造与销售、信息技术咨询服务、云计算设备制造与销售",
+              "revenueComposition": "服务器产品:93.82%;存储类、交换类等产品:5.93%;其他业务:0.25%",
+              "revenueSegments": [
+                {
+                  "name": "服务器产品",
+                  "sharePct": 93.82,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "存储类、交换类等产品",
+                  "sharePct": 5.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "存储服务器",
+                    "category": "数据管理系统"
+                  },
+                  {
+                    "name": "关键应用主机",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "液冷服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "超节点服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "边缘服务器",
+                    "category": "服务器"
+                  }
+                ],
+                "knownProducts": [
+                  "存储服务器",
+                  "AI管理软件",
+                  "AI服务器",
+                  "关键应用主机",
+                  "液冷服务器",
+                  "超节点服务器",
+                  "边缘服务器",
+                  "通用服务器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "浪潮信息的事件暴露较为直接：服务器产品占收入的93.82%，相关业务不是边缘尝试；具体业务抓手是：国内AI服务器龙头，同时作为超节点OEM厂商，为国内外客户提供整机代工服务，深度参与国产超节点放量进程。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，尤其需要用终端销量、客户采购量、公司出货和相关产品收入增速区分行业普涨与公司自身竞争力。如果终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 19573,
+            "stockCode": "002396.SZ",
+            "stockName": "星网锐捷",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为锐捷网络的控股股东，完整持有其交换机业务，是国产算力产业链中估值相对较低的标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002396.SZ",
+              "companyName": "星网锐捷",
+              "companyProfile": "公司2010年6月23日成功登陆深圳证券交易所中小企业板。公司所从事的主要业务是为企业级客户提供信息化解决方案。公司的主要产品包括智慧网络、智慧云、智慧通讯、智慧金融、智慧娱乐、智慧社区等领域。主要用于满足企业级用户的相关需求。多年来始终秉承以“融合创新科技，构建智慧未来”的经营理念，坚持以自主创新和行业应用为基础，致力于中国的信息化事业发展。",
+              "profileSummary": "公司所从事的主要业务是为企业级客户提供信息化解决方案。公司的主要产品包括智慧网络、智慧云、智慧通讯、智慧金融、智慧娱乐、智慧社区等领域。",
+              "majorProducts": "NBR系列路由器、RG-ACE系列应用控制引擎、RG-EG系列易网关、RG-IDS入侵检测系统、RG-iS-16FSAS智能存储系统、RG-iS2000D智能存储系统、RG-iS2000智能存储系统、RG-iS6000智能存储系统、RG-iS-LAB智能存储系统、RG-NPE系列网络出口引擎、RG-RIIL-BMC、RG-S5760系列交换机、RG-S7600系列交换机、RG-S8600系列交换机、RG-S9600系列交换机、RG-SAP安全与攻防实验平台、RG-SMP 2.X桌面管理与审计组件、RG-USG统一安全网关、RG-WALL V系列安全网关、RG-WALL防火墙、RG-WG系列、RSR-E系列路由器、RSR系列可信多业务路由器、汇聚交换机、接入交换机、企业级交换机、锐捷流量分析系统、无线管理软件、无线控制器、智慧金融、智慧社区、智慧通讯、智慧网络、智慧娱乐、智慧云、智能无线接入点、自治型无线接入点",
+              "revenueComposition": "企业级网络设备:73.91%;通讯产品:11.99%;其他主营业务:9.05%;网络终端:5.05%",
+              "revenueSegments": [
+                {
+                  "name": "企业级网络设备",
+                  "sharePct": 73.91,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "通讯产品",
+                  "sharePct": 11.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他主营业务",
+                  "sharePct": 9.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "网络终端",
+                  "sharePct": 5.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "IPv6交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IPv6路由器",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "云桌面终端",
+                    "category": "SaaS"
+                  },
+                  {
+                    "name": "云课堂",
+                    "category": "教育IT"
+                  },
+                  {
+                    "name": "数字标牌软件",
+                    "category": "图像处理软件"
+                  },
+                  {
+                    "name": "数据中心交换机",
+                    "category": "网络分流设备"
+                  }
+                ],
+                "knownProducts": [
+                  "电视机顶盒",
+                  "电子海报屏幕",
+                  "电子白板",
+                  "自助取号机",
+                  "自助填单一体机",
+                  "智能POS机",
+                  "超融合平台",
+                  "云桌面终端"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "星网锐捷的企业级网络设备（73.91%）覆盖范围较宽，其中能够承载IPv6交换机、IPv6路由器、云桌面终端，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：作为锐捷网络的控股股东，完整持有其交换机业务，是国产算力产业链中估值相对较低的标的。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 19575,
+            "stockCode": "301191.SZ",
+            "stockName": "菲菱科思",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "全球白盒交换机ODM龙头，为国内主流品牌商代工，直接受益于国产交换机需求放量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301191.SZ",
+              "companyName": "菲菱科思",
+              "companyProfile": "公司成立于1999年4月，主要从事数据通信类产品的开发和制造，产品涵盖以太网交换机、路由器、EoC、PON等，是国家高新技术企业。拥有新产品研发实验室和产品可靠性试验室，可开展网络专业测试、HASA试验、材料阻燃试验、盐雾试验、振动试验、跌落试验、高低温循环试验及环保测试等，可按照ITU-K20标准对产品进行高压特性测试。公司建立健全了严格的质量管控等管理体系，并通过了以下第三方机构体系认证：ISO9001质量管理体系、ISO14001环境管理体系、OHSAS18001职业健康安全管理体系、ISO27001信息安全管理体系、QC080000有害物质过程管理体系及两化融合管理体系。公司产品能够满足欧盟RoHS指令要求，并取得了进入欧盟、北美等发达国家和地区销售的资格。",
+              "profileSummary": "公司成立于1999年4月，主要从事数据通信类产品的开发和制造，产品涵盖以太网交换机、路由器、EoC、PON等，是国家高新技术企业。拥有新产品研发实验室和产品可靠性试验室，可开展网络专业测试、HASA试验、材料阻燃试验、盐雾试验、振动试验、跌落试验、高低温循环试验及环保测试等，可按照ITU-K20标准对产品进行高压特性测试。",
+              "majorProducts": "交换机、路由器及无线产品、通信设备组件",
+              "revenueComposition": "网络产品类:89.2%;设备控制类及其他:4.75%;计算产品类:3.96%;其他业务:1.26%;汽车电子类产品:0.83%",
+              "revenueSegments": [
+                {
+                  "name": "网络产品类",
+                  "sharePct": 89.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备控制类及其他",
+                  "sharePct": 4.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "计算产品类",
+                  "sharePct": 3.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车电子类产品",
+                  "sharePct": 0.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "AC控制器代工",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "PoE注入器",
+                    "category": "网络接入设备"
+                  },
+                  {
+                    "name": "交换机代工",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "总配线架保安单元",
+                    "category": "网络接入设备"
+                  },
+                  {
+                    "name": "数据中心交换机控制板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "无线AP代工",
+                    "category": "网络分流设备"
+                  }
+                ],
+                "knownProducts": [
+                  "数据中心交换机控制板",
+                  "AC控制器代工",
+                  "交换机代工",
+                  "无线AP代工",
+                  "路由器代工",
+                  "PoE注入器",
+                  "总配线架保安单元",
+                  "硬件防火墙"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "菲菱科思实际经营中已有AC控制器代工、PoE注入器、交换机代工，与事件指向的全球白盒交换机ODM龙头，为国内主流品牌商代工，直接受益于国产交换机需求放量能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在网络产品类（89.2%）、设备控制类及其他（4.75%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 19576,
+            "stockCode": "601138.SH",
+            "stockName": "工业富联",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球高端AI交换机ODM绝对龙头，独家代工英伟达NVLink交换机，并已开始交付CPO交换机柜。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601138.SH",
+              "companyName": "工业富联",
+              "companyProfile": "公司是全球领先的通信网络设备、云服务设备、精密工具及工业机器人专业设计制造服务商，为客户提供以工业互联网平台为核心的新形态电子设备产品智能制造服务。公司致力于为企业提供以自动化、网络化、平台化、大数据为基础的科技服务综合解决方案，引领传统制造向智能制造的转型；并以此为基础构建云计算、移动终端、物联网、大数据、人工智能、高速网络和机器人为技术平台的“先进制造+工业互联网”新生态。公司主要从事各类电子设备产品的设计、研发、制造与销售业务，依托于工业互联网为全球知名客户提供智能制造和科技服务解决方案。公司主要产品涵盖通信网络设备、云服务设备、精密工具和工业机器人。相关产品主要应用于智能手机、宽带和无线网络、多媒体服务运营商的基础建设、电信运营商的基础建设、互联网增值服务商所需终端产品、企业网络及数据中心的基础建设以及精密核心零组件的自动化智能制造等。",
+              "profileSummary": "公司是全球领先的通信网络设备、云服务设备、精密工具及工业机器人专业设计制造服务商，为客户提供以工业互联网平台为核心的新形态电子设备产品智能制造服务。公司主要从事各类电子设备产品的设计、研发、制造与销售业务，依托于工业互联网为全球知名客户提供智能制造和科技服务解决方案。",
+              "majorProducts": "存储设备、服务器设备、工业机器人、光传输设备、行动基站设备、机顶盒、金刚石工具、路由器、数据中心设备、网络电信设备高精密机构件、网络服务器、网络交换机、微细丝锥、钨钢工具、无线设备、云服务设备高精密机构件、云计算、智能家庭网关、智能手机高精密高分子聚合物机构件、智能手机高精密金属机构件",
+              "revenueComposition": "3C电子产品:99.82%;其他业务:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "3C电子产品",
+                  "sharePct": 99.82,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "光传输设备",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "智能家庭网关",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "网络交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "路由器",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "通用服务器",
+                    "category": "服务器"
+                  }
+                ],
+                "knownProducts": [
+                  "金刚石精密工具",
+                  "电视机顶盒",
+                  "工业机器人",
+                  "手机精密结构件",
+                  "AI服务器",
+                  "通用服务器",
+                  "行动通信基站",
+                  "光传输设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "工业富联与事件存在真实业务交集：公司已有AI服务器、光传输设备、智能家庭网关，与全球高端AI交换机ODM绝对龙头，独家代工英伟达NVLink交换机，并已开始交付CPO交换机柜所处的产业环节一致。3C电子产品（99.82%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响商业化进度和订单兑现，只有经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”，才会形成可确认的收入和利润增量。客户认证、新增订单、交付节奏、相关业务收入和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 19577,
+            "stockCode": "603296.SH",
+            "stockName": "华勤技术",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球领先的智能硬件ODM厂商，具备\"计算+网络+液冷\"全栈设计能力，为头部互联网大厂提供超节点全链条交付服务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603296.SH",
+              "companyName": "华勤技术",
+              "companyProfile": "公司创立于2005年，总部位于中国上海，是全球智能硬件平台型企业。秉承改善人们沟通与生活的使命，为全球科技品牌客户提供产品级、系统级、软硬件研发、运营制造的端到端的产品和服务。产品、服务惠及全球100+国家和地区，每年为亿万消费者提供数以亿计的智能产品，包括智能手机、笔记本电脑、服务器、平板电脑、智能穿戴、AIoT、数据中心产品、汽车电子等。公司在国内外先后建成“1+5+5”的全球布局，即1个上海总部，上海、东莞、西安、南昌、无锡5大研发中心，南昌、东莞两大国内制造中心和越南、墨西哥(规划中)和印度三大海外制造基地。公司以高效运营、研发设计、先进制造和精密结构件的ODMM四轮驱动核心价值赋予智能产品平台，横向扩张产品线，通过打造3+N+3(“智能手机+笔记本电脑+数据中心”+“智慧生活、商业数字生产力以及数据中心全栈解决方案”+“机器人+软件+汽车电子”)的产品结构，以智能手机、笔记本电脑、数据中心三硬件为基石，努力拓展机器人业务、软件业务和汽车电子业务三个新赛道，打造数字经济下的科技公司的数字新基建，致力于通过绝对的规模优势、硬件品类的丰富性以及底层核心技术等，构建以硬件平台为核心的多元化商业生态系统，实现全球智能产品平台的战略目标。公司坚持深化数字化、自动化转型，依托“智能产品平台”核心战略，与全球科技品牌客户和生态伙伴协同创新。华勤已成为一家在智能产品平台领域内具有全球核心竞争力的研发能力较强的制造公司、软件能力较强的硬件公司、规模较大的高效公司。",
+              "profileSummary": "产品、服务惠及全球100+国家和地区，每年为亿万消费者提供数以亿计的智能产品，包括智能手机、笔记本电脑、服务器、平板电脑、智能穿戴、AIoT、数据中心产品、汽车电子等。公司以高效运营、研发设计、先进制造和精密结构件的ODMM四轮驱动核心价值赋予智能产品平台，横向扩张产品线，通过打造3+N+3(“智能手机+笔记本电脑+数据中心”+“智慧生活、商业数字生产力以及数据中心全栈解决方案”+“机器人+软件+汽车电子”)的产品结构，以智能手机、笔…",
+              "majorProducts": "​AI 超节点整机柜系统​、AIoT产品、AI服务器、IP Camera、XR、笔记本电脑、存储服务器、打印机、电脑台式机、电脑一体机、电脑周边设备、电子相框、服务器、交换机、轮式机器人、平板电脑、汽车显示屏、人形机器人、扫地机器人、数采机器人、通用服务器、游戏掌机、智能穿戴、智能辅助驾驶技术、智能手机、智能音箱、智能座舱",
+              "revenueComposition": "移动终端业务:46.79%;计算及数据业务:44.02%;AIoT产品:4.6%;其他业务:2.56%;创新业务:2.03%",
+              "revenueSegments": [
+                {
+                  "name": "移动终端业务",
+                  "sharePct": 46.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "计算及数据业务",
+                  "sharePct": 44.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "AIoT产品",
+                  "sharePct": 4.6,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "创新业务",
+                  "sharePct": 2.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "存储服务器",
+                    "category": "数据管理系统"
+                  },
+                  {
+                    "name": "以太网交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "服务器代工",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "超节点服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "通用服务器",
+                    "category": "服务器"
+                  }
+                ],
+                "knownProducts": [
+                  "扫地机器人代工",
+                  "智能座舱",
+                  "智能驾驶域控制器(ADCU)",
+                  "平板电脑代工",
+                  "智能手表代工",
+                  "蓝牙音响代工",
+                  "智能手机代工",
+                  "笔记本电脑代工"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "华勤技术的AIoT产品（4.6%）覆盖范围较宽，其中能够承载AI服务器、存储服务器、以太网交换机，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：全球领先的智能硬件ODM厂商，具备\"计算+网络+液冷\"全栈设计能力，为头部互联网大厂提供超节点全链条交付服务。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "3条低于3星的源记录已按当前关注口径排除。",
+      "1条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26332",
@@ -9,38 +9,11 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 4,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 1,
     "mappedStockCount": 1,
-    "unmappedStockCount": 3,
+    "unmappedStockCount": 0,
     "stocks": [
-      {
-        "sourceRowNumber": 1247,
-        "stockCode": "6981.T",
-        "stockName": "村田制作所",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1248,
-        "stockCode": "009150.KS",
-        "stockName": "三星电机",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1249,
-        "stockCode": "未上市",
-        "stockName": "苏纳光电",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 1252,
         "stockCode": "603267.SH",
@@ -48,162 +21,21 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 3
+        "anchorProductCount": 2
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 1247,
-        "stockCode": "6981.T",
-        "stockName": "村田制作所",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1248,
-        "stockCode": "009150.KS",
-        "stockName": "三星电机",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1249,
-        "stockCode": "未上市",
-        "stockName": "苏纳光电",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 3,
     "selectedCoreProductCount": 2,
     "selectedCompanyCoreProductCount": 2,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 4,
-    "downstreamCandidateCount": 2,
-    "shownUpstreamCount": 4,
-    "shownDownstreamCount": 2
+    "level7ProductCount": 23,
+    "relatedIndustryCandidateCount": 7,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140101097",
-        "name": "低压电容器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032460"
-        ],
-        "linkedCoreProductNames": [
-          "直流滤波器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140101098",
-        "name": "低压电抗器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032460"
-        ],
-        "linkedCoreProductNames": [
-          "直流滤波器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140101096",
-        "name": "高压电容器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032460"
-        ],
-        "linkedCoreProductNames": [
-          "直流滤波器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030827",
-        "name": "高压电抗器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032460"
-        ],
-        "linkedCoreProductNames": [
-          "直流滤波器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140032460",
-        "name": "直流滤波器",
-        "hierarchyPath": "电子 > 元件 > 被动元件 > 射频器件 > 滤波器 > 直流滤波器",
-        "industryPath": [
-          "电子",
-          "元件",
-          "被动元件",
-          "射频器件",
-          "滤波器",
-          "直流滤波器"
-        ],
-        "level5Industry": {
-          "code": "1200001355",
-          "name": "射频器件"
-        },
-        "level6Industry": {
-          "code": "1200005116",
-          "name": "滤波器"
-        },
-        "level7Product": {
-          "code": "1140032460",
-          "name": "直流滤波器"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "603267.SH",
-            "stockName": "鸿远电子",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 4,
-        "downstreamCount": 2,
-        "relevanceScore": 6,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "被动元件",
-          "元件",
-          "电子"
-        ]
-      },
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140154403",
         "name": "多层片式陶瓷电容器(MLCC)",
@@ -229,18 +61,57 @@
           "name": "多层片式陶瓷电容器(MLCC)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603267.SH",
             "stockName": "鸿远电子",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140032460",
+        "name": "直流滤波器",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 射频器件 > 滤波器 > 直流滤波器",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "射频器件",
+          "滤波器",
+          "直流滤波器"
+        ],
+        "level5Industry": {
+          "code": "1200001355",
+          "name": "射频器件"
+        },
+        "level6Industry": {
+          "code": "1200005116",
+          "name": "滤波器"
+        },
+        "level7Product": {
+          "code": "1140032460",
+          "name": "直流滤波器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "603267.SH",
+            "stockName": "鸿远电子",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -250,38 +121,425 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140043856",
-        "name": "换流站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032460"
+        "code": "1200001354",
+        "name": "电路类器件",
+        "description": "电路类器件指电阻、电容等基础电子元件。因受益于新能源汽车、AI及国产替代需求，行业景气度回升且具备自主可控逻辑，成为A股科技板块中兼具成长性与安全边际的关注焦点。",
+        "stockCount": 4,
+        "starWeight": 15,
+        "level7ProductCount": 14,
+        "relevanceScore": 252,
+        "stocks": [
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "603267.SH",
+            "stockName": "鸿远电子",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300726.SZ",
+            "stockName": "宏达电子",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000636.SZ",
+            "stockName": "风华高科",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "直流滤波器"
+        "products": [
+          {
+            "code": "1140154403",
+            "name": "多层片式陶瓷电容器(MLCC)",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "603267.SH",
+                "stockName": "鸿远电子",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300726.SZ",
+                "stockName": "宏达电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140006040",
+            "name": "钽电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 钽电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300726.SZ",
+                "stockName": "宏达电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140200654",
+            "name": "单层陶瓷电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 单层陶瓷电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140032975",
+            "name": "超级电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 超级电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140134064",
-        "name": "特高压直流工程",
-        "anchorCount": 1,
+        "code": "1200001394",
+        "name": "天馈系统",
+        "description": "天馈系统指天线与馈线，负责基站信号收发。受5G建设、6G研发及卫星互联网加速推动，其作为通信基础设施核心部件，直接受益于网络升级扩容需求，因技术迭代快、市场空间大而备受A股投资者关注。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032460"
+        "starWeight": 5,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
         ],
-        "linkedCoreProductNames": [
-          "直流滤波器"
+        "products": [
+          {
+            "code": "1125000057",
+            "name": "微波天线",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 天馈系统 > 天线 > 微波天线",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 4,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 23,
+    "candidateIndustryCount": 7,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 1246,
+        "stockCode": "603678.SH",
+        "stockName": "火炬电子",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 1252,
+        "stockCode": "603267.SH",
+        "stockName": "鸿远电子",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 1253,
+        "stockCode": "300726.SZ",
+        "stockName": "宏达电子",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 1254,
+        "stockCode": "000636.SZ",
+        "stockName": "风华高科",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 14
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001354",
+        "name": "电路类器件",
+        "description": "电路类器件指电阻、电容等基础电子元件。因受益于新能源汽车、AI及国产替代需求，行业景气度回升且具备自主可控逻辑，成为A股科技板块中兼具成长性与安全边际的关注焦点。",
+        "stockCount": 4,
+        "starWeight": 15,
+        "level7ProductCount": 14,
+        "relevanceScore": 252,
+        "stocks": [
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "603267.SH",
+            "stockName": "鸿远电子",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300726.SZ",
+            "stockName": "宏达电子",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000636.SZ",
+            "stockName": "风华高科",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140154403",
+            "name": "多层片式陶瓷电容器(MLCC)",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "603267.SH",
+                "stockName": "鸿远电子",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300726.SZ",
+                "stockName": "宏达电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140006040",
+            "name": "钽电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 钽电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300726.SZ",
+                "stockName": "宏达电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140200654",
+            "name": "单层陶瓷电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 单层陶瓷电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140032975",
+            "name": "超级电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 超级电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001394",
+        "name": "天馈系统",
+        "description": "天馈系统指天线与馈线，负责基站信号收发。受5G建设、6G研发及卫星互联网加速推动，其作为通信基础设施核心部件，直接受益于网络升级扩容需求，因技术迭代快、市场空间大而备受A股投资者关注。",
+        "stockCount": 1,
+        "starWeight": 5,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
+        ],
+        "products": [
+          {
+            "code": "1125000057",
+            "name": "微波天线",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 天馈系统 > 天线 > 微波天线",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -296,10 +554,368 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 27,
+    "eligibleSourceRowCount": 4,
+    "totalStockCount": 4,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 16,
+    "excludedNonAShareCount": 7,
+    "missingReasonCount": 4,
+    "companyProfileMatchedCount": 4,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 1246,
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603678.SH",
+              "companyName": "火炬电子",
+              "companyProfile": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。2015年1月，公司在上海证券交易所上市。公司系国家高新技术企业，连续13年位列中国电子元器件百强企业榜单。拥有CNAS实验室认可的火炬电子实验室、省级企业技术中心、省级工程研究中心，设立国家博士后科研工作站，先后通过ISO9001质量管理体系、ISO14001环境管理体系、ISO45001职业健康安全管理体系、SA8000社会责任管理体系认证和IATF16949质量管理体系等资质认证。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。全力推进产品核心技术的自主研发，在推动内生增长的同时，积极向具有渠道和技术协同效应的其他类型元器件产品延伸，以“传承创新、百年火炬”为企业愿景，用高质量、高效率的发展促进产业升级，为我国电子元器件和新材料产业的发展做出贡献。",
+              "profileSummary": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。",
+              "majorProducts": "EMI 电源滤波器、IGBT、MOSFET、SIP模块、薄膜电路、薄膜无源集成器件、超级电容器、第三代功率器件、电阻器、定制化特种元器件、火炬电子多芯组陶瓷电容器、火炬电子片式多层陶瓷电容器、火炬电子引线式多层陶瓷电容器、模拟IC、钽电容器、陶瓷电容器、微波介质频率器件、微波芯片电容器",
+              "revenueComposition": "国际贸易业务:61.43%;元器件贸易:33.08%;陶瓷材料:4.96%;其他业务:0.53%",
+              "revenueSegments": [
+                {
+                  "name": "国际贸易业务",
+                  "sharePct": 61.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "元器件贸易",
+                  "sharePct": 33.08,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "陶瓷材料",
+                  "sharePct": 4.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "单层陶瓷电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "微波天线",
+                    "category": "天线"
+                  },
+                  {
+                    "name": "电子元器件贸易",
+                    "category": "电子元件销售"
+                  },
+                  {
+                    "name": "超级电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "钽电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "聚碳硅烷",
+                  "电子元器件贸易",
+                  "单层陶瓷电容器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "超级电容器",
+                  "钽电容器",
+                  "射频薄膜无源集成器件",
+                  "微波天线"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对火炬电子而言，公司在产业链中的具体参与环节尚未充分明确并非纯概念映射，因为元器件贸易占收入的33.08%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是事件能否转化为可确认的经营增量，传导效率取决于“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由订单、收入确认、产品结构和毛利率变化来区分；若事件关联停留在主题层面，未形成可持续订单或利润贡献，重估逻辑会被削弱。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 1252,
+            "stockCode": "603267.SH",
+            "stockName": "鸿远电子",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603267.SH",
+              "companyName": "鸿远电子",
+              "companyProfile": "公司成立于2001年12月06日，于2019年05月15日在上海证券交易所正式挂牌交易。公司以实业报国为己任，数十年专注并深耕于电子元器件领域，是国内高可靠多层瓷介电容器行业核心生产厂家之一，连续十二年入围“中国电子元器件骨干企业(原中国电子元件行业百强)”。公司主营业务为以瓷介电容器、滤波器、微处理器、微控制器及配套集成电路、微波模块、微纳系统集成陶瓷管壳等为主的电子元器件的技术研发、产品生产和销售，包括自产业务和代理业务两大类。公司自产业务产品主要包括瓷介电容器、滤波器、微处理器、微控制器及配套集成电路、微波模块、微纳系统集成陶瓷管壳等，广泛应用于航天、航空、电子信息、兵器、船舶等高可靠领域，以及通讯、工业、汽车电子、医疗电子、轨道交通等民用高端领域。公司代理业务产品主要是国际国内知名厂商的多类产品，产品品类主要为电容、电阻、电感、射频器件、分立器件、连接器、集成电路等多种系列的电子元器件，主要面向工业类及消费类民用市场，覆盖了新能源、汽车电子、轨道交通、智能电网、通讯、消费电子、医疗装备、工业/人工智能、物联网等领域。公司坚定发展实业，现已形成以北京、苏州、成都、合肥四个科研生产基地为核心的整体产业格局，公司为服务国家战略、服务国防建设贡献力量，朝着“争创国际知名企业，争做百年优秀企业”的目标不断努力。",
+              "profileSummary": "公司主营业务为以瓷介电容器、滤波器、微处理器、微控制器及配套集成电路、微波模块、微纳系统集成陶瓷管壳等为主的电子元器件的技术研发、产品生产和销售，包括自产业务和代理业务两大类。公司自产业务产品主要包括瓷介电容器、滤波器、微处理器、微控制器及配套集成电路、微波模块、微纳系统集成陶瓷管壳等，广泛应用于航天、航空、电子信息、兵器、船舶等高可靠领域，以及通讯、工业、汽车电子、医疗电子、轨道交通等民用高端领域。",
+              "majorProducts": "薄膜电容、超级电容、传感器、电感变压器、电解电容、断路器、光电陶瓷管壳、集成电路陶瓷管壳、继电器、金属支架多层瓷介电容器、滤波器、片式多层瓷介电容器、频综组件、热敏电阻、陶瓷电容、贴片电阻、微波大功率器件、微波宽带变频组件、微波射频陶瓷管壳、微波无源模块、信道组件、压敏电阻、有引线多层瓷介电容器、直流滤波器",
+              "revenueComposition": "自产业务:60.65%;代理业务:38.46%;其他业务:0.89%",
+              "revenueSegments": [
+                {
+                  "name": "自产业务",
+                  "sharePct": 60.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "代理业务",
+                  "sharePct": 38.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "电子元器件代理服务",
+                    "category": "国内贸易代理"
+                  },
+                  {
+                    "name": "直流滤波器",
+                    "category": "滤波器"
+                  }
+                ],
+                "knownProducts": [
+                  "电子元器件代理服务",
+                  "直流滤波器",
+                  "多层片式陶瓷电容器(MLCC)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "鸿远电子拥有多层片式陶瓷电容器(MLCC)、电子元器件代理服务、直流滤波器，其产业链位置与公司在产业链中的具体参与环节尚未充分明确一致；当前的自产业务（60.65%）、代理业务（38.46%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由事件能否转化为可确认的经营增量决定，并需完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。只有订单、收入确认、产品结构和毛利率变化持续改善，产品能力才会转化为公司层面的收入和盈利提升；事件关联停留在主题层面，未形成可持续订单或利润贡献则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 1253,
+            "stockCode": "300726.SZ",
+            "stockName": "宏达电子",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300726.SZ",
+              "companyName": "宏达电子",
+              "companyProfile": "公司是总装备部军用电子元器件配套定点研制生产军用钽电解电容器的专业厂家，属工信部国防科工局管理。公司拥有30多年的生产钽电解电容器的经验和历史，有五条成熟的、先进的钽电解电容器生产线及两个较大规模的生产基地，拥有从美国、日本、韩国以及欧盟引进的先进生产线设备。公司的钽电解电容器生产工艺先进、技术力量雄厚，设备精良，拥有国内一流的新品研发能力，拥有完善的质量检测体系和完整的钽电解电容器环境试验、例行试验手段。公司以质量为生命，追求高标准、零缺陷，在长期的研制生产过程中，同国内外先进企业和高等院校有着广泛的合作。公司是以电容器为主导产品，集研发、生产、销售、服务为一体的高技术企业，以钽电解电容器品种全、质量好、信誉高和服务优而享誉国内外市场。公司通过了质量管理体系认证，不断加强技术创新和质量管理工作，持续改进和提升质量水平。随着公司产品不断进入军工配套领域，公司非固体电解质钽电容器生产线、片式固体电解质钽电容器生产线、固体电解质钽电容器生产线贯彻国军标，产品列入了相关军用电子元器件合格产品目录(QPL)。",
+              "profileSummary": "公司是以电容器为主导产品，集研发、生产、销售、服务为一体的高技术企业，以钽电解电容器品种全、质量好、信誉高和服务优而享誉国内外市场。随着公司产品不断进入军工配套领域，公司非固体电解质钽电容器生产线、片式固体电解质钽电容器生产线、固体电解质钽电容器生产线贯彻国军标，产品列入了相关军用电子元器件合格产品目录(QPL)。",
+              "majorProducts": "I/F转换器、LTCC滤波器、薄膜电容器、变压器、超级电容器、磁珠、单层瓷介电容器、电感器、电源管理芯片、电源模块、电阻、多层瓷介电容器、多层片式瓷介电容器系列、非片式固体电解质钽电容器系列（CA、CA42系列）、高分子片式铝电容器、环形器与隔离器、片式高分子固体电解质钽电容器系列（CA55系列）、片式固体电解质钽电容器系列（CA45系列）、嵌入式计算机板卡、钽电容器、钽外壳封装系列（THC、CA39、CA38系列）、陶瓷薄膜电路、微波器件组件、温度传感器、银外壳封装系列（CA30、CA35系列）",
+              "revenueComposition": "元器件:73.95%;模块及其他产品:26.05%",
+              "revenueSegments": [
+                {
+                  "name": "元器件",
+                  "sharePct": 73.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "模块及其他产品",
+                  "sharePct": 26.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "I/F转换器",
+                    "category": "转换器"
+                  },
+                  {
+                    "name": "LTCC滤波器",
+                    "category": "滤波器"
+                  },
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "嵌入式计算机板卡",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "电力电子电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "薄膜电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "嵌入式计算机板卡",
+                  "LTCC滤波器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "电力电子电容器",
+                  "薄膜电容器",
+                  "钽电容器",
+                  "I/F转换器",
+                  "温度传感器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "宏达电子与新闻之间有明确产品抓手：I/F转换器、LTCC滤波器、多层片式陶瓷电容器(MLCC)，对应公司在产业链中的具体参与环节尚未充分明确。收入主体目前是元器件（73.95%）、模块及其他产品（26.05%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变事件能否转化为可确认的经营增量预期，随后要经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能进入利润表。订单、收入确认、产品结构和毛利率变化若形成连续改善，相关产品对整体经营的贡献会逐步提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 1254,
+            "stockCode": "000636.SZ",
+            "stockName": "风华高科",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000636.SZ",
+              "companyName": "风华高科",
+              "companyProfile": "公司是从事电子元器件及电子材料研发、生产、销售的国有控股上市公司。1984年成立，1996年在深交所挂牌上市，2008年广东省广晟控股集团有限公司入主风华高科。经过40年的专注发展，风华高科已成为内资企业中创新能力领先、综合规模较大、产品种类较全的电子元器件整合配套供应商，在国内率先突破多项核心材料关键技术。公司的主营业务为研制、生产、销售电子元器件及电子材料等。主营产品包括MLCC、片式电阻器、电感器、陶瓷滤波器、压敏电阻器、热敏电阻器、铝电解电容器、圆片电容器、超级电容器等，产品广泛应用于包括汽车电子、工业及控制自动化、消费电子、通讯、PC、物联网、新能源、医疗等领域。另外，公司产品还包括电子浆料、瓷粉等电子功能材料系列产品。公司跻身全球知名片式元器件制造商前列，是“国家重点高新技术企业”“国家首批创新型企业”“国家知识产权示范企业”，入选国务院国资委“创建世界一流专业领军示范企业”，同时也是唯一一家进入CDP(美国介电压电材料研究中心)联盟的内资企业。公司科技创新成果获得国家、省市级科技奖近百项，荣获有中国工业“奥斯卡”之称的中国工业大奖；公司主营产品继片阻获得国家制造业单项冠军产品后，MLCC又获评国家制造业单项冠军产品。",
+              "profileSummary": "公司的主营业务为研制、生产、销售电子元器件及电子材料等。主营产品包括MLCC、片式电阻器、电感器、陶瓷滤波器、压敏电阻器、热敏电阻器、铝电解电容器、圆片电容器、超级电容器等，产品广泛应用于包括汽车电子、工业及控制自动化、消费电子、通讯、PC、物联网、新能源、医疗等领域。",
+              "majorProducts": "MLCC、超级电容器、电感器、铝电解电容器、片式电阻器、热敏电阻器、陶瓷滤波器、压敏电阻器、圆片电容器",
+              "revenueComposition": "电子元器件及电子材料:98.19%;其他业务:1.81%",
+              "revenueSegments": [
+                {
+                  "name": "电子元器件及电子材料",
+                  "sharePct": 98.19,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "FPC(柔性电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "NTC热敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "PTC热敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "单层陶瓷电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "压敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "叠层片式电感器",
+                    "category": "电感器"
+                  }
+                ],
+                "knownProducts": [
+                  "FPC(柔性电路板)",
+                  "陶瓷滤波器",
+                  "单层陶瓷电容器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "超级电容器",
+                  "钽电容器",
+                  "铝电解电容器",
+                  "叠层片式电感器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "风华高科的电子元器件及电子材料（98.19%）覆盖范围较宽，其中能够承载FPC(柔性电路板)、NTC热敏电阻、PTC热敏电阻，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司在产业链中的具体参与环节尚未充分明确。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "4只标的缺少 reason，仅展示语料缺口，不做扩展推断。",
+      "16条低于3星的源记录已按当前关注口径排除。",
+      "7条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

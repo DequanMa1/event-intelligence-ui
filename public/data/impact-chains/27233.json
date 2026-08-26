@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27233",
@@ -9,10 +9,10 @@
     "date": "2026-07-08"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 1,
     "mappedStockCount": 1,
-    "unmappedStockCount": 1,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 22973,
@@ -21,124 +21,21 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 18
-      },
-      {
-        "sourceRowNumber": 22974,
-        "stockCode": "AKAM.US",
-        "stockName": "阿卡迈",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 22974,
-        "stockCode": "AKAM.US",
-        "stockName": "阿卡迈",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 18,
-    "selectedCoreProductCount": 2,
+    "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 5,
-    "downstreamCandidateCount": 10,
-    "shownUpstreamCount": 5,
-    "shownDownstreamCount": 10
+    "level7ProductCount": 19,
+    "relatedIndustryCandidateCount": 6,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140079590",
-        "name": "事件产生器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140079591",
-        "name": "事件分析器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140079593",
-        "name": "事件数据库",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140079592",
-        "name": "响应单元",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140021161",
-        "name": "互联网安全产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140200789",
         "name": "主机入侵检测系统(HIDS)",
@@ -164,18 +61,15 @@
           "name": "主机入侵检测系统(HIDS)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300017.SZ",
             "stockName": "网宿科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -183,202 +77,401 @@
           "软件开发",
           "计算机"
         ]
-      },
+      }
+    ],
+    "relatedIndustries": [
       {
-        "code": "1140015609",
-        "name": "入侵检测系统",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:主机入侵检测系统(HIDS)",
-        "stockCount": 1,
+        "code": "1210003145",
+        "name": "云计算",
+        "description": "云计算指通过互联网提供计算资源服务。A股中该板块受关注，因其作为数字经济底座，受益于企业数字化转型、AI算力需求爆发及政策支持，具备高成长性与广阔市场空间，是科技投资的核心赛道之一。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 2,
+        "relevanceScore": 36,
         "stocks": [
           {
             "stockCode": "300017.SZ",
             "stockName": "网宿科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688158.SH",
+            "stockName": "优刻得",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300454.SZ",
+            "stockName": "深信服",
+            "rating": "★★★☆",
+            "filledStars": 3
           }
         ],
-        "upstreamCount": 5,
-        "downstreamCount": 10,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
+        "products": [
+          {
+            "code": "1140200786",
+            "name": "内容分发网络(CDN)",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > IaaS > 内容分发网络(CDN)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300017.SZ",
+                "stockName": "网宿科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688158.SH",
+                "stockName": "优刻得",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "cdn"
+            ]
+          },
+          {
+            "code": "1140200640",
+            "name": "云数据库平台服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > PaaS > 云数据库平台服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300454.SZ",
+                "stockName": "深信服",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001378",
+        "name": "人工智能",
+        "description": "A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 4,
+        "relevanceScore": 76,
+        "stocks": [
+          {
+            "stockCode": "688787.SH",
+            "stockName": "海天瑞声",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300454.SZ",
+            "stockName": "深信服",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140221244",
+            "name": "网络安全大模型",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 网络安全大模型",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300454.SZ",
+                "stockName": "深信服",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "网络安全"
+            ]
+          },
+          {
+            "code": "1140221274",
+            "name": "AI智算训推平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > AI智算训推平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300454.SZ",
+                "stockName": "深信服",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "ai"
+            ]
+          },
+          {
+            "code": "1140158479",
+            "name": "图像素材训练服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 图像素材训练服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140158478",
+            "name": "语音素材训练服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 语音素材训练服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 4,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 19,
+    "candidateIndustryCount": 6,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 22973,
+        "stockCode": "300017.SZ",
+        "stockName": "网宿科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 22976,
+        "stockCode": "688158.SH",
+        "stockName": "优刻得",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 22978,
+        "stockCode": "300454.SZ",
+        "stockName": "深信服",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
+      },
+      {
+        "sourceRowNumber": 22986,
+        "stockCode": "688787.SH",
+        "stockName": "海天瑞声",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140079618",
-        "name": "军工涉密单位",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
+        "code": "1210003145",
+        "name": "云计算",
+        "description": "云计算指通过互联网提供计算资源服务。A股中该板块受关注，因其作为数字经济底座，受益于企业数字化转型、AI算力需求爆发及政策支持，具备高成长性与广阔市场空间，是科技投资的核心赛道之一。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 2,
+        "relevanceScore": 36,
+        "stocks": [
+          {
+            "stockCode": "300017.SZ",
+            "stockName": "网宿科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688158.SH",
+            "stockName": "优刻得",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300454.SZ",
+            "stockName": "深信服",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
+        "products": [
+          {
+            "code": "1140200786",
+            "name": "内容分发网络(CDN)",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > IaaS > 内容分发网络(CDN)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300017.SZ",
+                "stockName": "网宿科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688158.SH",
+                "stockName": "优刻得",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "cdn"
+            ]
+          },
+          {
+            "code": "1140200640",
+            "name": "云数据库平台服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > PaaS > 云数据库平台服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300454.SZ",
+                "stockName": "深信服",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140079619",
-        "name": "各企事业单位",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
+        "code": "1200001378",
+        "name": "人工智能",
+        "description": "A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 4,
+        "relevanceScore": 76,
+        "stocks": [
+          {
+            "stockCode": "688787.SH",
+            "stockName": "海天瑞声",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300454.SZ",
+            "stockName": "深信服",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
+        "products": [
+          {
+            "code": "1140221244",
+            "name": "网络安全大模型",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 网络安全大模型",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300454.SZ",
+                "stockName": "深信服",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "网络安全"
+            ]
+          },
+          {
+            "code": "1140221274",
+            "name": "AI智算训推平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > AI智算训推平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300454.SZ",
+                "stockName": "深信服",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "ai"
+            ]
+          },
+          {
+            "code": "1140158479",
+            "name": "图像素材训练服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 图像素材训练服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140158478",
+            "name": "语音素材训练服务",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 语音素材训练服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688787.SH",
+                "stockName": "海天瑞声",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140018712",
-        "name": "政府机关单位",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140082412",
-        "name": "IDC网络安全检测",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140115778",
-        "name": "城市地下综合管廊智能监控系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140133805",
-        "name": "智能园区管理监控系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140117804",
-        "name": "智能监控系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140162872",
-        "name": "服务器深度安全防护系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140014578",
-        "name": "网络边界安全产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140014769",
-        "name": "通用安全产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140015609"
-        ],
-        "linkedCoreProductNames": [
-          "入侵检测系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -393,11 +486,374 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 17,
+    "eligibleSourceRowCount": 4,
+    "totalStockCount": 4,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 7,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 4,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 22973,
+            "stockCode": "300017.SZ",
+            "stockName": "网宿科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内CDN龙头，业务模式与Cloudflare高度对标，已率先在国内市场提价，被视为AI Agent时代边缘计算和流量价值重估的核心受益者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300017.SZ",
+              "companyName": "网宿科技",
+              "companyProfile": "公司成立于2000年1月，致力于成为全球领先的IT基础平台服务提供商。凭借公司在计算、存储、网络及安全等方面的核心技术及服务能力，为互联网客户、政府及企业客户提供高效、稳定、安全的IT基础设施及服务，助力客户实现卓越的数字化、智能化体验。2010年起，公司开启全球化战略，通过持续投入不断强化海外业务平台及销售体系，为客户提供全球化服务。公司客户覆盖多个产业领域，包括视频、电商、游戏、政务、金融、汽车、零售、航空、媒体、消费电子、家电制造、教育、医疗等。",
+              "profileSummary": "公司成立于2000年1月，致力于成为全球领先的IT基础平台服务提供商。2010年起，公司开启全球化战略，通过持续投入不断强化海外业务平台及销售体系，为客户提供全球化服务。",
+              "majorProducts": "CDN服务、IDC及液冷解决方案、MSP服务、SASE办公安全一体化体系、WAAP全站防护体系、边缘计算、算力云、综合安全服务体系",
+              "revenueComposition": "CDN服务:62.11%;安全及增值服务:29.61%;IDC服务:6.06%;商品销售:2.22%",
+              "revenueSegments": [
+                {
+                  "name": "CDN服务",
+                  "sharePct": 62.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "安全及增值服务",
+                  "sharePct": 29.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "IDC服务",
+                  "sharePct": 6.06,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "商品销售",
+                  "sharePct": 2.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "边缘云容器平台",
+                    "category": "边缘计算"
+                  },
+                  {
+                    "name": "边缘计算平台",
+                    "category": "边缘计算"
+                  },
+                  {
+                    "name": "Web应用防火墙(WAF)",
+                    "category": "信息安全软件"
+                  },
+                  {
+                    "name": "主机入侵检测系统(HIDS)",
+                    "category": "网络安全软件"
+                  },
+                  {
+                    "name": "内容分发网络(CDN)",
+                    "category": "IaaS"
+                  },
+                  {
+                    "name": "零信任访问控制系统",
+                    "category": "数据安全软件"
+                  }
+                ],
+                "knownProducts": [
+                  "云安全运营中心(SOC)",
+                  "云管理服务(MSP)",
+                  "内容分发网络(CDN)",
+                  "裸金属服务器",
+                  "边缘云存储服务",
+                  "专属云平台",
+                  "多云管理平台(CMP)",
+                  "混合云平台"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "网宿科技已经具备边缘云容器平台、边缘计算平台、Web应用防火墙(WAF)等业务能力，国内CDN龙头，业务模式与Cloudflare高度对标，已率先在国内市场提价，被视为AI Agent时代边缘计算和流量价值重估的核心受益者并非单纯概念映射。当前对应的收入被归入IDC服务（6.06%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 22976,
+            "stockCode": "688158.SH",
+            "stockName": "优刻得",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内第三方云计算服务商，具备CDN云分发和API安全防护能力，可适配内容按使用付费的交易场景，并已跟随行业趋势上调云服务价格。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688158.SH",
+              "companyName": "优刻得-W",
+              "companyProfile": "公司是中立、安全的云计算服务平台。自主研发IaaS、PaaS、大数据流通平台、AI服务平台，推出公有云、私有云、混合云、专有云等全线云产品，为政府、AI大模型、工业互联网、运营商、教育、医疗、零售、金融、互联网等各行业用户，提供全面的数字化转型升级服务。2020年1月，公司正式登陆科创板，成为中国第一家公有云科创板上市公司，同时成为了中国A股市场首家“同股不同权”的上市企业，开创了中国A股资本市场及公司治理的先河。公司在全球设有30个可用区，遍及国内、东南亚、欧洲、北美、南美、非洲等22个地域，结合内蒙古乌兰察布、上海青浦两大自建数据中心，构建云网融合、安全稳定、智能敏捷、绿色低碳的数字信息基础设施，以及国内北、上、广、深、成等线下服务站，公司已为全球超过5万家企业级用户提供云服务。",
+              "profileSummary": "自主研发IaaS、PaaS、大数据流通平台、AI服务平台，推出公有云、私有云、混合云、专有云等全线云产品，为政府、AI大模型、工业互联网、运营商、教育、医疗、零售、金融、互联网等各行业用户，提供全面的数字化转型升级服务。公司在全球设有30个可用区，遍及国内、东南亚、欧洲、北美、南美、非洲等22个地域，结合内蒙古乌兰察布、上海青浦两大自建数据中心，构建云网融合、安全稳定、智能敏捷、绿色低碳的数字信息基础设施，以及国内北、上、广、深、成等…",
+              "majorProducts": "GPU云主机、MCP云平台、UMOS、UMStor、VPN网关、定制化物理机UServer、对象存储 UFile、分布式数据库UDDB、负载均衡 ULB、高速通道 UDPN、归档存储 UArchive、机柜托管UCabinet、全球加速PathX、数据方舟 UDataArk、私有专区 UDHost、托管Hadoop集群、外网带宽 Internet Access、网络带宽UNet、物理云主机UPHost、云分发UCDN、云内存存储 UMem、云数据库 MongoDB、云数据库 MySQL、云数据库PostgreSQL、云硬盘 UDisk、云主机UHost、专线接入UConnect",
+              "revenueComposition": "公有云:48.92%;混合云:35.09%;云通信:8.83%;私有云:3.35%;边缘云:2.14%;解决方案及其他:1.66%",
+              "revenueSegments": [
+                {
+                  "name": "公有云",
+                  "sharePct": 48.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "混合云",
+                  "sharePct": 35.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "云通信",
+                  "sharePct": 8.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "私有云",
+                  "sharePct": 3.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "边缘云",
+                  "sharePct": 2.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "解决方案及其他",
+                  "sharePct": 1.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "内容分发网络(CDN)",
+                    "category": "IaaS"
+                  }
+                ],
+                "knownProducts": [
+                  "云通信服务",
+                  "云存储服务",
+                  "云服务器",
+                  "内容分发网络(CDN)",
+                  "弹性虚拟广域网(SD-WAN)",
+                  "云数据库平台服务",
+                  "私有云一体机",
+                  "私有云平台"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "优刻得拥有内容分发网络(CDN)，其产业链位置与国内第三方云计算服务商，具备CDN云分发和API安全防护能力，可适配内容按使用付费的交易场景，并已跟随行业趋势上调云服务价格一致；当前的公有云（48.92%）、混合云（35.09%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 22978,
+            "stockCode": "300454.SZ",
+            "stockName": "深信服",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内SASE与零信任安全龙头，其AI爬虫识别与拦截技术是内容访问管控的核心技术支撑，直接受益于企业爬虫管控需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300454.SZ",
+              "companyName": "深信服",
+              "companyProfile": "公司创立于2000年，是一家专注于企业级网络安全、云计算、AI及物联网领域的创新高科技企业。公司立志于承载全球各行业用户数字化、智能化转型过程中的基石性工作，从而让每个用户的数智化更简单、更安全。公司始终坚持“全情投入、持续创新，给用户带来省心便捷体验”的价值主张，以用户需求为导向，紧跟全球信息技术发展趋势，不断加大在人工智能AI、大数据、云计算等领域的创新研发投入。目前，公司业务覆盖新加坡、马来西亚、泰国、意大利等约30个国家和地区，拥有庞大的用户群体。公司旗下两大业务品牌—深信服智安全和信服云，与子公司信锐技术，承接“让每个用户的数智化更简单、更安全”的使命愿景，在安全、云计算、IT基础设施与物联网领域中不断积淀、打磨、再创新，为用户数智化转型工作构筑稳固基石。",
+              "profileSummary": "公司创立于2000年，是一家专注于企业级网络安全、云计算、AI及物联网领域的创新高科技企业。目前，公司业务覆盖新加坡、马来西亚、泰国、意大利等约30个国家和地区，拥有庞大的用户群体。",
+              "majorProducts": "VPN、超融合一体机及超融合软件、广域网加速、上网行为管理、瘦终端机、无线接入点、无线控制器、下一代防火墙、应用交付、云安全产品及服务、云管平台、桌面云一体机及软件",
+              "revenueComposition": "云计算业务:49.86%;安全业务:44.01%;基础网络和物联网业务:6.13%",
+              "revenueSegments": [
+                {
+                  "name": "云计算业务",
+                  "sharePct": 49.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "安全业务",
+                  "sharePct": 44.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "基础网络和物联网业务",
+                  "sharePct": 6.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "云安全访问服务(SASE)",
+                    "category": "数据安全软件"
+                  },
+                  {
+                    "name": "安全感知管理平台",
+                    "category": "网络安全软件"
+                  },
+                  {
+                    "name": "端点安全管理系统",
+                    "category": "网络安全软件"
+                  },
+                  {
+                    "name": "网络安全大模型",
+                    "category": "人工智能"
+                  },
+                  {
+                    "name": "下一代防火墙",
+                    "category": "信息安全软件"
+                  },
+                  {
+                    "name": "数据安全中心(DSC)",
+                    "category": "数据安全软件"
+                  }
+                ],
+                "knownProducts": [
+                  "网络安全服务",
+                  "云存储服务",
+                  "弹性虚拟广域网(SD-WAN)",
+                  "专属云平台",
+                  "云原生应用平台",
+                  "云基础资源虚拟化平台",
+                  "云数据库平台服务",
+                  "私有云平台"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "深信服与新闻之间有明确产品抓手：云安全访问服务(SASE)、安全感知管理平台、端点安全管理系统，对应国内SASE与零信任安全龙头，其AI爬虫识别与拦截技术是内容访问管控的核心技术支撑，直接受益于企业爬虫管控需求增长。收入主体目前是云计算业务（49.86%）、安全业务（44.01%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 22986,
+            "stockCode": "688787.SH",
+            "stockName": "海天瑞声",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "AI训练数据全栈龙头，其数据集本身就是AI时代的核心交易标的，已实现API按调用量收费，与Cloudflare变现网关的逻辑完全契合。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688787.SH",
+              "companyName": "海天瑞声",
+              "companyProfile": "公司成立于2005年，是我国最早从事AI训练数据的专业服务商之一，也是目前A股市场唯一一家以训练数据为主业的上市公司。经过20年的发展，公司的数据服务类型已经实现智能语音(语音识别、语音合成等)、计算机视觉、自然语言等多个核心领域全覆盖，可服务于智能驾驶、内容生成、机器人、智慧医疗、智慧教育、智慧金融等22种创新应用场景。公司的产品和服务已获得阿里巴巴、腾讯、百度、科大讯飞、海康威视、字节跳动、微软、亚马逊、三星、中国科学院、清华大学等国内外客户的认可，客户类型覆盖了科技互联网、社交、IoT、智能驾驶、智慧金融等领域的主流企业，教育科研机构以及部分政企机构。近年来，公司已成为具有国际竞争力、领先性的标杆企业，核心技术自主创新能力不断得到行业主管部门的高度认可，先后获得国家专精特新“小巨人”企业、“新一代人工智能产业创新重点任务揭榜优胜单位”、“北京市科学技术进步奖二等奖”等资质荣誉，入选中共中央网络安全和信息化委员会办公室“人工智能企业典型应用案例”、“北京国家人工智能创新应用先导区示范案例”、获评“北京数字经济企业100强”、福布斯中国人工智能科技企业TOP50、《财富》中国科技50强、2024胡润中国人工智能企业50强，充分彰显了公司在基础数据服务行业的创新实力与影响力。当前，公司已驶入快速发展轨道，将继续保持并提升全面竞争力。",
+              "profileSummary": "公司成立于2005年，是我国最早从事AI训练数据的专业服务商之一，也是目前A股市场唯一一家以训练数据为主业的上市公司。经过20年的发展，公司的数据服务类型已经实现智能语音(语音识别、语音合成等)、计算机视觉、自然语言等多个核心领域全覆盖，可服务于智能驾驶、内容生成、机器人、智慧医疗、智慧教育、智慧金融等22种创新应用场景。",
+              "majorProducts": "词典资源数据库、视频资源数据库、数据资源定制服务、数据资源相关的应用服务、图像资源数据库、文本资源数据库、语音合成数据库、语音识别数据库",
+              "revenueComposition": "智能语音:39.88%;计算机视觉:39.22%;自然语言:13.56%;数据资源相关的应用服务:7.33%",
+              "revenueSegments": [
+                {
+                  "name": "智能语音",
+                  "sharePct": 39.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "计算机视觉",
+                  "sharePct": 39.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自然语言",
+                  "sharePct": 13.56,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "数据资源相关的应用服务",
+                  "sharePct": 7.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "图像素材训练服务",
+                    "category": "人工智能"
+                  },
+                  {
+                    "name": "自然语言训练数据集",
+                    "category": "数据管理系统"
+                  },
+                  {
+                    "name": "语音素材训练服务",
+                    "category": "人工智能"
+                  }
+                ],
+                "knownProducts": [
+                  "图像素材训练服务",
+                  "语音素材训练服务",
+                  "自然语言训练数据集"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "海天瑞声已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：自然语言占收入的13.56%。公司在产业链中的位置是：AI训练数据全栈龙头，其数据集本身就是AI时代的核心交易标的，已实现API按调用量收费，与Cloudflare变现网关的逻辑完全契合，事件能否转化为可确认的经营增量则决定增量大小。只有完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，相关业务的增长才可能改善公司整体盈利。订单、收入确认、产品结构和毛利率变化还需与其他主业表现同时改善；事件关联停留在主题层面，未形成可持续订单或利润贡献会使局部业务亮点难以转化为公司层面的业绩变化。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "7条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26632",
@@ -9,10 +9,10 @@
     "date": "2026-06-30"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 6,
-    "mappedStockCount": 6,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 9131,
@@ -20,8 +20,8 @@
         "stockName": "中航高科",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 20
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 9132,
@@ -29,8 +29,8 @@
         "stockName": "华秦科技",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 9141,
@@ -39,7 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 5
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 9142,
@@ -48,7 +48,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 7
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 9145,
@@ -57,7 +57,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 16
+        "anchorProductCount": 5
       },
       {
         "sourceRowNumber": 9157,
@@ -66,193 +66,40 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 11
+        "anchorProductCount": 4
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 9131,
+        "stockCode": "600862.SH",
+        "stockName": "中航高科",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 9132,
+        "stockCode": "688281.SH",
+        "stockName": "华秦科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 63,
     "selectedCoreProductCount": 11,
     "selectedCompanyCoreProductCount": 11,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 10,
-    "downstreamCandidateCount": 22,
-    "shownUpstreamCount": 10,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 34,
+    "relatedIndustryCandidateCount": 8,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1113000027",
-        "name": "高温合金",
-        "anchorCount": 4,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033256",
-          "1140145709",
-          "1140154022",
-          "1140154024"
-        ],
-        "linkedCoreProductNames": [
-          "核电高筒薄壁异形环件",
-          "燃气轮机机匣",
-          "航天用薄壁高筒环件",
-          "航空发动机机匣"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1113000017",
-        "name": "钛合金",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033256",
-          "1140128115"
-        ],
-        "linkedCoreProductNames": [
-          "航空发动机压气机叶片",
-          "航空发动机机匣"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140009027",
-        "name": "动力控制系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008457"
-        ],
-        "linkedCoreProductNames": [
-          "航空发动机控制系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140000166",
-        "name": "发动机零部件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008457"
-        ],
-        "linkedCoreProductNames": [
-          "航空发动机控制系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1130000746",
-        "name": "钴",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1113000116",
-        "name": "铁",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140009380",
-        "name": "铸造工艺",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1130000754",
-        "name": "镍",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140009026",
-        "name": "高端金属材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008457"
-        ],
-        "linkedCoreProductNames": [
-          "航空发动机控制系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140057998",
-        "name": "航空发动机电子控制器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008457"
-        ],
-        "linkedCoreProductNames": [
-          "航空发动机控制系统"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140008598",
         "name": "铸造高温合金",
@@ -278,18 +125,15 @@
           "name": "铸造高温合金"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000534.SZ",
             "stockName": "万泽股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 14,
         "relevanceScore": 12,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -324,18 +168,15 @@
           "name": "航天用薄壁高筒环件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688239.SH",
             "stockName": "航宇科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 2,
         "relevanceScore": 10,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -369,159 +210,25 @@
           "name": "航空发动机机匣"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "688510.SH",
             "stockName": "航亚科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "688239.SH",
             "stockName": "航宇科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 1,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
           "机匣",
-          "国防军工"
-        ]
-      },
-      {
-        "code": "1140008457",
-        "name": "航空发动机控制系统",
-        "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 航空电子 > 航空电子 > 航空发动机控制系统",
-        "industryPath": [
-          "国防军工",
-          "航空装备",
-          "航空装备",
-          "航空电子",
-          "航空电子",
-          "航空发动机控制系统"
-        ],
-        "level5Industry": {
-          "code": "1200000394",
-          "name": "航空电子"
-        },
-        "level6Industry": {
-          "code": "1200002830",
-          "name": "航空电子"
-        },
-        "level7Product": {
-          "code": "1140008457",
-          "name": "航空发动机控制系统"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "000738.SZ",
-            "stockName": "航发控制",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 4,
-        "downstreamCount": 3,
-        "relevanceScore": 7,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "控制系统",
-          "国防军工"
-        ]
-      },
-      {
-        "code": "1140145709",
-        "name": "燃气轮机机匣",
-        "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 锻造件 > 船舶配套锻造件 > 燃气轮机机匣",
-        "industryPath": [
-          "机械设备",
-          "通用机械",
-          "机械基础件",
-          "锻造件",
-          "船舶配套锻造件",
-          "燃气轮机机匣"
-        ],
-        "level5Industry": {
-          "code": "1200000434",
-          "name": "锻造件"
-        },
-        "level6Industry": {
-          "code": "1200002910",
-          "name": "船舶配套锻造件"
-        },
-        "level7Product": {
-          "code": "1140145709",
-          "name": "燃气轮机机匣"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688239.SH",
-            "stockName": "航宇科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
-        "relevanceScore": 7,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "机匣",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140128115",
-        "name": "航空发动机压气机叶片",
-        "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 航空发动机 > 航空发动机 > 航空发动机压气机叶片",
-        "industryPath": [
-          "国防军工",
-          "航空装备",
-          "航空装备",
-          "航空发动机",
-          "航空发动机",
-          "航空发动机压气机叶片"
-        ],
-        "level5Industry": {
-          "code": "1200000398",
-          "name": "航空发动机"
-        },
-        "level6Industry": {
-          "code": "1200002834",
-          "name": "航空发动机"
-        },
-        "level7Product": {
-          "code": "1140128115",
-          "name": "航空发动机压气机叶片"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688510.SH",
-            "stockName": "航亚科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
-        "relevanceScore": 7,
-        "strongRelevanceScore": 6,
-        "matchedTerms": [
-          "叶片",
           "国防军工"
         ]
       },
@@ -550,18 +257,15 @@
           "name": "地面装备发动机控制系统"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000738.SZ",
             "stockName": "航发控制",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -594,18 +298,138 @@
           "name": "弹用动力控制系统"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000738.SZ",
             "stockName": "航发控制",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 7,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "控制系统",
+          "国防军工"
+        ]
+      },
+      {
+        "code": "1140145709",
+        "name": "燃气轮机机匣",
+        "hierarchyPath": "机械设备 > 通用机械 > 机械基础件 > 锻造件 > 船舶配套锻造件 > 燃气轮机机匣",
+        "industryPath": [
+          "机械设备",
+          "通用机械",
+          "机械基础件",
+          "锻造件",
+          "船舶配套锻造件",
+          "燃气轮机机匣"
+        ],
+        "level5Industry": {
+          "code": "1200000434",
+          "name": "锻造件"
+        },
+        "level6Industry": {
+          "code": "1200002910",
+          "name": "船舶配套锻造件"
+        },
+        "level7Product": {
+          "code": "1140145709",
+          "name": "燃气轮机机匣"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688239.SH",
+            "stockName": "航宇科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 7,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "机匣",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140128115",
+        "name": "航空发动机压气机叶片",
+        "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 航空发动机 > 航空发动机 > 航空发动机压气机叶片",
+        "industryPath": [
+          "国防军工",
+          "航空装备",
+          "航空装备",
+          "航空发动机",
+          "航空发动机",
+          "航空发动机压气机叶片"
+        ],
+        "level5Industry": {
+          "code": "1200000398",
+          "name": "航空发动机"
+        },
+        "level6Industry": {
+          "code": "1200002834",
+          "name": "航空发动机"
+        },
+        "level7Product": {
+          "code": "1140128115",
+          "name": "航空发动机压气机叶片"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688510.SH",
+            "stockName": "航亚科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 7,
+        "strongRelevanceScore": 6,
+        "matchedTerms": [
+          "叶片",
+          "国防军工"
+        ]
+      },
+      {
+        "code": "1140008457",
+        "name": "航空发动机控制系统",
+        "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 航空电子 > 航空电子 > 航空发动机控制系统",
+        "industryPath": [
+          "国防军工",
+          "航空装备",
+          "航空装备",
+          "航空电子",
+          "航空电子",
+          "航空发动机控制系统"
+        ],
+        "level5Industry": {
+          "code": "1200000394",
+          "name": "航空电子"
+        },
+        "level6Industry": {
+          "code": "1200002830",
+          "name": "航空电子"
+        },
+        "level7Product": {
+          "code": "1140008457",
+          "name": "航空发动机控制系统"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "000738.SZ",
+            "stockName": "航发控制",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -638,18 +462,15 @@
           "name": "航空发动机燃烧室喷管外壁环件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688239.SH",
             "stockName": "航宇科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -682,18 +503,15 @@
           "name": "航空燃气轮机控制系统"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000738.SZ",
             "stockName": "航发控制",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -726,18 +544,15 @@
           "name": "核电高筒薄壁异形环件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688239.SH",
             "stockName": "航宇科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
         "relevanceScore": 6,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -745,232 +560,571 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140088352",
-        "name": "民用飞机",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033256",
-          "1140128115"
+        "code": "1200000393",
+        "name": "飞机",
+        "description": "A股飞机行业涵盖整机制造、零部件及航电系统。受关注源于国产大飞机C919商业化加速，叠加国防现代化需求与低空经济政策利好。作为高端制造代表，其具备高技术壁垒和长产业链带动效应，是资本市场聚焦的战略新兴领域。",
+        "stockCount": 3,
+        "starWeight": 14,
+        "level7ProductCount": 5,
+        "relevanceScore": 20,
+        "stocks": [
+          {
+            "stockCode": "600893.SH",
+            "stockName": "航发动力",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600391.SH",
+            "stockName": "航发科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000738.SZ",
+            "stockName": "航发控制",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "航空发动机压气机叶片",
-          "航空发动机机匣"
+        "products": [
+          {
+            "code": "1140145349",
+            "name": "航空发动机摇臂",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞机 > 飞机零部件 > 航空发动机摇臂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000738.SZ",
+                "stockName": "航发控制",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140145347",
+            "name": "航空发动机燃油泵",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞机 > 飞机零部件 > 航空发动机燃油泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000738.SZ",
+                "stockName": "航发控制",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140010005",
+            "name": "航空发动机维修",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞机 > 飞机检修 > 航空发动机维修",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600893.SH",
+                "stockName": "航发动力",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140145614",
+            "name": "航空发动机蜂窝密封件",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞机 > 飞机零部件 > 航空发动机蜂窝密封件",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600391.SH",
+                "stockName": "航发科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140013806",
-        "name": "冶金",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
+        "code": "1210000308",
+        "name": "特种合金",
+        "description": "特种合金指具备耐高温、耐腐蚀等优异性能的金属材料。因广泛应用于航空航天、核电及军工等高精尖领域，契合国产替代与高端制造升级趋势，技术壁垒高且需求刚性，故在A股备受资金关注。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 3,
+        "relevanceScore": 86,
+        "stocks": [
+          {
+            "stockCode": "300855.SZ",
+            "stockName": "图南股份",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688563.SH",
+            "stockName": "航材股份",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688122.SH",
+            "stockName": "西部超导",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
+        "products": [
+          {
+            "code": "1140008599",
+            "name": "变形高温合金",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 特种合金 > 高温合金 > 变形高温合金",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300855.SZ",
+                "stockName": "图南股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688563.SH",
+                "stockName": "航材股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688122.SH",
+                "stockName": "西部超导",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "高温合金"
+            ]
+          },
+          {
+            "code": "1140008598",
+            "name": "铸造高温合金",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 特种合金 > 高温合金 > 铸造高温合金",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300855.SZ",
+                "stockName": "图南股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688563.SH",
+                "stockName": "航材股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688122.SH",
+                "stockName": "西部超导",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "高温合金"
+            ]
+          },
+          {
+            "code": "1140095610",
+            "name": "粉末高温合金",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 特种合金 > 高温合金 > 粉末高温合金",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688563.SH",
+                "stockName": "航材股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "高温合金"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 14,
+    "mappedStockCount": 9,
+    "unmappedStockCount": 5,
+    "level7ProductCount": 34,
+    "candidateIndustryCount": 8,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 9131,
+        "stockCode": "600862.SH",
+        "stockName": "中航高科",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140025342",
-        "name": "国防军工",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008457"
-        ],
-        "linkedCoreProductNames": [
-          "航空发动机控制系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9132,
+        "stockCode": "688281.SH",
+        "stockName": "华秦科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140008768",
-        "name": "导弹系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154022"
-        ],
-        "linkedCoreProductNames": [
-          "航天用薄壁高筒环件"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9133,
+        "stockCode": "603678.SH",
+        "stockName": "火炬电子",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140010058",
-        "name": "工业用燃气轮机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9136,
+        "stockCode": "688122.SH",
+        "stockName": "西部超导",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140012454",
-        "name": "核电站",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154024"
-        ],
-        "linkedCoreProductNames": [
-          "核电高筒薄壁异形环件"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9141,
+        "stockCode": "000534.SZ",
+        "stockName": "万泽股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140009933",
-        "name": "民航领域",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008457"
-        ],
-        "linkedCoreProductNames": [
-          "航空发动机控制系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9142,
+        "stockCode": "688510.SH",
+        "stockName": "航亚科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140014916",
-        "name": "汽车",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9143,
+        "stockCode": "603308.SH",
+        "stockName": "应流股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140008558",
-        "name": "燃气轮机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140145709"
-        ],
-        "linkedCoreProductNames": [
-          "燃气轮机机匣"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9145,
+        "stockCode": "688239.SH",
+        "stockName": "航宇科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 12
       },
       {
-        "code": "1140010060",
-        "name": "玻璃制造",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9146,
+        "stockCode": "300775.SZ",
+        "stockName": "三角防务",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140005129",
-        "name": "电力",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9147,
+        "stockCode": "300855.SZ",
+        "stockName": "图南股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1130000577",
-        "name": "石油化工",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9151,
+        "stockCode": "688563.SH",
+        "stockName": "航材股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 9
       },
       {
-        "code": "1140010056",
-        "name": "航天发动机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
-        ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9155,
+        "stockCode": "600893.SH",
+        "stockName": "航发动力",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140031433",
-        "name": "航天航空",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008598"
+        "sourceRowNumber": 9156,
+        "stockCode": "600391.SH",
+        "stockName": "航发科技",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 9157,
+        "stockCode": "000738.SZ",
+        "stockName": "航发控制",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000393",
+        "name": "飞机",
+        "description": "A股飞机行业涵盖整机制造、零部件及航电系统。受关注源于国产大飞机C919商业化加速，叠加国防现代化需求与低空经济政策利好。作为高端制造代表，其具备高技术壁垒和长产业链带动效应，是资本市场聚焦的战略新兴领域。",
+        "stockCount": 3,
+        "starWeight": 14,
+        "level7ProductCount": 5,
+        "relevanceScore": 20,
+        "stocks": [
+          {
+            "stockCode": "600893.SH",
+            "stockName": "航发动力",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600391.SH",
+            "stockName": "航发科技",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000738.SZ",
+            "stockName": "航发控制",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "铸造高温合金"
+        "products": [
+          {
+            "code": "1140145349",
+            "name": "航空发动机摇臂",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞机 > 飞机零部件 > 航空发动机摇臂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000738.SZ",
+                "stockName": "航发控制",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140145347",
+            "name": "航空发动机燃油泵",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞机 > 飞机零部件 > 航空发动机燃油泵",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000738.SZ",
+                "stockName": "航发控制",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140010005",
+            "name": "航空发动机维修",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞机 > 飞机检修 > 航空发动机维修",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600893.SH",
+                "stockName": "航发动力",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140145614",
+            "name": "航空发动机蜂窝密封件",
+            "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 飞机 > 飞机零部件 > 航空发动机蜂窝密封件",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600391.SH",
+                "stockName": "航发科技",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1210000308",
+        "name": "特种合金",
+        "description": "特种合金指具备耐高温、耐腐蚀等优异性能的金属材料。因广泛应用于航空航天、核电及军工等高精尖领域，契合国产替代与高端制造升级趋势，技术壁垒高且需求刚性，故在A股备受资金关注。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 3,
+        "relevanceScore": 86,
+        "stocks": [
+          {
+            "stockCode": "300855.SZ",
+            "stockName": "图南股份",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688563.SH",
+            "stockName": "航材股份",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688122.SH",
+            "stockName": "西部超导",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140008599",
+            "name": "变形高温合金",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 特种合金 > 高温合金 > 变形高温合金",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300855.SZ",
+                "stockName": "图南股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688563.SH",
+                "stockName": "航材股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688122.SH",
+                "stockName": "西部超导",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "高温合金"
+            ]
+          },
+          {
+            "code": "1140008598",
+            "name": "铸造高温合金",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 特种合金 > 高温合金 > 铸造高温合金",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300855.SZ",
+                "stockName": "图南股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688563.SH",
+                "stockName": "航材股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688122.SH",
+                "stockName": "西部超导",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "高温合金"
+            ]
+          },
+          {
+            "code": "1140095610",
+            "name": "粉末高温合金",
+            "hierarchyPath": "有色金属 > 金属新材料 > 其他金属新材料 > 特种合金 > 高温合金 > 粉末高温合金",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688563.SH",
+                "stockName": "航材股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "高温合金"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -985,9 +1139,1089 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 28,
+    "eligibleSourceRowCount": 14,
+    "totalStockCount": 14,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 12,
+    "excludedNonAShareCount": 2,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 14,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 9155,
+            "stockCode": "600893.SH",
+            "stockName": "航发动力",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "长江系列发动机最主要的配套商，提供技术最密集、价值量最高的核心机单元体，是产业链绝对核心。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600893.SH",
+              "companyName": "航发动力",
+              "companyProfile": "公司是我国大、中、小型军民用航空发动机，大型舰船用燃气轮机动力装置的生产研制和修理基地，是国内唯一能够研制涡喷、涡扇、涡轴、涡桨、活塞等全谱系军用航空发动机的企业，在国际上，是能够自主研制航空发动机产品的少数企业之一。公司坚持聚焦航空发动机及燃气轮机主业，围绕科研生产任务，不断完善生产、技术体系建设，具备涵盖产品全寿命周期的设计、制造、总装、试车整套技术和发动机综合服务保障能力，综合技术水平国内领先。公司拥有一大批高精尖技术和技能人才，并拥有先进的设备、专业化的生产线和国家认可实验室，设有国家认定企业技术中心、博士后科研工作站、难加工材料加工技术研究应用中心，每年取得大量专利和国家级、省部级成果，多项技术处于国内领先水平或接近国际先进水平，并承担多项国家重点型号研制任务和保障任务，肩负我国航空动力事业发展与振兴的历史重任。",
+              "profileSummary": "公司是我国大、中、小型军民用航空发动机，大型舰船用燃气轮机动力装置的生产研制和修理基地，是国内唯一能够研制涡喷、涡扇、涡轴、涡桨、活塞等全谱系军用航空发动机的企业，在国际上，是能够自主研制航空发动机产品的少数企业之一。公司坚持聚焦航空发动机及燃气轮机主业，围绕科研生产任务，不断完善生产、技术体系建设，具备涵盖产品全寿命周期的设计、制造、总装、试车整套技术和发动机综合服务保障能力，综合技术水平国内领先。",
+              "majorProducts": "“西航”铝型材及制品、航空动力5级低气压压气机转子组件、航空动力900型变压器铁芯横剪生产线、航空动力GA731型系列扰性剑杆织机、航空动力TP系列烟气轮机、航空动力WP8型发动机、航空动力安装在波音737飞机上的动力装置、航空动力安装在麦道12飞机上的动力装置、航空动力安装在运七、运八飞机上的涡轮发电装置、航空动力大功率风力发电机、航空动力低压涡轮轴承座、航空动力电感量仪、航空动力高速离心叶轮、航空动力高速线材精轧机组、航空动力各种拉刀、航空动力减速器、航空动力扩散机匣、航空动力螺旋推进器、航空动力膨胀节、航空动力燃气轮机、航空动力石油测井仪器的精密部件、航空动力为200MW汽轮发电机改造生产的盘、航空动力涡轮导向器机匣、航空动力涡轮起动机、航空动力涡扇9型飞机发动机、航空动力硬齿面减速器、航空动力自动扶梯型材拉弯机、华润生化玉米淀粉",
+              "revenueComposition": "航空发动机及衍生产品:93.84%;外贸出口转包:4.21%;其他业务:1.45%;非航空产品及其他:0.5%",
+              "revenueSegments": [
+                {
+                  "name": "航空发动机及衍生产品",
+                  "sharePct": 93.84,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "外贸出口转包",
+                  "sharePct": 4.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "非航空产品及其他",
+                  "sharePct": 0.5,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "航空发动机",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "航空发动机维修",
+                    "category": "飞机检修"
+                  },
+                  {
+                    "name": "航空发动机零部件",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "航空燃气轮机",
+                    "category": "航空发动机"
+                  }
+                ],
+                "knownProducts": [
+                  "航空发动机",
+                  "航空发动机零部件",
+                  "航空燃气轮机",
+                  "航空发动机维修",
+                  "航空零部件加工服务",
+                  "军用舰船燃气轮机",
+                  "民用船舶燃气轮机"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "航发动力与事件的关系已经落在存量主业，而非远期概念：航空发动机及衍生产品占收入的93.84%。公司在产业链中的具体抓手是：长江系列发动机最主要的配套商，提供技术最密集、价值量最高的核心机单元体，是产业链绝对核心。本次事件若改变技术商业化与产品迭代速度，影响会沿着“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；客户认证、量产良率、订单规模、产品收入占比和毛利率比主题热度更有解释力。若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 9156,
+            "stockCode": "600391.SH",
+            "stockName": "航发科技",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "核心配套国产商发的短舱及反推系统，该部分价值量占发动机约25%，是除核心机外价值最高的单元体。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600391.SH",
+              "companyName": "航发科技",
+              "companyProfile": "公司是中国航发成都发动机有限公司作为主要发起人之一发起设立的股份有限公司，于1999年12月28日在成都市工商局注册登记。公司厂区位于“天府之国”——成都，公司股票于2001年12月12日在上海证券交易所上市。公司主营航空发动机和燃气轮机零部件的生产制造，通过ISO9001(国际质量标准)、GJB9001(国军标)和AS9100(国际宇航质量标准)质量体系认证，以及热处理、焊接、无损检测、化学处理、涂层和非传统加工等10种特种工艺NADCAP认证。经过长期与国际、国内一流航空企业合作，公司积累丰富的航空发动机和燃气轮机零部件制造经验，掌握了航空发动机各种机匣制造技术，是全球主要燃机叶片专业化制造基地，具备复杂钣金焊接组合件加工能力和先进反推制造能力，是多家国际一流航空企业的战略供应商。目前，公司拥有国际、国内先进的航空发动机零部件制造标准，掌握多项与国际接轨的关键核心技术，具备较强的研发和生产制造能力。公司坚持秉承“国家利益至上”的价值观，坚定履行“动力强军、科技报国”的使命，坚决实施“创新驱动、质量制胜、人才强企”三大发展战略，积极构建“小核心、大协作、专业化、开放型”科研生产体系，努力成为“世界一流航空发动机企业”。",
+              "profileSummary": "公司主营航空发动机和燃气轮机零部件的生产制造，通过ISO9001(国际质量标准)、GJB9001(国军标)和AS9100(国际宇航质量标准)质量体系认证，以及热处理、焊接、无损检测、化学处理、涂层和非传统加工等10种特种工艺NADCAP认证。目前，公司拥有国际、国内先进的航空发动机零部件制造标准，掌握多项与国际接轨的关键核心技术，具备较强的研发和生产制造能力。",
+              "majorProducts": "成发科技A17-E560(E550)机床、成发科技DMC125U设备、成发科技F63.100机床、成发科技GE燃机静子环类零件、成发科技GE燃烧室火焰筒类零件、成发科技Sample parts for SKK、成发科技蜂窝密封环形件、成发科技激光切割/焊接加工中心、成发科技结构密封件、成发科技理化检测、成发科技气动摇架、成发科技燃烧室内壁、成发科技三座标测量机、成发科技数控冲床TC190R机床、成发科技涡轮排气机匣、成发科技细纱机牵伸传动装置改造、成发科技压气机静子机匣、成发科技压气机轴承空气密封管组件、成发科技中介机匣、涡轮排气机匣",
+              "revenueComposition": "内贸航空及衍生产品:66.38%;外贸产品销售:31.89%;其他业务:1.27%;非航空产品及其他:0.46%",
+              "revenueSegments": [
+                {
+                  "name": "内贸航空及衍生产品",
+                  "sharePct": 66.38,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "外贸产品销售",
+                  "sharePct": 31.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "非航空产品及其他",
+                  "sharePct": 0.46,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "航空发动机",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "航空发动机压气机叶片",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "航空发动机机匣",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "航空发动机蜂窝密封件",
+                    "category": "飞机零部件"
+                  },
+                  {
+                    "name": "航空燃气轮机",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "航空燃气轮机零部件",
+                    "category": "航空发动机"
+                  }
+                ],
+                "knownProducts": [
+                  "航空发动机",
+                  "航空发动机压气机叶片",
+                  "航空发动机机匣",
+                  "航空燃气轮机",
+                  "航空燃气轮机零部件",
+                  "航空发动机蜂窝密封件",
+                  "航空轴承",
+                  "燃气轮机压气机叶片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "航发科技与事件存在真实业务交集：公司已有航空发动机、航空发动机压气机叶片、航空发动机机匣，与核心配套国产商发的短舱及反推系统，该部分价值量占发动机约25%，是除核心机外价值最高的单元体所处的产业环节一致。内贸航空及衍生产品（66.38%）、非航空产品及其他（0.46%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 9131,
+            "stockCode": "600862.SH",
+            "stockName": "中航高科",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "与中国航发商发成立合资公司，是商用发动机复材风扇叶片及机匣的核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600862.SH",
+              "companyName": "中航高科",
+              "companyProfile": "公司是中国航空工业集团有限公司旗下沪市A股上市公司，是主要从事航空新材料研发生产、高端智能装备研发制造的综合性大型国有控股上市企业。公司前身源于1956年成立的南通机床厂，1994年5月在上海证券交易所挂牌上市。2015年公司进行了重大资产重组，以非公开发行股票方式购买中航复合材料有限责任公司、北京优材京航生物科技有限公司、北京优材百慕航空器材有限公司等3家公司100%股权。公司重组后，各业务领域以子公司形式发展，原公司本部机床业务分立为独资子公司，依托中航工业及所属单位优势资源，将原有机床业务改造升级为数控机床及航空专用装备业务，加之重组注入的新材料业务，公司已成为新材料及装备制造领域具有相当规模和行业竞争优势的上市公司。目前业务涵盖航空新材料、高端智能装备、轨道交通、汽车、医疗器械、装备制造、房地产、创新创业投资等。",
+              "profileSummary": "2015年公司进行了重大资产重组，以非公开发行股票方式购买中航复合材料有限责任公司、北京优材京航生物科技有限公司、北京优材百慕航空器材有限公司等3家公司100%股权。目前业务涵盖航空新材料、高端智能装备、轨道交通、汽车、医疗器械、装备制造、房地产、创新创业投资等。",
+              "majorProducts": "参股成都新兴创业投资有限公司、房地产开发、房屋买卖、飞机用刹车装置、骨科人体植入物、航空复合材料、建筑安装工程施工、江苏东辰公路工程、南通科技TONMAC床身型数控铣床、南通科技TONMAC高速精密车床、南通科技TONMAC立式加工中心、南通科技TONMAC平面磨床、南通科技TONMAC三坐标仿形铣床、南通科技TONMAC升降台型数控铣床、南通科技TONMAC数控车床、南通科技TONMAC数控轧辊铣床、南通科技TONMAC数显摇臂万能铣床、南通科技TONMAC摇臂万能铣床、南通科技TONMAC钻铣床、南通科技草地王乘骑式草坪割草机、南通科技草地王电启动草坪割草机、南通科技草地王随进式草坪割草机、南通科技草地王自走式草坪割草机、南通科技石英晶体谐振器、南通科技石英晶体振荡器、南通科技万通城、上海纵横国际贸易有限公司",
+              "revenueComposition": "航空新材料:92.86%;航空相关设备:5.38%;租赁业务:0.99%;其他:0.63%;机床产品:0.15%",
+              "revenueSegments": [
+                {
+                  "name": "航空新材料",
+                  "sharePct": 92.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "航空相关设备",
+                  "sharePct": 5.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁业务",
+                  "sharePct": 0.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "机床产品",
+                  "sharePct": 0.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "功能性树脂预浸料",
+                  "双马树脂预浸料",
+                  "固化环氧树脂预浸料",
+                  "耐久铝蜂窝",
+                  "聚酰亚胺树脂预浸料",
+                  "芳纶纸蜂窝",
+                  "机轮附件",
+                  "航空座椅安全带"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中航高科与新闻存在业务方向上的交集：与中国航发商发成立合资公司，是商用发动机复材风扇叶片及机匣的核心供应商；公司当前收入主要来自航空新材料（92.86%）、航空相关设备（5.38%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对事件能否转化为可确认的经营增量的推动只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能进入报表，订单、收入确认、产品结构和毛利率变化决定这一交集能否升级为实际增量；事件关联停留在主题层面，未形成可持续订单或利润贡献是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 9132,
+            "stockCode": "688281.SH",
+            "stockName": "华秦科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "通过子公司上海瑞华晟布局陶瓷基复合材料，配套长江1000/2000，技术与规模化领先。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688281.SH",
+              "companyName": "华秦科技",
+              "companyProfile": "公司成立于1992年12月，位于西安高新技术产业开发区西部大道188号，国家二级保密单位，高新技术企业。公司以解决我国国防科技工业急需为己任，紧跟国家重大型号装备科研生产进程，致力于国防武器装备的隐身、军事设施的伪装和各类装备部件表面防护等特种功能材料的研发、生产与技术服务，核心技术成果先后获得“军队关键技术与工程化研究一等奖”、“国家科学技术进步一等奖”、“国防技术发明一等奖”、“国家技术发明二等奖”，综合技术达到国际先进水平，主要技术达到国际领先水平。公司始终坚持以国家重大战略需求为牵引，秉承“科技强军、实业报国”的使命，坚持特种功能材料核心主业不动摇，努力将公司打造成为我国新材料领域，国内领先、国际一流的创新性企业和我国国防和军队现代化建设领域的核心供应商，助力提升国防武器装备和设施的军事威慑能力、战场生存与突防能力。同时，公司围绕航空发动机产业链、先进新材料产业领域持续进行业务布局，开拓航空发动机零部件加工、航空发动机用陶瓷基复合材料及声学超构材料等业务或产品，拓展公司服务国防及国家经济建设的范围，提升公司持续发展的能力。",
+              "profileSummary": "公司以解决我国国防科技工业急需为己任，紧跟国家重大型号装备科研生产进程，致力于国防武器装备的隐身、军事设施的伪装和各类装备部件表面防护等特种功能材料的研发、生产与技术服务，核心技术成果先后获得“军队关键技术与工程化研究一等奖”、“国家科学技术进步一等奖”、“国防技术发明一等奖”、“国家技术发明二等奖”，综合技术达到国际先进水平，主要技术达到国际领先水平。同时，公司围绕航空发动机产业链、先进新材料产业领域持续进行业务布局，开拓航空发动机…",
+              "majorProducts": "电磁屏蔽材料、高仿真伪装遮障、高效热阻材料、结构隐身材料、特种功能材料技术服务、伪装器材、伪装网、隐身涂层材料、重防腐材料",
+              "revenueComposition": "产品销售及技术服务:89.92%;零部件加工制造:10.06%;其他业务:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "产品销售及技术服务",
+                  "sharePct": 89.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "零部件加工制造",
+                  "sharePct": 10.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "军用伪装网",
+                  "地面装备用高仿真伪装遮障",
+                  "武器结构隐身材料",
+                  "武器耐温隐身涂层材料",
+                  "航空发动机零部件加工服务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华秦科技现有业务与通过子公司上海瑞华晟布局陶瓷基复合材料，配套长江1000/2000，技术与规模化领先处于同一产业方向，收入主体为产品销售及技术服务（89.92%）、零部件加工制造（10.06%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变技术商业化与产品迭代速度，只有经由“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，业务交集才会转化为业绩增量。客户认证、量产良率、订单规模、产品收入占比和毛利率若逐步增强，相关业务的重要性会提高；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 9141,
+            "stockCode": "000534.SZ",
+            "stockName": "万泽股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "深度参与国产商发配套，是CJ1000/2000发动机核心热端部件（涡轮叶片）的主要承制单位和金牌供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000534.SZ",
+              "companyName": "万泽股份",
+              "companyProfile": "公司前身为汕头电力发展股份有限公司，成立于1992年，1994年1月在深交所上市。2013年5月，公司更名为“万泽实业股份有限公司”。2019年3月完成重大资产置换后，主营业务由房地产开发与销售变更为微生态活菌产品、高温合金及其制品的研发、生产及销售。在微生态活菌产品方面，公司是国内唯一专注于消化和妇科两大微生态系统的企业，主要产品双歧杆菌乳杆菌三联活菌片(商品名称：“金双歧”)和阴道用乳杆菌活菌胶囊(商品名称：“定君生”)，均是由人体原籍菌组成的微生态活菌制品，连续多年被纳入国家医保目录，在细分领域内具有较高的市场知名度和市场占有率。在高温合金业务方面，公司是国内极少数具备从高温合金材料研发到部件制备全流程研制能力的民营企业。公司专注高温合金材料和核心部件的研发制造，致力于研发、生产具有自主知识产权和国际竞争力的精密铸造叶片、高温合金粉末盘件、高温母合金及其合金粉末等。目前公司所生产的定向、单晶及等轴晶叶片和粉末涡轮盘等产品已先后在我国多型号航空发动机、燃气轮机等装备中获得应用。",
+              "profileSummary": "2019年3月完成重大资产置换后，主营业务由房地产开发与销售变更为微生态活菌产品、高温合金及其制品的研发、生产及销售。目前公司所生产的定向、单晶及等轴晶叶片和粉末涡轮盘等产品已先后在我国多型号航空发动机、燃气轮机等装备中获得应用。",
+              "majorProducts": "高温合金及其制品的研发、生产及销售、微生态活菌产品",
+              "revenueComposition": "金双歧:46.65%;高温合金材料销售:25.84%;定君生:25.05%;其他业务:1.99%;金属检测:0.39%;微生态大健康产品:0.08%",
+              "revenueSegments": [
+                {
+                  "name": "金双歧",
+                  "sharePct": 46.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高温合金材料销售",
+                  "sharePct": 25.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "定君生",
+                  "sharePct": 25.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金属检测",
+                  "sharePct": 0.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "微生态大健康产品",
+                  "sharePct": 0.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "双歧杆菌乳杆菌三联活菌",
+                  "阴道用乳杆菌活菌胶囊",
+                  "铸造高温合金",
+                  "金属检测",
+                  "益生菌固体饮料"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "万泽股份的业务范围能够覆盖深度参与国产商发配套，是CJ1000/2000发动机核心热端部件（涡轮叶片）的主要承制单位和金牌供应商所处的产业环节，但当前金双歧（46.65%）、高温合金材料销售（25.84%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”完成兑现，并在订单、收入确认、产品结构和毛利率变化上形成持续改善；若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 9142,
+            "stockCode": "688510.SH",
+            "stockName": "航亚科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "为CJ1000/2000提供高、低压压气机叶片，已进入国产商发研发体系并承担关键叶片研制工作。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688510.SH",
+              "companyName": "航亚科技",
+              "companyProfile": "公司是一家专注于航空发动机和燃气轮机关键零部件及医疗骨科植入锻件工程化研发、专业化制造的高新技术企业，于2020年12月16日在上海证券交易所科创板上市。主要产品包括航空发动机压气机叶片、转动件及结构件(整体叶盘及整流器、机匣环形件、涡轮盘及压气机盘等盘环件)、医疗骨科植入锻件等高性能零部件。在航空发动机及燃气轮机业务方面，公司客户覆盖了中国航发、法国赛峰、英国罗尔斯-罗伊斯、美国GE航空等国内外主流发动机厂商及国内发动机设计院所。已先后开发多型国际民用航空发动机机型压气机叶片，产品已批量应用于主流民用航空发动机；公司与国内知名燃气轮机用户合作推进燃气轮机国产化进程，并牵头承担国家级航空发动机科研项目。在医疗骨科关节业务方面，公司依托先进的精锻技术制造医疗植入物的杯、柄、托、板四大类精密锻件，已成为国内医疗骨科植入锻件行业知名供应商，在中国市场服务于国内外多家知名医疗骨科关节品牌制造企业，国内医疗骨科植入件市场占有率前十名厂商中包括强生医疗、施乐辉、威高骨科、爱康医疗(子公司英国JRI)等均为公司长期稳定战略客户。自成立以来，公司先后承担了多个国家、省、市重大航空发动机关键零部件制造科研攻关任务，包括钛合金、高温合金压气机叶片精锻技术研究及应用、涡轮盘先进加工技术研究、整体叶盘研发及产业化等项目。公司承担的某部门科研项目符合国家重大科技专项之“大型飞机”专项内容的基础科研项目。",
+              "profileSummary": "主要产品包括航空发动机压气机叶片、转动件及结构件(整体叶盘及整流器、机匣环形件、涡轮盘及压气机盘等盘环件)、医疗骨科植入锻件等高性能零部件。在医疗骨科关节业务方面，公司依托先进的精锻技术制造医疗植入物的杯、柄、托、板四大类精密锻件，已成为国内医疗骨科植入锻件行业知名供应商，在中国市场服务于国内外多家知名医疗骨科关节品牌制造企业，国内医疗骨科植入件市场占有率前十名厂商中包括强生医疗、施乐辉、威高骨科、爱康医疗(子公司英国JRI)等均为公…",
+              "majorProducts": "航亚科技骨科植入物锻件、航亚科技航空发动机用压气机叶片、航亚科技整体叶盘、人工创伤类-骨板、人工髋关节-股骨柄、人工髋关节-髋臼杯、人工膝关节-胫骨托",
+              "revenueComposition": "航空产品:90.62%;医疗产品:8.13%;其他业务:1.25%",
+              "revenueSegments": [
+                {
+                  "name": "航空产品",
+                  "sharePct": 90.62,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "医疗产品",
+                  "sharePct": 8.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "航空发动机压气机叶片",
+                    "category": "航空发动机"
+                  }
+                ],
+                "knownProducts": [
+                  "髋关节柄件",
+                  "髋臼杯",
+                  "胫骨平台",
+                  "航空发动机压气机叶片",
+                  "航空发动机压气机盘",
+                  "航空发动机机匣",
+                  "航空涡轮发动机涡轮盘"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "航亚科技与事件存在真实业务交集：公司已有航空发动机压气机叶片，与为CJ1000/2000提供高、低压压气机叶片，已进入国产商发研发体系并承担关键叶片研制工作所处的产业环节一致。航空产品（90.62%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 9145,
+            "stockCode": "688239.SH",
+            "stockName": "航宇科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国产商发CJ1000/2000系列发动机环形锻件的主要研制单位，在关键部位占据主要份额。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688239.SH",
+              "companyName": "航宇科技",
+              "companyProfile": "公司是主要从事航空难变形金属材料环形锻件研发、生产和销售的高新技术企业，主要产品为航空发动机环形锻件。此外，公司产品亦应用于航天、燃气轮机、能源、水下深潜器、核电等高端装备领域。公司已建成了专业齐备、来源广泛、梯度合理的人力资源团队，致力于特种合金精密环锻件的研究和探索，在新材料应用、近净成形先进制造工艺、数字仿真工艺设计制造一体化、智能制造技术应用等方面持续创新。公司已成为我国国产航空发动机环形锻件的主研制单位之一，全面参与国内航空发动机环锻件研制，也是全球商用航空发动机机匣及环形锻件在亚太地区的主要供应商之一。公司产品涵盖新一代国产军用航空发动机、长江系列国产商用航空发动机、国际主流窄/宽体客机新一代航空发动机等。公司是国家企业技术中心、工信部首批专精特新“小巨人”企业、国家知识产权优势企业、国家智能制造试点示范企业。未来，公司将继续秉承“诚信、和谐、创新、卓越”企业理念，基于公司行业领先的航空难变形金属材料环形锻件塑性成形技术，持续进行科技创新，并通过数字化管理、智能化流程、信息化驱动等，提升智能化生产水平，进一步提高核心竞争力；积极融入全球航空产业链、走国际化发展的道路，实现境内外航空市场“两翼齐飞”，致力于成为全球技术领先的以环锻件为核心产品的航空发动机零部件主流供应商。",
+              "profileSummary": "公司是主要从事航空难变形金属材料环形锻件研发、生产和销售的高新技术企业，主要产品为航空发动机环形锻件。此外，公司产品亦应用于航天、燃气轮机、能源、水下深潜器、核电等高端装备领域。",
+              "majorProducts": "风电用环件、航空发动机环形锻件、航空发动机机匣、航天用环形锻件、核电用环件、燃机用环形锻件、燃机用机匣、钛环",
+              "revenueComposition": "航空锻件:72.83%;燃气轮机锻件:13.68%;其他锻件:6.29%;航天锻件:5.55%;其他高端装备锻件:1.65%",
+              "revenueSegments": [
+                {
+                  "name": "航空锻件",
+                  "sharePct": 72.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "燃气轮机锻件",
+                  "sharePct": 13.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他锻件",
+                  "sharePct": 6.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "航天锻件",
+                  "sharePct": 5.55,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他高端装备锻件",
+                  "sharePct": 1.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "航空发动机机匣",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "航空发动机燃烧室喷管外壁环件",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "核电高筒薄壁异形环件",
+                    "category": "核电设备"
+                  },
+                  {
+                    "name": "燃气轮机机匣",
+                    "category": "船舶配套锻造件"
+                  },
+                  {
+                    "name": "航天用薄壁高筒环件",
+                    "category": "通用金属零部件"
+                  },
+                  {
+                    "name": "航空发动机压缩机级间挡圈",
+                    "category": "航空发动机"
+                  }
+                ],
+                "knownProducts": [
+                  "航空发动机压缩机级间挡圈",
+                  "航空发动机固定环",
+                  "航空发动机封严环",
+                  "航空发动机支承环",
+                  "航空发动机整流环",
+                  "航空发动机机匣",
+                  "航空发动机涡轮导向环",
+                  "航空发动机燃烧室喷管外壁环件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "航宇科技与事件存在真实业务交集：公司已有航空发动机机匣、航空发动机燃烧室喷管外壁环件、核电高筒薄壁异形环件，与国产商发CJ1000/2000系列发动机环形锻件的主要研制单位，在关键部位占据主要份额所处的产业环节一致。航空锻件（72.83%）、航天锻件（5.55%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 9157,
+            "stockCode": "000738.SZ",
+            "stockName": "航发控制",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内航发控制系统龙头，是国产大飞机发动机控制系统唯一的机械液压关键执行机构供应商，卡位稀缺。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000738.SZ",
+              "companyName": "航发控制",
+              "companyProfile": "公司是国务院国资委直属军工企业中国航空发动机集团有限公司的核心业务板块之一，也是国家定点专业从事航空发动机及燃气轮机控制系统研制生产的核心企业。作为国内航空发动机控制系统行业的领军企业，全方位参与国内所有在研在役军、民用航空发动机的研制生产，掌握了支撑全谱系的航空发动机及燃气轮机控制系统设计、制造、试验和服务保障的关键核心技术。公司坚持“聚焦主业、产融结合、规范治理、回报股东”的理念，持续推动高质量发展走深走实。公司主要从事航空发动机及燃气轮机(简称两机)控制系统、国际合作、控制系统技术衍生产品三大业务。公司核心业务为“两机”控制系统，产品涉及控制、机械、液压等多专业复杂技术，在制造环节需要应用大量特种工艺。公司利用在航空发动机控制系统领域积累的技术及质量控制等优势，积极开拓国际航空转包生产和控制系统技术衍生产业。公司建有国家级重点实验室、国家认定技术中心、博士后工作站、国家二级计量检测实验室、国家级理化检测中心和国内燃油附件行业唯一的定型/鉴定试验室、国内燃油附件行业内领先的模拟试验台和振动试验台等为代表的创新平台，持续推进知识产权工程工作，实施专利战略研究，促进技术创新能力快速提升。",
+              "profileSummary": "公司是国务院国资委直属军工企业中国航空发动机集团有限公司的核心业务板块之一，也是国家定点专业从事航空发动机及燃气轮机控制系统研制生产的核心企业。公司主要从事航空发动机及燃气轮机(简称两机)控制系统、国际合作、控制系统技术衍生产品三大业务。",
+              "majorProducts": "传感器、弹用动力控制系统关键零部件、地面战车类高端电液作动装置、发动机泵壳体组件及其他精密零件、发动机控制系统及衍生产品、飞控系统、非航空产品及其他、国际合作、航空发动机及燃气轮机控制系统、航空发动机摇臂、机电液控制用高精度电磁阀、燃油系统滑阀偶件",
+              "revenueComposition": "航空发动机及燃气轮机控制系统:88.6%;国际合作业务:7.78%;控制系统技术衍生品:3.62%",
+              "revenueSegments": [
+                {
+                  "name": "航空发动机及燃气轮机控制系统",
+                  "sharePct": 88.6,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "国际合作业务",
+                  "sharePct": 7.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "控制系统技术衍生品",
+                  "sharePct": 3.62,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "地面装备发动机控制系统",
+                    "category": "装甲兵器"
+                  },
+                  {
+                    "name": "航空发动机控制系统",
+                    "category": "航空电子"
+                  },
+                  {
+                    "name": "航空燃气轮机控制系统",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "弹用动力控制系统",
+                    "category": "导弹"
+                  },
+                  {
+                    "name": "航空发动机摇臂",
+                    "category": "飞机零部件"
+                  },
+                  {
+                    "name": "航空发动机泵壳体组件",
+                    "category": "航空发动机"
+                  }
+                ],
+                "knownProducts": [
+                  "地面战车类高端电液作动装置",
+                  "地面装备发动机控制系统",
+                  "航空发动机泵壳体组件",
+                  "航空燃气轮机控制系统",
+                  "航空发动机控制系统",
+                  "飞控系统",
+                  "航空发动机摇臂",
+                  "航空发动机燃油泵"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "航发控制的事件暴露较为直接：航空发动机及燃气轮机控制系统（88.6%）、控制系统技术衍生品（3.62%）合计约占收入的92.22%，相关业务不是边缘尝试；具体业务抓手是：国内航发控制系统龙头，是国产大飞机发动机控制系统唯一的机械液压关键执行机构供应商，卡位稀缺。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 9133,
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "子公司立亚新材是国内航空级高性能陶瓷纤维龙头，为商用发动机提供上游关键材料。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603678.SH",
+              "companyName": "火炬电子",
+              "companyProfile": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。2015年1月，公司在上海证券交易所上市。公司系国家高新技术企业，连续13年位列中国电子元器件百强企业榜单。拥有CNAS实验室认可的火炬电子实验室、省级企业技术中心、省级工程研究中心，设立国家博士后科研工作站，先后通过ISO9001质量管理体系、ISO14001环境管理体系、ISO45001职业健康安全管理体系、SA8000社会责任管理体系认证和IATF16949质量管理体系等资质认证。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。全力推进产品核心技术的自主研发，在推动内生增长的同时，积极向具有渠道和技术协同效应的其他类型元器件产品延伸，以“传承创新、百年火炬”为企业愿景，用高质量、高效率的发展促进产业升级，为我国电子元器件和新材料产业的发展做出贡献。",
+              "profileSummary": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。",
+              "majorProducts": "EMI 电源滤波器、IGBT、MOSFET、SIP模块、薄膜电路、薄膜无源集成器件、超级电容器、第三代功率器件、电阻器、定制化特种元器件、火炬电子多芯组陶瓷电容器、火炬电子片式多层陶瓷电容器、火炬电子引线式多层陶瓷电容器、模拟IC、钽电容器、陶瓷电容器、微波介质频率器件、微波芯片电容器",
+              "revenueComposition": "国际贸易业务:61.43%;元器件贸易:33.08%;陶瓷材料:4.96%;其他业务:0.53%",
+              "revenueSegments": [
+                {
+                  "name": "国际贸易业务",
+                  "sharePct": 61.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "元器件贸易",
+                  "sharePct": 33.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "陶瓷材料",
+                  "sharePct": 4.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "聚碳硅烷",
+                  "电子元器件贸易",
+                  "单层陶瓷电容器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "超级电容器",
+                  "钽电容器",
+                  "射频薄膜无源集成器件",
+                  "微波天线"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "火炬电子的业务范围能够覆盖子公司立亚新材是国内航空级高性能陶瓷纤维龙头，为商用发动机提供上游关键材料所处的产业环节，但当前国际贸易业务（61.43%）、元器件贸易（33.08%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”完成兑现，并在订单、收入确认、产品结构和毛利率变化上形成持续改善；若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 9136,
+            "stockCode": "688122.SH",
+            "stockName": "西部超导",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司生产的大规格GH4738棒材已通过某型号商用航空发动机部件考核，是重要的上游材料供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688122.SH",
+              "companyName": "西部超导",
+              "companyProfile": "公司成立于西安经济技术开发区，2019年7月在上海证券交易所科创板上市。公司专注于超导产品、高端钛合金材料、高性能高温合金材料的研发、生产和销售。公司秉承“服务国家造福人类”的企业宗旨，产品定位于“国内空白、国际先进”，瞄准国内紧缺、空缺领域，解决了航空、能源、医疗的多项国家“卡脖子”急需。成立二十年间，公司为国家做成了三件事：一是建成铌钛(NbTi)棒、超导线材、超导磁体的全流程生产企业，实现了我国超导线材及应用产业化“零的突破”；二是自主研发生产出三种损伤容限型钛合金棒丝材，填补国内空白，应用于新一代战机、大运飞机、国产大飞机、新型发动机、舰船潜艇、兵器等领域；三是突破高性能高温合金工程化多项关键技术，产品性能达国内先进水平，补齐我国先进航空发动机、燃气轮机用高性能高温合金“短板”，解决长期依赖进口的被动局面，实现产品进口替代。走出了一条实验室成果产业化的成功之路。公司依托“超导材料制备国家工程实验室”“特种合金制国家地方联合工程实验室”等创新平台，开展新材料、新工艺、新装备等研发和工程化，先后承担国家、省、市、区等各类科技项目300余项，取得400余项发明专利。公司持续引进高素质人才，加强研发团队建设，锻造了一支从事新材料及装备研发、中试和产业化的高端人才队伍，其中超导材料制备及应用技术创新团队，在2023年首次以党中央、国务院名义开展的“国家工程师奖”表彰活动中，被授予“国家卓越工程师团队”称号。",
+              "profileSummary": "公司专注于超导产品、高端钛合金材料、高性能高温合金材料的研发、生产和销售。成立二十年间，公司为国家做成了三件事：一是建成铌钛(NbTi)棒、超导线材、超导磁体的全流程生产企业，实现了我国超导线材及应用产业化“零的突破”；二是自主研发生产出三种损伤容限型钛合金棒丝材，填补国内空白，应用于新一代战机、大运飞机、国产大飞机、新型发动机、舰船潜艇、兵器等领域；三是突破高性能高温合金工程化多项关键技术，产品性能达国内先进水平，补齐我国先进航空发…",
+              "majorProducts": "MgB2线材、Nb3Sn超导线材、NbTi超导线材、NbTi锭棒、棒材、变形高温合金、超导磁体、高温合金母合金、丝材",
+              "revenueComposition": "高端钛合金材料:53.44%;超导产品:30.61%;高性能高温合金材料:10.94%;其他业务:5.01%",
+              "revenueSegments": [
+                {
+                  "name": "高端钛合金材料",
+                  "sharePct": 53.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "超导产品",
+                  "sharePct": 30.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高性能高温合金材料",
+                  "sharePct": 10.94,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "变形高温合金",
+                    "category": "高温合金"
+                  },
+                  {
+                    "name": "铸造高温合金",
+                    "category": "高温合金"
+                  }
+                ],
+                "knownProducts": [
+                  "铌钛合金棒",
+                  "铌钛合金锭",
+                  "铌钛超导线材",
+                  "钛合金棒",
+                  "变形高温合金",
+                  "铸造高温合金"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "西部超导的事件逻辑具备真实业务底座，但尚不足以代表全部公司：高性能高温合金材料占收入的10.94%。公司与事件的具体联系在于：公司生产的大规格GH4738棒材已通过某型号商用航空发动机部件考核，是重要的上游材料供应商，对应的核心变量是事件能否转化为可确认的经营增量。若这一变量沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，订单、收入确认、产品结构和毛利率变化既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；事件关联停留在主题层面，未形成可持续订单或利润贡献则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 9143,
+            "stockCode": "603308.SH",
+            "stockName": "应流股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "为CJ1000/2000开发多款机匣、叶片产品，是铸造端代表供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603308.SH",
+              "companyName": "应流股份",
+              "companyProfile": "公司自1990年进入铸造行业以来，坚持科技创新引领产业升级，建立了以铸造为源头，涵盖热等静压、机械加工和喷涂，以及母合金、陶瓷芯在内的高端装备零部件完整生产体系，装备水平、技术能力和产业规模行业领先，产品主要服务于航空航天、燃气轮机、核能核电、海洋工程、油气化工、工矿设备和流体机械等高端装备领域，出口40多个国家和地区，服务100多家全球行业龙头客户，是国际知名高端装备关键零部件制造企业，是全球航空发动机、燃气轮机、民用核电等高端装备制造产业链重要成员。通过实施“产业链延伸、价值链延伸”，实现高端部件、航空科技和先进材料三大业务协同推进。航空发动机和燃气轮机高温合金热端部件，核电站主泵泵壳、金属保温层、乏燃料格架、中子吸收和辐射屏蔽材料，中小型涡轴发动机、混合动力系统、大载重高原无人直升机等产品达到国内先进乃至国际领先水平。",
+              "profileSummary": "公司自1990年进入铸造行业以来，坚持科技创新引领产业升级，建立了以铸造为源头，涵盖热等静压、机械加工和喷涂，以及母合金、陶瓷芯在内的高端装备零部件完整生产体系，装备水平、技术能力和产业规模行业领先，产品主要服务于航空航天、燃气轮机、核能核电、海洋工程、油气化工、工矿设备和流体机械等高端装备领域，出口40多个国家和地区，服务100多家全球行业龙头客户，是国际知名高端装备关键零部件制造企业，是全球航空发动机、燃气轮机、民用核电等高端装备…",
+              "majorProducts": "应流超级奥氏体不锈钢阀体、应流大型地面采矿设备-电铲履带板、应流大型地下采矿设备-输送机、应流电站高压主气阀阀体、应流电站耐高温阀门阀体、应流非公路重载大型矿用卡车后轮、应流非公路重载大型矿用卡车后桥、应流高压加氢阀门阀体、应流哈氏合金阀体、应流核电站泵泵壳、应流核电站泵叶轮、应流核级泵叶轮、导叶、应流核级阀门、应流核一级主泵泵壳、应流蒙乃尔合金阀体、应流镍基合金高压氧阀阀体、应流双相不锈钢阀体、应流天然气长输管线压缩机、应流涡轮燃气轮机压缩机、应流英康乃尔合金阀体",
+              "revenueComposition": "机械装备构件:56.61%;泵及阀门零件:40.49%;其他业务:2.9%",
+              "revenueSegments": [
+                {
+                  "name": "机械装备构件",
+                  "sharePct": 56.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "泵及阀门零件",
+                  "sharePct": 40.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "压盖",
+                  "叶轮",
+                  "泵壳",
+                  "泵盖",
+                  "泵轴",
+                  "轴承架",
+                  "交叉横梁",
+                  "摇臂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "应流股份的主要经营内容是机械装备构件（56.61%）、泵及阀门零件（40.49%），具体产品集中在压盖、叶轮、泵壳、泵盖。“为CJ1000/2000开发多款机匣、叶片产品，是铸造端代表供应商”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善事件能否转化为可确认的经营增量，也需要先补上产品落地和客户导入，再经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才可能影响业绩。订单、收入确认、产品结构和毛利率变化没有同步改善时，股价反应更可能来自主题交易；若事件关联停留在主题层面，未形成可持续订单或利润贡献，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 9146,
+            "stockCode": "300775.SZ",
+            "stockName": "三角防务",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "是商发长江1000、长江2000系列的主要盘类件核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300775.SZ",
+              "companyName": "三角防务",
+              "companyProfile": "公司是一家研制生产航空航天、船舶等恒业锻件的高新技术企业，公司生产的特种合金锻件，主要用于制造飞机机身结构件及航空发动机盘件。公司目前已进入国内各大主机厂的供应商名录，主要产品参与空军、海军重要装备的设计定型，已成为主要的零部件供应商。公司产品目前已应用在新一代战斗机、新一代运输机及新一代直升机中，并为各类型国产航空发动机供应主要锻件，公司拥有较强的技术研发实力和生产制造能力，建有“陕西航空大型部件锻压工程研究中心”和“西安市难变形材料成型工程技术研究中心”。公司发明专利技术水平处于行业领先，并且在军工领域已经得到充分应用。公司已经取得了生产军工产品所需资质，具备了生产军品的生产资格和保密资质。",
+              "profileSummary": "公司是一家研制生产航空航天、船舶等恒业锻件的高新技术企业，公司生产的特种合金锻件，主要用于制造飞机机身结构件及航空发动机盘件。公司目前已进入国内各大主机厂的供应商名录，主要产品参与空军、海军重要装备的设计定型，已成为主要的零部件供应商。",
+              "majorProducts": "三角防务航空发动机,地面和舰用燃气轮机盘类件、三角防务客机,战斗机机身结构件、三角防务起落架系统结构件、三角防务直升机结构件",
+              "revenueComposition": "模锻件产品:92.12%;自由锻件产品:4.9%;其他:2.98%",
+              "revenueSegments": [
+                {
+                  "name": "模锻件产品",
+                  "sharePct": 92.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自由锻件产品",
+                  "sharePct": 4.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "航空发动机机匣",
+                    "category": "航空发动机"
+                  }
+                ],
+                "knownProducts": [
+                  "航空发动机压气机盘",
+                  "航空发动机压气机轴",
+                  "航空发动机吊挂",
+                  "航空发动机机匣",
+                  "航空涡轮发动机涡轮盘",
+                  "自由锻件",
+                  "起落架结构件",
+                  "飞机垂直尾翼"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三角防务拥有航空发动机机匣，其产业链位置与是商发长江1000、长江2000系列的主要盘类件核心供应商一致；当前的模锻件产品（92.12%）、自由锻件产品（4.9%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由事件能否转化为可确认的经营增量决定，并需完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。只有订单、收入确认、产品结构和毛利率变化持续改善，产品能力才会转化为公司层面的收入和盈利提升；事件关联停留在主题层面，未形成可持续订单或利润贡献则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 9147,
+            "stockCode": "300855.SZ",
+            "stockName": "图南股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为国产商发配套高温合金原材料、铸造机匣、紧固件、管路等，实现一体化布局。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300855.SZ",
+              "companyName": "图南股份",
+              "companyProfile": "公司是“国家火炬计划重点高新技术企业”、“江苏省高新技术企业”，专业从事高温合金、耐蚀合金、好、精密合金等待特种合金及其制品的研发与生产。近年来，公司实现了高温合金中O、S元素含量小于10ppm的超纯净高温合金产业化生产，处于国内行业先进水平；大型复杂薄壁精密铸件在国内率先采用国际先进近净型铸造技术，产品精度和尺寸规格国内领先，成型方式和最大产品规格生产能力填补了国内空白；集成了超纯净熔炼、精细加工、真空热处理等先进的制管技术，公司航空用高品质高温合金、特种不锈钢无缝管材已占据一定市场份额。同时，随着先进技术的产业化，制备的高温合金品种逐步增加，公司目前形成了K4648、K424、K4169、K403等铸造高温合金系列及GH4080A、GH4169(IN718)、GH2132(A286)、GH3625等变形高温合金系列共30多个品种合金材料及多规格铸件制品的完整产品结构，在航空、核电等行业实现了批量生产供货。此外，公司承担并完成了多项国家重点型号军用航空发动机关键重要部件的研制生产任务，为我国国防装备建设做出了重要贡献。2014年，为表彰公司在大飞机工程中所做出的贡献，公司获得了由集团B颁发的“鲲鹏”优秀集体奖。",
+              "profileSummary": "公司是“国家火炬计划重点高新技术企业”、“江苏省高新技术企业”，专业从事高温合金、耐蚀合金、好、精密合金等待特种合金及其制品的研发与生产。同时，随着先进技术的产业化，制备的高温合金品种逐步增加，公司目前形成了K4648、K424、K4169、K403等铸造高温合金系列及GH4080A、GH4169(IN718)、GH2132(A286)、GH3625等变形高温合金系列共30多个品种合金材料及多规格铸件制品的完整产品结构，在航空、核电等…",
+              "majorProducts": "变形高温合金、特种不锈钢、铸造高温合金",
+              "revenueComposition": "变形高温合金:47.85%;铸造高温合金:23.83%;其他合金制品:9.32%;其他业务:8.54%;中小零部件:5.25%;特种不锈钢:5.21%",
+              "revenueSegments": [
+                {
+                  "name": "变形高温合金",
+                  "sharePct": 47.85,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铸造高温合金",
+                  "sharePct": 23.83,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他合金制品",
+                  "sharePct": 9.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 8.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "中小零部件",
+                  "sharePct": 5.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特种不锈钢",
+                  "sharePct": 5.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "变形高温合金",
+                    "category": "高温合金"
+                  },
+                  {
+                    "name": "铸造高温合金",
+                    "category": "高温合金"
+                  }
+                ],
+                "knownProducts": [
+                  "耐蚀合金",
+                  "变形高温合金",
+                  "铸造高温合金",
+                  "特种不锈钢棒材",
+                  "特种不锈钢无缝管材"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "图南股份的事件暴露较为直接：变形高温合金（47.85%）、铸造高温合金（23.83%）合计约占收入的71.68%，相关业务不是边缘尝试；具体业务抓手是：为国产商发配套高温合金原材料、铸造机匣、紧固件、管路等，实现一体化布局。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 9151,
+            "stockCode": "688563.SH",
+            "stockName": "航材股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为航发集团先进材料平台，为商用发动机供应高温合金、钛合金铸件及中介机匣等产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688563.SH",
+              "companyName": "航材股份",
+              "companyProfile": "公司于2000年4月10日注册成立。公司致力于以航空新材料、新工艺、新技术为基础的系列高新技术产品的研究、开发、制造和销售。公司主营产品涵盖了航空航天等领域的钛合金精密铸件、高温合金母合金、飞行器风挡、舱盖、观察窗透明件及组件、航空橡胶、密封剂、胶黏剂、弹性元件等。公司位于中关村高新技术园区,是经北京市科学技术委员会等部门联合认定的高新技术企业。公司自成立以来,构建了现代化的企业管理模式,搭建了与国际化接轨的管理平台,通过了AS9100D等质量管理体系认证,现已发展成为中关村园区新材料产业的龙头和重点骨干企业。",
+              "profileSummary": "公司致力于以航空新材料、新工艺、新技术为基础的系列高新技术产品的研究、开发、制造和销售。公司主营产品涵盖了航空航天等领域的钛合金精密铸件、高温合金母合金、飞行器风挡、舱盖、观察窗透明件及组件、航空橡胶、密封剂、胶黏剂、弹性元件等。",
+              "majorProducts": "变形高温合金母合金、大型铸件、单晶高温合金母合金、弹性元件、等轴晶高温合金母合金、定向高温合金母合金、非航军品钛合金铸件、粉末高温合金母合金、国际宇航钛合金铸件、航空军品钛合金铸件、减振器、密封剂、其他国外民品、生物医疗合金、无机玻璃透明件、橡胶复合型材、橡胶胶料、有机玻璃透明件",
+              "revenueComposition": "航空成品件:50.5%;基础材料:39.37%;加工服务:5.01%;非航空成品件:4.31%;其他业务:0.81%",
+              "revenueSegments": [
+                {
+                  "name": "航空成品件",
+                  "sharePct": 50.5,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "基础材料",
+                  "sharePct": 39.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "加工服务",
+                  "sharePct": 5.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "非航空成品件",
+                  "sharePct": 4.31,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "变形高温合金",
+                    "category": "高温合金"
+                  },
+                  {
+                    "name": "粉末高温合金",
+                    "category": "高温合金"
+                  },
+                  {
+                    "name": "铸造高温合金",
+                    "category": "高温合金"
+                  },
+                  {
+                    "name": "航空发动机压气机叶片",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "航空发动机压气机盘",
+                    "category": "航空发动机"
+                  },
+                  {
+                    "name": "航空发动机吊挂",
+                    "category": "航空发动机"
+                  }
+                ],
+                "knownProducts": [
+                  "航空发动机压气机叶片",
+                  "航空发动机压气机盘",
+                  "航空发动机吊挂",
+                  "航空发动机密封橡胶",
+                  "航空发动机机匣",
+                  "航空减振器",
+                  "飞机框",
+                  "飞机透明座舱盖"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "航材股份与事件存在真实业务交集：公司已有变形高温合金、粉末高温合金、铸造高温合金，与作为航发集团先进材料平台，为商用发动机供应高温合金、钛合金铸件及中介机匣等产品所处的产业环节一致。航空成品件（50.5%）、非航空成品件（4.31%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "12条低于3星的源记录已按当前关注口径排除。",
+      "2条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

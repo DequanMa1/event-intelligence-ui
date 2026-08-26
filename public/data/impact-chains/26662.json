@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26662",
@@ -9,20 +9,11 @@
     "date": "2026-06-30"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 6,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
     "mappedStockCount": 3,
-    "unmappedStockCount": 3,
+    "unmappedStockCount": 0,
     "stocks": [
-      {
-        "sourceRowNumber": 9980,
-        "stockCode": "AVGO.O",
-        "stockName": "博通 (Broadcom)",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 9985,
         "stockCode": "301165.SZ",
@@ -30,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 17
+        "anchorProductCount": 11
       },
       {
         "sourceRowNumber": 9986,
@@ -39,25 +30,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 20
-      },
-      {
-        "sourceRowNumber": 9987,
-        "stockCode": "ANET.N",
-        "stockName": "Arista Networks",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 9988,
-        "stockCode": "CSCO.O",
-        "stockName": "思科 (Cisco)",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 6
       },
       {
         "sourceRowNumber": 9992,
@@ -66,381 +39,21 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
+        "anchorProductCount": 5
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 9980,
-        "stockCode": "AVGO.O",
-        "stockName": "博通 (Broadcom)",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 9987,
-        "stockCode": "ANET.N",
-        "stockName": "Arista Networks",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 9988,
-        "stockCode": "CSCO.O",
-        "stockName": "思科 (Cisco)",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 41,
     "selectedCoreProductCount": 18,
     "selectedCompanyCoreProductCount": 18,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 51,
-    "downstreamCandidateCount": 57,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 62,
+    "relatedIndustryCandidateCount": 11,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140024465",
-        "name": "壳体",
-        "anchorCount": 3,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140056226",
-          "1140165215",
-          "1140165216"
-        ],
-        "linkedCoreProductNames": [
-          "PoE注入器",
-          "总配线架保安单元",
-          "硬件防火墙"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140143084",
-        "name": "网络设备用印制电路板",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662",
-          "1140021006"
-        ],
-        "linkedCoreProductNames": [
-          "以太网交换机",
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140023828",
-        "name": "(wan)路由器连接口",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140020963",
-        "name": "光纤光缆",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023824",
-        "name": "双绞线",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1125000039",
-        "name": "同轴电缆",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140016297",
-        "name": "处理机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140014734"
-        ],
-        "linkedCoreProductNames": [
-          "安全网关"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140016741",
-        "name": "复位键",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023827",
-        "name": "猫(moden)",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140016740",
-        "name": "电源接口",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140090622",
-        "name": "FPGA芯片",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140157921",
-        "name": "串行检测集线器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140162316",
-        "name": "云计算用微处理芯片",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140021146",
-        "name": "传输主设备",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140005662",
-        "name": "路由器",
-        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 路由器",
-        "industryPath": [
-          "通信",
-          "通信设备",
-          "通信传输设备",
-          "网络设备",
-          "网络分流设备",
-          "路由器"
-        ],
-        "level5Industry": {
-          "code": "1200001395",
-          "name": "网络设备"
-        },
-        "level6Industry": {
-          "code": "1200005274",
-          "name": "网络分流设备"
-        },
-        "level7Product": {
-          "code": "1140005662",
-          "name": "路由器"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "000938.SZ",
-            "stockName": "紫光股份",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "301165.SZ",
-            "stockName": "锐捷网络",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 24,
-        "downstreamCount": 38,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "通信设备",
-          "通信"
-        ]
-      },
-      {
-        "code": "1140014734",
-        "name": "安全网关",
-        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 安全网关",
-        "industryPath": [
-          "通信",
-          "通信设备",
-          "通信传输设备",
-          "网络设备",
-          "网络分流设备",
-          "安全网关"
-        ],
-        "level5Industry": {
-          "code": "1200001395",
-          "name": "网络设备"
-        },
-        "level6Industry": {
-          "code": "1200005274",
-          "name": "网络分流设备"
-        },
-        "level7Product": {
-          "code": "1140014734",
-          "name": "安全网关"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "000938.SZ",
-            "stockName": "紫光股份",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "301165.SZ",
-            "stockName": "锐捷网络",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 2,
-        "downstreamCount": 1,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "通信设备",
-          "通信"
-        ]
-      },
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140216095",
         "name": "IPv6交换机",
@@ -466,23 +79,21 @@
           "name": "IPv6交换机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "000938.SZ",
             "stockName": "紫光股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "301165.SZ",
             "stockName": "锐捷网络",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -515,23 +126,21 @@
           "name": "IPv6路由器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "000938.SZ",
             "stockName": "紫光股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "301165.SZ",
             "stockName": "锐捷网络",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -540,16 +149,16 @@
         ]
       },
       {
-        "code": "1140021006",
-        "name": "以太网交换机",
-        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 以太网交换机",
+        "code": "1140014734",
+        "name": "安全网关",
+        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 安全网关",
         "industryPath": [
           "通信",
           "通信设备",
           "通信传输设备",
           "网络设备",
           "网络分流设备",
-          "以太网交换机"
+          "安全网关"
         ],
         "level5Industry": {
           "code": "1200001395",
@@ -560,22 +169,25 @@
           "name": "网络分流设备"
         },
         "level7Product": {
-          "code": "1140021006",
-          "name": "以太网交换机"
+          "code": "1140014734",
+          "name": "安全网关"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
+        "stockCount": 2,
         "stocks": [
           {
             "stockCode": "000938.SZ",
             "stockName": "紫光股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 9,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -584,16 +196,16 @@
         ]
       },
       {
-        "code": "1140011044",
-        "name": "无线AP",
-        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 无线AP",
+        "code": "1140005662",
+        "name": "路由器",
+        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 路由器",
         "industryPath": [
           "通信",
           "通信设备",
           "通信传输设备",
           "网络设备",
           "网络分流设备",
-          "无线AP"
+          "路由器"
         ],
         "level5Industry": {
           "code": "1200001395",
@@ -604,66 +216,25 @@
           "name": "网络分流设备"
         },
         "level7Product": {
-          "code": "1140011044",
-          "name": "无线AP"
+          "code": "1140005662",
+          "name": "路由器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
+        "stockCount": 2,
         "stocks": [
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
           {
             "stockCode": "301165.SZ",
             "stockName": "锐捷网络",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 8,
-        "downstreamCount": 5,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "通信设备",
-          "通信"
-        ]
-      },
-      {
-        "code": "1140056226",
-        "name": "硬件防火墙",
-        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络接入设备 > 硬件防火墙",
-        "industryPath": [
-          "通信",
-          "通信设备",
-          "通信传输设备",
-          "网络设备",
-          "网络接入设备",
-          "硬件防火墙"
-        ],
-        "level5Industry": {
-          "code": "1200001395",
-          "name": "网络设备"
-        },
-        "level6Industry": {
-          "code": "1200005272",
-          "name": "网络接入设备"
-        },
-        "level7Product": {
-          "code": "1140056226",
-          "name": "硬件防火墙"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "301191.SZ",
-            "stockName": "菲菱科思",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 4,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -696,150 +267,15 @@
           "name": "5G智能小基站"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000938.SZ",
             "stockName": "紫光股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 5,
-        "downstreamCount": 1,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "通信设备",
-          "通信"
-        ]
-      },
-      {
-        "code": "1140021187",
-        "name": "数据中心交换机",
-        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 数据中心交换机",
-        "industryPath": [
-          "通信",
-          "通信设备",
-          "通信传输设备",
-          "网络设备",
-          "网络分流设备",
-          "数据中心交换机"
-        ],
-        "level5Industry": {
-          "code": "1200001395",
-          "name": "网络设备"
-        },
-        "level6Industry": {
-          "code": "1200005274",
-          "name": "网络分流设备"
-        },
-        "level7Product": {
-          "code": "1140021187",
-          "name": "数据中心交换机"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "301165.SZ",
-            "stockName": "锐捷网络",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 4,
-        "downstreamCount": 1,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "通信设备",
-          "通信"
-        ]
-      },
-      {
-        "code": "1140165215",
-        "name": "总配线架保安单元",
-        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络接入设备 > 总配线架保安单元",
-        "industryPath": [
-          "通信",
-          "通信设备",
-          "通信传输设备",
-          "网络设备",
-          "网络接入设备",
-          "总配线架保安单元"
-        ],
-        "level5Industry": {
-          "code": "1200001395",
-          "name": "网络设备"
-        },
-        "level6Industry": {
-          "code": "1200005272",
-          "name": "网络接入设备"
-        },
-        "level7Product": {
-          "code": "1140165215",
-          "name": "总配线架保安单元"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "301191.SZ",
-            "stockName": "菲菱科思",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 1,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "通信设备",
-          "通信"
-        ]
-      },
-      {
-        "code": "1140165216",
-        "name": "PoE注入器",
-        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络接入设备 > PoE注入器",
-        "industryPath": [
-          "通信",
-          "通信设备",
-          "通信传输设备",
-          "网络设备",
-          "网络接入设备",
-          "PoE注入器"
-        ],
-        "level5Industry": {
-          "code": "1200001395",
-          "name": "网络设备"
-        },
-        "level6Industry": {
-          "code": "1200005272",
-          "name": "网络接入设备"
-        },
-        "level7Product": {
-          "code": "1140165216",
-          "name": "PoE注入器"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "301191.SZ",
-            "stockName": "菲菱科思",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 2,
-        "downstreamCount": 1,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -872,18 +308,56 @@
           "name": "AC控制器代工"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301191.SZ",
             "stockName": "菲菱科思",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "通信设备",
+          "通信"
+        ]
+      },
+      {
+        "code": "1140165216",
+        "name": "PoE注入器",
+        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络接入设备 > PoE注入器",
+        "industryPath": [
+          "通信",
+          "通信设备",
+          "通信传输设备",
+          "网络设备",
+          "网络接入设备",
+          "PoE注入器"
+        ],
+        "level5Industry": {
+          "code": "1200001395",
+          "name": "网络设备"
+        },
+        "level6Industry": {
+          "code": "1200005272",
+          "name": "网络接入设备"
+        },
+        "level7Product": {
+          "code": "1140165216",
+          "name": "PoE注入器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "301191.SZ",
+            "stockName": "菲菱科思",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -916,18 +390,15 @@
           "name": "SMB交换机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301165.SZ",
             "stockName": "锐捷网络",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -960,18 +431,15 @@
           "name": "SMB网关硬件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301165.SZ",
             "stockName": "锐捷网络",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1004,18 +472,56 @@
           "name": "交换机代工"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301191.SZ",
             "stockName": "菲菱科思",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "通信设备",
+          "通信"
+        ]
+      },
+      {
+        "code": "1140021006",
+        "name": "以太网交换机",
+        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 以太网交换机",
+        "industryPath": [
+          "通信",
+          "通信设备",
+          "通信传输设备",
+          "网络设备",
+          "网络分流设备",
+          "以太网交换机"
+        ],
+        "level5Industry": {
+          "code": "1200001395",
+          "name": "网络设备"
+        },
+        "level6Industry": {
+          "code": "1200005274",
+          "name": "网络分流设备"
+        },
+        "level7Product": {
+          "code": "1140021006",
+          "name": "以太网交换机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1048,18 +554,138 @@
           "name": "园区与城域网交换机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301165.SZ",
             "stockName": "锐捷网络",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "通信设备",
+          "通信"
+        ]
+      },
+      {
+        "code": "1140165215",
+        "name": "总配线架保安单元",
+        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络接入设备 > 总配线架保安单元",
+        "industryPath": [
+          "通信",
+          "通信设备",
+          "通信传输设备",
+          "网络设备",
+          "网络接入设备",
+          "总配线架保安单元"
+        ],
+        "level5Industry": {
+          "code": "1200001395",
+          "name": "网络设备"
+        },
+        "level6Industry": {
+          "code": "1200005272",
+          "name": "网络接入设备"
+        },
+        "level7Product": {
+          "code": "1140165215",
+          "name": "总配线架保安单元"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "301191.SZ",
+            "stockName": "菲菱科思",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "通信设备",
+          "通信"
+        ]
+      },
+      {
+        "code": "1140021187",
+        "name": "数据中心交换机",
+        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 数据中心交换机",
+        "industryPath": [
+          "通信",
+          "通信设备",
+          "通信传输设备",
+          "网络设备",
+          "网络分流设备",
+          "数据中心交换机"
+        ],
+        "level5Industry": {
+          "code": "1200001395",
+          "name": "网络设备"
+        },
+        "level6Industry": {
+          "code": "1200005274",
+          "name": "网络分流设备"
+        },
+        "level7Product": {
+          "code": "1140021187",
+          "name": "数据中心交换机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "通信设备",
+          "通信"
+        ]
+      },
+      {
+        "code": "1140011044",
+        "name": "无线AP",
+        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 无线AP",
+        "industryPath": [
+          "通信",
+          "通信设备",
+          "通信传输设备",
+          "网络设备",
+          "网络分流设备",
+          "无线AP"
+        ],
+        "level5Industry": {
+          "code": "1200001395",
+          "name": "网络设备"
+        },
+        "level6Industry": {
+          "code": "1200005274",
+          "name": "网络分流设备"
+        },
+        "level7Product": {
+          "code": "1140011044",
+          "name": "无线AP"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1092,18 +718,15 @@
           "name": "无线AP代工"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301191.SZ",
             "stockName": "菲菱科思",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1136,18 +759,56 @@
           "name": "无线网络控制器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301165.SZ",
             "stockName": "锐捷网络",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "通信设备",
+          "通信"
+        ]
+      },
+      {
+        "code": "1140171567",
+        "name": "无线网络管理与应用系统(WIS)",
+        "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 通信配套设备 > 通信配套系统 > 无线网络管理与应用系统(WIS)",
+        "industryPath": [
+          "通信",
+          "通信设备",
+          "通信传输设备",
+          "通信配套设备",
+          "通信配套系统",
+          "无线网络管理与应用系统(WIS)"
+        ],
+        "level5Industry": {
+          "code": "1200001417",
+          "name": "通信配套设备"
+        },
+        "level6Industry": {
+          "code": "1200005275",
+          "name": "通信配套系统"
+        },
+        "level7Product": {
+          "code": "1140171567",
+          "name": "无线网络管理与应用系统(WIS)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1156,236 +817,600 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140077107",
-        "name": "商超",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140011044",
-          "1140056226"
+        "code": "1210003145",
+        "name": "云计算",
+        "description": "云计算指通过互联网提供计算资源服务。A股中该板块受关注，因其作为数字经济底座，受益于企业数字化转型、AI算力需求爆发及政策支持，具备高成长性与广阔市场空间，是科技投资的核心赛道之一。",
+        "stockCount": 4,
+        "starWeight": 14,
+        "level7ProductCount": 5,
+        "relevanceScore": 108,
+        "stocks": [
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002396.SZ",
+            "stockName": "星网锐捷",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "无线AP",
-          "硬件防火墙"
+        "products": [
+          {
+            "code": "1140018544",
+            "name": "云服务器",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > IaaS > 云服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140200572",
+            "name": "云桌面终端",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > SaaS > 云桌面终端",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140109655",
+            "name": "超融合平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > PaaS > 超融合平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140200662",
+            "name": "云基础资源虚拟化平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > PaaS > 云基础资源虚拟化平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140018580",
-        "name": "局域网",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140014734",
-          "1140021006"
+        "code": "1200001368",
+        "name": "硬件设备",
+        "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 4,
+        "relevanceScore": 116,
+        "stocks": [
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603118.SH",
+            "stockName": "共进股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "以太网交换机",
-          "安全网关"
+        "products": [
+          {
+            "code": "1140112576",
+            "name": "AI服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > AI服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "ai"
+            ]
+          },
+          {
+            "code": "1140119057",
+            "name": "通用服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 通用服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603118.SH",
+                "stockName": "共进股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140220847",
+            "name": "超节点服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 超节点服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140112577",
+            "name": "边缘服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 边缘服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 9,
+    "mappedStockCount": 9,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 62,
+    "candidateIndustryCount": 11,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 9979,
+        "stockCode": "688702.SH",
+        "stockName": "盛科通信",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1131000594",
-        "name": "酒店",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140011044",
-          "1140056226"
-        ],
-        "linkedCoreProductNames": [
-          "无线AP",
-          "硬件防火墙"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9982,
+        "stockCode": "300308.SZ",
+        "stockName": "中际旭创",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140031500",
-        "name": "企业用户",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9983,
+        "stockCode": "300502.SZ",
+        "stockName": "新易盛",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
       },
       {
-        "code": "1140000674",
-        "name": "家庭",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9985,
+        "stockCode": "301165.SZ",
+        "stockName": "锐捷网络",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 15
       },
       {
-        "code": "1140027236",
-        "name": "工业",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 9986,
+        "stockCode": "000938.SZ",
+        "stockName": "紫光股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 17
       },
       {
-        "code": "1140008841",
-        "name": "IT设备",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 9989,
+        "stockCode": "000063.SZ",
+        "stockName": "中兴通讯",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 18
       },
       {
-        "code": "1140035035",
-        "name": "中央计算机系统",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 9991,
+        "stockCode": "002396.SZ",
+        "stockName": "星网锐捷",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140112557",
-        "name": "云文档",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 9992,
+        "stockCode": "301191.SZ",
+        "stockName": "菲菱科思",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140032462",
-        "name": "互联网接入服务",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
+        "sourceRowNumber": 9993,
+        "stockCode": "603118.SH",
+        "stockName": "共进股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210003145",
+        "name": "云计算",
+        "description": "云计算指通过互联网提供计算资源服务。A股中该板块受关注，因其作为数字经济底座，受益于企业数字化转型、AI算力需求爆发及政策支持，具备高成长性与广阔市场空间，是科技投资的核心赛道之一。",
+        "stockCount": 4,
+        "starWeight": 14,
+        "level7ProductCount": 5,
+        "relevanceScore": 108,
+        "stocks": [
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002396.SZ",
+            "stockName": "星网锐捷",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "路由器"
+        "products": [
+          {
+            "code": "1140018544",
+            "name": "云服务器",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > IaaS > 云服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140200572",
+            "name": "云桌面终端",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > SaaS > 云桌面终端",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "301165.SZ",
+                "stockName": "锐捷网络",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140109655",
+            "name": "超融合平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > PaaS > 超融合平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002396.SZ",
+                "stockName": "星网锐捷",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140200662",
+            "name": "云基础资源虚拟化平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > PaaS > 云基础资源虚拟化平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140021267",
-        "name": "交换设备",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
+        "code": "1200001368",
+        "name": "硬件设备",
+        "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 4,
+        "relevanceScore": 116,
+        "stocks": [
+          {
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603118.SH",
+            "stockName": "共进股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "路由器"
+        "products": [
+          {
+            "code": "1140112576",
+            "name": "AI服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > AI服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "ai"
+            ]
+          },
+          {
+            "code": "1140119057",
+            "name": "通用服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 通用服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603118.SH",
+                "stockName": "共进股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140220847",
+            "name": "超节点服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 超节点服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000063.SZ",
+                "stockName": "中兴通讯",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140112577",
+            "name": "边缘服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 边缘服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000938.SZ",
+                "stockName": "紫光股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140116010",
-        "name": "企业网络接入",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140021019",
-        "name": "传输网物理连接设备",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140082161",
-        "name": "信息硬件集成",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140005662"
-        ],
-        "linkedCoreProductNames": [
-          "路由器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -1400,10 +1425,830 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 15,
+    "eligibleSourceRowCount": 9,
+    "totalStockCount": 9,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 0,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 9,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 9979,
+            "stockCode": "688702.SH",
+            "stockName": "盛科通信",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "A股唯一实现高端以太网交换芯片商用的上市公司，是国内交换机产业链国产替代的核心标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688702.SH",
+              "companyName": "盛科通信-U",
+              "companyProfile": "公司2005年1月31日成立，为国内领先的以太网交换芯片设计企业，主营业务为以太网交换芯片及配套产品的研发、设计和销售。以太网交换芯片是构建企业网络、运营商网络、数据中心网络和工业网络的核心平台型芯片。公司现已形成丰富的以太网交换芯片产品序列，覆盖从接入层到核心层的以太网交换产品，为我国数字化网络建设提供了完整的芯片解决方案。公司面向国家数字化网络建设需求，坚持自主研发，形成了高性能交换架构、高性能端口设计、多特性流水线等11项核心技术，目标成为全互联时代以太网交换芯片引领者，提供可靠、高质量、有竞争力的系列以太网交换芯片，形成自主开放的软硬件生态，为客户提供多样化选择。在全互联时代，公司将以引领以太网交换芯片技术发展为目标，聚焦以太网交换芯片业务，提升已有芯片产品线的市场竞争力，延展以太网交换芯片产品线深度。同时拓宽产品类别广度，布局全产业链，进一步提升公司市场规模。",
+              "profileSummary": "公司2005年1月31日成立，为国内领先的以太网交换芯片设计企业，主营业务为以太网交换芯片及配套产品的研发、设计和销售。公司现已形成丰富的以太网交换芯片产品序列，覆盖从接入层到核心层的以太网交换产品，为我国数字化网络建设提供了完整的芯片解决方案。",
+              "majorProducts": "Duet2 系列芯片、E350/V350系列三层以太网交换机、E530/V530系列三层以太网交换机、E550/V550系列三层以太网交换机、E580/V580系列三层以太网交换机、E680/V680系列三层以太网交换机、GoldenGate 系列芯片、GreatBelt 系列芯片、Humber 系列芯片、TsingMa 系列芯片、TsingMa.MX 系列芯片",
+              "revenueComposition": "以太网交换芯片:72.26%;以太网交换芯片模组:10.95%;以太网交换机:9.3%;授权许可:5.34%;定制化解决方案及其他:2.15%",
+              "revenueSegments": [
+                {
+                  "name": "以太网交换芯片",
+                  "sharePct": 72.26,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "以太网交换芯片模组",
+                  "sharePct": 10.95,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "以太网交换机",
+                  "sharePct": 9.3,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "授权许可",
+                  "sharePct": 5.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "定制化解决方案及其他",
+                  "sharePct": 2.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "以太网交换芯片模组",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "以太网交换芯片",
+                    "category": "通信芯片"
+                  },
+                  {
+                    "name": "以太网交换机",
+                    "category": "网络分流设备"
+                  }
+                ],
+                "knownProducts": [
+                  "以太网交换芯片",
+                  "以太网交换机",
+                  "以太网交换芯片模组"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "盛科通信的相关业务已决定公司大部分经营表现：以太网交换芯片（72.26%）、以太网交换芯片模组（10.95%）合计约占收入的92.51%。公司与事件的直接业务联系是：A股唯一实现高端以太网交换芯片商用的上市公司，是国内交换机产业链国产替代的核心标的，真正的增量取决于技术商业化与产品迭代速度，并需经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，客户认证、量产良率、订单规模、产品收入占比和毛利率需要显示公司获得超越行业的增量。技术路线变化、良率爬坡缓慢或竞争方案更快成熟是这条逻辑最主要的反向约束。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 9985,
+            "stockCode": "301165.SZ",
+            "stockName": "锐捷网络",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "作为国内云厂商算力集群建设的主力供货方，直接受益于AI智算中心对高速交换机的旺盛需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301165.SZ",
+              "companyName": "锐捷网络",
+              "companyProfile": "公司是行业领先的ICT基础设施及行业解决方案提供商，主营业务为网络设备、网络安全产品及云桌面解决方案的研发、设计和销售。自2003年成立以来，公司致力于将技术与场景应用充分融合，贴近用户进行产品方案设计和创新，助力各行业用户实现数字化转型和业务价值创新。经过近二十年的发展，凭借扎实的自主创新实力、贴近用户的解决方案和专业快捷的客户服务，公司产品和方案现已广泛应用于政府、运营商、金融、互联网、教育、医疗、能源、交通、商业、制造业等行业信息化建设领域，业务范围覆盖50多个国家和地区。至目前，公司在交换机、无线产品、云桌面、IT运维管理等多个领域位居市场前列，根据IDC数据统计，2019年及2020年上半年，锐捷网络在中国以太网交换机市场占有率排名第三；2019年中国企业级WLAN市场占有率排名第二，其中Wi-Fi6产品出货量排名第一；2015年至2019年连续5年中国企业级终端VDI市场占有率排名第一；2019年中国IT基础设施运维软件市场占有率排名第一。",
+              "profileSummary": "公司是行业领先的ICT基础设施及行业解决方案提供商，主营业务为网络设备、网络安全产品及云桌面解决方案的研发、设计和销售。经过近二十年的发展，凭借扎实的自主创新实力、贴近用户的解决方案和专业快捷的客户服务，公司产品和方案现已广泛应用于政府、运营商、金融、互联网、教育、医疗、能源、交通、商业、制造业等行业信息化建设领域，业务范围覆盖50多个国家和地区。",
+              "majorProducts": "SMB交换机、SMB无线接入点、场景化部署无线接入点、放装型无线接入点、路由器、数据中心交换机、无线管理与应用系统（WIS）、无线控制器、园区与城域网交换机",
+              "revenueComposition": "网络设备:87.46%;其他主营业务:5.09%;云桌面解决方案:4%;网络安全产品:3.45%",
+              "revenueSegments": [
+                {
+                  "name": "网络设备",
+                  "sharePct": 87.46,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他主营业务",
+                  "sharePct": 5.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "云桌面解决方案",
+                  "sharePct": 4.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "网络安全产品",
+                  "sharePct": 3.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "云服务器",
+                    "category": "IaaS"
+                  },
+                  {
+                    "name": "数据中心交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IPv6交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IPv6路由器",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "SMB交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "SMB网关硬件",
+                    "category": "网络分流设备"
+                  }
+                ],
+                "knownProducts": [
+                  "数据库安全审计设备",
+                  "云服务器",
+                  "云桌面终端",
+                  "下一代防火墙",
+                  "身份管理软件",
+                  "数据安全态势感知平台",
+                  "IPv6交换机",
+                  "IPv6路由器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "锐捷网络的网络设备（87.46%）覆盖范围较宽，其中能够承载云服务器、数据中心交换机、IPv6交换机，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：作为国内云厂商算力集群建设的主力供货方，直接受益于AI智算中心对高速交换机的旺盛需求。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 9986,
+            "stockCode": "000938.SZ",
+            "stockName": "紫光股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "旗下新华三深度参与国内智算中心建设，其高端交换机产品兼容英伟达Spectrum-X架构，深度受益于AI算力网络建设。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000938.SZ",
+              "companyName": "紫光股份",
+              "companyProfile": "公司成立于1999年，经过二十余载的不断创新发展，已成为新一代信息通信领域的领军企业。公司深度布局“云—网—安—算—存—端”全产业链，面向政府、运营商、互联网、金融、教育、医疗、农业、交通、能源、制造等众多行业用户，提供网络设备、服务器、存储产品、网络安全产品及服务、云计算与云服务、智能终端等全栈ICT基础设施和数字化解决方案。公司聚焦技术创新、应用创新和模式创新，为行业客户提供先进、智能、绿色的ICT基础设施，以“AI+场景化解决方案”深度赋能行业客户的数字化转型和智能化升级。公司积极把握数字经济发展机遇，围绕AIGC私域大模型、多元异构算力平台、高品质网络、云与智能产品、主动安全方案、智能高能耗治理、智能运维等方向进行创新引领，为AIGC全面应用构筑坚实的云智原生数字平台和智算解决方案。在持续深耕国内行业市场的同时，公司加强国际化布局，在亚洲、欧洲、非洲、拉美等地区已设立多个海外分支机构，为全球客户提供高质量的产品和服务。",
+              "profileSummary": "公司深度布局“云—网—安—算—存—端”全产业链，面向政府、运营商、互联网、金融、教育、医疗、农业、交通、能源、制造等众多行业用户，提供网络设备、服务器、存储产品、网络安全产品及服务、云计算与云服务、智能终端等全栈ICT基础设施和数字化解决方案。公司聚焦技术创新、应用创新和模式创新，为行业客户提供先进、智能、绿色的ICT基础设施，以“AI+场景化解决方案”深度赋能行业客户的数字化转型和智能化升级。",
+              "majorProducts": "存储产品、服务器、网络安全产品及服务、网络设备、云计算与云服务、智能终端、紫光IBM IT产品销售、紫光IPv4／v6双栈核心路由器、紫光笔记本电脑、紫光耗材、紫光红外测温仪、紫光惠普IT产品销售、紫光家用消毒机、紫光刻录光盘、紫光苹果IT产品销售、紫光扫描仪、紫光数码相机、紫光台式电脑、紫光投影仪",
+              "revenueComposition": "ICT基础设施及服务:79.43%;IT产品分销与供应链服务:26.42%;其他业务:0.5%;合并抵消:-6.35%",
+              "revenueSegments": [
+                {
+                  "name": "ICT基础设施及服务",
+                  "sharePct": 79.43,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "IT产品分销与供应链服务",
+                  "sharePct": 26.42,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "合并抵消",
+                  "sharePct": -6.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "AI防火墙",
+                    "category": "信息安全软件"
+                  },
+                  {
+                    "name": "IPv6交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IPv6路由器",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IT产品分销",
+                    "category": "软件销售及售后"
+                  },
+                  {
+                    "name": "云基础资源虚拟化平台",
+                    "category": "PaaS"
+                  }
+                ],
+                "knownProducts": [
+                  "笔记本电脑",
+                  "云存储服务",
+                  "云基础资源虚拟化平台",
+                  "超融合平台",
+                  "大模型一体机",
+                  "生成式大模型一体机",
+                  "IT产品分销",
+                  "AI防火墙"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "紫光股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：IT产品分销与供应链服务占收入的26.42%。公司与事件的具体联系在于：旗下新华三深度参与国内智算中心建设，其高端交换机产品兼容英伟达Spectrum-X架构，深度受益于AI算力网络建设，对应的核心变量是事件能否转化为可确认的经营增量。若这一变量沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，订单、收入确认、产品结构和毛利率变化既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；事件关联停留在主题层面，未形成可持续订单或利润贡献则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 9992,
+            "stockCode": "301191.SZ",
+            "stockName": "菲菱科思",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "作为英伟达Spectrum-X以太网交换机的核心代工厂，将直接并深度受益于英伟达交换机业务的全球扩张。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301191.SZ",
+              "companyName": "菲菱科思",
+              "companyProfile": "公司成立于1999年4月，主要从事数据通信类产品的开发和制造，产品涵盖以太网交换机、路由器、EoC、PON等，是国家高新技术企业。拥有新产品研发实验室和产品可靠性试验室，可开展网络专业测试、HASA试验、材料阻燃试验、盐雾试验、振动试验、跌落试验、高低温循环试验及环保测试等，可按照ITU-K20标准对产品进行高压特性测试。公司建立健全了严格的质量管控等管理体系，并通过了以下第三方机构体系认证：ISO9001质量管理体系、ISO14001环境管理体系、OHSAS18001职业健康安全管理体系、ISO27001信息安全管理体系、QC080000有害物质过程管理体系及两化融合管理体系。公司产品能够满足欧盟RoHS指令要求，并取得了进入欧盟、北美等发达国家和地区销售的资格。",
+              "profileSummary": "公司成立于1999年4月，主要从事数据通信类产品的开发和制造，产品涵盖以太网交换机、路由器、EoC、PON等，是国家高新技术企业。拥有新产品研发实验室和产品可靠性试验室，可开展网络专业测试、HASA试验、材料阻燃试验、盐雾试验、振动试验、跌落试验、高低温循环试验及环保测试等，可按照ITU-K20标准对产品进行高压特性测试。",
+              "majorProducts": "交换机、路由器及无线产品、通信设备组件",
+              "revenueComposition": "网络产品类:89.2%;设备控制类及其他:4.75%;计算产品类:3.96%;其他业务:1.26%;汽车电子类产品:0.83%",
+              "revenueSegments": [
+                {
+                  "name": "网络产品类",
+                  "sharePct": 89.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备控制类及其他",
+                  "sharePct": 4.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "计算产品类",
+                  "sharePct": 3.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车电子类产品",
+                  "sharePct": 0.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "AC控制器代工",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "PoE注入器",
+                    "category": "网络接入设备"
+                  },
+                  {
+                    "name": "交换机代工",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "总配线架保安单元",
+                    "category": "网络接入设备"
+                  },
+                  {
+                    "name": "数据中心交换机控制板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "无线AP代工",
+                    "category": "网络分流设备"
+                  }
+                ],
+                "knownProducts": [
+                  "数据中心交换机控制板",
+                  "AC控制器代工",
+                  "交换机代工",
+                  "无线AP代工",
+                  "路由器代工",
+                  "PoE注入器",
+                  "总配线架保安单元",
+                  "硬件防火墙"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "菲菱科思实际经营中已有AC控制器代工、PoE注入器、交换机代工，与事件指向的作为英伟达Spectrum-X以太网交换机的核心代工厂，将直接并深度受益于英伟达交换机业务的全球扩张能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在网络产品类（89.2%）、设备控制类及其他（4.75%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善事件能否转化为可确认的经营增量，需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。订单、收入确认、产品结构和毛利率变化将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产品存在不等于利润一定增加。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 9982,
+            "stockCode": "300308.SZ",
+            "stockName": "中际旭创",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "高速交换机的端口升级直接驱动800G、1.6T及更高速率光模块的需求，公司作为行业龙头直接受益。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300308.SZ",
+              "companyName": "中际旭创",
+              "companyProfile": "公司是领先的高速光互联解决方案提供商，专注于高端光模块与光通信技术创新，服务全球云计算与AI算力基础设施建设。公司在高速率光模块领域具备领先优势，是推动新一代算力网络和数字基础设施升级的重要参与者。凭借持续的技术创新、领先的产品性能和稳定的规模化交付能力，公司在业内建立了稳固的市场地位和良好的品牌声誉。公司坚持以技术创新为核心驱动力，持续强化研发投入与产业链协同，并积极拓展光电技术应用边界，力求为更多客户创造更多价值。",
+              "profileSummary": "公司是领先的高速光互联解决方案提供商，专注于高端光模块与光通信技术创新，服务全球云计算与AI算力基础设施建设。公司在高速率光模块领域具备领先优势，是推动新一代算力网络和数字基础设施升级的重要参与者。",
+              "majorProducts": "1.6T OSFP、100G QSFP+、100G QSFP28 Single Lambda、10G SFP+ Ethernet、10G SFP+ SONET、25G SFP28、400G OSFP、400G QSFP-DD、40G QSFP+、800G OSFP、800G QSFP-DD",
+              "revenueComposition": "高端光通讯收发模块:97.95%;其他:2.05%",
+              "revenueSegments": [
+                {
+                  "name": "高端光通讯收发模块",
+                  "sharePct": 97.95,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "共封装光学(CPO)模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "含DSP可插拔光模块(DPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "近封装光模块(NPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "线性可插拔光模块(LPO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "超高密度可插拔光模块(XPO)",
+                    "category": "无源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "汽车光电子传感器",
+                  "共封装光学(CPO)模块",
+                  "含DSP可插拔光模块(DPO)",
+                  "近封装光模块(NPO)",
+                  "超高密度可插拔光模块(XPO)",
+                  "线性可插拔光模块(LPO)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中际旭创与事件的关系已经落在存量主业，而非远期概念：高端光通讯收发模块占收入的97.95%。公司在产业链中的具体抓手是：高速交换机的端口升级直接驱动800G、1.6T及更高速率光模块的需求，公司作为行业龙头直接受益。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 9983,
+            "stockCode": "300502.SZ",
+            "stockName": "新易盛",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "AI驱动的高速交换机规模化部署是公司800G及1.6T光模块业务的核心增长动力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300502.SZ",
+              "companyName": "新易盛",
+              "companyProfile": "公司是全球高速光互联解决方案的创新者与领导者。公司自主掌握高速率光器件封装并提供多种技术方案的光互联产品，具备全系列高速可插拔光模块的规模化量产能力，产品广泛应用于人工智能算力集群、云数据中心、电信网络等领域，为各行业的高速网络互连与数据传输提供核心支撑。",
+              "profileSummary": "公司自主掌握高速率光器件封装并提供多种技术方案的光互联产品，具备全系列高速可插拔光模块的规模化量产能力，产品广泛应用于人工智能算力集群、云数据中心、电信网络等领域，为各行业的高速网络互连与数据传输提供核心支撑。",
+              "majorProducts": "800G/400G相干系列模块、CFP2 PAM4 200G、CFPx系列、OSFP 400G、OSFP 800G单波100G、OSFP 800G单波200G、OSFP-XD 1.6T、PON光模块、QSFP112 400G、QSFP28 PAM4 50G、QSFP28 Single Lambda、QSFP28/QSFP+、QSFP56 PAM4 200G、QSFP-DD 200G、QSFP-DD 400G、QSFP-DD 800G 单波100G、QSFP-DD 800G 单波200G、SFP+/SFP系列模块、SFP112 PAM4 100G、SFP28系列、SFP56 PAM4 50G、SFP-DD PAM4 100G、XFP系列模块、点对点光模块",
+              "revenueComposition": "光互联产品:99.72%;其他:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "光互联产品",
+                  "sharePct": 99.72,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PON光模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "共封装光学(CPO)模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "含DSP可插拔光模块(DPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "近封装光模块(NPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "线性可插拔光模块(LPO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "线性接收光模块(LRO)",
+                    "category": "有源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "PON光模块",
+                  "共封装光学(CPO)模块",
+                  "含DSP可插拔光模块(DPO)",
+                  "近封装光模块(NPO)",
+                  "超高密度可插拔光模块(XPO)",
+                  "三向光发射接受组件(TRI-OSA)",
+                  "光发射接收组件(BOSA)",
+                  "光发射组件(TOSA)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "新易盛与事件存在真实业务交集：公司已有PON光模块、共封装光学(CPO)模块、含DSP可插拔光模块(DPO)，与AI驱动的高速交换机规模化部署是公司800G及1.6T光模块业务的核心增长动力所处的产业环节一致。光互联产品（99.72%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响终端需求与渗透率变化，只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，才会形成可确认的收入和利润增量。终端销量、客户采购量、公司出货和相关产品收入增速能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 9989,
+            "stockCode": "000063.SZ",
+            "stockName": "中兴通讯",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "依托运营商渠道优势，深度参与\"东数西算\"及智算中心集采，是国内算力网络建设的重要力量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000063.SZ",
+              "companyName": "中兴通讯",
+              "companyProfile": "公司是一家全球领先的综合信息与通信技术解决方案提供商，为全球电信运营商、政企客户及个人消费者提供创新的技术与产品解决方案。公司成立于1985年，在香港和深圳两地上市，服务全球1/4以上人口，致力于实现更加智能、高效、可持续的数智未来。公司拥有ICT行业完整的、端到端的产品和综合解决方案，通过全系列的无线、有线、算力、能源、终端等产品方案及专业服务，灵活满足全球不同运营商和政企客户的差异化及快速创新的需求。数字经济大势所趋，成为推动全球经济持续稳定增长的关键动力，作为全球领先的大型综合通信信息解决方案提供商，在数字经济大潮中，公司致力于成为“数字经济筑路者”，用创新的ICT科技，支撑全球数字化转型。公司坚持向下扎根，持续增强研发投入，不断强化核心竞争力。公司坚持在全球范围内贯彻可持续发展理念，实现社会、环境及利益相关者的和谐共生；运用通信技术帮助不同地区的人们享有平等的通信自由；将“创新、融合、绿色”理念贯穿到整个产品生命周期，以及研发、生产、物流、客户服务等全流程，为实现全球性降低能耗和二氧化碳排放不懈努力；在全球范围内开展社区公益和救助行动。公司是联合国全球契约组织以及全球电子可持续发展协会的成员，同时也是国际电信联盟发起的Partner2Connect数字联盟项目的重要参与方和首批领军者。",
+              "profileSummary": "公司是一家全球领先的综合信息与通信技术解决方案提供商，为全球电信运营商、政企客户及个人消费者提供创新的技术与产品解决方案。公司坚持在全球范围内贯彻可持续发展理念，实现社会、环境及利益相关者的和谐共生；运用通信技术帮助不同地区的人们享有平等的通信自由；将“创新、融合、绿色”理念贯穿到整个产品生命周期，以及研发、生产、物流、客户服务等全流程，为实现全球性降低能耗和二氧化碳排放不懈努力；在全球范围内开展社区公益和救助行动。",
+              "majorProducts": "中兴xDSL终端、中兴刀片服务器、中兴多业务节点设备、中兴机架服务器、中兴基站、中兴基站监控系统、中兴计费结算系统、中兴家庭网关、中兴宽带网关、中兴宽带网络机顶盒、中兴路由交换机、中兴路由器、中兴模块电源、中兴手机、中兴通讯终端&业务管理平台（ZXCSM）系统、中兴网管系统、中兴小容量中继网关、中兴综合接入设备（IAD）",
+              "revenueComposition": "运营商网络:46.94%;政企业务:27.8%;消费者业务:25.26%",
+              "revenueSegments": [
+                {
+                  "name": "运营商网络",
+                  "sharePct": 46.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "政企业务",
+                  "sharePct": 27.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "消费者业务",
+                  "sharePct": 25.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "数据中心交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "IPv6交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IPv6路由器",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "云桌面终端",
+                    "category": "SaaS"
+                  },
+                  {
+                    "name": "交换机用ASIC",
+                    "category": "专用芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "交换机用ASIC",
+                  "光模块用数字信号处理(O-DSP)芯片",
+                  "智能手机",
+                  "云桌面终端",
+                  "AI智算训推平台",
+                  "城轨大模型",
+                  "城轨智能体",
+                  "工业智能体"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中兴通讯实际经营中已有数据中心交换机、AI服务器、IPv6交换机，与事件指向的依托运营商渠道优势，深度参与\"东数西算\"及智算中心集采，是国内算力网络建设的重要力量能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在运营商网络（46.94%）、政企业务（27.8%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善事件能否转化为可确认的经营增量，需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。订单、收入确认、产品结构和毛利率变化将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 9991,
+            "stockCode": "002396.SZ",
+            "stockName": "星网锐捷",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "业务覆盖信创政务、金融等下沉市场的算力建设需求，分享行业整体增长红利。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002396.SZ",
+              "companyName": "星网锐捷",
+              "companyProfile": "公司2010年6月23日成功登陆深圳证券交易所中小企业板。公司所从事的主要业务是为企业级客户提供信息化解决方案。公司的主要产品包括智慧网络、智慧云、智慧通讯、智慧金融、智慧娱乐、智慧社区等领域。主要用于满足企业级用户的相关需求。多年来始终秉承以“融合创新科技，构建智慧未来”的经营理念，坚持以自主创新和行业应用为基础，致力于中国的信息化事业发展。",
+              "profileSummary": "公司所从事的主要业务是为企业级客户提供信息化解决方案。公司的主要产品包括智慧网络、智慧云、智慧通讯、智慧金融、智慧娱乐、智慧社区等领域。",
+              "majorProducts": "NBR系列路由器、RG-ACE系列应用控制引擎、RG-EG系列易网关、RG-IDS入侵检测系统、RG-iS-16FSAS智能存储系统、RG-iS2000D智能存储系统、RG-iS2000智能存储系统、RG-iS6000智能存储系统、RG-iS-LAB智能存储系统、RG-NPE系列网络出口引擎、RG-RIIL-BMC、RG-S5760系列交换机、RG-S7600系列交换机、RG-S8600系列交换机、RG-S9600系列交换机、RG-SAP安全与攻防实验平台、RG-SMP 2.X桌面管理与审计组件、RG-USG统一安全网关、RG-WALL V系列安全网关、RG-WALL防火墙、RG-WG系列、RSR-E系列路由器、RSR系列可信多业务路由器、汇聚交换机、接入交换机、企业级交换机、锐捷流量分析系统、无线管理软件、无线控制器、智慧金融、智慧社区、智慧通讯、智慧网络、智慧娱乐、智慧云、智能无线接入点、自治型无线接入点",
+              "revenueComposition": "企业级网络设备:73.91%;通讯产品:11.99%;其他主营业务:9.05%;网络终端:5.05%",
+              "revenueSegments": [
+                {
+                  "name": "企业级网络设备",
+                  "sharePct": 73.91,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "通讯产品",
+                  "sharePct": 11.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他主营业务",
+                  "sharePct": 9.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "网络终端",
+                  "sharePct": 5.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "数据中心交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IPv6交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "IPv6路由器",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "云桌面终端",
+                    "category": "SaaS"
+                  },
+                  {
+                    "name": "智能网关",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "超融合平台",
+                    "category": "PaaS"
+                  }
+                ],
+                "knownProducts": [
+                  "电视机顶盒",
+                  "电子海报屏幕",
+                  "电子白板",
+                  "自助取号机",
+                  "自助填单一体机",
+                  "智能POS机",
+                  "超融合平台",
+                  "云桌面终端"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "星网锐捷的企业级网络设备（73.91%）覆盖范围较宽，其中能够承载数据中心交换机、IPv6交换机、IPv6路由器，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：业务覆盖信创政务、金融等下沉市场的算力建设需求，分享行业整体增长红利。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 9993,
+            "stockCode": "603118.SH",
+            "stockName": "共进股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "受益于边缘算力建设浪潮，配套中小型IDC与边缘节点的交换机需求，业绩稳步增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603118.SH",
+              "companyName": "共进股份",
+              "companyProfile": "公司于2015年2月公司在上交所A股市场上市，目前公司主营通信产品制造和先进移动通信设备及应用产品等研发制造和销售，致力做全球领先的信息与通信产品提供商。积三十年发展厚势，共进电子再度扬帆开启二次创业，以“让万物互联更简单”为使命，以“全球领先的信息与通信产品提供商”为愿景，确定“客户为先，创新驱动，合作共赢”核心价值观，以“发展企业，培养人才，回馈社会”为企业宗旨，正在推进落实下一个五年发展规划和十年远景目标。公司先后获得了中国电子信息百强企业、中国电子信息行业创新能力50强、高新技术企业、国家企业技术中心、高新技术示范项目、深圳市工业百强企业、中国民营企业制造业500强、电子信息行业优秀企业-卓越企业、中国电子信息行业“盘古奖”、中国海关高级认证企业(AEO)、中国好雇主优秀企业奖、中国上市公司ESG百强、2024国家级制造业单项冠军企业等国家级荣誉，广东省企业500强、广东省制造业500强、广东省电子信息制造业综合实力百强、广东省智能制造试点示范企业、广东省守合同重信用企业、深圳市企业技术中心、深圳市民营领军骨干企业、深企100强、深圳质量百强企业、深圳市百优工匠示范企业、深圳市质量强市骨干企业、南山区区长质量奖，公司创始人汪大维被评为第二届“深圳百名行业领军人物”等华南区荣誉，国家5G工厂、江苏省制造业领航企业、江苏省质量信用AAA级企业、江苏省管理创新示范企业、江苏省管理创新优秀企业、苏州市创新先锋企业、苏州民营企业50强、苏州市十大智能制造示范企业、太仓市十大高新产值企业、太仓市市长质量奖等华东区荣誉。",
+              "profileSummary": "公司于2015年2月公司在上交所A股市场上市，目前公司主营通信产品制造和先进移动通信设备及应用产品等研发制造和销售，致力做全球领先的信息与通信产品提供商。积三十年发展厚势，共进电子再度扬帆开启二次创业，以“让万物互联更简单”为使命，以“全球领先的信息与通信产品提供商”为愿景，确定“客户为先，创新驱动，合作共赢”核心价值观，以“发展企业，培养人才，回馈社会”为企业宗旨，正在推进落实下一个五年发展规划和十年远景目标。",
+              "majorProducts": "DSL终端系列、光接入终端系列、呼吸健康、其它宽带通讯终端系列、体育健康、无线及移动终端系列、肢体康复",
+              "revenueComposition": "网通业务-PON系列:40.76%;网通业务-AP系列:28.19%;数通业务:12.79%;其他:6.91%;网通业务-DSL系列:6.08%;其他业务:4.11%;移动通信业务:1.15%",
+              "revenueSegments": [
+                {
+                  "name": "网通业务-PON系列",
+                  "sharePct": 40.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "网通业务-AP系列",
+                  "sharePct": 28.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "数通业务",
+                  "sharePct": 12.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 6.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "网通业务-DSL系列",
+                  "sharePct": 6.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 4.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "移动通信业务",
+                  "sharePct": 1.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "交换机",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "光猫",
+                    "category": "网络接入设备"
+                  },
+                  {
+                    "name": "无线AP",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "有线宽带数字用户线路终端(DSL)",
+                    "category": "网络接入设备"
+                  },
+                  {
+                    "name": "路由器",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "通用服务器",
+                    "category": "服务器"
+                  }
+                ],
+                "knownProducts": [
+                  "通用服务器",
+                  "5G智能小基站",
+                  "移动通信小基站",
+                  "交换机",
+                  "无线AP",
+                  "路由器",
+                  "光猫",
+                  "有线宽带数字用户线路终端(DSL)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "共进股份实际经营中已有交换机、光猫、无线AP，与事件指向的受益于边缘算力建设浪潮，配套中小型IDC与边缘节点的交换机需求，业绩稳步增长能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在网通业务-PON系列（40.76%）、网通业务-AP系列（28.19%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

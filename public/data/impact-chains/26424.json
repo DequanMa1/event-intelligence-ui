@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
-  "status": "ready",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
+  "status": "no_company_product_mapping",
   "event": {
     "mainId": "26424",
     "uid": "0RB7WE88Z178J",
@@ -9,33 +9,15 @@
     "date": "2026-06-26"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 5,
-    "mappedStockCount": 3,
-    "unmappedStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
+    "mappedStockCount": 0,
+    "unmappedStockCount": 3,
     "stocks": [
-      {
-        "sourceRowNumber": 3436,
-        "stockCode": "09988.HK",
-        "stockName": "阿里巴巴",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 3438,
         "stockCode": "002555.SZ",
         "stockName": "三七互娱",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 4
-      },
-      {
-        "sourceRowNumber": 3439,
-        "stockCode": "00136.HK",
-        "stockName": "中国儒意",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -47,8 +29,179 @@
         "stockName": "世纪华通",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 8
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 3441,
+        "stockCode": "002558.SZ",
+        "stockName": "巨人网络",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 3438,
+        "stockCode": "002555.SZ",
+        "stockName": "三七互娱",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 3440,
+        "stockCode": "002602.SZ",
+        "stockName": "世纪华通",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 3441,
+        "stockCode": "002558.SZ",
+        "stockName": "巨人网络",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
+  },
+  "totals": {
+    "candidateCoreProductCount": 10,
+    "selectedCoreProductCount": 0,
+    "selectedCompanyCoreProductCount": 0,
+    "level7ProductCount": 3,
+    "relatedIndustryCandidateCount": 2,
+    "shownRelatedIndustryCount": 2
+  },
+  "productIndustryMap": {
+    "coreProducts": [],
+    "relatedIndustries": [
+      {
+        "code": "1210000089",
+        "name": "游戏",
+        "description": "A股游戏行业涵盖研发、发行及运营企业。因具备高毛利、强现金流及AI技术应用潜力，且受版号政策与出海增长驱动，兼具消费与科技属性，成为市场关注的高弹性板块。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "002558.SZ",
+            "stockName": "巨人网络",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140021109",
+            "name": "手机游戏",
+            "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 游戏 > 电子游戏 > 手机游戏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002558.SZ",
+                "stockName": "巨人网络",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140019779",
+            "name": "电脑客户端游戏",
+            "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 游戏 > 电子游戏 > 电脑客户端游戏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002558.SZ",
+                "stockName": "巨人网络",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1210000091",
+        "name": "IP产业",
+        "description": "A股IP产业指围绕知识产权（如影视、游戏、动漫形象）进行内容创作与商业变现的行业。因具备高附加值、长尾效应及跨界联动能力，能持续衍生周边、授权等收益，受资本青睐，是文化消费升级的核心赛道。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 4,
+        "stocks": [
+          {
+            "stockCode": "002558.SZ",
+            "stockName": "巨人网络",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140154473",
+            "name": "IP版权授权",
+            "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > IP产业 > IP版权 > IP版权授权",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002558.SZ",
+                "stockName": "巨人网络",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 3,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 3,
+    "candidateIndustryCount": 2,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 3438,
+        "stockCode": "002555.SZ",
+        "stockName": "三七互娱",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 3440,
+        "stockCode": "002602.SZ",
+        "stockName": "世纪华通",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 3441,
@@ -60,983 +213,346 @@
         "anchorProductCount": 3
       }
     ],
-    "unmappedStocks": [
+    "relatedIndustries": [
       {
-        "sourceRowNumber": 3436,
-        "stockCode": "09988.HK",
-        "stockName": "阿里巴巴",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 3439,
-        "stockCode": "00136.HK",
-        "stockName": "中国儒意",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
-  },
-  "totals": {
-    "candidateCoreProductCount": 10,
-    "selectedCoreProductCount": 10,
-    "selectedCompanyCoreProductCount": 10,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 21,
-    "downstreamCandidateCount": 15,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
-  },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140019954",
-        "name": "游戏加速器",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140019778",
-          "1140021109"
-        ],
-        "linkedCoreProductNames": [
-          "手机游戏",
-          "网页游戏"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140157468",
-        "name": "主机游戏",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140157457",
-          "1140157469"
-        ],
-        "linkedCoreProductNames": [
-          "游戏代理发行",
-          "游戏联合运营"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140021224",
-        "name": "服务器",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140157457",
-          "1140157469"
-        ],
-        "linkedCoreProductNames": [
-          "游戏代理发行",
-          "游戏联合运营"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140064722",
-        "name": "游戏平台",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140157457",
-          "1140157469"
-        ],
-        "linkedCoreProductNames": [
-          "游戏代理发行",
-          "游戏联合运营"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140158029",
-        "name": "游戏测试",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140157457",
-          "1140157469"
-        ],
-        "linkedCoreProductNames": [
-          "游戏代理发行",
-          "游戏联合运营"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140158028",
-        "name": "游戏运维发布",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140157457",
-          "1140157469"
-        ],
-        "linkedCoreProductNames": [
-          "游戏代理发行",
-          "游戏联合运营"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140105894",
-        "name": "第三方应用和服务",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140157457",
-          "1140157469"
-        ],
-        "linkedCoreProductNames": [
-          "游戏代理发行",
-          "游戏联合运营"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140012548",
-        "name": "不锈钢铝复合",
-        "anchorCount": 1,
+        "code": "1210000089",
+        "name": "游戏",
+        "description": "A股游戏行业涵盖研发、发行及运营企业。因具备高毛利、强现金流及AI技术应用潜力，且受版号政策与出海增长驱动，兼具消费与科技属性，成为市场关注的高弹性板块。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000185"
-        ],
-        "linkedCoreProductNames": [
-          "汽车保险杠"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140161535",
-        "name": "专利研发",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154473"
-        ],
-        "linkedCoreProductNames": [
-          "IP版权授权"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140161536",
-        "name": "商标设计",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154473"
-        ],
-        "linkedCoreProductNames": [
-          "IP版权授权"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140150008",
-        "name": "游戏运营团队",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140157457"
-        ],
-        "linkedCoreProductNames": [
-          "游戏联合运营"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140161534",
-        "name": "著作创作",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154473"
-        ],
-        "linkedCoreProductNames": [
-          "IP版权授权"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140012546",
-        "name": "钢铝复合材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000185"
-        ],
-        "linkedCoreProductNames": [
-          "汽车保险杠"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140007050",
-        "name": "铜",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000185"
-        ],
-        "linkedCoreProductNames": [
-          "汽车保险杠"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140021109",
-        "name": "手机游戏",
-        "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 游戏 > 电子游戏 > 手机游戏",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "其他文化传媒",
-          "游戏",
-          "电子游戏",
-          "手机游戏"
-        ],
-        "level5Industry": {
-          "code": "1210000089",
-          "name": "游戏"
-        },
-        "level6Industry": {
-          "code": "1210000159",
-          "name": "电子游戏"
-        },
-        "level7Product": {
-          "code": "1140021109",
-          "name": "手机游戏"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 3,
-        "stocks": [
-          {
-            "stockCode": "002555.SZ",
-            "stockName": "三七互娱",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "002602.SZ",
-            "stockName": "世纪华通",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "002558.SZ",
-            "stockName": "巨人网络",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 7,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140157469",
-        "name": "游戏代理发行",
-        "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 游戏服务 > 游戏发行 > 游戏代理发行",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "其他文化传媒",
-          "游戏服务",
-          "游戏发行",
-          "游戏代理发行"
-        ],
-        "level5Industry": {
-          "code": "1210000090",
-          "name": "游戏服务"
-        },
-        "level6Industry": {
-          "code": "1210000162",
-          "name": "游戏发行"
-        },
-        "level7Product": {
-          "code": "1140157469",
-          "name": "游戏代理发行"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "002555.SZ",
-            "stockName": "三七互娱",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "002602.SZ",
-            "stockName": "世纪华通",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 9,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019778",
-        "name": "网页游戏",
-        "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 游戏 > 电子游戏 > 网页游戏",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "其他文化传媒",
-          "游戏",
-          "电子游戏",
-          "网页游戏"
-        ],
-        "level5Industry": {
-          "code": "1210000089",
-          "name": "游戏"
-        },
-        "level6Industry": {
-          "code": "1210000159",
-          "name": "电子游戏"
-        },
-        "level7Product": {
-          "code": "1140019778",
-          "name": "网页游戏"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "002555.SZ",
-            "stockName": "三七互娱",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "002602.SZ",
-            "stockName": "世纪华通",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 6,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019779",
-        "name": "电脑客户端游戏",
-        "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 游戏 > 电子游戏 > 电脑客户端游戏",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "其他文化传媒",
-          "游戏",
-          "电子游戏",
-          "电脑客户端游戏"
-        ],
-        "level5Industry": {
-          "code": "1210000089",
-          "name": "游戏"
-        },
-        "level6Industry": {
-          "code": "1210000159",
-          "name": "电子游戏"
-        },
-        "level7Product": {
-          "code": "1140019779",
-          "name": "电脑客户端游戏"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "002602.SZ",
-            "stockName": "世纪华通",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "002558.SZ",
-            "stockName": "巨人网络",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 5,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140157457",
-        "name": "游戏联合运营",
-        "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 游戏服务 > 游戏发行 > 游戏联合运营",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "其他文化传媒",
-          "游戏服务",
-          "游戏发行",
-          "游戏联合运营"
-        ],
-        "level5Industry": {
-          "code": "1210000090",
-          "name": "游戏服务"
-        },
-        "level6Industry": {
-          "code": "1210000162",
-          "name": "游戏发行"
-        },
-        "level7Product": {
-          "code": "1140157457",
-          "name": "游戏联合运营"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "002555.SZ",
-            "stockName": "三七互娱",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 10,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140154473",
-        "name": "IP版权授权",
-        "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > IP产业 > IP版权 > IP版权授权",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "其他文化传媒",
-          "IP产业",
-          "IP版权",
-          "IP版权授权"
-        ],
-        "level5Industry": {
-          "code": "1210000091",
-          "name": "IP产业"
-        },
-        "level6Industry": {
-          "code": "1210000163",
-          "name": "IP版权"
-        },
-        "level7Product": {
-          "code": "1140154473",
-          "name": "IP版权授权"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 8,
         "stocks": [
           {
             "stockCode": "002558.SZ",
             "stockName": "巨人网络",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 6,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
+        "products": [
+          {
+            "code": "1140021109",
+            "name": "手机游戏",
+            "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 游戏 > 电子游戏 > 手机游戏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002558.SZ",
+                "stockName": "巨人网络",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140019779",
+            "name": "电脑客户端游戏",
+            "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 游戏 > 电子游戏 > 电脑客户端游戏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002558.SZ",
+                "stockName": "巨人网络",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
       },
       {
-        "code": "1130000185",
-        "name": "汽车保险杠",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车车身系统 > 汽车外饰件 > 汽车保险杠",
-        "industryPath": [
-          "汽车",
-          "汽车零部件",
-          "汽车零部件",
-          "汽车车身系统",
-          "汽车外饰件",
-          "汽车保险杠"
-        ],
-        "level5Industry": {
-          "code": "1200001154",
-          "name": "汽车车身系统"
-        },
-        "level6Industry": {
-          "code": "1200004632",
-          "name": "汽车外饰件"
-        },
-        "level7Product": {
-          "code": "1130000185",
-          "name": "汽车保险杠"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
+        "code": "1210000091",
+        "name": "IP产业",
+        "description": "A股IP产业指围绕知识产权（如影视、游戏、动漫形象）进行内容创作与商业变现的行业。因具备高附加值、长尾效应及跨界联动能力，能持续衍生周边、授权等收益，受资本青睐，是文化消费升级的核心赛道。",
         "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 4,
         "stocks": [
           {
-            "stockCode": "002602.SZ",
-            "stockName": "世纪华通",
-            "rating": "★★★★"
+            "stockCode": "002558.SZ",
+            "stockName": "巨人网络",
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 9,
-        "downstreamCount": 2,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      },
-      {
-        "code": "1140152049",
-        "name": "汽车副仪表板",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车车身系统 > 汽车内饰件 > 汽车副仪表板",
-        "industryPath": [
-          "汽车",
-          "汽车零部件",
-          "汽车零部件",
-          "汽车车身系统",
-          "汽车内饰件",
-          "汽车副仪表板"
-        ],
-        "level5Industry": {
-          "code": "1200001154",
-          "name": "汽车车身系统"
-        },
-        "level6Industry": {
-          "code": "1200004631",
-          "name": "汽车内饰件"
-        },
-        "level7Product": {
-          "code": "1140152049",
-          "name": "汽车副仪表板"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
+        "products": [
           {
-            "stockCode": "002602.SZ",
-            "stockName": "世纪华通",
-            "rating": "★★★★"
+            "code": "1140154473",
+            "name": "IP版权授权",
+            "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > IP产业 > IP版权 > IP版权授权",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002558.SZ",
+                "stockName": "巨人网络",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 0,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      },
-      {
-        "code": "1140173806",
-        "name": "汽车中冷器室",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车车身系统 > 汽车内饰件 > 汽车中冷器室",
-        "industryPath": [
-          "汽车",
-          "汽车零部件",
-          "汽车零部件",
-          "汽车车身系统",
-          "汽车内饰件",
-          "汽车中冷器室"
-        ],
-        "level5Industry": {
-          "code": "1200001154",
-          "name": "汽车车身系统"
-        },
-        "level6Industry": {
-          "code": "1200004631",
-          "name": "汽车内饰件"
-        },
-        "level7Product": {
-          "code": "1140173806",
-          "name": "汽车中冷器室"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "002602.SZ",
-            "stockName": "世纪华通",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      },
-      {
-        "code": "1140173803",
-        "name": "汽车拉手框",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车车身系统 > 汽车内饰件 > 汽车拉手框",
-        "industryPath": [
-          "汽车",
-          "汽车零部件",
-          "汽车零部件",
-          "汽车车身系统",
-          "汽车内饰件",
-          "汽车拉手框"
-        ],
-        "level5Industry": {
-          "code": "1200001154",
-          "name": "汽车车身系统"
-        },
-        "level6Industry": {
-          "code": "1200004631",
-          "name": "汽车内饰件"
-        },
-        "level7Product": {
-          "code": "1140173803",
-          "name": "汽车拉手框"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "002602.SZ",
-            "stockName": "世纪华通",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      }
-    ],
-    "downstream": [
-      {
-        "code": "1140157930",
-        "name": "境外游戏发行",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140019778",
-          "1140019779",
-          "1140021109"
-        ],
-        "linkedCoreProductNames": [
-          "手机游戏",
-          "电脑客户端游戏",
-          "网页游戏"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 3
-        }
-      },
-      {
-        "code": "1140011526",
-        "name": "游戏分发",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140019778",
-          "1140019779",
-          "1140021109"
-        ],
-        "linkedCoreProductNames": [
-          "手机游戏",
-          "电脑客户端游戏",
-          "网页游戏"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 3
-        }
-      },
-      {
-        "code": "1140157858",
-        "name": "游戏资讯平台运营",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140019778",
-          "1140019779",
-          "1140021109"
-        ],
-        "linkedCoreProductNames": [
-          "手机游戏",
-          "电脑客户端游戏",
-          "网页游戏"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 3
-        }
-      },
-      {
-        "code": "1140014134",
-        "name": "游戏玩家",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140157457",
-          "1140157469"
-        ],
-        "linkedCoreProductNames": [
-          "游戏代理发行",
-          "游戏联合运营"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140157464",
-        "name": "APP分发",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140021109"
-        ],
-        "linkedCoreProductNames": [
-          "手机游戏"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140061118",
-        "name": "数字发行",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140021109"
-        ],
-        "linkedCoreProductNames": [
-          "手机游戏"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140133798",
-        "name": "游戏联运",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140019778"
-        ],
-        "linkedCoreProductNames": [
-          "网页游戏"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140095367",
-        "name": "乘用车防撞梁",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000185"
-        ],
-        "linkedCoreProductNames": [
-          "汽车保险杠"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140158358",
-        "name": "影视剧出品商",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154473"
-        ],
-        "linkedCoreProductNames": [
-          "IP版权授权"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140158181",
-        "name": "游戏研发商",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154473"
-        ],
-        "linkedCoreProductNames": [
-          "IP版权授权"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140158357",
-        "name": "衍生品开发商",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154473"
-        ],
-        "linkedCoreProductNames": [
-          "IP版权授权"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140157836",
-        "name": "商场儿童游乐项目",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154473"
-        ],
-        "linkedCoreProductNames": [
-          "IP版权授权"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140053881",
-        "name": "汽车车身零部件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000185"
-        ],
-        "linkedCoreProductNames": [
-          "汽车保险杠"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140058305",
-        "name": "游乐园",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140154473"
-        ],
-        "linkedCoreProductNames": [
-          "IP版权授权"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
   "industryAnalysis": {
-    "status": "research_pending",
-    "target": {
-      "code": "1200001154",
-      "name": "汽车车身系统"
-    },
-    "overview": "汽车车身系统指白车身、车门及覆盖件等结构部件。与本次事件关联度较高的产品包括汽车中冷器室、汽车保险杠、汽车副仪表板等。",
+    "status": "unavailable",
+    "target": null,
+    "overview": null,
     "impact": null,
     "researchSources": [],
-    "reason": "该产业的专项研究内容正在补充中"
+    "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
+  },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 13,
+    "eligibleSourceRowCount": 3,
+    "totalStockCount": 3,
+    "groupCount": 1,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 5,
+    "excludedNonAShareCount": 5,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 3,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 3438,
+            "stockCode": "002555.SZ",
+            "stockName": "三七互娱",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "被传为灵犀互娱的潜在收购方之一，若收购成功将极大补充其SLG品类实力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002555.SZ",
+              "companyName": "三七互娱",
+              "companyProfile": "公司是国家文化出口重点企业、国家文化产业示范基地，凭借优异业绩被纳入中证沪深300指数、明晟MSCI指数、高盛“新漂亮50”名单，是A股优秀的综合型文娱上市企业。公司总部设在广州，并在北京、上海、安徽、海南、湖北、香港以及欧美、日韩、东南亚等多个地区均有团队分布。公司业务涵盖游戏和素质教育，同时在新质生产力、泛文娱及都市消费领域进行拓展，大力布局人工智能、XR(扩展现实)、人机交互等前沿方向，打造多元生态圈。公司旗下拥有优异的游戏研发品牌三七游戏，专业的游戏运营品牌37网游、37手游、37GAMES，以及优质素质教育品牌妙小程。科技创新方面，公司以自研行业大模型“小七”为能力底座，深度赋能游戏研运全流程，实现更高效精准的产品研发和更长线的产品运营，为全球用户带来更优质的产品体验。公司还积极开展互联网企业党建工作，助力企业行稳致远。为践行企业社会责任，公司累计捐赠7500万元，并发起成立了广东省游心公益基金会。此外，公司发布了“社会价值共创计划”，携手社会各界创造共享价值。秉承“给世界带来快乐”的使命，公司以“跑得快重要，跑得久更重要”的马拉松精神为指引，致力于成为一家卓越的、可持续发展的文娱企业。未来，公司将持续为大众提供优质健康的文娱产品，为中华优秀传统文化的传承发展和社会正向价值的弘扬贡献自身力量。",
+              "profileSummary": "公司业务涵盖游戏和素质教育，同时在新质生产力、泛文娱及都市消费领域进行拓展，大力布局人工智能、XR(扩展现实)、人机交互等前沿方向，打造多元生态圈。未来，公司将持续为大众提供优质健康的文娱产品，为中华优秀传统文化的传承发展和社会正向价值的弘扬贡献自身力量。",
+              "majorProducts": "网页游戏、移动游戏",
+              "revenueComposition": "移动游戏:97.27%;网页游戏:2.03%;其他业务:0.7%",
+              "revenueSegments": [
+                {
+                  "name": "移动游戏",
+                  "sharePct": 97.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "网页游戏",
+                  "sharePct": 2.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "手机游戏",
+                  "网页游戏",
+                  "游戏代理发行",
+                  "游戏联合运营"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三七互娱当前收入集中在移动游戏（97.27%）、网页游戏（2.03%），而被传为灵犀互娱的潜在收购方之一，若收购成功将极大补充其SLG品类实力所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响事件能否转化为可确认的经营增量预期，业务端仍需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导后才能确认。订单、收入确认、产品结构和毛利率变化如果持续改善，相关业务可能从产业布局转为实际增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 3440,
+            "stockCode": "002602.SZ",
+            "stockName": "世纪华通",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "被传为灵犀互娱的潜在收购方之一，但公司回应暂无收购外部SLG资产需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002602.SZ",
+              "companyName": "世纪华通",
+              "companyProfile": "浙江世纪华通集团股份有限公司成立于2005年，2011年7月在深圳证券交易所上市。公司以汽车零配件业务起步，2014年开始向互联网游戏产业升级转型，2019年以298亿元完成了对盛趣游戏(原盛大游戏)的并购，成为A股名列前茅的文化传媒板块上市公司。目前世纪华通涵盖互联网游戏、汽车零部件制造、人工智能云数据三大主营业务，以及脑科学研究、人工智能、虚实结合平台及应用开发和投资等多个领域，腾讯、华侨城为重要股东。公司是国内A股市场上规模最大的游戏公司之一，主营业务为互联网游戏和汽车零部件，旗下产业包括天游、七酷、点点互动、盛大游戏、世纪华通车业等。公司在汽车用塑料件行业具有较高的知名度，产品及服务受到客户的认可，公司产品间接配套上海大众、上海通用、一汽大众、上汽集团、一汽集团、广汽集团等国内知名整车企业，是上海大众A级供应商，也是贝洱集团、伟世通集团、法雷奥集团等国际一流汽车零部件制造商的全球采购重要供应商。公司拥有天游软件、七酷网络、点点互动等全资下属游戏公司，实现网络游戏业务类型全覆盖、游戏产业链全覆盖及游戏发行全球化的发展格局。",
+              "profileSummary": "目前世纪华通涵盖互联网游戏、汽车零部件制造、人工智能云数据三大主营业务，以及脑科学研究、人工智能、虚实结合平台及应用开发和投资等多个领域，腾讯、华侨城为重要股东。公司是国内A股市场上规模最大的游戏公司之一，主营业务为互联网游戏和汽车零部件，旗下产业包括天游、七酷、点点互动、盛大游戏、世纪华通车业等。",
+              "majorProducts": "安全系统塑料件、车灯系统塑料件、互联网游戏、金属冲压件、空调系统塑料件、内外饰件、其他塑料件、热交换系统塑料件、人工智能云数据业务、有色金属铸造件",
+              "revenueComposition": "移动网络游戏:85.68%;电脑端游戏:9.11%;汽车零部件:3.93%;网页网络游戏:0.63%;其他业务:0.59%;云数据服务:0.05%",
+              "revenueSegments": [
+                {
+                  "name": "移动网络游戏",
+                  "sharePct": 85.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电脑端游戏",
+                  "sharePct": 9.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车零部件",
+                  "sharePct": 3.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "网页网络游戏",
+                  "sharePct": 0.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "云数据服务",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "手机游戏",
+                  "电脑客户端游戏",
+                  "网页游戏",
+                  "游戏代理发行",
+                  "汽车中冷器室",
+                  "汽车副仪表板",
+                  "汽车拉手框",
+                  "汽车保险杠"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "世纪华通的事件主线是：被传为灵犀互娱的潜在收购方之一，但公司回应暂无收购外部SLG资产需求，但当前收入结构尚未体现其重要性，收入重心仍是移动网络游戏（85.68%）、电脑端游戏（9.11%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，并在终端销量、客户采购量、公司出货和相关产品收入增速上留下可核验痕迹。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 3441,
+            "stockCode": "002558.SZ",
+            "stockName": "巨人网络",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "被传为灵犀互娱的潜在收购方之一，收购将丰富其游戏产品矩阵。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002558.SZ",
+              "companyName": "巨人网络",
+              "companyProfile": "公司定位为一家以互联网文化娱乐为主的综合性互联网企业，主营业务是互联网游戏的研发和运营。经过二十年的发展和沉淀，公司确立了聚焦精品、玩家至上、注重长留等研发理念，在电脑端网络游戏和移动端网络游戏市场均推出了多款游戏精品大作，特别在MMORPG和多人休闲竞技领域建立了良好的竞争优势。公司目前最主要的两条产品线分别为“征途”系列和“球球大作战”。“征途”在电脑端网络游戏时代以自研自发为主，主要包括4个产品：《征途》、《征途2》、《绿色征途》、《征途怀旧版》；在移动端网络游戏时代，“征途”系列做了新的尝试和突破，自研自发和与渠道合作共举，主要产品包括《征途》手游、《征途2》手游、《原始征途》手游，以及于2024年正式上线的小程序游戏《王者征途》。“征途”IP是国战类MMORPG网游最知名品牌之一，《征途》电脑端网络游戏划时代开启了道具付费模式先河，电脑端网络游戏及移动端网络游戏全系产品累计流水超300亿元。《球球大作战》是公司自研自发的多人休闲竞技类移动端网络游戏，成为行业知名的优质IP，累计设备安装量达到6亿台，峰值DAU超2,900万人，曾登顶中国区游戏免费榜榜首，并长期占据AppStore小游戏、智力游戏免费排行榜前五名。公司的网络游戏收入主要来源于虚拟道具收费模式；产品运营模式则包括自主运营、授权运营及联合运营三种模式。",
+              "profileSummary": "公司定位为一家以互联网文化娱乐为主的综合性互联网企业，主营业务是互联网游戏的研发和运营。“征途”在电脑端网络游戏时代以自研自发为主，主要包括4个产品：《征途》、《征途2》、《绿色征途》、《征途怀旧版》；在移动端网络游戏时代，“征途”系列做了新的尝试和突破，自研自发和与渠道合作共举，主要产品包括《征途》手游、《征途2》手游、《原始征途》手游，以及于2024年正式上线的小程序游戏《王者征途》。",
+              "majorProducts": "《绿色征途》、《帕斯卡契约》、《球球大作战》、《原始征途》手游、《月圆之夜》、《征途》、《征途2》、《征途2手游》、小程序游戏《王者征途》",
+              "revenueComposition": "移动端网络游戏收入:85.43%;电脑端网络游戏收入:12.44%;其他游戏相关业务收入:1.91%;其他业务:0.22%",
+              "revenueSegments": [
+                {
+                  "name": "移动端网络游戏收入",
+                  "sharePct": 85.43,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电脑端网络游戏收入",
+                  "sharePct": 12.44,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他游戏相关业务收入",
+                  "sharePct": 1.91,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "IP版权授权",
+                    "category": "IP版权"
+                  },
+                  {
+                    "name": "手机游戏",
+                    "category": "电子游戏"
+                  },
+                  {
+                    "name": "电脑客户端游戏",
+                    "category": "电子游戏"
+                  }
+                ],
+                "knownProducts": [
+                  "IP版权授权",
+                  "手机游戏",
+                  "电脑客户端游戏"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "巨人网络与事件存在真实业务交集：公司已有IP版权授权、手机游戏、电脑客户端游戏，与被传为灵犀互娱的潜在收购方之一，收购将丰富其游戏产品矩阵所处的产业环节一致。移动端网络游戏收入（85.43%）、电脑端网络游戏收入（12.44%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "5条低于3星的源记录已按当前关注口径排除。",
+      "5条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
   },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "3只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

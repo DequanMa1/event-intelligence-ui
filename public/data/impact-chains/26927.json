@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26927",
@@ -9,10 +9,10 @@
     "date": "2026-07-03"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 4,
-    "mappedStockCount": 3,
-    "unmappedStockCount": 1,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 15957,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 19
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 15958,
@@ -29,22 +29,13 @@
         "stockName": "格力电器",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 16
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 15959,
         "stockCode": "000921.SZ",
         "stockName": "海信家电",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 9
-      },
-      {
-        "sourceRowNumber": 15960,
-        "stockCode": "01070.HK",
-        "stockName": "TCL电子",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -53,9 +44,18 @@
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 15960,
-        "stockCode": "01070.HK",
-        "stockName": "TCL电子",
+        "sourceRowNumber": 15958,
+        "stockCode": "000651.SZ",
+        "stockName": "格力电器",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 15959,
+        "stockCode": "000921.SZ",
+        "stockName": "海信家电",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -67,112 +67,12 @@
     "candidateCoreProductCount": 30,
     "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 6,
-    "downstreamCandidateCount": 3,
-    "shownUpstreamCount": 6,
-    "shownDownstreamCount": 3
+    "level7ProductCount": 99,
+    "relatedIndustryCandidateCount": 29,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140035627",
-        "name": "冷凝器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052085"
-        ],
-        "linkedCoreProductNames": [
-          "热泵热水器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140027959",
-        "name": "压缩机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052085"
-        ],
-        "linkedCoreProductNames": [
-          "热泵热水器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140130330",
-        "name": "热泵热水器膨胀阀",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052085"
-        ],
-        "linkedCoreProductNames": [
-          "热泵热水器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140130329",
-        "name": "热泵热水器节流装置",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052085"
-        ],
-        "linkedCoreProductNames": [
-          "热泵热水器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140059492",
-        "name": "蒸发器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052085"
-        ],
-        "linkedCoreProductNames": [
-          "热泵热水器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140046717",
-        "name": "氟利昂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052085"
-        ],
-        "linkedCoreProductNames": [
-          "热泵热水器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140052085",
         "name": "热泵热水器",
@@ -198,18 +98,15 @@
           "name": "热泵热水器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600690.SH",
             "stockName": "海尔智家",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 6,
-        "downstreamCount": 3,
         "relevanceScore": 12,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -220,54 +117,706 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140124763",
-        "name": "品牌自营店",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052085"
+        "code": "1200001120",
+        "name": "家用空调",
+        "description": "家用空调指A股中主营居民用空调器的上市公司。因具备高股息、低估值及地产后周期属性，且受益于以旧换新政策与出海增长，兼具防御与成长逻辑，成为资金关注的稳健配置板块。",
+        "stockCount": 6,
+        "starWeight": 23,
+        "level7ProductCount": 3,
+        "relevanceScore": 150,
+        "stocks": [
+          {
+            "stockCode": "000333.SZ",
+            "stockName": "美的集团",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000651.SZ",
+            "stockName": "格力电器",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000921.SZ",
+            "stockName": "海信家电",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600690.SH",
+            "stockName": "海尔智家",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "920081.BJ",
+            "stockName": "欧伦电气",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000521.SZ",
+            "stockName": "长虹美菱",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "热泵热水器"
+        "products": [
+          {
+            "code": "1140155286",
+            "name": "移动空调",
+            "hierarchyPath": "家用电器 > 白色家电 > 空调 > 家用空调 > 立柜式空调 > 移动空调",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "920081.BJ",
+                "stockName": "欧伦电气",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "移动空调"
+            ]
+          },
+          {
+            "code": "1140129955",
+            "name": "壁挂式空调",
+            "hierarchyPath": "家用电器 > 白色家电 > 空调 > 家用空调 > 壁挂式空调 > 壁挂式空调",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000333.SZ",
+                "stockName": "美的集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000651.SZ",
+                "stockName": "格力电器",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000921.SZ",
+                "stockName": "海信家电",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600690.SH",
+                "stockName": "海尔智家",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000521.SZ",
+                "stockName": "长虹美菱",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140129956",
+            "name": "立柜式空调",
+            "hierarchyPath": "家用电器 > 白色家电 > 空调 > 家用空调 > 立柜式空调 > 立柜式空调",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000333.SZ",
+                "stockName": "美的集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000651.SZ",
+                "stockName": "格力电器",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000921.SZ",
+                "stockName": "海信家电",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600690.SH",
+                "stockName": "海尔智家",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000521.SZ",
+                "stockName": "长虹美菱",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140131178",
-        "name": "家电商城",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052085"
+        "code": "1210003132",
+        "name": "工商用空调",
+        "description": "工商用空调指用于商业及工业场景的大型温控设备。因受益于数据中心、轨道交通等新基建需求增长，且具备高壁垒和稳定现金流，该板块成为A股中兼具成长性与防御性的关注焦点，龙头公司估值有望重塑。",
+        "stockCount": 6,
+        "starWeight": 23,
+        "level7ProductCount": 3,
+        "relevanceScore": 120,
+        "stocks": [
+          {
+            "stockCode": "000333.SZ",
+            "stockName": "美的集团",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000651.SZ",
+            "stockName": "格力电器",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000921.SZ",
+            "stockName": "海信家电",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600690.SH",
+            "stockName": "海尔智家",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000811.SZ",
+            "stockName": "冰轮环境",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002011.SZ",
+            "stockName": "盾安环境",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "热泵热水器"
+        "products": [
+          {
+            "code": "1140000093",
+            "name": "中央空调",
+            "hierarchyPath": "机械设备 > 通用机械 > 制冷空调设备 > 工商用空调 > 中央空调 > 中央空调",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000333.SZ",
+                "stockName": "美的集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000651.SZ",
+                "stockName": "格力电器",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000921.SZ",
+                "stockName": "海信家电",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600690.SH",
+                "stockName": "海尔智家",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000811.SZ",
+                "stockName": "冰轮环境",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140089995",
+            "name": "空气处理机组",
+            "hierarchyPath": "机械设备 > 通用机械 > 制冷空调设备 > 工商用空调 > 空调末端设备 > 空气处理机组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002011.SZ",
+                "stockName": "盾安环境",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140092544",
+            "name": "风机盘管机组",
+            "hierarchyPath": "机械设备 > 通用机械 > 制冷空调设备 > 工商用空调 > 空调末端设备 > 风机盘管机组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002011.SZ",
+                "stockName": "盾安环境",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 15,
+    "mappedStockCount": 14,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 99,
+    "candidateIndustryCount": 29,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 15943,
+        "stockCode": "600160.SH",
+        "stockName": "巨化股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140056597",
-        "name": "经销商",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140052085"
+        "sourceRowNumber": 15944,
+        "stockCode": "603379.SH",
+        "stockName": "三美股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 15945,
+        "stockCode": "605020.SH",
+        "stockName": "永和股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 15946,
+        "stockCode": "600378.SH",
+        "stockName": "昊华科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 15947,
+        "stockCode": "002050.SZ",
+        "stockName": "三花智控",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 12
+      },
+      {
+        "sourceRowNumber": 15948,
+        "stockCode": "002011.SZ",
+        "stockName": "盾安环境",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 16
+      },
+      {
+        "sourceRowNumber": 15949,
+        "stockCode": "000811.SZ",
+        "stockName": "冰轮环境",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 17
+      },
+      {
+        "sourceRowNumber": 15950,
+        "stockCode": "002158.SZ",
+        "stockName": "汉钟精机",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 15951,
+        "stockCode": "301525.SZ",
+        "stockName": "儒竞科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 15956,
+        "stockCode": "000333.SZ",
+        "stockName": "美的集团",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 26
+      },
+      {
+        "sourceRowNumber": 15957,
+        "stockCode": "600690.SH",
+        "stockName": "海尔智家",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 19
+      },
+      {
+        "sourceRowNumber": 15958,
+        "stockCode": "000651.SZ",
+        "stockName": "格力电器",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 14
+      },
+      {
+        "sourceRowNumber": 15959,
+        "stockCode": "000921.SZ",
+        "stockName": "海信家电",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 9
+      },
+      {
+        "sourceRowNumber": 15962,
+        "stockCode": "000521.SZ",
+        "stockName": "长虹美菱",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 12
+      },
+      {
+        "sourceRowNumber": 15966,
+        "stockCode": "920081.BJ",
+        "stockName": "欧伦电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001120",
+        "name": "家用空调",
+        "description": "家用空调指A股中主营居民用空调器的上市公司。因具备高股息、低估值及地产后周期属性，且受益于以旧换新政策与出海增长，兼具防御与成长逻辑，成为资金关注的稳健配置板块。",
+        "stockCount": 6,
+        "starWeight": 23,
+        "level7ProductCount": 3,
+        "relevanceScore": 150,
+        "stocks": [
+          {
+            "stockCode": "000333.SZ",
+            "stockName": "美的集团",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000651.SZ",
+            "stockName": "格力电器",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000921.SZ",
+            "stockName": "海信家电",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600690.SH",
+            "stockName": "海尔智家",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "920081.BJ",
+            "stockName": "欧伦电气",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000521.SZ",
+            "stockName": "长虹美菱",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "热泵热水器"
+        "products": [
+          {
+            "code": "1140155286",
+            "name": "移动空调",
+            "hierarchyPath": "家用电器 > 白色家电 > 空调 > 家用空调 > 立柜式空调 > 移动空调",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "920081.BJ",
+                "stockName": "欧伦电气",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "移动空调"
+            ]
+          },
+          {
+            "code": "1140129955",
+            "name": "壁挂式空调",
+            "hierarchyPath": "家用电器 > 白色家电 > 空调 > 家用空调 > 壁挂式空调 > 壁挂式空调",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000333.SZ",
+                "stockName": "美的集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000651.SZ",
+                "stockName": "格力电器",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000921.SZ",
+                "stockName": "海信家电",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600690.SH",
+                "stockName": "海尔智家",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000521.SZ",
+                "stockName": "长虹美菱",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140129956",
+            "name": "立柜式空调",
+            "hierarchyPath": "家用电器 > 白色家电 > 空调 > 家用空调 > 立柜式空调 > 立柜式空调",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000333.SZ",
+                "stockName": "美的集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000651.SZ",
+                "stockName": "格力电器",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000921.SZ",
+                "stockName": "海信家电",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600690.SH",
+                "stockName": "海尔智家",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000521.SZ",
+                "stockName": "长虹美菱",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1210003132",
+        "name": "工商用空调",
+        "description": "工商用空调指用于商业及工业场景的大型温控设备。因受益于数据中心、轨道交通等新基建需求增长，且具备高壁垒和稳定现金流，该板块成为A股中兼具成长性与防御性的关注焦点，龙头公司估值有望重塑。",
+        "stockCount": 6,
+        "starWeight": 23,
+        "level7ProductCount": 3,
+        "relevanceScore": 120,
+        "stocks": [
+          {
+            "stockCode": "000333.SZ",
+            "stockName": "美的集团",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000651.SZ",
+            "stockName": "格力电器",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000921.SZ",
+            "stockName": "海信家电",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600690.SH",
+            "stockName": "海尔智家",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000811.SZ",
+            "stockName": "冰轮环境",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002011.SZ",
+            "stockName": "盾安环境",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140000093",
+            "name": "中央空调",
+            "hierarchyPath": "机械设备 > 通用机械 > 制冷空调设备 > 工商用空调 > 中央空调 > 中央空调",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "000333.SZ",
+                "stockName": "美的集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "000651.SZ",
+                "stockName": "格力电器",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000921.SZ",
+                "stockName": "海信家电",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600690.SH",
+                "stockName": "海尔智家",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000811.SZ",
+                "stockName": "冰轮环境",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140089995",
+            "name": "空气处理机组",
+            "hierarchyPath": "机械设备 > 通用机械 > 制冷空调设备 > 工商用空调 > 空调末端设备 > 空气处理机组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002011.SZ",
+                "stockName": "盾安环境",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140092544",
+            "name": "风机盘管机组",
+            "hierarchyPath": "机械设备 > 通用机械 > 制冷空调设备 > 工商用空调 > 空调末端设备 > 风机盘管机组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002011.SZ",
+                "stockName": "盾安环境",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 24,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -282,10 +831,1393 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 27,
+    "eligibleSourceRowCount": 15,
+    "totalStockCount": 15,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 9,
+    "excludedNonAShareCount": 3,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 14,
+    "companyProfileUnmatchedCount": 1,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 15956,
+            "stockCode": "000333.SZ",
+            "stockName": "美的集团",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "核心受益于欧洲空调热销，其创新产品PortaSplit移动分体空调在欧洲多地售罄，品牌认知度与市场份额显著提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000333.SZ",
+              "companyName": "美的集团",
+              "companyProfile": "美的集团始创于1968年，经过55多年发展，已成为一家智能家居、新能源及工业技术、智能建筑科技、机器人与自动化及其他创新业务五大板块为一体的全球化科技集团，并已形成了美的、小天鹅、东芝、华凌、COLMO、Clivet、Eureka、GMCC、威灵、高创、合康、科陆、菱王电梯、库卡、安得、万东医疗等在内的多品牌组合。美的集团在双循环、国产替代、产业升级的大背景下，坚持“科技领先、用户直达、数智驱动、全球突破”四大战略主轴，秉承“用科技创造美好生活”的经营理念，在持续拓展智能家居业务的同时，积极布局和投资前沿创新与科技技术，全面推进商业及工业解决方案业务。在经营过程中，美的集团积极承担环境、社会、治理三方面的社会企业责任，在各业务发展方面贯彻可持续发展理念，力争以独具创新性的产品和服务为社会永续发展作出贡献。",
+              "profileSummary": "美的集团始创于1968年，经过55多年发展，已成为一家智能家居、新能源及工业技术、智能建筑科技、机器人与自动化及其他创新业务五大板块为一体的全球化科技集团，并已形成了美的、小天鹅、东芝、华凌、COLMO、Clivet、Eureka、GMCC、威灵、高创、合康、科陆、菱王电梯、库卡、安得、万东医疗等在内的多品牌组合。在经营过程中，美的集团积极承担环境、社会、治理三方面的社会企业责任，在各业务发展方面贯彻可持续发展理念，力争以独具创新性的…",
+              "majorProducts": "美的IH智能灶、美的电磁炉、美的电饭煲、美的电烤箱、美的电热水瓶、美的电水壶、美的电压力锅、美的豆浆机、美的风扇、美的挂烫机、美的果汁机、美的家用冰箱冷柜、美的家用空调、美的家用空气能热水器、美的煎烤机、美的净化器、美的净水机、美的净饮机、美的面包机、美的取暖器、美的燃气灶、美的热水器、美的商用厨房、美的商用净水机、美的商用空气能热水器、美的商用冷柜、美的商用嵌入式空调、美的商用中央空调、美的微波炉、美的吸尘器、美的吸油烟机、美的洗碗机、美的洗衣机、美的消毒柜、美的饮水机、美的照明电工",
+              "revenueComposition": "智能家居业务:65.41%;楼宇科技:7.81%;其他业务:7.81%;机器人及自动化系统:6.76%;其他:6.26%;工业技术:5.94%",
+              "revenueSegments": [
+                {
+                  "name": "智能家居业务",
+                  "sharePct": 65.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 7.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "楼宇科技",
+                  "sharePct": 7.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "机器人及自动化系统",
+                  "sharePct": 6.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 6.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业技术",
+                  "sharePct": 5.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "中央空调",
+                    "category": "中央空调"
+                  },
+                  {
+                    "name": "冰柜",
+                    "category": "冰柜"
+                  },
+                  {
+                    "name": "冰箱",
+                    "category": "变频冰箱"
+                  },
+                  {
+                    "name": "冰箱压缩机",
+                    "category": "冰箱用零部件"
+                  },
+                  {
+                    "name": "净水器",
+                    "category": "水处理小家电"
+                  },
+                  {
+                    "name": "壁挂式空调",
+                    "category": "壁挂式空调"
+                  }
+                ],
+                "knownProducts": [
+                  "综合物流服务",
+                  "净水器",
+                  "电水壶",
+                  "饮水机",
+                  "电暖器",
+                  "电热水器",
+                  "微波炉",
+                  "电压力锅"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "美的集团实际经营中已有中央空调、冰柜、冰箱，与事件指向的核心受益于欧洲空调热销，其创新产品PortaSplit移动分体空调在欧洲多地售罄，品牌认知度与市场份额显著提升能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在智能家居业务（65.41%）、其他业务（7.81%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善事件能否转化为可确认的经营增量，需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。订单、收入确认、产品结构和毛利率变化将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产品存在不等于利润一定增加。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 15957,
+            "stockCode": "600690.SH",
+            "stockName": "海尔智家",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "欧洲业务本土化程度高，空调销量增长强劲，并通过收购Candy等品牌拥有成熟的渠道和服务网络。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600690.SH",
+              "companyName": "海尔智家",
+              "companyProfile": "公司成立于1984年，总部位于中国青岛，于2019年6月正式更名为海尔智家股份有限公司。公司是一家为全球用户提供美好智慧生活解决方案的智慧家庭生态品牌商，主要从事冰箱/冷柜、洗衣机、空调、热水器、厨电、小家电等智能家电产品与智慧家庭场景解决方案的研发、生产和销售。通过丰富的产品、品牌、方案组合，公司致力于创造全场景智能生活体验，满足用户定制美好生活的需求。公司于1993年在上交所上市，是中国最早上市的公司之一。2018年和2020年，公司先后在德国法兰克福交易所和香港联交所挂牌上市，形成“A+D+H”全球资本市场布局。公司拥有全球家电品牌集群，包括海尔、卡萨帝、Leader、GEAppliances、Candy、Fisher&Paykel、AQUA、CCR和Kwikot等，持续扩大业务版图。根据世界权威市场调查机构欧睿国际调研数据，截至2025年，公司全球大型家用电器品牌零售量连续17年蝉联世界第一，同时，公司品牌冰箱、洗衣机零售量在全球大家电品牌中分别连续18年和17年蝉联第一。随着高端品牌战略、全球化战略不断推进，公司的品牌影响力逐步提高，已经成为著名家用电器品牌的代表，连续多年入选世界品牌实验室“世界品牌500强”；连续15年上榜凯度BrandZ“最具价值中国品牌100强”榜单。公司连续上榜《财富》世界500强和中国ESG影响力榜单。公司ESG实践获得MSCIESG评级“AA”级，处于国内家电行业评级领先水平。在“万物互联”的今天，以智慧家庭引领的公司生态品牌将为全球用户带来越来越多的美好生活体验。",
+              "profileSummary": "公司是一家为全球用户提供美好智慧生活解决方案的智慧家庭生态品牌商，主要从事冰箱/冷柜、洗衣机、空调、热水器、厨电、小家电等智能家电产品与智慧家庭场景解决方案的研发、生产和销售。公司拥有全球家电品牌集群，包括海尔、卡萨帝、Leader、GEAppliances、Candy、Fisher&Paykel、AQUA、CCR和Kwikot等，持续扩大业务版图。",
+              "majorProducts": "海尔CRT电视、海尔CRT洗衣机、海尔DLP背投电视、海尔DVD、海尔PDP电视、海尔笔记本电脑、海尔电冰箱、海尔家用空调、海尔冷柜、海尔燃气灶、海尔热水器、海尔商用空调、海尔手机、海尔台式电脑、海尔微波炉、海尔吸尘器、海尔吸油烟机、海尔消毒柜、海尔液晶电视",
+              "revenueComposition": "电冰箱:27.84%;洗衣机:21.49%;空调器:17.77%;厨卫电器:13.67%;渠道综合服务及其他:12.86%;水家电:5.78%;其他业务:0.58%",
+              "revenueSegments": [
+                {
+                  "name": "电冰箱",
+                  "sharePct": 27.84,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "洗衣机",
+                  "sharePct": 21.49,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "空调器",
+                  "sharePct": 17.77,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "厨卫电器",
+                  "sharePct": 13.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "渠道综合服务及其他",
+                  "sharePct": 12.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "水家电",
+                  "sharePct": 5.78,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "中央空调",
+                    "category": "中央空调"
+                  },
+                  {
+                    "name": "冰柜",
+                    "category": "冰柜"
+                  },
+                  {
+                    "name": "冰箱",
+                    "category": "变频冰箱"
+                  },
+                  {
+                    "name": "净水器",
+                    "category": "水处理小家电"
+                  },
+                  {
+                    "name": "壁挂式空调",
+                    "category": "壁挂式空调"
+                  },
+                  {
+                    "name": "太阳能热水器",
+                    "category": "热水器类"
+                  }
+                ],
+                "knownProducts": [
+                  "净水器",
+                  "太阳能热水器",
+                  "热泵热水器",
+                  "燃气热水器",
+                  "电热水器",
+                  "空气能热水器",
+                  "油烟机",
+                  "消毒柜"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "海尔智家更接近“小基数、高弹性”的事件期权，而不是当前利润主线。水家电占收入的5.78%，公司在产业链中的具体抓手是：欧洲业务本土化程度高，空调销量增长强劲，并通过收购Candy等品牌拥有成熟的渠道和服务网络。若终端需求与渗透率变化沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务增速可能很高，但较低的收入基数意味着短期贡献未必足以改变公司整体业绩。这类标的最重要的不是行业空间叙事，而是终端销量、客户采购量、公司出货和相关产品收入增速能否证明业务开始跨越规模门槛；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，估值弹性往往会先于报表弹性消退。"
+          },
+          {
+            "sourceRowNumber": 15958,
+            "stockCode": "000651.SZ",
+            "stockName": "格力电器",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "欧洲市场销售额增长显著，移动空调在多国渠道售罄，显示出强大的品牌和产品需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000651.SZ",
+              "companyName": "格力电器",
+              "companyProfile": "公司成立于1991年，1996年11月在深交所挂牌上市。公司成立初期，主要依靠组装生产家用空调，现已发展成为一家多元化、科技型的全球工业集团，旗下拥有格力、TOSOT、晶弘三大消费品牌及凌达、凯邦、新元等工业品牌，产业覆盖家用消费品和工业装备两大领域。消费领域覆盖家用空调、暖通空调、冰箱、洗衣机、热水器、厨房电器、环境电器、智能楼宇、智能家居；工业领域覆盖高端装备、精密模具、冷冻冷藏设备、电机、压缩机、电容、半导体器件、精密铸造、基础材料、工业储能、再生资源等，产品远销190多个国家和地区。在产业布局方面，公司积极开拓海内外市场，建立了多个生产基地，遍布广东、重庆、安徽等多个省市，以及巴西、巴基斯坦等国家。同时，公司还建立了多个再生资源基地，覆盖了从上游生产到下游回收的全产业链，实现了绿色、循环、可持续的发展模式。在质量管理方面，公司坚守诚信经营的宗旨，以客户需求为导向，严格把控质量源头和体系建设。这种对质量的坚持使得公司在市场上赢得了良好的声誉，2018年荣获第三届“中国质量奖”。此外，公司还积极参与国家标准的制定工作，推动行业质量水平的提升。在转型升级方面，公司积极响应供给侧结构性改革，调整优化产业布局，推进智能制造升级。公司从专业空调生产延伸至多元化的高端技术产业，如智能装备、通信设备等领域。格力智能装备不仅为公司自身的自动化改造提供了支持，还为其他行业提供了先进的设备和服务。",
+              "profileSummary": "公司成立初期，主要依靠组装生产家用空调，现已发展成为一家多元化、科技型的全球工业集团，旗下拥有格力、TOSOT、晶弘三大消费品牌及凌达、凯邦、新元等工业品牌，产业覆盖家用消费品和工业装备两大领域。消费领域覆盖家用空调、暖通空调、冰箱、洗衣机、热水器、厨房电器、环境电器、智能楼宇、智能家居；工业领域覆盖高端装备、精密模具、冷冻冷藏设备、电机、压缩机、电容、半导体器件、精密铸造、基础材料、工业储能、再生资源等，产品远销190多个国家和地区。",
+              "majorProducts": "半导体器件、冰箱、厨房电器、电机、电容、格力典雅柜机系列空调、格力分体挂壁空调、格力分体立柜空调、格力豪华柜机系列空调、格力漆包线、格力卧室空调、格力新金系列空调、格力新绿系列空调、格力中央空调、工业储能、环境电器、基础材料、精密模具、精密铸造、冷冻冷藏设备、热水器、洗衣机、压缩机、再生资源、智能家居、智能楼宇",
+              "revenueComposition": "消费电器:77.76%;工业制品及绿色能源:10.16%;其他业务:10.13%;其他:1.56%;智能装备:0.4%",
+              "revenueSegments": [
+                {
+                  "name": "消费电器",
+                  "sharePct": 77.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业制品及绿色能源",
+                  "sharePct": 10.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 10.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能装备",
+                  "sharePct": 0.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "中央空调",
+                    "category": "中央空调"
+                  },
+                  {
+                    "name": "冰箱",
+                    "category": "变频冰箱"
+                  },
+                  {
+                    "name": "壁挂式空调",
+                    "category": "壁挂式空调"
+                  },
+                  {
+                    "name": "洗衣机",
+                    "category": "滚筒变频洗衣机"
+                  },
+                  {
+                    "name": "燃气热水器",
+                    "category": "热水器类"
+                  },
+                  {
+                    "name": "电暖器",
+                    "category": "电暖器类"
+                  }
+                ],
+                "knownProducts": [
+                  "电暖器",
+                  "燃气热水器",
+                  "空气能热水器",
+                  "空调四通阀",
+                  "空调截止阀",
+                  "空调电子膨胀阀",
+                  "电风扇",
+                  "冰箱"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "格力电器与新闻之间有明确产品抓手：中央空调、冰箱、壁挂式空调，对应欧洲市场销售额增长显著，移动空调在多国渠道售罄，显示出强大的品牌和产品需求。收入主体目前是消费电器（77.76%）、工业制品及绿色能源（10.16%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 15959,
+            "stockCode": "000921.SZ",
+            "stockName": "海信家电",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "借助Gorenje品牌及黑电渠道赋能，在欧洲市场实现快速增长，移动空调产品\"一机难求\"。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000921.SZ",
+              "companyName": "海信家电",
+              "companyProfile": "公司成立于1984，于1996年和1999年别在香港联合证券交易所和深圳证券交易所主板发行上市，是以家电制造为主的国际化企业。公司主要从事冰箱、家用空调、中央空调、冷柜、洗衣机、厨房电器等电器产品以及模具、汽车空调压缩机及综合热管理系统的研发、制造和营销业务，并提供围绕家电智能化升级为核心的全场景智慧家庭解决方案。公司产品涵盖“Hisense”、“Ronshen”等八大品牌，品牌阵容丰富，拥有良好的品牌美誉度和市场基础。公司深化研发、生产、销售渠道的全球化布局，持续推进研、产、销协同，在全球市场积极拓展客户、拓宽渠道，并不断推出高端化、套系化、智能化、家居化的产品，提高产品竞争力，打造多元化的业务版图。公司坚持技术立企，践行“引领以智能化为核心的先进制造”，长期立足产业链整体创新变革能力，不断推动技术升级和产品迭代。公司长期扎根制造业，聚焦长期能力建设，不断向数字化、高端化、智能化、绿色化变革发力，持续提升公司的产品力、品牌力、营销力和制造力，推进公司及家电行业的高质量发展。公司围绕智能化、套系化、场景化的市场需求，持续推进“智慧新生活”战略落地，通过全新升级海信爱家APP及智慧云平台为用户提供覆盖全场景、高品质的智慧生活解决方案。公司积极践行ESG理念，持续履行低碳环保的社会责任，从技术研发、生产制造、供应链管理等全流程入手，不断向低碳减排的更高目标迈进。公司通过促进教育公平、践行环保公益、助力社区建设等途径，切实履行社会责任，共享发展成果。",
+              "profileSummary": "公司主要从事冰箱、家用空调、中央空调、冷柜、洗衣机、厨房电器等电器产品以及模具、汽车空调压缩机及综合热管理系统的研发、制造和营销业务，并提供围绕家电智能化升级为核心的全场景智慧家庭解决方案。公司深化研发、生产、销售渠道的全球化布局，持续推进研、产、销协同，在全球市场积极拓展客户、拓宽渠道，并不断推出高端化、套系化、智能化、家居化的产品，提高产品竞争力，打造多元化的业务版图。",
+              "majorProducts": "冰箱、厨房电器、冷柜、暖通空调、汽车空调压缩机、汽车综合热管理系统、洗衣机",
+              "revenueComposition": "暖通空调:44.16%;冰洗:35.48%;其他主营业务:15.14%;其他业务:5.22%",
+              "revenueSegments": [
+                {
+                  "name": "暖通空调",
+                  "sharePct": 44.16,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "冰洗",
+                  "sharePct": 35.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他主营业务",
+                  "sharePct": 15.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "中央空调",
+                    "category": "中央空调"
+                  },
+                  {
+                    "name": "冰柜",
+                    "category": "冰柜"
+                  },
+                  {
+                    "name": "冰箱",
+                    "category": "变频冰箱"
+                  },
+                  {
+                    "name": "壁挂式空调",
+                    "category": "壁挂式空调"
+                  },
+                  {
+                    "name": "汽车空调压缩机",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "油烟机",
+                    "category": "厨房卫生类厨房家电"
+                  }
+                ],
+                "knownProducts": [
+                  "油烟机",
+                  "洗碗机",
+                  "冰柜",
+                  "冰箱",
+                  "洗衣机",
+                  "壁挂式空调",
+                  "立柜式空调",
+                  "中央空调"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "海信家电与事件存在真实业务交集：公司已有中央空调、冰柜、冰箱，与借助Gorenje品牌及黑电渠道赋能，在欧洲市场实现快速增长，移动空调产品\"一机难求\"所处的产业环节一致。暖通空调（44.16%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响终端需求与渗透率变化，只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，才会形成可确认的收入和利润增量。终端销量、客户采购量、公司出货和相关产品收入增速能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 11,
+        "stocks": [
+          {
+            "sourceRowNumber": 15943,
+            "stockCode": "600160.SH",
+            "stockName": "巨化股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内制冷剂龙头，三代制冷剂配额占比高，将直接受益于欧洲空调需求增长带来的制冷剂出口需求提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600160.SH",
+              "companyName": "巨化股份",
+              "companyProfile": "公司成立于1998年，是国内氟化工与氯碱化工综合配套的先进制造基地。公司在阿联酋阿布扎比设有海外生产基地，坚持创新驱动发展，构建了覆盖杭州、衢州两地的研发体系，设有国家级企业技术中心、国家氟材料工程技术研究中心、国家级制造业中试平台、中国化工新材料(衢州)产业园、企业博士后工作站、省重点企业研究院、省企业研究院等高能级创新平台。公司是国内领先的氟化工、氯碱化工新材料先进制造业基地，主要业务涵盖基础化工、氟化工、食品包装材料、石油化工及后续产品的研发、生产与销售。公司拥有氯碱化工、硫酸化工、煤化工、基础氟化工等氟化工必需的产业自我配套体系，并以此为基础，形成了包括基础配套原料、氟制冷剂、有机氟单体、含氟聚合物、含氟精细化学品等在内的完整的氟化工产业链，并涉足石油化工产业。在现有完备的产业链基础上，公司重点发展新材料、新环保、新能源、新用途等绿色科技应用产品，加大绿色产业的投资与研发投入，充分掌握能源结构转型、清洁技术及工业互联网快速发展等重要机遇，发挥自身独特优势，推进产业迈向高端化、智能化、绿色化转型，着力将公司打造成为国内氟化工的领先者，国内一流的化工新材料供应商、服务商。",
+              "profileSummary": "公司是国内领先的氟化工、氯碱化工新材料先进制造业基地，主要业务涵盖基础化工、氟化工、食品包装材料、石油化工及后续产品的研发、生产与销售。公司拥有氯碱化工、硫酸化工、煤化工、基础氟化工等氟化工必需的产业自我配套体系，并以此为基础，形成了包括基础配套原料、氟制冷剂、有机氟单体、含氟聚合物、含氟精细化学品等在内的完整的氟化工产业链，并涉足石油化工产业。",
+              "majorProducts": "巨化股份50%甲氨磷乳油、巨化股份氟制冷剂、巨化股份复合肥、巨化股份合成氨、巨化股份甲醇、巨化股份甲烷氯化物、巨化股份聚氯乙烯、巨化股份硫酸、巨化股份氯磺酸、巨化股份氯甲烷、巨化股份尿素、巨化股份脲醛树脂、巨化股份氢氟酸、巨化股份烧碱、巨化股份乌洛托品",
+              "revenueComposition": "制冷剂:47.69%;石化材料:13.9%;其他业务:11.61%;基础化工产品及其它:10.71%;含氟聚合物材料:6.9%;氟化工原料:4.55%;食品包装材料:2.91%;含氟精细化学品:1.46%;检维修及工程项目管理:0.27%",
+              "revenueSegments": [
+                {
+                  "name": "制冷剂",
+                  "sharePct": 47.69,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "石化材料",
+                  "sharePct": 13.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 11.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "基础化工产品及其它",
+                  "sharePct": 10.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "含氟聚合物材料",
+                  "sharePct": 6.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氟化工原料",
+                  "sharePct": 4.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "食品包装材料",
+                  "sharePct": 2.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "含氟精细化学品",
+                  "sharePct": 1.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "检维修及工程项目管理",
+                  "sharePct": 0.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "R1234yf制冷剂代工",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R125制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R134a制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R22制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R32制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R410A制冷剂",
+                    "category": "含氟制冷剂"
+                  }
+                ],
+                "knownProducts": [
+                  "乙氧氟草醚",
+                  "氨水",
+                  "R1234yf制冷剂代工",
+                  "R125制冷剂",
+                  "R134a制冷剂",
+                  "R22制冷剂",
+                  "R32制冷剂",
+                  "R410A制冷剂"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "巨化股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：制冷剂占收入的47.69%。公司与事件的具体联系在于：国内制冷剂龙头，三代制冷剂配额占比高，将直接受益于欧洲空调需求增长带来的制冷剂出口需求提升，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 15944,
+            "stockCode": "603379.SH",
+            "stockName": "三美股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司主营业务为制冷剂，欧洲空调需求增长将带动公司产品出口。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603379.SH",
+              "companyName": "三美股份",
+              "companyProfile": "公司是一家专业从事氟化工产品研发、生产、销售的股份制民营企业。2019年4月2日，公司在上海证券交易所A股主板上市。公司拥有有机氟、无机氟两大系列产品。主要生产：无水氟化氢；制冷剂R134a、R125、R32、R22、R142b、R143a、混配制冷剂系列；发泡剂R141b等。公司是中国石油和化工企业500强、中国石油和化工企业基础化学原料制造业百强、金华市工业十强企业、开放型经济十强企业，金华市首批“三名”培育企业、武义县最大规模工业企业，十多年来一直位列武义县纳税大户榜首。公司先后获得中国石油和化工优秀民营企业、中国质量诚信企业、浙江省AAA级纳税信用单位、浙江省守合同重信用单位、浙江省诚信企业、浙江省劳动保障诚信企业、浙江省节能先进单位、金华市诚信经营示范单位、金华市劳动模范集体等荣誉称号。公司多项研发产品分别荣获浙江省科学技术进步奖、浙江省科学技术成果登记证书、江苏省科学技术进步奖、武义县科学技术进步奖，也是10余项国家(行业)标准、浙江制造团体标准的主要起草单位。公司发展的目标是成为全球领先的氟产品提供者，将始终坚持可持续发展战略，注重人才培养，不断在氟化工行业精耕细作、开拓创新，加大安全环保和产品研发投入，致力于打造国际一流的含氟制冷剂、发泡剂制造商，为市场提供品种丰富、性能优异的绿色低碳产品；依托氟化工产业优势，致力于含氟高纯电子化学品的研发与生产，为半导体、光伏产业提供稳定可靠的关键材料；加大含氟锂电材料、含氟高性能聚合物等新能源领域含氟新材料的研发与生产投入，不断延伸和丰富含氟产品产业链，为打造氟化工行业的全球化企业，创造一个更安全、更环保的环境而努力。",
+              "profileSummary": "公司是一家专业从事氟化工产品研发、生产、销售的股份制民营企业。公司发展的目标是成为全球领先的氟产品提供者，将始终坚持可持续发展战略，注重人才培养，不断在氟化工行业精耕细作、开拓创新，加大安全环保和产品研发投入，致力于打造国际一流的含氟制冷剂、发泡剂制造商，为市场提供品种丰富、性能优异的绿色低碳产品；依托氟化工产业优势，致力于含氟高纯电子化学品的研发与生产，为半导体、光伏产业提供稳定可靠的关键材料；加大含氟锂电材料、含氟高性能聚合物等新…",
+              "majorProducts": "HCFC-141b、HCFCs（含氢氯氟烃）制冷剂、HFCs（氢氟烃）制冷剂、二氯一氟乙烷、氢氟酸、无水氟化氢",
+              "revenueComposition": "氟制冷剂:85.35%;氟化氢:9.98%;发泡剂:3.27%;材料销售:0.78%;副产品:0.34%;其他产品:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "氟制冷剂",
+                  "sharePct": 85.35,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "氟化氢",
+                  "sharePct": 9.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "发泡剂",
+                  "sharePct": 3.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "材料销售",
+                  "sharePct": 0.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "副产品",
+                  "sharePct": 0.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "R125制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R134a制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R142b制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R143a制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R22制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R32制冷剂",
+                    "category": "含氟制冷剂"
+                  }
+                ],
+                "knownProducts": [
+                  "R125制冷剂",
+                  "R134a制冷剂",
+                  "R142b制冷剂",
+                  "R143a制冷剂",
+                  "R22制冷剂",
+                  "R32制冷剂",
+                  "R404A制冷剂",
+                  "R410A制冷剂"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三美股份的相关业务已决定公司大部分经营表现：氟制冷剂占收入的85.35%。公司与事件的直接业务联系是：公司主营业务为制冷剂，欧洲空调需求增长将带动公司产品出口，真正的增量取决于终端需求与渗透率变化，并需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，终端销量、客户采购量、公司出货和相关产品收入增速需要显示公司获得超越行业的增量。终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 15945,
+            "stockCode": "605020.SH",
+            "stockName": "永和股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司业务涵盖制冷剂、电子特气、氟化液等，将受益于下游空调及热泵市场需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "605020.SH",
+              "companyName": "永和股份",
+              "companyProfile": "公司成立于2004年，总部地处素有中国“氟都”之称的浙江衢州，2021年7月9日在上海证券交易所主板挂牌上市，是一家集原料矿石开采、研发、生产、仓储、运输和销售为一体的专业氟化工企业。公司深耕氟化工领域多年，聚焦于高附加值的含氟高分子材料和环保氟碳化学品业务，已形成从萤石矿、氢氟酸、甲烷氯化物、氟碳化学品到含氟高分子材料、含氟精细化学品的完整产业链，产品远销100多个国家和地区，是我国氟化工行业中产业链最完整的企业之一。公司拥有自主萤石资源(3个采矿权、2个探矿权)，无水氢氟酸年产能13.50万吨，甲烷氯化物和一氯甲烷年产能共计19.7万吨，氟碳化学品单质年产能19万吨(含原料用氟碳化学品)，含氟高分子材料及单体年产能8.28万吨，主要产品品质和产能规模国内领先；公司本部及内蒙永和拥有年混配、分装9.72万吨单质制冷剂、混合制冷剂的生产能力。同时，公司在建产能包括8万吨/年氢氟酸、超过3万吨/年含氟高分子材料以及4.3万吨/年第四代制冷剂。未来公司将持续推进业务全球整体布局，并利用全产业链布局优势，整合更多行业资源，做精做强。在公司已有的生产线基础上，加大对高端含氟高分子材料、氟碳化学品的开发力度，扩大生产能力，丰富产品种类，同时适度适时布局上游甲烷氯化物及氯碱业务；启动四代制冷剂研究、探索精细氟化工和无机氟化工领域，力争打造国内领先、品种齐全、能适应多种特殊用途的专业氟化工领军企业。",
+              "profileSummary": "公司深耕氟化工领域多年，聚焦于高附加值的含氟高分子材料和环保氟碳化学品业务，已形成从萤石矿、氢氟酸、甲烷氯化物、氟碳化学品到含氟高分子材料、含氟精细化学品的完整产业链，产品远销100多个国家和地区，是我国氟化工行业中产业链最完整的企业之一。在公司已有的生产线基础上，加大对高端含氟高分子材料、氟碳化学品的开发力度，扩大生产能力，丰富产品种类，同时适度适时布局上游甲烷氯化物及氯碱业务；启动四代制冷剂研究、探索精细氟化工和无机氟化工领域，力…",
+              "majorProducts": "FEP、HCFC-22、HFC-125、HFC-134a、HFC-143a、HFC-152a、HFC-227ea、HFC-32、HFP、PPVE、PTFE、PVDF、R404A、R407C、R410A、R421A、R507、TFE、VDF、甲烷氯化物、氯化钙、氢氟酸、一氯甲烷",
+              "revenueComposition": "氟碳化学品:53.25%;含氟高分子材料及其单体:33.39%;氟化工原料:8.47%;其他业务:2.6%;含氟精细化学品:2.29%",
+              "revenueSegments": [
+                {
+                  "name": "氟碳化学品",
+                  "sharePct": 53.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "含氟高分子材料及其单体",
+                  "sharePct": 33.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氟化工原料",
+                  "sharePct": 8.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "含氟精细化学品",
+                  "sharePct": 2.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "R125制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R143a制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R152a制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R227ea制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R32制冷剂",
+                    "category": "含氟制冷剂"
+                  },
+                  {
+                    "name": "R404A制冷剂",
+                    "category": "含氟制冷剂"
+                  }
+                ],
+                "knownProducts": [
+                  "R125制冷剂",
+                  "R143a制冷剂",
+                  "R152a制冷剂",
+                  "R227ea制冷剂",
+                  "R32制冷剂",
+                  "R404A制冷剂",
+                  "R410A制冷剂",
+                  "无水氟化氢"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "永和股份实际经营中已有R125制冷剂、R143a制冷剂、R152a制冷剂，与事件指向的公司业务涵盖制冷剂、电子特气、氟化液等，将受益于下游空调及热泵市场需求增长能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在氟碳化学品（53.25%）、含氟高分子材料及其单体（33.39%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 15946,
+            "stockCode": "600378.SH",
+            "stockName": "昊华科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是国内氟化工龙头，拥有万吨级特种气体产能，产品可用于制冷剂生产，受益于下游需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600378.SH",
+              "companyName": "昊华科技",
+              "companyProfile": "公司是中国中化控股有限责任公司旗下的上市公司。1999年经国家经贸委批准在成都发起设立，2001年1月在上海证券交易所挂牌上市。2018年实施重大资产重组，转型升级为先进化工材料领域科研院所集群公司，主要从事高端氟材料、电子化学品、高端制造化工材料的研发与生产，以及提供绿色低碳整体解决方案的碳减排业务。近年来，公司围绕国家发展和市场需求，聚焦化工新材料补短板，强化科技创新，不断优化结构，持续深化改革，发展成为业绩优良、竞争力强、主业突出、治理规范的上市公司。公司始终把“致力成为中国先进化工材料行业引领者，持续为人类品质生活提升和技术进步作贡献”作为公司的发展战略和发展愿景；把“科技引领，创新驱动，追求卓越”作为公司的发展理念，持续推进公司高质量发展。",
+              "profileSummary": "2018年实施重大资产重组，转型升级为先进化工材料领域科研院所集群公司，主要从事高端氟材料、电子化学品、高端制造化工材料的研发与生产，以及提供绿色低碳整体解决方案的碳减排业务。近年来，公司围绕国家发展和市场需求，聚焦化工新材料补短板，强化科技创新，不断优化结构，持续深化改革，发展成为业绩优良、竞争力强、主业突出、治理规范的上市公司。",
+              "majorProducts": "电子化学品、高端氟材料、高端制造化工材料、碳减排业务",
+              "revenueComposition": "氟材料:59.55%;高端制造:17.57%;工程技术服务:11.34%;电子化学品:6.82%;其他业务:2.87%;贸易及其他:1.85%",
+              "revenueSegments": [
+                {
+                  "name": "氟材料",
+                  "sharePct": 59.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高端制造",
+                  "sharePct": 17.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程技术服务",
+                  "sharePct": 11.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子化学品",
+                  "sharePct": 6.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易及其他",
+                  "sharePct": 1.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "天然气转化(镍系)催化剂",
+                  "燃料电池催化剂",
+                  "甲醇合成(铜系)催化剂",
+                  "四氧化二氮",
+                  "氟橡胶混炼胶",
+                  "全氟丙烯",
+                  "四氟丙醇",
+                  "四氟乙烯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "昊华科技的业务范围能够覆盖公司是国内氟化工龙头，拥有万吨级特种气体产能，产品可用于制冷剂生产，受益于下游需求所处的产业环节，但当前氟材料（59.55%）、高端制造（17.57%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。产能释放与行业供给变化需要沿“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”完成兑现，并在在建工程转固、产能利用率、产销率、库存和产品价格上形成持续改善；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 15947,
+            "stockCode": "002050.SZ",
+            "stockName": "三花智控",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "全球制冷控制元器件龙头，产品广泛应用于空调与热泵，欧洲市场需求增长将直接带动其阀件等核心零部件销售。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002050.SZ",
+              "companyName": "三花智控",
+              "companyProfile": "公司是全球最大的制冷控制元器件和全球领先的汽车空调及热管理系统控制部件制造商，“三花”牌制冷智控元器件已成为世界知名品牌，是全球众多车企和空调制冷电器厂家的战略合作伙伴。公司以“精益求精、追求卓越”为核心，以提升各种终端产品的能效水平为己任，引领推进全球节能环保产品变革。经过三十多年的发展，公司已在全球制冷电器和汽车热管理领域确立了行业领先地位，公司空调电子膨胀阀、四通换向阀、电磁阀、微通道换热器、车用电子膨胀阀、新能源车热管理集成组件、Omega泵等产品市场占有率全球第一，截止阀、车用热力膨胀阀、储液器等市占率处于全球领先。同时，公司建立了完整而严格的质保体系，通过了ISO9001质量管理体系认证、IATF16949汽车行业质量管理体系、QC080000有害物质管理质量体系认证，荣获了全国质量奖、浙江省质量奖，国家技术创新示范企业，并获得江森自控、大金、开利、美的、格力、海尔、丰田、奔驰、大众、法雷奥等国内外知名企业的好评。公司坚持“专注领先、创新超越”的经营战略，以热泵技术和热管理系统产品的研究与应用为核心，牢牢把握节能环保和智能化控制的产品发展主题，从“机械部品开发”向“电子控制集成的系统控制技术解决方案开发”升级，产品系列从家用空调、冰箱部件领域向商用空调、商业制冷领域拓展，并向变频控制技术与系统集成升级方向延伸发展。",
+              "profileSummary": "公司以“精益求精、追求卓越”为核心，以提升各种终端产品的能效水平为己任，引领推进全球节能环保产品变革。经过三十多年的发展，公司已在全球制冷电器和汽车热管理领域确立了行业领先地位，公司空调电子膨胀阀、四通换向阀、电磁阀、微通道换热器、车用电子膨胀阀、新能源车热管理集成组件、Omega泵等产品市场占有率全球第一，截止阀、车用热力膨胀阀、储液器等市占率处于全球领先。",
+              "majorProducts": "Omega 泵、电子水泵、热力膨胀阀、三花冰箱配件、三花空调单向阀、三花空调电子膨胀阀、三花空调方体阀、三花空调截止阀、三花空调排水泵、三花空调球阀、三花制冷电磁阀、四通换向阀、微通道换热器、新能源车热管理集成组件",
+              "revenueComposition": "制冷空调电器零部件:59.93%;汽车零部件:40.07%",
+              "revenueSegments": [
+                {
+                  "name": "制冷空调电器零部件",
+                  "sharePct": 59.93,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "汽车零部件",
+                  "sharePct": 40.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "Omega泵",
+                    "category": "其他家电专用零部件"
+                  },
+                  {
+                    "name": "空调四通阀",
+                    "category": "家用空调零部件"
+                  },
+                  {
+                    "name": "空调截止阀",
+                    "category": "家用空调零部件"
+                  },
+                  {
+                    "name": "空调电子膨胀阀",
+                    "category": "家用空调零部件"
+                  },
+                  {
+                    "name": "空调电磁阀",
+                    "category": "家用空调零部件"
+                  },
+                  {
+                    "name": "人形机器人用执行器",
+                    "category": "机器人部件"
+                  }
+                ],
+                "knownProducts": [
+                  "Omega泵",
+                  "加热管",
+                  "空调变频控制器",
+                  "空调四通阀",
+                  "空调微通道换热器",
+                  "空调截止阀",
+                  "空调电子膨胀阀",
+                  "空调电磁阀"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "三花智控已经具备Omega泵、空调四通阀、空调截止阀等业务能力，全球制冷控制元器件龙头，产品广泛应用于空调与热泵，欧洲市场需求增长将直接带动其阀件等核心零部件销售并非单纯概念映射。当前对应的收入被归入制冷空调电器零部件（59.93%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 15948,
+            "stockCode": "002011.SZ",
+            "stockName": "盾安环境",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是欧洲热泵协会会员，为热泵系统提供电子膨胀阀、四通换向阀、换热器等核心部件，是博世等欧洲本土头部热泵制造商的重要合作伙伴。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002011.SZ",
+              "companyName": "盾安环境",
+              "companyProfile": "公司创立于1987年9月26日，创业地为诸暨店口镇。2004年在深圳证券交易所上市。公司以“健康、舒适环境的引领者”为愿景，以“提升能效、优化环境”为使命，多年来深耕制冷领域，主要业务涵盖零部件制造(家用与商用空调、热泵、冷冻冷藏、新能源热管理等领域的制冷阀件、换热器和压力容器)和装备制造(商用空调及核电、净化、通信、轨道交通等领域特种空调以及冷链设备)领域。公司作为全球制冷元器件行业龙头企业，是全球多家知名空调厂商的战略合作伙伴，主要产品产销量均位居全球前列。公司将创新作为企业发展的灵魂，不断提升技术、品质领先的核心竞争力，拥有国家认定企业技术中心、国家级博士后工作站、院士工作站、国家认证(CNAS)实验室、国家级中央空调全性能测试中心，建立了拥有自主知识产权的核心技术支撑体系。先后参与了97项国家和行业标准起草、修订，获得了“全国质量奖”、“中国低碳发展领军企业”、“国家创新型试点企业”、“国家科技进步二等奖”、“中国专利优秀奖”等荣誉称号。",
+              "profileSummary": "公司以“健康、舒适环境的引领者”为愿景，以“提升能效、优化环境”为使命，多年来深耕制冷领域，主要业务涵盖零部件制造(家用与商用空调、热泵、冷冻冷藏、新能源热管理等领域的制冷阀件、换热器和压力容器)和装备制造(商用空调及核电、净化、通信、轨道交通等领域特种空调以及冷链设备)领域。公司作为全球制冷元器件行业龙头企业，是全球多家知名空调厂商的战略合作伙伴，主要产品产销量均位居全球前列。",
+              "majorProducts": "盾安储液器组件、盾安大型制冷设备配件、盾安电动阀组件、盾安电子膨胀阀、盾安分体户用中央空调机组、盾安风管送风式分体空调机组、盾安风机盘管换热器、盾安风冷螺杆式冷水（热泵）机组、盾安风冷涡旋式冷水（热泵）机组、盾安柜机组合式中央空调换热器、盾安柜式空调机组、盾安柜式空气处理机组、盾安户用中央空调换热器、盾安截止阀组件、盾安精密机房专用空调、盾安净化型组合式空气处理机组、盾安空调配件、盾安全热回收新风机组、盾安水冷半封螺杆型冷水机组、盾安水冷柜式空调机组、盾安水冷涡旋型冷水机组、盾安水源热泵机组、盾安特种空调、盾安压缩机配件、盾安装甲空调",
+              "revenueComposition": "制冷配件产业:75.47%;汽车热管理产业:9.47%;制冷设备产业:8.92%;其他:6.14%",
+              "revenueSegments": [
+                {
+                  "name": "制冷配件产业",
+                  "sharePct": 75.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车热管理产业",
+                  "sharePct": 9.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "制冷设备产业",
+                  "sharePct": 8.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 6.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "微通道换热器",
+                    "category": "特殊结构换热器"
+                  },
+                  {
+                    "name": "板翅式换热器",
+                    "category": "普通换热器"
+                  },
+                  {
+                    "name": "涡旋式冷水机组",
+                    "category": "冷水机"
+                  },
+                  {
+                    "name": "空气处理机组",
+                    "category": "空调末端设备"
+                  },
+                  {
+                    "name": "空气源热泵机组",
+                    "category": "热泵"
+                  },
+                  {
+                    "name": "空调四通阀",
+                    "category": "家用空调零部件"
+                  }
+                ],
+                "knownProducts": [
+                  "空调储液器",
+                  "空调四通阀",
+                  "空调截止阀",
+                  "空调电子膨胀阀",
+                  "空调电磁阀",
+                  "涡旋式冷水机组",
+                  "螺杆式冷水机组",
+                  "空气源热泵机组"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "盾安环境与新闻之间有明确产品抓手：微通道换热器、板翅式换热器、涡旋式冷水机组，对应公司是欧洲热泵协会会员，为热泵系统提供电子膨胀阀、四通换向阀、换热器等核心部件，是博世等欧洲本土头部热泵制造商的重要合作伙伴。收入主体目前是制冷配件产业（75.47%）、汽车热管理产业（9.47%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变商业化进度和订单兑现预期，随后要经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才能进入利润表。客户认证、新增订单、交付节奏、相关业务收入和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若客户验证或交付节奏低于预期，订单停留在小批量阶段，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 15949,
+            "stockCode": "000811.SZ",
+            "stockName": "冰轮环境",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "旗下顿汉布什品牌在海外具备高认知度，其冷水机组、压缩机等产品可用于大型暖通空调系统，受益于欧洲市场对制冷设备需求的整体提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000811.SZ",
+              "companyName": "冰轮环境",
+              "companyProfile": "公司创建于1956年，1998年在深圳证券交易所上市。公司致力于在人工环境控制技术和能源综合利用技术领域，为用户提供安全、环保、节能的智慧绿色能源系统解决方案，以完善的智能制造和系统集成能力，满足用户专业化的定制需求。业务领域涵盖工业制冷、暖通空调、绿能装备、精密成型、数智工业，广泛应用、服务于食品冷冻冷藏及深加工、冷链物流体系建设、食品药品冻干、冰雪运动场馆、加工预处理产线等商业制冷系统；化工生产及工艺特气冷却、人工智能环境、建筑骨料冷却、隧道矿井探凿冻结等工业冷冻系统；轨道交通、商业地产、公共场馆、科研文教等商用舒适空调；数据中心、能源电力、冶金石化、洁净车间、制药、矿井热害、节能改造等工业特种空调；以及余能利用、气体压缩及液化、储能系统、新能源装备、洁净排放；黑色金属铸造、有色金属铸造、铸件精密加工、3D智能成型；工业智控、智能产线、智慧物流等。",
+              "profileSummary": "公司致力于在人工环境控制技术和能源综合利用技术领域，为用户提供安全、环保、节能的智慧绿色能源系统解决方案，以完善的智能制造和系统集成能力，满足用户专业化的定制需求。业务领域涵盖工业制冷、暖通空调、绿能装备、精密成型、数智工业，广泛应用、服务于食品冷冻冷藏及深加工、冷链物流体系建设、食品药品冻干、冰雪运动场馆、加工预处理产线等商业制冷系统；化工生产及工艺特气冷却、人工智能环境、建筑骨料冷却、隧道矿井探凿冻结等工业冷冻系统；轨道交通、商业…",
+              "majorProducts": "包装仓储产线、储能蓄能装置、船用制冷设备、多联机、各类工业热泵、换热设备、活塞式压缩机、精密铸件、离心式压缩机、螺杆式压缩机、氢能装备、速冻装置、吸收式压缩机、压力容器、真空冻干设备",
+              "revenueComposition": "工业产品销售:79.6%;工程施工:15.28%;其他:3.76%;材料销售收入:1.09%;其他业务收入:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "工业产品销售",
+                  "sharePct": 79.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程施工",
+                  "sharePct": 15.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "材料销售收入",
+                  "sharePct": 1.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务收入",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "螺杆式低温盐水机",
+                    "category": "冷水机"
+                  },
+                  {
+                    "name": "螺杆式冷水机组",
+                    "category": "冷水机"
+                  },
+                  {
+                    "name": "中央空调",
+                    "category": "中央空调"
+                  },
+                  {
+                    "name": "冷风机",
+                    "category": "其他工业制冷设备"
+                  },
+                  {
+                    "name": "吸收式大温差换热机组",
+                    "category": "其他工业制冷设备"
+                  },
+                  {
+                    "name": "吸收式热泵机组",
+                    "category": "热泵"
+                  }
+                ],
+                "knownProducts": [
+                  "余热回收专用机组",
+                  "螺杆式空气压缩机",
+                  "船用活塞式制冷压缩机",
+                  "船用螺杆式制冷压缩机",
+                  "活塞式制冷压缩机",
+                  "螺杆式制冷压缩机",
+                  "食品速冻设备",
+                  "冷风机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "冰轮环境与新闻之间有明确产品抓手：螺杆式低温盐水机、螺杆式冷水机组、中央空调，对应旗下顿汉布什品牌在海外具备高认知度，其冷水机组、压缩机等产品可用于大型暖通空调系统，受益于欧洲市场对制冷设备需求的整体提升。收入主体目前是工业产品销售（79.6%）、工程施工（15.28%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 15950,
+            "stockCode": "002158.SZ",
+            "stockName": "汉钟精机",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司磁悬浮压缩机在中大型机型上具备优势，可应用于数据中心及商用空调，欧洲客户包括LG、SKM等，将受益于欧洲制冷需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002158.SZ",
+              "companyName": "汉钟精机",
+              "companyProfile": "公司成立于1998年1月7日，并于2007年8月17日在深圳证券交易所主板上市。公司前身为上海汉钟机械有限公司，经股份制改革，于2005年10月28日正式变更为上海汉钟精机股份有限公司，总部设立在上海市。公司源自中国台湾省，自成立以来便致力于深耕大陆市场，坚定不移地专注于压缩机及真空泵技术的研发与创新。凭借卓越的技术实力和持续的创新精神，公司逐步发展成为制冷压缩机、空气压缩机、真空泵等领域的领先企业。作为技术驱动型企业，公司始终高度重视产品规划、设计、销售与服务全流程的优化，致力于为客户提供全方位、定制化的解决方案。公司拥有专业的自主设计研发团队，秉持创新理念，每年持续推出新产品及优质服务。在螺杆式压缩机技术和真空泵技术领域，公司不仅在国内处于领先地位，部分产品达到了国际先进水平。在品质管理上，公司配备了高精密的加工设备，包括先进的CNC转子齿型研磨机和CNC综合切削中心等。我们构建了自动化仓储系统、采用无人搬运车，并打造了洁净恒温恒湿的装配线。公司拥有前沿领先的实验室和高效的物流管理体系，从生产到仓储再到物流，全方位确保每一台产品都达到行业领先水平。",
+              "profileSummary": "作为技术驱动型企业，公司始终高度重视产品规划、设计、销售与服务全流程的优化，致力于为客户提供全方位、定制化的解决方案。公司拥有专业的自主设计研发团队，秉持创新理念，每年持续推出新产品及优质服务。",
+              "majorProducts": "半导体行业、汉钟AA系列空气压缩机、汉钟AE2系列空气压缩机、汉钟LA1-LA5冷冻压缩机、汉钟LHS系列冷凝机组、汉钟RC2-A R134a专用压缩机、汉钟RC系列防暴型制冷压缩机、汉钟RC系列风冷型制冷压缩机、汉钟RC系列满液式制冷压缩机、汉钟RC系列水冷型制冷压缩机、空气压缩机、冷冻冷藏压缩机、热泵压缩机、商用中央空调压缩机、太阳能光伏",
+              "revenueComposition": "压缩机(组):73.42%;真空产品:17.12%;零件及维修:8.17%;铸件产品:1.28%",
+              "revenueSegments": [
+                {
+                  "name": "压缩机(组)",
+                  "sharePct": 73.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "真空产品",
+                  "sharePct": 17.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "零件及维修",
+                  "sharePct": 8.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铸件产品",
+                  "sharePct": 1.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "涡旋式制冷压缩机",
+                    "category": "涡旋式制冷压缩机"
+                  },
+                  {
+                    "name": "热泵压缩机",
+                    "category": "其他制冷压缩机"
+                  },
+                  {
+                    "name": "离心式制冷压缩机",
+                    "category": "离心式制冷压缩机"
+                  },
+                  {
+                    "name": "螺杆式制冷压缩机",
+                    "category": "螺杆式制冷压缩机"
+                  },
+                  {
+                    "name": "压缩机配件",
+                    "category": "空气压缩机零部件"
+                  },
+                  {
+                    "name": "干式螺杆真空泵",
+                    "category": "真空泵"
+                  }
+                ],
+                "knownProducts": [
+                  "干式螺杆真空泵",
+                  "压缩机配件",
+                  "螺杆式空气压缩机",
+                  "热泵压缩机",
+                  "涡旋式制冷压缩机",
+                  "离心式制冷压缩机",
+                  "螺杆式制冷压缩机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "汉钟精机实际经营中已有涡旋式制冷压缩机、热泵压缩机、离心式制冷压缩机，与事件指向的公司磁悬浮压缩机在中大型机型上具备优势，可应用于数据中心及商用空调，欧洲客户包括LG、SKM等，将受益于欧洲制冷需求增长能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在压缩机(组)（73.42%）、真空产品（17.12%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 15951,
+            "stockCode": "301525.SZ",
+            "stockName": "儒竞科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是欧洲热泵变频控制器核心供应商，市占率达25%，客户包括博世、威斯曼等头部品牌，欧洲热泵需求增长直接利好公司业绩。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301525.SZ",
+              "companyName": "儒竞科技",
+              "companyProfile": "公司是一家专业变频节能与智能控制应用方案的提供商，专注于电力电子及电机控制领域综合产品的研发、生产与销售。主要产品涵盖供热通风空调及冷冻设备领域的变频驱动器及系统控制器、新能源汽车热管理系统领域的变频驱动器及控制器，以及工业伺服驱动及控制系统领域的伺服驱动器及伺服电机。公司作为自主创新的研发驱动型企业，以电力电子及电机控制技术为基础，成功研发了电机控制、电源控制及系统控制技术，数字电源及电力电子变换硬件平台，以及电机设计平台这三大技术领域。在细分技术领域内，公司掌握了多项核心技术，并通过核心技术的交叉应用与延伸，形成了多元化的产品布局，建立了跨领域的经营模式。公司秉承“以市场为主导，以创新为核心”的经营理念，全面启用集成企业资源管理计划、生产制造执行系统、自动仓储管理系统、产品生命周期管理的数字化系统。公司严格执行相关质量管理系统标准，在满足客户需求与保证产品质量的同时，实现了产品的柔性化生产与智能化制造，并获得两化融合管理体系评定证书。凭借卓越的产品研发实力、高效的生产制造体系、完善的质量管控措施以及丰富的市场实践经验，公司在境内外积累了稳固的客户资源，拥有良好的行业知名度。其核心产品已广泛长期地应用于博世、谷轮、麦克维尔、阿里斯顿、海尔、三菱重工海尔、开利等众多知名品牌中。",
+              "profileSummary": "公司是一家专业变频节能与智能控制应用方案的提供商，专注于电力电子及电机控制领域综合产品的研发、生产与销售。在细分技术领域内，公司掌握了多项核心技术，并通过核心技术的交叉应用与延伸，形成了多元化的产品布局，建立了跨领域的经营模式。",
+              "majorProducts": "HVAC/R变频驱动器、伺服电机、伺服驱动器、家用空调系统控制器及变频驱动器、冷冻系统控制器及变频驱动器、热泵系统控制器、热泵系统控制器及变频驱动器、商用空调系统控制器及变频驱动器、新能源汽车PTC电加热控制器、新能源汽车电动压缩机变频驱动器",
+              "revenueComposition": "暖通空调及冷冻冷藏设备:60.85%;新能源汽车热管理系统:36.05%;工业伺服驱动及控制系统:2.78%;其他业务:0.32%",
+              "revenueSegments": [
+                {
+                  "name": "暖通空调及冷冻冷藏设备",
+                  "sharePct": 60.85,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源汽车热管理系统",
+                  "sharePct": 36.05,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "工业伺服驱动及控制系统",
+                  "sharePct": 2.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "中央空调变频器",
+                    "category": "家用空调零部件"
+                  },
+                  {
+                    "name": "家用空调变频器",
+                    "category": "家用空调零部件"
+                  },
+                  {
+                    "name": "新能源汽车电动压缩机变频驱动器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "热泵变频器",
+                    "category": "变频器"
+                  }
+                ],
+                "knownProducts": [
+                  "中央空调变频器",
+                  "家用空调变频器",
+                  "伺服电机",
+                  "伺服驱动器",
+                  "冷冻设备变频器",
+                  "新能源汽车PTC电加热控制器",
+                  "新能源汽车电动压缩机变频驱动器",
+                  "热泵变频器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "儒竞科技与事件存在真实业务交集：公司已有中央空调变频器、家用空调变频器、新能源汽车电动压缩机变频驱动器，与公司是欧洲热泵变频控制器核心供应商，市占率达25%，客户包括博世、威斯曼等头部品牌，欧洲热泵需求增长直接利好公司业绩所处的产业环节一致。暖通空调及冷冻冷藏设备（60.85%）、新能源汽车热管理系统（36.05%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响终端需求与渗透率变化，只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，才会形成可确认的收入和利润增量。终端销量、客户采购量、公司出货和相关产品收入增速能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 15962,
+            "stockCode": "000521.SZ",
+            "stockName": "长虹美菱",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "聚焦欧洲等海外市场，窗机及移动空调产品精准切入欧洲免安装需求风口。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000521.SZ",
+              "companyName": "长虹美菱",
+              "companyProfile": "公司诞生于1983年，是中国最早的家电制造商之一，40余年来，始终坚持“自主创新中国创造”，用更新鲜的技术、更新鲜的产品和更新鲜的服务，致力于为全球亿万家庭提供美好生活解决方案。作为中国家电企业的重要代表，产业布局覆盖冰箱(柜)、洗衣机、空调、生活电器、生物医疗、商用冷链等，产品远销全球100多个国家和地区，在国内冰箱市场位居前五。多年来，依靠自主创新、中国创造，不断引领行业的进步与发展，多次创造行业第一：研发出中国第一台大冷冻冰箱、中国第一台十字门冰箱、中国第一台变频冰箱、中国保鲜时间最长的冰箱—M鲜生冰箱、-180℃世界最冷的超低温医用冰箱等，奠定了在中国家电业的领军者地位。首创水分子激活保鲜技术，让“玫瑰保鲜33天”；顶置恒温鲜冻技术让冰箱从此鲜冻；蓝氧去残留技术开创洗护新革命；三倍力洁净技术让衣物洁净如手洗，凭借技术创新及产品创新，各类荣誉纷至沓来，如德国红点奖、艾普兰奖项、德国iF设计奖等。同时，聚焦数字化、智能化转型，建立“菱云”工业互联网平台，加速智能工厂建设。依托智汇家物联网和大数据平台，打造行业首个白电垂域AI大模型，拥有80亿级参数规模，实现冰箱、空调、洗衣机及其他生活家电使用场景知识领域的全覆盖，构建智慧家电强大智脑，为用户提供智慧生活解决方案。面向未来，秉承“强企有我向新有为”，做让食物更保鲜的冰箱、让衣服更洁净的洗衣机、让空气更清新的空调、让水更干净家更干净的生活电器，共同创造“美好中国新鲜美菱”，让美好来临。",
+              "profileSummary": "公司诞生于1983年，是中国最早的家电制造商之一，40余年来，始终坚持“自主创新中国创造”，用更新鲜的技术、更新鲜的产品和更新鲜的服务，致力于为全球亿万家庭提供美好生活解决方案。作为中国家电企业的重要代表，产业布局覆盖冰箱(柜)、洗衣机、空调、生活电器、生物医疗、商用冷链等，产品远销全球100多个国家和地区，在国内冰箱市场位居前五。",
+              "majorProducts": "美菱家用空调、美菱冷柜、美菱钠米材料电冰箱、美菱深冷、美菱洗衣机、美菱雅典娜冰箱、生物医疗低温存储设备",
+              "revenueComposition": "空调器:57.16%;电冰箱(柜):29.42%;洗衣机:7.26%;小家电及厨卫:4.75%;其他业务:0.91%;其他:0.51%",
+              "revenueSegments": [
+                {
+                  "name": "空调器",
+                  "sharePct": 57.16,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电冰箱(柜)",
+                  "sharePct": 29.42,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "洗衣机",
+                  "sharePct": 7.26,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "小家电及厨卫",
+                  "sharePct": 4.75,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "冰柜",
+                    "category": "冰柜"
+                  },
+                  {
+                    "name": "冰箱",
+                    "category": "变频冰箱"
+                  },
+                  {
+                    "name": "净水器",
+                    "category": "水处理小家电"
+                  },
+                  {
+                    "name": "加湿器",
+                    "category": "空气处理小家电"
+                  },
+                  {
+                    "name": "壁挂式空调",
+                    "category": "壁挂式空调"
+                  },
+                  {
+                    "name": "壁挂炉",
+                    "category": "食物烹饪类厨房家电"
+                  }
+                ],
+                "knownProducts": [
+                  "净水器",
+                  "饮水机",
+                  "燃气热水器",
+                  "油烟机",
+                  "洗碗机",
+                  "壁挂炉",
+                  "加湿器",
+                  "冰柜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 4
+              }
+            },
+            "analysis": "长虹美菱已经具备冰柜、冰箱、净水器等业务能力，聚焦欧洲等海外市场，窗机及移动空调产品精准切入欧洲免安装需求风口并非单纯概念映射。当前对应的收入被归入空调器（57.16%）、电冰箱(柜)（29.42%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 15966,
+            "stockCode": "920081.BJ",
+            "stockName": "欧伦电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "主营产品包括移动空调，是欧洲市场需求暴增的核心品类之一，公司外销占比较高。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": false,
+              "matchMethod": "none",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "",
+              "companyName": "",
+              "companyProfile": "",
+              "profileSummary": "",
+              "majorProducts": "",
+              "revenueComposition": "",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "unavailable",
+                "relevantProducts": [],
+                "knownProducts": [],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "欧伦电气与事件的具体业务联系在于：主营产品包括移动空调，是欧洲市场需求暴增的核心品类之一，公司外销占比较高。本次变化首先影响终端需求与渗透率变化，只有经由终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润，才会转化为可确认的经营增量。相关业务目前究竟属于存量主业、小基数增量还是产业链布局尚不清晰，因此业绩弹性暂时不能量化。判断强弱应聚焦终端销量、客户采购量、公司出货和相关产品收入增速；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，相关性仍可能存在，但对公司盈利的解释力会明显下降。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "9条低于3星的源记录已按当前关注口径排除。",
+      "3条3至5星非A股、未上市或代码不规范记录未进入组合。",
+      "1只标的未匹配到A股2025年报公司资料，多为非A股、未上市或新近上市公司。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

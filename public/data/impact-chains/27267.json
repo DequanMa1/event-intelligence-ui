@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27267",
@@ -9,20 +9,11 @@
     "date": "2026-07-09"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 7,
-    "mappedStockCount": 4,
-    "unmappedStockCount": 3,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 4,
+    "mappedStockCount": 3,
+    "unmappedStockCount": 1,
     "stocks": [
-      {
-        "sourceRowNumber": 23367,
-        "stockCode": "IFXGN.DE",
-        "stockName": "英飞凌",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 23368,
         "stockCode": "605111.SH",
@@ -48,30 +39,12 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 9
       },
       {
         "sourceRowNumber": 23390,
         "stockCode": "300593.SZ",
         "stockName": "新雷能",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 6
-      },
-      {
-        "sourceRowNumber": 23391,
-        "stockCode": "2301.TW",
-        "stockName": "光宝科技",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 23392,
-        "stockCode": "VRT.N",
-        "stockName": "维谛技术",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -80,27 +53,9 @@
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 23367,
-        "stockCode": "IFXGN.DE",
-        "stockName": "英飞凌",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 23391,
-        "stockCode": "2301.TW",
-        "stockName": "光宝科技",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 23392,
-        "stockCode": "VRT.N",
-        "stockName": "维谛技术",
+        "sourceRowNumber": 23390,
+        "stockCode": "300593.SZ",
+        "stockName": "新雷能",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -110,242 +65,152 @@
   },
   "totals": {
     "candidateCoreProductCount": 27,
-    "selectedCoreProductCount": 4,
-    "selectedCompanyCoreProductCount": 4,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 25,
-    "downstreamCandidateCount": 26,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "selectedCoreProductCount": 18,
+    "selectedCompanyCoreProductCount": 18,
+    "level7ProductCount": 110,
+    "relatedIndustryCandidateCount": 14,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
-        "code": "1140168922",
-        "name": "AD-CD电源管理产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166588"
+        "code": "1140162867",
+        "name": "中低压屏蔽栅MOSFET",
+        "hierarchyPath": "电子 > 半导体 > 分立器件 > 功率分立器件 > MOSFET > 中低压屏蔽栅MOSFET",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "分立器件",
+          "功率分立器件",
+          "MOSFET",
+          "中低压屏蔽栅MOSFET"
         ],
-        "linkedCoreProductNames": [
-          "AC/DC电源模块"
+        "level5Industry": {
+          "code": "1200001276",
+          "name": "功率分立器件"
+        },
+        "level6Industry": {
+          "code": "1200004933",
+          "name": "MOSFET"
+        },
+        "level7Product": {
+          "code": "1140162867",
+          "name": "中低压屏蔽栅MOSFET"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "688261.SH",
+            "stockName": "东微半导",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "605111.SH",
+            "stockName": "新洁能",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "分立器件",
+          "半导体",
+          "电子"
+        ]
       },
       {
-        "code": "1140168921",
-        "name": "AD-CD电源芯片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166588"
+        "code": "1140162866",
+        "name": "高压超级结MOSFET",
+        "hierarchyPath": "电子 > 半导体 > 分立器件 > 功率分立器件 > MOSFET > 高压超级结MOSFET",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "分立器件",
+          "功率分立器件",
+          "MOSFET",
+          "高压超级结MOSFET"
         ],
-        "linkedCoreProductNames": [
-          "AC/DC电源模块"
+        "level5Industry": {
+          "code": "1200001276",
+          "name": "功率分立器件"
+        },
+        "level6Industry": {
+          "code": "1200004933",
+          "name": "MOSFET"
+        },
+        "level7Product": {
+          "code": "1140162866",
+          "name": "高压超级结MOSFET"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "688261.SH",
+            "stockName": "东微半导",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "605111.SH",
+            "stockName": "新洁能",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "分立器件",
+          "半导体",
+          "电子"
+        ]
       },
       {
-        "code": "1140158862",
-        "name": "DBC基板",
-        "anchorCount": 1,
+        "code": "1140079665",
+        "name": "IGBT(绝缘栅双极型晶体管)",
+        "hierarchyPath": "电子 > 半导体 > 分立器件 > 功率分立器件 > IGBT > IGBT(绝缘栅双极型晶体管)",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "分立器件",
+          "功率分立器件",
+          "IGBT",
+          "IGBT(绝缘栅双极型晶体管)"
+        ],
+        "level5Industry": {
+          "code": "1200001276",
+          "name": "功率分立器件"
+        },
+        "level6Industry": {
+          "code": "1200004931",
+          "name": "IGBT"
+        },
+        "level7Product": {
+          "code": "1140079665",
+          "name": "IGBT(绝缘栅双极型晶体管)"
+        },
+        "matchedSourceLevel": 7,
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140158794"
+        "stocks": [
+          {
+            "stockCode": "605111.SH",
+            "stockName": "新洁能",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "MOSFET模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "分立器件",
+          "半导体",
+          "电子"
+        ]
       },
-      {
-        "code": "1140120437",
-        "name": "MOSFET芯片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140158794"
-        ],
-        "linkedCoreProductNames": [
-          "MOSFET模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140081515",
-        "name": "PLC",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140090020",
-        "name": "伺服放大器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1137000105",
-        "name": "伺服电机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140078662",
-        "name": "双极结型晶体管",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140078581"
-        ],
-        "linkedCoreProductNames": [
-          "IGBT模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140122502",
-        "name": "塑封外壳",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140158794"
-        ],
-        "linkedCoreProductNames": [
-          "MOSFET模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140130738",
-        "name": "密封外壳",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140034250",
-        "name": "工控机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023478",
-        "name": "引脚",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140054267",
-        "name": "数控系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1125000162",
-        "name": "晶圆",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166588"
-        ],
-        "linkedCoreProductNames": [
-          "AC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
       {
         "code": "1140078581",
         "name": "IGBT模块",
@@ -371,22 +236,18 @@
           "name": "IGBT模块"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "605111.SH",
             "stockName": "新洁能",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 10,
-        "relevanceScore": 11,
-        "strongRelevanceScore": 5,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
         "matchedTerms": [
-          "模块",
           "分立器件",
           "半导体",
           "电子"
@@ -417,342 +278,1408 @@
           "name": "MOSFET模块"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "605111.SH",
             "stockName": "新洁能",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 8,
-        "downstreamCount": 6,
-        "relevanceScore": 11,
-        "strongRelevanceScore": 5,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
         "matchedTerms": [
-          "模块",
           "分立器件",
           "半导体",
           "电子"
         ]
       },
       {
-        "code": "1140166389",
-        "name": "DC/DC电源模块",
-        "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 电源设备 > 电源管理系统 > DC/DC电源模块",
+        "code": "1140022952",
+        "name": "NFC磁片",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 电子元件配件 > 电子元件配件 > NFC磁片",
         "industryPath": [
-          "电气设备",
-          "其他电源设备",
-          "其他能源设备",
-          "电源设备",
-          "电源管理系统",
-          "DC/DC电源模块"
+          "电子",
+          "元件",
+          "被动元件",
+          "电子元件配件",
+          "电子元件配件",
+          "NFC磁片"
         ],
         "level5Industry": {
-          "code": "1210000364",
-          "name": "电源设备"
+          "code": "1200001357",
+          "name": "电子元件配件"
         },
         "level6Industry": {
-          "code": "1200002687",
-          "name": "电源管理系统"
+          "code": "1200005124",
+          "name": "电子元件配件"
         },
         "level7Product": {
-          "code": "1140166389",
-          "name": "DC/DC电源模块"
+          "code": "1140022952",
+          "name": "NFC磁片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
-            "stockCode": "300593.SZ",
-            "stockName": "新雷能",
-            "rating": "★★★★"
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 9,
-        "downstreamCount": 8,
-        "relevanceScore": 5,
-        "strongRelevanceScore": 5,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
         "matchedTerms": [
-          "模块"
+          "被动元件",
+          "元件",
+          "电子"
         ]
       },
       {
-        "code": "1140166588",
-        "name": "AC/DC电源模块",
-        "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 电源设备 > 电源管理系统 > AC/DC电源模块",
+        "code": "1140104447",
+        "name": "NTC热敏电阻",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电阻器 > NTC热敏电阻",
         "industryPath": [
-          "电气设备",
-          "其他电源设备",
-          "其他能源设备",
-          "电源设备",
-          "电源管理系统",
-          "AC/DC电源模块"
+          "电子",
+          "元件",
+          "被动元件",
+          "电路类器件",
+          "电阻器",
+          "NTC热敏电阻"
         ],
         "level5Industry": {
-          "code": "1210000364",
-          "name": "电源设备"
+          "code": "1200001354",
+          "name": "电路类器件"
         },
         "level6Industry": {
-          "code": "1200002687",
-          "name": "电源管理系统"
+          "code": "1200005110",
+          "name": "电阻器"
         },
         "level7Product": {
-          "code": "1140166588",
-          "name": "AC/DC电源模块"
+          "code": "1140104447",
+          "name": "NTC热敏电阻"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
-            "stockCode": "300593.SZ",
-            "stockName": "新雷能",
-            "rating": "★★★★"
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 4,
-        "relevanceScore": 5,
-        "strongRelevanceScore": 5,
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
         "matchedTerms": [
-          "模块"
+          "被动元件",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140162868",
+        "name": "Tri-gate IGBT (TGBT)",
+        "hierarchyPath": "电子 > 半导体 > 分立器件 > 功率分立器件 > IGBT > Tri-gate IGBT (TGBT)",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "分立器件",
+          "功率分立器件",
+          "IGBT",
+          "Tri-gate IGBT (TGBT)"
+        ],
+        "level5Industry": {
+          "code": "1200001276",
+          "name": "功率分立器件"
+        },
+        "level6Industry": {
+          "code": "1200004931",
+          "name": "IGBT"
+        },
+        "level7Product": {
+          "code": "1140162868",
+          "name": "Tri-gate IGBT (TGBT)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688261.SH",
+            "stockName": "东微半导",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "分立器件",
+          "半导体",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140189753",
+        "name": "一体成型电感器",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电感器 > 一体成型电感器",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "电路类器件",
+          "电感器",
+          "一体成型电感器"
+        ],
+        "level5Industry": {
+          "code": "1200001354",
+          "name": "电路类器件"
+        },
+        "level6Industry": {
+          "code": "1200005111",
+          "name": "电感器"
+        },
+        "level7Product": {
+          "code": "1140189753",
+          "name": "一体成型电感器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140171283",
+        "name": "低压屏蔽栅MOSFET晶圆",
+        "hierarchyPath": "电子 > 半导体 > 分立器件 > 功率分立器件 > MOSFET > 低压屏蔽栅MOSFET晶圆",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "分立器件",
+          "功率分立器件",
+          "MOSFET",
+          "低压屏蔽栅MOSFET晶圆"
+        ],
+        "level5Industry": {
+          "code": "1200001276",
+          "name": "功率分立器件"
+        },
+        "level6Industry": {
+          "code": "1200004933",
+          "name": "MOSFET"
+        },
+        "level7Product": {
+          "code": "1140171283",
+          "name": "低压屏蔽栅MOSFET晶圆"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688261.SH",
+            "stockName": "东微半导",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "分立器件",
+          "半导体",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140022948",
+        "name": "共模扼流器",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 射频器件 > 滤波器 > 共模扼流器",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "射频器件",
+          "滤波器",
+          "共模扼流器"
+        ],
+        "level5Industry": {
+          "code": "1200001355",
+          "name": "射频器件"
+        },
+        "level6Industry": {
+          "code": "1200005116",
+          "name": "滤波器"
+        },
+        "level7Product": {
+          "code": "1140022948",
+          "name": "共模扼流器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140039968",
+        "name": "压敏电阻",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电阻器 > 压敏电阻",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "电路类器件",
+          "电阻器",
+          "压敏电阻"
+        ],
+        "level5Industry": {
+          "code": "1200001354",
+          "name": "电路类器件"
+        },
+        "level6Industry": {
+          "code": "1200005110",
+          "name": "电阻器"
+        },
+        "level7Product": {
+          "code": "1140039968",
+          "name": "压敏电阻"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140022946",
+        "name": "叠层片式电感器",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电感器 > 叠层片式电感器",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "电路类器件",
+          "电感器",
+          "叠层片式电感器"
+        ],
+        "level5Industry": {
+          "code": "1200001354",
+          "name": "电路类器件"
+        },
+        "level6Industry": {
+          "code": "1200005111",
+          "name": "电感器"
+        },
+        "level7Product": {
+          "code": "1140022946",
+          "name": "叠层片式电感器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140008412",
+        "name": "微波器件",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 微波器件 > 微波器件 > 微波器件",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "微波器件",
+          "微波器件",
+          "微波器件"
+        ],
+        "level5Industry": {
+          "code": "1200001360",
+          "name": "微波器件"
+        },
+        "level6Industry": {
+          "code": "1200005127",
+          "name": "微波器件"
+        },
+        "level7Product": {
+          "code": "1140008412",
+          "name": "微波器件"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140022950",
+        "name": "无源滤波器",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 射频器件 > 滤波器 > 无源滤波器",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "射频器件",
+          "滤波器",
+          "无源滤波器"
+        ],
+        "level5Industry": {
+          "code": "1200001355",
+          "name": "射频器件"
+        },
+        "level6Industry": {
+          "code": "1200005116",
+          "name": "滤波器"
+        },
+        "level7Product": {
+          "code": "1140022950",
+          "name": "无源滤波器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140206947",
+        "name": "沟槽型MOSFET",
+        "hierarchyPath": "电子 > 半导体 > 分立器件 > 功率分立器件 > MOSFET > 沟槽型MOSFET",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "分立器件",
+          "功率分立器件",
+          "MOSFET",
+          "沟槽型MOSFET"
+        ],
+        "level5Industry": {
+          "code": "1200001276",
+          "name": "功率分立器件"
+        },
+        "level6Industry": {
+          "code": "1200004933",
+          "name": "MOSFET"
+        },
+        "level7Product": {
+          "code": "1140206947",
+          "name": "沟槽型MOSFET"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "605111.SH",
+            "stockName": "新洁能",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "分立器件",
+          "半导体",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140022947",
+        "name": "绕线片式电感器",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电感器 > 绕线片式电感器",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "电路类器件",
+          "电感器",
+          "绕线片式电感器"
+        ],
+        "level5Industry": {
+          "code": "1200001354",
+          "name": "电路类器件"
+        },
+        "level6Industry": {
+          "code": "1200005111",
+          "name": "电感器"
+        },
+        "level7Product": {
+          "code": "1140022947",
+          "name": "绕线片式电感器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140171282",
+        "name": "高压超级结MOSFET晶圆",
+        "hierarchyPath": "电子 > 半导体 > 分立器件 > 功率分立器件 > MOSFET > 高压超级结MOSFET晶圆",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "分立器件",
+          "功率分立器件",
+          "MOSFET",
+          "高压超级结MOSFET晶圆"
+        ],
+        "level5Industry": {
+          "code": "1200001276",
+          "name": "功率分立器件"
+        },
+        "level6Industry": {
+          "code": "1200004933",
+          "name": "MOSFET"
+        },
+        "level7Product": {
+          "code": "1140171282",
+          "name": "高压超级结MOSFET晶圆"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688261.SH",
+            "stockName": "东微半导",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "分立器件",
+          "半导体",
+          "电子"
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1130000674",
-        "name": "充电桩",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140078581",
-          "1140158794"
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "stockCount": 5,
+        "starWeight": 15,
+        "level7ProductCount": 51,
+        "relevanceScore": 828,
+        "stocks": [
+          {
+            "stockCode": "688396.SH",
+            "stockName": "华润微",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688484.SH",
+            "stockName": "南芯科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688711.SH",
+            "stockName": "宏微科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688141.SH",
+            "stockName": "杰华特",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688052.SH",
+            "stockName": "纳芯微",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "IGBT模块",
-          "MOSFET模块"
+        "products": [
+          {
+            "code": "1140215232",
+            "name": "低压差线性稳压器LDO",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > 低压差线性稳压器LDO",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "688396.SH",
+                "stockName": "华润微",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688484.SH",
+                "stockName": "南芯科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688141.SH",
+                "stockName": "杰华特",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688052.SH",
+                "stockName": "纳芯微",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215227",
+            "name": "同步整流器",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > 同步整流器",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "688396.SH",
+                "stockName": "华润微",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688484.SH",
+                "stockName": "南芯科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688141.SH",
+                "stockName": "杰华特",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215226",
+            "name": "副边反激AC-DC控制器",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > 副边反激AC-DC控制器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688396.SH",
+                "stockName": "华润微",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688484.SH",
+                "stockName": "南芯科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215230",
+            "name": "升压型DC-DC转换器",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > 升压型DC-DC转换器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688484.SH",
+                "stockName": "南芯科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688141.SH",
+                "stockName": "杰华特",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140166661",
-        "name": "船舶电气工程",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389",
-          "1140166588"
+        "code": "1200001362",
+        "name": "刚性电路板",
+        "description": "刚性电路板是A股中支撑电子元器件的基础载体。受AI服务器、自动驾驶及消费电子复苏驱动，高阶HDI和高速板需求激增，推动行业量价齐升，成为科技硬件核心受益板块，备受市场关注。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 5,
+        "relevanceScore": 156,
+        "stocks": [
+          {
+            "stockCode": "300852.SZ",
+            "stockName": "四会富仕",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301251.SZ",
+            "stockName": "威尔高",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301132.SZ",
+            "stockName": "满坤科技",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "AC/DC电源模块",
-          "DC/DC电源模块"
+        "products": [
+          {
+            "code": "1140022941",
+            "name": "PCB双面板",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > PCB双面板",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300852.SZ",
+                "stockName": "四会富仕",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301251.SZ",
+                "stockName": "威尔高",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301132.SZ",
+                "stockName": "满坤科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140023055",
+            "name": "PCB多层板",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > PCB多层板",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300852.SZ",
+                "stockName": "四会富仕",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301251.SZ",
+                "stockName": "威尔高",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301132.SZ",
+                "stockName": "满坤科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140023086",
+            "name": "厚铜板",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > 厚铜板",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300852.SZ",
+                "stockName": "四会富仕",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140005732",
+            "name": "高密度互联板(HDI)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > 高密度互联板(HDI)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300852.SZ",
+                "stockName": "四会富仕",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 29,
+    "mappedStockCount": 19,
+    "unmappedStockCount": 10,
+    "level7ProductCount": 110,
+    "candidateIndustryCount": 14,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 23368,
+        "stockCode": "605111.SH",
+        "stockName": "新洁能",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140114058",
-        "name": "专用集成电路",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23369,
+        "stockCode": "688261.SH",
+        "stockName": "东微半导",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140028988",
-        "name": "光伏逆变器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140078581"
-        ],
-        "linkedCoreProductNames": [
-          "IGBT模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23370,
+        "stockCode": "300373.SZ",
+        "stockName": "扬杰科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
       },
       {
-        "code": "1140078683",
-        "name": "功率半导体分立器件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140078581"
-        ],
-        "linkedCoreProductNames": [
-          "IGBT模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23371,
+        "stockCode": "688396.SH",
+        "stockName": "华润微",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 25
       },
       {
-        "code": "1140000410",
-        "name": "变频器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140078581"
-        ],
-        "linkedCoreProductNames": [
-          "IGBT模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23372,
+        "stockCode": "688469.SH",
+        "stockName": "芯联集成",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140014553",
-        "name": "存储器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23373,
+        "stockCode": "688711.SH",
+        "stockName": "宏微科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 15
       },
       {
-        "code": "1140094343",
-        "name": "工业产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166588"
-        ],
-        "linkedCoreProductNames": [
-          "AC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23374,
+        "stockCode": "688187.SH",
+        "stockName": "时代电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140010534",
-        "name": "工业电源",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140158794"
-        ],
-        "linkedCoreProductNames": [
-          "MOSFET模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23375,
+        "stockCode": "603290.SH",
+        "stockName": "斯达半导",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140037648",
-        "name": "平板",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140158794"
-        ],
-        "linkedCoreProductNames": [
-          "MOSFET模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23376,
+        "stockCode": "688052.SH",
+        "stockName": "纳芯微",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 21
       },
       {
-        "code": "1140054241",
-        "name": "微处理器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23377,
+        "stockCode": "688141.SH",
+        "stockName": "杰华特",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 19
       },
       {
-        "code": "1140000172",
-        "name": "手机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140158794"
-        ],
-        "linkedCoreProductNames": [
-          "MOSFET模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23378,
+        "stockCode": "688484.SH",
+        "stockName": "南芯科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 18
       },
       {
-        "code": "1140064092",
-        "name": "数字信号处理器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
-        ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 23379,
+        "stockCode": "002138.SZ",
+        "stockName": "顺络电子",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140169837",
-        "name": "数字负载",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140166389"
+        "sourceRowNumber": 23380,
+        "stockCode": "300811.SZ",
+        "stockName": "铂科新材",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23381,
+        "stockCode": "002056.SZ",
+        "stockName": "横店东磁",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23382,
+        "stockCode": "300835.SZ",
+        "stockName": "龙磁科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23383,
+        "stockCode": "688786.SH",
+        "stockName": "悦安新材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 23384,
+        "stockCode": "301251.SZ",
+        "stockName": "威尔高",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 23385,
+        "stockCode": "301132.SZ",
+        "stockName": "满坤科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 23386,
+        "stockCode": "300852.SZ",
+        "stockName": "四会富仕",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 23387,
+        "stockCode": "839916.BJ",
+        "stockName": "维通利",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23389,
+        "stockCode": "002851.SZ",
+        "stockName": "麦格米特",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23390,
+        "stockCode": "300593.SZ",
+        "stockName": "新雷能",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23393,
+        "stockCode": "300222.SZ",
+        "stockName": "科大智能",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 23395,
+        "stockCode": "301018.SZ",
+        "stockName": "申菱环境",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 23396,
+        "stockCode": "002837.SZ",
+        "stockName": "英维克",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 23397,
+        "stockCode": "002536.SZ",
+        "stockName": "飞龙股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23398,
+        "stockCode": "603757.SH",
+        "stockName": "大元泵业",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23400,
+        "stockCode": "688719.SH",
+        "stockName": "爱科赛博",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 23402,
+        "stockCode": "002028.SZ",
+        "stockName": "思源电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "stockCount": 5,
+        "starWeight": 15,
+        "level7ProductCount": 51,
+        "relevanceScore": 828,
+        "stocks": [
+          {
+            "stockCode": "688396.SH",
+            "stockName": "华润微",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688484.SH",
+            "stockName": "南芯科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688711.SH",
+            "stockName": "宏微科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688141.SH",
+            "stockName": "杰华特",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688052.SH",
+            "stockName": "纳芯微",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "DC/DC电源模块"
+        "products": [
+          {
+            "code": "1140215232",
+            "name": "低压差线性稳压器LDO",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > 低压差线性稳压器LDO",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "688396.SH",
+                "stockName": "华润微",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688484.SH",
+                "stockName": "南芯科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688141.SH",
+                "stockName": "杰华特",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688052.SH",
+                "stockName": "纳芯微",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215227",
+            "name": "同步整流器",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > 同步整流器",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "688396.SH",
+                "stockName": "华润微",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688484.SH",
+                "stockName": "南芯科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688141.SH",
+                "stockName": "杰华特",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215226",
+            "name": "副边反激AC-DC控制器",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > 副边反激AC-DC控制器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688396.SH",
+                "stockName": "华润微",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688484.SH",
+                "stockName": "南芯科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215230",
+            "name": "升压型DC-DC转换器",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > 升压型DC-DC转换器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "688484.SH",
+                "stockName": "南芯科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688141.SH",
+                "stockName": "杰华特",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200001362",
+        "name": "刚性电路板",
+        "description": "刚性电路板是A股中支撑电子元器件的基础载体。受AI服务器、自动驾驶及消费电子复苏驱动，高阶HDI和高速板需求激增，推动行业量价齐升，成为科技硬件核心受益板块，备受市场关注。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 5,
+        "relevanceScore": 156,
+        "stocks": [
+          {
+            "stockCode": "300852.SZ",
+            "stockName": "四会富仕",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301251.SZ",
+            "stockName": "威尔高",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "301132.SZ",
+            "stockName": "满坤科技",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140022941",
+            "name": "PCB双面板",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > PCB双面板",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300852.SZ",
+                "stockName": "四会富仕",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301251.SZ",
+                "stockName": "威尔高",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301132.SZ",
+                "stockName": "满坤科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140023055",
+            "name": "PCB多层板",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > PCB多层板",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300852.SZ",
+                "stockName": "四会富仕",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301251.SZ",
+                "stockName": "威尔高",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "301132.SZ",
+                "stockName": "满坤科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "pcb"
+            ]
+          },
+          {
+            "code": "1140023086",
+            "name": "厚铜板",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > 厚铜板",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300852.SZ",
+                "stockName": "四会富仕",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140005732",
+            "name": "高密度互联板(HDI)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 刚性电路板 > 刚性电路板 > 高密度互联板(HDI)",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300852.SZ",
+                "stockName": "四会富仕",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -762,15 +1689,2208 @@
       "code": "1200001276",
       "name": "功率分立器件"
     },
-    "overview": "功率分立器件指用于电能转换控制的半导体元件。与本次事件关联度较高的产品包括IGBT模块、MOSFET模块。",
+    "overview": "功率分立器件指用于电能转换控制的半导体元件。与本次事件关联度较高的产品包括中低压屏蔽栅MOSFET、高压超级结MOSFET、IGBT(绝缘栅双极型晶体管)等。",
     "impact": null,
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 37,
+    "eligibleSourceRowCount": 29,
+    "totalStockCount": 29,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 4,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 28,
+    "companyProfileUnmatchedCount": 1,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 23389,
+            "stockCode": "002851.SZ",
+            "stockName": "麦格米特",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内AI电源龙头，深度绑定英伟达供应链，率先发布涨价函。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002851.SZ",
+              "companyName": "麦格米特",
+              "companyProfile": "公司是电气自动化领域硬件和软件研发、生产、销售与服务的一站式解决方案提供商，二十多年砥砺前行形成以数字化电源控制、系统控制与通讯、功率变换硬件为核心的技术平台，衍生出电源产品、工业自动化、新能源&轨道交通、智能装备、智能家电电控、精密连接等六大业务领域，同时在全球各地建立研发中心、生产制造中心以及市场服务中心。作为全球专业的电气自动化领域解决方案提供商，麦格米特始终坚持技术领先、工艺精湛、品质高端、服务一流的经营方针，致力于人类电能使用更加高效、生存环境更加洁净、生产效率持续进步，以人类生活日益美好为重任，打造全球电气自动化行业标杆！麦格米特聚焦电力电子及相关控制核心技术，不断向与核心技术相关的交叉领域和新兴领域延伸，从最初的电视电源领域，稳扎稳打，逐步拓宽到消费类电源控制器、工业类电源、工控产品、消费类终端和工业装备，从板件产品逐步升级到模块产品、系统产品及集成产品，多年来布局逐步取得效果，并产生了越来越多的协同效应。产品的拓展也带动公司从家用电视市场逐步拓展到各类商业显示、变频家电、智能卫浴、医疗、通信、智能装备、新能源汽车、轨道交通、微波工业应用、智能采油设备、热管理、光储充、焊接技术和电机相关控制等消费和工业的众多行业。在产品和行业的拓展中，不断产生裂变效应，从而发现更多的市场需求，进入更多的细分领域。",
+              "profileSummary": "公司是电气自动化领域硬件和软件研发、生产、销售与服务的一站式解决方案提供商，二十多年砥砺前行形成以数字化电源控制、系统控制与通讯、功率变换硬件为核心的技术平台，衍生出电源产品、工业自动化、新能源&轨道交通、智能装备、智能家电电控、精密连接等六大业务领域，同时在全球各地建立研发中心、生产制造中心以及市场服务中心。麦格米特聚焦电力电子及相关控制核心技术，不断向与核心技术相关的交叉领域和新兴领域延伸，从最初的电视电源领域，稳扎稳打，逐步拓宽…",
+              "majorProducts": "电源产品、工业自动化、精密连接、新能源及轨道交通部件、智能家电电控产品、智能装备",
+              "revenueComposition": "智能家电电控产品:37.85%;电源产品:28.5%;新能源及轨道交通产品:12.18%;工业自动化:9.33%;智能装备:6.44%;精密连接:4.78%;其他业务:0.93%",
+              "revenueSegments": [
+                {
+                  "name": "智能家电电控产品",
+                  "sharePct": 37.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电源产品",
+                  "sharePct": 28.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源及轨道交通产品",
+                  "sharePct": 12.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业自动化",
+                  "sharePct": 9.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能装备",
+                  "sharePct": 6.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密连接",
+                  "sharePct": 4.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "空调变频驱控系统",
+                  "轨道交通空调控制器",
+                  "逆变焊机",
+                  "汽车电力电子集成模块(PEU)",
+                  "车载充电机",
+                  "新能源汽车驱动电机驱动器(MCU)",
+                  "车载DC/DC转换器",
+                  "温度控制器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "麦格米特与新闻存在业务方向上的交集：国内AI电源龙头，深度绑定英伟达供应链，率先发布涨价函；公司当前收入主要来自智能家电电控产品（37.85%）、电源产品（28.5%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对供需缺口与产品价格的推动只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入报表，产品报价、订单排期、产销率和毛利率决定这一交集能否升级为实际增量；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是主要失效条件。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 23368,
+            "stockCode": "605111.SH",
+            "stockName": "新洁能",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内MOSFET设计龙头，深度切入AI服务器电源二次侧及SST方案供应链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "605111.SH",
+              "companyName": "新洁能",
+              "companyProfile": "公司成立于2013年1月，2020年9月28日，在上交所主板完成挂牌。成立以来即专注于MOSFET、IGBT等半导体芯片和功率器件的研发、设计及销售，产品优质且系列齐全，广泛应用于消费电子、汽车电子、工业电子、新能源汽车及充电桩、智能装备制造、轨道交通、光伏新能源、5G等领域；未来随着云计算、大数据、智能电网、无人驾驶等领域的蓬勃发展，公司产品将在该等新兴领域发挥重要作用。公司为国内MOSFET等半导体功率器件设计领域领军企业，2016年以来连续五年名列“中国半导体功率器件十强企业”。公司已建立江苏省功率器件工程技术研究中心、江苏省企业研究生工作站、东南大学-无锡新洁能功率器件技术联合研发中心、江南大学-无锡新洁能功率器件技术联合研发中心。公司参与的“智能功率驱动芯片设计及制备的关键技术与应用”项目获得了2019年度江苏省科学技术一等奖，且获得2020年度技术发明奖。公司基于全球半导体功率器件先进理论技术开发先进产品，是国内率先掌握超结理论技术，并量产屏蔽栅功率MOSFET及超结功率MOSFET的企业之一，是国内提前早在12英寸工艺平台实现沟槽型MOSFET、屏蔽栅MOSFET量产的企业。公司产品电压已经覆盖了12V~1700V的全系列产品、达1700余种，为国内MOSFET等功率器件市场占有率排名前列的本土企业。公司将进一步依托技术、品牌、渠道等综合优势，结合大尺寸晶圆芯片(8英寸、12英寸)先进工艺技术，开拓国际先进功率器件封装制造技术，全力推进高端功率MOSFET、IGBT、集成功率器件的研发与产业化，持续布局半导体功率器件先进前沿的技术领域，并投入对SiC/GaN宽禁带半导体、智能功率器件的研发及产业化，提升公司核心产品竞争力和国内外市场地位。",
+              "profileSummary": "成立以来即专注于MOSFET、IGBT等半导体芯片和功率器件的研发、设计及销售，产品优质且系列齐全，广泛应用于消费电子、汽车电子、工业电子、新能源汽车及充电桩、智能装备制造、轨道交通、光伏新能源、5G等领域；未来随着云计算、大数据、智能电网、无人驾驶等领域的蓬勃发展，公司产品将在该等新兴领域发挥重要作用。公司将进一步依托技术、品牌、渠道等综合优势，结合大尺寸晶圆芯片(8英寸、12英寸)先进工艺技术，开拓国际先进功率器件封装制造技术，全…",
+              "majorProducts": "IGBT、超结功率MOSFET、沟槽型功率MOSFET、屏蔽栅功率MOSFET、新洁能1200V~1350V绝缘栅双极型晶体管(IGBT)、新洁能20V-250V沟槽型功率MOSFET、新洁能20V-250V屏蔽栅沟槽型功率MOSFET、新洁能500V-900V超结功率MOSFET、新洁能650V绝缘栅双极型晶体管(IGBT)、新洁能MOSFET或IGBT功率模块",
+              "revenueComposition": "封装成品:95.61%;芯片:2.65%;IC:1.35%;其他业务:0.4%",
+              "revenueSegments": [
+                {
+                  "name": "封装成品",
+                  "sharePct": 95.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "芯片",
+                  "sharePct": 2.65,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "IC",
+                  "sharePct": 1.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "MOSFET模块",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "中低压屏蔽栅MOSFET",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "沟槽型MOSFET",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "高压超级结MOSFET",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "IGBT(绝缘栅双极型晶体管)",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "IGBT模块",
+                    "category": "IGBT"
+                  }
+                ],
+                "knownProducts": [
+                  "IGBT(绝缘栅双极型晶体管)",
+                  "IGBT模块",
+                  "MOSFET模块",
+                  "中低压屏蔽栅MOSFET",
+                  "沟槽型MOSFET",
+                  "高压超级结MOSFET"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "新洁能与事件存在真实业务交集：公司已有MOSFET模块、中低压屏蔽栅MOSFET、沟槽型MOSFET，与国内MOSFET设计龙头，深度切入AI服务器电源二次侧及SST方案供应链所处的产业环节一致。芯片（2.65%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 23369,
+            "stockCode": "688261.SH",
+            "stockName": "东微半导",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内高压超级结MOSFET龙头，AI服务器电源业务营收占比高，产品覆盖一、二、三次侧电源。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688261.SH",
+              "companyName": "东微半导",
+              "companyProfile": "公司成立于2008年，2022年2月10日于上海证券交易所登录科创板上市。公司是一家以高性能功率器件研发与销售为主的技术驱动型半导体企业，产品专注于工业及汽车相关等中大功率应用领域。公司的主要产品包括GreenMOS系列超级结MOSFET、SFGMOS系列及FSMOS系列屏蔽栅MOSFET、TGBT、SuperSi²C MOSSFET、SuperSi MOSFET、SiC MOSFET,产品可广泛应用于应用于以新能源汽车直流充电桩、车载充电机、光伏逆变器、储能、5G基站电源、通信电源、数据中心服务器电源、工业照明电源、电动工具、智能机器人、无人机、UPS电源为代表的工业级及汽车级应用领域，以及以PC电源、适配器、TV电源板、手机快速充电器、电磁加热为代表的消费电子应用领域。",
+              "profileSummary": "公司是一家以高性能功率器件研发与销售为主的技术驱动型半导体企业，产品专注于工业及汽车相关等中大功率应用领域。公司的主要产品包括GreenMOS系列超级结MOSFET、SFGMOS系列及FSMOS系列屏蔽栅MOSFET、TGBT、SuperSi²C MOSSFET、SuperSi MOSFET、SiC MOSFET,产品可广泛应用于应用于以新能源汽车直流充电桩、车载充电机、光伏逆变器、储能、5G基站电源、通信电源、数据中心服务器电源、工…",
+              "majorProducts": "Si2C MOSFET、SiC MOSFET/SBD、Tri-gate IGBT、超级硅MOSFET、高压超级结MOSFET、中低压屏蔽栅MOSFET",
+              "revenueComposition": "功率半导体产品:95.26%;晶圆:4.72%;其他业务:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "功率半导体产品",
+                  "sharePct": 95.26,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "晶圆",
+                  "sharePct": 4.72,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "高压超级结MOSFET",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "中低压屏蔽栅MOSFET",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "低压屏蔽栅MOSFET晶圆",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "高压超级结MOSFET晶圆",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "Tri-gate IGBT (TGBT)",
+                    "category": "IGBT"
+                  }
+                ],
+                "knownProducts": [
+                  "Tri-gate IGBT (TGBT)",
+                  "中低压屏蔽栅MOSFET",
+                  "低压屏蔽栅MOSFET晶圆",
+                  "高压超级结MOSFET",
+                  "高压超级结MOSFET晶圆"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "东微半导已经参与事件相关业务，但收入基数仍小：晶圆占收入的4.72%，说明公司已有业务抓手，但“国内高压超级结MOSFET龙头，AI服务器电源业务营收占比高，产品覆盖一、二、三次侧电源”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于供需缺口与产品价格能否驱动“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，从而推动业务跨过小规模阶段。在此之前，产品报价、订单排期、产销率和毛利率比总收入增速更值得跟踪；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 23379,
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球第三大电感龙头，其TLVR电感是下一代AI GPU垂直供电的关键元件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002138.SZ",
+              "companyName": "顺络电子",
+              "companyProfile": "公司是一家专业从事各类片式电子元件研发、生产和销售的高新技术企业，主要产品包括叠层片式电感器、绕线片式电感器、共模扼流器、压敏电阻器、NTC热敏电阻器、LC滤波器、各类天线、NFC磁片、无线充电线圈组件、电容、电子变压器等电子元件。产品广泛应用于通讯、消费类电子、计算机、LED照明、安防、智能电网、医疗设备以及汽车电子等领域。秉承“遵偱标准、科技创新、持续改进，向全球客户提供优异的产品和完善的服务”的经营理念，凭借先进的管理体系、雄厚的开发能力、优异的产品质量和完善的服务，公司已成为众多国内知名企业的电子元件供应商。在电感细分领域内，公司在中国市场以及国际市场上均占有较高的市场占用率，技术和规模处于领先地位，公司的客户遍布全球，已成为国际电子产业链中不可或缺的供应商，为中国电子信息产业作出了贡献。",
+              "profileSummary": "公司是一家专业从事各类片式电子元件研发、生产和销售的高新技术企业，主要产品包括叠层片式电感器、绕线片式电感器、共模扼流器、压敏电阻器、NTC热敏电阻器、LC滤波器、各类天线、NFC磁片、无线充电线圈组件、电容、电子变压器等电子元件。秉承“遵偱标准、科技创新、持续改进，向全球客户提供优异的产品和完善的服务”的经营理念，凭借先进的管理体系、雄厚的开发能力、优异的产品质量和完善的服务，公司已成为众多国内知名企业的电子元件供应商。",
+              "majorProducts": "HDI板、NFC天线、半孔PCB、传感器系列、低温共烧陶瓷（LTCC）元器件系列、电磁兼容元器件系列、电感系列、电路保护器件系列、电子变压器系列、非晶材料磁板、功率磁性器件系列、精密陶瓷系列、顺络电子NTC热敏电阻器、顺络电子SMT功率电感、顺络电子叠层片式LC滤波器、顺络电子叠层片式天线、顺络电子叠层片式铁氧体磁珠、顺络电子共模轭流线圈、顺络电子片式磁珠、顺络电子片式叠层介质滤波器、顺络电子片式高频电感、顺络电子片式三端EMI滤波器、顺络电子片式陶瓷体电感、顺络电子片式陶瓷体绕线电感、顺络电子片式铁氧体电感、顺络电子片式铁氧体绕线电感、顺络电子片式压敏电阻器、顺络电子绕线贴片功率电感、通孔板、无线充电线圈",
+              "revenueComposition": "片式电子元件:99.28%;其他业务:0.72%",
+              "revenueSegments": [
+                {
+                  "name": "片式电子元件",
+                  "sharePct": 99.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "无线充电线圈组件",
+                    "category": "无线充电"
+                  }
+                ],
+                "knownProducts": [
+                  "电动汽车BMS变压器",
+                  "倒车雷达变压器",
+                  "共模扼流器",
+                  "无源滤波器",
+                  "微波器件",
+                  "NFC磁片",
+                  "一体成型电感器",
+                  "叠层片式电感器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "顺络电子拥有无线充电线圈组件，其产业链位置与全球第三大电感龙头，其TLVR电感是下一代AI GPU垂直供电的关键元件一致；当前的片式电子元件（99.28%）、其他业务（0.72%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 23390,
+            "stockCode": "300593.SZ",
+            "stockName": "新雷能",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "AI电源产品线布局完整，Q2起二次电源批量出货，被市场视为低估值弹性标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300593.SZ",
+              "companyName": "新雷能",
+              "companyProfile": "公司是专业从事模块电源、定制电源和大功率电源及系统的研发、生产的北京市高新技术企业，中国电源产业“十大知名品牌企业”，获得多家世界500强企业全球电源供应商资格。公司主要产品包括模块电源、定制电源及大功率电源及系统，产品在通信、航空、航天、军工、铁路、电力、工控、广电等各行业得到广泛的应用。公司自成立以来，始终坚持“科技领先”的发展理念，在电源研制及其相关领域取得了包括几十项专利在内的诸多核心技术。公司陆续取得了ISO9001:2008、ISO14001:2004、OHSAS18001:2007、TL9000-HR5.0/R5.0/ISO9001-2008等国际标准体系认证，《三级保密资格单位证书》、国军标GJB9001B-2009军工产品质量体系认证、原总装备部“装备承制单位资格”认证，通过了厚膜混合集成电路国军标生产线审核。",
+              "profileSummary": "公司是专业从事模块电源、定制电源和大功率电源及系统的研发、生产的北京市高新技术企业，中国电源产业“十大知名品牌企业”，获得多家世界500强企业全球电源供应商资格。公司主要产品包括模块电源、定制电源及大功率电源及系统，产品在通信、航空、航天、军工、铁路、电力、工控、广电等各行业得到广泛的应用。",
+              "majorProducts": "大功率电源及系统、定制电源、模块电源",
+              "revenueComposition": "电源类:89.67%;集成电路产品:5.47%;电驱电机类:3.3%;其他业务:1.17%;其他电子产品:0.38%",
+              "revenueSegments": [
+                {
+                  "name": "电源类",
+                  "sharePct": 89.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "集成电路产品",
+                  "sharePct": 5.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电驱电机类",
+                  "sharePct": 3.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他电子产品",
+                  "sharePct": 0.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "PWM控制器",
+                  "步进电机驱动芯片",
+                  "降压型DC-DC转换器",
+                  "AC/DC电源模块",
+                  "DC/DC电源模块",
+                  "供配电电源系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "新雷能现有收入由电源类（89.67%）、集成电路产品（5.47%）贡献，主营产品为PWM控制器、步进电机驱动芯片、降压型DC-DC转换器、AC/DC电源模块，与AI电源产品线布局完整，Q2起二次电源批量出货，被市场视为低估值弹性标的指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，供需缺口与产品价格才会通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”产生财务影响。现阶段产品报价、订单排期、产销率和毛利率比概念标签更重要；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件对公司中期业绩的贡献将十分有限。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 24,
+        "stocks": [
+          {
+            "sourceRowNumber": 23370,
+            "stockCode": "300373.SZ",
+            "stockName": "扬杰科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内分立器件龙头，受益于AI挤占下的车规和工控需求转移，AI侧产品已覆盖台达、光宝等客户。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300373.SZ",
+              "companyName": "扬杰科技",
+              "companyProfile": "公司主营：新型电子元器件及其它电子元器件的制造、加工，销售本公司自产产品；分布式光伏发电；从事光伏发电项目的建设及其相关工程咨询服务；光伏电力项目的开发以及光伏产业项目的开发；光伏太阳能组件、太阳能应用工程零部件的销售；太阳能应用系统集成开发；道路普通货物运输；自营和代理各类商品及技术的进出口业务。",
+              "profileSummary": "公司主营：新型电子元器件及其它电子元器件的制造、加工，销售本公司自产产品；分布式光伏发电；从事光伏发电项目的建设及其相关工程咨询服务；光伏电力项目的开发以及光伏产业项目的开发；光伏太阳能组件、太阳能应用工程零部件的销售；太阳能应用系统集成开发；道路普通货物运输；自营和代理各类商品及技术的进出口业务。",
+              "majorProducts": "扬杰科技Automobile Rectifier、扬杰科技Bridge Rectifier、扬杰科技Fast Recovery Rectifier、扬杰科技General Purpose Rectifier、扬杰科技High Efficient Rectifier、扬杰科技Module、扬杰科技Schottry Rectifier、扬杰科技Silicon Bidirectional、扬杰科技Small Singnal Diode、扬杰科技solar diode、扬杰科技Super Fast Rectifier、扬杰科技TVS、扬杰科技Zener Diode",
+              "revenueComposition": "半导体功率器件:87.75%;半导体芯片:7.49%;其他业务:2.41%;半导体硅片:2.35%",
+              "revenueSegments": [
+                {
+                  "name": "半导体功率器件",
+                  "sharePct": 87.75,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "半导体芯片",
+                  "sharePct": 7.49,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半导体硅片",
+                  "sharePct": 2.35,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "FRED(快恢复外延型二极管)",
+                    "category": "功率二极管"
+                  },
+                  {
+                    "name": "IGBT(绝缘栅双极型晶体管)",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "MOSFET(金氧半场效晶体管)",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "PMBD(平面MOS势垒二极管)",
+                    "category": "功率二极管"
+                  },
+                  {
+                    "name": "PSBD(平面肖特基势垒二极管)",
+                    "category": "功率二极管"
+                  },
+                  {
+                    "name": "TSBD(沟槽肖特基势垒二极管)",
+                    "category": "功率二极管"
+                  }
+                ],
+                "knownProducts": [
+                  "IGBT(绝缘栅双极型晶体管)",
+                  "MOSFET(金氧半场效晶体管)",
+                  "FRED(快恢复外延型二极管)",
+                  "PMBD(平面MOS势垒二极管)",
+                  "PSBD(平面肖特基势垒二极管)",
+                  "TSBD(沟槽肖特基势垒二极管)",
+                  "功率二极管",
+                  "碳化硅SBD(肖特基二极管)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "扬杰科技已经具备FRED(快恢复外延型二极管)、IGBT(绝缘栅双极型晶体管)、MOSFET(金氧半场效晶体管)等业务能力，国内分立器件龙头，受益于AI挤占下的车规和工控需求转移，AI侧产品已覆盖台达、光宝等客户并非单纯概念映射。当前对应的收入被归入半导体功率器件（87.75%）、半导体芯片（7.49%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 23371,
+            "stockCode": "688396.SH",
+            "stockName": "华润微",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内领先的功率半导体IDM厂商，AI服务器电源是其重要应用领域。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688396.SH",
+              "companyName": "华润微",
+              "companyProfile": "公司是华润集团旗下负责微电子业务投资、发展和经营管理的高科技企业，曾先后整合华科电子、中国华晶、上华科技等中国半导体企业，经过多年的发展及一系列整合，公司已成为中国本土具有重要影响力的综合性半导体企业，自2004年起多年被工信部评为中国电子信息百强企业。公司于2020年2月27日登陆科创板，成为境内红筹第一股。公司是拥有芯片设计、掩模制造、晶圆制造、封装测试等全产业链一体化运营能力的IDM半导体企业，坚持以“长三角+成渝双城+大湾区”的两江三地布局，结合地域、市场和应用优势，进行资源优化配置，业务范围遍布无锡、上海、重庆、香港、东莞和深圳等地。目前公司主营业务可分为产品与方案、制造与服务两大业务板块。公司产品设计自主、制造过程可控，在分立器件及集成电路领域均已具备较强的产品技术与制造工艺能力，形成了先进的特色工艺和系列化的产品线。未来公司将围绕自身的核心优势、提升核心技术及结合内外部资源，不断推动企业发展，进一步向综合一体化的产品公司转型，成为令客户满意的功率半导体和智能传感器产品与方案供应商。",
+              "profileSummary": "公司是拥有芯片设计、掩模制造、晶圆制造、封装测试等全产业链一体化运营能力的IDM半导体企业，坚持以“长三角+成渝双城+大湾区”的两江三地布局，结合地域、市场和应用优势，进行资源优化配置，业务范围遍布无锡、上海、重庆、香港、东莞和深圳等地。目前公司主营业务可分为产品与方案、制造与服务两大业务板块。",
+              "majorProducts": "AC-DC、BMS IC、FRD、IGBT、LED驱动IC、MEMS传感器、MOSFET、SBD、电机驱动IC、光电传感产品、计量计算MCU、人机交互MCU、通用型MCU、无线充电IC、线性稳压IC、烟雾传感器、音频功放IC",
+              "revenueComposition": "产品与方案:54.53%;制造与服务:43.36%;其他业务:2.11%",
+              "revenueSegments": [
+                {
+                  "name": "产品与方案",
+                  "sharePct": 54.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "制造与服务",
+                  "sharePct": 43.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "FRD(快恢复二极管)",
+                    "category": "功率二极管"
+                  },
+                  {
+                    "name": "IGBT(绝缘栅双极型晶体管)",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "MOSFET(金氧半场效晶体管)",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "碳化硅SBD(肖特基二极管)",
+                    "category": "功率二极管"
+                  },
+                  {
+                    "name": "BLDC电机驱动芯片",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "LED照明驱动芯片",
+                    "category": "电源管理芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "光电传感器",
+                  "MEMS传感器",
+                  "烟雾传感器",
+                  "IGBT(绝缘栅双极型晶体管)",
+                  "MOSFET(金氧半场效晶体管)",
+                  "FRD(快恢复二极管)",
+                  "碳化硅SBD(肖特基二极管)",
+                  "掩模制造"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华润微实际经营中已有FRD(快恢复二极管)、IGBT(绝缘栅双极型晶体管)、MOSFET(金氧半场效晶体管)，与事件指向的国内领先的功率半导体IDM厂商，AI服务器电源是其重要应用领域能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在产品与方案（54.53%）、制造与服务（43.36%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善供需缺口与产品价格，需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。产品报价、订单排期、产销率和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 23372,
+            "stockCode": "688469.SH",
+            "stockName": "芯联集成",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内8寸功率代工龙头，为AI电源相关芯片提供产能支持。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688469.SH",
+              "companyName": "芯联集成-U",
+              "companyProfile": "公司成立于2018年3月,总部位于浙江绍兴。公司主要从事MEMS、IGBT、MOSFET、模拟IC、MCU的研发、生产、销售，为汽车、新能源、工控、家电等领域提供一站式芯片系统代工方案。公司是国内领先的具备车规级IGBT/SiC芯片及模组和数模混合高压模拟芯片生产能力的代工企业，拥有种类完整、技术先进的车规级高质量功率器件和功率IC研发及量产平台，也是国内重要的车规和高端工业控制芯片及模组制造基地。同时，公司还是国内规模、技术领先的MEMS晶圆代工厂。公司的业务面向全球，除了浙江绍兴总部，公司在中国上海、深圳、合肥，日本东京、欧洲瑞士都设有销售和市场办公室。",
+              "profileSummary": "公司主要从事MEMS、IGBT、MOSFET、模拟IC、MCU的研发、生产、销售，为汽车、新能源、工控、家电等领域提供一站式芯片系统代工方案。公司的业务面向全球，除了浙江绍兴总部，公司在中国上海、深圳、合肥，日本东京、欧洲瑞士都设有销售和市场办公室。",
+              "majorProducts": "IGBT、MEMS麦克风传感器、MOSFET、车载塑封功率模组、低热阻铜扣封装、惯性传感器、灌封功率模组、射频器件、压力传感器、智能功率模组",
+              "revenueComposition": "集成电路晶圆制造代工:73.15%;模组封测:18.43%;研发服务:4.87%;其他业务:3.55%",
+              "revenueSegments": [
+                {
+                  "name": "集成电路晶圆制造代工",
+                  "sharePct": 73.15,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "模组封测",
+                  "sharePct": 18.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "研发服务",
+                  "sharePct": 4.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "功率器件晶圆制造",
+                    "category": "晶圆制造"
+                  },
+                  {
+                    "name": "MEMS晶圆制造",
+                    "category": "传感器芯片"
+                  },
+                  {
+                    "name": "晶圆测试",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "芯片封装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "芯片测试",
+                    "category": "芯片封装测试"
+                  }
+                ],
+                "knownProducts": [
+                  "MEMS晶圆制造",
+                  "功率器件晶圆制造",
+                  "晶圆测试",
+                  "芯片封装",
+                  "芯片测试"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "芯联集成的相关业务已决定公司大部分经营表现：集成电路晶圆制造代工占收入的73.15%。公司与事件的直接业务联系是：国内8寸功率代工龙头，为AI电源相关芯片提供产能支持，真正的增量取决于供需缺口与产品价格，并需经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，产品报价、订单排期、产销率和毛利率需要显示公司获得超越行业的增量。供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 23373,
+            "stockCode": "688711.SH",
+            "stockName": "宏微科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "IGBT、FRED核心供应商，SiC产品已进入北美大客户供应链，深度绑定威迈斯。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688711.SH",
+              "companyName": "宏微科技",
+              "companyProfile": "公司成立于2006年，总部位于江苏常州，是专注于功率半导体器件设计、研发、制造及销售的高新技术企业，2021年登陆科创板，成为国内功率半导体领域的标杆企业之一。公司以IGBT、FRD为核心，布局芯片、单管、模块及系统解决方案的全产业链，产品涵盖第三代半导体碳化硅(SiC)芯片与模块、MOSFET、整流二极管等，广泛应用于工业控制、新能源发电、新能源汽车等领域。公司围绕超微沟槽结构+场阻断技术、软恢复二极管芯片技术等核心技术持续创新，产品覆盖新能源汽车、新能源发电、储能和工业控制等应用场景。公司重点推进微沟槽IGBT、虚拟原胞、逆导IGBT等多项第七代功率芯片关键技术，关键性能指标已对标国际先进水平，电压等级覆盖650V/750V/1000V/1200V，并在新能源汽车电机控制器及新能源发电领域实现规模化应用。公司深耕行业多年，凭借先进技术、可靠质量和优质服务，与各行业龙头及众多知名客户建立了稳固合作关系。公司在定制化产品开发方面具备突出竞争力，采用“标准品+深度定制”双轨模式，依托自研芯片能力建立快速响应机制，灵活支持参数调整与封装适配。技术适配上，公司通过塑封与灌封双路径满足差异化需求，并形成“需求定义—协同开发—快速量产”的产品开发闭环。在竞争加剧和市场分化背景下，公司将加大SiC、GaN等前沿技术研发力度，深化与新能源汽车、光伏等客户的合作，并通过精细化管理降低成本、提升效率，推动产品结构向高端化升级。公司坚持“自主创新驱动长远发展”，致力于成为全球领先的功率半导体解决方案提供商，为“双碳”目标和产业智能化转型贡献力量。",
+              "profileSummary": "公司以IGBT、FRD为核心，布局芯片、单管、模块及系统解决方案的全产业链，产品涵盖第三代半导体碳化硅(SiC)芯片与模块、MOSFET、整流二极管等，广泛应用于工业控制、新能源发电、新能源汽车等领域。公司坚持“自主创新驱动长远发展”，致力于成为全球领先的功率半导体解决方案提供商，为“双碳”目标和产业智能化转型贡献力量。",
+              "majorProducts": "宏微科技FRED系列、宏微科技IGBT系列、宏微科技MOSFET系列、宏微科技动态节能照明电源",
+              "revenueComposition": "模块:76.74%;单管:18.91%;受托加工业务:1.85%;芯片:1.45%;其他业务:1.04%",
+              "revenueSegments": [
+                {
+                  "name": "模块",
+                  "sharePct": 76.74,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "单管",
+                  "sharePct": 18.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "受托加工业务",
+                  "sharePct": 1.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "芯片",
+                  "sharePct": 1.45,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "IGBT(绝缘栅双极型晶体管)",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "IGBT模块",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "IGBT芯片",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "FRED(快恢复外延型二极管)",
+                    "category": "功率二极管"
+                  },
+                  {
+                    "name": "FRED模块",
+                    "category": "功率二极管"
+                  },
+                  {
+                    "name": "FRED芯片",
+                    "category": "功率二极管"
+                  }
+                ],
+                "knownProducts": [
+                  "晶闸管模块",
+                  "IGBT(绝缘栅双极型晶体管)",
+                  "IGBT模块",
+                  "IGBT芯片",
+                  "MOSFET(金氧半场效晶体管)",
+                  "MOSFET模块",
+                  "MOSFET芯片",
+                  "FRED(快恢复外延型二极管)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "宏微科技与事件的关系已经落在存量主业，而非远期概念：模块占收入的76.74%。公司在产业链中的具体抓手是：IGBT、FRED核心供应商，SiC产品已进入北美大客户供应链，深度绑定威迈斯。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 23374,
+            "stockCode": "688187.SH",
+            "stockName": "时代电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内唯一具备6500V级高压器件量产能力的企业，产品可服务于AI电源、HVDC等领域。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688187.SH",
+              "companyName": "时代电气",
+              "companyProfile": "公司立足于交通和能源两大赛道，以创一流和高质量发展为目标，始终坚持创新驱动和同心多元化发展，致力于为社会提供安全、智能、绿色、舒适的高端装备，励志成为交通与能源领域电气系统全面解决方案全球首选供应商和世界一流专业领军示范企业。经过长期的积淀与发展，目前已形成了“基础器件+装置与系统+整机与工程”的完整产业链结构，产业涉及轨道交通、新能源发电、电力电子器件、乘用车电驱、传感器、工业传动、海工装备等领域；具备完备的供应链体系、生产制造体系、营销及售后服务网络，业务遍及全球20多个国家和地区；主导制定了多项国际标准，累计获得中国专利金奖、国家科学进步二等奖等各类科技奖励百余项，锤炼了一支以院士为核心的高端技术人才队伍，是一家拥有自主知识产权的高科技企业，具有广阔的发展空间和前景。公司始终践行央企担当，积极投身国家重大战略。作为中国电气化铁路装备事业的开拓者和领先者，致力于被誉为列车“心脏”和“大脑”的牵引传动和控制系统自主研发及产业化，持续领跑国内轨道交通电气系统市场，支撑了我国“一带一路”、“高端装备走出去的”目标；在建设现代化产业体系，加快构建新发展格局的新时期，牢牢把握新一轮科技革命和产业变革历史发展机遇，纵深推进战略性新兴产业发展，半导体领域已成为国内头部企业；新能源发电、新能源汽车等绿色装备进入了行业第一梯队，充分发挥了国企在构建安全稳健、自主可控的产业链供应链上发挥了积极作用。",
+              "profileSummary": "公司立足于交通和能源两大赛道，以创一流和高质量发展为目标，始终坚持创新驱动和同心多元化发展，致力于为社会提供安全、智能、绿色、舒适的高端装备，励志成为交通与能源领域电气系统全面解决方案全球首选供应商和世界一流专业领军示范企业。经过长期的积淀与发展，目前已形成了“基础器件+装置与系统+整机与工程”的完整产业链结构，产业涉及轨道交通、新能源发电、电力电子器件、乘用车电驱、传感器、工业传动、海工装备等领域；具备完备的供应链体系、生产制造体系…",
+              "majorProducts": "功率半导体器件、轨道工程机械、轨道交通电气装备、通信信号系统",
+              "revenueComposition": "轨道交通装备:55.07%;新兴装备:44.53%;其他业务:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "轨道交通装备",
+                  "sharePct": 55.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新兴装备",
+                  "sharePct": 44.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "IGBT模块",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "IGBT芯片",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "碳化硅MOSFET(氧化物场效应晶体管)",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "碳化硅SBD(肖特基二极管)",
+                    "category": "功率二极管"
+                  },
+                  {
+                    "name": "中国机车远程监测与诊断系统(CMD)",
+                    "category": "交运信息化"
+                  }
+                ],
+                "knownProducts": [
+                  "接触网作业车",
+                  "动车组车载接触网运行状态检测装置(3C)",
+                  "机车无线重联控制系统",
+                  "机车自动驾驶系统",
+                  "机车车载安全防护系统(6A)",
+                  "轨道交通再生能量回馈装置",
+                  "轨道交通智能供电系统",
+                  "轨道交通智能电分相装置"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "时代电气与新闻之间有明确产品抓手：IGBT模块、IGBT芯片、碳化硅MOSFET(氧化物场效应晶体管)，对应国内唯一具备6500V级高压器件量产能力的企业，产品可服务于AI电源、HVDC等领域。收入主体目前是轨道交通装备（55.07%）、新兴装备（44.53%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 23375,
+            "stockCode": "603290.SH",
+            "stockName": "斯达半导",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内IGBT模块龙头，车规级产品市占率领先，产品可应用于AI相关供电系统。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603290.SH",
+              "companyName": "斯达半导",
+              "companyProfile": "公司成立于2005年4月，专业从事以IGBT为主的半导体芯片和模块的设计研发、生产及销售服务。公司总部位于浙江嘉兴，在上海、重庆、浙江和欧洲均设有子公司，并在国内和欧洲德国及瑞士设有研发中心。2020年在上海交易所主板上市。根据国际著名市场调研机构Omdia2023年研究报告，公司在全球IGBT模块市场排名第五。公司产品分芯片和模块两大类，主要包括IGBT、FRD、SiC、MCU芯片和模块。其中IGBT模块产品超过600种，电压等级涵盖100V～3300V，电流等级涵盖10A～3600A。产品已被成功应用于新能源汽车、新能源、工业控制、机车牵引、输变电、白色家电等领域。公司是国内新能源汽车市场主电机控制器用大功率车规级IGBT/SiC模块的主要供应商，2024年车规级IGBT模块配套超过300万套新能源汽车主电机控制器。公司始终坚持“品质成就梦想”的宗旨，严把质量关。公司已通过ISO9001质量管理体系认证、ISO14001环境管理体系认证、ISO45001职业健康安全管理体系认证以及IATF16949汽车级质量管理体系认证，对产品从最初的研发阶段至客户后期服务的整个流程进行全面质量控制。公司还引进了ERP、MES等管理系统，对公司的进、销、存、设备、生产、财务等进行全面的系统性的信息化管理，为企业决策层及员工提供决策运行手段，确保生产的顺利进行和产品的可追踪性。公司坚持以市场为导向、以创新为驱动，以“成为全球领先的半导体器件研发和制造商及创新解决方案提供商”为目标；以“为客户创造更大价值，为人类创造美好生活”为使命；坚持“品质成就梦想，创新引领未来”的价值观；以提高公司经济效益和为社会创造价值为基本原则，致力于成为世界顶尖的半导体企业。",
+              "profileSummary": "公司成立于2005年4月，专业从事以IGBT为主的半导体芯片和模块的设计研发、生产及销售服务。公司产品分芯片和模块两大类，主要包括IGBT、FRD、SiC、MCU芯片和模块。",
+              "majorProducts": "1200V IGBT模块、其他电压IGBT模块",
+              "revenueComposition": "IGBT模块:83.57%;其他:16.43%",
+              "revenueSegments": [
+                {
+                  "name": "IGBT模块",
+                  "sharePct": 83.57,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 16.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "IGBT模块",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "车规级IGBT模块",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "快恢复二极管芯片",
+                    "category": "功率二极管"
+                  }
+                ],
+                "knownProducts": [
+                  "IGBT模块",
+                  "车规级IGBT模块",
+                  "快恢复二极管芯片"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "斯达半导的事件暴露较为直接：IGBT模块占收入的83.57%，相关业务不是边缘尝试；具体业务抓手是：国内IGBT模块龙头，车规级产品市占率领先，产品可应用于AI相关供电系统。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，尤其需要用产品报价、订单排期、产销率和毛利率区分行业普涨与公司自身竞争力。如果供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 23376,
+            "stockCode": "688052.SH",
+            "stockName": "纳芯微",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为服务器电源PSU提供驱动、隔离芯片、MCU等产品，高压GaN驱动芯片已批量发货。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688052.SH",
+              "companyName": "纳芯微",
+              "companyProfile": "公司是高性能高可靠性模拟及混合信号芯片公司。自2013年成立以来，公司聚焦传感器、信号链、电源管理三大方向，为汽车、工业、信息通讯及消费电子等领域提供丰富的半导体产品及解决方案。公司以【“感知”“驱动”未来，共建绿色、智能、互联互通的“芯”世界】为使命，致力于为数字世界和现实世界的连接提供芯片级解决方案。",
+              "profileSummary": "自2013年成立以来，公司聚焦传感器、信号链、电源管理三大方向，为汽车、工业、信息通讯及消费电子等领域提供丰富的半导体产品及解决方案。公司以【“感知”“驱动”未来，共建绿色、智能、互联互通的“芯”世界】为使命，致力于为数字世界和现实世界的连接提供芯片级解决方案。",
+              "majorProducts": "CAN/LIN接口、I²C接口、LDO、MEMS麦克风ASIC、PIR传感器ASIC、表压传感器、步进电机驱动、差压传感器、磁传感器ASIC、电压基准、电压监控、电子保险丝、放大器、非隔离驱动、隔离采样、隔离电源、隔离接口、隔离驱动、工业变送器ASIC、集成式电流传感器、继电器与螺线管驱动、角度传感器、绝压传感器、模拟输出温度传感器、汽车智能执行器电机驱动SoC、热电堆传感器ASIC、数据转换器、数字隔离器、数字输出温度传感器、温度传感器、线性LED驱动、线性电流传感器、压力传感器ASIC、音频功率放大器、直流有刷电机驱动",
+              "revenueComposition": "信号链产品:38.24%;电源管理产品:34.85%;传感器产品:26.49%;其他业务:0.35%;定制服务:0.08%",
+              "revenueSegments": [
+                {
+                  "name": "信号链产品",
+                  "sharePct": 38.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电源管理产品",
+                  "sharePct": 34.85,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "传感器产品",
+                  "sharePct": 26.49,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "定制服务",
+                  "sharePct": 0.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "BDC电机驱动芯片",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "I2C缓冲器",
+                    "category": "接口芯片"
+                  },
+                  {
+                    "name": "LED车灯驱动芯片",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "LIN收发器",
+                    "category": "接口芯片"
+                  },
+                  {
+                    "name": "can收发器",
+                    "category": "接口芯片"
+                  },
+                  {
+                    "name": "低压差线性稳压器LDO",
+                    "category": "电源管理芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "压力传感器芯片",
+                  "温度传感器芯片",
+                  "陶瓷电容压力传感器敏感元件",
+                  "数字隔离器",
+                  "数模转换器DAC",
+                  "模数转换器ADC",
+                  "运算放大器",
+                  "隔离CAN"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "纳芯微的事件逻辑具备真实业务底座，但尚不足以代表全部公司：电源管理产品占收入的34.85%。公司与事件的具体联系在于：为服务器电源PSU提供驱动、隔离芯片、MCU等产品，高压GaN驱动芯片已批量发货，对应的核心变量是供需缺口与产品价格。若这一变量沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，产品报价、订单排期、产销率和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 23377,
+            "stockCode": "688141.SH",
+            "stockName": "杰华特",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为服务器主板提供从输入保护到CPU核心供电的完整解决方案，深度绑定昇腾供应链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688141.SH",
+              "companyName": "杰华特",
+              "companyProfile": "公司创立于2013年3月，是一家以虚拟IDM为主要经营模式的模拟集成电路设计企业，专业从事模拟集成电路的研发与销售。公司于2022年12月23日在上海证券交易所科创板上市。公司在电源管理模拟芯片领域形成了多品类、广覆盖、高性价比的产品供应体系，信号链芯片产品持续丰富中。公司产品的应用范围涉及新能源、汽车电子、通讯电子、计算和存储、工业应用、消费电子等不同领域。公司的特点主要表现在工艺-设计-系统的技术体系、宽领域的产品布局、全方位的质量管控、完善的供应链体系等方面，公司将充分把握国内模拟电路的发展机遇。未来，公司将继续以工艺开发和产品拓展为主线，以卓越的产品定义与质量管控为着力点，坚持“生产一代、研制一代、开发一代、储备一代”发展策略，以多样化、高性价比的芯片产品提升市场份额，争取早日实现“进入每一台电子产品，成为模拟集成电路行业领军者”的企业愿景。",
+              "profileSummary": "公司在电源管理模拟芯片领域形成了多品类、广覆盖、高性价比的产品供应体系，信号链芯片产品持续丰富中。公司产品的应用范围涉及新能源、汽车电子、通讯电子、计算和存储、工业应用、消费电子等不同领域。",
+              "majorProducts": "AC-DC芯片、DC-DC芯片、电池管理芯片、线性电源芯片、信号链芯片",
+              "revenueComposition": "DC-DC芯片:53.29%;AC-DC芯片:19.34%;线性电源芯片:14%;信号链芯片:9.68%;功率产品:2.13%;电池管理芯片:0.85%;技术服务费:0.63%;其他:0.04%;其他业务:0.04%",
+              "revenueSegments": [
+                {
+                  "name": "DC-DC芯片",
+                  "sharePct": 53.29,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "AC-DC芯片",
+                  "sharePct": 19.34,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "线性电源芯片",
+                  "sharePct": 14.0,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "信号链芯片",
+                  "sharePct": 9.68,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "功率产品",
+                  "sharePct": 2.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电池管理芯片",
+                  "sharePct": 0.85,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务费",
+                  "sharePct": 0.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PFC控制器",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "以太网供电芯片",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "低压差线性稳压器LDO",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "升压型DC-DC转换器",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "升降压型DC-DC转换器",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "原边反激AC-DC控制器",
+                    "category": "电源管理芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "数模转换器DAC",
+                  "时钟发生器",
+                  "时钟驱动器",
+                  "模拟前端芯片AFE",
+                  "模拟开关",
+                  "比较器",
+                  "运算放大器",
+                  "PFC控制器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 5
+              }
+            },
+            "analysis": "杰华特已经具备PFC控制器、以太网供电芯片、低压差线性稳压器LDO等业务能力，为服务器主板提供从输入保护到CPU核心供电的完整解决方案，深度绑定昇腾供应链并非单纯概念映射。当前对应的收入被归入DC-DC芯片（53.29%）、AC-DC芯片（19.34%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 23378,
+            "stockCode": "688484.SH",
+            "stockName": "南芯科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "发布面向算力芯片供电的多相DrMOS电源方案，覆盖数据中心、自动驾驶等场景。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688484.SH",
+              "companyName": "南芯科技",
+              "companyProfile": "公司是国内领先的模拟和嵌入式芯片设计企业之一，主营业务为模拟与嵌入式芯片的研发、设计和销售，专注于电源及电池管理领域，为客户提供高性能、高品质与高经济效益的完整解决方案。公司现有产品已覆盖移动设备电源管理芯片(含有线充电管理芯片、无线充电管理芯片、锂电管理芯片、显示电源管理芯片、其他移动设备电源管理芯片)、智慧能源电源管理芯片、通用电源管理芯片、汽车电子芯片和微控制器(MCU)，通过打造完整的产品矩阵，满足客户系统应用需求。公司产品主要应用于手机、笔记本/平板电脑、电源适配器、智能穿戴设备等消费电子领域，储能电源、电动工具、机器人等工业领域及车载领域。随着公司研发投入的增加，公司产品结构越来越丰富，消费电子领域目前已覆盖从供电端的AC-DC、协议芯片到设备端的充电管理、锂电管理、显示电源管理等全链路，同时汽车电子领域已覆盖车载电源管理芯片和车载智能驱动芯片。公司将继续围绕高端消费电子、智能汽车电子、工业、AI电源等领域加强研发投入，锚定客户关键需求，有效推进业务规模持续扩张；在业务规模扩大的同时，公司也将进一步优化业务流程体系，加强组织能力建设，提升公司治理水平，为公司实现长期、健康、跨周期的发展愿景，夯实根基。",
+              "profileSummary": "公司是国内领先的模拟和嵌入式芯片设计企业之一，主营业务为模拟与嵌入式芯片的研发、设计和销售，专注于电源及电池管理领域，为客户提供高性能、高品质与高经济效益的完整解决方案。公司现有产品已覆盖移动设备电源管理芯片(含有线充电管理芯片、无线充电管理芯片、锂电管理芯片、显示电源管理芯片、其他移动设备电源管理芯片)、智慧能源电源管理芯片、通用电源管理芯片、汽车电子芯片和微控制器(MCU)，通过打造完整的产品矩阵，满足客户系统应用需求。",
+              "majorProducts": "AC-DC控制芯片、DC-DC芯片、车载电源管理芯片、车载智能驱动芯片、锂电管理芯片、其他电源管理芯片、全集成芯片、通用充电管理芯片、无线充电管理芯片、显示屏电源管理芯片、有线充电管理芯片、智能控制芯片",
+              "revenueComposition": "消费电子:89.26%;汽车电子:6.31%;工业领域:4.24%;智能算力:0.1%;其他业务:0.09%",
+              "revenueSegments": [
+                {
+                  "name": "消费电子",
+                  "sharePct": 89.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车电子",
+                  "sharePct": 6.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业领域",
+                  "sharePct": 4.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能算力",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "AMOLED电源芯片",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "低压差线性稳压器LDO",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "副边反激AC-DC控制器",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "升压型DC-DC转换器",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "升降压型DC-DC转换器",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "同步整流器",
+                    "category": "电源管理芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "AMOLED电源芯片",
+                  "低压差线性稳压器LDO",
+                  "副边反激AC-DC控制器",
+                  "升压型DC-DC转换器",
+                  "升降压型DC-DC转换器",
+                  "同步整流器",
+                  "开关电池充电芯片",
+                  "无线充电发射芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "南芯科技与新闻之间有明确产品抓手：AMOLED电源芯片、低压差线性稳压器LDO、副边反激AC-DC控制器，对应发布面向算力芯片供电的多相DrMOS电源方案，覆盖数据中心、自动驾驶等场景。收入主体目前是消费电子（89.26%）、汽车电子（6.31%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 23380,
+            "stockCode": "300811.SZ",
+            "stockName": "铂科新材",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "芯片电感是公司核心产品之一，受益于AI服务器需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300811.SZ",
+              "companyName": "铂科新材",
+              "companyProfile": "公司是经认定的国家级高新技术企业，自设立以来一直从事合金软磁粉、合金软磁粉芯及相关电感元件产品的研发、生产和销售，为下游用户电力电子设备或系统实现高效稳定、节能环保运行提供高性能软磁材料、模块化电感以及整体解决方案，主要产品包括合金软磁粉(制造合金软磁粉芯的核心材料)、合金软磁粉芯(电感元件的核心部件)、电感元件等。公司于2004年在中国开始粉体的研发试验，并在2007年成功开发出铁硅气雾化粉末。公司完全掌握了铁硅、铁硅铝从粉体研发制造，粉体绝缘到粉体成型的整个金属磁粉芯的完整供应体系、核心技术及所有知识产权。提供从粉芯的生产、销售、解决方案的设计、特种电感器件的供应。",
+              "profileSummary": "公司是经认定的国家级高新技术企业，自设立以来一直从事合金软磁粉、合金软磁粉芯及相关电感元件产品的研发、生产和销售，为下游用户电力电子设备或系统实现高效稳定、节能环保运行提供高性能软磁材料、模块化电感以及整体解决方案，主要产品包括合金软磁粉(制造合金软磁粉芯的核心材料)、合金软磁粉芯(电感元件的核心部件)、电感元件等。提供从粉芯的生产、销售、解决方案的设计、特种电感器件的供应。",
+              "majorProducts": "金属软磁粉、金属软磁粉芯、芯片电感",
+              "revenueComposition": "合金软磁粉芯:96.52%;合金软磁粉:3.07%;其他:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "合金软磁粉芯",
+                  "sharePct": 96.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "合金软磁粉",
+                  "sharePct": 3.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "铁硅磁粉",
+                  "铁硅铝磁粉",
+                  "铁硅铬磁粉",
+                  "铁硅软磁体",
+                  "铁硅铝软磁体"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "铂科新材的业务范围能够覆盖芯片电感是公司核心产品之一，受益于AI服务器需求增长所处的产业环节，但当前合金软磁粉芯（96.52%）、合金软磁粉（3.07%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。供需缺口与产品价格需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”完成兑现，并在产品报价、订单排期、产销率和毛利率上形成持续改善；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 23381,
+            "stockCode": "002056.SZ",
+            "stockName": "横店东磁",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "芯片电感业务新增英伟达放量预期，同时与MPS在算力电源芯片电感供应合作加速。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002056.SZ",
+              "companyName": "横店东磁",
+              "companyProfile": "公司是全球铁氧体磁性材料行业的龙头企业，全球光伏组件TOP10制造商，全球首批获得低碳认证的光伏组件制造商，首批国家级知识产权示范企业、国家专利导航试点工程单位，并荣获国家“绿色工厂”、国家级5G工厂、浙江省第一批“未来工厂”等多项权威认证与荣誉。公司坚守长期主义，并持续以客户为中心、以创新为驱动，推动公司的全球化布局、数智化转型以及管理模式变革，从而有效推动了公司可持续发展。公司坚定围绕“做强磁性，发展新能源”的战略定位，稳步推进“扎根横店、面向全国、深度国际化”的战略布局，构建了覆盖全球的生产、物流、销售及服务体系。凭借卓越的产品质量与服务能力，公司赢得了众多全球五百强企业及行业龙头的信赖与认可。在磁性材料领域，公司先后获得了博世全球最佳供应商、电产、三星、松下等优秀供应商；在光伏领域，公司持续入围彭博全球光伏组件制造商第一梯队、EUPDResearch“顶级光伏组件品牌”等，其黑组件、温室系统、高透亮组件等差异化产品成为欧洲、日本等地分布式市场的首选。未来，公司将继续以稳健发展为基石，深化技术创新与数智化的融合，加速新质生产力的培育，为全球客户创造卓越价值。在绿色环保、高科技与智能制造等前沿领域，公司将持续突破自我，引领行业变革，努力成为新时代制造业转型升级的标杆与领航者。",
+              "profileSummary": "公司坚定围绕“做强磁性，发展新能源”的战略定位，稳步推进“扎根横店、面向全国、深度国际化”的战略布局，构建了覆盖全球的生产、物流、销售及服务体系。凭借卓越的产品质量与服务能力，公司赢得了众多全球五百强企业及行业龙头的信赖与认可。",
+              "majorProducts": "18650型号三元圆柱电芯、21700 型号三元圆柱电芯、EMC滤波器件、标准化电池、磁粉心、电感、防眩光、非晶纳米晶、高透光、海漂、软磁铁氧体、塑磁、温室系统、硬质合金、永磁铁氧体、预烧料、振动器件、智能组件、组件及全黑组件",
+              "revenueComposition": "太阳能单晶硅电池片:63.36%;磁性材料:17.73%;锂电池:12.05%;器件:4.41%;其他:2.46%",
+              "revenueSegments": [
+                {
+                  "name": "太阳能单晶硅电池片",
+                  "sharePct": 63.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "磁性材料",
+                  "sharePct": 17.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锂电池",
+                  "sharePct": 12.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "器件",
+                  "sharePct": 4.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "永磁铁氧体湿压磁瓦",
+                  "软磁铁氧体",
+                  "振动马达",
+                  "太阳能电池片",
+                  "太阳能电池组件",
+                  "三元锂电池",
+                  "储能锂电池",
+                  "小动力锂电池"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "横店东磁与新闻存在业务方向上的交集：芯片电感业务新增英伟达放量预期，同时与MPS在算力电源芯片电感供应合作加速；公司当前收入主要来自太阳能单晶硅电池片（63.36%）、磁性材料（17.73%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对供需缺口与产品价格的推动只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入报表，产品报价、订单排期、产销率和毛利率决定这一交集能否升级为实际增量；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 23382,
+            "stockCode": "300835.SZ",
+            "stockName": "龙磁科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "募投建设1.8亿片芯片电感产能，切入AI电源产业链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300835.SZ",
+              "companyName": "龙磁科技",
+              "companyProfile": "公司创立于1998年，主要从事永磁铁氧体及软磁系列产品的研发、生产和销售。在全球拥有多个生产基地和销售中心，年产各类磁性产品6万吨以上。公司生产的高性能永磁铁氧体湿压磁瓦是直流电机的核心部件，广泛应用于汽车驱动、电气化系统以及车身附件中，如启动电机、ABS电机、雨刮器电机、摇窗电机等，助力汽车动力、环保、智能化、安全性和舒适性的创新发展。随着变频技术的应用和普及，该磁瓦在家用电器行业的产业升级中也发挥了不可替代的作用。自2020年以来，公司积极布局并建设软磁项目，搭建了软磁材料制备、磁芯生产(金属粉芯，铁氧体磁芯)等多个团队和生产线，依托永磁行业的多年积累，全力打造软磁产业链。公司先后通过了IATF16949质量体系认证、ISO14001环境管理体系认证、ISO45001职业健康安全管理体系认证和ISO50001能源管理体系认证。经过多年努力，“龙磁”品牌在国内外市场已得到广泛认同，公司已成为全球众多知名电机生产企业及电源生产企业的主流供应商。公司是国家级高新技术企业、国家级专精特新“小巨人”企业，注重技术创新，拥有完全自主知识产权，涵盖高性能磁性材料主要生产技术环节。公司奉行高质量、标准化和一致性的生产理念，奋力打拼、创造价值、服务客户、贡献社会。",
+              "profileSummary": "公司创立于1998年，主要从事永磁铁氧体及软磁系列产品的研发、生产和销售。公司是国家级高新技术企业、国家级专精特新“小巨人”企业，注重技术创新，拥有完全自主知识产权，涵盖高性能磁性材料主要生产技术环节。",
+              "majorProducts": "磁性材料、换向器及其他、龙磁科技高性能湿压磁瓦、微型逆变器及配件",
+              "revenueComposition": "磁性材料:83.7%;换向器及其他:10.15%;微型逆变器及配件:6.03%;租赁业务:0.12%",
+              "revenueSegments": [
+                {
+                  "name": "磁性材料",
+                  "sharePct": 83.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "换向器及其他",
+                  "sharePct": 10.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "微型逆变器及配件",
+                  "sharePct": 6.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁业务",
+                  "sharePct": 0.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "永磁铁氧体湿压磁瓦",
+                  "微型逆变器",
+                  "电机换向器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "龙磁科技现有收入由磁性材料（83.7%）、换向器及其他（10.15%）贡献，主营产品为永磁铁氧体湿压磁瓦、微型逆变器、电机换向器，与募投建设1.8亿片芯片电感产能，切入AI电源产业链指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，供需缺口与产品价格才会通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”产生财务影响。现阶段产品报价、订单排期、产销率和毛利率比概念标签更重要；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 23383,
+            "stockCode": "688786.SH",
+            "stockName": "悦安新材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "其羰基铁粉是TLVR电感核心原材料之一，受益于AI服务器电感技术升级。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688786.SH",
+              "companyName": "悦安新材",
+              "companyProfile": "公司是一家专注于微纳金属粉体新材料领域的高新技术企业，公司于2004年11月落户江西省赣州市大余县，2021年在上海证券交易所科创板上市。在工业功能材料方向，公司产品凭借优越的性能和稳定的质量，进入AI算力、新能源汽车电子、智能手机等供应链体系，主要应用于AI算力电感、汽车电子电路、折叠屏手机铰链等高附加值领域。在特种应用方向，公司以微纳粉体为核心基材开发的微波吸收、电磁屏蔽功能材料，已适配多型号装备的预研需求，为国防和特种领域提供了关键材料支持。人才队伍建设方面，公司拥有一批从事技术研发工作的专家教授和高级工程科研人员，其中两人享受国务院特殊津贴。产学研合作方面，公司与中科院赣江创新研究院、北京科技大学、北京化工大学、南昌大学等高校及科研院所建立了长期的科研合作关系。在内外研发资源的支撑下，公司近年来承担完成了国家科技型中小企业科技创新基金、国家中小企业发展专项基金等多项科研项目。品牌建设方面，公司成功打造了“YUEAN悦安”品牌，凭借优质的产品与服务，荣获“江西出口名牌”称号及中国国际高新技术成果交易会“优秀产品奖”等多项行业殊荣。公司凭借二十余年在微纳金属粉体材料领域的深耕与技术攻坚，成为了国内自动化程度高、工艺技术先进、产品产销量大的微纳金属粉体生产企业之一，产品远销三十多个国家与地区，累积创汇超亿美元。公司的诞生与发展，结束了国内微纳金属粉体技术含量低、质量水平落后的历史，推动了国产粉末冶金材料在国际市场整体竞争力的提升。",
+              "profileSummary": "在工业功能材料方向，公司产品凭借优越的性能和稳定的质量，进入AI算力、新能源汽车电子、智能手机等供应链体系，主要应用于AI算力电感、汽车电子电路、折叠屏手机铰链等高附加值领域。品牌建设方面，公司成功打造了“YUEAN悦安”品牌，凭借优质的产品与服务，荣获“江西出口名牌”称号及中国国际高新技术成果交易会“优秀产品奖”等多项行业殊荣。",
+              "majorProducts": "非晶软磁粉、高强钢合金喂料、钴基合金喂料、金属注射成型喂料、金属注射成型喂料系列产品、软磁粉、软磁粉系列产品、钛合金喂料、羰基铁粉、羰基铁粉系列产品、羰基铁软磁粉、铁基不锈钢合金喂料、雾化合金粉、雾化合金粉系列产品、雾化合金软磁粉、吸波材料、吸波材料系列产品",
+              "revenueComposition": "软磁粉:40.64%;羰基铁粉:31.12%;注射成型喂料粉:17.08%;合金粉:8.27%;其他业务:1.7%;吸波材料:1.16%;气体:0.03%",
+              "revenueSegments": [
+                {
+                  "name": "软磁粉",
+                  "sharePct": 40.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "羰基铁粉",
+                  "sharePct": 31.12,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "注射成型喂料粉",
+                  "sharePct": 17.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "合金粉",
+                  "sharePct": 8.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "吸波材料",
+                  "sharePct": 1.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "气体",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "羰基铁粉",
+                    "category": "其他金属新材料"
+                  }
+                ],
+                "knownProducts": [
+                  "钛合金喂料",
+                  "钴基合金喂料",
+                  "羰基铁粉",
+                  "不锈钢合金粉",
+                  "钴铬钼合金粉",
+                  "铁硅铬磁粉",
+                  "电磁吸波材料",
+                  "铁基不锈钢合金喂料"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "悦安新材已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：羰基铁粉占收入的31.12%。公司在产业链中的位置是：其羰基铁粉是TLVR电感核心原材料之一，受益于AI服务器电感技术升级，供需缺口与产品价格则决定增量大小。只有完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，相关业务的增长才可能改善公司整体盈利。产品报价、订单排期、产销率和毛利率还需与其他主业表现同时改善；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 23384,
+            "stockCode": "301251.SZ",
+            "stockName": "威尔高",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "DCDC电源PCB核心供应商，受益于AI服务器电源需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301251.SZ",
+              "companyName": "威尔高",
+              "companyProfile": "公司成立于2017年4月，2023年9月在深圳证券交易所上市。公司专业从事印制电路板的研发、生产和销售，产品覆盖厚铜板、MiniLED光电板、平面变压器板、光模块等，广泛应用于工业控制、人工智能、汽车电子、新能源、新一代通讯等领域。多年来公司深耕PCB赛道创新发展，致力于成为全球顶端的PCB制造服务商。展望未来，公司将持续加大研发投入，推动技术创新与产业升级，以满足市场日益增长的多元化需求。同时，公司也将积极履行社会责任，推动绿色低碳发展，为构建可持续的未来贡献自己的力量。",
+              "profileSummary": "公司专业从事印制电路板的研发、生产和销售，产品覆盖厚铜板、MiniLED光电板、平面变压器板、光模块等，广泛应用于工业控制、人工智能、汽车电子、新能源、新一代通讯等领域。多年来公司深耕PCB赛道创新发展，致力于成为全球顶端的PCB制造服务商。",
+              "majorProducts": "多层印制电路板、双面印制电路板",
+              "revenueComposition": "印制电路板:86.96%;其他业务:13.04%",
+              "revenueSegments": [
+                {
+                  "name": "印制电路板",
+                  "sharePct": 86.96,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 13.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PCB双面板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB多层板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB废料",
+                    "category": "电路板材料"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB双面板",
+                  "PCB多层板",
+                  "PCB废料"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "威尔高与事件存在真实业务交集：公司已有PCB双面板、PCB多层板、PCB废料，与DCDC电源PCB核心供应商，受益于AI服务器电源需求增长所处的产业环节一致。印制电路板（86.96%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 23385,
+            "stockCode": "301132.SZ",
+            "stockName": "满坤科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为台达电子等头部客户提供AI服务器电源PCB产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301132.SZ",
+              "companyName": "满坤科技",
+              "companyProfile": "公司是一家专业从事双面、多层高精密印制线路板研发、制造和销售的国家高新技术企业。产品主要运用于汽车电子、工控安防、消费电子、通信电子等四大领域。经过多年的市场开拓，积累，已与视源股份、格力电器、海康威视、大华股份、得利捷、德赛西威、马瑞利、伟世通、宁德时代、海纳川海拉等国内外知名品牌客户建立良好的合作关系。公司拥有市级工程技术研究中心和省级企业技术中心两个研发平台，先后通过UL安全认证、ISO9001：2015、ISO14001：2015、ISO45001：2018、IATF16949：2016、CQC、RBA、知识产权管理体系及两化融合管理体系认证。",
+              "profileSummary": "公司是一家专业从事双面、多层高精密印制线路板研发、制造和销售的国家高新技术企业。产品主要运用于汽车电子、工控安防、消费电子、通信电子等四大领域。",
+              "majorProducts": "单面印制电路板、多层印制电路板、双面印制电路板",
+              "revenueComposition": "印刷电路板:89.28%;其他业务:10.72%",
+              "revenueSegments": [
+                {
+                  "name": "印刷电路板",
+                  "sharePct": 89.28,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 10.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PCB双面板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB多层板",
+                    "category": "刚性电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB双面板",
+                  "PCB多层板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "满坤科技的印刷电路板（89.28%）覆盖范围较宽，其中能够承载PCB双面板、PCB多层板，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：为台达电子等头部客户提供AI服务器电源PCB产品。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 23386,
+            "stockCode": "300852.SZ",
+            "stockName": "四会富仕",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "具备厚铜和陶瓷基板技术实力，可拓展AI电源与AI服务器PCB市场。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300852.SZ",
+              "companyName": "四会富仕",
+              "companyProfile": "公司系由四会富士电子科技有限公司整体变更设立的股份有限公司，公司主营业务是印制电路板的研发、生产和销售，公司印制电路板产品类型丰富,除单/双面板,多层板以外,产品类型覆盖HDI板,厚铜板,金属基板,刚挠结合板,高频高速板等.公司专注于印制电路板小批量板的制造，以“小批量、高品质、高可靠、短交期、快速响应”为市场定位，产品广泛应用于工业控制、汽车电子、交通、通信设备、医疗器械等领域。公司是国家高新技术企业，先后获得了肇庆市企业技术中心、肇庆市工程技术研究中心、广东省高可靠性电路板设计与制造工程技术研究中心、广东省企业技术中心等认定，在高可靠性印制电路板研发与生产领域积累了丰富经验。",
+              "profileSummary": "公司系由四会富士电子科技有限公司整体变更设立的股份有限公司，公司主营业务是印制电路板的研发、生产和销售，公司印制电路板产品类型丰富,除单/双面板,多层板以外,产品类型覆盖HDI板,厚铜板,金属基板,刚挠结合板,高频高速板等.公司专注于印制电路板小批量板的制造，以“小批量、高品质、高可靠、短交期、快速响应”为市场定位，产品广泛应用于工业控制、汽车电子、交通、通信设备、医疗器械等领域。公司是国家高新技术企业，先后获得了肇庆市企业技术中心、…",
+              "majorProducts": "HDI板、单/双面板、多层板、刚挠结合板、高频高速板、厚铜板、金属基板",
+              "revenueComposition": "印制电路板:94.81%;其他业务:5.19%",
+              "revenueSegments": [
+                {
+                  "name": "印制电路板",
+                  "sharePct": 94.81,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PCB双面板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB多层板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "金属基电路板(MCPCB)",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "刚挠结合电路板",
+                    "category": "刚柔结合电路板"
+                  },
+                  {
+                    "name": "厚铜板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "高密度互联板(HDI)",
+                    "category": "刚性电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB双面板",
+                  "PCB多层板",
+                  "厚铜板",
+                  "高密度互联板(HDI)",
+                  "高频板",
+                  "刚挠结合电路板",
+                  "金属基电路板(MCPCB)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "四会富仕与事件存在真实业务交集：公司已有PCB双面板、PCB多层板、金属基电路板(MCPCB)，与具备厚铜和陶瓷基板技术实力，可拓展AI电源与AI服务器PCB市场所处的产业环节一致。印制电路板（94.81%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 23387,
+            "stockCode": "839916.BJ",
+            "stockName": "维通利",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为维谛技术、台达电子等AI电源核心厂商提供电连接产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": false,
+              "matchMethod": "none",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "",
+              "companyName": "",
+              "companyProfile": "",
+              "profileSummary": "",
+              "majorProducts": "",
+              "revenueComposition": "",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "unavailable",
+                "relevantProducts": [],
+                "knownProducts": [],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "维通利与事件的具体业务联系在于：为维谛技术、台达电子等AI电源核心厂商提供电连接产品。本次变化首先影响供需缺口与产品价格，只有经由供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表，才会转化为可确认的经营增量。相关业务目前究竟属于存量主业、小基数增量还是产业链布局尚不清晰，因此业绩弹性暂时不能量化。判断强弱应聚焦产品报价、订单排期、产销率和毛利率；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，相关性仍可能存在，但对公司盈利的解释力会明显下降。"
+          },
+          {
+            "sourceRowNumber": 23393,
+            "stockCode": "300222.SZ",
+            "stockName": "科大智能",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "积极探索AIDC场景的供配电系统解决方案，包括固态变压器（SST）等。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300222.SZ",
+              "companyName": "科大智能",
+              "companyProfile": "公司作为国家企业技术中心、高新技术企业，公司专注于智能配电网、储能、工业生产领域的技术、产品工艺及应用实践，提供智能配用电设备、储能系统产品、智能机器人和整体综合解决方案以及涵盖产品全生命周期的服务体系。公司以“数字能源”和“智能机器人应用”两大业务载体，积极布局主动配电网、储能、机器人先进控制、人工智能等核心技术研发，打造源网荷储一体化应用场景。公司响应和适应电网一二次融合及智能化、数字化建设号召，拓展智能中压断路器、智能环网柜等一次设备领域业务，在低压用电自动化业务领域，公司实现用电集采、低压智能断路器、智能电表等业务覆盖。同时，公司快速响应新能源业务市场需求，积极探索新能源与电网融合的新型电力系统应用，开展工商业储能、柔性互联、分布式光伏并网管理、大客户负荷管理、微电网、虚拟电厂等场景研究，形成“源-网-荷-储”完整的产业链布局。公司作为国内智能机器人应用领域的领先企业，深耕非标定制化智能产品与服务、机器人核心技术的研发、应用，在相关方案设计、模拟仿真、工艺创新等关键环节形成深厚行业经验积累和技术沉淀，能够为汽车、新能源、电力、轨道交通等领域客户配套符合实际生产要求的非标定制化智能机器人产品及整体综合解决方案，公司的产品矩阵丰富多样，涵盖了多种类型的智能巡检机器人、机械手、仓储机器人等，满足不同工业场景的复杂需求。公司秉承中科大卓越的科研基因，专注于各领域核心技术的开发与应用，攻克了多项行业技术难关，多次参与行业新标准的拟定，具备ISO9001质量、安全、环境体系三重认证，并取得CNAS认证。",
+              "profileSummary": "公司作为国家企业技术中心、高新技术企业，公司专注于智能配电网、储能、工业生产领域的技术、产品工艺及应用实践，提供智能配用电设备、储能系统产品、智能机器人和整体综合解决方案以及涵盖产品全生命周期的服务体系。同时，公司快速响应新能源业务市场需求，积极探索新能源与电网融合的新型电力系统应用，开展工商业储能、柔性互联、分布式光伏并网管理、大客户负荷管理、微电网、虚拟电厂等场景研究，形成“源-网-荷-储”完整的产业链布局。",
+              "majorProducts": "配电房远程监控结构图、配电监控终端产品、配电设备状态监测产品、配电网故障监控终端、配网自动化软件、配用电自动化工程、用电管理终端产品、用电自动化软件、智能焊装、智能配电网通信产品、智能配电网通讯产品、智能生产物流及仓储自动化系统、智能输送、智能移载、智能装配",
+              "revenueComposition": "数字能源:75.57%;智能机器人应用:22.88%;其他业务:1.55%",
+              "revenueSegments": [
+                {
+                  "name": "数字能源",
+                  "sharePct": 75.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能机器人应用",
+                  "sharePct": 22.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "充电桩管理平台",
+                    "category": "电力IT"
+                  }
+                ],
+                "knownProducts": [
+                  "变电站巡检机器人",
+                  "智能搬运机器人(自动导引运输车AGV)",
+                  "智能移载装配系统",
+                  "配电站巡检机器人",
+                  "隧道巡检机器人",
+                  "汽车车身智能焊装系统(生产线)",
+                  "堆垛机",
+                  "智能仓储物流系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "科大智能拥有充电桩管理平台，其产业链位置与积极探索AIDC场景的供配电系统解决方案，包括固态变压器（SST）等一致；当前的数字能源（75.57%）、智能机器人应用（22.88%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 23395,
+            "stockCode": "301018.SZ",
+            "stockName": "申菱环境",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "液冷CDU、Manifold核心供应商，直接对接北美数据中心客户。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301018.SZ",
+              "companyName": "申菱环境",
+              "companyProfile": "公司以人工环境调节、污染治理、能源利用为服务方向，致力于为数据服务产业环境、工业工艺产研环境、专业特种应用环境、公共建筑室内环境等应用场景提供人工环境调控整体解决方案的现代化企业。公司主营业务围绕专用性空调为代表的空气环境调节设备开展，集研发设计、生产制造、营销服务、工程安装、运营维护于一体，是目前国内专用性空调领域规模较大、技术先进、产品齐全的主要企业之一。公司提供之产品与服务涉及行业较多，细分领域技术要求较高，潜在市场广大。下游应用场景所属行业包括通信、信息技术、电力、化工、交通、能源、军工与航天等，涵盖多种对使用环境有特殊要求的应用场景，并服务于“新基建”中5G基建、特高压、城际高速铁路和城际轨道交通、大数据中心等多个板块。公司拥有超高能效、环保绿色工程、智能控制、极端环境保障、防爆防腐、抗震抗冲击六大核心技术体系，整体技术水平先进，其中在水电、轨道交通、信息通信、核电领域的技术达到了国际领先或国际先进水平。",
+              "profileSummary": "公司主营业务围绕专用性空调为代表的空气环境调节设备开展，集研发设计、生产制造、营销服务、工程安装、运营维护于一体，是目前国内专用性空调领域规模较大、技术先进、产品齐全的主要企业之一。公司提供之产品与服务涉及行业较多，细分领域技术要求较高，潜在市场广大。",
+              "majorProducts": "VOCs治理特种设备、除湿机、低露点除湿机、飞机地面空调、核电抗震型风冷冷水机、恒温恒湿空调、机房专用空调、洁净空调、冷热水机组、污泥低温干化设备等环境调控设备、屋顶式空调、一体化蒸发冷却式冷水机组、专用性空调、组合式空气处理机",
+              "revenueComposition": "设备:77.66%;解决方案及服务:21.97%;其他业务:0.37%",
+              "revenueSegments": [
+                {
+                  "name": "设备",
+                  "sharePct": 77.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "解决方案及服务",
+                  "sharePct": 21.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "冷却应用快速接头(UQD)",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "冷却液分歧管(Manifold)",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "冷却液分配单元(CDU)",
+                    "category": "IDC硬件产品"
+                  }
+                ],
+                "knownProducts": [
+                  "低露点除湿机",
+                  "除湿机",
+                  "污泥低温干化机",
+                  "VOCs气体冷凝回收装置",
+                  "涡旋式冷水机组",
+                  "螺杆式冷水机组",
+                  "风冷模块式冷热水机组",
+                  "屋顶式空调"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "申菱环境与新闻之间有明确产品抓手：冷却应用快速接头(UQD)、冷却液分歧管(Manifold)、冷却液分配单元(CDU)，对应液冷CDU、Manifold核心供应商，直接对接北美数据中心客户。收入主体目前是设备（77.66%）、解决方案及服务（21.97%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 23396,
+            "stockCode": "002837.SZ",
+            "stockName": "英维克",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "液冷CDU、冷板、Manifold核心供应商，深度参与AI算力散热。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002837.SZ",
+              "companyName": "英维克",
+              "companyProfile": "深圳市英维克科技股份有限公司成立于2005年，总部位于深圳，是技术领先的精密温控节能解决方案与产品提供商，高新技术企业，2016年12月29日登陆深交所。英维克已构建起多领域业务布局，产品及服务涵盖数据中心温控、储能温控、全链条液冷及电子散热、机柜空调、数据中心集成、冷链温控、新能源客车及轨交空调、室内空气环境控制等领域，广泛应用于数据中心、储能电站、通信、智能电网，冷链运输、新能源车、轨道交通，智慧教育、家居、医疗等行业。",
+              "profileSummary": "深圳市英维克科技股份有限公司成立于2005年，总部位于深圳，是技术领先的精密温控节能解决方案与产品提供商，高新技术企业，2016年12月29日登陆深交所。英维克已构建起多领域业务布局，产品及服务涵盖数据中心温控、储能温控、全链条液冷及电子散热、机柜空调、数据中心集成、冷链温控、新能源客车及轨交空调、室内空气环境控制等领域，广泛应用于数据中心、储能电站、通信、智能电网，冷链运输、新能源车、轨道交通，智慧教育、家居、医疗等行业。",
+              "majorProducts": "轨道交通列车空调及服务、机房温控节能设备、机柜温控节能产品、客车空调、室外机柜温控节能设备、新能源车用空调",
+              "revenueComposition": "机房温控节能设备:56.83%;户外机柜温控节能设备:32.59%;其他:8.35%;客车空调:1.49%;轨道交通列车空调及服务:0.74%",
+              "revenueSegments": [
+                {
+                  "name": "机房温控节能设备",
+                  "sharePct": 56.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "户外机柜温控节能设备",
+                  "sharePct": 32.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "客车空调",
+                  "sharePct": 1.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "轨道交通列车空调及服务",
+                  "sharePct": 0.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "冷却应用快速接头(UQD)",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "冷却液分歧管(Manifold)",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "冷却液分配单元(CDU)",
+                    "category": "IDC硬件产品"
+                  }
+                ],
+                "knownProducts": [
+                  "机房空调",
+                  "机柜空调",
+                  "轨道车辆空调",
+                  "电池液冷板",
+                  "新能源客车空调",
+                  "VC均热板",
+                  "储能机柜",
+                  "储能液冷机组"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "英维克与事件存在真实业务交集：公司已有冷却应用快速接头(UQD)、冷却液分歧管(Manifold)、冷却液分配单元(CDU)，与液冷CDU、冷板、Manifold核心供应商，深度参与AI算力散热所处的产业环节一致。机房温控节能设备（56.83%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 23397,
+            "stockCode": "002536.SZ",
+            "stockName": "飞龙股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "液冷核心上游泵阀类零部件供应商，为华为体系核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002536.SZ",
+              "companyName": "飞龙股份",
+              "companyProfile": "公司是一家在国内A股上市的国家技术创新示范企业，是汽车热管理领域的卓越领航者。公司已构建全场景产品矩阵，拥有传统机械水泵类；排气歧管类；涡轮增压器壳体类；电子产品类；冷却液温控阀、执行器类；热管理集成模块类；机械油泵类；支架、飞轮壳等八大类核心产品，覆盖传统燃油车、新能源车等新兴领域。公司技术研发实力雄厚，依托国家级技术中心、9家高新技术子公司及新能源研发双中心，形成电子水泵(覆盖12V-1500V全电压)、温控阀等专利技术体系。品质获国际认可，通过IATF16949、大众VDA6.3、通用BIQS、福特Q1等严苛认证。公司连续10年位居世界首位，新能源汽车渗透率超40%，标志着行业已进入绿色转型加速期。在这一浪潮中，公司作为扎根汽车零部件制造60余年的领军企业，凭借深厚技术积淀与前瞻布局，持续为全球客户提供高效、可靠的热管理解决方案，成为推动行业技术升级的重要力量。公司聚焦热管理领域，形成覆盖传统汽车、新能源、氢能及民用场景的全方位产品体系。",
+              "profileSummary": "在这一浪潮中，公司作为扎根汽车零部件制造60余年的领军企业，凭借深厚技术积淀与前瞻布局，持续为全球客户提供高效、可靠的热管理解决方案，成为推动行业技术升级的重要力量。公司聚焦热管理领域，形成覆盖传统汽车、新能源、氢能及民用场景的全方位产品体系。",
+              "majorProducts": "大流量多通阀、电动车水阀、电动开关水泵、电子机油泵、电子水泵系列产品、电子真空泵、电子执行器、发动机电子水泵、飞轮壳、机械水泵、机油泵、绝缘屏蔽电子水泵、密封孔盖、排气歧管、燃料电池热管理控制阀、热管理多通阀、热管理控制阀、热管理系统集成、三电冷却电子水泵、温控阀系列产品、涡轮增压器壳体、油位计总成、域控制器、支架",
+              "revenueComposition": "发动机热管理节能减排部件:46.35%;发动机热管理重要部件:36.56%;新能源、氢燃料电池和5G工业液冷及光伏系统冷却部件与模块:14.81%;非发动机其他部件:1.87%;其他业务:0.4%",
+              "revenueSegments": [
+                {
+                  "name": "发动机热管理节能减排部件",
+                  "sharePct": 46.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "发动机热管理重要部件",
+                  "sharePct": 36.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源、氢燃料电池和5G工业液冷及光伏系统冷却部件与模块",
+                  "sharePct": 14.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "非发动机其他部件",
+                  "sharePct": 1.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "汽车发动机机械水泵",
+                  "汽车发动机冷却系统铝合金流量控制阀",
+                  "汽车电子水泵(EWP)",
+                  "汽车飞轮壳体",
+                  "汽车发动机油泵",
+                  "汽车发动机排气歧管",
+                  "涡轮增压器涡轮壳",
+                  "液冷泵"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "飞龙股份的业务范围能够覆盖液冷核心上游泵阀类零部件供应商，为华为体系核心供应商所处的产业环节，但当前发动机热管理节能减排部件（46.35%）、发动机热管理重要部件（36.56%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。供需缺口与产品价格需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”完成兑现，并在产品报价、订单排期、产销率和毛利率上形成持续改善；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 23398,
+            "stockCode": "603757.SH",
+            "stockName": "大元泵业",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "液冷核心上游泵阀类零部件供应商，技术全球领先。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603757.SH",
+              "companyName": "大元泵业",
+              "companyProfile": "公司为上海证券交易所主板上市公司，是中国水泵行业标准起草单位之一、于2021年入选国家专精特新小巨人企业，也是省级高新技术企业，曾获得中国驰名商标、省级企业技术中心、浙江省消费者信得过单位、温岭市十强工业企业、温岭市二十强工业企业、温岭市纳税大户等荣誉，多款产品获浙江制造认证，多款技术项目获得全国流通装备技术创新一等奖，连续第15年获得浙江省AAA级“守合同重信用”企业荣誉称号。公司主要从事各类泵的研发、生产、销售及提供相关服务，是拥有数十年品牌历史的全球知名品牌民用水泵提供商，同时也是国内屏蔽泵行业的高新技术企业及领军企业。报告期内，公司主营业务未发生变化。从应用场景及使用对象进行区分，公司产品主要分三大业务类型：1、民用类产品，主要包括农泵、家用屏蔽泵业务，主要应用在农林畜牧、家庭场景下的水循环(含家用电器配套)等相关民用领域。2、商用类产品，主要包括立卧式多级离心泵、液冷泵等业务，主要应用在新能源(氢能源)汽车、风电、储能、数据中心、企业生产与居民生活、城市与乡村建设、环境保护与水务管理等商用领域。3、工业类产品，主要包括工业用泵业务，主要应用在化工、制冷、制氢、半导体与电子工业、核电、激光、信息基础设施、航天工业、船舰制造等工业领域。",
+              "profileSummary": "公司主要从事各类泵的研发、生产、销售及提供相关服务，是拥有数十年品牌历史的全球知名品牌民用水泵提供商，同时也是国内屏蔽泵行业的高新技术企业及领军企业。从应用场景及使用对象进行区分，公司产品主要分三大业务类型：1、民用类产品，主要包括农泵、家用屏蔽泵业务，主要应用在农林畜牧、家庭场景下的水循环(含家用电器配套)等相关民用领域。",
+              "majorProducts": "GPD壁挂炉用屏蔽泵、GPD单相管道屏蔽泵、GP冷热水管道屏蔽泵、HW制冷用屏蔽泵、化工屏蔽泵、井用潜水电泵、空调机用屏蔽泵（NP系类）、喷射自吸泵、污水泵、小型潜水电泵、旋涡式自吸泵",
+              "revenueComposition": "民用类:70.46%;商用类:12.83%;工业类:11.64%;配件:2.74%;其他业务:2.33%",
+              "revenueSegments": [
+                {
+                  "name": "民用类",
+                  "sharePct": 70.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "商用类",
+                  "sharePct": 12.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业类",
+                  "sharePct": 11.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配件",
+                  "sharePct": 2.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "化工屏蔽泵",
+                  "空调制冷屏蔽泵",
+                  "陆上泵",
+                  "井用潜水泵",
+                  "卧式多级离心泵",
+                  "小型潜水泵",
+                  "立式多级离心泵",
+                  "热水循环屏蔽泵"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "大元泵业的业务范围能够覆盖液冷核心上游泵阀类零部件供应商，技术全球领先所处的产业环节，但当前民用类（70.46%）、商用类（12.83%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。供需缺口与产品价格需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”完成兑现，并在产品报价、订单排期、产销率和毛利率上形成持续改善；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 23400,
+            "stockCode": "688719.SH",
+            "stockName": "爱科赛博",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "测试电源龙头，受益于AI电源研发和生产带来的测试需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688719.SH",
+              "companyName": "爱科赛博",
+              "companyProfile": "公司是由原西安爱科电子有限责任公司、西安赛博电气有限责任公司业务整合，于2012年4月改制成立的股份制公司。公司创业成立于1996年，是陕西省排名靠前批国家技术企业、国家火炬计划和重点新产品支持企业、陕西省电能质量工程技术研究中心承建企业、西安市企业技术中心和西安市电力电子产业联盟核心成员。公司专注于电力电子电能变换和控制领域，为用户提供电源、电能质量控制、新能源并网变流产品和解决方案，覆盖发电、供配电、用电全流程，涉及新能源、电力、交通、航空、工业、科学研究诸多领域，是相关行业设备制造商和解决方案提供者。公司从事特种电源和先进工业电源业务已有十六年，为航空加速器、特种工业领域提供先进可靠的大功率电源设备和定制化解决方案，已形成系列产品和通用共享产品平台，参与过多项国家大科学工程。公司在国内最早推出工业应用的有源电力滤波器(apf)产品，是国内仅有的几家有能力制造静止无功发生器(svg)的厂家之一，已经形成有源电力滤波器和静止无功发生器系列产品，成功应用于电力、石油、冶金、交通等30多个行业，累计运行数量超过3000台。依托电源和电能质量领域成熟的技术和产品平台，公司向新能源和智能微电网领域拓展，为用户提供大功率光伏并网逆变器、储能双向变流器、微网控制设备和控制系统等电力电子变流设备和应用解决方案，成为该领域专业、稳定、持续的设备制造商和解决方案提供者。",
+              "profileSummary": "公司专注于电力电子电能变换和控制领域，为用户提供电源、电能质量控制、新能源并网变流产品和解决方案，覆盖发电、供配电、用电全流程，涉及新能源、电力、交通、航空、工业、科学研究诸多领域，是相关行业设备制造商和解决方案提供者。公司从事特种电源和先进工业电源业务已有十六年，为航空加速器、特种工业领域提供先进可靠的大功率电源设备和定制化解决方案，已形成系列产品和通用共享产品平台，参与过多项国家大科学工程。",
+              "majorProducts": "IDE Action2020测试软件平台、定制电能质量控制设备、定制特种电源、轨道交通电源、航空保障电源、加速器电源、配网电能质量控制设备、通用测试电源、通用电能质量控制设备、专用测试装备、自动化测试系统",
+              "revenueComposition": "精密测试电源:69.7%;电能质量控制设备:16.4%;特种电源:11.71%;其他业务:1.8%;其他:0.39%",
+              "revenueSegments": [
+                {
+                  "name": "精密测试电源",
+                  "sharePct": 69.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电能质量控制设备",
+                  "sharePct": 16.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特种电源",
+                  "sharePct": 11.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "太阳能电池板模拟器",
+                  "储能电池模拟器",
+                  "加速器电源",
+                  "动车组地面电源",
+                  "可编程交流电源",
+                  "可编程直流电源",
+                  "回馈式电子负载",
+                  "机库集中并联供电系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "爱科赛博的业务范围能够覆盖测试电源龙头，受益于AI电源研发和生产带来的测试需求所处的产业环节，但当前精密测试电源（69.7%）、电能质量控制设备（16.4%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。供需缺口与产品价格需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”完成兑现，并在产品报价、订单排期、产销率和毛利率上形成持续改善；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 23402,
+            "stockCode": "002028.SZ",
+            "stockName": "思源电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "AI超级电容行业龙头，产品用于AI服务器及数据中心备用电源。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002028.SZ",
+              "companyName": "思源电气",
+              "companyProfile": "公司主营业务为输配电设备的研发、生产、销售及服务。公司是目前输配电设备行业中少数几家具备电力系统一次设备(传统机械类电力设备)、二次设备(控制类电力设备)、电力电子设备等产品的研发、制造和解决方案能力的厂家之一。同时，公司大力发展数字电网与电力电子融合技术，积极拓展静止同步调相机(SSC)、构网型SVG和储能成套系统、宽频振荡抑制、高压有源滤波等相关业务；公司积极探索交直流混合配用电领域应用，积极发展分布式新能源多功能融合一体化解决方案、低压直流开关元件、户用光储充一体化系统等相关业务；公司坚持探索功率型储能元件的应用，积极发展汽车电子电器、配网后备电源、混合调频成套系统等相关业务。公司有着二十多年的行业经验，积累了丰富且成熟的产品开发和制造经验，对行业的现状和发展有着深刻的理解和把握，参与了多项国家标准和行业标准的制定，拥有多项行业领先的核心技术，并积极开展自主可控国产化设备的研发工作，目前在同行业处于领先地位。",
+              "profileSummary": "公司主营业务为输配电设备的研发、生产、销售及服务。公司是目前输配电设备行业中少数几家具备电力系统一次设备(传统机械类电力设备)、二次设备(控制类电力设备)、电力电子设备等产品的研发、制造和解决方案能力的厂家之一。",
+              "majorProducts": "110kV-500kVGIS及SF6开关耐压试验系统、110kV-500kV交联电缆耐压试验系统、BKSC系列环氧浇注铁心并联电抗器、BKS系列油浸式铁心并联电抗器、CI—2000型电容电流测试仪、CKSC系列环氧浇注铁心串联电抗器、DWKN—I型动态无功补偿及电能质量监控装置、GZF-I型GIS工频耐压及局放测试系统、JC1MOA在线监测仪、LP—I移频线路参数测试仪、M—8000I型变频介质测试仪、OSM—1000高压设备绝缘在线监测系统、TROM—600变压器油色谱在线监测系统、磁控电抗器(MCR)型SVC、高压隔离开关、高压交直流互感器、光电互感器、思源电气变频串联谐振成套试验装置、思源电气变压器感应耐压及局放测试系统、思源电气便携式高电压变频谐振耐压试验装置、思源电气电容式电压互感器、思源电气干式互感器、思源电气高压并联电容器、思源电气户外高压交流隔离开关、思源电气户外高压交流接地开关、思源电气户外高压交流中性点隔离开关、思源电气集合式高压并联电容器、思源电气交流高压六氟化硫断路器、思源电气交流高压真空断路器、思源电气接地变压器、思源电气耦合电容器、思源电气微机小电流接地选线成套设备、思源电气消弧线圈自动调谐及接地选线成套装置、思源电气自能式高压六氟化硫断路器",
+              "revenueComposition": "开关类业务:41.48%;变压器类业务:21.51%;保护及自动化类业务:11.8%;EPC类业务:10.83%;储能系统及元件类业务:7.11%;电力电子类业务:7.08%;租赁业务:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "开关类业务",
+                  "sharePct": 41.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "变压器类业务",
+                  "sharePct": 21.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "保护及自动化类业务",
+                  "sharePct": 11.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "EPC类业务",
+                  "sharePct": 10.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "储能系统及元件类业务",
+                  "sharePct": 7.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电力电子类业务",
+                  "sharePct": 7.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁业务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "变电站工程",
+                  "直流充电机",
+                  "直流充电桩",
+                  "中性点接地成套装置",
+                  "互感器",
+                  "油色谱在线监测装置",
+                  "消弧线圈",
+                  "罐式断路器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "思源电气与新闻存在业务方向上的交集：AI超级电容行业龙头，产品用于AI服务器及数据中心备用电源；公司当前收入主要来自开关类业务（41.48%）、变压器类业务（21.51%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对供需缺口与产品价格的推动只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入报表，产品报价、订单排期、产销率和毛利率决定这一交集能否升级为实际增量；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是主要失效条件。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "4条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。",
+      "1只标的未匹配到A股2025年报公司资料，多为非A股、未上市或新近上市公司。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

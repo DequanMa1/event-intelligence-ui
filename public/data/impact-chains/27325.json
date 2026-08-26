@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27325",
@@ -9,10 +9,10 @@
     "date": "2026-07-09"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 2,
-    "mappedStockCount": 2,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 1,
     "stocks": [
       {
         "sourceRowNumber": 25141,
@@ -20,8 +20,8 @@
         "stockName": "金博股份",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 14
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 25143,
@@ -30,73 +30,31 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 14
+        "anchorProductCount": 3
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 25141,
+        "stockCode": "688598.SH",
+        "stockName": "金博股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 28,
     "selectedCoreProductCount": 3,
     "selectedCompanyCoreProductCount": 3,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 3,
-    "downstreamCandidateCount": 3,
-    "shownUpstreamCount": 3,
-    "shownDownstreamCount": 3
+    "level7ProductCount": 2,
+    "relatedIndustryCandidateCount": 2,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140006102",
-        "name": "氧化铝粉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
-        ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140109049",
-        "name": "氮化铝",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
-        ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140139437",
-        "name": "氰化亚金钾电镀液",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
-        ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140215310",
         "name": "GaN基站射频芯片",
@@ -122,18 +80,15 @@
           "name": "GaN基站射频芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "003031.SZ",
             "stockName": "中瓷电子",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 8,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -167,18 +122,15 @@
           "name": "氮化铝陶瓷基板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "003031.SZ",
             "stockName": "中瓷电子",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 3,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -211,18 +163,15 @@
           "name": "碳化硅功率模块"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "003031.SZ",
             "stockName": "中瓷电子",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -231,54 +180,242 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140139582",
-        "name": "光电外壳的基板",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
+        "code": "1200001357",
+        "name": "电子元件配件",
+        "description": "电子元件配件指电容、电阻等基础零部件。因受益于AI算力、新能源汽车及消费电子复苏，需求旺盛且国产替代加速，业绩增长确定性高，成为A股中兼具科技成长与制造升级逻辑的核心关注板块。",
+        "stockCount": 2,
+        "starWeight": 9,
+        "level7ProductCount": 1,
+        "relevanceScore": 52,
+        "stocks": [
+          {
+            "stockCode": "600353.SH",
+            "stockName": "旭光电子",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "003031.SZ",
+            "stockName": "中瓷电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
+        "products": [
+          {
+            "code": "1140108775",
+            "name": "氮化铝陶瓷基板",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电子元件配件 > 电子元件配件 > 氮化铝陶瓷基板",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600353.SH",
+                "stockName": "旭光电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "003031.SZ",
+                "stockName": "中瓷电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "氮化铝陶瓷基板",
+              "陶瓷基板"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140139583",
-        "name": "功率激光器外壳的热沉",
-        "anchorCount": 1,
+        "code": "1210003346",
+        "name": "钴及钴合金",
+        "description": "钴及钴合金指以钴为原料的金属及合金材料。因钴是锂电池关键正极原料，受益于新能源汽车爆发式增长，该行业成为A股热门赛道，兼具战略资源稀缺性与高成长预期，备受资本关注。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "002179.SZ",
+            "stockName": "中航光电",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
+        "products": [
+          {
+            "code": "1140088065",
+            "name": "钴铬烤瓷合金",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 钴及钴合金 > 钴及钴合金 > 钴铬烤瓷合金",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002179.SZ",
+                "stockName": "中航光电",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 5,
+    "mappedStockCount": 3,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 2,
+    "candidateIndustryCount": 2,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 25140,
+        "stockCode": "600353.SH",
+        "stockName": "旭光电子",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140139581",
-        "name": "高功率LED封装板",
-        "anchorCount": 1,
+        "sourceRowNumber": 25141,
+        "stockCode": "688598.SH",
+        "stockName": "金博股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 25143,
+        "stockCode": "003031.SZ",
+        "stockName": "中瓷电子",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 25145,
+        "stockCode": "688577.SH",
+        "stockName": "浙海德曼",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 25146,
+        "stockCode": "002179.SZ",
+        "stockName": "中航光电",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001357",
+        "name": "电子元件配件",
+        "description": "电子元件配件指电容、电阻等基础零部件。因受益于AI算力、新能源汽车及消费电子复苏，需求旺盛且国产替代加速，业绩增长确定性高，成为A股中兼具科技成长与制造升级逻辑的核心关注板块。",
+        "stockCount": 2,
+        "starWeight": 9,
+        "level7ProductCount": 1,
+        "relevanceScore": 52,
+        "stocks": [
+          {
+            "stockCode": "600353.SH",
+            "stockName": "旭光电子",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "003031.SZ",
+            "stockName": "中瓷电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140108775",
+            "name": "氮化铝陶瓷基板",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电子元件配件 > 电子元件配件 > 氮化铝陶瓷基板",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600353.SH",
+                "stockName": "旭光电子",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "003031.SZ",
+                "stockName": "中瓷电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "氮化铝陶瓷基板",
+              "陶瓷基板"
+            ]
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1210003346",
+        "name": "钴及钴合金",
+        "description": "钴及钴合金指以钴为原料的金属及合金材料。因钴是锂电池关键正极原料，受益于新能源汽车爆发式增长，该行业成为A股热门赛道，兼具战略资源稀缺性与高成长预期，备受资本关注。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140108775"
+        "starWeight": 3,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "002179.SZ",
+            "stockName": "中航光电",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "氮化铝陶瓷基板"
+        "products": [
+          {
+            "code": "1140088065",
+            "name": "钴铬烤瓷合金",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 钴及钴合金 > 钴及钴合金 > 钴铬烤瓷合金",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002179.SZ",
+                "stockName": "中航光电",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -293,9 +430,409 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 12,
+    "eligibleSourceRowCount": 5,
+    "totalStockCount": 5,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 6,
+    "excludedNonAShareCount": 1,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 5,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 25140,
+            "stockCode": "600353.SH",
+            "stockName": "旭光电子",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内唯一实现氮化铝粉体-基板-结构件-HTCC全产业链自给的龙头，深度受益于国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600353.SH",
+              "companyName": "旭光电子",
+              "companyProfile": "公司是一家专业从事金属陶瓷电真空器件、高低压配电成套装置、光电器件等产品研发、生产、销售的重点高新技术企业，其主要产品包括：电子管,开关管(真空灭弧室)和固封极柱,高低压配电成套装置及电器元件(开关柜和断路器),光电器件。公司拥有独立、完整的发射管研发、生产体系，在关键材料、零部件制造的工艺技术和装备方面形成了竞争优势，已具备与国外知名品牌相抗衡能力。未来电子管发展的重点是开发大功率、高性能产品，进一步拓展国际市场。公司通过了ISO9001质量体系、ISO14001环境管理体系、ISO18001职业健康安全管理体系认证并取得相关军工、保密等资质，是国内唯一一家拥有从陶瓷制造到成套电气全产业链的企业，是经国家科技部、中国科学院认定的高新技术企业。",
+              "profileSummary": "公司是一家专业从事金属陶瓷电真空器件、高低压配电成套装置、光电器件等产品研发、生产、销售的重点高新技术企业，其主要产品包括：电子管,开关管(真空灭弧室)和固封极柱,高低压配电成套装置及电器元件(开关柜和断路器),光电器件。未来电子管发展的重点是开发大功率、高性能产品，进一步拓展国际市场。",
+              "majorProducts": "大功率激光器射频电子管、导弹引爆装置器件、固封极柱、航空航天飞行器精密零部件、舰船变频装置、旭光JB-QB／XG-2000智能型火灾自动报警系统、旭光XG8000智能型火灾自动报警系统、旭光玻璃真空灭弧室、旭光大功率广播发射管、旭光发射管、旭光红紫外火焰探测系统、旭光米波、分米波电视发射管、旭光陶瓷灭弧室、旭光微波通讯三、四极管、旭光真空断路器、旭光真空开关管、智能嵌入式计算机系统",
+              "revenueComposition": "真空灭弧室(电力开关设备核心器件):40.3%;其他业务:16.86%;航空航天飞行器精密结构件:14.9%;嵌入式计算机:9.21%;新型电力及新能源成套设备:8.3%;氮化铝产品:5.61%;大功率激光器射频电子管:4.31%;其他:0.51%",
+              "revenueSegments": [
+                {
+                  "name": "真空灭弧室(电力开关设备核心器件)",
+                  "sharePct": 40.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 16.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "航空航天飞行器精密结构件",
+                  "sharePct": 14.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "嵌入式计算机",
+                  "sharePct": 9.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新型电力及新能源成套设备",
+                  "sharePct": 8.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "氮化铝产品",
+                  "sharePct": 5.61,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "大功率激光器射频电子管",
+                  "sharePct": 4.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "氮化铝陶瓷基板",
+                    "category": "电子元件配件"
+                  }
+                ],
+                "knownProducts": [
+                  "光电吊舱结构零部件",
+                  "航空电子机箱",
+                  "工业加热管",
+                  "氮化铝陶瓷基板",
+                  "大功率广播发射管",
+                  "射频烘干振荡用发射管",
+                  "激光激励振荡用发射管",
+                  "电视发射管"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "旭光电子已经参与事件相关业务，但收入基数仍小：氮化铝产品占收入的5.61%，说明公司已有业务抓手，但“国内唯一实现氮化铝粉体-基板-结构件-HTCC全产业链自给的龙头，深度受益于国产替代”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于技术商业化与产品迭代速度能否驱动“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，从而推动业务跨过小规模阶段。在此之前，客户认证、量产良率、订单规模、产品收入占比和毛利率比总收入增速更值得跟踪；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，市场对远期空间的定价可能缺少当期业绩支撑。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 25141,
+            "stockCode": "688598.SH",
+            "stockName": "金博股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内唯二能与日本德山媲美的高端氮化铝粉体生产商，是AI上游材料国产替代的核心标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688598.SH",
+              "companyName": "金博股份",
+              "companyProfile": "公司主要从事先进碳基复合材料及产品的研发、生产和销售，服务于太阳能光伏、半导体、锂电、氢能、汽车等国家战略性新兴产业，是一家具有自主研发能力和持续创新能力的高新技术企业。公司致力于为客户提供性能优秀、性价比高的先进碳基复合材料产品和全套解决方案。公司是入选工信部第一批专精特新“小巨人”企业名单的先进碳基复合材料制造企业，同时是国家知识产权示范企业，国家级绿色工厂，湖南省发展非公有制经济和中小企业先进单位，新湖南贡献奖先进集体。公司已经于2020年5月18日成功登陆科创板，是湖南省第3家科创板上市公司，是沪深两市“民用碳/碳复合材料第一股”。公司设立以来，依靠自主研发和持续创新，在先进碳基复合材料生产制备低成本化、产品品种多样化和装备设计自主化等方面取得重大突破，掌握了先进碳基复合材料低成本制备核心技术并实现了批量产业化。公司先进碳基复合材料坩埚、导流筒、保温筒等产品在晶硅制造热场系统得到推广和应用，逐步对高纯等静压石墨产品进行升级换代，整体技术及产业化能力处于行业领先水平。未来，公司将持续加大技术创新力度，进行相关多元化产品的开发和市场拓展，研发和销售用于半导体、高温、耐磨、耐腐蚀等领域的产品，继续丰富公司主营产品的种类、保持在市场竞争中的优势地位。",
+              "profileSummary": "公司主要从事先进碳基复合材料及产品的研发、生产和销售，服务于太阳能光伏、半导体、锂电、氢能、汽车等国家战略性新兴产业，是一家具有自主研发能力和持续创新能力的高新技术企业。公司致力于为客户提供性能优秀、性价比高的先进碳基复合材料产品和全套解决方案。",
+              "majorProducts": "板材、棒/管材、保温条、保温筒、导流筒、电极、顶板、发热体、非标准异形件、盖板、坩埚、护板、加热器、紧固件、料盘、密封环、模套",
+              "revenueComposition": "锂电领域产品:52%;交通领域产品:24.64%;光伏与半导体领域产品:21.85%;其他业务:1.52%",
+              "revenueSegments": [
+                {
+                  "name": "锂电领域产品",
+                  "sharePct": 52.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "交通领域产品",
+                  "sharePct": 24.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光伏与半导体领域产品",
+                  "sharePct": 21.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "碳/碳匣钵",
+                  "碳陶制动盘",
+                  "导流筒用碳基板材",
+                  "单晶拉制炉用碳基保温筒",
+                  "单晶拉制炉用碳基加热器",
+                  "单晶拉制炉用碳基坩埚",
+                  "单晶拉制炉用碳基导流筒",
+                  "单晶拉制炉用碳基电极柱"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "金博股份的主要经营内容是锂电领域产品（52%）、交通领域产品（24.64%），具体产品集中在碳/碳匣钵、碳陶制动盘、导流筒用碳基板材、单晶拉制炉用碳基保温筒。“国内唯二能与日本德山媲美的高端氮化铝粉体生产商，是AI上游材料国产替代的核心标的”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善技术商业化与产品迭代速度，也需要先补上产品落地和客户导入，再经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才可能影响业绩。客户认证、量产良率、订单规模、产品收入占比和毛利率没有同步改善时，股价反应更可能来自主题交易；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 25143,
+            "stockCode": "003031.SZ",
+            "stockName": "中瓷电子",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内高端电子陶瓷外壳龙头，是光模块封装关键材料的核心供应商，直接受益于AI算力需求爆发。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "003031.SZ",
+              "companyName": "中瓷电子",
+              "companyProfile": "公司成立于2009年8月，2021年1月在深交所主板成功上市，是中国电科产业基础研究院控股的高新技术企业。公司专注于电子陶瓷系列产品的研发、生产和销售，开创了我国光通信器件陶瓷外壳产品领域，打破国外行业巨头的技术垄断，是国内规模最大的高端电子陶瓷外壳生产企业。公司作为牵头单位承担了国家科技重大专项、河北省战略性新兴产业的发展项目、河北省科技重大专项等多项科技攻关和产业化项目，在国内电子陶瓷行业具有重要影响力。公司高度重视技术和产品创新，研发投入强度始终保持在较高水平。建有国家企业技术中心、河北省光电陶瓷封装技术创新中心等研发平台，获得了国资委世界一流专业领军示范企业、工信部单项冠军企业、专精特新“小巨人”企业、河北省科技领军企业、石家庄市百强企业等荣誉称号。公司已完成上市后的重大资产重组，布局新增氮化镓通信基站射频芯片与器件、碳化硅功率模块及其应用之相关业务的设计、制造、封测等核心环节。通过重组，公司成为拥有氮化镓通信基站射频芯片与器件、碳化硅功率模块及其应用、电子陶瓷等核心业务能力的国内一流半导体领域高科技企业。",
+              "profileSummary": "公司专注于电子陶瓷系列产品的研发、生产和销售，开创了我国光通信器件陶瓷外壳产品领域，打破国外行业巨头的技术垄断，是国内规模最大的高端电子陶瓷外壳生产企业。公司已完成上市后的重大资产重组，布局新增氮化镓通信基站射频芯片与器件、碳化硅功率模块及其应用之相关业务的设计、制造、封测等核心环节。",
+              "majorProducts": "氮化镓通信基站射频芯片与器件、工业激光器用电子陶瓷外壳、精密陶瓷零部件、汽车电子件、碳化硅功率模块及其应用、通信器件用电子陶瓷外壳、消费电子陶瓷外壳及基板",
+              "revenueComposition": "电子陶瓷材料及元件:69.88%;第三代半导体器件及模块:45.29%;内部抵消数:-15.17%",
+              "revenueSegments": [
+                {
+                  "name": "电子陶瓷材料及元件",
+                  "sharePct": 69.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "第三代半导体器件及模块",
+                  "sharePct": 45.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵消数",
+                  "sharePct": -15.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "氮化铝陶瓷基板",
+                    "category": "电子元件配件"
+                  }
+                ],
+                "knownProducts": [
+                  "车用检测模块",
+                  "汽车集成式加热器",
+                  "3D光传感器模块外壳",
+                  "5G通信终端模块外壳",
+                  "声表晶振类外壳",
+                  "氮化铝陶瓷基板",
+                  "PTC热敏电阻",
+                  "大功率激光器外壳"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中瓷电子与新闻之间有明确产品抓手：氮化铝陶瓷基板，对应国内高端电子陶瓷外壳龙头，是光模块封装关键材料的核心供应商，直接受益于AI算力需求爆发。收入主体目前是电子陶瓷材料及元件（69.88%）、第三代半导体器件及模块（45.29%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 25145,
+            "stockCode": "688577.SH",
+            "stockName": "浙海德曼",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司产品为半导体设备用先进陶瓷零部件，与旭光电子、北方华创共同探讨产业链协同，受益于半导体材料国产化。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688577.SH",
+              "companyName": "浙海德曼",
+              "companyProfile": "公司是一家专业从事数控车床研发、设计、生产和销售的高新技术企业，致力于高精密数控车床的核心制造和技术突破。自设立以来一直致力于现代化“工业母机”机床的研发、设计、生产和销售。公司现有高端数控车床、自动化生产线、并行复合加工中心、普及型数控车床四大品类产品，主要应用于汽车制造、工程机械、通用设备、航空航天、军事工业等行业领域。公司致力于高端数控车床基础技术和核心技术的自主创新，形成了完整的高端数控车床开发平台和制造平台。公司是中国机床工具工业协会理事单位，是中国机床工具工业协会重点联系企业，是全国金属切削机床标准化技术委员会车床分会委员单位。公司曾获得教育部“科学技术进步奖一等奖”、“全国机械工业质量奖”、“全国用户满意产品”、“产品质量十佳”、“综合经济效益十佳单位”和“春燕奖”等多项省部级和全国行业协会嘉奖。公司先后获得第二批国家级专精特新“小巨人”企业，浙江省隐形冠军企业。2022年“高速精密数控车床误差控制关键技术及应用”获得机械工业科学技术发明一等奖。2023年公司获得“省级工程研究中心”、浙江省尖兵计划、沙门基地通过了浙江省未来工厂示范验收。2024年6月，公司参与完成的“高档数控机床精度及其稳定性提升关键技术与应用”项目荣获国家科学技术进步奖二等奖。",
+              "profileSummary": "公司现有高端数控车床、自动化生产线、并行复合加工中心、普及型数控车床四大品类产品，主要应用于汽车制造、工程机械、通用设备、航空航天、军事工业等行业领域。公司是中国机床工具工业协会理事单位，是中国机床工具工业协会重点联系企业，是全国金属切削机床标准化技术委员会车床分会委员单位。",
+              "majorProducts": "HCL系列、并行复合加工机、刀塔式数控车床、集成式自动化生产线、排刀式数控车床、一体式自动化生产线",
+              "revenueComposition": "高端型数控车床:69.3%;自动化生产线:16.03%;普及型数控车床:9.04%;并行复合加工中心:2.9%;配件及其他:2.73%",
+              "revenueSegments": [
+                {
+                  "name": "高端型数控车床",
+                  "sharePct": 69.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自动化生产线",
+                  "sharePct": 16.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "普及型数控车床",
+                  "sharePct": 9.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "并行复合加工中心",
+                  "sharePct": 2.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配件及其他",
+                  "sharePct": 2.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "汽车球壳自动化生产线",
+                  "盘、轴类零部件一体式自动化生产线",
+                  "刀塔式并行复合加工机",
+                  "刀塔式数控车床",
+                  "排刀式数控车床",
+                  "通用数控车床"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "浙海德曼现有收入由高端型数控车床（69.3%）、自动化生产线（16.03%）贡献，主营产品为汽车球壳自动化生产线、盘、轴类零部件一体式自动化生产线、刀塔式并行复合加工机、刀塔式数控车床，与公司产品为半导体设备用先进陶瓷零部件，与旭光电子、北方华创共同探讨产业链协同，受益于半导体材料国产化指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，技术商业化与产品迭代速度才会通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”产生财务影响。现阶段客户认证、量产良率、订单规模、产品收入占比和毛利率比概念标签更重要；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 25146,
+            "stockCode": "002179.SZ",
+            "stockName": "中航光电",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司业务涉及氮化铝陶瓷基板，受益于下游光模块需求增长及国产替代趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002179.SZ",
+              "companyName": "中航光电",
+              "companyProfile": "公司是专业为航空及防务和高端制造提供互连解决方案的高科技企业。总部位于洛阳，在北京、深圳、广州、上海、沈阳、泰兴、西安、青岛、东莞、合肥、南昌、成都、无锡、武汉等地设有分公司和子公司，并在德国、越南、韩国及北美地区设有海外分支机构。公司专业从事中高端光、电、流体连接技术与产品的研究与开发，自主研发各类连接产品500多个系列、35万多个品种，拥有国家认定企业技术中心、博士后科研工作站以及国家和国防认可实验室。截至2024年底，公司累计获得授权专利5800余项，主持或参与制订行业标准920余项。公司已通过GB/T19001和GJB9001C标准的军民质量管理体系认证、GJB546B国军标生产线认证、AS9100D国际航空航天质量管理体系认证、IATF16949汽车行业质量管理体系认证、ISO13485医疗器械质量管理体系认证、ISO/TS22163轨道交通行业质量管理体系认证、ISO14001环境体系认证、ISO45001职业健康安全管理体系认证、GJB5000B软件工程化体系、安全生产标准化一级企业审核以及多项NADCAP特种工艺认证。公司多项重点产品通过了UL、CUL、CE、TUV、CB、3C、CQC、IECEX、ATEX等安规认证。公司产品广泛应用于防务、商业航空航天、通信网络、数据中心、石油装备、电力装备、工业装备、轨道交通、医疗设备、新能源汽车、消费电子等高端制造领域。公司秉承“航空报国、航空强国”使命，践行“诚信、厚德”为核心的特色企业文化，倾力打造全球一流的互连方案提供商。",
+              "profileSummary": "公司是专业为航空及防务和高端制造提供互连解决方案的高科技企业。公司专业从事中高端光、电、流体连接技术与产品的研究与开发，自主研发各类连接产品500多个系列、35万多个品种，拥有国家认定企业技术中心、博士后科研工作站以及国家和国防认可实验室。",
+              "majorProducts": "光、电、流体连接器、光电子器件、集成化设备、线缆组件",
+              "revenueComposition": "电连接器:74.55%;光器件及光电设备:17.11%;液冷解决方案及其他产品:8.34%",
+              "revenueSegments": [
+                {
+                  "name": "电连接器",
+                  "sharePct": 74.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光器件及光电设备",
+                  "sharePct": 17.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液冷解决方案及其他产品",
+                  "sharePct": 8.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "钴铬烤瓷合金",
+                    "category": "钴及钴合金"
+                  }
+                ],
+                "knownProducts": [
+                  "氧化锆瓷块",
+                  "钴铬烤瓷合金",
+                  "机柜连接器",
+                  "航天连接器",
+                  "防务连接器",
+                  "流体连接器",
+                  "新能源汽车充电连接器",
+                  "新能源汽车高压互锁连接器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中航光电拥有钴铬烤瓷合金，其产业链位置与公司业务涉及氮化铝陶瓷基板，受益于下游光模块需求增长及国产替代趋势一致；当前的电连接器（74.55%）、光器件及光电设备（17.11%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由终端需求与渗透率变化决定，并需完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”。只有终端销量、客户采购量、公司出货和相关产品收入增速持续改善，产品能力才会转化为公司层面的收入和盈利提升；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则会限制兑现幅度。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "6条低于3星的源记录已按当前关注口径排除。",
+      "1条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

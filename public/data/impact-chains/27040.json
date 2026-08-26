@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27040",
@@ -9,10 +9,10 @@
     "date": "2026-07-06"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 1,
     "mappedStockCount": 1,
-    "unmappedStockCount": 1,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 18620,
@@ -21,108 +21,21 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 4
-      },
-      {
-        "sourceRowNumber": 18621,
-        "stockCode": "00669.HK",
-        "stockName": "创科实业",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 18621,
-        "stockCode": "00669.HK",
-        "stockName": "创科实业",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 4,
     "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 4,
-    "downstreamCandidateCount": 4,
-    "shownUpstreamCount": 4,
-    "shownDownstreamCount": 4
+    "level7ProductCount": 3,
+    "relatedIndustryCandidateCount": 1,
+    "shownRelatedIndustryCount": 1
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140061436",
-        "name": "塑料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032959"
-        ],
-        "linkedCoreProductNames": [
-          "五金手工具"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140038319",
-        "name": "钢带",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032959"
-        ],
-        "linkedCoreProductNames": [
-          "五金手工具"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140023964",
-        "name": "铝材",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032959"
-        ],
-        "linkedCoreProductNames": [
-          "五金手工具"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1130000592",
-        "name": "铝锭",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032959"
-        ],
-        "linkedCoreProductNames": [
-          "五金手工具"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140032959",
         "name": "五金手工具",
@@ -148,18 +61,15 @@
           "name": "五金手工具"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002444.SZ",
             "stockName": "巨星科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 4,
         "relevanceScore": 6,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -168,70 +78,124 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140042446",
-        "name": "家居建材",
-        "anchorCount": 1,
+        "code": "1200000525",
+        "name": "高空作业机械",
+        "description": "高空作业机械指用于高处施工的设备。A股该板块受关注，源于基建更新、安全法规趋严及电动化替代加速，推动行业高景气。龙头企业凭借技术优势出海，业绩增长确定性强，成为高端制造投资热点。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032959"
+        "starWeight": 5,
+        "level7ProductCount": 1,
+        "relevanceScore": 18,
+        "stocks": [
+          {
+            "stockCode": "603338.SH",
+            "stockName": "浙江鼎力",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
         ],
-        "linkedCoreProductNames": [
-          "五金手工具"
+        "products": [
+          {
+            "code": "1140035918",
+            "name": "高空作业平台",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 高空作业机械 > 高空作业平台 > 高空作业平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603338.SH",
+                "stockName": "浙江鼎力",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "高空作业平台"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 3,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 3,
+    "candidateIndustryCount": 1,
+    "relatedIndustryCount": 1,
+    "stocks": [
+      {
+        "sourceRowNumber": 18617,
+        "stockCode": "603338.SH",
+        "stockName": "浙江鼎力",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140000674",
-        "name": "家庭",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032959"
-        ],
-        "linkedCoreProductNames": [
-          "五金手工具"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 18618,
+        "stockCode": "603298.SH",
+        "stockName": "杭叉集团",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140044075",
-        "name": "汽修",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032959"
-        ],
-        "linkedCoreProductNames": [
-          "五金手工具"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
+        "sourceRowNumber": 18620,
+        "stockCode": "002444.SZ",
+        "stockName": "巨星科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      }
+    ],
+    "relatedIndustries": [
       {
-        "code": "1140028815",
-        "name": "装修工程",
-        "anchorCount": 1,
+        "code": "1200000525",
+        "name": "高空作业机械",
+        "description": "高空作业机械指用于高处施工的设备。A股该板块受关注，源于基建更新、安全法规趋严及电动化替代加速，推动行业高景气。龙头企业凭借技术优势出海，业绩增长确定性强，成为高端制造投资热点。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032959"
+        "starWeight": 5,
+        "level7ProductCount": 1,
+        "relevanceScore": 18,
+        "stocks": [
+          {
+            "stockCode": "603338.SH",
+            "stockName": "浙江鼎力",
+            "rating": "★★★★★",
+            "filledStars": 5
+          }
         ],
-        "linkedCoreProductNames": [
-          "五金手工具"
+        "products": [
+          {
+            "code": "1140035918",
+            "name": "高空作业平台",
+            "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 高空作业机械 > 高空作业平台 > 高空作业平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603338.SH",
+                "stockName": "浙江鼎力",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "高空作业平台"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       }
     ]
   },
@@ -246,10 +210,233 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 16,
+    "eligibleSourceRowCount": 3,
+    "totalStockCount": 3,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 10,
+    "excludedNonAShareCount": 3,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 3,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 18617,
+            "stockCode": "603338.SH",
+            "stockName": "浙江鼎力",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "数据中心建设催生了对公司剪叉车等高空作业平台的新需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603338.SH",
+              "companyName": "浙江鼎力",
+              "companyProfile": "公司始建于2005年，是全球智能高空作业平台领先制造商。一直以来，我们将“碳达峰”、“碳中和”节能减排的核心理念贯穿至公司治理全流程，包括员工绿色出行、绿色园区建设、绿色生产制造、绿色产品研发、绿色循环再制造等。技术创新是公司核心宗旨，公司拥有海外研发中心及中国企业研究院。是国家知识产权优势企业，在核心技术研发、产品创新、知识产权保护方面具备较强的综合实力。公司顺应电动化、绿色化、智能化趋势，依托行业自动化程度最高的“未来”工厂，实现协同制造、绿色制造和安全制造。电动化是公司为客户提供节能解决方案的重要举措，全系列产品率先于业内完成电动化，并推出3年质保，其中采用大载重、模块化设计的全臂式系列更为业内首创。通过倡导循环节能的高效利用，公司建立再制造工厂，为客户提供产品全生命周期服务。公司还致力于构建平等、多元化和包容性的企业环境。积极赋权女性，在男性主导的机械制造行业实现全岗位性别多样化；尊重差异声音，使团队建设长期保持创新和弹性活力；助推行业发展，开创“非道路移动机械”电动化新时代，引领绿色转型；我们构建和谐供应链，打通上下游，打造全球唯一高空作业平台产业园；履行社会责任，成立“红鼎基金”，积极开展济困帮扶、助农助学、募捐救灾等暖心志愿服务活动。通过贯穿企业生态全生命周期，“绿色可持续”正成为鼎力高质量发展的重点。未来，公司将不断升级“未来工厂”，持续深耕绿色节能战略，开创“非道路移动机械电动化新时代”，让高空作业平台“中国制造”闪耀国际。",
+              "profileSummary": "公司始建于2005年，是全球智能高空作业平台领先制造商。积极赋权女性，在男性主导的机械制造行业实现全岗位性别多样化；尊重差异声音，使团队建设长期保持创新和弹性活力；助推行业发展，开创“非道路移动机械”电动化新时代，引领绿色转型；我们构建和谐供应链，打通上下游，打造全球唯一高空作业平台产业园；履行社会责任，成立“红鼎基金”，积极开展济困帮扶、助农助学、募捐救灾等暖心志愿服务活动。",
+              "majorProducts": "臂式、叉车、高空作业平台、剪叉式、桅柱式",
+              "revenueComposition": "高空作业平台:91.5%;其他业务:8.5%",
+              "revenueSegments": [
+                {
+                  "name": "高空作业平台",
+                  "sharePct": 91.5,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 8.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "高空作业平台",
+                    "category": "高空作业平台"
+                  }
+                ],
+                "knownProducts": [
+                  "高空作业平台"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "浙江鼎力的相关业务已决定公司大部分经营表现：高空作业平台占收入的91.5%。公司与事件的直接业务联系是：数据中心建设催生了对公司剪叉车等高空作业平台的新需求，真正的增量取决于终端需求与渗透率变化，并需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，终端销量、客户采购量、公司出货和相关产品收入增速需要显示公司获得超越行业的增量。终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是这条逻辑最主要的反向约束。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 18620,
+            "stockCode": "002444.SZ",
+            "stockName": "巨星科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司明确将AI基建（电力、数据中心建设）作为工具需求的核心增量市场，并已布局算力柜等新产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002444.SZ",
+              "companyName": "巨星科技",
+              "companyProfile": "公司成立于1993年，是全球领先的工具企业，于2010年7月在深圳证券交易所上市。公司拥有多个世界级百年工具品牌，产品涵盖手动工具、电动工具、气动紧固工具、激光测量工具、激光雷达、工具柜、工业存储柜、工业吸尘器等。公司在全球有5大研发中心，具备强大研发设计能力。同时我们拥有覆盖全球的销售渠道，直接服务于全球大型建材、五金、百货、汽配等连锁超市及各类工业用户，是众多专业级工具品牌的合作伙伴，同时依托国内外电商平台，直接为全球终端用户提供高品质、全品类产品。",
+              "profileSummary": "公司拥有多个世界级百年工具品牌，产品涵盖手动工具、电动工具、气动紧固工具、激光测量工具、激光雷达、工具柜、工业存储柜、工业吸尘器等。同时我们拥有覆盖全球的销售渠道，直接服务于全球大型建材、五金、百货、汽配等连锁超市及各类工业用户，是众多专业级工具品牌的合作伙伴，同时依托国内外电商平台，直接为全球终端用户提供高品质、全品类产品。",
+              "majorProducts": "1S - 3.6V 1300mAh 可充电式锂电池、2S - 7.2V 1300mAh 可充电式锂电池、3S - 10.8V 1300mAh 可充电式锂电池、5S - 18V 1200mAh 可充电式锂电池包、5S - 18V 1300mAh 可充电式锂电池包、7S - 25.2V 1200mAh 可充电式锂电池包、扳手、测量工具、电工工具、工作灯、棘轮扳手、夹持工具、交流类、金属工具箱、螺丝批旋具、泥瓦工具、其他手动工具、其他照明工具、钳类工具、敲击工具、切割工具、手电筒、套筒、油漆工具、园林工具、直流类",
+              "revenueComposition": "手工具:64.9%;工业工具:21.99%;电动工具:12.02%;其他业务:0.59%;芯片:0.5%",
+              "revenueSegments": [
+                {
+                  "name": "手工具",
+                  "sharePct": 64.9,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "工业工具",
+                  "sharePct": 21.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电动工具",
+                  "sharePct": 12.02,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "芯片",
+                  "sharePct": 0.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "五金手工具",
+                    "category": "五金手工具"
+                  },
+                  {
+                    "name": "交流电动五金工具",
+                    "category": "电动五金工具"
+                  }
+                ],
+                "knownProducts": [
+                  "激光测距仪",
+                  "五金手工具",
+                  "交流电动五金工具",
+                  "工业储存箱柜"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "巨星科技与事件的关系已经落在存量主业，而非远期概念：手工具（64.9%）、电动工具（12.02%）合计约占收入的76.92%。公司在产业链中的具体抓手是：公司明确将AI基建（电力、数据中心建设）作为工具需求的核心增量市场，并已布局算力柜等新产品。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 18618,
+            "stockCode": "603298.SH",
+            "stockName": "杭叉集团",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "AI新基建投资火热，利好公司叉车对美出口增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603298.SH",
+              "companyName": "杭叉集团",
+              "companyProfile": "公司先后荣获“中国制造业企业500强”、“中国民营企业500强”、“中国大企业集团竞争力500强”、“全国五一劳动奖状”和“全国机械行业文明单位”。公司作为工业和信息化部制造业单项冠军示范企业、浙江省第二批“雄鹰行动”培育企业、浙江省商标品牌战略示范企业、浙江省制造业与互联网融合发展试点示范企业、浙江省装备制造行业数字化领军企业，“中德合作工业车辆智能工厂示范”项目入选工业和信息化部制造业与互联网融合发展试点示范名单，获评浙江省“未来工厂”、浙江省人民政府质量管理创新奖、荣获浙江省工业大奖、浙江出口名牌、主板上市公司价值100强、中国上市公司投资者关系最佳董事会奖、中国工业车辆用户品牌关注度十强，连续入围中国机械工业百强，浙江省科技领军企业、杭州市“未来工厂”之“链主工厂”等殊荣。公司产品包括1-48吨内燃叉车、0.75-48吨电动叉车、集装箱正面吊、空箱堆高机、牵引车、搬运车、堆垛车、越野叉车、高空作业车辆、强夯机等全系列、多品种的产品以及多款AGV智能工业车辆，规格品种达上万种，同时为客户提供智能物流整体解决方案以及包括产品配件销售、修理、租赁、再制造等在内的工业车辆后市场业务。公司力推产品新能源战略，未来将全系列产品切换为锂电、氢燃料电池等新能源产品，以实现产品战略转型升级和高质量发展目标。公司致力于“让搬运更轻松”，坚持“专业化生产、品牌化经营、集团化运作、国际化整合”的发展战略，坚持“进取、务实、创新、和谐”的企业精神，创造价值，回报社会，为客户提供最真诚的服务，努力实现进入“世界叉车前五强”的“杭叉梦”而奋斗！",
+              "profileSummary": "公司作为工业和信息化部制造业单项冠军示范企业、浙江省第二批“雄鹰行动”培育企业、浙江省商标品牌战略示范企业、浙江省制造业与互联网融合发展试点示范企业、浙江省装备制造行业数字化领军企业，“中德合作工业车辆智能工厂示范”项目入选工业和信息化部制造业与互联网融合发展试点示范名单，获评浙江省“未来工厂”、浙江省人民政府质量管理创新奖、荣获浙江省工业大奖、浙江出口名牌、主板上市公司价值100强、中国上市公司投资者关系最佳董事会奖、中国工业车辆用…",
+              "majorProducts": "电动叉车、内燃叉车",
+              "revenueComposition": "叉车及配件:98.35%;其他业务:1.65%",
+              "revenueSegments": [
+                {
+                  "name": "叉车及配件",
+                  "sharePct": 98.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "仓储叉车(仓储搬运车)",
+                  "内燃叉车",
+                  "堆垛车",
+                  "电动叉车",
+                  "智能搬运机器人(自动导引运输车AGV)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "杭叉集团的业务范围能够覆盖AI新基建投资火热，利好公司叉车对美出口增长所处的产业环节，但当前叉车及配件（98.35%）、其他业务（1.65%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”完成兑现，并在终端销量、客户采购量、公司出货和相关产品收入增速上形成持续改善；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务联系对盈利的贡献会受到限制。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "10条低于3星的源记录已按当前关注口径排除。",
+      "3条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

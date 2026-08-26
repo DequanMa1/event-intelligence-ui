@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27092",
@@ -9,9 +9,9 @@
     "date": "2026-07-07"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 3,
-    "mappedStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 2,
+    "mappedStockCount": 1,
     "unmappedStockCount": 1,
     "stocks": [
       {
@@ -20,8 +20,8 @@
         "stockName": "华鲁恒升",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 26
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 19544,
@@ -30,24 +30,15 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 4
-      },
-      {
-        "sourceRowNumber": 19545,
-        "stockCode": "1COV.DE",
-        "stockName": "科思创",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 1
       }
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 19545,
-        "stockCode": "1COV.DE",
-        "stockName": "科思创",
-        "rating": "★★★★",
+        "sourceRowNumber": 19543,
+        "stockCode": "600426.SH",
+        "stockName": "华鲁恒升",
+        "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
@@ -58,128 +49,12 @@
     "candidateCoreProductCount": 30,
     "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 7,
-    "downstreamCandidateCount": 19,
-    "shownUpstreamCount": 7,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 50,
+    "relatedIndustryCandidateCount": 16,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140046116",
-        "name": "三羟甲基丙烷",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140049878",
-        "name": "二甲苯甲苯",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140007474",
-        "name": "氯气",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1111000018",
-        "name": "焦炭",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1137000070",
-        "name": "硝酸",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1137000008",
-        "name": "硫酸溶液",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140046111",
-        "name": "醋酸丁酯",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140046775",
         "name": "TDI(甲苯二异氰酸酯)",
@@ -205,18 +80,15 @@
           "name": "TDI(甲苯二异氰酸酯)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600230.SH",
             "stockName": "沧州大化",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 7,
-        "downstreamCount": 19,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -226,230 +98,342 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140052635",
-        "name": "单体铸型尼龙(板管棒)",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
+        "code": "1200000976",
+        "name": "石化制品",
+        "description": "石化制品指以石油、天然气为原料加工成的塑料、橡胶等基础材料。因处于产业链中游，其价格受原油波动影响大，且与宏观经济紧密相关，故备受投资者关注，常作为观察经济周期和通胀预期的重要风向标。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 3,
+        "relevanceScore": 44,
+        "stocks": [
+          {
+            "stockCode": "000301.SZ",
+            "stockName": "东方盛虹",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600346.SH",
+            "stockName": "恒力石化",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
+        "products": [
+          {
+            "code": "1140007402",
+            "name": "PTA(精对苯二甲酸)",
+            "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 其他石化副产品 > PTA(精对苯二甲酸)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000301.SZ",
+                "stockName": "东方盛虹",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600346.SH",
+                "stockName": "恒力石化",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": [
+              "石化产品"
+            ]
+          },
+          {
+            "code": "1140028589",
+            "name": "石油沥青",
+            "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 沥青 > 石油沥青",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600346.SH",
+                "stockName": "恒力石化",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140028588",
+            "name": "石蜡",
+            "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 石蜡 > 石蜡",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600346.SH",
+                "stockName": "恒力石化",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140050676",
-        "name": "水溶性聚氨酯树脂",
-        "anchorCount": 1,
+        "code": "1200000902",
+        "name": "酰胺态氮肥",
+        "description": "酰胺态氮肥主要指尿素，是A股重要化肥板块。因具备农业刚需、成本优势及潜在出口利好，且部分企业转型新能源材料，兼具周期与成长属性，常受资金关注，尤其在粮价上涨或政策扶持期表现活跃。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "600426.SH",
+            "stockName": "华鲁恒升",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
+        "products": [
+          {
+            "code": "1140221010",
+            "name": "农业用尿素",
+            "hierarchyPath": "化工 > 农化制品 > 氮肥 > 酰胺态氮肥 > 尿素 > 农业用尿素",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600426.SH",
+                "stockName": "华鲁恒升",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140082531",
+            "name": "尿基肥",
+            "hierarchyPath": "化工 > 农化制品 > 氮肥 > 酰胺态氮肥 > 尿素 > 尿基肥",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600426.SH",
+                "stockName": "华鲁恒升",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 5,
+    "mappedStockCount": 5,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 50,
+    "candidateIndustryCount": 16,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 19542,
+        "stockCode": "600309.SH",
+        "stockName": "万华化学",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140052638",
-        "name": "聚氨酯印刷胶辊",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19543,
+        "stockCode": "600426.SH",
+        "stockName": "华鲁恒升",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 26
       },
       {
-        "code": "1140052637",
-        "name": "聚氨酯塑胶铺装制品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19544,
+        "stockCode": "600230.SH",
+        "stockName": "沧州大化",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140046581",
-        "name": "聚氨酯树脂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 19552,
+        "stockCode": "600346.SH",
+        "stockName": "恒力石化",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 24
       },
       {
-        "code": "1140055632",
-        "name": "聚氨酯橡胶",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
+        "sourceRowNumber": 19553,
+        "stockCode": "000301.SZ",
+        "stockName": "东方盛虹",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000976",
+        "name": "石化制品",
+        "description": "石化制品指以石油、天然气为原料加工成的塑料、橡胶等基础材料。因处于产业链中游，其价格受原油波动影响大，且与宏观经济紧密相关，故备受投资者关注，常作为观察经济周期和通胀预期的重要风向标。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 3,
+        "relevanceScore": 44,
+        "stocks": [
+          {
+            "stockCode": "000301.SZ",
+            "stockName": "东方盛虹",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600346.SH",
+            "stockName": "恒力石化",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
+        "products": [
+          {
+            "code": "1140007402",
+            "name": "PTA(精对苯二甲酸)",
+            "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 其他石化副产品 > PTA(精对苯二甲酸)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000301.SZ",
+                "stockName": "东方盛虹",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600346.SH",
+                "stockName": "恒力石化",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": [
+              "石化产品"
+            ]
+          },
+          {
+            "code": "1140028589",
+            "name": "石油沥青",
+            "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 沥青 > 石油沥青",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600346.SH",
+                "stockName": "恒力石化",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140028588",
+            "name": "石蜡",
+            "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 石蜡 > 石蜡",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600346.SH",
+                "stockName": "恒力石化",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140052069",
-        "name": "聚氨酯泡沫塑料",
-        "anchorCount": 1,
+        "code": "1200000902",
+        "name": "酰胺态氮肥",
+        "description": "酰胺态氮肥主要指尿素，是A股重要化肥板块。因具备农业刚需、成本优势及潜在出口利好，且部分企业转型新能源材料，兼具周期与成长属性，常受资金关注，尤其在粮价上涨或政策扶持期表现活跃。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 8,
+        "stocks": [
+          {
+            "stockCode": "600426.SH",
+            "stockName": "华鲁恒升",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
+        "products": [
+          {
+            "code": "1140221010",
+            "name": "农业用尿素",
+            "hierarchyPath": "化工 > 农化制品 > 氮肥 > 酰胺态氮肥 > 尿素 > 农业用尿素",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600426.SH",
+                "stockName": "华鲁恒升",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140082531",
+            "name": "尿基肥",
+            "hierarchyPath": "化工 > 农化制品 > 氮肥 > 酰胺态氮肥 > 尿素 > 尿基肥",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600426.SH",
+                "stockName": "华鲁恒升",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140052640",
-        "name": "聚氨酯清漆",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140052636",
-        "name": "聚氨酯筛网",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140052634",
-        "name": "聚氨酯胶板",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140047468",
-        "name": "聚氨酯预聚体",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140052633",
-        "name": "软质聚氨酯泡沫塑料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140052632",
-        "name": "软质聚醚型聚氨酯泡沫塑料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140052639",
-        "name": "阳极电泳漆",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140046775"
-        ],
-        "linkedCoreProductNames": [
-          "TDI(甲苯二异氰酸酯)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -464,10 +448,485 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 23,
+    "eligibleSourceRowCount": 5,
+    "totalStockCount": 5,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 14,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 5,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 19542,
+            "stockCode": "600309.SH",
+            "stockName": "万华化学",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球聚氨酯龙头，Q2业绩超预期核心受益于聚氨酯产品出口量价齐升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600309.SH",
+              "companyName": "万华化学",
+              "companyProfile": "公司是一家全球化化工新材料公司依托不断创新的核心技术、产业化装置及高效的运营模式，为客户提供更具竞争力的产品及解决方案。公司始终坚持以技术创新为第一核心竞争力，持续优化产业结构，业务涵盖聚氨酯、石化、精细化学品、新兴材料、未来产业五大产业集群。所服务的行业主要包括：生活家居、运动休闲、汽车交通、建筑工业、电子电气、个人护理和绿色能源等。化工新材料公司拥有烟台、蓬莱、宁波、四川、福建、珠海、宁夏、匈牙利、捷克、瑞典、意大利、法国十二大生产基地及工厂，形成了强大的生产运营网络；此外，烟台、宁波、上海、北京、深圳、匈牙利、西班牙七大研发中心已完成布局，并在欧洲、美国、日本等二十余个国家和地区设立子公司及办事处，致力于为全球客户提供更具竞争力的产品及综合解决方案。化工新材料公司秉承“化学，让生活更美好！”的使命，将一如既往地在化工新材料领域持续创新，引领行业发展方向，为人类创造美好生活。",
+              "profileSummary": "公司始终坚持以技术创新为第一核心竞争力，持续优化产业结构，业务涵盖聚氨酯、石化、精细化学品、新兴材料、未来产业五大产业集群。化工新材料公司拥有烟台、蓬莱、宁波、四川、福建、珠海、宁夏、匈牙利、捷克、瑞典、意大利、法国十二大生产基地及工厂，形成了强大的生产运营网络；此外，烟台、宁波、上海、北京、深圳、匈牙利、西班牙七大研发中心已完成布局，并在欧洲、美国、日本等二十余个国家和地区设立子公司及办事处，致力于为全球客户提供更具竞争力的产品及综…",
+              "majorProducts": "烟台万华MDA系列产品、烟台万华Wanalink6200、烟台万华单体聚醚系列、烟台万华多聚甲醛系列产品、烟台万华二苯基甲烷二异氰酸酯(MDI)、烟台万华聚合MDI、烟台万华木材胶粘剂、烟台万华热塑性聚氨酯弹性体、烟台万华软泡组合聚醚系列、烟台万华硬泡组合聚醚系列",
+              "revenueComposition": "石化系列:41.43%;聚氨酯系列:36.93%;精细化学品及新材料系列:16.33%;其他:12.9%;其他业务:0.42%;产品间抵销:-8.01%",
+              "revenueSegments": [
+                {
+                  "name": "石化系列",
+                  "sharePct": 41.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "聚氨酯系列",
+                  "sharePct": 36.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精细化学品及新材料系列",
+                  "sharePct": 16.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 12.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "产品间抵销",
+                  "sharePct": -8.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "MDI(二苯基甲烷二异氰酸酯)",
+                    "category": "酯"
+                  },
+                  {
+                    "name": "TDI(甲苯二异氰酸酯)",
+                    "category": "酯"
+                  }
+                ],
+                "knownProducts": [
+                  "吸水树脂SAP",
+                  "POE(聚烯烃弹性体)",
+                  "尼龙12",
+                  "水性聚氨酯",
+                  "薄荷醇",
+                  "TPU(热塑性聚氨酯弹性体)",
+                  "丙烯酸",
+                  "丁二烯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "万华化学拥有MDI(二苯基甲烷二异氰酸酯)、TDI(甲苯二异氰酸酯)，其产业链位置与全球聚氨酯龙头，Q2业绩超预期核心受益于聚氨酯产品出口量价齐升一致；当前的石化系列（41.43%）、聚氨酯系列（36.93%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 19543,
+            "stockCode": "600426.SH",
+            "stockName": "华鲁恒升",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内煤化工龙头，规划进入TDI领域，将受益于聚氨酯行业景气周期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600426.SH",
+              "companyName": "华鲁恒升",
+              "companyProfile": "公司是国内重要的基础化工原料制造商和综合型化工企业，现有山东德州、湖北荆州两大基地。公司设有省级技术开发中心、博士后科研工作站、院士工作站和多个在线实验室，拥有200多项国家专利，部分成果获得国家、行业和山东省科技进步奖。公司先后通过ISO9001质量管理体系、ISO14001环境管理体系、ISO45001职业健康与安全管理体系、ISO50001能源管理体系认证，本质安全、生态环保、碳利用居行业先进水平，先后12年获评煤制合成氨、甲醇、醋酸等行业能效领跑者。2024年，公司统筹生产运营和创新发展，稳生产、抓安全、强投资、扩增量、挖潜力、提效能，呈现出运营稳中有进、发展进中加固的良好势头，入选山东省绿色低碳高质量发展支柱型雁阵集群“头雁”企业。",
+              "profileSummary": "公司是国内重要的基础化工原料制造商和综合型化工企业，现有山东德州、湖北荆州两大基地。",
+              "majorProducts": "醋酸及衍生品、肥料、有机胺",
+              "revenueComposition": "新材料相关产品:50.23%;肥料:23.59%;醋酸及衍生品:10.94%;有机胺:7.62%;其他产品:6.42%;其他业务:1.19%",
+              "revenueSegments": [
+                {
+                  "name": "新材料相关产品",
+                  "sharePct": 50.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "肥料",
+                  "sharePct": 23.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "醋酸及衍生品",
+                  "sharePct": 10.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "有机胺",
+                  "sharePct": 7.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 6.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "N,N-二甲基甲酰胺(DMF)",
+                    "category": "氨基化合物"
+                  },
+                  {
+                    "name": "一甲胺",
+                    "category": "氨基化合物"
+                  },
+                  {
+                    "name": "三甲胺(TMA)",
+                    "category": "氨基化合物"
+                  },
+                  {
+                    "name": "丙酸",
+                    "category": "有机酸"
+                  },
+                  {
+                    "name": "乙二醇(MEG)",
+                    "category": "醇"
+                  },
+                  {
+                    "name": "二甲胺",
+                    "category": "氨基化合物"
+                  }
+                ],
+                "knownProducts": [
+                  "水溶肥",
+                  "农业用尿素",
+                  "尿基肥",
+                  "农业用硫酸铵",
+                  "农业用碳酸氢铵",
+                  "硝基肥",
+                  "硝酸",
+                  "碳酸二乙酯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华鲁恒升拥有N,N-二甲基甲酰胺(DMF)、一甲胺、三甲胺(TMA)，其产业链位置与国内煤化工龙头，规划进入TDI领域，将受益于聚氨酯行业景气周期一致；当前的新材料相关产品（50.23%）、肥料（23.59%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由政策约束与需求释放节奏决定，并需完成“政策先改变客户采购意愿或行业准入，再通过项目落地、订单转化和成本变化影响经营结果”。只有政策细则、招投标规模、项目开工率和回款进度持续改善，产品能力才会转化为公司层面的收入和盈利提升；政策执行弱于预期、补贴退坡或项目回款周期拉长则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 19544,
+            "stockCode": "600230.SH",
+            "stockName": "沧州大化",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内TDI主要生产商之一，直接受益于TDI产品价格上涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600230.SH",
+              "companyName": "沧州大化",
+              "companyProfile": "公司成立于1998年，前身是我国首批全套引进装置建设的13套大化肥企业之一—河北省沧州化肥厂(建于1973年)。历经多年不懈努力，现今公司是一家以甲苯二异氰酸酯(TDI)、聚碳酸酯(PC)的研发、生产和销售为主业的大型综合性化工企业，于2000年在上交所上市。公司下属主要有聚海分公司、TDI有限责任公司、新材料有限责任公司。公司牢固树立创新、协调、绿色、开放、共享发展理念，坚守健康、安全、环保(以下简称“HSE”)底线，坚持实事求是，坚持客观公正，坚持科学至上，落实“安全第一，预防为主，综合治理”的HSE工作方针，建立健全HSE管理体系，严格落实HSE责任制。公司先后被清华大学等评为“全国十大管理模式创新领先企业”“十三五国企改革典范企业”。公司曾荣获全国五一劳动奖状、全国先进基层党组织、全国用户满意企业、全国质量效益型先进企业、聚氨酯产业领军企业、中国优秀企业、全国十大管理模式创新领先企业、全国石油和化学工业环境保护先进单位、全国石油和化工行业两化融合优秀实践奖、国家863计划CIMS应用示范企业、河北省明星企业、河北省“双三十”节能减排工作考核优秀单位、河北省五星级最具成长性和最具影响力企业、河北省重合同守信用企业等荣誉称号。",
+              "profileSummary": "历经多年不懈努力，现今公司是一家以甲苯二异氰酸酯(TDI)、聚碳酸酯(PC)的研发、生产和销售为主业的大型综合性化工企业，于2000年在上交所上市。公司下属主要有聚海分公司、TDI有限责任公司、新材料有限责任公司。",
+              "majorProducts": "PC产品、TDI产品、烧碱产品",
+              "revenueComposition": "TDI:42.78%;PC:25.89%;双酚A:22.21%;离子膜烧碱:6.09%;其他业务:3.02%",
+              "revenueSegments": [
+                {
+                  "name": "TDI",
+                  "sharePct": 42.78,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "PC",
+                  "sharePct": 25.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "双酚A",
+                  "sharePct": 22.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "离子膜烧碱",
+                  "sharePct": 6.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 3.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "TDI(甲苯二异氰酸酯)",
+                    "category": "酯"
+                  }
+                ],
+                "knownProducts": [
+                  "双酚A",
+                  "TDI(甲苯二异氰酸酯)",
+                  "液碱",
+                  "PC(聚碳酸酯)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对沧州大化而言，国内TDI主要生产商之一，直接受益于TDI产品价格上涨并非纯概念映射，因为TDI占收入的42.78%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是供需缺口与产品价格，传导效率取决于“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由产品报价、订单排期、产销率和毛利率来区分；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，重估逻辑会被削弱。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 19552,
+            "stockCode": "600346.SH",
+            "stockName": "恒力石化",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内民营炼化龙头，与万华化学同属大化工板块，受益于行业供需格局改善和产品价差修复。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600346.SH",
+              "companyName": "恒力石化",
+              "companyProfile": "公司成立于2002年，业务涵盖石油炼化、石化、芳烃、烯烃、PTA、乙二醇、民用丝、工业丝、工程塑料、聚酯薄膜、可降解塑料等高端化材料全产业链的上、中、下游。公司是行业内首家实现“原油-芳烃、烯烃-PTA、乙二醇-聚酯新材料”全产业链一体化化工新材料的上市公司。公司走的是市场差异化、技术高端化与装置规模化、业务一体化并重的发展路径，具备长期积累、摸索形成的市场、技术联动创新机制，技术研发实力与新品创新能力领先同行。公司现拥有全球标杆级的2000万吨/年炼化一体化项目、500万吨/年现代煤化工装置、150万吨/年乙烯项目和7套单体最大合计1660万吨/年的PTA装置四大产能集群，成功打通上游的化纤、德力化纤、恒科新材料、康辉新材料四家公司均已通过“国家高新技术企业”认证。公司拥有完善的产能布局，进而具备“大化工平台”和“新材料延伸”的体系化产业格局。公司总部位于中国大连，横跨南北建有。",
+              "profileSummary": "公司成立于2002年，业务涵盖石油炼化、石化、芳烃、烯烃、PTA、乙二醇、民用丝、工业丝、工程塑料、聚酯薄膜、可降解塑料等高端化材料全产业链的上、中、下游。公司走的是市场差异化、技术高端化与装置规模化、业务一体化并重的发展路径，具备长期积累、摸索形成的市场、技术联动创新机制，技术研发实力与新品创新能力领先同行。",
+              "majorProducts": "工程塑料、工业涤纶长丝、聚酯薄膜、聚酯切片、民用涤纶长丝、热电、蒸汽",
+              "revenueComposition": "炼化产品:46.89%;PTA:28.46%;聚酯产品:19.88%;其他:3.57%;其他业务:1.2%",
+              "revenueSegments": [
+                {
+                  "name": "炼化产品",
+                  "sharePct": 46.89,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "PTA",
+                  "sharePct": 28.46,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "聚酯产品",
+                  "sharePct": 19.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PTA(精对苯二甲酸)",
+                    "category": "其他石化副产品"
+                  },
+                  {
+                    "name": "燃料油",
+                    "category": "燃料油"
+                  },
+                  {
+                    "name": "石油沥青",
+                    "category": "沥青"
+                  },
+                  {
+                    "name": "石蜡",
+                    "category": "石蜡"
+                  },
+                  {
+                    "name": "BOPET功能性薄膜",
+                    "category": "PET类膜材料"
+                  },
+                  {
+                    "name": "DTY(拉伸变形丝)",
+                    "category": "涤纶民用丝"
+                  }
+                ],
+                "knownProducts": [
+                  "润滑油",
+                  "乙炔",
+                  "醋酸",
+                  "丁烯",
+                  "丙烯",
+                  "乙烯",
+                  "二甲苯",
+                  "甲苯"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "恒力石化的事件逻辑具备真实业务底座，但尚不足以代表全部公司：PTA占收入的28.46%。公司与事件的具体联系在于：国内民营炼化龙头，与万华化学同属大化工板块，受益于行业供需格局改善和产品价差修复，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 19553,
+            "stockCode": "000301.SZ",
+            "stockName": "东方盛虹",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内领先的炼化化纤一体化企业，与万华化学共同受益于石化产品价格上行和新能源材料需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000301.SZ",
+              "companyName": "东方盛虹",
+              "companyProfile": "公司是一家全球领先的能源化工企业，专注于新能源新材料业务的全产业链垂直整合。公司积极聚焦“低碳”目标，秉承绿色生态发展理念，以世界一流标准引领行业绿色发展，并打造二氧化碳回收制新材料、再生聚酯纤维、光伏级EVA等多个绿色产业项目。公司在新能源、新材料、石油炼化与聚酯化纤领域深耕多年，具备多样化的烯烃制取工艺，逐步形成了一个全产业链垂直整合的化工综合体。依托炼化一体化、醇基多联产、丙烷产业链项目构建的“大化工”综合化学原材料供应平台为基础，形成了向新能源、新材料、电子化学、生物技术等多元化产业链条延伸的“1+N”产业布局。前瞻和远见的产业布局使得公司具备了向下游新能源、新材料、低碳绿色等领域“强链、延链、补链”的内部协同优势和成本优势。独特的综合化学原材料供应平台是公司差异化、高端化竞争策略的强大保障。公司通过制造资源与上游炼化产业和下游高端新材料的垂直整合，获得向不同终端市场客户提供高性能产品及综合解决方案的能力，使我们在行业内拥有定价能力，并服务于境内外知名客户。",
+              "profileSummary": "依托炼化一体化、醇基多联产、丙烷产业链项目构建的“大化工”综合化学原材料供应平台为基础，形成了向新能源、新材料、电子化学、生物技术等多元化产业链条延伸的“1+N”产业布局。公司通过制造资源与上游炼化产业和下游高端新材料的垂直整合，获得向不同终端市场客户提供高性能产品及综合解决方案的能力，使我们在行业内拥有定价能力，并服务于境内外知名客户。",
+              "majorProducts": "DTY、EVA、FDY、POY、PTA、苯、丙烯、丙烯腈、超高分子量聚乙烯（UHMWPE）、成品油、对二甲苯(PX)、环氧乙烷、甲基丙烯酸甲酯、乙二醇、乙烯",
+              "revenueComposition": "其他化工新材料:57.64%;炼油产品:21.57%;涤纶丝:18.23%;其他:1.72%;其他化纤产品:0.85%",
+              "revenueSegments": [
+                {
+                  "name": "其他化工新材料",
+                  "sharePct": 57.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "炼油产品",
+                  "sharePct": 21.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "涤纶丝",
+                  "sharePct": 18.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他化纤产品",
+                  "sharePct": 0.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "PTA(精对苯二甲酸)",
+                    "category": "其他石化副产品"
+                  }
+                ],
+                "knownProducts": [
+                  "乙烯-醋酸乙烯共聚物(EVA)",
+                  "醋酸乙烯",
+                  "乙烯",
+                  "丙烯腈",
+                  "对二甲苯(PX)",
+                  "苯",
+                  "苯酚",
+                  "丙酮"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东方盛虹实际经营中已有PTA(精对苯二甲酸)，与事件指向的国内领先的炼化化纤一体化企业，与万华化学共同受益于石化产品价格上行和新能源材料需求能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在其他化工新材料（57.64%）、炼油产品（21.57%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善供需缺口与产品价格，需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。产品报价、订单排期、产销率和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产品存在不等于利润一定增加。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "14条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

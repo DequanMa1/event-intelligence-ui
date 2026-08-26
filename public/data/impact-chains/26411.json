@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26411",
@@ -9,20 +9,11 @@
     "date": "2026-06-26"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 5,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 4,
     "mappedStockCount": 4,
-    "unmappedStockCount": 1,
+    "unmappedStockCount": 0,
     "stocks": [
-      {
-        "sourceRowNumber": 3095,
-        "stockCode": "005930.KS",
-        "stockName": "三星电子",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 3098,
         "stockCode": "688110.SH",
@@ -30,7 +21,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 6
+        "anchorProductCount": 5
       },
       {
         "sourceRowNumber": 3102,
@@ -48,7 +39,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 13
+        "anchorProductCount": 9
       },
       {
         "sourceRowNumber": 3104,
@@ -60,266 +51,18 @@
         "anchorProductCount": 8
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 3095,
-        "stockCode": "005930.KS",
-        "stockName": "三星电子",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 23,
     "selectedCoreProductCount": 18,
     "selectedCompanyCoreProductCount": 18,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 29,
-    "downstreamCandidateCount": 34,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 54,
+    "relatedIndustryCandidateCount": 12,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140039602",
-        "name": "控制芯片",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301",
-          "1140015302"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘",
-          "存储卡"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140160533",
-        "name": "NAND Flash闪存芯片销售",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301",
-          "1140032545"
-        ],
-        "linkedCoreProductNames": [
-          "USB存储盘(U盘)",
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140023214",
-        "name": "代码型闪存芯片",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015302",
-          "1140032545"
-        ],
-        "linkedCoreProductNames": [
-          "USB存储盘(U盘)",
-          "存储卡"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140014505",
-        "name": "内存控制芯片",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301",
-          "1140015302"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘",
-          "存储卡"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140023215",
-        "name": "数据型闪存芯片",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015302",
-          "1140032545"
-        ],
-        "linkedCoreProductNames": [
-          "USB存储盘(U盘)",
-          "存储卡"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140024771",
-        "name": "内存芯片",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140137361",
-        "name": "刮锡膏",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140030908",
-        "name": "印制电路板",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140005902",
-        "name": "存储芯片",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140009116",
-        "name": "缓存芯片",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140137362",
-        "name": "表面贴装机",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140160534",
-        "name": "DRAM芯片销售",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140136453",
-        "name": "固态硬盘电路板",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140136452",
-        "name": "固态硬盘磁头",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140215416",
         "name": "LPDDR SDRAM存储器芯片",
@@ -345,146 +88,38 @@
           "name": "LPDDR SDRAM存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 4,
         "stocks": [
           {
             "stockCode": "688110.SH",
             "stockName": "东芯股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "688525.SH",
             "stockName": "佰维存储",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "001309.SZ",
             "stockName": "德明利",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "301308.SZ",
             "stockName": "江波龙",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "半导体",
           "电子"
-        ]
-      },
-      {
-        "code": "1140015301",
-        "name": "固态硬盘",
-        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 计算机存储器 > 固态硬盘",
-        "industryPath": [
-          "计算机",
-          "计算机设备",
-          "计算机设备",
-          "硬件设备",
-          "计算机存储器",
-          "固态硬盘"
-        ],
-        "level5Industry": {
-          "code": "1200001368",
-          "name": "硬件设备"
-        },
-        "level6Industry": {
-          "code": "1200005139",
-          "name": "计算机存储器"
-        },
-        "level7Product": {
-          "code": "1140015301",
-          "name": "固态硬盘"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 3,
-        "stocks": [
-          {
-            "stockCode": "688525.SH",
-            "stockName": "佰维存储",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "001309.SZ",
-            "stockName": "德明利",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "301308.SZ",
-            "stockName": "江波龙",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 7,
-        "downstreamCount": 9,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "计算机设备",
-          "计算机"
-        ]
-      },
-      {
-        "code": "1140023035",
-        "name": "内存条",
-        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 计算机存储器 > 内存条",
-        "industryPath": [
-          "计算机",
-          "计算机设备",
-          "计算机设备",
-          "硬件设备",
-          "计算机存储器",
-          "内存条"
-        ],
-        "level5Industry": {
-          "code": "1200001368",
-          "name": "硬件设备"
-        },
-        "level6Industry": {
-          "code": "1200005139",
-          "name": "计算机存储器"
-        },
-        "level7Product": {
-          "code": "1140023035",
-          "name": "内存条"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 3,
-        "stocks": [
-          {
-            "stockCode": "688525.SH",
-            "stockName": "佰维存储",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "001309.SZ",
-            "stockName": "德明利",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "301308.SZ",
-            "stockName": "江波龙",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 9,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "计算机设备",
-          "计算机"
         ]
       },
       {
@@ -512,28 +147,27 @@
           "name": "eMMC存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "688525.SH",
             "stockName": "佰维存储",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "001309.SZ",
             "stockName": "德明利",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "301308.SZ",
             "stockName": "江波龙",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -542,47 +176,51 @@
         ]
       },
       {
-        "code": "1140032545",
-        "name": "USB存储盘(U盘)",
-        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 移动存储器 > USB存储盘(U盘)",
+        "code": "1140023035",
+        "name": "内存条",
+        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 计算机存储器 > 内存条",
         "industryPath": [
           "计算机",
           "计算机设备",
           "计算机设备",
           "硬件设备",
-          "移动存储器",
-          "USB存储盘(U盘)"
+          "计算机存储器",
+          "内存条"
         ],
         "level5Industry": {
           "code": "1200001368",
           "name": "硬件设备"
         },
         "level6Industry": {
-          "code": "1200005140",
-          "name": "移动存储器"
+          "code": "1200005139",
+          "name": "计算机存储器"
         },
         "level7Product": {
-          "code": "1140032545",
-          "name": "USB存储盘(U盘)"
+          "code": "1140023035",
+          "name": "内存条"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
+        "stockCount": 3,
         "stocks": [
+          {
+            "stockCode": "688525.SH",
+            "stockName": "佰维存储",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
           {
             "stockCode": "001309.SZ",
             "stockName": "德明利",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "301308.SZ",
             "stockName": "江波龙",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 10,
-        "downstreamCount": 6,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -591,47 +229,51 @@
         ]
       },
       {
-        "code": "1140133891",
-        "name": "SD存储卡",
-        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 移动存储器 > SD存储卡",
+        "code": "1140015301",
+        "name": "固态硬盘",
+        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 计算机存储器 > 固态硬盘",
         "industryPath": [
           "计算机",
           "计算机设备",
           "计算机设备",
           "硬件设备",
-          "移动存储器",
-          "SD存储卡"
+          "计算机存储器",
+          "固态硬盘"
         ],
         "level5Industry": {
           "code": "1200001368",
           "name": "硬件设备"
         },
         "level6Industry": {
-          "code": "1200005140",
-          "name": "移动存储器"
+          "code": "1200005139",
+          "name": "计算机存储器"
         },
         "level7Product": {
-          "code": "1140133891",
-          "name": "SD存储卡"
+          "code": "1140015301",
+          "name": "固态硬盘"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 2,
+        "stockCount": 3,
         "stocks": [
+          {
+            "stockCode": "688525.SH",
+            "stockName": "佰维存储",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
           {
             "stockCode": "001309.SZ",
             "stockName": "德明利",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "301308.SZ",
             "stockName": "江波龙",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 3,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -664,28 +306,73 @@
           "name": "MCP存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "688110.SH",
             "stockName": "东芯股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "688525.SH",
             "stockName": "佰维存储",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "半导体",
           "电子"
+        ]
+      },
+      {
+        "code": "1140133891",
+        "name": "SD存储卡",
+        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 移动存储器 > SD存储卡",
+        "industryPath": [
+          "计算机",
+          "计算机设备",
+          "计算机设备",
+          "硬件设备",
+          "移动存储器",
+          "SD存储卡"
+        ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005140",
+          "name": "移动存储器"
+        },
+        "level7Product": {
+          "code": "1140133891",
+          "name": "SD存储卡"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "001309.SZ",
+            "stockName": "德明利",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301308.SZ",
+            "stockName": "江波龙",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "计算机设备",
+          "计算机"
         ]
       },
       {
@@ -713,28 +400,73 @@
           "name": "UFS存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "001309.SZ",
             "stockName": "德明利",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "301308.SZ",
             "stockName": "江波龙",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "半导体",
           "电子"
+        ]
+      },
+      {
+        "code": "1140032545",
+        "name": "USB存储盘(U盘)",
+        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 移动存储器 > USB存储盘(U盘)",
+        "industryPath": [
+          "计算机",
+          "计算机设备",
+          "计算机设备",
+          "硬件设备",
+          "移动存储器",
+          "USB存储盘(U盘)"
+        ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005140",
+          "name": "移动存储器"
+        },
+        "level7Product": {
+          "code": "1140032545",
+          "name": "USB存储盘(U盘)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 2,
+        "stocks": [
+          {
+            "stockCode": "001309.SZ",
+            "stockName": "德明利",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301308.SZ",
+            "stockName": "江波龙",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "计算机设备",
+          "计算机"
         ]
       },
       {
@@ -762,111 +494,21 @@
           "name": "ePOP存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "688525.SH",
             "stockName": "佰维存储",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "301308.SZ",
             "stockName": "江波龙",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "半导体",
-          "电子"
-        ]
-      },
-      {
-        "code": "1140015302",
-        "name": "存储卡",
-        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 移动存储器 > 存储卡",
-        "industryPath": [
-          "计算机",
-          "计算机设备",
-          "计算机设备",
-          "硬件设备",
-          "移动存储器",
-          "存储卡"
-        ],
-        "level5Industry": {
-          "code": "1200001368",
-          "name": "硬件设备"
-        },
-        "level6Industry": {
-          "code": "1200005140",
-          "name": "移动存储器"
-        },
-        "level7Product": {
-          "code": "1140015302",
-          "name": "存储卡"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688525.SH",
-            "stockName": "佰维存储",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 8,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "计算机设备",
-          "计算机"
-        ]
-      },
-      {
-        "code": "1140165539",
-        "name": "存储晶圆销售",
-        "hierarchyPath": "电子 > 半导体 > 集成电路 > 集成电路销售 > 集成电路销售 > 存储晶圆销售",
-        "industryPath": [
-          "电子",
-          "半导体",
-          "集成电路",
-          "集成电路销售",
-          "集成电路销售",
-          "存储晶圆销售"
-        ],
-        "level5Industry": {
-          "code": "1200001281",
-          "name": "集成电路销售"
-        },
-        "level6Industry": {
-          "code": "1200004953",
-          "name": "集成电路销售"
-        },
-        "level7Product": {
-          "code": "1140165539",
-          "name": "存储晶圆销售"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "001309.SZ",
-            "stockName": "德明利",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -899,18 +541,15 @@
           "name": "DDR SDRAM存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688110.SH",
             "stockName": "东芯股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -943,18 +582,15 @@
           "name": "SLCNAND微存储器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301308.SZ",
             "stockName": "江波龙",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -987,18 +623,15 @@
           "name": "SPI NAND Flash存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688110.SH",
             "stockName": "东芯股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1031,18 +664,15 @@
           "name": "SPI NOR Flash存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688110.SH",
             "stockName": "东芯股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1075,18 +705,97 @@
           "name": "eMCP存储器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301308.SZ",
             "stockName": "江波龙",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "半导体",
+          "电子"
+        ]
+      },
+      {
+        "code": "1140015302",
+        "name": "存储卡",
+        "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 移动存储器 > 存储卡",
+        "industryPath": [
+          "计算机",
+          "计算机设备",
+          "计算机设备",
+          "硬件设备",
+          "移动存储器",
+          "存储卡"
+        ],
+        "level5Industry": {
+          "code": "1200001368",
+          "name": "硬件设备"
+        },
+        "level6Industry": {
+          "code": "1200005140",
+          "name": "移动存储器"
+        },
+        "level7Product": {
+          "code": "1140015302",
+          "name": "存储卡"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688525.SH",
+            "stockName": "佰维存储",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "计算机设备",
+          "计算机"
+        ]
+      },
+      {
+        "code": "1140165539",
+        "name": "存储晶圆销售",
+        "hierarchyPath": "电子 > 半导体 > 集成电路 > 集成电路销售 > 集成电路销售 > 存储晶圆销售",
+        "industryPath": [
+          "电子",
+          "半导体",
+          "集成电路",
+          "集成电路销售",
+          "集成电路销售",
+          "存储晶圆销售"
+        ],
+        "level5Industry": {
+          "code": "1200001281",
+          "name": "集成电路销售"
+        },
+        "level6Industry": {
+          "code": "1200004953",
+          "name": "集成电路销售"
+        },
+        "level7Product": {
+          "code": "1140165539",
+          "name": "存储晶圆销售"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "001309.SZ",
+            "stockName": "德明利",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1119,18 +828,15 @@
           "name": "存储芯片封装"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688525.SH",
             "stockName": "佰维存储",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1163,18 +869,15 @@
           "name": "存储芯片测试"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688525.SH",
             "stockName": "佰维存储",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1183,234 +886,652 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140097894",
-        "name": "数码相机",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015302",
-          "1140133891"
+        "code": "1200001354",
+        "name": "电路类器件",
+        "description": "电路类器件指电阻、电容等基础电子元件。因受益于新能源汽车、AI及国产替代需求，行业景气度回升且具备自主可控逻辑，成为A股科技板块中兼具成长性与安全边际的关注焦点。",
+        "stockCount": 5,
+        "starWeight": 15,
+        "level7ProductCount": 15,
+        "relevanceScore": 208,
+        "stocks": [
+          {
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002484.SZ",
+            "stockName": "江海股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000636.SZ",
+            "stockName": "风华高科",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "SD存储卡",
-          "存储卡"
+        "products": [
+          {
+            "code": "1140154403",
+            "name": "多层片式陶瓷电容器(MLCC)",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "被动元器件"
+            ]
+          },
+          {
+            "code": "1140032975",
+            "name": "超级电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 超级电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "002484.SZ",
+                "stockName": "江海股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "被动元器件"
+            ]
+          },
+          {
+            "code": "1140104447",
+            "name": "NTC热敏电阻",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电阻器 > NTC热敏电阻",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002138.SZ",
+                "stockName": "顺络电子",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "被动元器件"
+            ]
+          },
+          {
+            "code": "1140200654",
+            "name": "单层陶瓷电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 单层陶瓷电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "被动元器件"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140014504",
-        "name": "闪存产品",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301",
-          "1140015302"
+        "code": "1200001361",
+        "name": "柔性电路板",
+        "description": "柔性电路板（FPC）具轻薄、可弯曲特性。A股受关注源于其在折叠屏手机、新能源汽车及AI硬件中的关键应用。随着消费电子创新加速及汽车电子化提升，FPC需求激增，推动相关产业链业绩增长与投资热度。",
+        "stockCount": 4,
+        "starWeight": 12,
+        "level7ProductCount": 2,
+        "relevanceScore": 48,
+        "stocks": [
+          {
+            "stockCode": "002916.SZ",
+            "stockName": "深南电路",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600183.SH",
+            "stockName": "生益科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300476.SZ",
+            "stockName": "胜宏科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002938.SZ",
+            "stockName": "鹏鼎控股",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "固态硬盘",
-          "存储卡"
+        "products": [
+          {
+            "code": "1140005549",
+            "name": "FPC(柔性电路板)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 柔性电路板 > 柔性电路板 > FPC(柔性电路板)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300476.SZ",
+                "stockName": "胜宏科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002938.SZ",
+                "stockName": "鹏鼎控股",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1125000047",
+            "name": "PCB(印刷电路板)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 柔性电路板 > 柔性电路板 > PCB(印刷电路板)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002916.SZ",
+                "stockName": "深南电路",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600183.SH",
+                "stockName": "生益科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 17,
+    "mappedStockCount": 16,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 54,
+    "candidateIndustryCount": 12,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 3098,
+        "stockCode": "688110.SH",
+        "stockName": "东芯股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140062315",
-        "name": "军事",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 3099,
+        "stockCode": "603986.SH",
+        "stockName": "兆易创新",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140025847",
-        "name": "医疗",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 3100,
+        "stockCode": "688766.SH",
+        "stockName": "普冉股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140007917",
-        "name": "导航设备",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 3101,
+        "stockCode": "300223.SZ",
+        "stockName": "北京君正",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140005129",
-        "name": "电力",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 3102,
+        "stockCode": "301308.SZ",
+        "stockName": "江波龙",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140017126",
-        "name": "电脑",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 3103,
+        "stockCode": "688525.SH",
+        "stockName": "佰维存储",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140081851",
-        "name": "航空",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 3104,
+        "stockCode": "001309.SZ",
+        "stockName": "德明利",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140025979",
-        "name": "车载",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140015301"
-        ],
-        "linkedCoreProductNames": [
-          "固态硬盘"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 3105,
+        "stockCode": "600183.SH",
+        "stockName": "生益科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140084137",
-        "name": "个人私有云",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 3106,
+        "stockCode": "002463.SZ",
+        "stockName": "沪电股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140145423",
-        "name": "北斗定位平板",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 3107,
+        "stockCode": "300476.SZ",
+        "stockName": "胜宏科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140024026",
-        "name": "台式计算机",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 3108,
+        "stockCode": "002938.SZ",
+        "stockName": "鹏鼎控股",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140089131",
-        "name": "多模智能终端产品",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
-        ],
-        "linkedCoreProductNames": [
-          "内存条"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 3109,
+        "stockCode": "002916.SZ",
+        "stockName": "深南电路",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 14
       },
       {
-        "code": "1140145633",
-        "name": "抗恶劣环境计算机",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140023035"
+        "sourceRowNumber": 3110,
+        "stockCode": "002484.SZ",
+        "stockName": "江海股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 3111,
+        "stockCode": "603678.SH",
+        "stockName": "火炬电子",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 3112,
+        "stockCode": "300408.SZ",
+        "stockName": "三环集团",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 3113,
+        "stockCode": "002138.SZ",
+        "stockName": "顺络电子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 3114,
+        "stockCode": "000636.SZ",
+        "stockName": "风华高科",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 13
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001354",
+        "name": "电路类器件",
+        "description": "电路类器件指电阻、电容等基础电子元件。因受益于新能源汽车、AI及国产替代需求，行业景气度回升且具备自主可控逻辑，成为A股科技板块中兼具成长性与安全边际的关注焦点。",
+        "stockCount": 5,
+        "starWeight": 15,
+        "level7ProductCount": 15,
+        "relevanceScore": 208,
+        "stocks": [
+          {
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002484.SZ",
+            "stockName": "江海股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000636.SZ",
+            "stockName": "风华高科",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "内存条"
+        "products": [
+          {
+            "code": "1140154403",
+            "name": "多层片式陶瓷电容器(MLCC)",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "被动元器件"
+            ]
+          },
+          {
+            "code": "1140032975",
+            "name": "超级电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 超级电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "002484.SZ",
+                "stockName": "江海股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "被动元器件"
+            ]
+          },
+          {
+            "code": "1140104447",
+            "name": "NTC热敏电阻",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电阻器 > NTC热敏电阻",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002138.SZ",
+                "stockName": "顺络电子",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "被动元器件"
+            ]
+          },
+          {
+            "code": "1140200654",
+            "name": "单层陶瓷电容器",
+            "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 单层陶瓷电容器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603678.SH",
+                "stockName": "火炬电子",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000636.SZ",
+                "stockName": "风华高科",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "被动元器件"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200001361",
+        "name": "柔性电路板",
+        "description": "柔性电路板（FPC）具轻薄、可弯曲特性。A股受关注源于其在折叠屏手机、新能源汽车及AI硬件中的关键应用。随着消费电子创新加速及汽车电子化提升，FPC需求激增，推动相关产业链业绩增长与投资热度。",
+        "stockCount": 4,
+        "starWeight": 12,
+        "level7ProductCount": 2,
+        "relevanceScore": 48,
+        "stocks": [
+          {
+            "stockCode": "002916.SZ",
+            "stockName": "深南电路",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600183.SH",
+            "stockName": "生益科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300476.SZ",
+            "stockName": "胜宏科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002938.SZ",
+            "stockName": "鹏鼎控股",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140005549",
+            "name": "FPC(柔性电路板)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 柔性电路板 > 柔性电路板 > FPC(柔性电路板)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300476.SZ",
+                "stockName": "胜宏科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002938.SZ",
+                "stockName": "鹏鼎控股",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1125000047",
+            "name": "PCB(印刷电路板)",
+            "hierarchyPath": "电子 > 元件 > 印制电路板 > 柔性电路板 > 柔性电路板 > PCB(印刷电路板)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002916.SZ",
+                "stockName": "深南电路",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600183.SH",
+                "stockName": "生益科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -1425,10 +1546,1362 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 27,
+    "eligibleSourceRowCount": 17,
+    "totalStockCount": 17,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 5,
+    "excludedNonAShareCount": 5,
+    "missingReasonCount": 17,
+    "companyProfileMatchedCount": 17,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 3098,
+            "stockCode": "688110.SH",
+            "stockName": "东芯股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688110.SH",
+              "companyName": "东芯股份",
+              "companyProfile": "公司是一家专注于中小容量存储芯片独立研发、设计与销售的企业。公司秉持“提供可靠高效的存储产品及设计方案”的使命，并以“成为中国领先的存储芯片设计企业”为愿景，致力于通过自主研发的知识产权、稳定的供应链体系以及高可靠性产品，为客户提供优质的存储产品及解决方案。公司以存储为核心，同时在“存、算、联”一体化领域进行技术创新，拓展行业应用范围，优化业务布局，旨在为客户提供多样化的芯片解决方案。公司是目前中国大陆少数能够同时提供NAND Flash、NOR Flash、DRAM等存储芯片完整解决方案的公司，凭借产品丰富、性能可靠、能耗节省等特点，多款代表公司技术水平的核心产品获得国内外多家知名企业的认可，在工艺制程和产品性能上形成一定优势，NAND Flash已具备2xnm制程的量产能力，1xnm先进制程已进入风险量产；NOR Flash可实现48nm制程量产；DRAM可实现25nm工艺节点的量产。公司产品在网络通讯领域应用广泛，包括电信级设备、家用ONT、WiFi及随身MiFi，5G CPE等均有业务布局。工业方面，公司拓展了包括电力电子系统，电表集抄器，工业打印机等下游客户。消费电子领域，公司产品在国内头部客户的穿戴式设备中得到了应用。公司已有多款产品通过AEC-Q100的车规认证，并已进入境外知名的一级汽车供应商(Tier1)。公司将继续通过技术创新驱动、质量体系保障、供应链协同、人才战略支撑等方面，围绕“存、算、联”一体化战略方向，深化技术突破与产业布局，努力提升全球市场竞争力与可持续发展能力，为公司及公司利益相关方创造更多价值。",
+              "profileSummary": "公司以存储为核心，同时在“存、算、联”一体化领域进行技术创新，拓展行业应用范围，优化业务布局，旨在为客户提供多样化的芯片解决方案。公司产品在网络通讯领域应用广泛，包括电信级设备、家用ONT、WiFi及随身MiFi，5G CPE等均有业务布局。",
+              "majorProducts": "DRAM、MCP、NAND Flash、NOR Flash、技术服务",
+              "revenueComposition": "NAND系列产品:65.2%;MCP系列产品:25.05%;DRAM系列产品:5.84%;NOR系列产品:3.61%;技术服务:0.3%;其他业务:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "NAND系列产品",
+                  "sharePct": 65.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "MCP系列产品",
+                  "sharePct": 25.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "DRAM系列产品",
+                  "sharePct": 5.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "NOR系列产品",
+                  "sharePct": 3.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 0.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "DDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "SPI NAND Flash存储器芯片",
+                    "category": "存储器芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "DDR SDRAM存储器芯片",
+                  "LPDDR SDRAM存储器芯片",
+                  "MCP存储器芯片",
+                  "SPI NAND Flash存储器芯片",
+                  "SPI NOR Flash存储器芯片",
+                  "并行NAND Flash存储器芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东芯股份与新闻之间有明确产品抓手：LPDDR SDRAM存储器芯片、DDR SDRAM存储器芯片、SPI NAND Flash存储器芯片，对应公司在产业链中的具体参与环节尚未充分明确。收入主体目前是NAND系列产品（65.2%）、MCP系列产品（25.05%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 3102,
+            "stockCode": "301308.SZ",
+            "stockName": "江波龙",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301308.SZ",
+              "companyName": "江波龙",
+              "companyProfile": "公司成立于1999年，于2022年在深交所挂牌上市。公司作为一家半导体存储品牌企业，主要业务为存储器和主控芯片的研发设计、封装测试、技术支持与销售。公司通过覆盖芯片设计(主控芯片及存储芯片)、固件算法开发、存储器设计、封装测试等存储关键环节的全栈式技术能力，为市场提供消费级、企业级、车规级、工规级存储器。公司拥有行业类存储品牌FORESEE、海外行业类存储品牌Zilia和国际高端消费类存储品牌Lexar(雷克沙)。公司产品广泛应用于AI服务器、端侧AI设备、数据中心、汽车电子、物联网、安防监控、工业控制等领域，以及个人消费类存储市场。",
+              "profileSummary": "公司作为一家半导体存储品牌企业，主要业务为存储器和主控芯片的研发设计、封装测试、技术支持与销售。公司产品广泛应用于AI服务器、端侧AI设备、数据中心、汽车电子、物联网、安防监控、工业控制等领域，以及个人消费类存储市场。",
+              "majorProducts": "固态硬盘、内存条、嵌入式存储、移动存储",
+              "revenueComposition": "嵌入式存储:43.98%;固态硬盘:24.46%;移动存储:21.5%;内存条:9.74%;其他:0.33%",
+              "revenueSegments": [
+                {
+                  "name": "嵌入式存储",
+                  "sharePct": 43.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "固态硬盘",
+                  "sharePct": 24.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "移动存储",
+                  "sharePct": 21.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内存条",
+                  "sharePct": 9.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "LPDDR SDRAM存储器芯片",
+                  "UFS存储器芯片",
+                  "eMCP存储器芯片",
+                  "eMMC存储器芯片",
+                  "ePOP存储器芯片",
+                  "SD存储卡",
+                  "USB存储盘(U盘)",
+                  "SLCNAND微存储器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "江波龙实际经营中已有LPDDR SDRAM存储器芯片，与事件指向的公司在产业链中的具体参与环节尚未充分明确能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在嵌入式存储（43.98%）、固态硬盘（24.46%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善供需缺口与产品价格，需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。产品报价、订单排期、产销率和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 3103,
+            "stockCode": "688525.SH",
+            "stockName": "佰维存储",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688525.SH",
+              "companyName": "佰维存储",
+              "companyProfile": "公司成立于2010年，公司专注半导体存储器的研发设计、封测、生产和销售，主要产品为半导体存储器，主要服务为先进封测服务，其中半导体存储器按照应用领域不同又分为嵌入式存储、PC存储、工车规存储、企业级存储和移动存储等。公司以“存储赋能万物智联(Memory Empowers Everything)”为使命，致力于成为全球一流的存储与先进封测厂商。公司是科创板上市公司、科创50成分股，并获国家集成电路产业投资基金二期、中国互联网投资基金、中科院投资等战略投资。公司紧紧围绕半导体存储器产业链，构筑了研发封测一体化的经营模式，在存储介质特性研究、固件算法开发、存储芯片封测、测试研发、全球品牌运营等方面具有核心竞争力，并积极布局芯片IC设计、先进封测、芯片测试设备研发等技术领域。公司存储芯片产品广泛应用于移动智能终端、PC、行业终端、数据中心、智能汽车、移动存储等信息技术领域。凭借优异的综合竞争力，公司荣获“科创50成分股”、“2024最具价值科创板上市企业”、国家级“专精特新小巨人企业”、“国家高新技术企业”、“海关AEO高级认证企业”、“十大最佳国产芯片”、“广东省复杂存储芯片研发及封装测试工程技术研究中心”、深圳市“博士后创新实践基地”、“深圳知名品牌”、深圳市南山区“专精特新企业增加值十强”等称号；产品获得“全球电子成就奖年度存储器”、“中国IC设计成就奖年度最佳存储器”、“硬核中国芯最佳存储芯片”、“中国汽车行业优秀汽车电子创新产品奖”等荣誉。",
+              "profileSummary": "公司成立于2010年，公司专注半导体存储器的研发设计、封测、生产和销售，主要产品为半导体存储器，主要服务为先进封测服务，其中半导体存储器按照应用领域不同又分为嵌入式存储、PC存储、工车规存储、企业级存储和移动存储等。公司紧紧围绕半导体存储器产业链，构筑了研发封测一体化的经营模式，在存储介质特性研究、固件算法开发、存储芯片封测、测试研发、全球品牌运营等方面具有核心竞争力，并积极布局芯片IC设计、先进封测、芯片测试设备研发等技术领域。",
+              "majorProducts": "Acer暗影骑士•龙DH100内存条、Acer暗影骑士•龙N3500固态硬盘、Acer暗影骑士•擎N5000固态硬盘、Acer暗影骑士•擎N7000固态硬盘、BGA SSD、Biwin  DDR4 ECC SODIMM 内存条、Biwin  DDR4 SODIMM  内存条、Biwin  DDR4 UDIMM  内存条、Biwin  DDR5 UDIMM  内存条、Biwin  PCIe Gen3x4  固态硬盘、Biwin  PCIe Gen3x4 固态硬盘、Biwin  PCIe Gen4x4  固态硬盘、Biwin  PCIe Gen4x4 固态硬盘、Biwin DDR4 ECC UDIMM 内存条、Biwin DDR4 RDIMM  内存条、Biwin DDR5 SODIMM  内存条、Biwin PCIe Gen3x4  固态硬盘、eMCP、eMMC、ePOP、HP  内存条V10、HP  内存条X1、HP  内存条X2、HP NM卡、HP 固态硬盘 S750 2.5”、HP 固态硬盘 S750 M.2、HP 固态硬盘EX900 plus、HP 固态硬盘FX900 Pro、HP内存条S1、HP内存条V2、HP内存条V6、HP内存条V8、HP移动固态硬盘、Lenovo LN860、Lenovo LN950、Lenovo LN960、Lenovo LS800、LPDDR、PC存储、Predator Apollo 内存条、Predator GM3500固态硬盘、Predator GM7 固态硬盘、Predator GM7000固态硬盘、Predator Hermes 内存条、Predator Pallas II 内存条、Predator Pallas 内存条、Predator Talos 内存条、Predator Vesta II 内存条、Predator Vesta 内存条、UFS、uMCP、佰维NM卡、佰维NV7200 固态硬盘、佰维PD2000、佰维WOOKONG悟空DX100内存条、佰维WOOKONG悟空NV3500固态硬盘、佰维WOOKONG悟空NV7400 HEATSINK 固态硬盘、佰维WOOKONG悟空NV7400固态硬盘、车规级 eMMC、车规级 LPDDR、车规级 NOR Flash、工车规存储、工业标准级/宽温级 BGA SSD、工业标准级/宽温级 eMMC、工业标准级/宽温级 PCIe SSD、工业标准级/宽温级 存储卡、工业标准级/宽温级 内存条、工业标准级/宽温级SATA SSD、工业宽温级 NOR Flash、工业宽温级LPDDR、宏碁CF100 CFast 2.0存储卡、宏碁CFE100存储卡（CFexpress Type-B）、宏碁MSC300 UHS-I MicroSD存储卡、宏碁SC900存储卡、宏碁UM310闪存盘、宏碁UP300闪存盘、宏碁暗影骑士•龙ASD160 USH-I存储卡、企业级2.5\"SATA SSD、企业级CXL内存扩展模组、企业级PCIe SSD、企业级存储、嵌入式存储、先进封测服务、移动存储",
+              "revenueComposition": "嵌入式存储:60.86%;PC存储产品:32.69%;其他业务:2.5%;工业级存储模组:2.45%;先进封装及测试:1.5%",
+              "revenueSegments": [
+                {
+                  "name": "嵌入式存储",
+                  "sharePct": 60.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "PC存储产品",
+                  "sharePct": 32.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业级存储模组",
+                  "sharePct": 2.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "先进封装及测试",
+                  "sharePct": 1.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "车载固态硬盘",
+                  "存储芯片封装",
+                  "存储芯片测试",
+                  "系统级封装(SiP)",
+                  "LPDDR SDRAM存储器芯片",
+                  "MCP存储器芯片",
+                  "eMMC存储器芯片",
+                  "ePOP存储器芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "佰维存储拥有LPDDR SDRAM存储器芯片，其产业链位置与公司在产业链中的具体参与环节尚未充分明确一致；当前的嵌入式存储（60.86%）、PC存储产品（32.69%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 3104,
+            "stockCode": "001309.SZ",
+            "stockName": "德明利",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "001309.SZ",
+              "companyName": "德明利",
+              "companyProfile": "公司成立于2008年，是专业从事集成电路存储芯片设计、研发及产业化应用的国家高新技术企业，国家专精特新重点“小巨人”企业，是国内存储主控芯片行业第一家上市公司。自设立以来，公司的主营业务主要集中于闪存主控芯片设计、研发，存储模组产品应用方案的开发、优化，以及存储模组产品的销售。公司经过多年积累逐渐形成自主可控的主控芯片与固件方案两大核心技术平台，结合产品方案设计及量产工具开发、存储模组测试等形成完善的存储管理应用方案，高效实现对NAND Flash存储颗粒进行数据管理和应用性能提升。公司目前已经建立了完善的闪存存储产品矩阵，包括移动存储、固态硬盘、嵌入式存储，相关产品广泛应用于消费电子、工控设备、家用电器、汽车电子、智能家居、物联网、服务器及数据中心等领域。同时，公司通过聚焦应用场景，以全新品牌为智能显示、智能安防、车载应用、数据中心、网络通信、智慧医疗领域行业客户，提供完善的、高质量、高定制化的存储解决方案和存储产品。",
+              "profileSummary": "自设立以来，公司的主营业务主要集中于闪存主控芯片设计、研发，存储模组产品应用方案的开发、优化，以及存储模组产品的销售。公司目前已经建立了完善的闪存存储产品矩阵，包括移动存储、固态硬盘、嵌入式存储，相关产品广泛应用于消费电子、工控设备、家用电器、汽车电子、智能家居、物联网、服务器及数据中心等领域。",
+              "majorProducts": "触控芯片、存储晶圆销售、存储卡模组、存储盘模组、固态硬盘、固态硬盘模组、内存条、嵌入式存储、闪存主控芯片、移动存储",
+              "revenueComposition": "固态硬盘:42.46%;嵌入式存储:33.95%;移动存储:13.66%;内存条类产品:9.74%;其他:0.17%",
+              "revenueSegments": [
+                {
+                  "name": "固态硬盘",
+                  "sharePct": 42.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "嵌入式存储",
+                  "sharePct": 33.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "移动存储",
+                  "sharePct": 13.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内存条类产品",
+                  "sharePct": 9.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "LPDDR SDRAM存储器芯片",
+                  "UFS存储器芯片",
+                  "eMMC存储器芯片",
+                  "存储晶圆销售",
+                  "SD存储卡",
+                  "USB存储盘(U盘)",
+                  "内存条",
+                  "固态硬盘"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "德明利拥有LPDDR SDRAM存储器芯片，其产业链位置与公司在产业链中的具体参与环节尚未充分明确一致；当前的固态硬盘（42.46%）、嵌入式存储（33.95%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 13,
+        "stocks": [
+          {
+            "sourceRowNumber": 3099,
+            "stockCode": "603986.SH",
+            "stockName": "兆易创新",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603986.SH",
+              "companyName": "兆易创新",
+              "companyProfile": "公司成立于2005年，总部设于中国北京，并于2016年8月在上海证券交易所成功上市，是一家致力于开发存储器技术、MCU、传感器和模拟产品及解决方案的领先的无晶圆厂半导体公司，在中国、美国、新加坡、日本、英国、德国等多个国家和地区均设有分支机构和办事处，营销网络遍布全球，为客户提供优质便捷的本地化支持服务。公司核心产品线为存储器(Flash、利基型DRAM)、32位通用型MCU、智能人机交互传感器、模拟产品及整体解决方案。产品以“高性能、低功耗”著称，为汽车、工业控制、物联网、网络/通信、计算机、消费电子等客户提供全方位服务。其中，SPI NOR Flash全球市场占有率排名第二，累计出货量超270亿颗；并于2021年6月推出了首颗4Gb DDR4产品GDQ2BFAA系列，标志着正式迈入利基型DRAM市场；同时，GD32MCU已经发展成为32位通用MCU市场的核心之选，并以累计超过19.8亿颗的出货数量，超过2万家客户数量，63个系列700余款产品选择所提供的广阔应用覆盖率稳居中国本土首位；并且，触控和指纹识别芯片现已广泛应用在国内外知名移动终端厂商。公司在质量管理方面有严格的标准与要求，已通过ISO26262:2018汽车功能安全最高等级ASIL D体系认证，获得IEC61508功能安全产品认证以及ISO9001、ISO14001、ISO45001等体系认证和邓白氏认证，产品检测中心还获得了CNAS(ISO/IEC17025)国家实验室认可证书。此外，公司积极推进产业整合，拓展战略布局，并与全球多家领先晶圆厂、封装测试厂达成战略合作伙伴关系，通过加强产业上下游合作、优化供应链管理，共同推进半导体领域的技术创新。",
+              "profileSummary": "公司成立于2005年，总部设于中国北京，并于2016年8月在上海证券交易所成功上市，是一家致力于开发存储器技术、MCU、传感器和模拟产品及解决方案的领先的无晶圆厂半导体公司，在中国、美国、新加坡、日本、英国、德国等多个国家和地区均设有分支机构和办事处，营销网络遍布全球，为客户提供优质便捷的本地化支持服务。产品以“高性能、低功耗”著称，为汽车、工业控制、物联网、网络/通信、计算机、消费电子等客户提供全方位服务。",
+              "majorProducts": "NAND Flash、NOR Flash、触控芯片、动态随机存取存储器（DRAM）、闪存芯片、指纹识别芯片",
+              "revenueComposition": "存储芯片销售:71.34%;微控制器:20.75%;传感器:4.23%;模拟产品:3.62%;技术服务及其他:0.06%",
+              "revenueSegments": [
+                {
+                  "name": "存储芯片销售",
+                  "sharePct": 71.34,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "微控制器",
+                  "sharePct": 20.75,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "传感器",
+                  "sharePct": 4.23,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "模拟产品",
+                  "sharePct": 3.62,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务及其他",
+                  "sharePct": 0.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "SPI NAND Flash存储器芯片",
+                    "category": "存储器芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "屏下光学指纹识别传感器",
+                  "电容指纹识别传感器",
+                  "模数转换器ADC",
+                  "运算放大器",
+                  "NOR Flash闪存技术服务",
+                  "SPI NAND Flash存储器芯片",
+                  "SPI NOR Flash存储器芯片",
+                  "并行NAND Flash存储器芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 4
+              }
+            },
+            "analysis": "兆易创新的存储芯片销售（71.34%）、微控制器（20.75%）覆盖范围较宽，其中能够承载SPI NAND Flash存储器芯片，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司在产业链中的具体参与环节尚未充分明确。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 3100,
+            "stockCode": "688766.SH",
+            "stockName": "普冉股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688766.SH",
+              "companyName": "普冉股份",
+              "companyProfile": "公司成立于2016年，总部位于上海张江高科，在成都设有分公司，深圳、韩国设有销售和现场应用服务与支持中心，同时在苏州设有研发中心；在日本、英国、德国等多地拥有代表处。2021年8月，公司在上海证券交易所科创板上市。公司目前主要产品包括NOR Flash和EEPROM两大非易失性存储器芯片、MCU微控制器芯片及模拟产品。产品广泛应用于物联网、智能手机及周边、可穿戴、服务器、光模块、工业控制、汽车电子、安防等领域。公司聚焦领先的非易失性存储器芯片，凭借超低功耗和高可靠性的产品优势，积累了良好的品牌认可度，成为全球NOR Flash和EEPROM的主要供应商之一。公司产品广泛应用于三星、OPPO、vivo、小米、联想、惠普、亚马逊、美的、海内外汽车客户等品牌厂商。基于存储器技术优势，公司于2021年推出“存储+”战略，积极拓展MCU及模拟芯片领域，依托公司在存储领域的技术优势和平台资源，实现向更高附加值领域和更多元化的市场拓展。与此同时，公司大力推进海外业务布局，坚定国际化战略路线，已经实现在日、韩、美等多家知名大客户导入，产品应用领域覆盖消费、工控、光伏及车载等，增强了在全球市场的影响力。公司以“普冉之芯，造福世界”的愿景，专注于产品创新，围绕非易失存储器领域，在继续完善和提升非易失性存储器产品线的同时，有效推进“存储+”战略，实现微控制器和模拟产品线的高速发展，不断满足客户对高性能芯片产品的需求，在持续经营中实现企业的技术积累，保障公司经营业务的可持续发展。",
+              "profileSummary": "公司聚焦领先的非易失性存储器芯片，凭借超低功耗和高可靠性的产品优势，积累了良好的品牌认可度，成为全球NOR Flash和EEPROM的主要供应商之一。与此同时，公司大力推进海外业务布局，坚定国际化战略路线，已经实现在日、韩、美等多家知名大客户导入，产品应用领域覆盖消费、工控、光伏及车载等，增强了在全球市场的影响力。",
+              "majorProducts": "EEPROM、NORFlash",
+              "revenueComposition": "NORFlash产品:100%",
+              "revenueSegments": [
+                {
+                  "name": "NORFlash产品",
+                  "sharePct": 100.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "EEPROM存储芯片",
+                  "SPI NOR Flash存储器芯片",
+                  "车规级EEPROM存储芯片",
+                  "车规级SPI NOR Flash存储器芯片",
+                  "音圈马达驱动芯片",
+                  "IoT MCU",
+                  "电机控制MCU",
+                  "通用型MCU"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "普冉股份当前收入集中在NORFlash产品（100%），而公司在产业链中的具体参与环节尚未充分明确所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响供需缺口与产品价格预期，业务端仍需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导后才能确认。产品报价、订单排期、产销率和毛利率如果持续改善，相关业务可能从产业布局转为实际增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 3101,
+            "stockCode": "300223.SZ",
+            "stockName": "北京君正",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300223.SZ",
+              "companyName": "北京君正",
+              "companyProfile": "公司是一家集成电路设计企业，拥有全球领先的32位嵌入式CPU技术和低功耗技术。公司主营业务为微处理器芯片、智能视频芯片等ASIC芯片产品及整体解决方案的研发和销售。公司拥有较强的自主创新能力，多年来在自主创新CPU技术、视频编解码技术、图像和声音信号处理技术、SoC芯片技术、软件平台技术等多个领域形成多项核心技术。公司已形成可持续发展的梯队化产品布局，基于自主创新的XBurst CPU和视频编解码等核心技术，公司推出了一系列具有高性价比的微处理器芯片产品和智能视频芯片产品，各类别的芯片产品分别面向不同的市场领域。公司积极培养复合型人才，形成合理的人才梯队，不断加强团队凝聚力，已累计获得多项专利证书，是国内外领先的嵌入式CPU芯片及解决方案提供商之一。",
+              "profileSummary": "公司主营业务为微处理器芯片、智能视频芯片等ASIC芯片产品及整体解决方案的研发和销售。公司已形成可持续发展的梯队化产品布局，基于自主创新的XBurst CPU和视频编解码等核心技术，公司推出了一系列具有高性价比的微处理器芯片产品和智能视频芯片产品，各类别的芯片产品分别面向不同的市场领域。",
+              "majorProducts": "Android 2.2第三方开发环境、USB Boot工具、XBurst CPU、存储芯片、互联芯片、计算芯片、君正Linux系统、模拟芯片、芯片",
+              "revenueComposition": "存储芯片:61.41%;芯片:27.28%;模拟及互联芯片:10.67%;技术服务:0.45%;房租收入:0.18%;其他:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "存储芯片",
+                  "sharePct": 61.41,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "芯片",
+                  "sharePct": 27.28,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "模拟及互联芯片",
+                  "sharePct": 10.67,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 0.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "房租收入",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "LPDDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "DDR SDRAM存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "SPI NAND Flash存储器芯片",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "SRAM存储器芯片",
+                    "category": "存储器芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "DDR SDRAM存储器芯片",
+                  "LPDDR SDRAM存储器芯片",
+                  "SPI NAND Flash存储器芯片",
+                  "SPI NOR Flash存储器芯片",
+                  "SRAM存储器芯片",
+                  "并行NOR Flash存储器芯片",
+                  "LED照明驱动芯片",
+                  "LED车灯驱动芯片"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "北京君正的相关业务已决定公司大部分经营表现：存储芯片占收入的61.41%。公司与事件的直接业务联系是：公司在产业链中的具体参与环节尚未充分明确，真正的增量取决于供需缺口与产品价格，并需经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，产品报价、订单排期、产销率和毛利率需要显示公司获得超越行业的增量。供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 3105,
+            "stockCode": "600183.SH",
+            "stockName": "生益科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600183.SH",
+              "companyName": "生益科技",
+              "companyProfile": "公司成立于1985年，是一家集研发、生产、销售、服务为一体的全球电子电路基材核心供应商。经过三十余年的发展，通过不断努力，覆铜板板材产量从建厂之初的年产60万平方米发展到2024年度的1.4亿平方米。根据美国Prismark调研机构对于全球硬质覆铜板的统计和排名，从2013年至今，硬质覆铜板销售总额已持续保持全球第二。集团总部位于中国最具经济活力的城市——广东东莞。先后在咸阳、苏州、香港、台湾、常熟、南通、九江及泰国等地建立了全资子公司和控股子公司。集团主营业务及产品应用范围公司始终立足于高标准、高品质、高性能、高可靠性，自主生产覆铜板、半固化片、绝缘层压板、金属基覆铜箔板、涂树脂铜箔、覆盖膜类等高端电子材料。产品主要供制作单、双面线路板及高多层线路板，广泛应用于高算力、AI服务器、5G天线、新一代通讯基站、大型计算机、高端服务器、航空航天工业、芯片封装、汽车电子、智能家居、工控医疗设备、家电、消费类终端以及各种中高档电子产品中。公司的主导产品已获得博世、联想、索尼、飞利浦等国际、国内知名企业的认证，拥有较大的竞争优势，产品销美洲、欧洲、韩国、日本、东南亚等世界多个国家和地区。",
+              "profileSummary": "集团主营业务及产品应用范围公司始终立足于高标准、高品质、高性能、高可靠性，自主生产覆铜板、半固化片、绝缘层压板、金属基覆铜箔板、涂树脂铜箔、覆盖膜类等高端电子材料。产品主要供制作单、双面线路板及高多层线路板，广泛应用于高算力、AI服务器、5G天线、新一代通讯基站、大型计算机、高端服务器、航空航天工业、芯片封装、汽车电子、智能家居、工控医疗设备、家电、消费类终端以及各种中高档电子产品中。",
+              "majorProducts": "生益覆铜板、生益硅微粉、生益陶瓷电子元件、生益印刷线路板、生益粘结片",
+              "revenueComposition": "0",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "PCB(印刷电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "粘结片",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "覆铜板(CCL)",
+                    "category": "电路板材料"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB(印刷电路板)",
+                  "粘结片",
+                  "覆铜板(CCL)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "生益科技与事件之间有具体产品连接：PCB(印刷电路板)、粘结片、覆铜板(CCL)，对应公司在产业链中的具体参与环节尚未充分明确。目前无法单独量化这些产品的收入权重，因而不能把公司归为纯概念，也不能把产业空间直接等同于利润弹性。供需缺口与产品价格只有沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”完成兑现，才会改变公司经营结果。产品报价、订单排期、产销率和毛利率将决定业务能否跨过小规模阶段；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件对公司的影响会主要停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 3106,
+            "stockCode": "002463.SZ",
+            "stockName": "沪电股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002463.SZ",
+              "companyName": "沪电股份",
+              "companyProfile": "公司自1992年成立以来，秉持“成长、长青、共利”的经营理念，始终专注执行既定的“聚焦PCB主业、精益求精”的运营战略，经过多年的发展和长期积累，公司已经在技术、质量、成本、品牌、规模等方面形成相对竞争优势，居行业领先地位，是PCB行业内的重要品牌之一。公司连续多年入选中国电子电路行业协会(CPCA)、行业研究机构Prismark、N.T.Information等行业协会及研究机构发布的PCB百强企业。公司一直专注于印制电路板的生产、销售及相关售后服务。公司PCB产品以通信通讯设备、数据中心基础设施、汽车电子为核心应用领域，辅以工业设备、半导体芯片测试等应用领域。公司涉足PCB行业多年，经过多年的市场拓展和品牌经营，已成为PCB行业内的重要品牌之一，在行业内享有盛誉。公司坚持实施差异化产品竞争战略，即依靠技术、管理和服务的比较竞争优势，依托平衡的产品布局以及深耕多年的中高阶产品与量产技术，重点生产技术含量高、应用领域相对高端的差异化产品。公司立足于既有的企业通讯市场板、汽车板等主导产品的技术领先优势，及时把握通信、汽车等领域高端产品需求，持续保持自身研发水平的领先性和研究方向的前瞻性。公司十分注重与客户的长期战略合作关系，积极配合客户进行项目研发或产品设计，努力成为其供应链中重要一环，从而提升客户忠诚度。此外，公司还致力于在不同地区和不同产品领域持续开发新客户，实现客户资源的适度多样化。通过以上举措，公司与国内外主要客户在PCB主要产品领域建立了稳固的业务联系，多次获得上述客户“最佳质量表现奖”、“最佳合作供应商”、“金牌供应商”等奖项。",
+              "profileSummary": "公司一直专注于印制电路板的生产、销售及相关售后服务。公司坚持实施差异化产品竞争战略，即依靠技术、管理和服务的比较竞争优势，依托平衡的产品布局以及深耕多年的中高阶产品与量产技术，重点生产技术含量高、应用领域相对高端的差异化产品。",
+              "majorProducts": "Linecard、背板、高密度集成板、厚铜板、混压板、埋被动元器件、企业通讯市场板、企业通讯市场板业务、汽车板、汽车板业务、散热板(背面连接金属块)、射频/微波/基站天线板、无卤素板",
+              "revenueComposition": "企业通讯市场板:77.36%;汽车板:16.07%;销售材料:4.2%;工业设备板及其他:2.34%;房屋销售收入:0.02%;租金收入:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "企业通讯市场板",
+                  "sharePct": 77.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车板",
+                  "sharePct": 16.07,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "销售材料",
+                  "sharePct": 4.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业设备板及其他",
+                  "sharePct": 2.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "房屋销售收入",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租金收入",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "5G基站用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "AI服务器用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "HPC用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "办公工业用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "数据中心交换机用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "汽车用印刷电路板(PCB)",
+                    "category": "特种电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "5G基站用PCB(印刷电路板)",
+                  "AI服务器用PCB(印刷电路板)",
+                  "HPC用PCB(印刷电路板)",
+                  "办公工业用PCB(印刷电路板)",
+                  "数据中心交换机用PCB(印刷电路板)",
+                  "汽车用印刷电路板(PCB)",
+                  "消费电子用PCB(印刷电路板)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "沪电股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：汽车板占收入的16.07%。公司与事件的具体联系在于：公司在产业链中的具体参与环节尚未充分明确，对应的核心变量是供需缺口与产品价格。若这一变量沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，产品报价、订单排期、产销率和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 3107,
+            "stockCode": "300476.SZ",
+            "stockName": "胜宏科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300476.SZ",
+              "companyName": "胜宏科技",
+              "companyProfile": "公司以高精密多层、HDI、FPC及软硬结合板的研发、生产和销售为核心业务。目前，公司在广东、湖南、马来西亚、泰国及越南(建设中)设有五大研发基地，产品广泛应用于人工智能、大数据中心、工业互联、汽车电子、新一代通信技术、新能源、航空航天及医疗仪器等前沿领域。作为行业标准的制定单位之一及CPCA荣誉副理事长单位，公司位居世界和中国印制电路行业企业百强排行榜前列，并在中国上市企业市值百强榜中占据重要位置。凭借与众多全球顶尖AI客户的紧密合作，公司已迅速成长为全球AI算力PCB领域的龙头企业。在技术创新方面，公司拥有省级工程技术研发中心和省级企业技术中心，持有线路板领域有效专利380项，并连续四年荣获“中国专利优秀奖”。公司先后通过UL安全认证、ISO9001、ISO14001、ISO45001、IATF16949、CQC、QC080000、中国RoHS、知识产权管理体系、信息安全管理体系及能源管理等多项国际国内体系认证。凭借卓越的技术实力与管理水平，公司获评“国家高新技术企业”、“国家知识产权优势企业”、“国家级绿色工厂”、“广东省创新型企业”、“广东省制造业单项冠军”及“优秀民族品牌企业”等多项荣誉称号，展现了其在技术创新、质量管理及社会责任方面的综合实力。",
+              "profileSummary": "公司以高精密多层、HDI、FPC及软硬结合板的研发、生产和销售为核心业务。目前，公司在广东、湖南、马来西亚、泰国及越南(建设中)设有五大研发基地，产品广泛应用于人工智能、大数据中心、工业互联、汽车电子、新一代通信技术、新能源、航空航天及医疗仪器等前沿领域。",
+              "majorProducts": "FPC、HDI 板、高端多层板、软硬结合板",
+              "revenueComposition": "PCB制造:93.74%;其他业务:6.26%",
+              "revenueSegments": [
+                {
+                  "name": "PCB制造",
+                  "sharePct": 93.74,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 6.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "FPC(柔性电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "PCB双面板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "PCB多层板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "高密度互联板(HDI)",
+                    "category": "刚性电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB双面板",
+                  "PCB多层板",
+                  "高密度互联板(HDI)",
+                  "FPC(柔性电路板)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "胜宏科技的PCB制造（93.74%）覆盖范围较宽，其中能够承载FPC(柔性电路板)、PCB双面板、PCB多层板，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司在产业链中的具体参与环节尚未充分明确。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 3108,
+            "stockCode": "002938.SZ",
+            "stockName": "鹏鼎控股",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002938.SZ",
+              "companyName": "鹏鼎控股",
+              "companyProfile": "公司由富葵精密组件(深圳)有限公司整体变更设立。公司成立于1999年4月29日，并于2018年9月18日在深圳证券交易所上市。公司为全球范围内少数同时具备各类PCB产品研发、设计、制造与销售服务的专业大型厂商，拥有优质多样的PCB产品线，主要产品范围涵盖FPC、SMA、SLP、HDI、RPCB、RigidFlex等多类产品，并广泛应用于通讯电子产品、消费电子及高性能计算机类产品以及EV汽车和AI服务器等产品，具备为不同客户提供打造全方位PCB电子互联产品及服务的强大实力，打造了全方位的PCB产品一站式服务平台。公司高度重视研究开发工作，在深圳市设有研发中心，不断加强产学研合作，与包含清华大学、香港城市大学、东南大学、深圳大学、燕山大学、河北工业大学及广东工业大学等大陆院校，以及台湾大学、新竹清华大学、成功大学、中央大学、台湾科技大学、中原大学、元智大学、龙华科技大学等台湾研究机构及院校建立了长期的合作关系。截止2025年6月30日，公司累计申请专利2732件，累计获得国内外授权专利数1525件。根据Prismark2018至2025年以营收计算的全球PCB企业排名，公司2017年-2024年连续八年位列全球最大PCB生产企业。产品领域INDUSTRIALOPERATION公司是主要从事各类印制电路板的设计、研发、制造与销售业务的专业服务公司，专注于为行业领先客户提供全方位PCB产品及服务。鹏鼎控股拥有一流质量的产品与服务，可提供全方位电路板系列产品，满足客户「onestopshopping」的需求。",
+              "profileSummary": "公司为全球范围内少数同时具备各类PCB产品研发、设计、制造与销售服务的专业大型厂商，拥有优质多样的PCB产品线，主要产品范围涵盖FPC、SMA、SLP、HDI、RPCB、RigidFlex等多类产品，并广泛应用于通讯电子产品、消费电子及高性能计算机类产品以及EV汽车和AI服务器等产品，具备为不同客户提供打造全方位PCB电子互联产品及服务的强大实力，打造了全方位的PCB产品一站式服务平台。产品领域INDUSTRIALOPERATION公…",
+              "majorProducts": "其他领域用板、通讯用板、消费电子及计算机用板",
+              "revenueComposition": "通讯用板:64.98%;消费电子及计算机用板:28.83%;汽车、服务器用板:5.41%;其他业务:0.78%",
+              "revenueSegments": [
+                {
+                  "name": "通讯用板",
+                  "sharePct": 64.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "消费电子及计算机用板",
+                  "sharePct": 28.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "汽车、服务器用板",
+                  "sharePct": 5.41,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "FPC(柔性电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "RPCB(刚性电路板)",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "服务器用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "汽车用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "消费电子用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "计算机用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "RPCB(刚性电路板)",
+                  "高密度互联板(HDI)",
+                  "FPC(柔性电路板)",
+                  "服务器用PCB(印刷电路板)",
+                  "汽车用PCB(印刷电路板)",
+                  "消费电子用PCB(印刷电路板)",
+                  "计算机用PCB(印刷电路板)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "鹏鼎控股已经具备FPC(柔性电路板)、RPCB(刚性电路板)、服务器用PCB(印刷电路板)等业务能力，公司在产业链中的具体参与环节尚未充分明确并非单纯概念映射。当前对应的收入被归入消费电子及计算机用板（28.83%）、汽车、服务器用板（5.41%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 3109,
+            "stockCode": "002916.SZ",
+            "stockName": "深南电路",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002916.SZ",
+              "companyName": "深南电路",
+              "companyProfile": "公司成立于1984年，总部位于中国广东省深圳市，主要生产基地位于中国深圳、江苏无锡及南通，业务遍及全球，在北美设有子公司，欧洲设有研发站点。经过多年发展，公司已与全球领先的通信设备制造商及医疗设备厂商建立了长期稳定的战略合作关系，成为了国家火炬计划重点高新技术企业、印制电路板行业首家国家技术创新示范企业及国家企业技术中心，中国印制电路板行业的领先企业，中国封装基板领域的先行者，电子装联制造的特色企业，中国电子电路行业协会(CPCA)的理事长单位及标准委员会会长单位，主导或参与制定了多项行业标准。紧抓电子产业高速发展的历史机遇，公司专注电子互联领域，坚持客户导向、技术驱动，以互联为核心，在强化印制电路板领先地位的同时，大力发展“技术同根”的封装基板及“客户同源”的电子装联，通过开展方案设计、制造、电子装联、微组装和测试等全价值链服务，凭借一站式的解决方案、高中端的产品结构、专业的产品开发及制造技术、稳定的质量表现与完善的管理体系，逐步成长为世界级电子电路技术与解决方案集成商。",
+              "profileSummary": "经过多年发展，公司已与全球领先的通信设备制造商及医疗设备厂商建立了长期稳定的战略合作关系，成为了国家火炬计划重点高新技术企业、印制电路板行业首家国家技术创新示范企业及国家企业技术中心，中国印制电路板行业的领先企业，中国封装基板领域的先行者，电子装联制造的特色企业，中国电子电路行业协会(CPCA)的理事长单位及标准委员会会长单位，主导或参与制定了多项行业标准。紧抓电子产业高速发展的历史机遇，公司专注电子互联领域，坚持客户导向、技术驱动…",
+              "majorProducts": "PCBA板级、背板、处理器芯片封装基板、存储芯片封装基板、电子装联、多功能金属基板、封装基板产品、刚挠结合板、高频微波板、高速多层板、高速通信封装基板、功能性模块、厚铜板、射频模块封装基板、微机电系统封装基板、印制电路板产品、整机产品/ 系统总装",
+              "revenueComposition": "印制电路板:60.72%;封装基板:17.54%;电子装联:13%;其他业务:5.58%;其他:3.15%",
+              "revenueSegments": [
+                {
+                  "name": "印制电路板",
+                  "sharePct": 60.72,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "封装基板",
+                  "sharePct": 17.54,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电子装联",
+                  "sharePct": 13.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PCB(印刷电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "PCB多层板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "刚挠结合电路板",
+                    "category": "刚柔结合电路板"
+                  },
+                  {
+                    "name": "印刷电路板装配(PCBA)",
+                    "category": "印制电路板组装"
+                  },
+                  {
+                    "name": "厚铜板",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "处理器芯片封装基板",
+                    "category": "封装基材"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB多层板",
+                  "厚铜板",
+                  "刚挠结合电路板",
+                  "软硬结合电路板",
+                  "印刷电路板装配(PCBA)",
+                  "PCB(印刷电路板)",
+                  "高频微波板",
+                  "金属基板"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "深南电路的事件暴露较为直接：印制电路板（60.72%）、封装基板（17.54%）合计约占收入的78.26%，相关业务不是边缘尝试；具体业务抓手是：公司在产业链中的具体参与环节尚未充分明确。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，尤其需要用产品报价、订单排期、产销率和毛利率区分行业普涨与公司自身竞争力。如果供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 3110,
+            "stockCode": "002484.SZ",
+            "stockName": "江海股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002484.SZ",
+              "companyName": "江海股份",
+              "companyProfile": "公司总部位于江苏省南通市，所属行业为电子元器件制造业，是从事电容器及其材料、仪器的研究开发、生产和销售的高新技术企业。公司拥有超过50年的电容器生产经验，通过为客户提供铝电解、薄膜、和超级电容器“一站式”的服务，持续开拓新的应用的市场，致力于成为全球电容器行业的领先者。江海牌电容器是中国电子元器件行业拥有自主知识产权、自有品牌，通过自己的渠道真正进入国际高端主流市场的民族品牌之一，是江苏省名牌产品，中国驰名商标。公司是中国电子元件行业副理事长单位、中国超级电容器标准工作副组长单位、高分子固体电容器国家标准主要起草单位，连续三十一年主要指标在全国电容器行业名列前茅。公司是全球在电力电子领域少数几家同时在铝电解电容器、薄膜电容器、超级电容器这三大类电容器进行研发、制造和销售的企业之一，产品广泛应用于工业自动化、机器人、消费电子、轨道交通、5G通讯设备、数据中心、新能源和储能、电动汽车、智能电网、军工等多个领域。同时，公司积极布局三大电容器用关键材料的技术工艺研究攻关和产业化，向铝电解电容器产业链上游延伸，开发出国内高比容、高强度、高一致性的电极箔(腐蚀箔和化成箔)，有效保障了材料性能、品质和供给，进一步提升了行业竞争优势。目前，公司已成为全球电力电子应用领域品种最齐全、产业链最完整的电容器公司。",
+              "profileSummary": "公司总部位于江苏省南通市，所属行业为电子元器件制造业，是从事电容器及其材料、仪器的研究开发、生产和销售的高新技术企业。目前，公司已成为全球电力电子应用领域品种最齐全、产业链最完整的电容器公司。",
+              "majorProducts": "薄膜电容器、超级电容器、铝电解电容器（及核心材料）",
+              "revenueComposition": "铝电解电容:80.55%;薄膜电容:10.49%;超级电容:6.42%;电极箔:2.19%;其他业务:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "铝电解电容",
+                  "sharePct": 80.55,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "薄膜电容",
+                  "sharePct": 10.49,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "超级电容",
+                  "sharePct": 6.42,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电极箔",
+                  "sharePct": 2.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电力电子电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "薄膜电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "超级电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "铝电解电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "电极铝箔",
+                  "电力电子电容器",
+                  "薄膜电容器",
+                  "超级电容器",
+                  "铝电解电容器"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "江海股份的相关业务已决定公司大部分经营表现：铝电解电容（80.55%）、薄膜电容（10.49%）合计约占收入的97.46%。公司与事件的直接业务联系是：公司在产业链中的具体参与环节尚未充分明确，真正的增量取决于供需缺口与产品价格，并需经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，产品报价、订单排期、产销率和毛利率需要显示公司获得超越行业的增量。供给恢复、库存反转或终端需求转弱使价格弹性快速收敛是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 3111,
+            "stockCode": "603678.SH",
+            "stockName": "火炬电子",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603678.SH",
+              "companyName": "火炬电子",
+              "companyProfile": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。2015年1月，公司在上海证券交易所上市。公司系国家高新技术企业，连续13年位列中国电子元器件百强企业榜单。拥有CNAS实验室认可的火炬电子实验室、省级企业技术中心、省级工程研究中心，设立国家博士后科研工作站，先后通过ISO9001质量管理体系、ISO14001环境管理体系、ISO45001职业健康安全管理体系、SA8000社会责任管理体系认证和IATF16949质量管理体系等资质认证。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。全力推进产品核心技术的自主研发，在推动内生增长的同时，积极向具有渠道和技术协同效应的其他类型元器件产品延伸，以“传承创新、百年火炬”为企业愿景，用高质量、高效率的发展促进产业升级，为我国电子元器件和新材料产业的发展做出贡献。",
+              "profileSummary": "公司始创于1989年，作为我国首批通过宇航级产品认证的企业之一，公司产品广泛应用于航空、航天、船舶以及通讯、电力、轨道交通、新能源等领域。秉承“国家•责任•全球竞争”的使命，公司布局“元器件、新材料和国际贸易”三大战略板块，构建泉州、广州和成都三大生产智造基地，北京、上海、深圳三大运营中心。",
+              "majorProducts": "EMI 电源滤波器、IGBT、MOSFET、SIP模块、薄膜电路、薄膜无源集成器件、超级电容器、第三代功率器件、电阻器、定制化特种元器件、火炬电子多芯组陶瓷电容器、火炬电子片式多层陶瓷电容器、火炬电子引线式多层陶瓷电容器、模拟IC、钽电容器、陶瓷电容器、微波介质频率器件、微波芯片电容器",
+              "revenueComposition": "国际贸易业务:61.43%;元器件贸易:33.08%;陶瓷材料:4.96%;其他业务:0.53%",
+              "revenueSegments": [
+                {
+                  "name": "国际贸易业务",
+                  "sharePct": 61.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "元器件贸易",
+                  "sharePct": 33.08,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "陶瓷材料",
+                  "sharePct": 4.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "单层陶瓷电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "电子元器件贸易",
+                    "category": "电子元件销售"
+                  },
+                  {
+                    "name": "超级电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "钽电容器",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "聚碳硅烷",
+                  "电子元器件贸易",
+                  "单层陶瓷电容器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "超级电容器",
+                  "钽电容器",
+                  "射频薄膜无源集成器件",
+                  "微波天线"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对火炬电子而言，公司在产业链中的具体参与环节尚未充分明确并非纯概念映射，因为元器件贸易占收入的33.08%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是供需缺口与产品价格，传导效率取决于“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由产品报价、订单排期、产销率和毛利率来区分；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 3112,
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300408.SZ",
+              "companyName": "三环集团",
+              "companyProfile": "公司成立于1970年，2014年在深交所上市，是一家专注于先进材料研发、生产及销售的综合性高新技术企业。产品覆盖通信、电子、新能源、半导体、移动智能终端等众多应用领域。其中，光通信用陶瓷插芯、片式电阻用氧化铝陶瓷基板、半导体陶瓷封装基座等产品产销量均居全球前列，多项产品先后荣获国家优质产品金奖。公司被认定为国家高新技术企业、国家技术创新示范企业、国家企业技术中心、中国制造业单项冠军示范企业，连续多年入选中国电子元件百强企业。",
+              "profileSummary": "产品覆盖通信、电子、新能源、半导体、移动智能终端等众多应用领域。公司被认定为国家高新技术企业、国家技术创新示范企业、国家企业技术中心、中国制造业单项冠军示范企业，连续多年入选中国电子元件百强企业。",
+              "majorProducts": "三环MLCC、三环电阻、三环光纤陶瓷插芯及套筒、三环接线端子、三环燃料电池隔膜板、三环陶瓷封装基座、三环陶瓷基片、三环陶瓷基体",
+              "revenueComposition": "电子元件:36.73%;通信器件:28.8%;电子及陶瓷材料:21.75%;设备组件:6.68%;其他:4.5%;其他业务:1.54%",
+              "revenueSegments": [
+                {
+                  "name": "电子元件",
+                  "sharePct": 36.73,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "通信器件",
+                  "sharePct": 28.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子及陶瓷材料",
+                  "sharePct": 21.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备组件",
+                  "sharePct": 6.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "氧化铝陶瓷基板",
+                  "氮化铝陶瓷基板",
+                  "陶瓷封装基座(PKG)",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "半导体封装点胶机",
+                  "刻蚀环",
+                  "压缩机接线端子",
+                  "沉积室衬垫"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "三环集团已经具备多层片式陶瓷电容器(MLCC)等业务能力，公司在产业链中的具体参与环节尚未充分明确并非单纯概念映射。当前对应的收入被归入电子元件（36.73%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 3113,
+            "stockCode": "002138.SZ",
+            "stockName": "顺络电子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002138.SZ",
+              "companyName": "顺络电子",
+              "companyProfile": "公司是一家专业从事各类片式电子元件研发、生产和销售的高新技术企业，主要产品包括叠层片式电感器、绕线片式电感器、共模扼流器、压敏电阻器、NTC热敏电阻器、LC滤波器、各类天线、NFC磁片、无线充电线圈组件、电容、电子变压器等电子元件。产品广泛应用于通讯、消费类电子、计算机、LED照明、安防、智能电网、医疗设备以及汽车电子等领域。秉承“遵偱标准、科技创新、持续改进，向全球客户提供优异的产品和完善的服务”的经营理念，凭借先进的管理体系、雄厚的开发能力、优异的产品质量和完善的服务，公司已成为众多国内知名企业的电子元件供应商。在电感细分领域内，公司在中国市场以及国际市场上均占有较高的市场占用率，技术和规模处于领先地位，公司的客户遍布全球，已成为国际电子产业链中不可或缺的供应商，为中国电子信息产业作出了贡献。",
+              "profileSummary": "公司是一家专业从事各类片式电子元件研发、生产和销售的高新技术企业，主要产品包括叠层片式电感器、绕线片式电感器、共模扼流器、压敏电阻器、NTC热敏电阻器、LC滤波器、各类天线、NFC磁片、无线充电线圈组件、电容、电子变压器等电子元件。秉承“遵偱标准、科技创新、持续改进，向全球客户提供优异的产品和完善的服务”的经营理念，凭借先进的管理体系、雄厚的开发能力、优异的产品质量和完善的服务，公司已成为众多国内知名企业的电子元件供应商。",
+              "majorProducts": "HDI板、NFC天线、半孔PCB、传感器系列、低温共烧陶瓷（LTCC）元器件系列、电磁兼容元器件系列、电感系列、电路保护器件系列、电子变压器系列、非晶材料磁板、功率磁性器件系列、精密陶瓷系列、顺络电子NTC热敏电阻器、顺络电子SMT功率电感、顺络电子叠层片式LC滤波器、顺络电子叠层片式天线、顺络电子叠层片式铁氧体磁珠、顺络电子共模轭流线圈、顺络电子片式磁珠、顺络电子片式叠层介质滤波器、顺络电子片式高频电感、顺络电子片式三端EMI滤波器、顺络电子片式陶瓷体电感、顺络电子片式陶瓷体绕线电感、顺络电子片式铁氧体电感、顺络电子片式铁氧体绕线电感、顺络电子片式压敏电阻器、顺络电子绕线贴片功率电感、通孔板、无线充电线圈",
+              "revenueComposition": "片式电子元件:99.28%;其他业务:0.72%",
+              "revenueSegments": [
+                {
+                  "name": "片式电子元件",
+                  "sharePct": 99.28,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "NTC热敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "一体成型电感器",
+                    "category": "电感器"
+                  },
+                  {
+                    "name": "共模扼流器",
+                    "category": "滤波器"
+                  },
+                  {
+                    "name": "压敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "叠层片式电感器",
+                    "category": "电感器"
+                  },
+                  {
+                    "name": "微波器件",
+                    "category": "微波器件"
+                  }
+                ],
+                "knownProducts": [
+                  "电动汽车BMS变压器",
+                  "倒车雷达变压器",
+                  "共模扼流器",
+                  "无源滤波器",
+                  "微波器件",
+                  "NFC磁片",
+                  "一体成型电感器",
+                  "叠层片式电感器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "顺络电子的片式电子元件（99.28%）覆盖范围较宽，其中能够承载NTC热敏电阻、一体成型电感器、共模扼流器，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司在产业链中的具体参与环节尚未充分明确。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 3114,
+            "stockCode": "000636.SZ",
+            "stockName": "风华高科",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "",
+            "reasonSourceAvailable": false,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000636.SZ",
+              "companyName": "风华高科",
+              "companyProfile": "公司是从事电子元器件及电子材料研发、生产、销售的国有控股上市公司。1984年成立，1996年在深交所挂牌上市，2008年广东省广晟控股集团有限公司入主风华高科。经过40年的专注发展，风华高科已成为内资企业中创新能力领先、综合规模较大、产品种类较全的电子元器件整合配套供应商，在国内率先突破多项核心材料关键技术。公司的主营业务为研制、生产、销售电子元器件及电子材料等。主营产品包括MLCC、片式电阻器、电感器、陶瓷滤波器、压敏电阻器、热敏电阻器、铝电解电容器、圆片电容器、超级电容器等，产品广泛应用于包括汽车电子、工业及控制自动化、消费电子、通讯、PC、物联网、新能源、医疗等领域。另外，公司产品还包括电子浆料、瓷粉等电子功能材料系列产品。公司跻身全球知名片式元器件制造商前列，是“国家重点高新技术企业”“国家首批创新型企业”“国家知识产权示范企业”，入选国务院国资委“创建世界一流专业领军示范企业”，同时也是唯一一家进入CDP(美国介电压电材料研究中心)联盟的内资企业。公司科技创新成果获得国家、省市级科技奖近百项，荣获有中国工业“奥斯卡”之称的中国工业大奖；公司主营产品继片阻获得国家制造业单项冠军产品后，MLCC又获评国家制造业单项冠军产品。",
+              "profileSummary": "公司的主营业务为研制、生产、销售电子元器件及电子材料等。主营产品包括MLCC、片式电阻器、电感器、陶瓷滤波器、压敏电阻器、热敏电阻器、铝电解电容器、圆片电容器、超级电容器等，产品广泛应用于包括汽车电子、工业及控制自动化、消费电子、通讯、PC、物联网、新能源、医疗等领域。",
+              "majorProducts": "MLCC、超级电容器、电感器、铝电解电容器、片式电阻器、热敏电阻器、陶瓷滤波器、压敏电阻器、圆片电容器",
+              "revenueComposition": "电子元器件及电子材料:98.19%;其他业务:1.81%",
+              "revenueSegments": [
+                {
+                  "name": "电子元器件及电子材料",
+                  "sharePct": 98.19,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "NTC热敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "PTC热敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "单层陶瓷电容器",
+                    "category": "电容器"
+                  },
+                  {
+                    "name": "压敏电阻",
+                    "category": "电阻器"
+                  },
+                  {
+                    "name": "叠层片式电感器",
+                    "category": "电感器"
+                  },
+                  {
+                    "name": "多层片式陶瓷电容器(MLCC)",
+                    "category": "电容器"
+                  }
+                ],
+                "knownProducts": [
+                  "FPC(柔性电路板)",
+                  "陶瓷滤波器",
+                  "单层陶瓷电容器",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "超级电容器",
+                  "钽电容器",
+                  "铝电解电容器",
+                  "叠层片式电感器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "风华高科的电子元器件及电子材料（98.19%）覆盖范围较宽，其中能够承载NTC热敏电阻、PTC热敏电阻、单层陶瓷电容器，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司在产业链中的具体参与环节尚未充分明确。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "17只标的缺少 reason，仅展示语料缺口，不做扩展推断。",
+      "5条低于3星的源记录已按当前关注口径排除。",
+      "5条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

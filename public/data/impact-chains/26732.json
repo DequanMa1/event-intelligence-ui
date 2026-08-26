@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26732",
@@ -9,10 +9,10 @@
     "date": "2026-07-01"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 4,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 2,
     "mappedStockCount": 2,
-    "unmappedStockCount": 2,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 11371,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 3
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 11372,
@@ -30,142 +30,21 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
-      },
-      {
-        "sourceRowNumber": 11373,
-        "stockCode": "未上市",
-        "stockName": "台湾盟立",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 11389,
-        "stockCode": "TSLA.O",
-        "stockName": "特斯拉",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 11373,
-        "stockCode": "未上市",
-        "stockName": "台湾盟立",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 11389,
-        "stockCode": "TSLA.O",
-        "stockName": "特斯拉",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 11,
-    "selectedCoreProductCount": 3,
+    "selectedCoreProductCount": 2,
     "selectedCompanyCoreProductCount": 2,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 5,
-    "downstreamCandidateCount": 134,
-    "shownUpstreamCount": 5,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 18,
+    "relatedIndustryCandidateCount": 8,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140095943",
-        "name": "减速器配件",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140032716",
-        "name": "圆柱滚子轴承",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140032909",
-        "name": "润滑系统",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140033652",
-        "name": "皮带轮",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140032718",
-        "name": "调心滚子轴承",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140033204",
         "name": "谐波减速器",
@@ -191,18 +70,15 @@
           "name": "谐波减速器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688017.SH",
             "stockName": "绿的谐波",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 2,
         "relevanceScore": 10,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -236,18 +112,15 @@
           "name": "新能源汽车驱动电机轴承"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "301550.SZ",
             "stockName": "斯菱智驱",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -255,271 +128,377 @@
           "汽车零部件",
           "汽车"
         ]
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000407",
+        "name": "通用金属零部件",
+        "description": "该行业指生产螺栓、轴承等基础机械部件的企业。因具备“工业基石”属性，且受益于设备更新政策及高端制造升级，业绩稳健、估值合理，兼具防御性与成长潜力，成为资金关注的高性价比板块。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 3,
+        "relevanceScore": 50,
+        "stocks": [
+          {
+            "stockCode": "603009.SH",
+            "stockName": "北特科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601100.SH",
+            "stockName": "恒立液压",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140208328",
+            "name": "梯形丝杠",
+            "hierarchyPath": "机械设备 > 金属制品 > 金属制品 > 通用金属零部件 > 通用金属零部件 > 梯形丝杠",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603009.SH",
+                "stockName": "北特科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "丝杠",
+              "梯形丝杠"
+            ]
+          },
+          {
+            "code": "1140034241",
+            "name": "滚珠丝杠",
+            "hierarchyPath": "机械设备 > 金属制品 > 金属制品 > 通用金属零部件 > 通用金属零部件 > 滚珠丝杠",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603009.SH",
+                "stockName": "北特科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601100.SH",
+                "stockName": "恒立液压",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "丝杠"
+            ]
+          },
+          {
+            "code": "1140208329",
+            "name": "行星滚柱丝杠",
+            "hierarchyPath": "机械设备 > 金属制品 > 金属制品 > 通用金属零部件 > 通用金属零部件 > 行星滚柱丝杠",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603009.SH",
+                "stockName": "北特科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601100.SH",
+                "stockName": "恒立液压",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "丝杠"
+            ]
+          }
+        ],
+        "rank": 1
       },
       {
-        "code": "1140035220",
-        "name": "减速器",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "event_title",
-        "stockCount": 2,
+        "code": "1200001153",
+        "name": "汽车底盘系统",
+        "description": "汽车底盘系统涵盖悬挂、制动等核心部件，决定车辆操控与安全。因新能源汽车轻量化、线控底盘及智能化升级需求爆发，该行业技术壁垒高且价值量提升，成为A股聚焦的高成长赛道，备受资本关注。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
         "stocks": [
           {
             "stockCode": "301550.SZ",
             "stockName": "斯菱智驱",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "688017.SH",
-            "stockName": "绿的谐波",
-            "rating": "★★★★☆"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 5,
-        "downstreamCount": 132,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
+        "products": [
+          {
+            "code": "1140218261",
+            "name": "减速器专用轴承",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 减速器专用轴承",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301550.SZ",
+                "stockName": "斯菱智驱",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 10,
+    "mappedStockCount": 7,
+    "unmappedStockCount": 3,
+    "level7ProductCount": 18,
+    "candidateIndustryCount": 8,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 11370,
+        "stockCode": "002850.SZ",
+        "stockName": "科达利",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 11371,
+        "stockCode": "688017.SH",
+        "stockName": "绿的谐波",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 11372,
+        "stockCode": "301550.SZ",
+        "stockName": "斯菱智驱",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 11374,
+        "stockCode": "300503.SZ",
+        "stockName": "昊志机电",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 11376,
+        "stockCode": "002434.SZ",
+        "stockName": "万里扬",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 11377,
+        "stockCode": "001282.SZ",
+        "stockName": "三联锻造",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 11381,
+        "stockCode": "002472.SZ",
+        "stockName": "双环传动",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 11383,
+        "stockCode": "601100.SH",
+        "stockName": "恒立液压",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 11384,
+        "stockCode": "603009.SH",
+        "stockName": "北特科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 11385,
+        "stockCode": "300969.SZ",
+        "stockName": "恒帅股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140033128",
-        "name": "SCARA机器人(圆柱坐标型机器人手臂)",
-        "anchorCount": 1,
+        "code": "1200000407",
+        "name": "通用金属零部件",
+        "description": "该行业指生产螺栓、轴承等基础机械部件的企业。因具备“工业基石”属性，且受益于设备更新政策及高端制造升级，业绩稳健、估值合理，兼具防御性与成长潜力，成为资金关注的高性价比板块。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
+        "starWeight": 6,
+        "level7ProductCount": 3,
+        "relevanceScore": 50,
+        "stocks": [
+          {
+            "stockCode": "603009.SH",
+            "stockName": "北特科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "601100.SH",
+            "stockName": "恒立液压",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "减速器"
+        "products": [
+          {
+            "code": "1140208328",
+            "name": "梯形丝杠",
+            "hierarchyPath": "机械设备 > 金属制品 > 金属制品 > 通用金属零部件 > 通用金属零部件 > 梯形丝杠",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603009.SH",
+                "stockName": "北特科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 18,
+            "matchedTerms": [
+              "丝杠",
+              "梯形丝杠"
+            ]
+          },
+          {
+            "code": "1140034241",
+            "name": "滚珠丝杠",
+            "hierarchyPath": "机械设备 > 金属制品 > 金属制品 > 通用金属零部件 > 通用金属零部件 > 滚珠丝杠",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603009.SH",
+                "stockName": "北特科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601100.SH",
+                "stockName": "恒立液压",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "丝杠"
+            ]
+          },
+          {
+            "code": "1140208329",
+            "name": "行星滚柱丝杠",
+            "hierarchyPath": "机械设备 > 金属制品 > 金属制品 > 通用金属零部件 > 通用金属零部件 > 行星滚柱丝杠",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603009.SH",
+                "stockName": "北特科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "601100.SH",
+                "stockName": "恒立液压",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "丝杠"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140159791",
-        "name": "人行通道门",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
+        "code": "1200001153",
+        "name": "汽车底盘系统",
+        "description": "汽车底盘系统涵盖悬挂、制动等核心部件，决定车辆操控与安全。因新能源汽车轻量化、线控底盘及智能化升级需求爆发，该行业技术壁垒高且价值量提升，成为A股聚焦的高成长赛道，备受资本关注。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "301550.SZ",
+            "stockName": "斯菱智驱",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "减速器"
+        "products": [
+          {
+            "code": "1140218261",
+            "name": "减速器专用轴承",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 减速器专用轴承",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301550.SZ",
+                "stockName": "斯菱智驱",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140077350",
-        "name": "传动系统",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140033575",
-        "name": "全自动平衡机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140058781",
-        "name": "冷轧机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140033207",
-        "name": "减速电机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140071316",
-        "name": "切管机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140041020",
-        "name": "刮板机驱动装置",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140070568",
-        "name": "动力传输系统",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140034016",
-        "name": "医用装盒机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140039571",
-        "name": "升船机船厢驱动系统",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140041210",
-        "name": "协作机器人驱动系统",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140033668",
-        "name": "压平机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140110685",
-        "name": "压缩机底座自动环形流水线上料系统",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140035220"
-        ],
-        "linkedCoreProductNames": [
-          "减速器"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -534,11 +513,816 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 22,
+    "eligibleSourceRowCount": 10,
+    "totalStockCount": 10,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 8,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 10,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 11370,
+            "stockCode": "002850.SZ",
+            "stockName": "科达利",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "事件核心主角，公告拟在泰国投建谐波减速器生产基地，正式切入机器人核心零部件赛道。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002850.SZ",
+              "companyName": "科达利",
+              "companyProfile": "公司所处行业为精密结构件制造业，具体面向的下游应用行业为动力电池行业和汽车行业，目前产品主要应用于动力电池、储能电池等电池精密结构件的制造，最终应用于新能源汽车以及储能领域等。公司生产的新能源汽车动力电池精密结构件、储能电池精密结构件、消费类电池精密结构件以及汽车零部件广泛应用于汽车及新能源汽车、动力电池、便携式通讯电子产品、电动工具、储能电站等众多行业领域，总体面向多行业客户服务，不同行业的周期性、季节性不尽相同，整体来看，精密结构件制造行业未表现出明显的周期性和季节性。公司经过二十七年的发展，已成为动力电池精密结构件行业具备影响力的企业。公司客户涵盖全球知名动力电池、储能电池及汽车制造企业，如CATL、中创新航、LG、松下、特斯拉、Northvolt、ACC、三星、亿纬锂能、欣旺达、蜂巢能源、力神、海辰储能、瑞浦兰钧、远景动力、广汽集团等。随着下游客户市场集中度的提高，以公司为代表的服务于业界领先客户的第一梯队企业的订单量、业务规模和市场份额亦将呈增长趋势。公司充分利用并实现了动力电池精密结构件和汽车结构件的技术融合，既通过动力电池精密结构件的生产掌握了高安全性、高精密度的生产工艺，又通过汽车结构件的生产具备了大型结构件的生产设备和开发条件。",
+              "profileSummary": "公司所处行业为精密结构件制造业，具体面向的下游应用行业为动力电池行业和汽车行业，目前产品主要应用于动力电池、储能电池等电池精密结构件的制造，最终应用于新能源汽车以及储能领域等。公司生产的新能源汽车动力电池精密结构件、储能电池精密结构件、消费类电池精密结构件以及汽车零部件广泛应用于汽车及新能源汽车、动力电池、便携式通讯电子产品、电动工具、储能电站等众多行业领域，总体面向多行业客户服务，不同行业的周期性、季节性不尽相同，整体来看，精密结构…",
+              "majorProducts": "储能电池精密结构件、汽车零部件、消费类电池精密结构件、新能源汽车动力电池精密结构件",
+              "revenueComposition": "锂电池结构件:96.66%;汽车结构件:3.09%;其他业务:0.15%;其他结构件:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "锂电池结构件",
+                  "sharePct": 96.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车结构件",
+                  "sharePct": 3.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他结构件",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "汽车控仪表",
+                  "动力锂电池盖板",
+                  "动力锂电池铝壳",
+                  "动力锂电池铝极柱"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "科达利当前收入集中在锂电池结构件（96.66%）、汽车结构件（3.09%），现有产品以汽车控仪表、动力锂电池盖板、动力锂电池铝壳、动力锂电池铝极柱为主，与新闻所指的“事件核心主角，公告拟在泰国投建谐波减速器生产基地，正式切入机器人核心零部件赛道”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，事件能否转化为可确认的经营增量才可能沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。在此之前，订单、收入确认、产品结构和毛利率变化若没有出现，事件对公司基本面的影响应按较弱处理；事件关联停留在主题层面，未形成可持续订单或利润贡献会进一步压低相关性。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 11371,
+            "stockCode": "688017.SH",
+            "stockName": "绿的谐波",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内谐波减速器绝对龙头，是科达利在国内市场最主要的竞争对手，深度受益于机器人产业发展。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688017.SH",
+              "companyName": "绿的谐波",
+              "companyProfile": "公司成立于2011年，公司于2020年8月在科创板上市，公司是从事精密传动装置研发、设计和生产的高新技术企业，主要产品包括谐波减速器、机电一体化执行器及精密零部件。公司核心研发团队从2003年开始从事机器人用精密谐波减速器理论基础的研究，经过多年自主研发，公司在国内率先实现了精密谐波减速器的技术突破，打破了国际品牌在国内机器人谐波减速器领域的垄断，凭借着严格的质量管控及完善的产品体系，公司在国内市场已逐步实现了对国际品牌的进口替代，在国产谐波减速器行业中确立了明显的竞争优势，已成长为行业内的领军企业。公司是国家专精特新小巨人企业、国家制造业单项冠军示范企业、国家高新技术企业，同时设有江苏省谐波减速器工程研究中心、江苏省工业企业技术中心、江苏省精密谐波减速器工程技术研究中心。公司在谐波减速器领域具有领先的技术研发水平，已通过ISO9001、ISO14001及IFTA16949国际质量体系认证，参与并承担了多项国家、团体标准的编制。近年来，公司聚焦人形机器人核心传动零部件，攻克了机电一体化、机械振动抑制等技术壁垒，研发出了高功率密度旋转关节、行星滚柱丝杠及直线电缸等精密传动装置。并且，公司联合上海交大，研制出完全拥有自主知识产权的四/五轴数控机床和行星滚柱丝用内/外圆磨床，其精度已达到全球顶尖的C0级别。",
+              "profileSummary": "公司成立于2011年，公司于2020年8月在科创板上市，公司是从事精密传动装置研发、设计和生产的高新技术企业，主要产品包括谐波减速器、机电一体化执行器及精密零部件。公司核心研发团队从2003年开始从事机器人用精密谐波减速器理论基础的研究，经过多年自主研发，公司在国内率先实现了精密谐波减速器的技术突破，打破了国际品牌在国内机器人谐波减速器领域的垄断，凭借着严格的质量管控及完善的产品体系，公司在国内市场已逐步实现了对国际品牌的进口替代，在…",
+              "majorProducts": "AES浮动电主轴、AGP自适应打磨工具、ATB砂带磨抛产品、ATC自动换刀库、ECM浮动模块、KAH系列旋转执行器、KAS系列旋转执行器、KAT系列旋转执行器、KCR系列数控机床四轴转台、KDE系列总线型伺服驱动器、KGM系列减速模组、KGR系列数控机床五轴转台、KGU系列轻量小型化旋转执行器、KMF系列无框力矩电机、KUR系列五轴数控转台、LCD、LCS（G）-I、LCS（G）-II、LHD-I、LHS（G）-（CL）-III、LHS（G）-I、LHS（G）-II、LHS（G）-IV、N系列、Y系列、不锈钢机加工零部件、电动静液压作动器（EHA）、阀控执行器、精密零部件、铝制机加工零部件、铁制机加工零部件、铜制机加工零部件、谐波减速器",
+              "revenueComposition": "谐波减速器及金属部件:83.49%;机电一体化产品:13.02%;智能自动化装备:2.61%;其他业务:0.88%",
+              "revenueSegments": [
+                {
+                  "name": "谐波减速器及金属部件",
+                  "sharePct": 83.49,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "机电一体化产品",
+                  "sharePct": 13.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能自动化装备",
+                  "sharePct": 2.61,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "谐波减速器",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "旋转执行器",
+                    "category": "自动化设备配件"
+                  }
+                ],
+                "knownProducts": [
+                  "谐波减速器",
+                  "旋转执行器",
+                  "精密金属零部件"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "绿的谐波的事件暴露较为直接：谐波减速器及金属部件占收入的83.49%，相关业务不是边缘尝试；具体业务抓手是：国内谐波减速器绝对龙头，是科达利在国内市场最主要的竞争对手，深度受益于机器人产业发展。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 11372,
+            "stockCode": "301550.SZ",
+            "stockName": "斯菱智驱",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "为特斯拉机器人稳定交付谐波减速器和交叉滚子轴承，是T链核心供应商之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301550.SZ",
+              "companyName": "斯菱智驱",
+              "companyProfile": "公司是一家专业生产汽车轴承的汽车零部件制造企业，主营业务为汽车轴承的研发、制造和销售。公司成立以来，一直秉承“创新、务实”的企业经营理念，以市场需求为导向、客户体验为基石、技术创新为动力，在汽车轴承领域积累了多年的售后市场及主机配套市场经验，致力于打造全球领先的汽车轴承民族品牌，成为具有全球竞争力的汽车轴承制造商。公司是经浙江省科学技术厅、浙江省财政厅、国家税务总局浙江省税务局认定的高新技术企业，入选第三批国家专精特新“小巨人”企业名单，先后荣获浙江省科技型中小企业、浙江省安全标准化生产企业、浙江省清洁生产企业、浙江省著名商标、浙江省创新型示范中小企业、浙江省高成长科技型企业、浙江省“隐形冠军培育企业”、浙江精品制造项目、浙江省绿色企业、新昌县县长质量奖、绍兴市专利示范企业等称号，并荣获全国轴承行业“十二五”发展先进企业、中国轴承市场营销30强、中国离合器轴承生产企业10强等行业荣誉。根据中国轴承工业协会对行业重点联系企业的数据统计，在售后市场领域，公司的轮毂轴承单元产品销量在国内同类企业中排名前三，在全球市场也具有较高的知名度和较强市场竞争力。",
+              "profileSummary": "公司是一家专业生产汽车轴承的汽车零部件制造企业，主营业务为汽车轴承的研发、制造和销售。公司成立以来，一直秉承“创新、务实”的企业经营理念，以市场需求为导向、客户体验为基石、技术创新为动力，在汽车轴承领域积累了多年的售后市场及主机配套市场经验，致力于打造全球领先的汽车轴承民族品牌，成为具有全球竞争力的汽车轴承制造商。",
+              "majorProducts": "工程机械用轴承、离合器轴承、轮毂轴承、轮毂轴承单元、农机轴承和农机轴承单元、驱动电机轴承、圆锥轴承、涨紧轮及惰轮轴承、重卡轴承",
+              "revenueComposition": "制动系统类轴承:78.69%;传动系统类轴承:12.9%;动力系统类轴承:6.09%;非汽车类轴承:1.46%;其他业务:0.86%",
+              "revenueSegments": [
+                {
+                  "name": "制动系统类轴承",
+                  "sharePct": 78.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "传动系统类轴承",
+                  "sharePct": 12.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "动力系统类轴承",
+                  "sharePct": 6.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "非汽车类轴承",
+                  "sharePct": 1.46,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "减速器专用轴承",
+                    "category": "汽车底盘传动系统"
+                  }
+                ],
+                "knownProducts": [
+                  "新能源汽车驱动电机轴承",
+                  "减速器专用轴承",
+                  "汽车圆锥轴承",
+                  "汽车惰轮轴承",
+                  "汽车皮带涨紧轮",
+                  "汽车离合器分离轴承",
+                  "汽车轮毂轴承",
+                  "汽车轮毂轴承单元"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "斯菱智驱已经具备减速器专用轴承等业务能力，为特斯拉机器人稳定交付谐波减速器和交叉滚子轴承，是T链核心供应商之一并非单纯概念映射。当前对应的收入被归入非汽车类轴承（1.46%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，并最终反映在客户认证、新增订单、交付节奏、相关业务收入和毛利率上；客户验证或交付节奏低于预期，订单停留在小批量阶段会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 7,
+        "stocks": [
+          {
+            "sourceRowNumber": 11374,
+            "stockCode": "300503.SZ",
+            "stockName": "昊志机电",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司自研谐波减速器等机器人核心零部件，并已向部分人形机器人厂商送样。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300503.SZ",
+              "companyName": "昊志机电",
+              "companyProfile": "公司成立于2006年12月，于2016年3月在深圳证券交易所创业板上市。作为国家高新技术企业及专精特新“小巨人”企业，公司长期深耕高端装备核心功能部件领域，业务广泛覆盖中高端数控机床、机器人、新能源汽车及商业航天等战略性新兴产业。在数控机床领域，公司产品涵盖主轴、转台、直线电机、数控系统及编码器等关键部件；在机器人领域，提供谐波减速器、DD电机、低压伺服驱动、刹车机构、编码器、末端执行器及力矩传感器等核心组件；在新能源汽车领域，专注于氢燃料电池空压机和曝气鼓风机的研发与生产；在商业航天领域，则涉及火箭控制系统功能部件、卫星姿控系统与推进系统功能部件等高端装备的研发与应用。",
+              "profileSummary": "作为国家高新技术企业及专精特新“小巨人”企业，公司长期深耕高端装备核心功能部件领域，业务广泛覆盖中高端数控机床、机器人、新能源汽车及商业航天等战略性新兴产业。在数控机床领域，公司产品涵盖主轴、转台、直线电机、数控系统及编码器等关键部件；在机器人领域，提供谐波减速器、DD电机、低压伺服驱动、刹车机构、编码器、末端执行器及力矩传感器等核心组件；在新能源汽车领域，专注于氢燃料电池空压机和曝气鼓风机的研发与生产；在商业航天领域，则涉及火箭控制…",
+              "majorProducts": "DD电机、PCB钻孔机和成型机电主轴、车床主轴、高速加工中心主轴、划片机电主轴、机器人关节模组、力矩电机转台、磨床主轴、末端执行功能部件、木工主轴、数控雕铣机主轴、谐波减速器、谐波转台、牙雕机电主轴、永磁同步直线电机、钻攻中心主轴",
+              "revenueComposition": "主轴:66.78%;运动控制产品:17.89%;转台、直线电机、减速器等功能部件:13.79%;其他业务:1.55%",
+              "revenueSegments": [
+                {
+                  "name": "主轴",
+                  "sharePct": 66.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运动控制产品",
+                  "sharePct": 17.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "转台、直线电机、减速器等功能部件",
+                  "sharePct": 13.79,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "谐波减速器",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "人形机器人关节模组",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "伺服电机",
+                    "category": "控制用电机"
+                  },
+                  {
+                    "name": "伺服驱动器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "六维力矩传感器",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "无框力矩电机",
+                    "category": "机器人部件"
+                  }
+                ],
+                "knownProducts": [
+                  "人形机器人关节模组",
+                  "六维力矩传感器",
+                  "无框力矩电机",
+                  "谐波减速器",
+                  "运动控制器",
+                  "主轴",
+                  "转台",
+                  "伺服电机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "昊志机电与事件存在真实业务交集：公司已有谐波减速器、人形机器人关节模组、伺服电机，与公司自研谐波减速器等机器人核心零部件，并已向部分人形机器人厂商送样所处的产业环节一致。转台、直线电机、减速器等功能部件（13.79%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响事件能否转化为可确认的经营增量，只有经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，才会形成可确认的收入和利润增量。订单、收入确认、产品结构和毛利率变化能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 11376,
+            "stockCode": "002434.SZ",
+            "stockName": "万里扬",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "将机器人零部件作为长期战略业务，大力发展谐波减速器、行星减速器及关节模组等产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002434.SZ",
+              "companyName": "万里扬",
+              "companyProfile": "公司从事的主要业务为汽车零部件业务和新型储能业务。汽车变速器产品包括乘用车变速器和商用车变速器，应用于轿车、SUV、MPV、微卡、轻卡、中卡、重卡、客车等不同车型。乘用车变速器主要为奇瑞汽车、吉利汽车、比亚迪汽车、长城汽车等汽车厂和国外客户的相关车型提供配套；商用车变速器主要为福田汽车、中国重汽、东风汽车、中国一汽、江铃汽车、庆铃汽车、江淮汽车、现代汽车等汽车厂和国外客户的相关车型提供配套。公司着力发展非公路传/驱动系统产品，包括工程机械电驱动系统、大马力拖拉机CVT、中大马力拖拉机动力换挡系统、机器人谐波减速器和行星减速器等产品。公司控股子公司万里扬能源公司主要从事储能电站投资和运营、电力市场现货交易、电力安全仿真服务等业务，致力于“为新能源提供全景技术支撑，为电力系统提供柔性调节能力，为用户提供零碳用能解决方案”。万里扬能源公司已在广东、甘肃等省份投运的发电侧储能电站，主要为发电厂提供调频服务。未来几年重点发展电网侧独立储能电站和用户侧储能电站。电网侧独立储能电站，主要为电网提供调峰、调频、备用、黑启动等灵活电力调节能力服务。公司已获得全国多个省份和地区的电力交易和碳资产管理资质，为用户提供电力市场运营管理、绿证及绿电运营管理、碳资产运营管理等服务，满足用户降本增效、节能减排、低碳环保等需求。",
+              "profileSummary": "公司从事的主要业务为汽车零部件业务和新型储能业务。公司着力发展非公路传/驱动系统产品，包括工程机械电驱动系统、大马力拖拉机CVT、中大马力拖拉机动力换挡系统、机器人谐波减速器和行星减速器等产品。",
+              "majorProducts": "乘用车无级变速器、大马力农机 CVT、工程机械电驱动系统、机器人谐波减速器、零部件业务、汽车内饰件、商用车系列变速器、新能源汽车传/驱动系统、行星减速器、中大马力农机动力换挡系统",
+              "revenueComposition": "变速器及配件:91.08%;其他:5.24%;储能业务:3.33%;融资租赁收入:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "变速器及配件",
+                  "sharePct": 91.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 5.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "储能业务",
+                  "sharePct": 3.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "融资租赁收入",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "乘用车手动挡变速箱",
+                  "乘用车自动挡变速箱",
+                  "商用车手动挡变速箱",
+                  "商用车自动挡变速箱",
+                  "机械式自动变速箱(AMT)",
+                  "电子离合变速箱(ECMT)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "万里扬的业务范围能够覆盖将机器人零部件作为长期战略业务，大力发展谐波减速器、行星减速器及关节模组等产品所处的产业环节，但当前变速器及配件（91.08%）、其他（5.24%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。事件能否转化为可确认的经营增量需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”完成兑现，并在订单、收入确认、产品结构和毛利率变化上形成持续改善；若事件关联停留在主题层面，未形成可持续订单或利润贡献，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 11377,
+            "stockCode": "001282.SZ",
+            "stockName": "三联锻造",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司主打产品包括谐波减速器的柔轮、刚轮等，已向国内头部机器人企业送样或定点量产。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "001282.SZ",
+              "companyName": "三联锻造",
+              "companyProfile": "公司成立于2004年，主要从事汽车锻造零部件的研发、生产和销售。公司产品主要应用于对零部件机械性能和安全性能要求较高的汽车动力系统、传动系统、转向系统以及悬挂支撑等系统。公司依托锻造技术优势，积极开发布局锻造零部件在新能源汽车中的应用，参与知名整车厂新能源汽车平台的锻造零部件开发。公司在研发创新、生产管理、质量控制、产品及时交付等方面的能力获得了众多国际知名汽车零部件集团客户高度认可，建立了持续的合作关系。公司主要客户博世、采埃孚、麦格纳、舍弗勒、博格华纳、本特勒、恩梯恩、美国车桥、利纳马、捷太格特、NSK等均为2023年全球汽车零部件供应商百强榜上榜企业，其中博世、采埃孚和麦格纳位列前五名。公司直接进入主机厂供应链体系的客户有宝马、大众、理想、蔚来、比亚迪等。同时，公司主要客户还有知名零部件企业THK、新晨动力、上汽变速器、斯凯孚等。公司产品广泛应用于奔驰、宝马、奥迪、路虎、大众、特斯拉、比亚迪、本田、马自达、日产、通用、福特、菲亚特、标致、上汽、上汽荣威、一汽、北汽、广汽、东风、长城、奇瑞、吉利、江淮、长安、五菱、赛力斯、小鹏、理想和蔚来等国内外知名车企生产的多种车型。公司技术研发中心不断开拓创新，从技术理念到研发水平都处于行业领先水平，并不断推进企业转型升级，努力实现从三联制造到三联创造的跨越。公司高压共轨产品作为国家火炬计划产业化示范项目，被评为高新技术产品及安徽工业精品，在国内商用车产业链中占有重要位置；公司轮毂轴承单元、转向节、多轴转向球头等产品被认定为高新技术产品。",
+              "profileSummary": "公司在研发创新、生产管理、质量控制、产品及时交付等方面的能力获得了众多国际知名汽车零部件集团客户高度认可，建立了持续的合作关系。公司主要客户博世、采埃孚、麦格纳、舍弗勒、博格华纳、本特勒、恩梯恩、美国车桥、利纳马、捷太格特、NSK等均为2023年全球汽车零部件供应商百强榜上榜企业，其中博世、采埃孚和麦格纳位列前五名。",
+              "majorProducts": "汽车锻造零部件",
+              "revenueComposition": "产品销售-轮毂轴承类:27.73%;产品销售-轴类:19.29%;球头拉杆类:13.28%;转向节类:10.33%;其他:9.08%;其他业务:6.95%;高压共轨类:6.66%;产品销售-节叉类:4.48%;受托加工类:2.2%",
+              "revenueSegments": [
+                {
+                  "name": "产品销售-轮毂轴承类",
+                  "sharePct": 27.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "产品销售-轴类",
+                  "sharePct": 19.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "球头拉杆类",
+                  "sharePct": 13.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "转向节类",
+                  "sharePct": 10.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 6.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高压共轨类",
+                  "sharePct": 6.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "产品销售-节叉类",
+                  "sharePct": 4.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "受托加工类",
+                  "sharePct": 2.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "卡车柴油机高压共轨",
+                  "新能源汽车驱动电机空心轴",
+                  "汽车发动机平衡轴",
+                  "汽车发动机曲轴",
+                  "汽车发动机连杆",
+                  "汽车发动机油泵泵体",
+                  "高压共轨轴",
+                  "汽车轮毂轴承"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三联锻造现有收入由产品销售-轮毂轴承类（27.73%）、产品销售-轴类（19.29%）贡献，主营产品为卡车柴油机高压共轨、新能源汽车驱动电机空心轴、汽车发动机平衡轴、汽车发动机曲轴，与公司主打产品包括谐波减速器的柔轮、刚轮等，已向国内头部机器人企业送样或定点量产指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，商业化进度和订单兑现才会通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”产生财务影响。现阶段客户认证、新增订单、交付节奏、相关业务收入和毛利率比概念标签更重要；若客户验证或交付节奏低于预期，订单停留在小批量阶段，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 11381,
+            "stockCode": "002472.SZ",
+            "stockName": "双环传动",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内少数能够生产制造RV减速器的厂家之一，是机器人传动部件龙头企业。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002472.SZ",
+              "companyName": "双环传动",
+              "companyProfile": "公司是全球专业齿轮散件制造领军企业，以“改变齿轮行业自给自足的格局”为己任，致力于为全球机械传动系统提供高速低噪、安全低碳的产品。精耕主业，笃行奋进，坚定同心多元化发展战略。创业40多年来，公司始终专注于机械传动核心部件——齿轮及其部组件的研发、制造与销售。管理总部位于杭州，下辖双环本部、江苏双环、嘉兴双环、重庆双环、大连环创、双环供应链、环智云创、环动科技、环驱科技、环欧智能、双环研究院、环一科技、EVORING(匈牙利子公司)等10多家分子公司，成为跨越中国、匈牙利、越南三个国家的集团公司，产品涵盖传统燃油车、新能源汽车、轨道交通、非道路机械、工业机器人、工业减速器、民生齿轮等多个领域，业务遍布全球，成为包括采埃孚、康明斯、卡特彼勒以及上汽、一汽等国内外知名企业的供应商，世界500强客户销售占比近60%，是全球专业齿轮散件制造领军企业，中国工业机器人减速器制造领军企业和中国新能源汽车齿轮制造领军企业。公司始终秉持“好一点，好很多”的核心价值观，将一直致力于为全球机械传动系统提供卓越的解决方案，以小博大，以精创优，以小齿轮转动大世界，努力向全球零部件百强企业迈进。",
+              "profileSummary": "公司是全球专业齿轮散件制造领军企业，以“改变齿轮行业自给自足的格局”为己任，致力于为全球机械传动系统提供高速低噪、安全低碳的产品。管理总部位于杭州，下辖双环本部、江苏双环、嘉兴双环、重庆双环、大连环创、双环供应链、环智云创、环动科技、环驱科技、环欧智能、双环研究院、环一科技、EVORING(匈牙利子公司)等10多家分子公司，成为跨越中国、匈牙利、越南三个国家的集团公司，产品涵盖传统燃油车、新能源汽车、轨道交通、非道路机械、工业机器人、…",
+              "majorProducts": "乘用车齿轮、电动工具齿轮、工程机械齿轮、减速器、摩托车齿轮、商用车齿轮",
+              "revenueComposition": "乘用车齿轮:65.9%;智能执行机构:8.75%;减速器及其他:8.73%;商用车齿轮:7.37%;工程机械齿轮:6.95%;电动工具齿轮:1.47%;摩托车齿轮:0.83%",
+              "revenueSegments": [
+                {
+                  "name": "乘用车齿轮",
+                  "sharePct": 65.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能执行机构",
+                  "sharePct": 8.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "减速器及其他",
+                  "sharePct": 8.73,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "商用车齿轮",
+                  "sharePct": 7.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程机械齿轮",
+                  "sharePct": 6.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电动工具齿轮",
+                  "sharePct": 1.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "摩托车齿轮",
+                  "sharePct": 0.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "RV减速器",
+                    "category": "机器人部件"
+                  }
+                ],
+                "knownProducts": [
+                  "钢铁贸易",
+                  "RV减速器",
+                  "电子机械制动系统(EMB)齿轮",
+                  "电动工具齿轮",
+                  "摩托车发动机齿轮",
+                  "乘用车发动机齿轮",
+                  "商用车发动机齿轮",
+                  "乘用车变速箱齿轮"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "双环传动已经具备RV减速器等业务能力，国内少数能够生产制造RV减速器的厂家之一，是机器人传动部件龙头企业并非单纯概念映射。当前对应的收入被归入减速器及其他（8.73%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 11383,
+            "stockCode": "601100.SH",
+            "stockName": "恒立液压",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "机器人领域除关节丝杠已批量量产外，在手部微型电机、关节电机等领域均有布局。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601100.SH",
+              "companyName": "恒立液压",
+              "companyProfile": "公司是一家集高压液压油缸、液压泵、液压阀、液压系统和高精密液压铸件、气动元件等系列产品研发、生产和销售为一体的龙头企业。公司是工信部单项冠军示范企业、工信部强基工程“一条龙”应用计划示范企业、国家高新技术企业、国家知识产权示范企业、中国绿色铸造示范企业、国家和行业标准制定单位。恒立液压在全球范围内设立了七大研发中心，包括恒立国际研发中心(中国常州)、恒立美国芝加哥研发中心、恒立德国柏林研发中心、恒立中国上海研发中心、恒立法国研发中心等。公司建有亚洲最大的液压油缸研发中心并建有江苏省唯一的“江苏省超高压油缸小型化轻量化设计工程技术研究中心”，还设有江苏省高压油缸工程中心、江苏省企业技术中心以及江苏省博士后工作站、江苏省研究生工作站、江苏省外国专家工作室等科技创新平台。",
+              "profileSummary": "公司是一家集高压液压油缸、液压泵、液压阀、液压系统和高精密液压铸件、气动元件等系列产品研发、生产和销售为一体的龙头企业。恒立液压在全球范围内设立了七大研发中心，包括恒立国际研发中心(中国常州)、恒立美国芝加哥研发中心、恒立德国柏林研发中心、恒立中国上海研发中心、恒立法国研发中心等。",
+              "majorProducts": "叉车油缸、车辆油缸、大型油缸、多级液压缸、工程油缸、工业拉杆油缸、海事油缸、千斤顶油缸、挖掘机油缸、冶金油缸",
+              "revenueComposition": "液压油缸:48.02%;液压泵阀:39.53%;铸件及配件等:8.15%;液压系统:3.52%;其他业务:0.77%",
+              "revenueSegments": [
+                {
+                  "name": "液压油缸",
+                  "sharePct": 48.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液压泵阀",
+                  "sharePct": 39.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铸件及配件等",
+                  "sharePct": 8.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液压系统",
+                  "sharePct": 3.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "滚珠丝杠",
+                    "category": "通用金属零部件"
+                  },
+                  {
+                    "name": "行星滚柱丝杠",
+                    "category": "通用金属零部件"
+                  }
+                ],
+                "knownProducts": [
+                  "液压测试台",
+                  "高压柱塞泵",
+                  "重型液压油缸",
+                  "高压油缸",
+                  "液压系统",
+                  "高精密液压铸件",
+                  "工业阀",
+                  "液压多路阀"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "恒立液压拥有滚珠丝杠、行星滚柱丝杠，其产业链位置与机器人领域除关节丝杠已批量量产外，在手部微型电机、关节电机等领域均有布局一致；当前的液压油缸（48.02%）、液压泵阀（39.53%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由商业化进度和订单兑现决定，并需完成“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”。只有客户认证、新增订单、交付节奏、相关业务收入和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；客户验证或交付节奏低于预期，订单停留在小批量阶段则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 11384,
+            "stockCode": "603009.SH",
+            "stockName": "北特科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "布局行星滚柱/滚珠/梯形丝杠，是T链核心供应商之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603009.SH",
+              "companyName": "北特科技",
+              "companyProfile": "公司始建于2002年，主要业务分为底盘零部件、铝合金轻量化、汽车空调压缩机三大板块。公司在上海、长春、天津、重庆、江苏等地布局专业化、规模化生产基地，主要生产配套各类乘用车、商用车、新能源汽车关键零部件，已成为国内最具影响力的专业研发、制造企业之一。公司处于国内主流车厂的零部件供应链中，其中底盘零部件业务属于汽车行业二级供应商，铝合金轻量化业务、汽车空调压缩机业务部分为一级供应商、部分为二级供应商。底盘零部件业务主要客户包括比亚迪、万都、采埃孚、耐世特、博世等国内外知名整车厂和汽车零部件一级供应商。铝合金轻量化业务主要客户包括比亚迪、采埃孚等国内外知名整车厂和汽车零部件一级供应商。空调压缩机业务主要客户涵盖福田汽车、一汽奔腾、北汽股份、中国重汽、徐工集团等知名整车厂。",
+              "profileSummary": "底盘零部件业务主要客户包括比亚迪、万都、采埃孚、耐世特、博世等国内外知名整车厂和汽车零部件一级供应商。铝合金轻量化业务主要客户包括比亚迪、采埃孚等国内外知名整车厂和汽车零部件一级供应商。",
+              "majorProducts": "CDC-evo控制阀壳体（外置）、CDC-ivo控制阀零部件（内置）、Flange、IPA总成、Piston、U型臂、Yoke类件、泵体、齿轮、齿条、传统燃油车压缩机、电池包连接块、活塞杆、集成阀岛、减震器零部件、空气悬架-上气室端盖、两点臂、扭力杆、喷油器体、汽车转向器零部件、三点臂、输出轴、输入轴、蜗杆、新能源电动压缩机(27/34/46/80CC等)、整车集成式热管理系统",
+              "revenueComposition": "底盘零部件:62.44%;空调压缩机:28.92%;铝合金轻量化业务:8.63%",
+              "revenueSegments": [
+                {
+                  "name": "底盘零部件",
+                  "sharePct": 62.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "空调压缩机",
+                  "sharePct": 28.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铝合金轻量化业务",
+                  "sharePct": 8.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "梯形丝杠",
+                    "category": "通用金属零部件"
+                  },
+                  {
+                    "name": "滚珠丝杠",
+                    "category": "通用金属零部件"
+                  },
+                  {
+                    "name": "行星滚柱丝杠",
+                    "category": "通用金属零部件"
+                  }
+                ],
+                "knownProducts": [
+                  "梯形丝杠",
+                  "滚珠丝杠",
+                  "行星滚柱丝杠",
+                  "汽车变速箱输入轴",
+                  "汽车差速器输出轴",
+                  "汽车CDC控制阀壳体",
+                  "汽车底盘减振器活塞杆",
+                  "汽车底盘铝合金控制臂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "北特科技实际经营中已有梯形丝杠、滚珠丝杠、行星滚柱丝杠，与事件指向的布局行星滚柱/滚珠/梯形丝杠，是T链核心供应商之一能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在底盘零部件（62.44%）、空调压缩机（28.92%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善事件能否转化为可确认的经营增量，需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。订单、收入确认、产品结构和毛利率变化将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 11385,
+            "stockCode": "300969.SZ",
+            "stockName": "恒帅股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "重点布局机器人相关无刷微电机领域，是T链核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300969.SZ",
+              "companyName": "恒帅股份",
+              "companyProfile": "公司主要从事车用微电机及以微电机为核心组件的汽车清洗泵、清洗系统产品的研发、生产与销售，致力于成为全球领先的汽车微电机技术解决方案供应商。公司以微电机技术为核心，开发了应用于不同领域的产品：一是微电机技术产品，包括后备箱及侧门电机、风扇电机、ABS电机等；二是基于微电机技术开发的流体技术产品，包括清洗系统、清洗泵等产品。自成立以来，公司一直专注于为整车厂和汽车零部件供应商提供稳定性高、品质可靠的车用微电机、清洗泵、清洗系统产品；有着深厚的技术沉淀和丰富的生产经验，熟悉汽车行业对汽车零部件在一致性、功能性与稳定性方面的高要求；具备与客户同步研发的能力，为客户在自动化、智能化以及清晰视觉等应用领域提供系统的解决方案，在行业内拥有较强的竞争力。",
+              "profileSummary": "公司主要从事车用微电机及以微电机为核心组件的汽车清洗泵、清洗系统产品的研发、生产与销售，致力于成为全球领先的汽车微电机技术解决方案供应商。自成立以来，公司一直专注于为整车厂和汽车零部件供应商提供稳定性高、品质可靠的车用微电机、清洗泵、清洗系统产品；有着深厚的技术沉淀和丰富的生产经验，熟悉汽车行业对汽车零部件在一致性、功能性与稳定性方面的高要求；具备与客户同步研发的能力，为客户在自动化、智能化以及清晰视觉等应用领域提供系统的解决方案，在…",
+              "majorProducts": "ABS电机、侧门电机、充电小门执行器、电子循环泵、风扇电机、滚筒电机、后备箱、汽车清洗泵、清洗系统产品、新能源汽车热管理系统的冷却岐管、隐形门把手驱动机构、智能汽车高级驾驶辅助系统（ADAS）传感器的主动感知清洗系统",
+              "revenueComposition": "清洗类产品:45.75%;汽车电机:45.38%;其他产品:8.87%",
+              "revenueSegments": [
+                {
+                  "name": "清洗类产品",
+                  "sharePct": 45.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车电机",
+                  "sharePct": 45.38,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 8.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "摩托车ABS电机",
+                    "category": "摩托车零部件"
+                  },
+                  {
+                    "name": "汽车侧门电机",
+                    "category": "汽车车身附件"
+                  },
+                  {
+                    "name": "汽车后备箱电机",
+                    "category": "汽车后备箱盖"
+                  },
+                  {
+                    "name": "汽车电子水泵用电机",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "汽车空调风扇电机",
+                    "category": "汽车车身附件"
+                  }
+                ],
+                "knownProducts": [
+                  "摩托车ABS电机",
+                  "汽车清洗泵",
+                  "汽车清洗系统",
+                  "汽车电子水泵用电机",
+                  "汽车后备箱电机",
+                  "汽车侧门电机",
+                  "汽车空调风扇电机",
+                  "液位传感器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "恒帅股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：汽车电机占收入的45.38%。公司与事件的具体联系在于：重点布局机器人相关无刷微电机领域，是T链核心供应商，对应的核心变量是事件能否转化为可确认的经营增量。若这一变量沿着“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，订单、收入确认、产品结构和毛利率变化既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；事件关联停留在主题层面，未形成可持续订单或利润贡献则可能令增量低于预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "8条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

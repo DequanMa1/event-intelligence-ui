@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26323",
@@ -9,10 +9,10 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 5,
-    "mappedStockCount": 5,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 3,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 1016,
@@ -20,8 +20,8 @@
         "stockName": "兴福电子",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 7
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 1023,
@@ -29,8 +29,8 @@
         "stockName": "云南锗业",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 9
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 1026,
@@ -60,118 +60,37 @@
         "anchorProductCount": 11
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 1016,
+        "stockCode": "688545.SH",
+        "stockName": "兴福电子",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 1023,
+        "stockCode": "002428.SZ",
+        "stockName": "云南锗业",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 31,
-    "selectedCoreProductCount": 16,
+    "selectedCoreProductCount": 15,
     "selectedCompanyCoreProductCount": 15,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 6,
-    "downstreamCandidateCount": 3,
-    "shownUpstreamCount": 6,
-    "shownDownstreamCount": 3
+    "level7ProductCount": 70,
+    "relatedIndustryCandidateCount": 21,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140105033",
-        "name": "光电探测器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111292"
-        ],
-        "linkedCoreProductNames": [
-          "DFB激光器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140111664",
-        "name": "热沉",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111292"
-        ],
-        "linkedCoreProductNames": [
-          "DFB激光器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140111663",
-        "name": "热电致冷器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111292"
-        ],
-        "linkedCoreProductNames": [
-          "DFB激光器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140111662",
-        "name": "管壳",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111292"
-        ],
-        "linkedCoreProductNames": [
-          "DFB激光器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140022971",
-        "name": "透镜",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111292"
-        ],
-        "linkedCoreProductNames": [
-          "DFB激光器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140008516",
-        "name": "隔离器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111292"
-        ],
-        "linkedCoreProductNames": [
-          "DFB激光器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140220983",
         "name": "线性可插拔光模块(LPO)",
@@ -197,23 +116,21 @@
           "name": "线性可插拔光模块(LPO)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "300308.SZ",
             "stockName": "中际旭创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 15,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -248,23 +165,21 @@
           "name": "超高密度可插拔光模块(XPO)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "300308.SZ",
             "stockName": "中际旭创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 15,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -299,18 +214,15 @@
           "name": "线性接收光模块(LRO)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 15,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -345,18 +257,15 @@
           "name": "汽车光电子传感器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300308.SZ",
             "stockName": "中际旭创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 12,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -391,18 +300,15 @@
           "name": "DFB激光器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688498.SH",
             "stockName": "源杰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 1,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -437,23 +343,21 @@
           "name": "共封装光学(CPO)模块"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "300308.SZ",
             "stockName": "中际旭创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -487,23 +391,21 @@
           "name": "含DSP可插拔光模块(DPO)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "300308.SZ",
             "stockName": "中际旭创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -537,23 +439,21 @@
           "name": "近封装光模块(NPO)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "300308.SZ",
             "stockName": "中际旭创",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -587,18 +487,15 @@
           "name": "CW激光器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688498.SH",
             "stockName": "源杰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -632,18 +529,15 @@
           "name": "FP激光器芯片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688498.SH",
             "stockName": "源杰科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -677,18 +571,15 @@
           "name": "PON光模块"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -722,18 +613,15 @@
           "name": "三向光发射接受组件(TRI-OSA)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -767,18 +655,15 @@
           "name": "光发射接收组件(BOSA)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -812,18 +697,15 @@
           "name": "光发射组件(TOSA)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -857,18 +739,15 @@
           "name": "光接收组件(ROSA)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300502.SZ",
             "stockName": "新易盛",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -876,90 +755,468 @@
           "通信设备",
           "通信"
         ]
-      },
-      {
-        "code": "1140111292",
-        "name": "DFB激光器",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:DFB激光器芯片",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688498.SH",
-            "stockName": "源杰科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 7,
-        "downstreamCount": 3,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140112215",
-        "name": "4G/5G无线通信网",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111292"
+        "code": "1200000935",
+        "name": "高纯度电子级磷化工产品",
+        "description": "该行业指生产用于半导体、锂电的高纯磷化学品。因芯片制造清洗蚀刻及磷酸铁锂需求爆发，国产替代加速，技术壁垒高且景气度向上，成为A股聚焦的高成长细分赛道。",
+        "stockCount": 3,
+        "starWeight": 12,
+        "level7ProductCount": 2,
+        "relevanceScore": 68,
+        "stocks": [
+          {
+            "stockCode": "600141.SH",
+            "stockName": "兴发集团",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688545.SH",
+            "stockName": "兴福电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600078.SH",
+            "stockName": "澄星股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "DFB激光器"
+        "products": [
+          {
+            "code": "1140067948",
+            "name": "电子级磷酸",
+            "hierarchyPath": "化工 > 农化制品 > 磷肥及磷化工 > 高纯度电子级磷化工产品 > 电子级磷酸 > 电子级磷酸",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600141.SH",
+                "stockName": "兴发集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688545.SH",
+                "stockName": "兴福电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600078.SH",
+                "stockName": "澄星股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "电子级磷酸"
+            ]
+          },
+          {
+            "code": "1140014155",
+            "name": "磷酸二氢锂",
+            "hierarchyPath": "化工 > 农化制品 > 磷肥及磷化工 > 高纯度电子级磷化工产品 > 电子级亚磷酸及其盐 > 磷酸二氢锂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600141.SH",
+                "stockName": "兴发集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140022397",
-        "name": "接入网",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111292"
+        "code": "1200001270",
+        "name": "湿电子化学品",
+        "description": "湿电子化学品指用于半导体、面板制造的高纯试剂。因受益于芯片国产化加速及先进制程需求爆发，其技术壁垒高、成长确定性强，成为A股半导体材料板块的核心关注点，兼具国产替代与高端制造双重逻辑。",
+        "stockCount": 2,
+        "starWeight": 9,
+        "level7ProductCount": 6,
+        "relevanceScore": 84,
+        "stocks": [
+          {
+            "stockCode": "600141.SH",
+            "stockName": "兴发集团",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688545.SH",
+            "stockName": "兴福电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "DFB激光器"
+        "products": [
+          {
+            "code": "1140192207",
+            "name": "晶圆清洗液",
+            "hierarchyPath": "电子 > 半导体 > 半导体材料 > 湿电子化学品 > 清洗液 > 晶圆清洗液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688545.SH",
+                "stockName": "兴福电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140206815",
+            "name": "硅蚀刻液",
+            "hierarchyPath": "电子 > 半导体 > 半导体材料 > 湿电子化学品 > 刻蚀液 > 硅蚀刻液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688545.SH",
+                "stockName": "兴福电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140206816",
+            "name": "金属蚀刻液",
+            "hierarchyPath": "电子 > 半导体 > 半导体材料 > 湿电子化学品 > 刻蚀液 > 金属蚀刻液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688545.SH",
+                "stockName": "兴福电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140079909",
+            "name": "刻蚀液",
+            "hierarchyPath": "电子 > 半导体 > 半导体材料 > 湿电子化学品 > 刻蚀液 > 刻蚀液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600141.SH",
+                "stockName": "兴发集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 11,
+    "mappedStockCount": 9,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 70,
+    "candidateIndustryCount": 21,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 1015,
+        "stockCode": "600141.SH",
+        "stockName": "兴发集团",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 18
       },
       {
-        "code": "1140077179",
-        "name": "数据中心",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111292"
+        "sourceRowNumber": 1016,
+        "stockCode": "688545.SH",
+        "stockName": "兴福电子",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 1017,
+        "stockCode": "600078.SH",
+        "stockName": "澄星股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 10
+      },
+      {
+        "sourceRowNumber": 1023,
+        "stockCode": "002428.SZ",
+        "stockName": "云南锗业",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 1024,
+        "stockCode": "600206.SH",
+        "stockName": "有研新材",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 1026,
+        "stockCode": "688498.SH",
+        "stockName": "源杰科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 1027,
+        "stockCode": "600703.SH",
+        "stockName": "三安光电",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 15
+      },
+      {
+        "sourceRowNumber": 1029,
+        "stockCode": "300308.SZ",
+        "stockName": "中际旭创",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 1030,
+        "stockCode": "300502.SZ",
+        "stockName": "新易盛",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 11
+      },
+      {
+        "sourceRowNumber": 1031,
+        "stockCode": "002384.SZ",
+        "stockName": "东山精密",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 1032,
+        "stockCode": "300394.SZ",
+        "stockName": "天孚通信",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 15
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000935",
+        "name": "高纯度电子级磷化工产品",
+        "description": "该行业指生产用于半导体、锂电的高纯磷化学品。因芯片制造清洗蚀刻及磷酸铁锂需求爆发，国产替代加速，技术壁垒高且景气度向上，成为A股聚焦的高成长细分赛道。",
+        "stockCount": 3,
+        "starWeight": 12,
+        "level7ProductCount": 2,
+        "relevanceScore": 68,
+        "stocks": [
+          {
+            "stockCode": "600141.SH",
+            "stockName": "兴发集团",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688545.SH",
+            "stockName": "兴福电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600078.SH",
+            "stockName": "澄星股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "DFB激光器"
+        "products": [
+          {
+            "code": "1140067948",
+            "name": "电子级磷酸",
+            "hierarchyPath": "化工 > 农化制品 > 磷肥及磷化工 > 高纯度电子级磷化工产品 > 电子级磷酸 > 电子级磷酸",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600141.SH",
+                "stockName": "兴发集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688545.SH",
+                "stockName": "兴福电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600078.SH",
+                "stockName": "澄星股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "电子级磷酸"
+            ]
+          },
+          {
+            "code": "1140014155",
+            "name": "磷酸二氢锂",
+            "hierarchyPath": "化工 > 农化制品 > 磷肥及磷化工 > 高纯度电子级磷化工产品 > 电子级亚磷酸及其盐 > 磷酸二氢锂",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600141.SH",
+                "stockName": "兴发集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200001270",
+        "name": "湿电子化学品",
+        "description": "湿电子化学品指用于半导体、面板制造的高纯试剂。因受益于芯片国产化加速及先进制程需求爆发，其技术壁垒高、成长确定性强，成为A股半导体材料板块的核心关注点，兼具国产替代与高端制造双重逻辑。",
+        "stockCount": 2,
+        "starWeight": 9,
+        "level7ProductCount": 6,
+        "relevanceScore": 84,
+        "stocks": [
+          {
+            "stockCode": "600141.SH",
+            "stockName": "兴发集团",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688545.SH",
+            "stockName": "兴福电子",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140192207",
+            "name": "晶圆清洗液",
+            "hierarchyPath": "电子 > 半导体 > 半导体材料 > 湿电子化学品 > 清洗液 > 晶圆清洗液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688545.SH",
+                "stockName": "兴福电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140206815",
+            "name": "硅蚀刻液",
+            "hierarchyPath": "电子 > 半导体 > 半导体材料 > 湿电子化学品 > 刻蚀液 > 硅蚀刻液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688545.SH",
+                "stockName": "兴福电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140206816",
+            "name": "金属蚀刻液",
+            "hierarchyPath": "电子 > 半导体 > 半导体材料 > 湿电子化学品 > 刻蚀液 > 金属蚀刻液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688545.SH",
+                "stockName": "兴福电子",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140079909",
+            "name": "刻蚀液",
+            "hierarchyPath": "电子 > 半导体 > 半导体材料 > 湿电子化学品 > 刻蚀液 > 刻蚀液",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600141.SH",
+                "stockName": "兴发集团",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -974,10 +1231,996 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 18,
+    "eligibleSourceRowCount": 11,
+    "totalStockCount": 11,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 7,
+    "excludedNonAShareCount": 0,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 11,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 1015,
+            "stockCode": "600141.SH",
+            "stockName": "兴发集团",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "AI光模块核心上游材料磷化铟（InP）的关键原料高纯磷源的国产替代核心标的，直接受益于产业链瓶颈环节的价值重估。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600141.SH",
+              "companyName": "兴发集团",
+              "companyProfile": "公司成立于1994年，注册地位于湖北省宜昌市兴山县境内，1999年在上海证券交易所上市。公司以全球领先的精细磷化工为核心，致力于绿色循环发展，是一家全球化运营企业。公司长期专注于精细化工产品开发，形成了规模大、种类全、附加值和技术含量较高的产品链，现有食品级、医药级、电子级等9个门类26个系列674个品种，是全国精细磷产品门类最全、品种最多的企业之一。近年来公司加快实施以高端新材料、新能源产业为核心的战略布局，持续加码研发投入及成果转化，全面提高资源、能源自给率，推进磷、硅、硫、盐、氟化工融合发展，形成了“资源能源为基础、精细化工为主导、关联产业相配套”的产业格局。公司是国家高新技术企业、国家科技创新示范企业，多年来始终坚持“精细化、绿色化、高端化、国际化”发展思路，持续加强自主创新能力建设，截至目前，先后组织实施了40多个国家、省市级重点科技计划项目；参与制定国际标准2项，主持和参与制定国家、行业及团体各类标准106项；截至2024年末，公司拥有专利授权1,421件，其中发明专利483件、实用新型专利938件，公司合并报表范围内高新技术企业达到15家。2024年，公司“集成电路用超高纯电子级硫酸生产关键技术及应用”荣获中国石油和化学工业联合会科技进步奖一等奖，“草甘膦连续催化合成与副产物增甘膦分离回收新技术及产业化”获湖北省科技进步二等奖，“基于乙烯基摩尔量的甲基乙烯基硅橡胶生产关键技术”获湖北省科技进步三等奖。",
+              "profileSummary": "公司长期专注于精细化工产品开发，形成了规模大、种类全、附加值和技术含量较高的产品链，现有食品级、医药级、电子级等9个门类26个系列674个品种，是全国精细磷产品门类最全、品种最多的企业之一。近年来公司加快实施以高端新材料、新能源产业为核心的战略布局，持续加码研发投入及成果转化，全面提高资源、能源自给率，推进磷、硅、硫、盐、氟化工融合发展，形成了“资源能源为基础、精细化工为主导、关联产业相配套”的产业格局。",
+              "majorProducts": "兴发二甲基亚砜、兴发黄磷、兴发磷矿石、兴发六偏磷酸钠、兴发三聚磷酸钠",
+              "revenueComposition": "特种化学品:18.27%;农药:18.18%;肥料:13.79%;矿山采选:11.96%;其他:11.5%;商贸物流:11.19%;有机硅系列:9.63%;新能源:5.49%",
+              "revenueSegments": [
+                {
+                  "name": "特种化学品",
+                  "sharePct": 18.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "农药",
+                  "sharePct": 18.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "肥料",
+                  "sharePct": 13.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山采选",
+                  "sharePct": 11.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 11.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "商贸物流",
+                  "sharePct": 11.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "有机硅系列",
+                  "sharePct": 9.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源",
+                  "sharePct": 5.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "107胶",
+                    "category": "硅橡胶"
+                  },
+                  {
+                    "name": "110生胶",
+                    "category": "硅橡胶"
+                  },
+                  {
+                    "name": "三聚磷酸钠",
+                    "category": "磷化物及磷酸盐"
+                  },
+                  {
+                    "name": "二甲基硅氧烷混合环体(DMC)",
+                    "category": "有机硅中间体"
+                  },
+                  {
+                    "name": "六偏磷酸钠",
+                    "category": "磷化物及磷酸盐"
+                  },
+                  {
+                    "name": "刻蚀液",
+                    "category": "刻蚀液"
+                  }
+                ],
+                "knownProducts": [
+                  "草甘膦除草剂",
+                  "草甘膦",
+                  "黄磷",
+                  "磷酸一铵",
+                  "磷酸二铵",
+                  "磷酸二氢锂",
+                  "电子级磷酸",
+                  "二甲基硅氧烷混合环体(DMC)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "兴发集团实际经营中已有107胶、110生胶、三聚磷酸钠，与事件指向的AI光模块核心上游材料磷化铟（InP）的关键原料高纯磷源的国产替代核心标的，直接受益于产业链瓶颈环节的价值重估能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在特种化学品（18.27%）、农药（18.18%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善技术商业化与产品迭代速度，需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。客户认证、量产良率、订单规模、产品收入占比和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，产品存在不等于利润一定增加。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 1016,
+            "stockCode": "688545.SH",
+            "stockName": "兴福电子",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内电子级磷酸龙头，是高纯磷源的重要潜在供应商，深度受益于半导体材料国产替代与存储扩产周期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688545.SH",
+              "companyName": "兴福电子",
+              "companyProfile": "公司目前主要从事湿电子化学品的研发、生产和销售，主要产品包括电子级磷酸、电子级硫酸等通用湿电子化学品，以及蚀刻液、清洗剂、显影液、剥膜液、再生剂等功能湿电子化学品。公司产品主要应用于微电子、光电子湿法工艺制程(主要包括湿法刻蚀、清洗、显影、剥离等环节)，是相关产业发展不可或缺的关键性材料之一。原辅料化学品的贸易业务。经过多年发展，公司在湿电子化学品行业内已拥有一定的市场规模和品牌影响力，是集成电路材料产业技术创新联盟副理事长单位、中国半导体三维集成制造产业联盟第一届理事会理事单位、中国半导体行业协会会员单位，先后荣获“湖北省支柱产业细分领域隐形冠军科技小巨人”、“中国半导体材料十强企业”、“中国电子材料行业电子化工新材料专业十强”、“2021-2022年度中国IC独角兽”等多项荣誉，并牵头制定电子级硫酸国家标准，公司董事长李少平先生参与制定电子级磷酸国家标准。公司作为主要参与和技术实施单位开发的“芯片用超高纯电子级磷酸及高选择性蚀刻液生产关键技术”项目曾荣获国务院颁发的“国家科学技术进步二等奖”，自主开发的“工业黄磷生产电子级磷酸关键技术及产业化”项目曾荣获中国石油与化工联合会“科学技术进步一等奖”。",
+              "profileSummary": "公司目前主要从事湿电子化学品的研发、生产和销售，主要产品包括电子级磷酸、电子级硫酸等通用湿电子化学品，以及蚀刻液、清洗剂、显影液、剥膜液、再生剂等功能湿电子化学品。公司产品主要应用于微电子、光电子湿法工艺制程(主要包括湿法刻蚀、清洗、显影、剥离等环节)，是相关产业发展不可或缺的关键性材料之一。",
+              "majorProducts": "剥膜液、电子级磷酸、电子级硫酸、硅蚀刻液、金属蚀刻液、清洗剂、再生剂",
+              "revenueComposition": "通用型湿电子化学品:74.13%;功能型湿电子化学品:16.59%;其他业务:5.88%;湿电子化学品回收综合利用业务:2.32%;代工业务:1.06%;电子特气:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "通用型湿电子化学品",
+                  "sharePct": 74.13,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "功能型湿电子化学品",
+                  "sharePct": 16.59,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "湿电子化学品回收综合利用业务",
+                  "sharePct": 2.32,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "代工业务",
+                  "sharePct": 1.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子特气",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电子级磷酸",
+                    "category": "电子级磷酸"
+                  },
+                  {
+                    "name": "晶圆清洗液",
+                    "category": "清洗液"
+                  },
+                  {
+                    "name": "硅蚀刻液",
+                    "category": "刻蚀液"
+                  },
+                  {
+                    "name": "金属蚀刻液",
+                    "category": "刻蚀液"
+                  },
+                  {
+                    "name": "电子级双氧水",
+                    "category": "化学试剂"
+                  },
+                  {
+                    "name": "电子级硫酸",
+                    "category": "硫酸类"
+                  }
+                ],
+                "knownProducts": [
+                  "食品级磷酸",
+                  "电子级磷酸",
+                  "电子级双氧水",
+                  "电子级硫酸",
+                  "硅蚀刻液",
+                  "金属蚀刻液",
+                  "晶圆清洗液"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "兴福电子的通用型湿电子化学品（74.13%）、功能型湿电子化学品（16.59%）覆盖范围较宽，其中能够承载电子级磷酸、晶圆清洗液、硅蚀刻液，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国内电子级磷酸龙头，是高纯磷源的重要潜在供应商，深度受益于半导体材料国产替代与存储扩产周期。现阶段无法用整个分部占比直接衡量受益程度，因为产能释放与行业供给变化还需沿“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。在建工程转固、产能利用率、产销率、库存和产品价格若持续增强，事件影响可以从产品层面扩散到公司盈利；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 1023,
+            "stockCode": "002428.SZ",
+            "stockName": "云南锗业",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "A股稀缺的具备2-6英寸磷化铟衬底量产能力的企业，直接受益于衬底供需缺口与涨价，国产替代核心标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002428.SZ",
+              "companyName": "云南锗业",
+              "companyProfile": "公司是集锗矿开采、精深加工和研发为一体的、锗产业链较为完整的高新技术企业，具有40余年的锗生产历史。公司主要业务为锗矿开采、火法富集、湿法提纯、区熔精炼、精深加工及研究开发。目前公司矿山开采的矿石及粗加工产品不对外销售，仅作为公司及子公司下游加工的原料。公司目前材料级锗产品主要为锗锭(金属锗)、二氧化锗；深加工方面，光伏级锗产品主要为太阳能锗晶片，红外级锗产品主要为红外级锗单晶及毛坯(光学元件)、锗镜片、镜头、红外热像仪、光学系统，光纤级锗产品为光纤用四氯化锗，化合物半导体材料主要为砷化镓晶片、磷化铟晶片。公司产品主要运用包括红外光电、太阳能电池、光纤通讯、发光二极管、垂直腔面发射激光器(VCSEL)、大功率激光器、光通信用激光器和探测器等领域。公司拥有全资和控股子公司8家，下属企业分布在云南临沧、云南昆明、湖北武汉等地。公司于2004年通过了ISO9001国际质量管理体系认证，于2015年通过了ISO14001环境管理体系ISO18001职业健康安全体系认证。是2008年云南省第一批认定的“高新技术企业”和“国家火炬计划重点高新技术企业”，是2010年国家科学技术部认定的“临沧国家锗材料高新技术产业化基地骨干企业”。至2016年底，公司已拥有10大类产品：高纯二氧化锗、有机锗、区熔锗、红外锗光学元件、红外热像仪整机、太阳能电池用锗单晶及晶片、高效聚光太阳电池模组、光纤四氯化锗、高纯度砷化镓单晶及晶片、磷化铟单晶及晶片。",
+              "profileSummary": "目前公司矿山开采的矿石及粗加工产品不对外销售，仅作为公司及子公司下游加工的原料。公司产品主要运用包括红外光电、太阳能电池、光纤通讯、发光二极管、垂直腔面发射激光器(VCSEL)、大功率激光器、光通信用激光器和探测器等领域。",
+              "majorProducts": "光纤级四氯化锗、红外级锗单晶、毛坯（光学元件）、红外热像仪、磷化铟晶片、砷化镓晶片、太阳能电池用锗单晶片、锗锭、锗镜片、镜头",
+              "revenueComposition": "材料系锗产品:34.11%;光纤级锗产品:18.75%;光伏级锗产品:18.5%;化合物半导体材料:12.93%;红外系锗产品:11.36%;其他:4.34%",
+              "revenueSegments": [
+                {
+                  "name": "材料系锗产品",
+                  "sharePct": 34.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光纤级锗产品",
+                  "sharePct": 18.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光伏级锗产品",
+                  "sharePct": 18.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "化合物半导体材料",
+                  "sharePct": 12.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "红外系锗产品",
+                  "sharePct": 11.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "磷化铟单晶片",
+                  "二氧化锗",
+                  "区熔锗锭",
+                  "四氯化锗",
+                  "太阳能电池用锗单晶片",
+                  "锗单晶",
+                  "红外热像仪",
+                  "红外镜头"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "云南锗业当前收入集中在材料系锗产品（34.11%）、光纤级锗产品（18.75%），而A股稀缺的具备2-6英寸磷化铟衬底量产能力的企业，直接受益于衬底供需缺口与涨价，国产替代核心标的所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响供需缺口与产品价格预期，业务端仍需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导后才能确认。产品报价、订单排期、产销率和毛利率如果持续改善，相关业务可能从产业布局转为实际增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 1026,
+            "stockCode": "688498.SH",
+            "stockName": "源杰科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内领先的IDM光芯片厂商，产品直接用于高速光模块，是磷化铟产业链下游应用的核心环节和国产替代主力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688498.SH",
+              "companyName": "源杰科技",
+              "companyProfile": "公司成立于2013年。自成立以来，公司一直专注于光芯片的研发，设计、生产与销售。主要产品包括2.5G、10G、25G、50G、100G光芯片产品、CW光源、车载激光雷达光源等产品，主要应用于电信市场、数据中心市场、车载激光雷达市场等领域。经过多年研发与产业化积累，公司逐步发展为国内领先的光芯片供应商。公司创始团队来源于激光器芯片领域的学术专家与行业专家，拥有多年研发经验，始终秉承“以科技创新为驱动”的宗旨，重视研发投入及高端产品开发。公司已建立了包含芯片设计、晶圆制造、芯片加工和测试的IDM全流程业务体系，已实现国际前十大及国内主流光模块厂商批量供货，并最终应用于国内外知名运营商网络及互联网公司数据中心中。未来，公司将立足“一平台、两方向、三关键”的战略部署，在光通信领域中继续深耕，推出更高速率、更长传输距离，更大功率的光芯片产品，同时不断扩充光芯片产品的应用场景，积极向激光雷达、传感器、消费电子等领域拓展，致力于成为国际一流光电半导体芯片和技术服务供应商。",
+              "profileSummary": "主要产品包括2.5G、10G、25G、50G、100G光芯片产品、CW光源、车载激光雷达光源等产品，主要应用于电信市场、数据中心市场、车载激光雷达市场等领域。未来，公司将立足“一平台、两方向、三关键”的战略部署，在光通信领域中继续深耕，推出更高速率、更长传输距离，更大功率的光芯片产品，同时不断扩充光芯片产品的应用场景，积极向激光雷达、传感器、消费电子等领域拓展，致力于成为国际一流光电半导体芯片和技术服务供应商。",
+              "majorProducts": "1270/1290/1310/1330nm大功率25/50/70mW 激光器芯片、1270nm DFB激光器芯片、1310nm DFB激光器芯片、1310nm FP激光器芯片、1490nm DFB激光器芯片、1550nm DFB激光器芯片、CWDM 4波段 DFB激光器芯片、CWDM 6波段 DFB激光器芯片、LWDM 12波段 DFB激光器芯片、LWDM 4波段 DFB激光器芯片、MWDM 12波段 DFB激光器芯片、PAM4 CWDM 4波段DFB激光器芯片",
+              "revenueComposition": "数据中心类产品:65.39%;电信市场类:34.33%;其他类产品:0.18%;其他业务:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "数据中心类产品",
+                  "sharePct": 65.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电信市场类",
+                  "sharePct": 34.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他类产品",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "CW激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "DFB激光器芯片",
+                    "category": "激光器件"
+                  },
+                  {
+                    "name": "FP激光器芯片",
+                    "category": "有源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "DFB激光器芯片",
+                  "CW激光器芯片",
+                  "FP激光器芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "源杰科技与新闻之间有明确产品抓手：CW激光器芯片、DFB激光器芯片、FP激光器芯片，对应国内领先的IDM光芯片厂商，产品直接用于高速光模块，是磷化铟产业链下游应用的核心环节和国产替代主力。收入主体目前是数据中心类产品（65.39%）、电信市场类（34.33%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变技术商业化与产品迭代速度预期，随后要经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能进入利润表。客户认证、量产良率、订单规模、产品收入占比和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 1029,
+            "stockCode": "300308.SZ",
+            "stockName": "中际旭创",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球光模块龙头，是磷化铟光芯片及器件最主要的下游客户，其需求和技术迭代直接决定上游材料的景气度。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300308.SZ",
+              "companyName": "中际旭创",
+              "companyProfile": "公司是领先的高速光互联解决方案提供商，专注于高端光模块与光通信技术创新，服务全球云计算与AI算力基础设施建设。公司在高速率光模块领域具备领先优势，是推动新一代算力网络和数字基础设施升级的重要参与者。凭借持续的技术创新、领先的产品性能和稳定的规模化交付能力，公司在业内建立了稳固的市场地位和良好的品牌声誉。公司坚持以技术创新为核心驱动力，持续强化研发投入与产业链协同，并积极拓展光电技术应用边界，力求为更多客户创造更多价值。",
+              "profileSummary": "公司是领先的高速光互联解决方案提供商，专注于高端光模块与光通信技术创新，服务全球云计算与AI算力基础设施建设。公司在高速率光模块领域具备领先优势，是推动新一代算力网络和数字基础设施升级的重要参与者。",
+              "majorProducts": "1.6T OSFP、100G QSFP+、100G QSFP28 Single Lambda、10G SFP+ Ethernet、10G SFP+ SONET、25G SFP28、400G OSFP、400G QSFP-DD、40G QSFP+、800G OSFP、800G QSFP-DD",
+              "revenueComposition": "高端光通讯收发模块:97.95%;其他:2.05%",
+              "revenueSegments": [
+                {
+                  "name": "高端光通讯收发模块",
+                  "sharePct": 97.95,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "共封装光学(CPO)模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "含DSP可插拔光模块(DPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "近封装光模块(NPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "线性可插拔光模块(LPO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "超高密度可插拔光模块(XPO)",
+                    "category": "无源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "汽车光电子传感器",
+                  "共封装光学(CPO)模块",
+                  "含DSP可插拔光模块(DPO)",
+                  "近封装光模块(NPO)",
+                  "超高密度可插拔光模块(XPO)",
+                  "线性可插拔光模块(LPO)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中际旭创与事件的关系已经落在存量主业，而非远期概念：高端光通讯收发模块占收入的97.95%。公司在产业链中的具体抓手是：全球光模块龙头，是磷化铟光芯片及器件最主要的下游客户，其需求和技术迭代直接决定上游材料的景气度。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 1030,
+            "stockCode": "300502.SZ",
+            "stockName": "新易盛",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球光模块核心供应商之一，深度受益于AI算力驱动的高速光模块需求爆发，是上游磷化铟产业链的关键需求方。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300502.SZ",
+              "companyName": "新易盛",
+              "companyProfile": "公司是全球高速光互联解决方案的创新者与领导者。公司自主掌握高速率光器件封装并提供多种技术方案的光互联产品，具备全系列高速可插拔光模块的规模化量产能力，产品广泛应用于人工智能算力集群、云数据中心、电信网络等领域，为各行业的高速网络互连与数据传输提供核心支撑。",
+              "profileSummary": "公司自主掌握高速率光器件封装并提供多种技术方案的光互联产品，具备全系列高速可插拔光模块的规模化量产能力，产品广泛应用于人工智能算力集群、云数据中心、电信网络等领域，为各行业的高速网络互连与数据传输提供核心支撑。",
+              "majorProducts": "800G/400G相干系列模块、CFP2 PAM4 200G、CFPx系列、OSFP 400G、OSFP 800G单波100G、OSFP 800G单波200G、OSFP-XD 1.6T、PON光模块、QSFP112 400G、QSFP28 PAM4 50G、QSFP28 Single Lambda、QSFP28/QSFP+、QSFP56 PAM4 200G、QSFP-DD 200G、QSFP-DD 400G、QSFP-DD 800G 单波100G、QSFP-DD 800G 单波200G、SFP+/SFP系列模块、SFP112 PAM4 100G、SFP28系列、SFP56 PAM4 50G、SFP-DD PAM4 100G、XFP系列模块、点对点光模块",
+              "revenueComposition": "光互联产品:99.72%;其他:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "光互联产品",
+                  "sharePct": 99.72,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PON光模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "共封装光学(CPO)模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "含DSP可插拔光模块(DPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "近封装光模块(NPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "线性可插拔光模块(LPO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "线性接收光模块(LRO)",
+                    "category": "有源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "PON光模块",
+                  "共封装光学(CPO)模块",
+                  "含DSP可插拔光模块(DPO)",
+                  "近封装光模块(NPO)",
+                  "超高密度可插拔光模块(XPO)",
+                  "三向光发射接受组件(TRI-OSA)",
+                  "光发射接收组件(BOSA)",
+                  "光发射组件(TOSA)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "新易盛与事件存在真实业务交集：公司已有PON光模块、共封装光学(CPO)模块、含DSP可插拔光模块(DPO)，与全球光模块核心供应商之一，深度受益于AI算力驱动的高速光模块需求爆发，是上游磷化铟产业链的关键需求方所处的产业环节一致。光互联产品（99.72%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响终端需求与渗透率变化，只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，才会形成可确认的收入和利润增量。终端销量、客户采购量、公司出货和相关产品收入增速能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 1017,
+            "stockCode": "600078.SH",
+            "stockName": "澄星股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司布局电子级磷酸项目，有望成为磷化铟产业链的上游磷源供应商之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600078.SH",
+              "companyName": "澄星股份",
+              "companyProfile": "公司是中国精细磷化工行业领军企业，也是全球精细磷化工行业龙头企业之一。公司连续多年获得国家“绿色工厂”、技术创新示范企业、能效领跑者标杆企业、中国名牌产品等荣誉称号。主要产品如黄磷、磷酸及磷酸钠盐、钾盐、钙盐和复配磷酸盐等，在工业、食品、医药、电子等领域拥有广泛应用。公司在江苏、广西、云南、上海等地拥有多家下属子公司，打造出“矿山-黄磷-磷酸-磷酸盐”完整产业链，并积极向新材料领域演进。其中，在江苏江阴、广西钦州建有两个精细磷化工产品深加工基地，热法磷酸产能60万吨，精细磷酸盐产能9.5万吨；在云南曲靖市、红河州建有两个原料生产基地，黄磷产能16万吨。多年来，公司立足一体化协同发展，树立科技创新引领价值创造理念，形成了嵌入众多跨国公司供应链的市场优势。",
+              "profileSummary": "公司连续多年获得国家“绿色工厂”、技术创新示范企业、能效领跑者标杆企业、中国名牌产品等荣誉称号。主要产品如黄磷、磷酸及磷酸钠盐、钾盐、钙盐和复配磷酸盐等，在工业、食品、医药、电子等领域拥有广泛应用。",
+              "majorProducts": "澄星股份黄磷、澄星股份磷酸、澄星股份磷酸盐",
+              "revenueComposition": "黄磷:47.64%;磷酸:44.62%;其他:4.86%;磷酸盐:2.87%",
+              "revenueSegments": [
+                {
+                  "name": "黄磷",
+                  "sharePct": 47.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "磷酸",
+                  "sharePct": 44.62,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "磷酸盐",
+                  "sharePct": 2.87,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电子级磷酸",
+                    "category": "电子级磷酸"
+                  },
+                  {
+                    "name": "电器级磷酸",
+                    "category": "工业级磷酸"
+                  },
+                  {
+                    "name": "药用级磷酸氢钙",
+                    "category": "医药级磷化物"
+                  },
+                  {
+                    "name": "药用级磷酸钠盐",
+                    "category": "医药级磷化物"
+                  },
+                  {
+                    "name": "药用级磷酸钾盐",
+                    "category": "医药级磷化物"
+                  },
+                  {
+                    "name": "食品级磷酸",
+                    "category": "食品级磷酸"
+                  }
+                ],
+                "knownProducts": [
+                  "药用级磷酸氢钙",
+                  "药用级磷酸钠盐",
+                  "药用级磷酸钾盐",
+                  "电器级磷酸",
+                  "黄磷",
+                  "食品级磷酸",
+                  "食品级磷酸氢钙",
+                  "食品级磷酸钠盐"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "澄星股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：磷酸（44.62%）、磷酸盐（2.87%）合计约占收入的47.49%。公司与事件的具体联系在于：公司布局电子级磷酸项目，有望成为磷化铟产业链的上游磷源供应商之一，对应的核心变量是技术商业化与产品迭代速度。若这一变量沿着“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，客户认证、量产良率、订单规模、产品收入占比和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；技术路线变化、良率爬坡缓慢或竞争方案更快成熟则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 1024,
+            "stockCode": "600206.SH",
+            "stockName": "有研新材",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "打通“高纯铟-磷化铟衬底”一体化产业链，是国内磷化铟供应链自主可控的重要企业。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600206.SH",
+              "companyName": "有研新材",
+              "companyProfile": "公司成立于2001年6月，是高新技术企业，拥有国家企业技术中心、国家技术创新示范企业、集成电路关键材料国家工程研究中心(原半导体材料国家工程研究中心)等多项行业资质。公司前身为中国有研科技集团有限公司(原北京有色金属研究总院)401室，自上世纪50年代开始硅材料研究，历经半个多世纪的时间，积累了丰富的硅材料研发核心技术及生产经验，同时培养造就了一批科技创新和经营管理人才。公司目前主要从事硅及其它半导体材料、设备的研究、开发、生产与经营，提供相关技术开发、技术转让和技术咨询服务。现有山东德州和北京顺义两处国内一流的半导体硅材料生产基地，主要产品包括集成电路用硅单晶及硅片、集成电路刻蚀工艺用大直径硅单晶及制品、区熔硅单晶及硅片、多晶产品、半导体洁净管阀件等。公司在国内率先实现了6英寸、8英寸硅片的产业化，率先实现12英寸工艺的技术研发，有力支持了中国集成电路产业的发展。公司控股股东是目前全球最大的半导体晶圆片再生制造企业，约占有全球30%的市场份额，是全球领先的半导体材料供应商。公司重要参股股东是中国有色金属行业综合实力雄厚的研究开发和高新技术产业培育机构，是国资委直管的中央企业。公司以创新、挑战、诚信、卓越为企业核心价值观，努力为社会创造价值，为员工达成梦想，为股东实现回报，为实现世界一流半导体企业的愿景不懈努力。",
+              "profileSummary": "公司目前主要从事硅及其它半导体材料、设备的研究、开发、生产与经营，提供相关技术开发、技术转让和技术咨询服务。公司控股股东是目前全球最大的半导体晶圆片再生制造企业，约占有全球30%的市场份额，是全球领先的半导体材料供应商。",
+              "majorProducts": "150mm硅抛光片、200mm硅抛光片、半导体材料进出口贸易、电子薄膜材料、光电材料、光纤材料、红外光学材料、区熔硅单晶片、稀土磁效应材料、稀土发光材料、稀土金属及合金、医用材料、重掺砷硅单晶片",
+              "revenueComposition": "铂族:41.84%;稀土材料:24.81%;薄膜材料:23.97%;贵金属、有色金属及高端制造:5.9%;红外光学、光纤材料:2.56%;医疗器械材料:0.66%;其他业务:0.26%",
+              "revenueSegments": [
+                {
+                  "name": "铂族",
+                  "sharePct": 41.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "稀土材料",
+                  "sharePct": 24.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "薄膜材料",
+                  "sharePct": 23.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贵金属、有色金属及高端制造",
+                  "sharePct": 5.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "红外光学、光纤材料",
+                  "sharePct": 2.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医疗器械材料",
+                  "sharePct": 0.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "硒化锌",
+                  "硫化锌",
+                  "高纯四氯化硅",
+                  "口腔正畸器材",
+                  "消化道支架",
+                  "漏斗胸矫形器",
+                  "磷化镓单晶",
+                  "铂锭"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "有研新材的事件主线是：打通“高纯铟-磷化铟衬底”一体化产业链，是国内磷化铟供应链自主可控的重要企业，但当前收入结构尚未体现其重要性，收入重心仍是铂族（41.84%）、稀土材料（24.81%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，技术商业化与产品迭代速度需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”传导，并在客户认证、量产良率、订单规模、产品收入占比和毛利率上留下可核验痕迹。若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 1027,
+            "stockCode": "600703.SH",
+            "stockName": "三安光电",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "化合物半导体IDM平台，具备从外延到芯片的垂直整合能力，是光芯片国产化的重要力量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600703.SH",
+              "companyName": "三安光电",
+              "companyProfile": "公司总部位于福建省厦门市。公司在厦门、天津、芜湖、泉州、鄂州、长沙、重庆等多地设有产业化基地。在化合物半导体领域，公司实力备受认可，被《国家集成电路产业发展纲要》列为重大生产力发展布局的集成电路骨干企业，先后承担了国家科技部、工信部等多项重大专项任务。同时，公司搭建了完善的科研创新平台，拥有国家级博士后科研工作站、国家级企业技术中心及院士工作站。公司聚焦核心业务，专注于化合物半导体材料与器件的研发、生产和销售。公司自成立起，便锚定“技术+人才”驱动的科技成果产业化路径，以技术创新为引擎，以成果落地为导向，持续拓展业务版图、增强综合实力。公司在国内化合物半导体领域，构建起垂直产业链布局优势。在稳固传统LED优势领域市场份额的同时，公司主动向Mini/MicroLED、车用LED、植物照明LED等细分领域发力，加速产品市场应用推广。此外，公司布局的射频、电力电子、光技术化合物半导体集成电路业务，也伴随产能逐步释放，营收规模稳步增长。",
+              "profileSummary": "公司聚焦核心业务，专注于化合物半导体材料与器件的研发、生产和销售。此外，公司布局的射频、电力电子、光技术化合物半导体集成电路业务，也伴随产能逐步释放，营收规模稳步增长。",
+              "majorProducts": "三安光电LED外延片、三安光电PIN光电二极管、三安光电氮化镓LED芯片、三安光电砷化镓LED芯片、三安光电太阳能电池",
+              "revenueComposition": "芯片销售:32.66%;材料、废料销售:32.46%;LED应用产品:17.99%;集成电路芯片:16.25%;租金、物业、服务收入:0.64%",
+              "revenueSegments": [
+                {
+                  "name": "芯片销售",
+                  "sharePct": 32.66,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "材料、废料销售",
+                  "sharePct": 32.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "LED应用产品",
+                  "sharePct": 17.99,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "集成电路芯片",
+                  "sharePct": 16.25,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "租金、物业、服务收入",
+                  "sharePct": 0.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "CW激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "DFB激光器芯片",
+                    "category": "激光器件"
+                  },
+                  {
+                    "name": "FP激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "VCSEL激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "电吸收调制激光器芯片(EML)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "LED芯片",
+                    "category": "LED芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "办公楼租赁",
+                  "厂房租赁",
+                  "汽车用LED灯",
+                  "金属化陶瓷电路基片",
+                  "SAW滤波器",
+                  "射频前端器件",
+                  "LED芯片",
+                  "LED衬底"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "三安光电与事件存在真实业务交集：公司已有CW激光器芯片、DFB激光器芯片、FP激光器芯片，与化合物半导体IDM平台，具备从外延到芯片的垂直整合能力，是光芯片国产化的重要力量所处的产业环节一致。芯片销售（32.66%）、LED应用产品（17.99%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响技术商业化与产品迭代速度，只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，才会形成可确认的收入和利润增量。客户认证、量产良率、订单规模、产品收入占比和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 1031,
+            "stockCode": "002384.SZ",
+            "stockName": "东山精密",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "通过收购索尔思，实现“光芯片+光模块”垂直整合，深度受益于磷化铟产业链的景气周期与国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002384.SZ",
+              "companyName": "东山精密",
+              "companyProfile": "公司总部位于江苏省苏州市，致力于发展成为智能互联、互通世界的核心器件提供商。以“创建更互联互通的新世界”为使命，以“打造千亿级先进智能制造平台”为愿景，通过内生外购深耕拓展、优化主业，形成了以电子电路、光电显示和精密制造三大板块为核心的业务格局，构建起高度协同的多元化产业矩阵。在电子电路领域，根据Prismark的研究报告数据，以收入规模计算，公司连续多年柔性线路板(FPC)排名全球第二、印制电路板(PCB)排名全球第三。公司依托卓越的技术创新实力与前瞻性全球布局，不断开拓创新，确立以消费电子与新能源两大核心赛道的双轮驱动战略主线，在消费电子业务不断提质增效的同时，全力拥抱新能源的“新蓝海”；持续深耕新兴领域市场，为全球客户提供全方位的解决方案和赋能服务。未来，公司将以更加开放的姿态，加速推动智能制造向更高水平迈进，通过技术赋能推动产业链升级，引领行业创新发展。",
+              "profileSummary": "在电子电路领域，根据Prismark的研究报告数据，以收入规模计算，公司连续多年柔性线路板(FPC)排名全球第二、印制电路板(PCB)排名全球第三。公司依托卓越的技术创新实力与前瞻性全球布局，不断开拓创新，确立以消费电子与新能源两大核心赛道的双轮驱动战略主线，在消费电子业务不断提质增效的同时，全力拥抱新能源的“新蓝海”；持续深耕新兴领域市场，为全球客户提供全方位的解决方案和赋能服务。",
+              "majorProducts": "LED及显示器件、触控及液晶显示模组、电子电路产品、精密组件及其他",
+              "revenueComposition": "电子电路:63.85%;触控面板及LCM模组:14.92%;精密组件:14.78%;光模块:3.58%;其他:2.87%",
+              "revenueSegments": [
+                {
+                  "name": "电子电路",
+                  "sharePct": 63.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "触控面板及LCM模组",
+                  "sharePct": 14.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密组件",
+                  "sharePct": 14.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光模块",
+                  "sharePct": 3.58,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "含DSP可插拔光模块(DPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "线性可插拔光模块(LPO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "线性接收光模块(LRO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "电吸收调制激光器芯片(EML)",
+                    "category": "有源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "RPCB(刚性电路板)",
+                  "刚挠结合电路板",
+                  "FPC(柔性电路板)",
+                  "介质腔体滤波器",
+                  "谐振器",
+                  "金属腔体滤波器",
+                  "陶瓷介质滤波器",
+                  "背光LED器件"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东山精密已经参与事件相关业务，但收入基数仍小：光模块占收入的3.58%，说明公司已有业务抓手，但“通过收购索尔思，实现“光芯片+光模块”垂直整合，深度受益于磷化铟产业链的景气周期与国产替代”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于终端需求与渗透率变化能否驱动“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，从而推动业务跨过小规模阶段。在此之前，终端销量、客户采购量、公司出货和相关产品收入增速比总收入增速更值得跟踪；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 1032,
+            "stockCode": "300394.SZ",
+            "stockName": "天孚通信",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "光模块核心无源器件龙头，其产品是高速光模块不可或缺的组成部分，间接受益于磷化铟产业链驱动的光模块放量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300394.SZ",
+              "companyName": "天孚通信",
+              "companyProfile": "公司是业界领先的光器件整体解决方案提供商和光电封装制造服务商，致力于高速光器件的研发、生产和销售。产品广泛应用于人工智能、数据中心、光纤通信、激光雷达、生物光子学等领域。公司通过自主研发和外延并购，经过多年发展，形成两大核心业务板块，包括无源光器件整体解决方案业务和光电封装业务。公司积极推进国际化战略，形成双总部、双生产基地、多地研发中心的产业布局：在苏州和新加坡分别设立海内外总部；在日本、深圳、苏州设立研发中心；在江西和泰国建立量产基地，为客户提供多元化选择和本地化技术支持与服务。",
+              "profileSummary": "公司通过自主研发和外延并购，经过多年发展，形成两大核心业务板块，包括无源光器件整体解决方案业务和光电封装业务。公司积极推进国际化战略，形成双总部、双生产基地、多地研发中心的产业布局：在苏州和新加坡分别设立海内外总部；在日本、深圳、苏州设立研发中心；在江西和泰国建立量产基地，为客户提供多元化选择和本地化技术支持与服务。",
+              "majorProducts": "光收发接口组件、光纤适配器、陶瓷套管",
+              "revenueComposition": "光有源器件:58.06%;光无源器件:40.37%;其他业务:1.57%",
+              "revenueSegments": [
+                {
+                  "name": "光有源器件",
+                  "sharePct": 58.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光无源器件",
+                  "sharePct": 40.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "EML光引擎",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "MT-FA光组件",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "Z-block波分组件",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "光发射组件(TOSA)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "光纤准直器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "光纤连接器",
+                    "category": "无源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "MT-FA光组件",
+                  "Z-block波分组件",
+                  "光纤准直器",
+                  "光纤连接器",
+                  "光纤适配器",
+                  "光纤透镜阵列",
+                  "光纤阵列单元(FAU)",
+                  "光纤陶瓷插芯"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "天孚通信与新闻之间有明确产品抓手：EML光引擎、MT-FA光组件、Z-block波分组件，对应光模块核心无源器件龙头，其产品是高速光模块不可或缺的组成部分，间接受益于磷化铟产业链驱动的光模块放量。收入主体目前是光有源器件（58.06%）、光无源器件（40.37%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变技术商业化与产品迭代速度预期，随后要经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能进入利润表。客户认证、量产良率、订单规模、产品收入占比和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件影响更可能停留在产品布局层面。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "7条低于3星的源记录已按当前关注口径排除。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

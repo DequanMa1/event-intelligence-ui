@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
-  "status": "ready",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
+  "status": "no_company_product_mapping",
   "event": {
     "mainId": "26919",
     "uid": "0RB7WE9C317PP",
@@ -9,10 +9,10 @@
     "date": "2026-07-03"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 1,
-    "mappedStockCount": 1,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 0,
+    "unmappedStockCount": 1,
     "stocks": [
       {
         "sourceRowNumber": 15766,
@@ -20,1201 +20,644 @@
         "stockName": "华策影视",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 15
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 15766,
+        "stockCode": "300133.SZ",
+        "stockName": "华策影视",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 15,
-    "selectedCoreProductCount": 15,
-    "selectedCompanyCoreProductCount": 15,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 28,
-    "downstreamCandidateCount": 15,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "selectedCoreProductCount": 0,
+    "selectedCompanyCoreProductCount": 0,
+    "level7ProductCount": 10,
+    "relatedIndustryCandidateCount": 6,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
+  "productIndustryMap": {
+    "coreProducts": [],
+    "relatedIndustries": [
       {
-        "code": "1140020099",
-        "name": "IP授权方",
-        "anchorCount": 5,
+        "code": "1210000093",
+        "name": "电视产业",
+        "description": "A股电视产业涵盖整机制造及面板供应链。其受关注源于超高清、AI交互等技术升级带来的换机需求，以及面板周期波动对利润的影响。作为消费电子核心板块，它兼具科技迭代与内需消费属性，是观察电子行业景气度的重要风向标。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019781",
-          "1140019783",
-          "1140019784",
-          "1140019809",
-          "1140019963"
+        "starWeight": 4,
+        "level7ProductCount": 3,
+        "relevanceScore": 30,
+        "stocks": [
+          {
+            "stockCode": "300133.SZ",
+            "stockName": "华策影视",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "电影出品",
-          "电影制作",
-          "电视剧制作",
-          "综艺节目制作",
-          "网剧制作"
+        "products": [
+          {
+            "code": "1140019780",
+            "name": "电视剧出品",
+            "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视剧 > 电视剧出品",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300133.SZ",
+                "stockName": "华策影视",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "电视剧"
+            ]
+          },
+          {
+            "code": "1140019781",
+            "name": "电视剧制作",
+            "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视剧 > 电视剧制作",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300133.SZ",
+                "stockName": "华策影视",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "电视剧"
+            ]
+          },
+          {
+            "code": "1140019782",
+            "name": "电视剧发行",
+            "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视剧 > 电视剧发行",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300133.SZ",
+                "stockName": "华策影视",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "电视剧"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140020101",
-        "name": "导演",
-        "anchorCount": 5,
+        "code": "1200001406",
+        "name": "IDC服务",
+        "description": "IDC即互联网数据中心，提供服务器托管及算力支持。作为“东数西算”和AI发展的核心基建，其受益于数字化转型与算力需求爆发，具备高成长性和确定性，因而成为A股备受关注的科技细分赛道。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019781",
-          "1140019783",
-          "1140019784",
-          "1140019809",
-          "1140019963"
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "300133.SZ",
+            "stockName": "华策影视",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "电影出品",
-          "电影制作",
-          "电视剧制作",
-          "综艺节目制作",
-          "网剧制作"
+        "products": [
+          {
+            "code": "1140204861",
+            "name": "算力租赁",
+            "hierarchyPath": "通信 > 通信设备 > 通信配套服务 > IDC服务 > IDC云服务 > 算力租赁",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300133.SZ",
+                "stockName": "华策影视",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 1
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 3,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 10,
+    "candidateIndustryCount": 6,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 15765,
+        "stockCode": "300418.SZ",
+        "stockName": "昆仑万维",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140053070",
-        "name": "摄影",
-        "anchorCount": 5,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019781",
-          "1140019783",
-          "1140019784",
-          "1140019809",
-          "1140019963"
-        ],
-        "linkedCoreProductNames": [
-          "电影出品",
-          "电影制作",
-          "电视剧制作",
-          "综艺节目制作",
-          "网剧制作"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 15766,
+        "stockCode": "300133.SZ",
+        "stockName": "华策影视",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140064369",
-        "name": "剧本创作方",
-        "anchorCount": 4,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019781",
-          "1140019783",
-          "1140019784",
-          "1140019809"
-        ],
-        "linkedCoreProductNames": [
-          "电影出品",
-          "电影制作",
-          "电视剧制作",
-          "网剧制作"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140064372",
-        "name": "后期制作",
-        "anchorCount": 4,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019781",
-          "1140019783",
-          "1140019784",
-          "1140019809"
-        ],
-        "linkedCoreProductNames": [
-          "电影出品",
-          "电影制作",
-          "电视剧制作",
-          "网剧制作"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140020103",
-        "name": "演艺人员",
-        "anchorCount": 4,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019781",
-          "1140019783",
-          "1140019784",
-          "1140019809"
-        ],
-        "linkedCoreProductNames": [
-          "电影出品",
-          "电影制作",
-          "电视剧制作",
-          "网剧制作"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140006655",
-        "name": "投资方",
-        "anchorCount": 3,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019780",
-          "1140019808",
-          "1140019962"
-        ],
-        "linkedCoreProductNames": [
-          "电视剧出品",
-          "综艺节目出品",
-          "网剧出品"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140157932",
-        "name": "影视设备租赁",
-        "anchorCount": 3,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019781",
-          "1140019784",
-          "1140019809"
-        ],
-        "linkedCoreProductNames": [
-          "电影制作",
-          "电视剧制作",
-          "网剧制作"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 3
-        }
-      },
-      {
-        "code": "1140133195",
-        "name": "出资方",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019783"
-        ],
-        "linkedCoreProductNames": [
-          "电影出品"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140133196",
-        "name": "宣发团队",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019785"
-        ],
-        "linkedCoreProductNames": [
-          "电影发行"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140018991",
-        "name": "广告主",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019963"
-        ],
-        "linkedCoreProductNames": [
-          "综艺节目制作"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140112124",
-        "name": "广告制作团队",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140132521"
-        ],
-        "linkedCoreProductNames": [
-          "电视剧广告"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140112125",
-        "name": "广告投放团队",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140132521"
-        ],
-        "linkedCoreProductNames": [
-          "电视剧广告"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140112126",
-        "name": "广告效果跟踪和评估团队",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140132521"
-        ],
-        "linkedCoreProductNames": [
-          "电视剧广告"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 15767,
+        "stockCode": "300413.SZ",
+        "stockName": "芒果超媒",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
-    "core": [
+    "relatedIndustries": [
       {
-        "code": "1140019928",
-        "name": "艺人经纪服务",
-        "hierarchyPath": "传媒 > 文化传媒 > 其他文化传媒 > 艺人经纪 > 艺人经纪 > 艺人经纪服务",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "其他文化传媒",
-          "艺人经纪",
-          "艺人经纪",
-          "艺人经纪服务"
-        ],
-        "level5Industry": {
-          "code": "1210000084",
-          "name": "艺人经纪"
-        },
-        "level6Industry": {
-          "code": "1210000145",
-          "name": "艺人经纪"
-        },
-        "level7Product": {
-          "code": "1140019928",
-          "name": "艺人经纪服务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
+        "code": "1210000093",
+        "name": "电视产业",
+        "description": "A股电视产业涵盖整机制造及面板供应链。其受关注源于超高清、AI交互等技术升级带来的换机需求，以及面板周期波动对利润的影响。作为消费电子核心板块，它兼具科技迭代与内需消费属性，是观察电子行业景气度的重要风向标。",
         "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 3,
+        "relevanceScore": 30,
         "stocks": [
           {
             "stockCode": "300133.SZ",
             "stockName": "华策影视",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 9,
-        "downstreamCount": 7,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
+        "products": [
+          {
+            "code": "1140019780",
+            "name": "电视剧出品",
+            "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视剧 > 电视剧出品",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300133.SZ",
+                "stockName": "华策影视",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "电视剧"
+            ]
+          },
+          {
+            "code": "1140019781",
+            "name": "电视剧制作",
+            "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视剧 > 电视剧制作",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300133.SZ",
+                "stockName": "华策影视",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "电视剧"
+            ]
+          },
+          {
+            "code": "1140019782",
+            "name": "电视剧发行",
+            "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视剧 > 电视剧发行",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300133.SZ",
+                "stockName": "华策影视",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "电视剧"
+            ]
+          }
+        ],
+        "rank": 1
       },
       {
-        "code": "1140019809",
-        "name": "网剧制作",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 网剧产业 > 网剧 > 网剧制作",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "网剧产业",
-          "网剧",
-          "网剧制作"
-        ],
-        "level5Industry": {
-          "code": "1210000094",
-          "name": "网剧产业"
-        },
-        "level6Industry": {
-          "code": "1210000170",
-          "name": "网剧"
-        },
-        "level7Product": {
-          "code": "1140019809",
-          "name": "网剧制作"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
+        "code": "1200001406",
+        "name": "IDC服务",
+        "description": "IDC即互联网数据中心，提供服务器托管及算力支持。作为“东数西算”和AI发展的核心基建，其受益于数字化转型与算力需求爆发，具备高成长性和确定性，因而成为A股备受关注的科技细分赛道。",
         "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 12,
         "stocks": [
           {
             "stockCode": "300133.SZ",
             "stockName": "华策影视",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 9,
-        "downstreamCount": 3,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019784",
-        "name": "电影制作",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电影产业 > 电影 > 电影制作",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "电影产业",
-          "电影",
-          "电影制作"
-        ],
-        "level5Industry": {
-          "code": "1210000092",
-          "name": "电影产业"
-        },
-        "level6Industry": {
-          "code": "1210000165",
-          "name": "电影"
-        },
-        "level7Product": {
-          "code": "1140019784",
-          "name": "电影制作"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
+        "products": [
           {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
+            "code": "1140204861",
+            "name": "算力租赁",
+            "hierarchyPath": "通信 > 通信设备 > 通信配套服务 > IDC服务 > IDC云服务 > 算力租赁",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300133.SZ",
+                "stockName": "华策影视",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
           }
         ],
-        "upstreamCount": 8,
-        "downstreamCount": 3,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019781",
-        "name": "电视剧制作",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视剧 > 电视剧制作",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "电视产业",
-          "电视剧",
-          "电视剧制作"
-        ],
-        "level5Industry": {
-          "code": "1210000093",
-          "name": "电视产业"
-        },
-        "level6Industry": {
-          "code": "1210000168",
-          "name": "电视剧"
-        },
-        "level7Product": {
-          "code": "1140019781",
-          "name": "电视剧制作"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 8,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019783",
-        "name": "电影出品",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电影产业 > 电影 > 电影出品",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "电影产业",
-          "电影",
-          "电影出品"
-        ],
-        "level5Industry": {
-          "code": "1210000092",
-          "name": "电影产业"
-        },
-        "level6Industry": {
-          "code": "1210000165",
-          "name": "电影"
-        },
-        "level7Product": {
-          "code": "1140019783",
-          "name": "电影出品"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 7,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140132521",
-        "name": "电视剧广告",
-        "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 版面广告 > 影视版面 > 电视剧广告",
-        "industryPath": [
-          "传媒",
-          "营销传播",
-          "营销服务",
-          "版面广告",
-          "影视版面",
-          "电视剧广告"
-        ],
-        "level5Industry": {
-          "code": "1210000078",
-          "name": "版面广告"
-        },
-        "level6Industry": {
-          "code": "1210000136",
-          "name": "影视版面"
-        },
-        "level7Product": {
-          "code": "1140132521",
-          "name": "电视剧广告"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019963",
-        "name": "综艺节目制作",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视节目 > 综艺节目制作",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "电视产业",
-          "电视节目",
-          "综艺节目制作"
-        ],
-        "level5Industry": {
-          "code": "1210000093",
-          "name": "电视产业"
-        },
-        "level6Industry": {
-          "code": "1210000169",
-          "name": "电视节目"
-        },
-        "level7Product": {
-          "code": "1140019963",
-          "name": "综艺节目制作"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019785",
-        "name": "电影发行",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电影产业 > 电影 > 电影发行",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "电影产业",
-          "电影",
-          "电影发行"
-        ],
-        "level5Industry": {
-          "code": "1210000092",
-          "name": "电影产业"
-        },
-        "level6Industry": {
-          "code": "1210000165",
-          "name": "电影"
-        },
-        "level7Product": {
-          "code": "1140019785",
-          "name": "电影发行"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 2,
-        "downstreamCount": 3,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019780",
-        "name": "电视剧出品",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视剧 > 电视剧出品",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "电视产业",
-          "电视剧",
-          "电视剧出品"
-        ],
-        "level5Industry": {
-          "code": "1210000093",
-          "name": "电视产业"
-        },
-        "level6Industry": {
-          "code": "1210000168",
-          "name": "电视剧"
-        },
-        "level7Product": {
-          "code": "1140019780",
-          "name": "电视剧出品"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 4,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019782",
-        "name": "电视剧发行",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视剧 > 电视剧发行",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "电视产业",
-          "电视剧",
-          "电视剧发行"
-        ],
-        "level5Industry": {
-          "code": "1210000093",
-          "name": "电视产业"
-        },
-        "level6Industry": {
-          "code": "1210000168",
-          "name": "电视剧"
-        },
-        "level7Product": {
-          "code": "1140019782",
-          "name": "电视剧发行"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 2,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019964",
-        "name": "综艺节目发行",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视节目 > 综艺节目发行",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "电视产业",
-          "电视节目",
-          "综艺节目发行"
-        ],
-        "level5Industry": {
-          "code": "1210000093",
-          "name": "电视产业"
-        },
-        "level6Industry": {
-          "code": "1210000169",
-          "name": "电视节目"
-        },
-        "level7Product": {
-          "code": "1140019964",
-          "name": "综艺节目发行"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 2,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019962",
-        "name": "综艺节目出品",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 电视产业 > 电视节目 > 综艺节目出品",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "电视产业",
-          "电视节目",
-          "综艺节目出品"
-        ],
-        "level5Industry": {
-          "code": "1210000093",
-          "name": "电视产业"
-        },
-        "level6Industry": {
-          "code": "1210000169",
-          "name": "电视节目"
-        },
-        "level7Product": {
-          "code": "1140019962",
-          "name": "综艺节目出品"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019808",
-        "name": "网剧出品",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 网剧产业 > 网剧 > 网剧出品",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "网剧产业",
-          "网剧",
-          "网剧出品"
-        ],
-        "level5Industry": {
-          "code": "1210000094",
-          "name": "网剧产业"
-        },
-        "level6Industry": {
-          "code": "1210000170",
-          "name": "网剧"
-        },
-        "level7Product": {
-          "code": "1140019808",
-          "name": "网剧出品"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140019810",
-        "name": "网剧发行",
-        "hierarchyPath": "传媒 > 文化传媒 > 影视动漫 > 网剧产业 > 网剧 > 网剧发行",
-        "industryPath": [
-          "传媒",
-          "文化传媒",
-          "影视动漫",
-          "网剧产业",
-          "网剧",
-          "网剧发行"
-        ],
-        "level5Industry": {
-          "code": "1210000094",
-          "name": "网剧产业"
-        },
-        "level6Industry": {
-          "code": "1210000170",
-          "name": "网剧"
-        },
-        "level7Product": {
-          "code": "1140019810",
-          "name": "网剧发行"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
-        "relevanceScore": 1,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "传媒"
-        ]
-      },
-      {
-        "code": "1140204861",
-        "name": "算力租赁",
-        "hierarchyPath": "通信 > 通信设备 > 通信配套服务 > IDC服务 > IDC云服务 > 算力租赁",
-        "industryPath": [
-          "通信",
-          "通信设备",
-          "通信配套服务",
-          "IDC服务",
-          "IDC云服务",
-          "算力租赁"
-        ],
-        "level5Industry": {
-          "code": "1200001406",
-          "name": "IDC服务"
-        },
-        "level6Industry": {
-          "code": "1200005281",
-          "name": "IDC云服务"
-        },
-        "level7Product": {
-          "code": "1140204861",
-          "name": "算力租赁"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300133.SZ",
-            "stockName": "华策影视",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      }
-    ],
-    "downstream": [
-      {
-        "code": "1140020651",
-        "name": "网络视频平台",
-        "anchorCount": 5,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019780",
-          "1140019782",
-          "1140019809",
-          "1140019810",
-          "1140019964"
-        ],
-        "linkedCoreProductNames": [
-          "电视剧出品",
-          "电视剧发行",
-          "综艺节目发行",
-          "网剧制作",
-          "网剧发行"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140064843",
-        "name": "电视台",
-        "anchorCount": 4,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019780",
-          "1140019782",
-          "1140019809",
-          "1140019964"
-        ],
-        "linkedCoreProductNames": [
-          "电视剧出品",
-          "电视剧发行",
-          "综艺节目发行",
-          "网剧制作"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140020773",
-        "name": "电视剧",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019780",
-          "1140019928"
-        ],
-        "linkedCoreProductNames": [
-          "电视剧出品",
-          "艺人经纪服务"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140018991",
-        "name": "广告主",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140132521"
-        ],
-        "linkedCoreProductNames": [
-          "电视剧广告"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140133698",
-        "name": "广告代言",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019928"
-        ],
-        "linkedCoreProductNames": [
-          "艺人经纪服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140133699",
-        "name": "演出活动",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019928"
-        ],
-        "linkedCoreProductNames": [
-          "艺人经纪服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140063369",
-        "name": "电影",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019928"
-        ],
-        "linkedCoreProductNames": [
-          "艺人经纪服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140133700",
-        "name": "电视节目",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019928"
-        ],
-        "linkedCoreProductNames": [
-          "艺人经纪服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140095694",
-        "name": "院线发行",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019785"
-        ],
-        "linkedCoreProductNames": [
-          "电影发行"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140022374",
-        "name": "音乐",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019928"
-        ],
-        "linkedCoreProductNames": [
-          "艺人经纪服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140004505",
-        "name": "影视文化",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019784"
-        ],
-        "linkedCoreProductNames": [
-          "电影制作"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140027469",
-        "name": "新媒体互动娱乐内容制作",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019928"
-        ],
-        "linkedCoreProductNames": [
-          "艺人经纪服务"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140087988",
-        "name": "电视影视点播",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019785"
-        ],
-        "linkedCoreProductNames": [
-          "电影发行"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140019982",
-        "name": "院线电影发行",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140019784"
-        ],
-        "linkedCoreProductNames": [
-          "电影制作"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
   "industryAnalysis": {
-    "status": "research_pending",
-    "target": {
-      "code": "1210000093",
-      "name": "电视产业"
-    },
-    "overview": "A股电视产业涵盖整机制造及面板供应链。与本次事件关联度较高的产品包括电视剧出品、电视剧制作、电视剧发行等。",
+    "status": "unavailable",
+    "target": null,
+    "overview": null,
     "impact": null,
     "researchSources": [],
-    "reason": "该产业的专项研究内容正在补充中"
+    "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
+  },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 9,
+    "eligibleSourceRowCount": 3,
+    "totalStockCount": 3,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 4,
+    "excludedNonAShareCount": 2,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 3,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 15766,
+            "stockCode": "300133.SZ",
+            "stockName": "华策影视",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "作为头部文娱产业方通过关联基金参与可灵AI本轮融资，并已在电视剧《太平年》制作中应用可灵AI技术。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300133.SZ",
+              "companyName": "华策影视",
+              "companyProfile": "公司作为“中国电视剧第一股”，在影视行业占据重要地位。核心团队1992年创业，2005年公司成立，2010年于深圳证券交易所创业板挂牌上市。多年来，公司在影视剧年产量、播出、海外出口量以及版权数量等方面始终保持全国领先，已发展成为综合性影视传媒集团。2024年，公司继续聚焦优质影视内容输出，推动科技创新，加强国际传播，同时积极履行社会责任，在党建引领、就业推动、股东权益保护、员工权益保障等方面取得了显著成效。",
+              "profileSummary": "多年来，公司在影视剧年产量、播出、海外出口量以及版权数量等方面始终保持全国领先，已发展成为综合性影视传媒集团。2024年，公司继续聚焦优质影视内容输出，推动科技创新，加强国际传播，同时积极履行社会责任，在党建引领、就业推动、股东权益保护、员工权益保障等方面取得了显著成效。",
+              "majorProducts": "《济公新传》、《叫一声妈妈》、《倾城之恋》、《上有老》、《绍兴师爷》、《新醉打金枝》、《中国往事》、《子夜》、版权运营、电视剧、电影、动漫、短剧、国际新媒体、万卷楼、艺人经纪、运营商业务",
+              "revenueComposition": "电视剧制作发行:61.14%;电视剧版权发行:13.31%;经纪服务:7.85%;电影:6.77%;算力业务:4.46%;音乐:2.52%;广告:1.7%;其他:1.49%;影院票房:1.26%;分部间抵消:-0.5%",
+              "revenueSegments": [
+                {
+                  "name": "电视剧制作发行",
+                  "sharePct": 61.14,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电视剧版权发行",
+                  "sharePct": 13.31,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "经纪服务",
+                  "sharePct": 7.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电影",
+                  "sharePct": 6.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "算力业务",
+                  "sharePct": 4.46,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "音乐",
+                  "sharePct": 2.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "广告",
+                  "sharePct": 1.7,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "影院票房",
+                  "sharePct": 1.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "分部间抵消",
+                  "sharePct": -0.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "算力租赁",
+                    "category": "IDC云服务"
+                  },
+                  {
+                    "name": "电视剧出品",
+                    "category": "电视剧"
+                  },
+                  {
+                    "name": "电视剧制作",
+                    "category": "电视剧"
+                  },
+                  {
+                    "name": "电视剧发行",
+                    "category": "电视剧"
+                  }
+                ],
+                "knownProducts": [
+                  "艺人经纪服务",
+                  "电影出品",
+                  "电影制作",
+                  "电影发行",
+                  "电视剧出品",
+                  "电视剧制作",
+                  "电视剧发行",
+                  "综艺节目出品"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "华策影视的相关业务已决定公司大部分经营表现：电视剧制作发行（61.14%）、电视剧版权发行（13.31%）合计约占收入的74.45%。公司与事件的直接业务联系是：作为头部文娱产业方通过关联基金参与可灵AI本轮融资，并已在电视剧《太平年》制作中应用可灵AI技术，真正的增量取决于技术商业化与产品迭代速度，并需经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，客户认证、量产良率、订单规模、产品收入占比和毛利率需要显示公司获得超越行业的增量。技术路线变化、良率爬坡缓慢或竞争方案更快成熟是这条逻辑最主要的反向约束。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 15765,
+            "stockCode": "300418.SZ",
+            "stockName": "昆仑万维",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "旗下天工AI与可灵AI同处视频生成赛道，其AI短剧平台业务ARR已超7亿美元，形成竞争与映射关系。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300418.SZ",
+              "companyName": "昆仑万维",
+              "companyProfile": "公司成立于2008年，业务覆盖AGI与AIGC、信息分发、元宇宙、社交娱乐及游戏等多个领域，市场遍及中国、东南亚、非洲、中东、北美、南美、欧洲等地。全球平均月活跃用户近4亿，海外收入占比达94%。作为中国领先的人工智能科技公司，现已完成“算力基础设施—大模型算法—AI应用”全产业链布局，并构建起由AI大模型、AI搜索、AI游戏、AI音乐、AI社交、AI短剧等组成的多元AI业务矩阵。",
+              "profileSummary": "公司成立于2008年，业务覆盖AGI与AIGC、信息分发、元宇宙、社交娱乐及游戏等多个领域，市场遍及中国、东南亚、非洲、中东、北美、南美、欧洲等地。作为中国领先的人工智能科技公司，现已完成“算力基础设施—大模型算法—AI应用”全产业链布局，并构建起由AI大模型、AI搜索、AI游戏、AI音乐、AI社交、AI短剧等组成的多元AI业务矩阵。",
+              "majorProducts": "AGI与AIGC业务、海外信息分发与元宇宙业务",
+              "revenueComposition": "网络广告收入:37.11%;短剧平台业务:19.73%;搜索业务:18.89%;增值服务业务-社交网络-海外:12.7%;其他业务收入:4.73%;增值服务收入-游戏收入:4.33%;AI软件技术业务:2.5%",
+              "revenueSegments": [
+                {
+                  "name": "网络广告收入",
+                  "sharePct": 37.11,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "短剧平台业务",
+                  "sharePct": 19.73,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "搜索业务",
+                  "sharePct": 18.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "增值服务业务-社交网络-海外",
+                  "sharePct": 12.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务收入",
+                  "sharePct": 4.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "增值服务收入-游戏收入",
+                  "sharePct": 4.33,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "AI软件技术业务",
+                  "sharePct": 2.5,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI视频生成平台",
+                    "category": "人工智能"
+                  },
+                  {
+                    "name": "企业通用智能体",
+                    "category": "人工智能"
+                  },
+                  {
+                    "name": "手机游戏",
+                    "category": "电子游戏"
+                  },
+                  {
+                    "name": "浏览器",
+                    "category": "工具类软件"
+                  },
+                  {
+                    "name": "浏览器APP",
+                    "category": "移动端工具类APP"
+                  },
+                  {
+                    "name": "通用大模型",
+                    "category": "人工智能"
+                  }
+                ],
+                "knownProducts": [
+                  "短剧平台运营",
+                  "资讯APP",
+                  "棋牌游戏大厅",
+                  "短剧播放业务",
+                  "H5游戏",
+                  "手机游戏",
+                  "游戏代理发行",
+                  "游戏联合运营"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "对昆仑万维而言，旗下天工AI与可灵AI同处视频生成赛道，其AI短剧平台业务ARR已超7亿美元，形成竞争与映射关系并非纯概念映射，因为短剧平台业务占收入的19.73%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是事件能否转化为可确认的经营增量，传导效率取决于“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由订单、收入确认、产品结构和毛利率变化来区分；若事件关联停留在主题层面，未形成可持续订单或利润贡献，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 15767,
+            "stockCode": "300413.SZ",
+            "stockName": "芒果超媒",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "旗下芒果产业投资人（厚为资本）参与可灵AI本轮融资，布局AI内容生态。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300413.SZ",
+              "companyName": "芒果超媒",
+              "companyProfile": "公司是湖南广播电视台旗下统一的新媒体产业及资本运营平台，与湖南卫视共同构成芒果生态内的双平台驱动、全媒体融合发展格局。公司聚焦媒体主业，以芒果TV融合媒体平台为主阵地，秉持平台精准内容与核心自主技术双轮驱动理念，充分发挥研发、生产、发行、牌照、政策优势，服务全国及海外亿级新媒体用户，持续打造A股市场第一家以融合发展为标志，具有引领力、传播力和影响力的国有新媒体上市公司，全力向国内最具创新活力和有全球影响力的新型主流媒体集团战略目标迈进。",
+              "profileSummary": "公司聚焦媒体主业，以芒果TV融合媒体平台为主阵地，秉持平台精准内容与核心自主技术双轮驱动理念，充分发挥研发、生产、发行、牌照、政策优势，服务全国及海外亿级新媒体用户，持续打造A股市场第一家以融合发展为标志，具有引领力、传播力和影响力的国有新媒体上市公司，全力向国内最具创新活力和有全球影响力的新型主流媒体集团战略目标迈进。",
+              "majorProducts": "互联网视频业务、家庭消费业务、快乐购电视购物、快乐购外呼购物、快乐购网络购物、内容制作和运营、社交电商业务、消费金融业务、艺人经纪、游戏及IP内容互动营销、运营商业务",
+              "revenueComposition": "芒果TV互联网视频业务:73.31%;内容电商:16.22%;新媒体互动娱乐内容制作:10.13%;其他:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "芒果TV互联网视频业务",
+                  "sharePct": 73.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内容电商",
+                  "sharePct": 16.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新媒体互动娱乐内容制作",
+                  "sharePct": 10.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "长视频平台运营",
+                  "长视频在线播放业务",
+                  "IP衍生品电商零售",
+                  "艺人经纪服务",
+                  "电视剧出品",
+                  "电视剧制作",
+                  "电视剧发行",
+                  "综艺节目出品"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "芒果超媒的主要经营内容是芒果TV互联网视频业务（73.31%）、内容电商（16.22%），具体产品集中在长视频平台运营、长视频在线播放业务、IP衍生品电商零售、艺人经纪服务。“旗下芒果产业投资人（厚为资本）参与可灵AI本轮融资，布局AI内容生态”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善事件能否转化为可确认的经营增量，也需要先补上产品落地和客户导入，再经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才可能影响业绩。订单、收入确认、产品结构和毛利率变化没有同步改善时，股价反应更可能来自主题交易；若事件关联停留在主题层面，未形成可持续订单或利润贡献，基本面解释力会继续下降。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "4条低于3星的源记录已按当前关注口径排除。",
+      "2条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
   },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

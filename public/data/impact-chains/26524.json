@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26524",
@@ -9,10 +9,10 @@
     "date": "2026-06-29"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 2,
-    "mappedStockCount": 2,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 1,
     "stocks": [
       {
         "sourceRowNumber": 6170,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 16
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 6171,
@@ -29,42 +29,32 @@
         "stockName": "禾盛新材",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 3
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 6171,
+        "stockCode": "002290.SZ",
+        "stockName": "禾盛新材",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 19,
-    "selectedCoreProductCount": 2,
+    "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 1,
-    "downstreamCandidateCount": 14,
-    "shownUpstreamCount": 1,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 42,
+    "relatedIndustryCandidateCount": 9,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140165398",
-        "name": "处理器SoC芯片",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140021415"
-        ],
-        "linkedCoreProductNames": [
-          "CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140007907",
         "name": "服务器CPU",
@@ -90,18 +80,15 @@
           "name": "服务器CPU"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000066.SZ",
             "stockName": "中国长城",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 7,
         "relevanceScore": 11,
         "strongRelevanceScore": 8,
         "matchedTerms": [
@@ -109,271 +96,505 @@
           "半导体",
           "电子"
         ]
-      },
+      }
+    ],
+    "relatedIndustries": [
       {
-        "code": "1140021415",
-        "name": "CPU",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "event_title",
-        "stockCount": 2,
+        "code": "1200001368",
+        "name": "硬件设备",
+        "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 7,
+        "relevanceScore": 188,
         "stocks": [
           {
             "stockCode": "000066.SZ",
             "stockName": "中国长城",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
+          {
+            "stockCode": "603019.SH",
+            "stockName": "中科曙光",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140202373",
+            "name": "液冷服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 液冷服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603019.SH",
+                "stockName": "中科曙光",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140119057",
+            "name": "通用服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 通用服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603019.SH",
+                "stockName": "中科曙光",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140112576",
+            "name": "AI服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > AI服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140108739",
+            "name": "关键应用主机",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 关键应用主机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001378",
+        "name": "人工智能",
+        "description": "A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 3,
+        "relevanceScore": 36,
+        "stocks": [
           {
             "stockCode": "002290.SZ",
             "stockName": "禾盛新材",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688256.SH",
+            "stockName": "寒武纪",
+            "rating": "★★★☆",
+            "filledStars": 3
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 7,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
+        "products": [
+          {
+            "code": "1140211638",
+            "name": "推理软件平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 推理软件平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688256.SH",
+                "stockName": "寒武纪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140198233",
+            "name": "生成式大模型一体机",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 生成式大模型一体机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002290.SZ",
+                "stockName": "禾盛新材",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140211637",
+            "name": "训练开发平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 训练开发平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688256.SH",
+                "stockName": "寒武纪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 10,
+    "mappedStockCount": 9,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 42,
+    "candidateIndustryCount": 9,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 6168,
+        "stockCode": "688041.SH",
+        "stockName": "海光信息",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 6170,
+        "stockCode": "000066.SZ",
+        "stockName": "中国长城",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 6171,
+        "stockCode": "002290.SZ",
+        "stockName": "禾盛新材",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 6174,
+        "stockCode": "688047.SH",
+        "stockName": "龙芯中科",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 6176,
+        "stockCode": "688256.SH",
+        "stockName": "寒武纪",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 6177,
+        "stockCode": "688253.SH",
+        "stockName": "英诺特",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 6178,
+        "stockCode": "688008.SH",
+        "stockName": "澜起科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 13
+      },
+      {
+        "sourceRowNumber": 6179,
+        "stockCode": "688702.SH",
+        "stockName": "盛科通信",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 6180,
+        "stockCode": "000977.SZ",
+        "stockName": "浪潮信息",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 6181,
+        "stockCode": "603019.SH",
+        "stockName": "中科曙光",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140028963",
-        "name": "可编程控制器(PLC)",
-        "anchorCount": 1,
+        "code": "1200001368",
+        "name": "硬件设备",
+        "description": "硬件设备指制造计算机、通信及电子元件等实体产品的行业。因受益于数字经济、AI算力需求爆发及国产替代政策，具备高成长性与战略价值，成为市场聚焦科技升级与自主可控的核心赛道。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 7,
+        "relevanceScore": 188,
+        "stocks": [
+          {
+            "stockCode": "000066.SZ",
+            "stockName": "中国长城",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "603019.SH",
+            "stockName": "中科曙光",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140202373",
+            "name": "液冷服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 液冷服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603019.SH",
+                "stockName": "中科曙光",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140119057",
+            "name": "通用服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 通用服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603019.SH",
+                "stockName": "中科曙光",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140112576",
+            "name": "AI服务器",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > AI服务器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          },
+          {
+            "code": "1140108739",
+            "name": "关键应用主机",
+            "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 关键应用主机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000977.SZ",
+                "stockName": "浪潮信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "服务器"
+            ]
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001378",
+        "name": "人工智能",
+        "description": "A股人工智能指涉及算法、算力及应用的上市公司。因技术突破赋能千行百业，被视为新质生产力核心，具备高成长潜力，故受资本高度关注，成为推动产业升级与市场热点的关键板块。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140021415"
+        "starWeight": 7,
+        "level7ProductCount": 3,
+        "relevanceScore": 36,
+        "stocks": [
+          {
+            "stockCode": "002290.SZ",
+            "stockName": "禾盛新材",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688256.SH",
+            "stockName": "寒武纪",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "CPU"
+        "products": [
+          {
+            "code": "1140211638",
+            "name": "推理软件平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 推理软件平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688256.SH",
+                "stockName": "寒武纪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140198233",
+            "name": "生成式大模型一体机",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 生成式大模型一体机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002290.SZ",
+                "stockName": "禾盛新材",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140211637",
+            "name": "训练开发平台",
+            "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 人工智能 > 人工智能 > 训练开发平台",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688256.SH",
+                "stockName": "寒武纪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140026445",
-        "name": "游戏机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140021415"
-        ],
-        "linkedCoreProductNames": [
-          "CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140162904",
-        "name": "电网配电用智能安全网关",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140021415"
-        ],
-        "linkedCoreProductNames": [
-          "CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140163026",
-        "name": "系统硬件系统",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140021415"
-        ],
-        "linkedCoreProductNames": [
-          "CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140161013",
-        "name": "蓝牙耳机SoC芯片",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140021415"
-        ],
-        "linkedCoreProductNames": [
-          "CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140161012",
-        "name": "蓝牙音箱SoC芯片",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140021415"
-        ],
-        "linkedCoreProductNames": [
-          "CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140158397",
-        "name": "通用计算型服务器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140021415"
-        ],
-        "linkedCoreProductNames": [
-          "CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140154951",
-        "name": "NAS存储服务器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007907"
-        ],
-        "linkedCoreProductNames": [
-          "服务器CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140098181",
-        "name": "智慧海关(含原检验检疫)查验系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007907"
-        ],
-        "linkedCoreProductNames": [
-          "服务器CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140077795",
-        "name": "智能交通",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007907"
-        ],
-        "linkedCoreProductNames": [
-          "服务器CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140098201",
-        "name": "智能系统维护",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007907"
-        ],
-        "linkedCoreProductNames": [
-          "服务器CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140098180",
-        "name": "智能边检边防查验系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007907"
-        ],
-        "linkedCoreProductNames": [
-          "服务器CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140154941",
-        "name": "服务器CPU销售",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007907"
-        ],
-        "linkedCoreProductNames": [
-          "服务器CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140007885",
-        "name": "服务器平台",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007907"
-        ],
-        "linkedCoreProductNames": [
-          "服务器CPU"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -388,10 +609,773 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 16,
+    "eligibleSourceRowCount": 10,
+    "totalStockCount": 10,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 3,
+    "excludedNonAShareCount": 3,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 10,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 6168,
+            "stockCode": "688041.SH",
+            "stockName": "海光信息",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内x86架构CPU龙头，CPU+DCU双轮驱动深度受益于信创与AI算力需求爆发。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688041.SH",
+              "companyName": "海光信息",
+              "companyProfile": "公司主营业务是研发、设计和销售应用于服务器、工作站等计算、存储设备中的高端处理器。公司产品包括海光通用处理器(CPU)和海光协处理器(DCU)。公司专注于高端处理器的研发、设计与技术创新，研发团队在高端处理器设计、SoC架构设计、处理器安全、处理器验证、高主频与低功耗处理器实现、高端芯片IP设计、工艺物理设计、先进封装设计、基础软件等关键技术上不断实现突破。秉承“销售一代、验证一代、研发一代”的产品研发策略，公司建立了完善的高端处理器的研发环境和流程，产品性能逐代提升，功能不断丰富，已经研发出可广泛应用于服务器、工作站的高端处理器产品。海光CPU系列产品兼容x86指令集以及国际上主流操作系统和应用软件，性能优异，软硬件生态丰富，安全可靠，得到了国内用户的高度认可，已经广泛应用于电信、金融、互联网、教育、交通等重要行业或领域。海光DCU系列产品以GPGPU架构为基础，兼容通用的“类CUDA”环境以及国际主流商业计算软件和人工智能软件，软硬件生态丰富，可广泛应用于大数据处理、人工智能、商业计算等应用领域。",
+              "profileSummary": "公司主营业务是研发、设计和销售应用于服务器、工作站等计算、存储设备中的高端处理器。海光CPU系列产品兼容x86指令集以及国际上主流操作系统和应用软件，性能优异，软硬件生态丰富，安全可靠，得到了国内用户的高度认可，已经广泛应用于电信、金融、互联网、教育、交通等重要行业或领域。",
+              "majorProducts": "海光3000系列、海光5000系列、海光7000系列、海光8000系列、通用处理器-海光CPU、协处理器-海光DCU",
+              "revenueComposition": "高端处理器:99.9%;其他业务:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "高端处理器",
+                  "sharePct": 99.9,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "数据中心CPU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "服务器CPU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "工作站CPU",
+                    "category": "计算控制芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "工作站CPU",
+                  "数据中心CPU",
+                  "服务器CPU",
+                  "深度计算处理器(DCU)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "海光信息已经具备数据中心CPU、服务器CPU、工作站CPU等业务能力，国内x86架构CPU龙头，CPU+DCU双轮驱动深度受益于信创与AI算力需求爆发并非单纯概念映射。当前对应的收入被归入高端处理器（99.9%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 6174,
+            "stockCode": "688047.SH",
+            "stockName": "龙芯中科",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "坚持自主指令集路线的国产CPU龙头，致力于构建独立于Wintel和AA体系的第三套生态。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688047.SH",
+              "companyName": "龙芯中科",
+              "companyProfile": "公司是一家拥有自主指令系统LoongArch(龙架构)的通用处理器设计公司。公司自创立以来一直坚持走自主研发道路，面向国家信息化建设需求，面向国际信息技术前沿，以创新发展为主题、以产业发展为主线、以体系建设为目标，坚持自主创新，全面掌握CPU指令系统、处理器IP核、操作系统等计算机核心技术，打造自主开放的软硬件生态和信息产业体系，为国家战略需求提供自主、安全、可靠的处理器，为信息产业的创新发展提供高性能、低成本的处理器和基础软硬件解决方案。公司主营业务为处理器及配套芯片的研制、销售及服务，主要产品与服务包括处理器及配套芯片产品与基础软硬件解决方案业务。目前，公司基于信息系统和工控系统两条主线开展产业生态建设，面向网络安全、办公与业务信息化、工控及物联网等领域与合作伙伴保持全面的市场合作，系列产品在电子政务、能源、交通、金融、电信、教育等行业领域已获得广泛应用。公司致力于打造独立于X86和ARM生态的自主生态体系。公司一直遵循开放、兼容、优化的原则，开放以吸引行业合作伙伴，兼容以形成生态合力，优化以提升用户体验，从使用国外核心技术、追随国外产业生态，转变为研发自主核心技术、建设自主产业生态。",
+              "profileSummary": "公司主营业务为处理器及配套芯片的研制、销售及服务，主要产品与服务包括处理器及配套芯片产品与基础软硬件解决方案业务。目前，公司基于信息系统和工控系统两条主线开展产业生态建设，面向网络安全、办公与业务信息化、工控及物联网等领域与合作伙伴保持全面的市场合作，系列产品在电子政务、能源、交通、金融、电信、教育等行业领域已获得广泛应用。",
+              "majorProducts": "龙芯1号、龙芯2号、龙芯3号",
+              "revenueComposition": "信息化类芯片:48.63%;解决方案:26.52%;工控类芯片:24.86%",
+              "revenueSegments": [
+                {
+                  "name": "信息化类芯片",
+                  "sharePct": 48.63,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "解决方案",
+                  "sharePct": 26.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工控类芯片",
+                  "sharePct": 24.86,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "台式机CPU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "服务器CPU",
+                    "category": "计算控制芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "桥接芯片",
+                  "低压差线性稳压器LDO",
+                  "降压型DC-DC转换器",
+                  "台式机CPU",
+                  "打印机主控SoC",
+                  "服务器CPU",
+                  "电机控制MCU",
+                  "服务器开发板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "龙芯中科已经具备台式机CPU、服务器CPU等业务能力，坚持自主指令集路线的国产CPU龙头，致力于构建独立于Wintel和AA体系的第三套生态并非单纯概念映射。当前对应的收入被归入信息化类芯片（48.63%）、工控类芯片（24.86%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 6170,
+            "stockCode": "000066.SZ",
+            "stockName": "中国长城",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "持有国产ARM架构CPU龙头飞腾公司28%的股权，是国产CPU核心标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000066.SZ",
+              "companyName": "中国长城",
+              "companyProfile": "公司创始于1986年，是我国自主计算产业的开拓者和引领者，中国电子计算产业核心子集团。1997年，公司在深交所上市。目前的公司由中国电子原所属四家二级企业于2017年整合而成。公司在我国自主计算产业发展史上创造过多个第一，曾研发出我国第一台具有自主知识产权的中文微型电脑0520c-H、第一块电脑硬盘、第一款终端ASIC芯片、第一台显示器、第一台光纤转换器、第一台光笔图形显示终端等，为我国自主计算产业的发展作出了重要贡献。近年来，公司聚焦自主智算产业，统筹发展智算部件、智算平台、智算终端，着力推进“芯端一体、端网融合，双轮驱动、有机发展”战略，加速推动服务器、计算芯片、算力网络等关键核心技术突破，构建了从芯片、台式机、笔记本、服务器、网络交换设备到应用系统等具有完整知识产权的产品谱系，成功赋能党政办公、金融、能源、电信、交通、教育等重点信息化领域的数字化转型。",
+              "profileSummary": "目前的公司由中国电子原所属四家二级企业于2017年整合而成。近年来，公司聚焦自主智算产业，统筹发展智算部件、智算平台、智算终端，着力推进“芯端一体、端网融合，双轮驱动、有机发展”战略，加速推动服务器、计算芯片、算力网络等关键核心技术突破，构建了从芯片、台式机、笔记本、服务器、网络交换设备到应用系统等具有完整知识产权的产品谱系，成功赋能党政办公、金融、能源、电信、交通、教育等重点信息化领域的数字化转型。",
+              "majorProducts": "产业服务、海洋信息化业务、计算终端、聚焦通信业务、特种计算业务、消费终端、行业终端、终端部件",
+              "revenueComposition": "计算:75.31%;系统装备:19.53%;其他业务:5.16%",
+              "revenueSegments": [
+                {
+                  "name": "计算",
+                  "sharePct": 75.31,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "系统装备",
+                  "sharePct": 19.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "服务器CPU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "一体台式电脑",
+                    "category": "计算机整机"
+                  },
+                  {
+                    "name": "消费电子产品电源",
+                    "category": "电池模组"
+                  },
+                  {
+                    "name": "笔记本电脑",
+                    "category": "笔记本电脑"
+                  }
+                ],
+                "knownProducts": [
+                  "办公楼租赁",
+                  "打印机",
+                  "服务器CPU",
+                  "笔记本电脑",
+                  "消费电子产品电源",
+                  "通信电源",
+                  "出入院结算信息化系统",
+                  "云课堂"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中国长城的事件暴露较为直接：计算占收入的75.31%，相关业务不是边缘尝试；具体业务抓手是：持有国产ARM架构CPU龙头飞腾公司28%的股权，是国产CPU核心标的。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 6171,
+            "stockCode": "002290.SZ",
+            "stockName": "禾盛新材",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "通过增资控股子公司海芯技术并参股上游芯片设计公司一支电子，切入国产ARM架构AI CPU赛道。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002290.SZ",
+              "companyName": "禾盛新材",
+              "companyProfile": "公司是国内最早进入家电用外观复合材料行业的企业之一，主要从事家电用外观复合材料(PCM/VCM)的研发、生产与销售，产品广泛应用于冰箱、洗衣机、空调等各类家电外观部件。公司产品的主要原材料为钢材，主要应用领域为家电行业。公司客户网络已经覆盖圈内外多数白色家电品牌制造商，核心客户为国内外一流家电制造商。经过多年的业务积累，公司已发展成国内家电用复合材料行业最具研发实力和规模生产能力的专业服务商之一，产品主要用于冰箱、洗衣机、微波炉等白色家电外观部件。公司客户网络已经覆盖圈内外多数白色家电品牌制造商，核心客户为国内外一流家电制造商，在市场规模上处于国内同行业厂商的前列，核心客户包括LG、三星、西门子、松下、夏普、日立、美的、海信、三洋等家用电器行业内的知名厂商。",
+              "profileSummary": "经过多年的业务积累，公司已发展成国内家电用复合材料行业最具研发实力和规模生产能力的专业服务商之一，产品主要用于冰箱、洗衣机、微波炉等白色家电外观部件。公司客户网络已经覆盖圈内外多数白色家电品牌制造商，核心客户为国内外一流家电制造商，在市场规模上处于国内同行业厂商的前列，核心客户包括LG、三星、西门子、松下、夏普、日立、美的、海信、三洋等家用电器行业内的知名厂商。",
+              "majorProducts": "禾盛PCM彩色印刷复合材料、禾盛PET/AL/PP复塑复合材料、禾盛PET/PCM彩色层压复合材料、禾盛钢化玻璃内表面复合型涂装、禾盛环保聚氯乙烯装饰贴面用高光复合薄膜、禾盛家电用覆塑产品(VCM)、禾盛家电用涂层产品(PCM)、禾盛聚酯装饰贴面用高光复合薄膜、禾盛双层PET复塑材料、禾盛印刷PCM特种钢板、禾盛印刷层装饰贴面用高光复合薄膜",
+              "revenueComposition": "家电用复合材料:96.89%;其他业务:1.76%;系统集成板块:1.35%",
+              "revenueSegments": [
+                {
+                  "name": "家电用复合材料",
+                  "sharePct": 96.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "系统集成板块",
+                  "sharePct": 1.35,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "生成式大模型一体机",
+                    "category": "人工智能"
+                  }
+                ],
+                "knownProducts": [
+                  "家电用有机涂层板(PCM)",
+                  "家电用覆膜板(VCM)",
+                  "生成式大模型一体机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "禾盛新材的系统集成板块（1.35%）覆盖范围较宽，其中能够承载生成式大模型一体机，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：通过增资控股子公司海芯技术并参股上游芯片设计公司一支电子，切入国产ARM架构AI CPU赛道。现阶段无法用整个分部占比直接衡量受益程度，因为技术商业化与产品迭代速度还需沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、量产良率、订单规模、产品收入占比和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 6176,
+            "stockCode": "688256.SH",
+            "stockName": "寒武纪",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国产AI芯片（ASIC路线）龙头，其DCU产品是国产AI服务器的重要算力核心，与CPU形成协同。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688256.SH",
+              "companyName": "寒武纪",
+              "companyProfile": "公司是智能芯片领域全球知名的新兴公司，能提供云边端一体、软硬件协同、训练推理融合、具备统一生态的系列化智能芯片产品和平台化基础系统软件。公司掌握的智能处理器指令集、智能处理器微架构、智能芯片编程语言、智能芯片数学库等核心技术，具有壁垒高、研发难、应用广等特点，对集成电路行业与人工智能产业具有重要的技术价值、经济价值和生态价值。公司自成立以来一直专注于人工智能芯片产品的研发与技术创新，致力于打造人工智能领域的核心处理器芯片，让机器更好地理解和服务人类。公司的主营业务是应用于各类云服务器、边缘计算设备、终端设备中人工智能核心芯片的研发、设计和销售，以及为客户提供芯片产品。目前，公司的主要产品线包括云端产品线、边缘产品线、IP授权及软件。",
+              "profileSummary": "公司的主营业务是应用于各类云服务器、边缘计算设备、终端设备中人工智能核心芯片的研发、设计和销售，以及为客户提供芯片产品。目前，公司的主要产品线包括云端产品线、边缘产品线、IP授权及软件。",
+              "majorProducts": "Cambricon Neuware软件开发平台、寒武纪1A处理器、寒武纪1H处理器、寒武纪1M处理器、加速卡、思元100（MLU100）芯片及云端智能加速卡、思元220（MLU220）芯片及边缘智能加速卡、思元270（MLU270）芯片及云端智能加速卡、思元290（MLU290）芯片及云端智能加速卡、训练整机、云端智能芯片",
+              "revenueComposition": "云端产品线:99.69%;其他:0.23%;边缘产品线:0.05%;IP授权及软件:0.04%",
+              "revenueSegments": [
+                {
+                  "name": "云端产品线",
+                  "sharePct": 99.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "边缘产品线",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "IP授权及软件",
+                  "sharePct": 0.04,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "智能处理器IP授权服务",
+                    "category": "电子技术服务"
+                  },
+                  {
+                    "name": "推理软件平台",
+                    "category": "人工智能"
+                  },
+                  {
+                    "name": "训练开发平台",
+                    "category": "人工智能"
+                  }
+                ],
+                "knownProducts": [
+                  "智能处理器IP授权服务",
+                  "云端智能加速卡",
+                  "云端智能芯片",
+                  "边缘智能加速卡",
+                  "边缘智能芯片",
+                  "智能计算集群系统",
+                  "推理软件平台",
+                  "训练开发平台"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "寒武纪已经具备智能处理器IP授权服务、推理软件平台、训练开发平台等业务能力，国产AI芯片（ASIC路线）龙头，其DCU产品是国产AI服务器的重要算力核心，与CPU形成协同并非单纯概念映射。当前对应的收入被归入IP授权及软件（0.04%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 6177,
+            "stockCode": "688253.SH",
+            "stockName": "英诺特",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内CPU固件领军企业，是衔接国产CPU与整机、操作系统的关键底层软件服务商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688253.SH",
+              "companyName": "英诺特",
+              "companyProfile": "公司成立于2006年2月，是一家专注于体外诊断行业POCT快速检测试剂研发、生产和销售的高科技生物医药企业，公司战略聚焦于呼吸道检测领域，同时覆盖消化道、优生优育、肝炎等多个检测领域，以“快速检测”、“急门诊检测”、“多病原体鉴别诊断”等为特色，已成为呼吸道POCT快速检测领域的行业领先企业之一，并致力于打造中国呼吸道病原体快速检测的领导品牌，成为医疗诊断创新的中坚力量。公司紧紧抓住当前社会节奏加快、分级诊疗体系不断推进、检测范围扩大、诊断精准化、筛查基层化、早诊早治趋势凸显等行业发展的驱动因素，深耕POCT快速检测领域，在呼吸症候群鉴别诊断、腹泻症候群鉴别诊断领域拥有多款具有临床意义的特色产品。受益于国家分级诊疗体系不断推进、多项呼吸道相关临床实践指南及专家共识发布以及患者早诊早治的就诊意识提升等多方面因素。",
+              "profileSummary": "公司成立于2006年2月，是一家专注于体外诊断行业POCT快速检测试剂研发、生产和销售的高科技生物医药企业，公司战略聚焦于呼吸道检测领域，同时覆盖消化道、优生优育、肝炎等多个检测领域，以“快速检测”、“急门诊检测”、“多病原体鉴别诊断”等为特色，已成为呼吸道POCT快速检测领域的行业领先企业之一，并致力于打造中国呼吸道病原体快速检测的领导品牌，成为医疗诊断创新的中坚力量。公司紧紧抓住当前社会节奏加快、分级诊疗体系不断推进、检测范围扩大…",
+              "majorProducts": "呼吸道病原体诊断试剂、呼吸道系列免疫层析、其他系列免疫层析、优生优育系列免疫层析",
+              "revenueComposition": "呼吸道系列:96.28%;其他试剂系列:2.95%;优生优育系列:0.74%;POCT诊断仪器:0.03%",
+              "revenueSegments": [
+                {
+                  "name": "呼吸道系列",
+                  "sharePct": 96.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他试剂系列",
+                  "sharePct": 2.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "优生优育系列",
+                  "sharePct": 0.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "POCT诊断仪器",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "丙肝检测试剂",
+                  "呼吸道检测试剂",
+                  "流感病毒检测试剂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "英诺特现有收入由呼吸道系列（96.28%）、其他试剂系列（2.95%）贡献，主营产品为丙肝检测试剂、呼吸道检测试剂、流感病毒检测试剂，与国内CPU固件领军企业，是衔接国产CPU与整机、操作系统的关键底层软件服务商指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，事件能否转化为可确认的经营增量才会通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”产生财务影响。现阶段订单、收入确认、产品结构和毛利率变化比概念标签更重要；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 6178,
+            "stockCode": "688008.SH",
+            "stockName": "澜起科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "AI服务器对高速互联需求激增，公司PCIe/CXL产品是解决CPU与GPU、CPU与CPU之间通信瓶颈的关键。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688008.SH",
+              "companyName": "澜起科技",
+              "companyProfile": "公司成立于2004年，是国际领先的数据处理及互连芯片设计公司，致力于为云计算和数据中心领域提供高性能、低功耗的芯片解决方案，目前公司拥有互连类芯片和津逮®服务器平台两大产品线。作为科创板首批上市企业，公司于2019年7月登陆上海证券交易所。公司总部设在上海，并在昆山、北京、西安、澳门及美国、韩国等地设有分支机构。",
+              "profileSummary": "公司成立于2004年，是国际领先的数据处理及互连芯片设计公司，致力于为云计算和数据中心领域提供高性能、低功耗的芯片解决方案，目前公司拥有互连类芯片和津逮®服务器平台两大产品线。",
+              "majorProducts": "CKD芯片、DDR2高级内存缓冲器芯片、DDR3寄存缓冲器芯片（1.5V/1.35V）、DDR3寄存缓冲器芯片（1.5V/1.35V/1.25V）、DDR3内存缓冲器芯片、MXC芯片、PCIe Retimer芯片、标准版混合安全内存模组 (HSDIMM)、第二代（Gen2）DDR4寄存时钟驱动器芯片、第二代（Gen2）DDR4数据缓冲器芯片、第二代+（Gen2 Plus）DDR4寄存时钟驱动器芯片、第二代+（Gen2 Plus）DDR4数据缓冲器芯片、第一代（Gen1）DDR4寄存时钟驱动器芯片、第一代（Gen1）DDR4数据缓冲器芯片、混合安全内存模组（HSDIMM®）、津逮®CPU、津逮服务器CPU、精简版混合安全内存模组 (HSDIMM-Lite)、内存接口芯片（含MRCD/MDB芯片）、内存模组配套芯片、消费电子芯片",
+              "revenueComposition": "内存接口芯片:94.18%;津逮服务器平台:5.65%;其他业务:0.18%",
+              "revenueSegments": [
+                {
+                  "name": "内存接口芯片",
+                  "sharePct": 94.18,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "津逮服务器平台",
+                  "sharePct": 5.65,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "服务器CPU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "PCIeRetimer芯片",
+                    "category": "信号链芯片"
+                  },
+                  {
+                    "name": "SPD Hub",
+                    "category": "存储器芯片"
+                  },
+                  {
+                    "name": "DDR PMIC",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "内存扩展控制器",
+                    "category": "接口芯片"
+                  },
+                  {
+                    "name": "可信计算芯片",
+                    "category": "安全芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "PCIeRetimer芯片",
+                  "多路复用寄存时钟驱动器",
+                  "多路复用数据缓冲器",
+                  "寄存时钟驱动器",
+                  "数据缓冲器",
+                  "时钟发生器",
+                  "时钟缓冲器",
+                  "时钟驱动器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "澜起科技与事件的关系已经落在存量主业，而非远期概念：内存接口芯片占收入的94.18%。公司在产业链中的具体抓手是：AI服务器对高速互联需求激增，公司PCIe/CXL产品是解决CPU与GPU、CPU与CPU之间通信瓶颈的关键。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 6179,
+            "stockCode": "688702.SH",
+            "stockName": "盛科通信",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国产服务器交换芯片龙头，其产品是构建大规模CPU/GPU集群（超节点）的必要组件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688702.SH",
+              "companyName": "盛科通信-U",
+              "companyProfile": "公司2005年1月31日成立，为国内领先的以太网交换芯片设计企业，主营业务为以太网交换芯片及配套产品的研发、设计和销售。以太网交换芯片是构建企业网络、运营商网络、数据中心网络和工业网络的核心平台型芯片。公司现已形成丰富的以太网交换芯片产品序列，覆盖从接入层到核心层的以太网交换产品，为我国数字化网络建设提供了完整的芯片解决方案。公司面向国家数字化网络建设需求，坚持自主研发，形成了高性能交换架构、高性能端口设计、多特性流水线等11项核心技术，目标成为全互联时代以太网交换芯片引领者，提供可靠、高质量、有竞争力的系列以太网交换芯片，形成自主开放的软硬件生态，为客户提供多样化选择。在全互联时代，公司将以引领以太网交换芯片技术发展为目标，聚焦以太网交换芯片业务，提升已有芯片产品线的市场竞争力，延展以太网交换芯片产品线深度。同时拓宽产品类别广度，布局全产业链，进一步提升公司市场规模。",
+              "profileSummary": "公司2005年1月31日成立，为国内领先的以太网交换芯片设计企业，主营业务为以太网交换芯片及配套产品的研发、设计和销售。公司现已形成丰富的以太网交换芯片产品序列，覆盖从接入层到核心层的以太网交换产品，为我国数字化网络建设提供了完整的芯片解决方案。",
+              "majorProducts": "Duet2 系列芯片、E350/V350系列三层以太网交换机、E530/V530系列三层以太网交换机、E550/V550系列三层以太网交换机、E580/V580系列三层以太网交换机、E680/V680系列三层以太网交换机、GoldenGate 系列芯片、GreatBelt 系列芯片、Humber 系列芯片、TsingMa 系列芯片、TsingMa.MX 系列芯片",
+              "revenueComposition": "以太网交换芯片:72.26%;以太网交换芯片模组:10.95%;以太网交换机:9.3%;授权许可:5.34%;定制化解决方案及其他:2.15%",
+              "revenueSegments": [
+                {
+                  "name": "以太网交换芯片",
+                  "sharePct": 72.26,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "以太网交换芯片模组",
+                  "sharePct": 10.95,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "以太网交换机",
+                  "sharePct": 9.3,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "授权许可",
+                  "sharePct": 5.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "定制化解决方案及其他",
+                  "sharePct": 2.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "以太网交换芯片模组",
+                    "category": "网络分流设备"
+                  },
+                  {
+                    "name": "以太网交换芯片",
+                    "category": "通信芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "以太网交换芯片",
+                  "以太网交换机",
+                  "以太网交换芯片模组"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "盛科通信的相关业务已决定公司大部分经营表现：以太网交换芯片（72.26%）、以太网交换芯片模组（10.95%）合计约占收入的83.21%。公司与事件的直接业务联系是：国产服务器交换芯片龙头，其产品是构建大规模CPU/GPU集群（超节点）的必要组件，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 6180,
+            "stockCode": "000977.SZ",
+            "stockName": "浪潮信息",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内服务器绝对龙头，是国产及海外CPU落地应用的最主要载体。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000977.SZ",
+              "companyName": "浪潮信息",
+              "companyProfile": "公司作为全球领先的IT基础设施产品、方案和服务提供商，公司秉持“计算力就是生产力，智算力就是创新力”的核心理念，致力于智慧计算技术的创新和应用，为全球注入高质量算力，加速数字世界与实体世界的融合，激发智慧潜能，从而让人们的生活更加美好，企业的经营更为高效，社会治理更加完善，人与自然的关系更加和谐。一直坚持开放融合的业务战略，积极发展开放融合的全球计算产业。在开放开源的模式下，加快技术创新和应用，为客户提供领先的云计算、大数据、人工智能、边缘计算等各类创新产品和解决方案，助力客户在数字化时代实现转型升级。公司始终坚持“以应用为导向，以系统为核心”，全面推进算法、算力、数据和互连技术的创新，加速“人工智能+”的落地。算法方面，积极探索各类大模型算法，持续提升模型算力效率，探索智能边界；落实绿色可持续的发展理念，积极推动数据中心建设和运行模式的升级，提高数据中心的能源利用水平，降低碳排放。公司全线服务器支持液冷，建成了亚洲最大的液冷数据中心研发生产基地，具备业界领先的液冷数据中心交付能力，为数据中心的绿色、高效运行提供了坚实保障。公司坚持“伙伴第一”的原则，携手众多合作伙伴，共同打造共融共生的计算产业生态。通过与合作伙伴的紧密协作，为客户提供全栈式、一体化的智算解决方案，加速各行业的智能化转型，助力客户在智慧时代把握变革机遇，开创发展新局面，实现互利共赢，共同推动计算产业的繁荣发展。",
+              "profileSummary": "公司作为全球领先的IT基础设施产品、方案和服务提供商，公司秉持“计算力就是生产力，智算力就是创新力”的核心理念，致力于智慧计算技术的创新和应用，为全球注入高质量算力，加速数字世界与实体世界的融合，激发智慧潜能，从而让人们的生活更加美好，企业的经营更为高效，社会治理更加完善，人与自然的关系更加和谐。在开放开源的模式下，加快技术创新和应用，为客户提供领先的云计算、大数据、人工智能、边缘计算等各类创新产品和解决方案，助力客户在数字化时代实现…",
+              "majorProducts": "互联网设备制造与销售、计算机软硬件及外围设备制造与销售、浪潮ERP软件、浪潮服务器、浪潮税控打印机、浪潮税控收款机、浪潮税务软件、浪潮台式电脑、浪潮行业专用软件、浪潮英信存储器、通信设备制造与销售、网络技术服务、信息安全设备制造与销售、信息技术咨询服务、云计算设备制造与销售",
+              "revenueComposition": "服务器产品:93.82%;存储类、交换类等产品:5.93%;其他业务:0.25%",
+              "revenueSegments": [
+                {
+                  "name": "服务器产品",
+                  "sharePct": 93.82,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "存储类、交换类等产品",
+                  "sharePct": 5.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "关键应用主机",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "液冷服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "超节点服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "边缘服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "通用服务器",
+                    "category": "服务器"
+                  }
+                ],
+                "knownProducts": [
+                  "存储服务器",
+                  "AI管理软件",
+                  "AI服务器",
+                  "关键应用主机",
+                  "液冷服务器",
+                  "超节点服务器",
+                  "边缘服务器",
+                  "通用服务器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "浪潮信息的事件暴露较为直接：服务器产品占收入的93.82%，相关业务不是边缘尝试；具体业务抓手是：国内服务器绝对龙头，是国产及海外CPU落地应用的最主要载体。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 6181,
+            "stockCode": "603019.SH",
+            "stockName": "中科曙光",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国产高性能计算龙头，深度绑定海光CPU，是国产算力服务器核心供应商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603019.SH",
+              "companyName": "中科曙光",
+              "companyProfile": "公司作为我国核心信息基础设施领军企业，为中国及全球用户提供创新、高效、可靠的IT产品、解决方案及服务。公司于2014年在上海证券交易所上市。经历30余年发展，公司在高端计算、存储、安全、数据中心等领域拥有深厚的技术积淀和领先的市场份额，并充分发挥高端计算优势，布局智能计算、云计算、大数据等领域的技术研发，打造计算产业生态，为科研探索创新、行业信息化建设、产业转型升级、数字经济发展提供了坚实可信的支撑。公司在全国各省、自治区和直辖市均设立了分支机构，拥有国际领先的3大智能制造生产基地、5大研发中心，在全国50多个城市部署了城市云计算中心。作为以技术创新为基因的科技企业，中科曙光未来将持续专注于核心技术研发，并与用户、合作伙伴携手共建应用生态、推动产业进步，以科技创新助力“数字中国”建设，驱动经济高质量发展。",
+              "profileSummary": "公司作为我国核心信息基础设施领军企业，为中国及全球用户提供创新、高效、可靠的IT产品、解决方案及服务。经历30余年发展，公司在高端计算、存储、安全、数据中心等领域拥有深厚的技术积淀和领先的市场份额，并充分发挥高端计算优势，布局智能计算、云计算、大数据等领域的技术研发，打造计算产业生态，为科研探索创新、行业信息化建设、产业转型升级、数字经济发展提供了坚实可信的支撑。",
+              "majorProducts": "中科曙光技术服务、中科曙光软件开发、中科曙光系统集成",
+              "revenueComposition": "IT设备:83.56%;围绕高端计算机的软件开发、系统集成及技术服务:16.35%;其他业务:0.09%",
+              "revenueSegments": [
+                {
+                  "name": "IT设备",
+                  "sharePct": 83.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "围绕高端计算机的软件开发、系统集成及技术服务",
+                  "sharePct": 16.35,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "液冷服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "通用服务器",
+                    "category": "服务器"
+                  },
+                  {
+                    "name": "专属云平台",
+                    "category": "PaaS"
+                  },
+                  {
+                    "name": "云存储服务",
+                    "category": "IaaS"
+                  },
+                  {
+                    "name": "云数据库平台服务",
+                    "category": "PaaS"
+                  },
+                  {
+                    "name": "云服务器",
+                    "category": "IaaS"
+                  }
+                ],
+                "knownProducts": [
+                  "国资数字化转型解决方案",
+                  "智慧交通解决方案",
+                  "云存储服务",
+                  "云服务器",
+                  "云运维安全平台",
+                  "专属云平台",
+                  "云数据库平台服务",
+                  "AI智算训推平台"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中科曙光已经具备液冷服务器、通用服务器、专属云平台等业务能力，国产高性能计算龙头，深度绑定海光CPU，是国产算力服务器核心供应商并非单纯概念映射。当前对应的收入被归入围绕高端计算机的软件开发、系统集成及技术服务（16.35%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "3条低于3星的源记录已按当前关注口径排除。",
+      "3条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

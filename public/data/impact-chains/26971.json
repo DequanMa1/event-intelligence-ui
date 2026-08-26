@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26971",
@@ -9,34 +9,16 @@
     "date": "2026-07-05"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 8,
-    "mappedStockCount": 4,
-    "unmappedStockCount": 4,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 4,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 3,
     "stocks": [
-      {
-        "sourceRowNumber": 17147,
-        "stockCode": "03939.HK",
-        "stockName": "万国黄金集团",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 17148,
         "stockCode": "601899.SH",
         "stockName": "紫金矿业",
         "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 10
-      },
-      {
-        "sourceRowNumber": 17157,
-        "stockCode": "01929.HK",
-        "stockName": "周大福",
-        "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
@@ -45,15 +27,6 @@
         "sourceRowNumber": 17158,
         "stockCode": "600612.SH",
         "stockName": "老凤祥",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 2
-      },
-      {
-        "sourceRowNumber": 17159,
-        "stockCode": "00590.HK",
-        "stockName": "六福集团",
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
@@ -66,13 +39,33 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 4
+        "anchorProductCount": 1
       },
       {
-        "sourceRowNumber": 17161,
-        "stockCode": "00116.HK",
-        "stockName": "周生生",
+        "sourceRowNumber": 17162,
+        "stockCode": "605599.SH",
+        "stockName": "菜百股份",
         "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 17148,
+        "stockCode": "601899.SH",
+        "stockName": "紫金矿业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 17158,
+        "stockCode": "600612.SH",
+        "stockName": "老凤祥",
+        "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
@@ -83,44 +76,6 @@
         "stockName": "菜百股份",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 3
-      }
-    ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 17147,
-        "stockCode": "03939.HK",
-        "stockName": "万国黄金集团",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 17157,
-        "stockCode": "01929.HK",
-        "stockName": "周大福",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 17159,
-        "stockCode": "00590.HK",
-        "stockName": "六福集团",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 17161,
-        "stockCode": "00116.HK",
-        "stockName": "周生生",
-        "rating": "★★★★",
-        "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       }
@@ -128,34 +83,14 @@
   },
   "totals": {
     "candidateCoreProductCount": 16,
-    "selectedCoreProductCount": 2,
+    "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 1,
-    "downstreamCandidateCount": 2,
-    "shownUpstreamCount": 1,
-    "shownDownstreamCount": 2
+    "level7ProductCount": 23,
+    "relatedIndustryCandidateCount": 15,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1114000039",
-        "name": "黄金",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140045358"
-        ],
-        "linkedCoreProductNames": [
-          "黄金珠宝"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140204772",
         "name": "黄金珠宝品牌加盟",
@@ -181,18 +116,15 @@
           "name": "黄金珠宝品牌加盟"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002345.SZ",
             "stockName": "潮宏基",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -200,74 +132,553 @@
           "黄金",
           "饰品"
         ]
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001053",
+        "name": "黄金产品",
+        "description": "A股黄金行业涵盖采掘、冶炼及零售。因黄金具避险与抗通胀属性，在地缘动荡或经济不确定性高时受资金追捧。该板块与金价高度联动，是投资者对冲风险、保值增值的重要配置标的，市场关注度随宏观环境波动而显著变化。",
+        "stockCount": 5,
+        "starWeight": 23,
+        "level7ProductCount": 2,
+        "relevanceScore": 72,
+        "stocks": [
+          {
+            "stockCode": "600489.SH",
+            "stockName": "中金黄金",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600547.SH",
+            "stockName": "山东黄金",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600988.SH",
+            "stockName": "赤峰黄金",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "601899.SH",
+            "stockName": "紫金矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "605599.SH",
+            "stockName": "菜百股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140070289",
+            "name": "金锭",
+            "hierarchyPath": "有色金属 > 贵金属 > 黄金 > 黄金产品 > 黄金产品 > 金锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600489.SH",
+                "stockName": "中金黄金",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600547.SH",
+                "stockName": "山东黄金",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600988.SH",
+                "stockName": "赤峰黄金",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601899.SH",
+                "stockName": "紫金矿业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140070290",
+            "name": "金条",
+            "hierarchyPath": "有色金属 > 贵金属 > 黄金 > 黄金产品 > 黄金产品 > 金条",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600547.SH",
+                "stockName": "山东黄金",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "605599.SH",
+                "stockName": "菜百股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
       },
       {
-        "code": "1140045358",
-        "name": "黄金珠宝",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:黄金珠宝品牌加盟",
-        "stockCount": 1,
+        "code": "1200000124",
+        "name": "素金饰品",
+        "description": "素金指无镶嵌、高纯度的黄金饰品。投资者关注相关公司，因其业绩直接挂钩金价波动，具备抗通胀属性；且作为刚需消费品，品牌龙头拥有稳定现金流与渠道优势，在金价上涨周期中往往受益于库存重估及消费提振。",
+        "stockCount": 5,
+        "starWeight": 18,
+        "level7ProductCount": 3,
+        "relevanceScore": 84,
         "stocks": [
           {
             "stockCode": "002345.SZ",
             "stockName": "潮宏基",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600612.SH",
+            "stockName": "老凤祥",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "605599.SH",
+            "stockName": "菜百股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600987.SH",
+            "stockName": "航民股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603900.SH",
+            "stockName": "莱绅通灵",
+            "rating": "★★★",
+            "filledStars": 3
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 2,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
+        "products": [
+          {
+            "code": "1140011571",
+            "name": "黄金饰品",
+            "hierarchyPath": "轻工制造 > 家用轻工 > 珠宝首饰 > 素金饰品 > 黄金饰品 > 黄金饰品",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "002345.SZ",
+                "stockName": "潮宏基",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600612.SH",
+                "stockName": "老凤祥",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "605599.SH",
+                "stockName": "菜百股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600987.SH",
+                "stockName": "航民股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603900.SH",
+                "stockName": "莱绅通灵",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140220926",
+            "name": "K金饰品",
+            "hierarchyPath": "轻工制造 > 家用轻工 > 珠宝首饰 > 素金饰品 > 黄金饰品 > K金饰品",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603900.SH",
+                "stockName": "莱绅通灵",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140213915",
+            "name": "黄金IP衍生品",
+            "hierarchyPath": "轻工制造 > 家用轻工 > 珠宝首饰 > 素金饰品 > 黄金饰品 > 黄金IP衍生品",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "605599.SH",
+                "stockName": "菜百股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
-    ],
-    "downstream": [
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 10,
+    "mappedStockCount": 9,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 23,
+    "candidateIndustryCount": 15,
+    "relatedIndustryCount": 2,
+    "stocks": [
       {
-        "code": "1140045262",
-        "name": "购物中心零售",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140045358"
-        ],
-        "linkedCoreProductNames": [
-          "黄金珠宝"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 17142,
+        "stockCode": "600489.SH",
+        "stockName": "中金黄金",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 4
       },
       {
-        "code": "1140005226",
-        "name": "黄金珠宝贸易",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140045358"
+        "sourceRowNumber": 17143,
+        "stockCode": "600547.SH",
+        "stockName": "山东黄金",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 17144,
+        "stockCode": "600988.SH",
+        "stockName": "赤峰黄金",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 12
+      },
+      {
+        "sourceRowNumber": 17148,
+        "stockCode": "601899.SH",
+        "stockName": "紫金矿业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 17155,
+        "stockCode": "600987.SH",
+        "stockName": "航民股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 17156,
+        "stockCode": "605181.SH",
+        "stockName": "老铺黄金",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 17158,
+        "stockCode": "600612.SH",
+        "stockName": "老凤祥",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 17160,
+        "stockCode": "002345.SZ",
+        "stockName": "潮宏基",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 17162,
+        "stockCode": "605599.SH",
+        "stockName": "菜百股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 17163,
+        "stockCode": "603900.SH",
+        "stockName": "莱绅通灵",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001053",
+        "name": "黄金产品",
+        "description": "A股黄金行业涵盖采掘、冶炼及零售。因黄金具避险与抗通胀属性，在地缘动荡或经济不确定性高时受资金追捧。该板块与金价高度联动，是投资者对冲风险、保值增值的重要配置标的，市场关注度随宏观环境波动而显著变化。",
+        "stockCount": 5,
+        "starWeight": 23,
+        "level7ProductCount": 2,
+        "relevanceScore": 72,
+        "stocks": [
+          {
+            "stockCode": "600489.SH",
+            "stockName": "中金黄金",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600547.SH",
+            "stockName": "山东黄金",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600988.SH",
+            "stockName": "赤峰黄金",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "601899.SH",
+            "stockName": "紫金矿业",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "605599.SH",
+            "stockName": "菜百股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "黄金珠宝"
+        "products": [
+          {
+            "code": "1140070289",
+            "name": "金锭",
+            "hierarchyPath": "有色金属 > 贵金属 > 黄金 > 黄金产品 > 黄金产品 > 金锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600489.SH",
+                "stockName": "中金黄金",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600547.SH",
+                "stockName": "山东黄金",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600988.SH",
+                "stockName": "赤峰黄金",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "601899.SH",
+                "stockName": "紫金矿业",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140070290",
+            "name": "金条",
+            "hierarchyPath": "有色金属 > 贵金属 > 黄金 > 黄金产品 > 黄金产品 > 金条",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600547.SH",
+                "stockName": "山东黄金",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "605599.SH",
+                "stockName": "菜百股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000124",
+        "name": "素金饰品",
+        "description": "素金指无镶嵌、高纯度的黄金饰品。投资者关注相关公司，因其业绩直接挂钩金价波动，具备抗通胀属性；且作为刚需消费品，品牌龙头拥有稳定现金流与渠道优势，在金价上涨周期中往往受益于库存重估及消费提振。",
+        "stockCount": 5,
+        "starWeight": 18,
+        "level7ProductCount": 3,
+        "relevanceScore": 84,
+        "stocks": [
+          {
+            "stockCode": "002345.SZ",
+            "stockName": "潮宏基",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600612.SH",
+            "stockName": "老凤祥",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "605599.SH",
+            "stockName": "菜百股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600987.SH",
+            "stockName": "航民股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "603900.SH",
+            "stockName": "莱绅通灵",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140011571",
+            "name": "黄金饰品",
+            "hierarchyPath": "轻工制造 > 家用轻工 > 珠宝首饰 > 素金饰品 > 黄金饰品 > 黄金饰品",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "002345.SZ",
+                "stockName": "潮宏基",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600612.SH",
+                "stockName": "老凤祥",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "605599.SH",
+                "stockName": "菜百股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600987.SH",
+                "stockName": "航民股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "603900.SH",
+                "stockName": "莱绅通灵",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140220926",
+            "name": "K金饰品",
+            "hierarchyPath": "轻工制造 > 家用轻工 > 珠宝首饰 > 素金饰品 > 黄金饰品 > K金饰品",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603900.SH",
+                "stockName": "莱绅通灵",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140213915",
+            "name": "黄金IP衍生品",
+            "hierarchyPath": "轻工制造 > 家用轻工 > 珠宝首饰 > 素金饰品 > 黄金饰品 > 黄金IP衍生品",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "605599.SH",
+                "stockName": "菜百股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -282,11 +693,872 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 27,
+    "eligibleSourceRowCount": 10,
+    "totalStockCount": 10,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 10,
+    "excludedNonAShareCount": 7,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 9,
+    "companyProfileUnmatchedCount": 1,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 17142,
+            "stockCode": "600489.SH",
+            "stockName": "中金黄金",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "公司是国内领先的黄金生产企业，专注于黄金的勘探、开采、冶炼和销售。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600489.SH",
+              "companyName": "中金黄金",
+              "companyProfile": "公司成立于2000年6月23日，由中国黄金集团有限公司作为主发起人发起设立，是中国黄金协会副会长单位。2003年8月14日，公司在上海证券交易所上市。公司为国内黄金行业首家通过伦敦金银市场协会(LBMA)产品认证企业；入选全球影响力最大的股票指数，同时也是全球投资组合经理采用最多的基准指数——明晟(MSCI)指数体系、“沪深300指数”样本股、“上证180指数”样本股、上证中央企业50交易型开放式指数基金指数成分股。公司的主要业务有黄金及其有色金属的地质勘查、采选、冶炼的投资与管理，黄金生产的副产品加工、销售，黄金生产所需原材料、燃料、设备的仓储和销售，黄金生产技术的研究开发、咨询服务，高纯度黄金制品的生产、加工、批发；进出口业务，商品展销。",
+              "profileSummary": "公司为国内黄金行业首家通过伦敦金银市场协会(LBMA)产品认证企业；入选全球影响力最大的股票指数，同时也是全球投资组合经理采用最多的基准指数——明晟(MSCI)指数体系、“沪深300指数”样本股、“上证180指数”样本股、上证中央企业50交易型开放式指数基金指数成分股。公司的主要业务有黄金及其有色金属的地质勘查、采选、冶炼的投资与管理，黄金生产的副产品加工、销售，黄金生产所需原材料、燃料、设备的仓储和销售，黄金生产技术的研究开发、咨询…",
+              "majorProducts": "中金黄金电解铜、中金黄金金锭、中金黄金硫酸、中金黄金银锭",
+              "revenueComposition": "黄金:63.36%;其他:9.02%;其中:矿山铜:5.71%;其他业务:0.41%;内部抵销:-15.72%",
+              "revenueSegments": [
+                {
+                  "name": "黄金",
+                  "sharePct": 63.36,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其中:矿山铜",
+                  "sharePct": 5.71,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -15.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电解铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "白银",
+                    "category": "白银产品"
+                  },
+                  {
+                    "name": "金锭",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "铜精矿",
+                    "category": "铜矿采选"
+                  }
+                ],
+                "knownProducts": [
+                  "工业硫酸",
+                  "电解铜",
+                  "白银",
+                  "金锭",
+                  "铜精矿",
+                  "矿产金",
+                  "金精矿"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中金黄金与事件的关系已经落在存量主业，而非远期概念：黄金占收入的63.36%。公司在产业链中的具体抓手是：公司是国内领先的黄金生产企业，专注于黄金的勘探、开采、冶炼和销售。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 17143,
+            "stockCode": "600547.SH",
+            "stockName": "山东黄金",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "公司是国内黄金行业的龙头企业，拥有完整的黄金产业链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600547.SH",
+              "companyName": "山东黄金",
+              "companyProfile": "公司以黄金开采为主业，拥有勘探、采矿、选矿、冶炼(精炼)和黄金产品深加工、销售于一体的完整产业链，并拥有与之配套的科技研发体系，黄金产量、资源储备、经济效益、科技水平及人才优势均居国内黄金行业领先地位。所辖矿山企业分布于中国山东、福建、内蒙古、甘肃、新疆、青海、黑龙江、吉林、云南等省份(自治区)以及南美洲阿根廷、非洲加纳、纳米比亚等地。公司所属三山岛金矿、焦家金矿、新城金矿、青海大柴旦矿业连续多年上榜“中国黄金生产十大矿山”，与巴理克黄金公司按照50%-50%基准共同经营阿根廷最大的金矿贝拉德罗金矿。公司是国内唯一拥有4座矿山累计产金突破百吨的企业，所控股的山金国际黄金股份有限公司下辖5家矿山企业，涵盖金、银、铅、锌等有色金属生产，与公司形成优势互补，发挥协同效应。公司旗下的山东黄金冶炼有限公司是上海黄金交易所首批认证的全国十家“可提供标准金锭企业”之一和上海期货交易所首批金锭品牌注册企业，连续多年位列“中国黄金冶炼十大企业”。公司紧紧围绕“平安山金、生态山金、活力山金、人文山金”发展理念，以掌握矿业前沿核心技术为重点，加大科技研发投入，以科技创新引领发展；致力于打造安全的绿色矿山，不断巩固绿色矿山建设成果，树立了“山东黄金生态矿业”的品牌形象；关心关爱员工、致力和谐社区建设，积极承担社会责任，热心参与公益事业，以实际行动服务社会、影响社会，实现经济、环境和社会效益共赢。",
+              "profileSummary": "公司以黄金开采为主业，拥有勘探、采矿、选矿、冶炼(精炼)和黄金产品深加工、销售于一体的完整产业链，并拥有与之配套的科技研发体系，黄金产量、资源储备、经济效益、科技水平及人才优势均居国内黄金行业领先地位。公司是国内唯一拥有4座矿山累计产金突破百吨的企业，所控股的山金国际黄金股份有限公司下辖5家矿山企业，涵盖金、银、铅、锌等有色金属生产，与公司形成优势互补，发挥协同效应。",
+              "majorProducts": "标准金锭、合质金、投资金条、银锭",
+              "revenueComposition": "外购合质金:41.42%;自产金:36.82%;小金条:9.95%;贸易:9.57%;其他:2.25%",
+              "revenueSegments": [
+                {
+                  "name": "外购合质金",
+                  "sharePct": 41.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自产金",
+                  "sharePct": 36.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "小金条",
+                  "sharePct": 9.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易",
+                  "sharePct": 9.57,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "金条",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "金锭",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "黄金贸易",
+                    "category": "有色金属贸易"
+                  }
+                ],
+                "knownProducts": [
+                  "黄金贸易",
+                  "金条",
+                  "金锭",
+                  "矿产金"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "山东黄金已经参与事件相关业务，但收入基数仍小：贸易占收入的9.57%，说明公司已有业务抓手，但“公司是国内黄金行业的龙头企业，拥有完整的黄金产业链”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于供需缺口与产品价格能否驱动“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，从而推动业务跨过小规模阶段。在此之前，产品报价、订单排期、产销率和毛利率比总收入增速更值得跟踪；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 17144,
+            "stockCode": "600988.SH",
+            "stockName": "赤峰黄金",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "公司主营业务为黄金、白银等贵金属采选，是国内重要的黄金生产企业之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600988.SH",
+              "companyName": "赤峰黄金",
+              "companyProfile": "公司是一家快速成长的国际化黄金生产商，主要从事在全球范围内的黄金采、选和销售业务。公司拥有中国、东南亚和西非的7个矿业投资项目和1个资源综合回收利用项目。矿业投资项目包括中国境内的吉隆矿业—撰山子金矿、五龙矿业—五龙金矿、华泰矿业—红花沟金矿、锦泰矿业—溪灯坪金矿、瀚丰矿业—天宝山锌铅铜钼多金属矿；境外的万象矿业—塞班金铜矿、金星资源—瓦萨金矿；资源综合回收利用项目是位于中国安徽省合肥市的广源科技，从事废弃电器电子产品的拆解业务。我们秉承“让更多的人因公司的发展而受益”的核心价值观，高度重视环境、安全，重视人文关怀，承担社会责任。我们始终以高“ESG”标准坚持高质量可持续发展，致力于遵循相关行业最高标准及最佳实践。作为一家成长中的黄金上市公司，公司致力于“做专注、专业的黄金矿山公司”，通过不断创新管理机制，坚持低成本运营，加大对黄金资源的收购整合力度，实现资源的有效利用和合理开发，坚持国际化道路，努力成为全球欢迎的主要黄金生产商。",
+              "profileSummary": "公司是一家快速成长的国际化黄金生产商，主要从事在全球范围内的黄金采、选和销售业务。矿业投资项目包括中国境内的吉隆矿业—撰山子金矿、五龙矿业—五龙金矿、华泰矿业—红花沟金矿、锦泰矿业—溪灯坪金矿、瀚丰矿业—天宝山锌铅铜钼多金属矿；境外的万象矿业—塞班金铜矿、金星资源—瓦萨金矿；资源综合回收利用项目是位于中国安徽省合肥市的广源科技，从事废弃电器电子产品的拆解业务。",
+              "majorProducts": "白银、废弃电器电子产品处理、金锭、铜采选、锌、铅、铜、钼采选",
+              "revenueComposition": "黄金:89.72%;电解铜:4%;资源综合回收利用类:1.67%;锌精粉:1.6%;稀土产品:1.14%;钼精粉:0.77%;铜精粉:0.57%;铅精粉:0.42%;其他业务:0.12%",
+              "revenueSegments": [
+                {
+                  "name": "黄金",
+                  "sharePct": 89.72,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "电解铜",
+                  "sharePct": 4.0,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "资源综合回收利用类",
+                  "sharePct": 1.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锌精粉",
+                  "sharePct": 1.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "稀土产品",
+                  "sharePct": 1.14,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "钼精粉",
+                  "sharePct": 0.77,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "铜精粉",
+                  "sharePct": 0.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铅精粉",
+                  "sharePct": 0.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "二氧化锗",
+                    "category": "锗及锗合金"
+                  },
+                  {
+                    "name": "回收金属钯",
+                    "category": "钯及钯合金"
+                  },
+                  {
+                    "name": "回收金属铋",
+                    "category": "其他小金属及合金"
+                  },
+                  {
+                    "name": "回收金属锡",
+                    "category": "锡及锡合金"
+                  },
+                  {
+                    "name": "电解铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "白银",
+                    "category": "白银产品"
+                  }
+                ],
+                "knownProducts": [
+                  "回收金属铋",
+                  "回收金属钯",
+                  "二氧化锗",
+                  "回收金属锡",
+                  "稀土氧化物",
+                  "钼粉",
+                  "电解铜",
+                  "铜精粉"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "赤峰黄金更接近“小基数、高弹性”的事件期权，而不是当前利润主线。电解铜占收入的4%，公司在产业链中的具体抓手是：公司主营业务为黄金、白银等贵金属采选，是国内重要的黄金生产企业之一。若供需缺口与产品价格沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”兑现，相关业务增速可能很高，但较低的收入基数意味着短期贡献未必足以改变公司整体业绩。这类标的最重要的不是行业空间叙事，而是产品报价、订单排期、产销率和毛利率能否证明业务开始跨越规模门槛；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，估值弹性往往会先于报表弹性消退。"
+          },
+          {
+            "sourceRowNumber": 17156,
+            "stockCode": "605181.SH",
+            "stockName": "老铺黄金",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "公司是专注于古法手工金器的高端黄金珠宝品牌，产品具有高品牌溢价。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": false,
+              "matchMethod": "none",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "",
+              "companyName": "",
+              "companyProfile": "",
+              "profileSummary": "",
+              "majorProducts": "",
+              "revenueComposition": "",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "unavailable",
+                "relevantProducts": [],
+                "knownProducts": [],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "本次事件首先改变老铺黄金的供需缺口与产品价格预期，业务抓手是：公司是专注于古法手工金器的高端黄金珠宝品牌，产品具有高品牌溢价。预期进入经营结果仍需完成供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表这一整段传导，而相关业务的真实基数和战略重要性尚不明确。这意味着公司可能同时具备产业趋势弹性和较大的兑现不确定性。产品报价、订单排期、产销率和毛利率若连续强化，逻辑可信度会随之提升；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，当前相关性更可能停留在估值预期，而难以转化为利润贡献。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 17148,
+            "stockCode": "601899.SH",
+            "stockName": "紫金矿业",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司是全球领先的矿业公司，黄金是其核心业务板块之一，产量和资源储量巨大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601899.SH",
+              "companyName": "紫金矿业",
+              "companyProfile": "公司是一家在全球范围内从事铜、金、锌、锂、银、钼等金属矿产资源勘查、开发及工程设计、技术应用研究的大型跨国矿业集团，在香港H股和上海A股整体上市。公司在中国17个省(区)和境外17个国家拥有重要矿业投资项目，包括境内的西藏巨龙铜矿及朱诺铜矿、黑龙江多宝山铜山铜矿、福建紫金山铜金矿、山西紫金、贵州紫金、陇南紫金等，境外的塞尔维亚丘卡卢-佩吉铜金矿及博尔铜矿、刚果(金)卡莫阿铜矿及科卢韦齐铜矿、苏里南罗斯贝尔金矿、哥伦比亚武里蒂卡金矿等；公司加速进军新能源新材料产业，拥有阿根廷3Q盐湖锂矿、西藏拉果错盐湖锂矿、湖南道县湘源硬岩锂多金属矿，并受邀主导开发刚果(金)马诺诺锂矿东北部项目。公司坚持以创新尤其是科技创新为核心竞争力，在地质勘查评价、开采技术、低品位难选冶资源综合回收利用、大规模工程化开发及环保等方面具有行业领先的技术优势和丰富的实践经验。公司创立“矿石流五环归一”矿业工程管理模式，创建“低品位难处理黄金资源综合利用国家重点实验室”，建立完整的地、采、选、冶、环科技体系，以系统工程和经济矿业思想指导项目建设和运营，在投资和成本控制方面形成明显的竞争优势，成功开辟资源绿色高效开发新路，形成矿业工程全球竞争力。公司坚持“开发矿业、造福社会”的共同发展理念，努力让更多人因紫金矿业的存在而获益，先后四次荣获“中华慈善奖”。公司作为全球矿业市场的重要参与者，致力于打造“绿色高技术超一流国际矿业集团”，以优质矿物原料为中国及全球经济增长和可持续发展助力。",
+              "profileSummary": "公司是一家在全球范围内从事铜、金、锌、锂、银、钼等金属矿产资源勘查、开发及工程设计、技术应用研究的大型跨国矿业集团，在香港H股和上海A股整体上市。公司在中国17个省(区)和境外17个国家拥有重要矿业投资项目，包括境内的西藏巨龙铜矿及朱诺铜矿、黑龙江多宝山铜山铜矿、福建紫金山铜金矿、山西紫金、贵州紫金、陇南紫金等，境外的塞尔维亚丘卡卢-佩吉铜金矿及博尔铜矿、刚果(金)卡莫阿铜矿及科卢韦齐铜矿、苏里南罗斯贝尔金矿、哥伦比亚武里蒂卡金矿等…",
+              "majorProducts": "紫金标准金锭、紫金标准银锭、紫金高精度铜及铜合金带材、紫金镉锭、紫金金条、紫金金盐、紫金矿产金精矿、紫金矿产银、紫金硫酸、紫金铁精矿、紫金铜精矿、紫金锌锭、紫金锌基合金、紫金锌精矿、紫金阴极铜",
+              "revenueComposition": "其他:76.94%;加工、冶炼及贸易金:36.04%;冶炼产铜:14.31%;铜精矿:12.14%;金锭:11.39%;金精矿:7.14%;矿山产电解铜:2.52%;冶炼产锌:2.35%;矿山产电积铜:1.91%;矿山产锌:1.51%;矿山产银:0.85%;铁精矿:0.21%;内部抵销:-67.31%",
+              "revenueSegments": [
+                {
+                  "name": "其他",
+                  "sharePct": 76.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "加工、冶炼及贸易金",
+                  "sharePct": 36.04,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "冶炼产铜",
+                  "sharePct": 14.31,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "铜精矿",
+                  "sharePct": 12.14,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "金锭",
+                  "sharePct": 11.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金精矿",
+                  "sharePct": 7.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山产电解铜",
+                  "sharePct": 2.52,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "冶炼产锌",
+                  "sharePct": 2.35,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "矿山产电积铜",
+                  "sharePct": 1.91,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "矿山产锌",
+                  "sharePct": 1.51,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "矿山产银",
+                  "sharePct": 0.85,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "铁精矿",
+                  "sharePct": 0.21,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -67.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "有色金属贸易",
+                    "category": "有色金属贸易"
+                  },
+                  {
+                    "name": "电解铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "碳酸锂",
+                    "category": "锂制取"
+                  },
+                  {
+                    "name": "金锭",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "铜精矿",
+                    "category": "铜矿采选"
+                  },
+                  {
+                    "name": "锌精矿",
+                    "category": "铅锌矿采选"
+                  }
+                ],
+                "knownProducts": [
+                  "有色金属贸易",
+                  "锌锭",
+                  "电解铜",
+                  "碳酸锂",
+                  "金锭",
+                  "锌精矿",
+                  "铜精矿",
+                  "金精矿"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 6
+              }
+            },
+            "analysis": "对紫金矿业而言，公司是全球领先的矿业公司，黄金是其核心业务板块之一，产量和资源储量巨大并非纯概念映射，因为铜精矿（12.14%）、矿山产电解铜（2.52%）合计约占收入的14.66%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是供需缺口与产品价格，传导效率取决于“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由产品报价、订单排期、产销率和毛利率来区分；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 17158,
+            "stockCode": "600612.SH",
+            "stockName": "老凤祥",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司是国内历史悠久的黄金珠宝龙头企业，品牌深入人心。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600612.SH",
+              "companyName": "老凤祥",
+              "companyProfile": "公司已发展成为中国珠宝首饰业的“最有价值品牌”和龙头企业。公司主要从事黄金珠宝首饰、工艺美术品、笔类文具制品的生产经营及销售，主营业务涵盖三大产业，一是以“老凤祥”商标为代表的黄金珠宝首饰产业；二是以“工美”知名品牌为代表的工艺美术品产业；三是以“中华”商标为代表的笔类文具用品产业。公司集“研发、设计、生产和销售”于一体，拥有多家专业厂、子公司、研究所、典当行、拍卖行、博物馆以及遍及全国三千多家老凤祥银楼及销售网点等。公司品牌囊括了众多国家级品牌和诸多国际品牌荣誉，不仅曾获“中国驰名商标”、“中国名牌”、“中国商业名牌”、“中国商业服务名牌”、“中华老字号”等称号，更被评为“中国500最具价值品牌”、“亚洲品牌500强”以及“全球珠宝100强”。2008年，老凤祥金银细工工艺荣列国家非物质文化遗产名录。",
+              "profileSummary": "公司主要从事黄金珠宝首饰、工艺美术品、笔类文具制品的生产经营及销售，主营业务涵盖三大产业，一是以“老凤祥”商标为代表的黄金珠宝首饰产业；二是以“工美”知名品牌为代表的工艺美术品产业；三是以“中华”商标为代表的笔类文具用品产业。公司品牌囊括了众多国家级品牌和诸多国际品牌荣誉，不仅曾获“中国驰名商标”、“中国名牌”、“中国商业名牌”、“中国商业服务名牌”、“中华老字号”等称号，更被评为“中国500最具价值品牌”、“亚洲品牌500强”以及“…",
+              "majorProducts": "老凤祥黄金交易、老凤祥金饰品、老凤祥珠宝首饰、中铅铅笔",
+              "revenueComposition": "珠宝首饰:80.61%;黄金交易:18.54%;其他业务:0.38%;笔类制品:0.35%;工艺品销售:0.1%;其他:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "珠宝首饰",
+                  "sharePct": 80.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "黄金交易",
+                  "sharePct": 18.54,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "笔类制品",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工艺品销售",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "黄金饰品",
+                    "category": "黄金饰品"
+                  }
+                ],
+                "knownProducts": [
+                  "黄金饰品",
+                  "钻石饰品"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "老凤祥与事件存在真实业务交集：公司已有黄金饰品，与公司是国内历史悠久的黄金珠宝龙头企业，品牌深入人心所处的产业环节一致。黄金交易（18.54%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 17160,
+            "stockCode": "002345.SZ",
+            "stockName": "潮宏基",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司是国内知名的时尚珠宝品牌，黄金产品设计年轻化，近期终端销售趋势良好。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002345.SZ",
+              "companyName": "潮宏基",
+              "companyProfile": "公司是一家高档时尚珠宝首饰的研发、生产和营销型企业，主要产品为珠宝首饰和时尚女包，核心业务是“CHJ潮宏基”、“VENTI梵迪”和“FION菲安妮”三大品牌的运营管理。公司采用以自营为主、品牌代理和非品牌批发为辅的复合营销模式，目前已形成覆盖全国几百个主要城市、线下拥有超过1千家品牌专营店的销售网络规模，同时通过自有平台、天猫、京东等线上平台进行全网营销。公司定位于“中高端时尚消费品多品牌运营商”，明确了以“中产阶级女性”为核心人群打造轻奢时尚产业集团的战略发展方向，以珠宝、女包为核心，逐步向保健、美容护肤等时尚产业各项增值服务领域延伸，为中国广大中产阶层女性消费者打造时尚生活生态圈，公司坚持以“顾客至上”的价值观，旗下各品牌均以“青春靓丽、追逐时尚”的都市女性为目标客户，专注于向用户提供匠心打造、引领潮流的产品以及精致优雅、体验尊贵的服务。目前，旗下“CHJ潮宏基”和“FION菲安妮”已发展成为各自领域的行业领军品牌之一，公司不断在对其他时尚相关领域进行研究和探索，寻找合适的整合机会，以扩充公司旗下业务组合，打造时尚生活生态圈。",
+              "profileSummary": "公司定位于“中高端时尚消费品多品牌运营商”，明确了以“中产阶级女性”为核心人群打造轻奢时尚产业集团的战略发展方向，以珠宝、女包为核心，逐步向保健、美容护肤等时尚产业各项增值服务领域延伸，为中国广大中产阶层女性消费者打造时尚生活生态圈，公司坚持以“顾客至上”的价值观，旗下各品牌均以“青春靓丽、追逐时尚”的都市女性为目标客户，专注于向用户提供匠心打造、引领潮流的产品以及精致优雅、体验尊贵的服务。目前，旗下“CHJ潮宏基”和“FION菲安妮…",
+              "majorProducts": "“CHJ 潮宏基”、“FION菲安妮”、18K白金钻饰、18K彩金钻饰、18K群镶钻钻饰、Kgold首饰、Pt首饰、Pt钻饰、豪华款式首饰、千足金首饰、时尚女包",
+              "revenueComposition": "时尚珠宝产品:54.75%;传统黄金产品:38.74%;代理品牌授权及加盟服务收入:3.13%;其他业务收入:2.94%;其他饰品:0.45%",
+              "revenueSegments": [
+                {
+                  "name": "时尚珠宝产品",
+                  "sharePct": 54.75,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "传统黄金产品",
+                  "sharePct": 38.74,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "代理品牌授权及加盟服务收入",
+                  "sharePct": 3.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务收入",
+                  "sharePct": 2.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他饰品",
+                  "sharePct": 0.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "黄金珠宝品牌加盟",
+                    "category": "珠宝首饰品牌加盟"
+                  },
+                  {
+                    "name": "黄金饰品",
+                    "category": "黄金饰品"
+                  }
+                ],
+                "knownProducts": [
+                  "平价女包",
+                  "黄金珠宝品牌加盟",
+                  "黄金饰品",
+                  "钻石饰品"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "潮宏基与事件的关系已经落在存量主业，而非远期概念：时尚珠宝产品占收入的54.75%。公司在产业链中的具体抓手是：公司是国内知名的时尚珠宝品牌，黄金产品设计年轻化，近期终端销售趋势良好。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 17162,
+            "stockCode": "605599.SH",
+            "stockName": "菜百股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司是北京地区黄金珠宝龙头，投资金条业务占比较高，直接受益于金价上涨。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "605599.SH",
+              "companyName": "菜百股份",
+              "companyProfile": "公司是一家在上海证券交易所主板上市的黄金珠宝专营公司，是商务部第一批命名的“中华老字号”企业。经过几十年的发展，公司在黄金珠宝商品的原料采购、款式设计、连锁销售和品牌运营等方面积累了丰富的经验，是北京市场收入规模领先的黄金珠宝企业，也是国内黄金珠宝行业中直营收入规模领先、单店收入规模领先，线上线下全渠道经营的黄金珠宝专业经营公司。公司是“全国文明单位”“全国质量诚信标杆典型企业”和“全国模范劳动关系和谐企业”，2004年被授予“中国黄金第一家”的称号，并曾荣获“中国质量奖提名奖”“企业信用评价AAA级信用单位”“中国黄金行业社会责任杰出贡献奖”“全国五四红旗团支部”“最具影响力十大品牌”“中国改革开放40周年珠宝行业社会贡献奖”“北京市人民政府质量奖提名奖”等诸多荣誉和称号。公司是上海黄金交易所业务委员会的委员单位，是中国珠宝玉石首饰行业协会副会长单位和中国黄金协会副会长单位，是中国金币特许零售商和北京2022年冬奥会和冬残奥会组织委员会特许零售商。公司管理层作为全国珠宝玉石标准化技术委员会(TC298)委员和全国首饰标准化技术委员会(TC256)委员，参与制定、修订黄金珠宝国家标准和行业标准。2019年，公司成为“中国珠宝玉石首饰品牌集群”首批标杆品牌集群副主席成员单位，并通过“国家级商贸服务业标准化试点”验收。同时，公司是上海黄金交易所第一批综合类会员单位。未来，公司将始终秉承“以情经商，以质取胜”的经营理念，大力践行“做每个人的黄金珠宝顾问”的企业使命，坚持“心比金纯”的服务理念，为消费者持续提供优质的黄金珠宝商品及服务。",
+              "profileSummary": "2019年，公司成为“中国珠宝玉石首饰品牌集群”首批标杆品牌集群副主席成员单位，并通过“国家级商贸服务业标准化试点”验收。未来，公司将始终秉承“以情经商，以质取胜”的经营理念，大力践行“做每个人的黄金珠宝顾问”的企业使命，坚持“心比金纯”的服务理念，为消费者持续提供优质的黄金珠宝商品及服务。",
+              "majorProducts": "贵金属投资产品、贵金属文化产品、黄金饰品、钻翠珠宝饰品",
+              "revenueComposition": "贵金属投资产品:72.87%;黄金饰品:20.63%;贵金属文化产品:5.4%;钻翠珠宝饰品:0.55%;联营佣金收入:0.44%;其他业务:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "贵金属投资产品",
+                  "sharePct": 72.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "黄金饰品",
+                  "sharePct": 20.63,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "贵金属文化产品",
+                  "sharePct": 5.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "钻翠珠宝饰品",
+                  "sharePct": 0.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "联营佣金收入",
+                  "sharePct": 0.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "金条",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "黄金IP衍生品",
+                    "category": "黄金饰品"
+                  },
+                  {
+                    "name": "黄金饰品",
+                    "category": "黄金饰品"
+                  }
+                ],
+                "knownProducts": [
+                  "金条",
+                  "黄金IP衍生品",
+                  "黄金饰品"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "菜百股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：黄金饰品占收入的20.63%。公司与事件的具体联系在于：公司是北京地区黄金珠宝龙头，投资金条业务占比较高，直接受益于金价上涨，对应的核心变量是供需缺口与产品价格。若这一变量沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，产品报价、订单排期、产销率和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则可能令增量低于预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 17155,
+            "stockCode": "600987.SH",
+            "stockName": "航民股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司黄金首饰加工业务是其主营业务之一，主要通过租赁黄金进行生产周转。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600987.SH",
+              "companyName": "航民股份",
+              "companyProfile": "浙江航民股份有限公司成立于1998年1月，位于杭州市萧山东部航民工业园内，于2004年8月9日在上海证券交易所上市(证券代码600987)，是一家专注于在“穿着和佩戴”方面改善人们生活品质，满足人们穿戴舒适漂亮的美好愿望，聚焦“纺织印染+黄金饰品”双主业发展，并以热电、非织造布生产、工业用水、污水处理及海运物流等产业相配套的公司。公司是中国“印染行业竞争力十强企业”(加工能力位列全国第二)，“飞航”牌多种纤维混纺面料、高纺真面料及印花面料等在市场上享有较高的知名度，畅销全国，远销东南亚、中东、北美、欧盟和港澳台等国家和地区；同时，公司也是中国黄金首饰产业重要生产基地，黄金饰品加工量位居全国第三，“航民首饰”注册商标被认定为中国驰名商标，长期为老庙黄金、老凤祥为代表的多家国内知名黄金珠宝首饰品牌商提供优质的黄金饰品加工服务。",
+              "profileSummary": "浙江航民股份有限公司成立于1998年1月，位于杭州市萧山东部航民工业园内，于2004年8月9日在上海证券交易所上市(证券代码600987)，是一家专注于在“穿着和佩戴”方面改善人们生活品质，满足人们穿戴舒适漂亮的美好愿望，聚焦“纺织印染+黄金饰品”双主业发展，并以热电、非织造布生产、工业用水、污水处理及海运物流等产业相配套的公司。公司是中国“印染行业竞争力十强企业”(加工能力位列全国第二)，“飞航”牌多种纤维混纺面料、高纺真面料及印花…",
+              "majorProducts": "航民工业水供应、航民火电供应、航民燃煤、航民染料、航民印染面料、航民蒸汽供应、航民织造布、黄金饰品",
+              "revenueComposition": "0",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "黄金饰品",
+                    "category": "黄金饰品"
+                  }
+                ],
+                "knownProducts": [
+                  "燃煤发电",
+                  "供热",
+                  "纺织印染加工",
+                  "黄金饰品"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "航民股份现有产品包括黄金饰品，因此公司黄金首饰加工业务是其主营业务之一，主要通过租赁黄金进行生产周转具备现实业务基础。由于相关业务尚未单独拆分收入，其在公司整体经营中的重要性仍不能量化。新闻对供需缺口与产品价格的推动还要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，并最终体现为产品报价、订单排期、产销率和毛利率的持续改善。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然存在，但利润贡献可能明显低于市场预期。"
+          },
+          {
+            "sourceRowNumber": 17163,
+            "stockCode": "603900.SH",
+            "stockName": "莱绅通灵",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司主营钻石饰品，但近年来加大了黄金业务的发展，以应对市场变化。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603900.SH",
+              "companyName": "莱绅通灵",
+              "companyProfile": "公司主要从事珠宝首饰的品牌建设、产品设计研发及零售，产品涵盖了黄金、钻石、珍珠、翡翠、彩宝等，目前公司已形成全品类珠宝产品矩阵。公司始终坚持品牌差异化定位，开创了欧洲艺术作品与珠宝设计相结合，通过打造“值得珍藏的艺术黄金”品牌定位，致力于传承与创新百年匠心金艺。旗下黄金珠宝品牌「传世金」打破传统黄金审美，将东西方经典艺术与现代珠宝设计相融合，创造出独具特色的“不撞款”珠宝作品。公司于2023年8月拓展黄金业务，「传世金」产品凭借其独特的设计、精湛的工艺和卓越的品质，迅速在市场中脱颖而出，黄金产品销售占比不断攀升，黄金店效显著上升。公司每个产品系列的研发都根据特定的消费人群、融合有情节的故事，有精湛的技艺和有独特的设计，全场景的营造爱情、婚恋、时尚配搭、投资增值、珍藏传承等诉求，最大化的为消费者提供不同种类、不同风格的符合中国消费者的审美与喜好的饰品款式。公司黄金珠宝品牌「传世金」旗下有“艺术馆”与“新经典”两大系列。“艺术馆”系列以独特的艺术视角，将鸢尾、马蹄、月桂等西方经典艺术元素融入设计之中。公司推出了融入大师级艺术表达的「ART系列」、兼具“轮转好运”和“爆款廓形”的「幸运马车系列」。“新经典”系列则以匠心独运的技艺融合东西方经典美学元素，2024年9月上市的「锦上花」以梵高名画《鸢尾花》为灵感来源，汲取色彩语言、自然形态和油画笔触，巧妙地融入中国经典结构，以金为材，以锦作画，赋予锦上添花，前程似锦的美好寓意。",
+              "profileSummary": "公司主要从事珠宝首饰的品牌建设、产品设计研发及零售，产品涵盖了黄金、钻石、珍珠、翡翠、彩宝等，目前公司已形成全品类珠宝产品矩阵。公司每个产品系列的研发都根据特定的消费人群、融合有情节的故事，有精湛的技艺和有独特的设计，全场景的营造爱情、婚恋、时尚配搭、投资增值、珍藏传承等诉求，最大化的为消费者提供不同种类、不同风格的符合中国消费者的审美与喜好的饰品款式。",
+              "majorProducts": "翡翠饰品、素金及其他、钻石饰品",
+              "revenueComposition": "钻石镶嵌饰品:60.02%;传统黄金产品:28.56%;其他饰品:7.4%;翡翠饰品:3.12%;其他业务:0.78%;服务类收入:0.12%",
+              "revenueSegments": [
+                {
+                  "name": "钻石镶嵌饰品",
+                  "sharePct": 60.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "传统黄金产品",
+                  "sharePct": 28.56,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他饰品",
+                  "sharePct": 7.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "翡翠饰品",
+                  "sharePct": 3.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "服务类收入",
+                  "sharePct": 0.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "K金饰品",
+                    "category": "黄金饰品"
+                  },
+                  {
+                    "name": "黄金饰品",
+                    "category": "黄金饰品"
+                  },
+                  {
+                    "name": "钻石饰品",
+                    "category": "宝石饰品"
+                  }
+                ],
+                "knownProducts": [
+                  "翡翠饰品",
+                  "铂金饰品",
+                  "K金饰品",
+                  "黄金饰品",
+                  "彩宝饰品",
+                  "钻石饰品"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "莱绅通灵的传统黄金产品（28.56%）覆盖范围较宽，其中能够承载K金饰品、黄金饰品、钻石饰品，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司主营钻石饰品，但近年来加大了黄金业务的发展，以应对市场变化。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "10条低于3星的源记录已按当前关注口径排除。",
+      "7条3至5星非A股、未上市或代码不规范记录未进入组合。",
+      "1只标的未匹配到A股2025年报公司资料，多为非A股、未上市或新近上市公司。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "4只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "3只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

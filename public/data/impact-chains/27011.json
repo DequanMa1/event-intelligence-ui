@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27011",
@@ -9,10 +9,10 @@
     "date": "2026-07-06"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 3,
-    "mappedStockCount": 3,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 2,
     "stocks": [
       {
         "sourceRowNumber": 17745,
@@ -20,8 +20,8 @@
         "stockName": "华虹宏力",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 1
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 17746,
@@ -29,8 +29,8 @@
         "stockName": "昊海生科",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 13
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 17747,
@@ -39,57 +39,40 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 5
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 17745,
+        "stockCode": "688347.SH",
+        "stockName": "华虹宏力",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 17746,
+        "stockCode": "688366.SH",
+        "stockName": "昊海生科",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 26,
-    "selectedCoreProductCount": 6,
+    "selectedCoreProductCount": 5,
     "selectedCompanyCoreProductCount": 5,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 2,
-    "downstreamCandidateCount": 1,
-    "shownUpstreamCount": 2,
-    "shownDownstreamCount": 1
+    "level7ProductCount": 6,
+    "relatedIndustryCandidateCount": 1,
+    "shownRelatedIndustryCount": 1
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140029312",
-        "name": "颗粒及纤维增强电接触功能元件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032065"
-        ],
-        "linkedCoreProductNames": [
-          "漏电开关"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140029311",
-        "name": "颗粒及纤维增强电接触功能复合材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032065"
-        ],
-        "linkedCoreProductNames": [
-          "漏电开关"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140217650",
         "name": "低漏电开关矩阵",
@@ -115,18 +98,15 @@
           "name": "低漏电开关矩阵"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688808.SH",
             "stockName": "联讯仪器",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -159,18 +139,15 @@
           "name": "快速波长计"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688808.SH",
             "stockName": "联讯仪器",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -203,18 +180,15 @@
           "name": "时钟恢复单元"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688808.SH",
             "stockName": "联讯仪器",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -247,18 +221,15 @@
           "name": "误码分析仪"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688808.SH",
             "stockName": "联讯仪器",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -291,76 +262,141 @@
           "name": "采样示波器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688808.SH",
             "stockName": "联讯仪器",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
           "测试仪器",
           "电子"
         ]
-      },
-      {
-        "code": "1140032065",
-        "name": "漏电开关",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:低漏电开关矩阵",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688808.SH",
-            "stockName": "联讯仪器",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 2,
-        "downstreamCount": 1,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140030714",
-        "name": "中压配电柜",
-        "anchorCount": 1,
+        "code": "1200001283",
+        "name": "IC制造",
+        "description": "IC制造指芯片晶圆代工，是半导体核心环节。因国产替代加速、AI算力需求爆发及政策强力支持，该行业备受瞩目。作为科技自主可控的关键，其高成长性与战略地位吸引大量资金关注。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140032065"
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 20,
+        "stocks": [
+          {
+            "stockCode": "688347.SH",
+            "stockName": "华虹宏力",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "漏电开关"
+        "products": [
+          {
+            "code": "1140200586",
+            "name": "晶圆代工",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆制造 > 晶圆代工",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688347.SH",
+                "stockName": "华虹宏力",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "半导体制造"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 3,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 6,
+    "candidateIndustryCount": 1,
+    "relatedIndustryCount": 1,
+    "stocks": [
+      {
+        "sourceRowNumber": 17745,
+        "stockCode": "688347.SH",
+        "stockName": "华虹宏力",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 17746,
+        "stockCode": "688366.SH",
+        "stockName": "昊海生科",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 17747,
+        "stockCode": "688808.SH",
+        "stockName": "联讯仪器",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001283",
+        "name": "IC制造",
+        "description": "IC制造指芯片晶圆代工，是半导体核心环节。因国产替代加速、AI算力需求爆发及政策强力支持，该行业备受瞩目。作为科技自主可控的关键，其高成长性与战略地位吸引大量资金关注。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 20,
+        "stocks": [
+          {
+            "stockCode": "688347.SH",
+            "stockName": "华虹宏力",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140200586",
+            "name": "晶圆代工",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆制造 > 晶圆代工",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688347.SH",
+                "stockName": "华虹宏力",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "半导体制造"
+            ]
+          }
+        ],
+        "rank": 1
       }
     ]
   },
@@ -375,10 +411,257 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 3,
+    "eligibleSourceRowCount": 3,
+    "totalStockCount": 3,
+    "groupCount": 1,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 0,
+    "excludedNonAShareCount": 0,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 2,
+    "companyProfileUnmatchedCount": 1,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 17745,
+            "stockCode": "688347.SH",
+            "stockName": "华虹宏力",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国泰海通跟投其1%股份，二季度浮盈38亿元，是国泰海通业绩弹性的主要来源之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688347.SH",
+              "companyName": "华虹公司",
+              "companyProfile": "公司是全球领先的特色工艺晶圆代工企业，也是行业内特色工艺平台覆盖最全面的晶圆代工企业。公司立足于先进“特色IC+功率器件”的战略目标，以拓展特色工艺技术为基础，提供包括嵌入式/独立式非易失性存储器、功率器件、模拟与电源管理、逻辑与射频等多元化特色工艺平台的晶圆代工及配套服务。公司在半导体制造领域拥有多年的技术积累，长期坚持自主创新，不断研发并掌握了特色工艺的关键核心技术。公司的功率器件种类丰富度行业领先，拥有全球领先的深沟槽式超级结MOSFET以及IGBT技术成果。公司的技术研发成果曾先后荣获“国家科学技术进步奖二等奖”、“上海市科学技术奖一等奖”、“上海市质量金奖”、“优秀院士工作站”及“上海知识产权创新奖(创造)”等奖项及荣誉。公司依靠卓越的特色工艺技术实力、稳定的产品性能和品质以及产能供给能力赢得了全球客户的广泛认可。公司代工产品性能优越、可靠性高，在新能源汽车、工业、通讯、消费电子等重要终端市场得到广泛应用。未来，公司将继续坚定不移地执行先进“特色IC+功率器件”的发展战略，持续提升产品性能和品质，深耕多元化的“特色IC”平台，不断创新器件结构、丰富拓展车规级工艺，持续保持领先的“功率器件”平台。公司致力于发展先进特色工艺，为全球客户服务。",
+              "profileSummary": "公司立足于先进“特色IC+功率器件”的战略目标，以拓展特色工艺技术为基础，提供包括嵌入式/独立式非易失性存储器、功率器件、模拟与电源管理、逻辑与射频等多元化特色工艺平台的晶圆代工及配套服务。公司在半导体制造领域拥有多年的技术积累，长期坚持自主创新，不断研发并掌握了特色工艺的关键核心技术。",
+              "majorProducts": "IP设计服务、测试服务、功率器件、晶圆代工服务、晶圆后道加工服务、逻辑与射频、模拟与电源管理、嵌入式/独立式非易失性存储器",
+              "revenueComposition": "集成电路晶圆代工:94.99%;其他:4.42%;租赁收入:0.59%",
+              "revenueSegments": [
+                {
+                  "name": "集成电路晶圆代工",
+                  "sharePct": 94.99,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁收入",
+                  "sharePct": 0.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "晶圆代工",
+                    "category": "晶圆制造"
+                  }
+                ],
+                "knownProducts": [
+                  "晶圆代工"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华虹宏力的事件暴露较为直接：集成电路晶圆代工占收入的94.99%，相关业务不是边缘尝试；具体业务抓手是：国泰海通跟投其1%股份，二季度浮盈38亿元，是国泰海通业绩弹性的主要来源之一。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 17746,
+            "stockCode": "688366.SH",
+            "stockName": "昊海生科",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国泰海通跟投+直投其2.3%股份，是国泰海通科创投资弹性的重要来源。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688366.SH",
+              "companyName": "昊海生科",
+              "companyProfile": "公司是一家应用生物医用材料技术和基因工程技术进行医疗器械和药品研发、生产和销售的科技创新型企业，致力于通过技术创新及转化、国内外资源整合及规模化生产，为市场提供创新医疗产品，逐步实现相关医药产品的进口替代，成为有关生物医用材料领域的领军企业。公司于2015年4月30日、2019年10月30日分别在香港联交所主板、上海证券交易所科创板上市，成为全国首家“港股+科创板”生物医药上市公司。经过十余年不断自主创新和产业整合，公司完成了以人工晶状体、近视防控与屈光矫正及眼表用药、医用透明质酸钠/玻璃酸钠、医用几丁糖等为代表的生物医用材料的行业重组，实现了创新基因工程药物(国家一类新药)外用人表皮生长因子的产业化，进而在眼科、整形美容与创面护理、骨科和防粘连及止血等四个主要业务领域取得了行业领先优势。公司拥有两个国家科学技术进步二等奖产品，建立了国家级企业技术中心、国家级博士后科研工作站两个国家级研发平台，以及多个省部级技术及研发转化平台和一个上海市院士专家工作站，并已在中国、美国、英国、法国、以色列建立全球联动研发体系。公司始终以不断提高国人的健康品质和促进患者康复为目标，以聚焦差异化发展为企业战略，持续专注于眼科、医疗美容及创面护理、骨科、外科四大快速发展的治疗领域，注重科研创新和成果转化，自主研发及技术引进并举，完善产品线、整合产业链，强化专业服务和公司品牌，努力成为生物医用材料领域国内领先、国际知名的企业集团。",
+              "profileSummary": "公司是一家应用生物医用材料技术和基因工程技术进行医疗器械和药品研发、生产和销售的科技创新型企业，致力于通过技术创新及转化、国内外资源整合及规模化生产，为市场提供创新医疗产品，逐步实现相关医药产品的进口替代，成为有关生物医用材料领域的领军企业。公司始终以不断提高国人的健康品质和促进患者康复为目标，以聚焦差异化发展为企业战略，持续专注于眼科、医疗美容及创面护理、骨科、外科四大快速发展的治疗领域，注重科研创新和成果转化，自主研发及技术引进并…",
+              "majorProducts": "玻璃酸钠注射液、玻尿酸、人工晶状体、润眼液、视光材料、眼科粘弹剂、医用几丁糖（防粘连用）、医用几丁糖（关节腔内注射用）、医用胶原蛋白海绵、医用透明质酸钠凝胶、重组人表皮生长因子",
+              "revenueComposition": "玻尿酸:23.01%;玻璃酸钠注射液:11.67%;射频及激光设备:10.79%;人工晶状体:9.64%;视光材料:8.67%;外用人表皮生长因子:8.26%;视光终端产品:6.62%;医用几丁糖(关节腔内注射用):5.63%;猪源纤维蛋白粘合剂:4%;眼科粘弹剂:3.14%;医用几丁糖(防粘连用):2.25%;其他产品:2.06%;医用透明质酸钠凝胶:1.9%;其他眼科产品:1.24%;胶原蛋白海绵:1.14%",
+              "revenueSegments": [
+                {
+                  "name": "玻尿酸",
+                  "sharePct": 23.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "玻璃酸钠注射液",
+                  "sharePct": 11.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "射频及激光设备",
+                  "sharePct": 10.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "人工晶状体",
+                  "sharePct": 9.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "视光材料",
+                  "sharePct": 8.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "外用人表皮生长因子",
+                  "sharePct": 8.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "视光终端产品",
+                  "sharePct": 6.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医用几丁糖(关节腔内注射用)",
+                  "sharePct": 5.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "猪源纤维蛋白粘合剂",
+                  "sharePct": 4.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "眼科粘弹剂",
+                  "sharePct": 3.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医用几丁糖(防粘连用)",
+                  "sharePct": 2.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 2.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医用透明质酸钠凝胶",
+                  "sharePct": 1.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他眼科产品",
+                  "sharePct": 1.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "胶原蛋白海绵",
+                  "sharePct": 1.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "润眼液",
+                  "医用几丁糖(关节腔内注射用)",
+                  "玻璃酸钠注射液",
+                  "医用几丁糖(防粘连用)",
+                  "医用防粘连透明质酸钠凝胶",
+                  "注射用交联透明质酸钠凝胶",
+                  "注射用修饰透明质酸钠凝胶",
+                  "医用胶原蛋白海绵"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "昊海生科现有收入由玻尿酸（23.01%）、玻璃酸钠注射液（11.67%）贡献，主营产品为润眼液、医用几丁糖(关节腔内注射用)、玻璃酸钠注射液、医用几丁糖(防粘连用)，与国泰海通跟投+直投其2.3%股份，是国泰海通科创投资弹性的重要来源指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，事件能否转化为可确认的经营增量才会通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”产生财务影响。现阶段订单、收入确认、产品结构和毛利率变化比概念标签更重要；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 17747,
+            "stockCode": "688808.SH",
+            "stockName": "联讯仪器",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国泰海通直投其1%股份，是国泰海通科创投资弹性的重要来源。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": false,
+              "matchMethod": "none",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "",
+              "companyName": "",
+              "companyProfile": "",
+              "profileSummary": "",
+              "majorProducts": "",
+              "revenueComposition": "",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "unavailable",
+                "relevantProducts": [],
+                "knownProducts": [],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "本次事件首先改变联讯仪器的事件能否转化为可确认的经营增量预期，业务抓手是：国泰海通直投其1%股份，是国泰海通科创投资弹性的重要来源。预期进入经营结果仍需完成产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表这一整段传导，而相关业务的真实基数和战略重要性尚不明确。这意味着公司可能同时具备产业趋势弹性和较大的兑现不确定性。订单、收入确认、产品结构和毛利率变化若连续强化，逻辑可信度会随之提升；若事件关联停留在主题层面，未形成可持续订单或利润贡献，当前相关性更可能停留在估值预期，而难以转化为利润贡献。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "1只标的未匹配到A股2025年报公司资料，多为非A股、未上市或新近上市公司。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

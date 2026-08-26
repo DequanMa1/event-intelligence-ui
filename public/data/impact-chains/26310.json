@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26310",
@@ -9,10 +9,10 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 6,
-    "mappedStockCount": 6,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 5,
     "stocks": [
       {
         "sourceRowNumber": 564,
@@ -20,8 +20,8 @@
         "stockName": "三态股份",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 2
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 565,
@@ -30,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 566,
@@ -38,8 +38,8 @@
         "stockName": "易点天下",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 570,
@@ -47,8 +47,8 @@
         "stockName": "吉宏股份",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 571,
@@ -56,8 +56,8 @@
         "stockName": "华凯易佰",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 9
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 572,
@@ -65,42 +65,68 @@
         "stockName": "赛维时代",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 2
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 564,
+        "stockCode": "301558.SZ",
+        "stockName": "三态股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 566,
+        "stockCode": "301171.SZ",
+        "stockName": "易点天下",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 570,
+        "stockCode": "002803.SZ",
+        "stockName": "吉宏股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 571,
+        "stockCode": "300592.SZ",
+        "stockName": "华凯易佰",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 572,
+        "stockCode": "301381.SZ",
+        "stockName": "赛维时代",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 26,
-    "selectedCoreProductCount": 2,
+    "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 1,
-    "downstreamCandidateCount": 7,
-    "shownUpstreamCount": 1,
-    "shownDownstreamCount": 7
+    "level7ProductCount": 9,
+    "relatedIndustryCandidateCount": 6,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140014084",
-        "name": "商品供应商",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140044964"
-        ],
-        "linkedCoreProductNames": [
-          "跨境电商"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140207987",
         "name": "AI外贸助手",
@@ -126,196 +152,410 @@
           "name": "AI外贸助手"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002315.SZ",
             "stockName": "焦点科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 8,
         "strongRelevanceScore": 8,
         "matchedTerms": [
           "ai"
         ]
-      },
+      }
+    ],
+    "relatedIndustries": [
       {
-        "code": "1140044964",
-        "name": "跨境电商",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "event_title",
-        "stockCount": 6,
+        "code": "1200001173",
+        "name": "电商零售",
+        "description": "A股电商零售指通过互联网销售商品服务的上市公司。因契合消费升级、数字化趋势及高增长潜力，备受市场关注。其业绩受流量、物流及政策影响大，是观察内需活力和科技赋能传统商业的重要风向标。",
+        "stockCount": 4,
+        "starWeight": 16,
+        "level7ProductCount": 1,
+        "relevanceScore": 40,
         "stocks": [
           {
             "stockCode": "301558.SZ",
             "stockName": "三态股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "300592.SZ",
             "stockName": "华凯易佰",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002803.SZ",
             "stockName": "吉宏股份",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "301171.SZ",
-            "stockName": "易点天下",
-            "rating": "★★★★"
-          },
-          {
-            "stockCode": "002315.SZ",
-            "stockName": "焦点科技",
-            "rating": "★★★★"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "301381.SZ",
             "stockName": "赛维时代",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 7,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
+        "products": [
+          {
+            "code": "1140044964",
+            "name": "跨境电商",
+            "hierarchyPath": "商业贸易 > 一般零售 > 多业态零售 > 电商零售 > 跨境电商零售 > 跨境电商",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "301558.SZ",
+                "stockName": "三态股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300592.SZ",
+                "stockName": "华凯易佰",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002803.SZ",
+                "stockName": "吉宏股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "301381.SZ",
+                "stockName": "赛维时代",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "跨境电商"
+            ]
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1210000078",
+        "name": "版面广告",
+        "description": "版面广告指在报纸、杂志等出版物特定位置发布的商业宣传。投资者关注相关传媒公司，因其广告收入直接反映品牌影响力和市场景气度，是衡量公司盈利能力及行业地位的关键指标，进而影响股价预期。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "301171.SZ",
+            "stockName": "易点天下",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140132528",
+            "name": "短视频软件广告",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 版面广告 > 互联网版面 > 短视频软件广告",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301171.SZ",
+                "stockName": "易点天下",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140132525",
+            "name": "社交软件广告",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 版面广告 > 互联网版面 > 社交软件广告",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301171.SZ",
+                "stockName": "易点天下",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 13,
+    "mappedStockCount": 7,
+    "unmappedStockCount": 6,
+    "level7ProductCount": 9,
+    "candidateIndustryCount": 6,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 564,
+        "stockCode": "301558.SZ",
+        "stockName": "三态股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 565,
+        "stockCode": "002315.SZ",
+        "stockName": "焦点科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 566,
+        "stockCode": "301171.SZ",
+        "stockName": "易点天下",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 567,
+        "stockCode": "301110.SZ",
+        "stockName": "青木科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 568,
+        "stockCode": "003010.SZ",
+        "stockName": "若羽臣",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 570,
+        "stockCode": "002803.SZ",
+        "stockName": "吉宏股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 571,
+        "stockCode": "300592.SZ",
+        "stockName": "华凯易佰",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 572,
+        "stockCode": "301381.SZ",
+        "stockName": "赛维时代",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 573,
+        "stockCode": "301376.SZ",
+        "stockName": "致欧科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 574,
+        "stockCode": "300866.SZ",
+        "stockName": "安克创新",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 575,
+        "stockCode": "300640.SZ",
+        "stockName": "德艺文创",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 576,
+        "stockCode": "301268.SZ",
+        "stockName": "铭利达",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 579,
+        "stockCode": "600415.SH",
+        "stockName": "小商品城",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140019424",
-        "name": "仓储公司",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140044964"
+        "code": "1200001173",
+        "name": "电商零售",
+        "description": "A股电商零售指通过互联网销售商品服务的上市公司。因契合消费升级、数字化趋势及高增长潜力，备受市场关注。其业绩受流量、物流及政策影响大，是观察内需活力和科技赋能传统商业的重要风向标。",
+        "stockCount": 4,
+        "starWeight": 16,
+        "level7ProductCount": 1,
+        "relevanceScore": 40,
+        "stocks": [
+          {
+            "stockCode": "301558.SZ",
+            "stockName": "三态股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300592.SZ",
+            "stockName": "华凯易佰",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002803.SZ",
+            "stockName": "吉宏股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301381.SZ",
+            "stockName": "赛维时代",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "跨境电商"
+        "products": [
+          {
+            "code": "1140044964",
+            "name": "跨境电商",
+            "hierarchyPath": "商业贸易 > 一般零售 > 多业态零售 > 电商零售 > 跨境电商零售 > 跨境电商",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "301558.SZ",
+                "stockName": "三态股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300592.SZ",
+                "stockName": "华凯易佰",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002803.SZ",
+                "stockName": "吉宏股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "301381.SZ",
+                "stockName": "赛维时代",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "跨境电商"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140019427",
-        "name": "代运营公司",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140044964"
+        "code": "1210000078",
+        "name": "版面广告",
+        "description": "版面广告指在报纸、杂志等出版物特定位置发布的商业宣传。投资者关注相关传媒公司，因其广告收入直接反映品牌影响力和市场景气度，是衡量公司盈利能力及行业地位的关键指标，进而影响股价预期。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "301171.SZ",
+            "stockName": "易点天下",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "跨境电商"
+        "products": [
+          {
+            "code": "1140132528",
+            "name": "短视频软件广告",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 版面广告 > 互联网版面 > 短视频软件广告",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301171.SZ",
+                "stockName": "易点天下",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140132525",
+            "name": "社交软件广告",
+            "hierarchyPath": "传媒 > 营销传播 > 营销服务 > 版面广告 > 互联网版面 > 社交软件广告",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "301171.SZ",
+                "stockName": "易点天下",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140019426",
-        "name": "外贸综合服务平台",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140044964"
-        ],
-        "linkedCoreProductNames": [
-          "跨境电商"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140013664",
-        "name": "消费者",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140044964"
-        ],
-        "linkedCoreProductNames": [
-          "跨境电商"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140096099",
-        "name": "物流公司",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140044964"
-        ],
-        "linkedCoreProductNames": [
-          "跨境电商"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140019425",
-        "name": "第三方支付公司",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140044964"
-        ],
-        "linkedCoreProductNames": [
-          "跨境电商"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140014076",
-        "name": "银行",
-        "anchorCount": 1,
-        "stockCount": 6,
-        "linkedCoreProductCodes": [
-          "1140044964"
-        ],
-        "linkedCoreProductNames": [
-          "跨境电商"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -330,10 +570,1079 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 25,
+    "eligibleSourceRowCount": 13,
+    "totalStockCount": 13,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 8,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 13,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 564,
+            "stockCode": "301558.SZ",
+            "stockName": "三态股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "旗下AI SaaS软件“睿观AI”为跨境电商卖家提供一站式知识产权合规风险检测服务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301558.SZ",
+              "companyName": "三态股份",
+              "companyProfile": "公司的主营业务为跨境电子商务零售业务(以下简称“电商业务”)以及跨境物流及全球仓储业务(以下简称“物流业务”)。公司电商业务通过运用互联网信息技术，将国内采购的优质商品陈列于海外第三方电子商务平台(eBay、亚马逊等)或海外自营网站，消费者在线上提交订单并完成支付后，公司组织发货，将商品送达海外客户。电商业务板块拥有优质的国际电商平台账号资源，充分发挥中国之“世界工厂”的优势，通过大数据分析选择在线售卖商品为全球200多个国家的消费者提供物美价廉的产品，产品数量多达数万种。物流业务依托公司长期优化的处理流程，自动化的操作设备，以及智能化的IT技术手段，向从事境外贸易业务的企业客户提供进出库质检、仓位安排、配货、打包和发货等仓储服务，以及收件后贴标、计重、稽查、分拨、分拣、进出关申报、航班安排，最终交付承运商等服务。",
+              "profileSummary": "公司的主营业务为跨境电子商务零售业务(以下简称“电商业务”)以及跨境物流及全球仓储业务(以下简称“物流业务”)。物流业务依托公司长期优化的处理流程，自动化的操作设备，以及智能化的IT技术手段，向从事境外贸易业务的企业客户提供进出库质检、仓位安排、配货、打包和发货等仓储服务，以及收件后贴标、计重、稽查、分拨、分拣、进出关申报、航班安排，最终交付承运商等服务。",
+              "majorProducts": "宠物用品、厨卫家电、创意手工、电脑游戏、服装饰品、个护用具、工商用具、户外活动、婚庆典仪、家居装饰、家庭园艺、美妆用具、汽摩配件、消费电子、休闲娱乐、音乐艺术、运动健身",
+              "revenueComposition": "兴趣爱好:28.53%;家居生活:26.23%;国际专线:24.43%;工具配件:9.67%;潮流时尚:7.49%;数码科技:2.86%;国际邮政:0.63%;商业快递:0.1%;其他收入:0.07%",
+              "revenueSegments": [
+                {
+                  "name": "兴趣爱好",
+                  "sharePct": 28.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "家居生活",
+                  "sharePct": 26.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "国际专线",
+                  "sharePct": 24.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工具配件",
+                  "sharePct": 9.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "潮流时尚",
+                  "sharePct": 7.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "数码科技",
+                  "sharePct": 2.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "国际邮政",
+                  "sharePct": 0.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "商业快递",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他收入",
+                  "sharePct": 0.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "跨境电商",
+                    "category": "跨境电商零售"
+                  }
+                ],
+                "knownProducts": [
+                  "跨境电商",
+                  "跨境电商物流"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三态股份实际经营中已有跨境电商，与事件指向的旗下AI SaaS软件“睿观AI”为跨境电商卖家提供一站式知识产权合规风险检测服务能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在兴趣爱好（28.53%）、家居生活（26.23%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善事件能否转化为可确认的经营增量，需要沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。订单、收入确认、产品结构和毛利率变化将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若事件关联停留在主题层面，未形成可持续订单或利润贡献，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 565,
+            "stockCode": "002315.SZ",
+            "stockName": "焦点科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "旗下中国制造网的AI外贸助手“AI麦可”已升级至4.0版本，形成覆盖外贸全流程的AI产品矩阵。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002315.SZ",
+              "companyName": "焦点科技",
+              "companyProfile": "公司是国家规划布局内重点软件企业，国家信息化试点单位，国家工业和信息化深度融合示范企业，国家电子商务示范城市试点项目单位，商务部电子商务示范企业。公司主营业务是外贸B2B电子商务平台及跨境贸易综合服务、互联网保险B2B/B2C电子商务平台及互联网保险综合服务、内贸B2B电子商务平台及企业采购供应链管理服务，以及各类互联网及电子商务相关的创新孵化业务。公司始终致力于将传统行业与互联网深度融合，先后将互联网引入外贸、保险、企业采购、教育、医疗等多个领域，研发并运营了中国制造网(Made-in-China.com)、百卓采购网(Abiz.com)、新一站保险网(xyz.cn)三大电子商务平台，以及移动医疗等互联网项目。凭借多年来的不断积累，旗下中国制造网已成为全球采购商寻找中国供应商以及贸易伙伴的重要网络渠道。一直以来，焦点科技以“竭尽全力创造客户认可的有价值的产品和服务”为使命，持续进行产品与服务创新，连续多年荣获“中国最佳客户服务奖”“中国最佳服务管理奖”等殊荣，获得业界广泛好评。公司持续以“弘扬中国制造，服务中小企业，促进全球贸易”为宗旨，借助数字技术及智能运营手段，不断深化和拓展服务内容，为中小企业提供包括跨境供应链、交易支付、仓储物流、金融保险等方面在内的外贸交易全流程服务。同时，本着“客户价值创造、科技合作共赢”的发展理念，围绕“保险与科技”打造线上线下融合的全新保险服务生态。",
+              "profileSummary": "公司主营业务是外贸B2B电子商务平台及跨境贸易综合服务、互联网保险B2B/B2C电子商务平台及互联网保险综合服务、内贸B2B电子商务平台及企业采购供应链管理服务，以及各类互联网及电子商务相关的创新孵化业务。公司持续以“弘扬中国制造，服务中小企业，促进全球贸易”为宗旨，借助数字技术及智能运营手段，不断深化和拓展服务内容，为中小企业提供包括跨境供应链、交易支付、仓储物流、金融保险等方面在内的外贸交易全流程服务。",
+              "majorProducts": "跨境电子商务业务、全链路外贸服务综合平台、外贸 AI 应用业务、线上线下融合的保险代理业务",
+              "revenueComposition": "网络信息技术服务:81.06%;认证供应商服务:6.87%;保险佣金:5.25%;代理销售收入:2.56%;其他业务:0.98%;商品销售:0.89%;在线交易平台:0.65%;仓储物流收入:0.41%;咨询服务:0.41%;贷款利息收入净额:0.39%;文笔天天网服务:0.33%;会展收入:0.15%;网络广告:0.04%;货物运输代理:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "网络信息技术服务",
+                  "sharePct": 81.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "认证供应商服务",
+                  "sharePct": 6.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "保险佣金",
+                  "sharePct": 5.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "代理销售收入",
+                  "sharePct": 2.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "商品销售",
+                  "sharePct": 0.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "在线交易平台",
+                  "sharePct": 0.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "仓储物流收入",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "咨询服务",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贷款利息收入净额",
+                  "sharePct": 0.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "文笔天天网服务",
+                  "sharePct": 0.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "会展收入",
+                  "sharePct": 0.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "网络广告",
+                  "sharePct": 0.04,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "货物运输代理",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI外贸助手",
+                    "category": "人工智能"
+                  },
+                  {
+                    "name": "B2B电商平台运营",
+                    "category": "B2B综合类电商平台"
+                  }
+                ],
+                "knownProducts": [
+                  "B2B电商平台运营",
+                  "B2B跨境电商平台运营",
+                  "AI外贸助手",
+                  "健康保险业务",
+                  "商业养老保险业务",
+                  "意外伤害保险业务",
+                  "旅游保险业务",
+                  "家庭财产保险业务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "焦点科技已经具备AI外贸助手、B2B电商平台运营等业务能力，旗下中国制造网的AI外贸助手“AI麦可”已升级至4.0版本，形成覆盖外贸全流程的AI产品矩阵并非单纯概念映射。当前对应的收入被归入网络广告（0.04%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于技术商业化与产品迭代速度是否通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”放大，并最终反映在客户认证、量产良率、订单规模、产品收入占比和毛利率上；技术路线变化、良率爬坡缓慢或竞争方案更快成熟会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 566,
+            "stockCode": "301171.SZ",
+            "stockName": "易点天下",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "推出TokenLink平台为出海企业提供AI算力基础设施服务，并拥有AIGC数字营销创作平台KreadoAI。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301171.SZ",
+              "companyName": "易点天下",
+              "companyProfile": "公司是一家率先在出海营销领域布局AIGC战略的营销科技公司，秉持“科技使世界变得更平”的使命，致力于以“出海服务”与“广告技术”为核心，为企业提供包括品牌全案、效果广告、头部媒体账户管理在内的全球营销推广服务、程序化广告增长与变现服务，以及AI素材生成、BI数据分析和增长模型预估、CI智能化多云聚合管理等出海数字化服务。在深耕出海服务十余年间，公司始终坚持技术驱动发展，以先进的广告技术、多元的数字媒体资源，海量的营销数据积累以及深度专业化的产品服务，持续助力海内外企业在全球范围内的国际化布局和在各个市场中的本土化落地。长期以来，公司以不断积累与优化的全球营销经验、先进的广告技术、海量数据积累与分析能力，以及深度的专业化认知，助力企业在全球范围内的国际化布局与在各个市场中的本土化落地。多年以来累计实现应用安装、用户注册、商品销售等商业效果转化超过8亿次，覆盖独立设备超过70亿台，遍及全球200+个国家和地区，单日最高有效转化达到百万量级。",
+              "profileSummary": "公司是一家率先在出海营销领域布局AIGC战略的营销科技公司，秉持“科技使世界变得更平”的使命，致力于以“出海服务”与“广告技术”为核心，为企业提供包括品牌全案、效果广告、头部媒体账户管理在内的全球营销推广服务、程序化广告增长与变现服务，以及AI素材生成、BI数据分析和增长模型预估、CI智能化多云聚合管理等出海数字化服务。在深耕出海服务十余年间，公司始终坚持技术驱动发展，以先进的广告技术、多元的数字媒体资源，海量的营销数据积累以及深度专…",
+              "majorProducts": "品牌广告服务、头部媒体账户管理服务、效果广告服务",
+              "revenueComposition": "整合营销服务:51.01%;广告平台业务:47.99%;其他业务:1%",
+              "revenueSegments": [
+                {
+                  "name": "整合营销服务",
+                  "sharePct": 51.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "广告平台业务",
+                  "sharePct": 47.99,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "短视频软件广告",
+                    "category": "互联网版面"
+                  },
+                  {
+                    "name": "社交软件广告",
+                    "category": "互联网版面"
+                  }
+                ],
+                "knownProducts": [
+                  "程序化营销服务",
+                  "社交媒体营销服务",
+                  "搜索引擎广告",
+                  "短视频软件广告",
+                  "社交软件广告"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "易点天下的广告平台业务（47.99%）覆盖范围较宽，其中能够承载短视频软件广告、社交软件广告，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：推出TokenLink平台为出海企业提供AI算力基础设施服务，并拥有AIGC数字营销创作平台KreadoAI。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 570,
+            "stockCode": "002803.SZ",
+            "stockName": "吉宏股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "自研AI模型“吉客印”及GiikinAI+平台全面赋能选品、投放、客服等跨境电商核心运营环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002803.SZ",
+              "companyName": "吉宏股份",
+              "companyProfile": "公司是一家“数据为轴,技术驱动”的跨境社交电商企业,主营业务为ToC端-精准营销跨境社交电商业务和ToB端-为快消品龙头客户提供全案营销设计包装服务业务.目前公司已成为东南亚地区跨境社交电商龙头企业,并荣登“2024中国印刷包装企业100强”.公司的主要产品为彩色包装纸盒,彩色包装箱,塑料软包装等,广泛应用于快速消费品的外包装.经过多年的努力,凭借新颖的设计创意,先进的产品工艺和优良的产品品质,公司已与伊利集团,恒安集团,纳爱斯集团,金红叶集团,金佰利,联想移动通信等大型公司建立了长期稳定的合作关系.公司自成立之日起,一直致力于成为消费品包装印刷领域中的优质综合服务商,并在技术,服务,质量,品牌,管理等方面形成了核心竞争力,先后获得“厦门最具成长型的企业”,“政府指定文化传播企业”,“中国质量信得过企业”等荣誉。",
+              "profileSummary": "公司是一家“数据为轴,技术驱动”的跨境社交电商企业,主营业务为ToC端-精准营销跨境社交电商业务和ToB端-为快消品龙头客户提供全案营销设计包装服务业务.目前公司已成为东南亚地区跨境社交电商龙头企业,并荣登“2024中国印刷包装企业100强”.公司的主要产品为彩色包装纸盒,彩色包装箱,塑料软包装等,广泛应用于快速消费品的外包装.经过多年的努力,凭借新颖的设计创意,先进的产品工艺和优良的产品品质,公司已与伊利集团,恒安集团,纳爱斯集团…",
+              "majorProducts": "包装业务、跨境社交电商业务",
+              "revenueComposition": "电商:65.06%;包装-纸盒纸箱:18.12%;包装-食品包装:7.75%;包装-纸袋:6.99%;包装-其他类型:2.04%;其他:0.05%",
+              "revenueSegments": [
+                {
+                  "name": "电商",
+                  "sharePct": 65.06,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "包装-纸盒纸箱",
+                  "sharePct": 18.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "包装-食品包装",
+                  "sharePct": 7.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "包装-纸袋",
+                  "sharePct": 6.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "包装-其他类型",
+                  "sharePct": 2.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "跨境电商",
+                    "category": "跨境电商零售"
+                  }
+                ],
+                "knownProducts": [
+                  "互联网广告",
+                  "跨境电商",
+                  "彩盒印刷品",
+                  "环保纸袋",
+                  "快餐食品级包装纸盒"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "吉宏股份的事件暴露较为直接：电商占收入的65.06%，相关业务不是边缘尝试；具体业务抓手是：自研AI模型“吉客印”及GiikinAI+平台全面赋能选品、投放、客服等跨境电商核心运营环节。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 571,
+            "stockCode": "300592.SZ",
+            "stockName": "华凯易佰",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "依托“易智万象”大模型与AIAgent基座，将AI应用于视觉内容生成、客服、选品等多个环节，显著提升运营效率。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300592.SZ",
+              "companyName": "华凯易佰",
+              "companyProfile": "公司是一家以文化创意为核心，以高新数字技术展示手段为依托，为各类客户提供空间环境艺术设计服务的国内大型文化创意企业，公司在城市文化馆、博物馆、企业文化馆等大型文化主题展馆综合布展领域处于国内先进水平。公司秉承“文化+创意+科技”融合发展理念，遵循“以客户为中心、为客户创造持续价值”的业务宗旨，以文化创意与艺术设计为核心，以多媒体技术、数字图像、特效动画、智能化控制等高新技术为支撑，通过文化创意设计与高新数字科技的有机结合，对特定空间环境进行综合布展，使该空间转换为一个文化载体，具备文化展示、传播的功能，从而促进文化交流和文明传承。针对现阶段客户需求，公司形成了以城市文化馆展示系统、博物馆展示系统、企业文化馆展示系统、教育基地展示系统及其他文化主题馆展示系统(包含教育馆、科技馆等)等为主要内容的业务体系。",
+              "profileSummary": "公司是一家以文化创意为核心，以高新数字技术展示手段为依托，为各类客户提供空间环境艺术设计服务的国内大型文化创意企业，公司在城市文化馆、博物馆、企业文化馆等大型文化主题展馆综合布展领域处于国内先进水平。针对现阶段客户需求，公司形成了以城市文化馆展示系统、博物馆展示系统、企业文化馆展示系统、教育基地展示系统及其他文化主题馆展示系统(包含教育馆、科技馆等)等为主要内容的业务体系。",
+              "majorProducts": "动画设计、建筑模型、空间环境艺术设计服务",
+              "revenueComposition": "家居园艺类:29.08%;工业及商业用品类:16.44%;汽车摩托车配件类:11.99%;户外运动:10.34%;3C电子产品:8.2%;其他产品:6.57%;健康美容:5.15%;母婴用品类:4.28%;宠物用品类:4.24%;工艺收藏:2.47%;仪器仪表及工具类:0.73%;空间环境艺术设计及其他:0.51%",
+              "revenueSegments": [
+                {
+                  "name": "家居园艺类",
+                  "sharePct": 29.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业及商业用品类",
+                  "sharePct": 16.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车摩托车配件类",
+                  "sharePct": 11.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "户外运动",
+                  "sharePct": 10.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3C电子产品",
+                  "sharePct": 8.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 6.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "健康美容",
+                  "sharePct": 5.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "母婴用品类",
+                  "sharePct": 4.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "宠物用品类",
+                  "sharePct": 4.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工艺收藏",
+                  "sharePct": 2.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "仪器仪表及工具类",
+                  "sharePct": 0.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "空间环境艺术设计及其他",
+                  "sharePct": 0.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "跨境电商",
+                    "category": "跨境电商零售"
+                  }
+                ],
+                "knownProducts": [
+                  "B2B跨境电商平台运营",
+                  "跨境电商",
+                  "企业文化馆展示系统",
+                  "军事主题馆展示系统",
+                  "博物馆展示系统",
+                  "城市展示系统",
+                  "旅游文化主题馆展示系统",
+                  "科技馆展示系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华凯易佰拥有跨境电商，其产业链位置与依托“易智万象”大模型与AIAgent基座，将AI应用于视觉内容生成、客服、选品等多个环节，显著提升运营效率一致；当前的家居园艺类（29.08%）、工业及商业用品类（16.44%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由事件能否转化为可确认的经营增量决定，并需完成“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。只有订单、收入确认、产品结构和毛利率变化持续改善，产品能力才会转化为公司层面的收入和盈利提升；事件关联停留在主题层面，未形成可持续订单或利润贡献则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 572,
+            "stockCode": "301381.SZ",
+            "stockName": "赛维时代",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "积极运用AI技术对跨境电商全场景运营进行数字化升级，覆盖产品开发、供应链、品牌运营等核心环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301381.SZ",
+              "companyName": "赛维时代",
+              "companyProfile": "公司成立于2012年，是国家高新技术企业。公司秉承“让美好生活触手可及”的使命，致力于成为技术驱动的智能商业平台。为满足全球消费者对高品质、个性化的时尚生活需求，公司在基础平台层、销售端和供应端持续深耕，已逐步打磨出集产品开发设计、品牌孵化及运营、供应链整合等于一体的平台化快速反应能力。在基础平台层，公司已具备全链路数字化能力，并搭建了“小前端+大中台”的敏捷型组织架构；在销售端，公司基于跨区域、跨平台的销售网络，构建品牌矩阵支撑的多品类延伸能力；在供应端，公司依托庞大而优质的供应商生态、全球仓储物流网络布局，并通过自研的服装柔性供应链系统赋能生产，构建高效供应能力。",
+              "profileSummary": "为满足全球消费者对高品质、个性化的时尚生活需求，公司在基础平台层、销售端和供应端持续深耕，已逐步打磨出集产品开发设计、品牌孵化及运营、供应链整合等于一体的平台化快速反应能力。在基础平台层，公司已具备全链路数字化能力，并搭建了“小前端+大中台”的敏捷型组织架构；在销售端，公司基于跨区域、跨平台的销售网络，构建品牌矩阵支撑的多品类延伸能力；在供应端，公司依托庞大而优质的供应商生态、全球仓储物流网络布局，并通过自研的服装柔性供应链系统赋能生…",
+              "majorProducts": "ANCHEER、Avidlove、Coofandy、Ekouaer、Zeagoo",
+              "revenueComposition": "服饰配饰:76.96%;非服饰配饰品类:16.76%;物流服务:5.78%;其他业务:0.5%",
+              "revenueSegments": [
+                {
+                  "name": "服饰配饰",
+                  "sharePct": 76.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "非服饰配饰品类",
+                  "sharePct": 16.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物流服务",
+                  "sharePct": 5.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "跨境电商",
+                    "category": "跨境电商零售"
+                  }
+                ],
+                "knownProducts": [
+                  "跨境电商",
+                  "跨境电商物流"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "赛维时代实际经营中已有跨境电商，与事件指向的积极运用AI技术对跨境电商全场景运营进行数字化升级，覆盖产品开发、供应链、品牌运营等核心环节能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在服饰配饰（76.96%）、非服饰配饰品类（16.76%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善技术商业化与产品迭代速度，需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。客户认证、量产良率、订单规模、产品收入占比和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，产品存在不等于利润一定增加。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 7,
+        "stocks": [
+          {
+            "sourceRowNumber": 567,
+            "stockCode": "301110.SZ",
+            "stockName": "青木科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "作为阿里电商SaaS核心服务商，开发“青木擎天”智能运营系统，将AI应用于客服、设计、店铺运营等环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301110.SZ",
+              "companyName": "青木科技",
+              "companyProfile": "公司面向国内外知名品牌提供电商销售服务，主要包括电商代运营、渠道分销和电商渠道零售三种业务模式。公司作为行业领先的电子商务服务商，为国内外知名品牌提供一站式综合电商服务。经过多年的行业沉淀和积累，公司现已发展为中国电商服务行业顶级的服务商之一，尤其在大服饰行业内优势明显，是大服饰行业最具口碑的服务商之一。公司屡次获得天猫、京东等电商平台的服务商殊荣，是首家同时拥有天猫六星资质和天猫国际紫星资质的服务商。公司2014年起多次获得天猫“金牌淘拍档”称号，2018年至今连续被评为“天猫六星服务商”(天猫平台最高级别)，是“天猫国际紫星服务商”(天猫国际平台最高级别)；公司获得“天猫服饰-品牌营销综合型服务商”、“天猫消费者运营优秀推荐服务商”、“京东数坊进阶能力认证”等资质认证；获得“2017年度最佳天猫合作伙伴”、“品牌营销金服奖”等奖项；公司代运营店铺被京东授予“2018年最佳销售合作奖”、“2019最佳经营店铺奖”等奖项。除了电商平台的认可，公司也收获了来自国家及政府行业机构的肯定，被商务部评为“2017-2018年度国家级电子商务示范企业”。",
+              "profileSummary": "公司面向国内外知名品牌提供电商销售服务，主要包括电商代运营、渠道分销和电商渠道零售三种业务模式。公司作为行业领先的电子商务服务商，为国内外知名品牌提供一站式综合电商服务。",
+              "majorProducts": "传播内容创作、大型营销活动的策划及实施、电商代运营、电商渠道零售、电商销售、技术解决方案、技术解决方案及消费者运营服务、品牌数字营销、品牌营销传播策划、渠道分销、消费者运营服务、新媒体投放",
+              "revenueComposition": "电商代运营服务:44.84%;品牌孵化与管理业务:33.53%;经销代理业务:13.7%;技术解决方案及消费者运营服务:5.32%;品牌数字营销:2.6%",
+              "revenueSegments": [
+                {
+                  "name": "电商代运营服务",
+                  "sharePct": 44.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "品牌孵化与管理业务",
+                  "sharePct": 33.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "经销代理业务",
+                  "sharePct": 13.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术解决方案及消费者运营服务",
+                  "sharePct": 5.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "品牌数字营销",
+                  "sharePct": 2.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "服装品牌电商代运营",
+                  "服装电商渠道分销",
+                  "服装电商零售"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "青木科技现有收入由电商代运营服务（44.84%）、品牌孵化与管理业务（33.53%）贡献，主营产品为服装品牌电商代运营、服装电商渠道分销、服装电商零售，与作为阿里电商SaaS核心服务商，开发“青木擎天”智能运营系统，将AI应用于客服、设计、店铺运营等环节指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，事件能否转化为可确认的经营增量才会通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”产生财务影响。现阶段订单、收入确认、产品结构和毛利率变化比概念标签更重要；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 568,
+            "stockCode": "003010.SZ",
+            "stockName": "若羽臣",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为电商服务商，应用AI技术于智能客服和广告智能投放，以提升运营效率。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "003010.SZ",
+              "companyName": "若羽臣",
+              "companyProfile": "公司是一家面向全球的消费品品牌数字化管理公司，以“为全球优质消费品牌链接每个中国消费者”为使命，致力于通过全链路、全渠道的数字化能力，赋能品牌业务的全生命周期增长。公司主要业务包括品牌管理、自有品牌及代运营业务，从全局视角出发，以前瞻性的品牌战略发展为核心，全链路赋能品牌成长，涵盖品牌定位、产品设计、精准数据洞察、营销推广策略、全渠道销售布局以及精细化用户运营在内的体系化管理。公司作为国内领先的全球消费品品牌数字化管理公司，业务半径已遍及全球多个国家和地区，高质量地为宝洁、拜耳、强生、赛诺菲等超百个国际国内知名企业及品牌提供了数字化服务，成为全球众多消费品品牌生意增长的紧密合作伙伴。目前已在大健康、美妆个护、母婴、食品饮料等多个领域建立起头部竞争优势，以“为全球优质消费品牌链接每个中国消费者”为使命，致力于通过全链路、全渠道的数字化能力，赋能品牌业务的全生命周期增长。凭借卓越的品牌数字化管理能力，公司获得了多方殊荣和肯定。公司获得国家高新技术企业认定、国家级电子商务示范企业、天猫国际紫星服务商、天猫首届AIGC数藏创作奖等多个奖项。自有品牌“绽家”自2020年正式上线以来，实现了连续高速增长，多款产品长期领跑天猫等细分品类市场排名，凭借对市场细分需求的深刻洞察和产品极致打磨，连续荣获“金麦品质奖”及“金麦品质Pro大奖”双奖以及天猫、抖音等多个生态平台的荣誉认可，成为新消费领域的“黑马”。",
+              "profileSummary": "公司主要业务包括品牌管理、自有品牌及代运营业务，从全局视角出发，以前瞻性的品牌战略发展为核心，全链路赋能品牌成长，涵盖品牌定位、产品设计、精准数据洞察、营销推广策略、全渠道销售布局以及精细化用户运营在内的体系化管理。公司作为国内领先的全球消费品品牌数字化管理公司，业务半径已遍及全球多个国家和地区，高质量地为宝洁、拜耳、强生、赛诺菲等超百个国际国内知名企业及品牌提供了数字化服务，成为全球众多消费品品牌生意增长的紧密合作伙伴。",
+              "majorProducts": "供应链管理、客服管理、内容种草、渠道分销、全渠道运营、视觉设计、数字化能力、数字营销、用户运营、直播服务",
+              "revenueComposition": "零售收入:72.25%;渠道分销:22.95%;运营服务收入:4.67%;品牌策划服务收入:0.13%",
+              "revenueSegments": [
+                {
+                  "name": "零售收入",
+                  "sharePct": 72.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "渠道分销",
+                  "sharePct": 22.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运营服务收入",
+                  "sharePct": 4.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "品牌策划服务收入",
+                  "sharePct": 0.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "保健品品牌电商代运营",
+                  "化妆品品牌电商代运营",
+                  "护肤品品牌电商代运营",
+                  "母婴用品品牌电商代运营",
+                  "护肤品品牌代理",
+                  "母婴用品品牌代理",
+                  "化妆品品牌代理",
+                  "地面清洁剂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "若羽臣与新闻存在业务方向上的交集：作为电商服务商，应用AI技术于智能客服和广告智能投放，以提升运营效率；公司当前收入主要来自零售收入（72.25%）、渠道分销（22.95%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对技术商业化与产品迭代速度的推动只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能进入报表，客户认证、量产良率、订单规模、产品收入占比和毛利率决定这一交集能否升级为实际增量；技术路线变化、良率爬坡缓慢或竞争方案更快成熟是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 573,
+            "stockCode": "301376.SZ",
+            "stockName": "致欧科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "将AI运用于客户服务、文案写作、视觉内容生成、产品研发等多个方面，以提升运营效率。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301376.SZ",
+              "companyName": "致欧科技",
+              "companyProfile": "公司主要从事自有品牌家居产品的研发、设计和销售，产品主要包括家具系列、家居系列、庭院系列、宠物系列等品类，是全球知名的互联网家居品牌商。公司聚焦家居品类十余年，以“服务全球家庭，让客户信赖，使员工骄傲”为企业愿景，秉承“致力中国品牌出海，为中国制造加油”的企业使命，多年来不断将产品品类向全屋场景拓展，以客户体验为驱动，专注于为全球家庭提供更为舒适的居家体验，营造更显温馨的家居氛围，创造更加美好的生活空间。SONGMICS、VASAGLE、FEANDREA三大自有品牌，历时多年已成功跻身亚马逊欧美市场备受消费者欢迎的家居品牌之列。公司产品已在欧美等多地市场获得了消费者的青睐和认可，多款产品常年位列亚马逊等第三方电商平台畅销榜前列。因此公司多次获得亚马逊等平台授予的卖家荣誉奖项，2017年公司荣获“亚马逊全能卖家”称号，2019年公司获评“亚马逊年度最受欢迎品牌卖家”，同年SONGMICS和VASAGLE同时入选“亚马逊全球开店中国出口跨境品牌百强”。",
+              "profileSummary": "公司主要从事自有品牌家居产品的研发、设计和销售，产品主要包括家具系列、家居系列、庭院系列、宠物系列等品类，是全球知名的互联网家居品牌商。公司聚焦家居品类十余年，以“服务全球家庭，让客户信赖，使员工骄傲”为企业愿景，秉承“致力中国品牌出海，为中国制造加油”的企业使命，多年来不断将产品品类向全屋场景拓展，以客户体验为驱动，专注于为全球家庭提供更为舒适的居家体验，营造更显温馨的家居氛围，创造更加美好的生活空间。",
+              "majorProducts": "FEANDREA、SONGMICS、VASAGLE、宠物系列、家居系列、家具系列、运动户外",
+              "revenueComposition": "家具系列:53.87%;家居系列:35.3%;宠物系列:7.06%;运动户外:2.91%;其他业务:0.85%",
+              "revenueSegments": [
+                {
+                  "name": "家具系列",
+                  "sharePct": 53.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "家居系列",
+                  "sharePct": 35.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "宠物系列",
+                  "sharePct": 7.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运动户外",
+                  "sharePct": 2.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "睡袋",
+                  "行军床",
+                  "秋千",
+                  "蹦床",
+                  "宠物垫",
+                  "狗窝",
+                  "猫爬架",
+                  "收纳箱"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "致欧科技的主要经营内容是家具系列（53.87%）、家居系列（35.3%），具体产品集中在睡袋、行军床、秋千、蹦床。“将AI运用于客户服务、文案写作、视觉内容生成、产品研发等多个方面，以提升运营效率”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善事件能否转化为可确认的经营增量，也需要先补上产品落地和客户导入，再经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才可能影响业绩。订单、收入确认、产品结构和毛利率变化没有同步改善时，股价反应更可能来自主题交易；若事件关联停留在主题层面，未形成可持续订单或利润贡献，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 574,
+            "stockCode": "300866.SZ",
+            "stockName": "安克创新",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "启动“全面拥抱AI”战略，与亚马逊云科技合作，将生成式AI技术与内部研发、营销服务等深度融合。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300866.SZ",
+              "companyName": "安克创新",
+              "companyProfile": "公司成立于2011年，是一家全球化的智能硬件科技企业。公司的使命是极致创新，激发可能。我们相信创造产品的本质，是以极致的创新去超越用户需求。为达成这一使命，我们的充电品牌Anker首创PowerIQ™技术，实现全面快充兼容；首次将氮化镓(GaN)应用于消费电子领域，开启全球快充时代；开创阳台光储领域，使家庭更高效利用可再生能源。我们的智能家居品牌eufy首创HomeBase本地基站存储、太阳能永久续航SolarPlus™技术，显著提升家庭安防的安全性和可靠性。我们的智能影音品牌soundcore首创ACAA™同轴圈铁声学架构，在真无线耳机上为消费者还原交响乐级现场音质。自2011年成立以来，公司不断创造出深受全球消费者喜爱的科技产品。我们自豪于超越表象，抓住本质，极致创新，将下一个人类理想的产品带给全世界。",
+              "profileSummary": "我们相信创造产品的本质，是以极致的创新去超越用户需求。为达成这一使命，我们的充电品牌Anker首创PowerIQ™技术，实现全面快充兼容；首次将氮化镓(GaN)应用于消费电子领域，开启全球快充时代；开创阳台光储领域，使家庭更高效利用可再生能源。",
+              "majorProducts": "USB充电器及USB数据传输相关产品、保护支架类业务、充电器、充电线材、充电线材,数据线材相关产品、无线充、无线耳机、无线音箱、移动电源、移动电源及锂电相关产品、音频类产品、智能安防、智能车载、智能家居、智能家庭类产品、智能影音",
+              "revenueComposition": "充电类:50.47%;智能创新类:27.11%;智能影音类产品:22.39%;其他业务:0.03%",
+              "revenueSegments": [
+                {
+                  "name": "充电类",
+                  "sharePct": 50.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能创新类",
+                  "sharePct": 27.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能影音类产品",
+                  "sharePct": 22.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "TWS蓝牙耳机",
+                    "category": "耳机"
+                  },
+                  {
+                    "name": "头戴式蓝牙耳机",
+                    "category": "耳机"
+                  },
+                  {
+                    "name": "移动电源",
+                    "category": "充电宝"
+                  },
+                  {
+                    "name": "蓝牙音响",
+                    "category": "家用音响"
+                  }
+                ],
+                "knownProducts": [
+                  "扫地机器人",
+                  "投影仪",
+                  "数据线",
+                  "安防摄像头",
+                  "家用摄像头",
+                  "移动电源",
+                  "TWS蓝牙耳机",
+                  "头戴式蓝牙耳机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "安克创新与新闻之间有明确产品抓手：TWS蓝牙耳机、头戴式蓝牙耳机、移动电源，对应启动“全面拥抱AI”战略，与亚马逊云科技合作，将生成式AI技术与内部研发、营销服务等深度融合。收入主体目前是充电类（50.47%）、智能创新类（27.11%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变商业化进度和订单兑现预期，随后要经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才能进入利润表。客户认证、新增订单、交付节奏、相关业务收入和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若客户验证或交付节奏低于预期，订单停留在小批量阶段，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 575,
+            "stockCode": "300640.SZ",
+            "stockName": "德艺文创",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "计划围绕跨境电商业务全链路引入AI工具，推动业务运营向智能化、高效化全面升级。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300640.SZ",
+              "companyName": "德艺文创",
+              "companyProfile": "公司是一家致力于为海内外客户提供创意家居用品一站式采购服务的A股上市公司。公司成立于1995年，自设立以来，就以成为全球创意家居用品整体供应商为企业愿景，定位于创意家居用品的研发设计、外包生产及全球化销售，包括创意装饰品、休闲日用品和时尚小家具三大系列近万个品种。公司始终坚持践行创新引领、传承文化、品质家居、缔造生活的经营理念，通过将设计与创意应用于以陶瓷、竹木、铁件等多种载体，推进文创家居产业与传统产业的深度融合发展，以差异化的产品和快速的研发设计满足广大客户的多元化、个性化需求。经过多年的努力和发展，德艺文创的每一步都得到了社会各界的认可，先后荣获国家商务部、宣传部、财政部、文化部、国家广电总局共同认定的“国家文化出口重点企业”，“高新技术企业”，“国家级工业设计中心”，“文创家居时尚产品(自有品牌)出口前五强企业”等称号，成为中国文创家居领域的领头企业。",
+              "profileSummary": "公司是一家致力于为海内外客户提供创意家居用品一站式采购服务的A股上市公司。公司成立于1995年，自设立以来，就以成为全球创意家居用品整体供应商为企业愿景，定位于创意家居用品的研发设计、外包生产及全球化销售，包括创意装饰品、休闲日用品和时尚小家具三大系列近万个品种。",
+              "majorProducts": "创意装饰品、时尚小家具、休闲日用品",
+              "revenueComposition": "休闲日用品:40.35%;创意装饰品:35.3%;时尚小家具:23.06%;其他业务:1.29%",
+              "revenueSegments": [
+                {
+                  "name": "休闲日用品",
+                  "sharePct": 40.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "创意装饰品",
+                  "sharePct": 35.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "时尚小家具",
+                  "sharePct": 23.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "休闲包",
+                  "品质女鞋",
+                  "品质男鞋",
+                  "移动储物架",
+                  "斗柜",
+                  "边柜",
+                  "书桌",
+                  "文创家居装饰品"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "德艺文创现有收入由休闲日用品（40.35%）、创意装饰品（35.3%）贡献，主营产品为休闲包、品质女鞋、品质男鞋、移动储物架，与计划围绕跨境电商业务全链路引入AI工具，推动业务运营向智能化、高效化全面升级指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，技术商业化与产品迭代速度才会通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”产生财务影响。现阶段客户认证、量产良率、订单规模、产品收入占比和毛利率比概念标签更重要；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 576,
+            "stockCode": "301268.SZ",
+            "stockName": "铭利达",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为跨境电商品牌，积极布局AI相关硬件产品，切入AI+消费赛道。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301268.SZ",
+              "companyName": "铭利达",
+              "companyProfile": "公司成立于2004年，总部位于深圳南山。公司致力于成为全球领先的一站式精密结构件制造商，公司主营业务覆盖光伏、储能、新能源汽车等领域，具备精密结构件全产业链服务能力。产品涵盖精密压铸、精密注塑、精密型材、精密冲压、连接元件等。公司围绕“以客户为中心”的理念，进行全球化资源配置，已在中国华南、华东、华中、西南等区域进行业务布局，并积极开拓海外市场。公司在全球范围内拥有多个工业园，具备全球化产品研发、跨国供应链运营、区域产业集群化的竞争优势，旨在为客户提供精良的产品和高效、便捷、成本领先的服务。",
+              "profileSummary": "公司致力于成为全球领先的一站式精密结构件制造商，公司主营业务覆盖光伏、储能、新能源汽车等领域，具备精密结构件全产业链服务能力。公司在全球范围内拥有多个工业园，具备全球化产品研发、跨国供应链运营、区域产业集群化的竞争优势，旨在为客户提供精良的产品和高效、便捷、成本领先的服务。",
+              "majorProducts": "各类模具、精密压铸结构件、精密注塑结构件、型材冲压结构件",
+              "revenueComposition": "精密压铸结构件:45.82%;型材冲压结构件:30.94%;精密注塑结构件:18.96%;精密模具:3.18%;其他业务:1.1%",
+              "revenueSegments": [
+                {
+                  "name": "精密压铸结构件",
+                  "sharePct": 45.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "型材冲压结构件",
+                  "sharePct": 30.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密注塑结构件",
+                  "sharePct": 18.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密模具",
+                  "sharePct": 3.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "汽车模具",
+                  "新能源汽车电池托盘",
+                  "打印机外壳",
+                  "摄像头结构件",
+                  "光伏逆变器外壳",
+                  "光伏逆变器散热片",
+                  "光伏电缆组件",
+                  "低温加热不燃烧(HNB)电子烟金属支架"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "铭利达的主要经营内容是精密压铸结构件（45.82%）、型材冲压结构件（30.94%），具体产品集中在汽车模具、新能源汽车电池托盘、打印机外壳、摄像头结构件。“作为跨境电商品牌，积极布局AI相关硬件产品，切入AI+消费赛道”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善终端需求与渗透率变化，也需要先补上产品落地和客户导入，再经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才可能影响业绩。终端销量、客户采购量、公司出货和相关产品收入增速没有同步改善时，股价反应更可能来自主题交易；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 579,
+            "stockCode": "600415.SH",
+            "stockName": "小商品城",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "旗下Chinagoods平台推出“世界义乌”商贸大模型，整合AI翻译、AI设计等功能，赋能平台商户。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600415.SH",
+              "companyName": "小商品城",
+              "companyProfile": "公司是目前我国最大的专业批发市场的发展商之一，以独家经营开发、管理、服务义乌中国小商品城为主业，产品几乎囊括了工艺品、小五金、日用百货、纺织品、服装等所有日用工业品，辐射多个国家和地区，是我国小商品的流通、研发、展示中心和重要出口基地之一。一直以来，公司以服务全球中小微企业为宗旨，搭建共享式贸易服务平台。依托小商品城优越的商业环境和得天独厚的市场资源，公司以独家经营开发、管理、服务市场为主业，并大力发展电子商务、国际贸易、房地产、会展、酒店、物流、广告等相关行业，形成市场资源共享与联动发展的集团架构和盈利模式。",
+              "profileSummary": "公司是目前我国最大的专业批发市场的发展商之一，以独家经营开发、管理、服务义乌中国小商品城为主业，产品几乎囊括了工艺品、小五金、日用百货、纺织品、服装等所有日用工业品，辐射多个国家和地区，是我国小商品的流通、研发、展示中心和重要出口基地之一。依托小商品城优越的商业环境和得天独厚的市场资源，公司以独家经营开发、管理、服务市场为主业，并大力发展电子商务、国际贸易、房地产、会展、酒店、物流、广告等相关行业，形成市场资源共享与联动发展的集团架构…",
+              "majorProducts": "金桥人家、商城世纪村、义乌宾王市场、义乌国际商贸城、义乌荷塘雅居、义乌篁园市场、银都酒店、中国小商品数字城",
+              "revenueComposition": "商品销售:50.07%;小商品城市场商位使用及其经营配套服务:26.36%;配套房产销售:9.79%;其他:8.56%;租赁:3.6%;酒店餐饮住宿服务:1.62%",
+              "revenueSegments": [
+                {
+                  "name": "商品销售",
+                  "sharePct": 50.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "小商品城市场商位使用及其经营配套服务",
+                  "sharePct": 26.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "配套房产销售",
+                  "sharePct": 9.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁",
+                  "sharePct": 3.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "酒店餐饮住宿服务",
+                  "sharePct": 1.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "采购商贸易采洽会",
+                  "中端酒店",
+                  "小商品批发电商平台运营",
+                  "IP衍生品零售",
+                  "小商品零售",
+                  "小商品市场经营",
+                  "房地产开发(住宅-南昌)",
+                  "房地产开发(住宅-浙江)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "小商品城的主要经营内容是商品销售（50.07%）、小商品城市场商位使用及其经营配套服务（26.36%），具体产品集中在采购商贸易采洽会、中端酒店、小商品批发电商平台运营、IP衍生品零售。“旗下Chinagoods平台推出“世界义乌”商贸大模型，整合AI翻译、AI设计等功能，赋能平台商户”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善事件能否转化为可确认的经营增量，也需要先补上产品落地和客户导入，再经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才可能影响业绩。订单、收入确认、产品结构和毛利率变化没有同步改善时，股价反应更可能来自主题交易；若事件关联停留在主题层面，未形成可持续订单或利润贡献，基本面解释力会继续下降。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "8条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "5只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

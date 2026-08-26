@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26837",
@@ -9,10 +9,10 @@
     "date": "2026-07-02"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 5,
-    "mappedStockCount": 5,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 1,
     "stocks": [
       {
         "sourceRowNumber": 14023,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 6
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 14024,
@@ -30,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 20
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 14025,
@@ -39,7 +39,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 17
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 14026,
@@ -47,8 +47,8 @@
         "stockName": "佛塑科技",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 14
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 14029,
@@ -57,89 +57,31 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 18
+        "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 14026,
+        "stockCode": "000973.SZ",
+        "stockName": "佛塑科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 70,
-    "selectedCoreProductCount": 4,
+    "selectedCoreProductCount": 3,
     "selectedCompanyCoreProductCount": 3,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 4,
-    "downstreamCandidateCount": 2,
-    "shownUpstreamCount": 4,
-    "shownDownstreamCount": 2
+    "level7ProductCount": 26,
+    "relatedIndustryCandidateCount": 8,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140084504",
-        "name": "聚丙烯(PP)",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140029268"
-        ],
-        "linkedCoreProductNames": [
-          "锂电池隔膜"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140046288",
-        "name": "聚乙烯",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140029268"
-        ],
-        "linkedCoreProductNames": [
-          "锂电池隔膜"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140111403",
-        "name": "超细旦丙纶长丝",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140029268"
-        ],
-        "linkedCoreProductNames": [
-          "锂电池隔膜"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140023229",
-        "name": "锂电池基膜",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140029268"
-        ],
-        "linkedCoreProductNames": [
-          "锂电池隔膜"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140046200",
         "name": "湿法锂电池隔膜",
@@ -165,28 +107,27 @@
           "name": "湿法锂电池隔膜"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "002080.SZ",
             "stockName": "中材科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "300568.SZ",
             "stockName": "星源材质",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "603659.SH",
             "stockName": "璞泰来",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 14,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -221,23 +162,21 @@
           "name": "半固态电池隔膜"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "300568.SZ",
             "stockName": "星源材质",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "603659.SH",
             "stockName": "璞泰来",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -271,18 +210,15 @@
           "name": "间位芳纶"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600458.SH",
             "stockName": "时代新材",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 1,
         "relevanceScore": 11,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -290,84 +226,369 @@
           "其他化学纤维",
           "化学纤维"
         ]
-      },
+      }
+    ],
+    "relatedIndustries": [
       {
-        "code": "1140029268",
-        "name": "锂电池隔膜",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:湿法锂电池隔膜",
+        "code": "1210003320",
+        "name": "电解质",
+        "description": "电解质是锂电池核心材料，负责离子传导。A股中该板块受关注，主要因新能源汽车及储能需求爆发带动高增长预期，且技术迭代（如固态电池）带来新机遇，被视为新能源产业链关键赛道，具备较高景气度与投资热度。",
         "stockCount": 3,
+        "starWeight": 13,
+        "level7ProductCount": 2,
+        "relevanceScore": 36,
         "stocks": [
           {
-            "stockCode": "002080.SZ",
-            "stockName": "中材科技",
-            "rating": "★★★★"
+            "stockCode": "002812.SZ",
+            "stockName": "恩捷股份",
+            "rating": "★★★★★",
+            "filledStars": 5
           },
           {
             "stockCode": "300568.SZ",
             "stockName": "星源材质",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "603659.SH",
             "stockName": "璞泰来",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 1,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
-      }
-    ],
-    "downstream": [
-      {
-        "code": "1140008485",
-        "name": "锂电池",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140029268"
+        "products": [
+          {
+            "code": "1140209681",
+            "name": "氧化物固态电解质",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解质 > 电解质 > 氧化物固态电解质",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300568.SZ",
+                "stockName": "星源材质",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "603659.SH",
+                "stockName": "璞泰来",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140209682",
+            "name": "硫化物固态电解质",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解质 > 电解质 > 硫化物固态电解质",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002812.SZ",
+                "stockName": "恩捷股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "linkedCoreProductNames": [
-          "锂电池隔膜"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140146688",
-        "name": "芳纶纸",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140158395"
+        "code": "1210000654",
+        "name": "其他电池化学品",
+        "description": "该行业涵盖电解液、隔膜等电池关键辅材。因直接决定电池性能与安全，且受益于新能源车及储能爆发式增长，市场需求旺盛。作为产业链高弹性环节，其技术迭代与产能扩张备受资本关注，是新能源赛道的核心细分领域。",
+        "stockCount": 2,
+        "starWeight": 9,
+        "level7ProductCount": 2,
+        "relevanceScore": 36,
+        "stocks": [
+          {
+            "stockCode": "002812.SZ",
+            "stockName": "恩捷股份",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300568.SZ",
+            "stockName": "星源材质",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "间位芳纶"
+        "products": [
+          {
+            "code": "1140215879",
+            "name": "刚性骨架膜",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 其他电池化学品 > 其他电池化学品 > 刚性骨架膜",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002812.SZ",
+                "stockName": "恩捷股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300568.SZ",
+                "stockName": "星源材质",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215877",
+            "name": "自支撑固态电解质膜",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 其他电池化学品 > 其他电池化学品 > 自支撑固态电解质膜",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002812.SZ",
+                "stockName": "恩捷股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 8,
+    "mappedStockCount": 5,
+    "unmappedStockCount": 3,
+    "level7ProductCount": 26,
+    "candidateIndustryCount": 8,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 14022,
+        "stockCode": "002812.SZ",
+        "stockName": "恩捷股份",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 14023,
+        "stockCode": "300568.SZ",
+        "stockName": "星源材质",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 14024,
+        "stockCode": "603659.SH",
+        "stockName": "璞泰来",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 20
+      },
+      {
+        "sourceRowNumber": 14025,
+        "stockCode": "002080.SZ",
+        "stockName": "中材科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 14026,
+        "stockCode": "000973.SZ",
+        "stockName": "佛塑科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 14027,
+        "stockCode": "002108.SZ",
+        "stockName": "沧州明珠",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 14029,
+        "stockCode": "600458.SH",
+        "stockName": "时代新材",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 14045,
+        "stockCode": "002484.SZ",
+        "stockName": "江海股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210003320",
+        "name": "电解质",
+        "description": "电解质是锂电池核心材料，负责离子传导。A股中该板块受关注，主要因新能源汽车及储能需求爆发带动高增长预期，且技术迭代（如固态电池）带来新机遇，被视为新能源产业链关键赛道，具备较高景气度与投资热度。",
+        "stockCount": 3,
+        "starWeight": 13,
+        "level7ProductCount": 2,
+        "relevanceScore": 36,
+        "stocks": [
+          {
+            "stockCode": "002812.SZ",
+            "stockName": "恩捷股份",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300568.SZ",
+            "stockName": "星源材质",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "603659.SH",
+            "stockName": "璞泰来",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140209681",
+            "name": "氧化物固态电解质",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解质 > 电解质 > 氧化物固态电解质",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300568.SZ",
+                "stockName": "星源材质",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "603659.SH",
+                "stockName": "璞泰来",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140209682",
+            "name": "硫化物固态电解质",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解质 > 电解质 > 硫化物固态电解质",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002812.SZ",
+                "stockName": "恩捷股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1210000654",
+        "name": "其他电池化学品",
+        "description": "该行业涵盖电解液、隔膜等电池关键辅材。因直接决定电池性能与安全，且受益于新能源车及储能爆发式增长，市场需求旺盛。作为产业链高弹性环节，其技术迭代与产能扩张备受资本关注，是新能源赛道的核心细分领域。",
+        "stockCount": 2,
+        "starWeight": 9,
+        "level7ProductCount": 2,
+        "relevanceScore": 36,
+        "stocks": [
+          {
+            "stockCode": "002812.SZ",
+            "stockName": "恩捷股份",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300568.SZ",
+            "stockName": "星源材质",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140215879",
+            "name": "刚性骨架膜",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 其他电池化学品 > 其他电池化学品 > 刚性骨架膜",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002812.SZ",
+                "stockName": "恩捷股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300568.SZ",
+                "stockName": "星源材质",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140215877",
+            "name": "自支撑固态电解质膜",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 其他电池化学品 > 其他电池化学品 > 自支撑固态电解质膜",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002812.SZ",
+                "stockName": "恩捷股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -382,10 +603,711 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 24,
+    "eligibleSourceRowCount": 8,
+    "totalStockCount": 8,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 16,
+    "excludedNonAShareCount": 0,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 8,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 14022,
+            "stockCode": "002812.SZ",
+            "stockName": "恩捷股份",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球锂电池隔膜出货量第一的龙头企业，主导并受益于本轮隔膜涨价周期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002812.SZ",
+              "companyName": "恩捷股份",
+              "companyProfile": "公司成立于2006年，是全球领先的锂电池隔膜制造商，在BOPP膜、无菌包装等细分行业中也拥有较为丰富的产品。本集团主要经营地在中国大陆，于上海、云南、四川、重庆、江苏、江西、广东、湖北、东欧匈牙利等地均设有工厂。此外，为加快公司美国锂电池隔离膜项目的进程，以快速响应北美地区客户的需求，提升公司隔膜产品的全球市场份额，公司正在美国建设14条年产能合计7亿平方米锂电池涂布隔膜产线。",
+              "profileSummary": "公司成立于2006年，是全球领先的锂电池隔膜制造商，在BOPP膜、无菌包装等细分行业中也拥有较为丰富的产品。此外，为加快公司美国锂电池隔离膜项目的进程，以快速响应北美地区客户的需求，提升公司隔膜产品的全球市场份额，公司正在美国建设14条年产能合计7亿平方米锂电池涂布隔膜产线。",
+              "majorProducts": "包装印刷品（烟标和无菌包装）、包装制品（特种纸、全息防伪电化铝及其他产品）、膜类产品（锂电池隔离膜、BOPP膜）",
+              "revenueComposition": "膜类产品:89.54%;无菌包装:7.11%;其他业务:2.63%;其他:0.49%;特种纸:0.22%;烟标:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "膜类产品",
+                  "sharePct": 89.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "无菌包装",
+                  "sharePct": 7.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特种纸",
+                  "sharePct": 0.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "烟标",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "湿法锂电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "半固态电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "干法锂电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "刚性骨架膜",
+                    "category": "其他电池化学品"
+                  },
+                  {
+                    "name": "硫化物固态电解质",
+                    "category": "电解质"
+                  },
+                  {
+                    "name": "自支撑固态电解质膜",
+                    "category": "其他电池化学品"
+                  }
+                ],
+                "knownProducts": [
+                  "硫化锂",
+                  "双向拉伸聚丙烯薄膜(BOPP膜)",
+                  "刚性骨架膜",
+                  "自支撑固态电解质膜",
+                  "半固态电池隔膜",
+                  "干法锂电池隔膜",
+                  "湿法锂电池隔膜",
+                  "硫化物固态电解质"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "恩捷股份拥有湿法锂电池隔膜、半固态电池隔膜、干法锂电池隔膜，其产业链位置与全球锂电池隔膜出货量第一的龙头企业，主导并受益于本轮隔膜涨价周期一致；当前的膜类产品（89.54%）、无菌包装（7.11%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由供需缺口与产品价格决定，并需完成“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。只有产品报价、订单排期、产销率和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 14023,
+            "stockCode": "300568.SZ",
+            "stockName": "星源材质",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "全球隔膜出货量第二，干法隔膜全球第一，价格弹性高，积极布局半导体材料第二成长曲线。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300568.SZ",
+              "companyName": "星源材质",
+              "companyProfile": "公司是专业从事锂离子电池隔膜及功能膜研发、生产与销售的国家级高新技术企业，是锂离子电池隔膜国家标准起草牵头单位及编委会副组长单位。公司以“星源膜创造新生活”为使命，深耕新能源、新材料领域超过二十年。公司产品涵盖锂电池干法、湿法、涂覆隔膜，广泛应用于新能源汽车、储能电站、电动自行车、电动工具、航天航空、医疗及数码等领域。凭借锂电池隔膜强大的技术优势，星源材质是全球第一家提出“动力锂电池隔膜”的国家火炬计划重点高新技术企业，是中国第一家打破国外垄断的锂电池隔膜干法单拉技术的企业，是中国第一家产品批量出口海外市场的锂电池隔膜制造企业，是中国第一家同时拥有锂电池隔膜干法、湿法和涂覆制备技术的企业，是中国第一家以隔膜为主营业务登陆资本市场的企业。当前，公司客户覆盖宁德时代、比亚迪、韩国LG化学等国内外一线电池厂商。作为企业强劲发展的动力源泉，星源材质拥有国际一流的科研团队，研发技术类人才占比超过20%，并与国内外知名院校、机构长期保持紧密合作关系。",
+              "profileSummary": "公司产品涵盖锂电池干法、湿法、涂覆隔膜，广泛应用于新能源汽车、储能电站、电动自行车、电动工具、航天航空、医疗及数码等领域。凭借锂电池隔膜强大的技术优势，星源材质是全球第一家提出“动力锂电池隔膜”的国家火炬计划重点高新技术企业，是中国第一家打破国外垄断的锂电池隔膜干法单拉技术的企业，是中国第一家产品批量出口海外市场的锂电池隔膜制造企业，是中国第一家同时拥有锂电池隔膜干法、湿法和涂覆制备技术的企业，是中国第一家以隔膜为主营业务登陆资本市场…",
+              "majorProducts": "干法隔膜、湿法隔膜、涂覆隔膜",
+              "revenueComposition": "锂离子电池隔膜新能源材料:98.82%;其他业务:1.18%",
+              "revenueSegments": [
+                {
+                  "name": "锂离子电池隔膜新能源材料",
+                  "sharePct": 98.82,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "湿法锂电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "半固态电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "干法锂电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "刚性骨架膜",
+                    "category": "其他电池化学品"
+                  },
+                  {
+                    "name": "氧化物固态电解质",
+                    "category": "电解质"
+                  },
+                  {
+                    "name": "锂电池涂覆隔膜",
+                    "category": "锂电池极片制造设备"
+                  }
+                ],
+                "knownProducts": [
+                  "刚性骨架膜",
+                  "半固态电池隔膜",
+                  "干法锂电池隔膜",
+                  "湿法锂电池隔膜",
+                  "氧化物固态电解质",
+                  "锂电池涂覆隔膜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "星源材质的锂离子电池隔膜新能源材料（98.82%）覆盖范围较宽，其中能够承载湿法锂电池隔膜、半固态电池隔膜、干法锂电池隔膜，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：全球隔膜出货量第二，干法隔膜全球第一，价格弹性高，积极布局半导体材料第二成长曲线。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 14024,
+            "stockCode": "603659.SH",
+            "stockName": "璞泰来",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球最大的独立涂覆隔膜加工商，并向上游基膜延伸，具备\"基膜-涂覆-设备\"一体化优势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603659.SH",
+              "companyName": "璞泰来",
+              "companyProfile": "公司成立于2012年11⽉，2017年11月在上交所上市，公司所服务的锂离子电池市场，处于清洁能源、节能环保及高效储能相关的关键产业环节。致力于成为全球领先的新能源电池关键材料及自动化设备的综合解决方案提供商。公司致力于成为新能源电池关键材料及自动化装备与服务的综合解决方案商和平台型企业。主营业务涵盖负极材料、涂覆隔膜、PVDF及粘结剂、复合集流体、纳米氧化铝及勃姆石、铝塑包装膜等新能源电池材料，同时为新能源电池及电池材料产业提供自动化工艺装备及智能制造体系的装备服务。通过负极材料、膜材料及涂覆、自动化装备各业务间的资源共享及产业协同，为客户提供多元化、差异化及专业化的产品组合与集成服务。",
+              "profileSummary": "主营业务涵盖负极材料、涂覆隔膜、PVDF及粘结剂、复合集流体、纳米氧化铝及勃姆石、铝塑包装膜等新能源电池材料，同时为新能源电池及电池材料产业提供自动化工艺装备及智能制造体系的装备服务。通过负极材料、膜材料及涂覆、自动化装备各业务间的资源共享及产业协同，为客户提供多元化、差异化及专业化的产品组合与集成服务。",
+              "majorProducts": "113μm铝塑包装膜、120μm钢塑膜、152μm铝塑包装膜、3C电子类负极材料8C、3C电子类负极材料AT、3C电子类负极材料G1、3C电子类负极材料G49、3C电子类负极材料G9、73μm铝塑包装膜、88μm铝塑包装膜、91μm黑色哑光铝塑包装膜、PVDF涂覆隔膜、挤压式涂布机、立板式涂布机、纳米氧化铝粉、汽车电池和储能类负极材料FT-1、汽车电池和储能类负极材料F系列、汽车电池和储能类负极材料G6、汽车电池和储能类负极材料GT、陶瓷PVDF混合涂覆隔膜、陶瓷涂覆隔膜、微凹板隔膜陶瓷涂布机",
+              "revenueComposition": "新能源电池材料与服务:76.3%;新能源自动化装备与服务:29.18%;产业投资贸易管理与其他:8.39%;合并抵消项:-13.88%",
+              "revenueSegments": [
+                {
+                  "name": "新能源电池材料与服务",
+                  "sharePct": 76.3,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源自动化装备与服务",
+                  "sharePct": 29.18,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "产业投资贸易管理与其他",
+                  "sharePct": 8.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "合并抵消项",
+                  "sharePct": -13.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "湿法锂电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "半固态电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "锂电池隔膜基膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "锂离子电池用铝塑膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "CVD硅碳负极材料",
+                    "category": "锂电池负极材料"
+                  },
+                  {
+                    "name": "PAA(聚丙烯酸)类锂电池粘结剂",
+                    "category": "电池粘结剂"
+                  }
+                ],
+                "knownProducts": [
+                  "锂电级PVDF(聚偏氟乙烯)",
+                  "纳米氧化铝",
+                  "锂电池涂覆用勃姆石",
+                  "PAA(聚丙烯酸)类锂电池粘结剂",
+                  "半固态电池隔膜",
+                  "湿法锂电池隔膜",
+                  "锂电池隔膜基膜",
+                  "锂离子电池用铝塑膜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "璞泰来的新能源电池材料与服务（76.3%）、新能源自动化装备与服务（29.18%）覆盖范围较宽，其中能够承载湿法锂电池隔膜、半固态电池隔膜、锂电池隔膜基膜，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：全球最大的独立涂覆隔膜加工商，并向上游基膜延伸，具备\"基膜-涂覆-设备\"一体化优势。现阶段无法用整个分部占比直接衡量受益程度，因为供需缺口与产品价格还需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。产品报价、订单排期、产销率和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 14025,
+            "stockCode": "002080.SZ",
+            "stockName": "中材科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内领先的锂电池隔膜生产商，同时受益于AI电子布高景气，具备双重逻辑。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002080.SZ",
+              "companyName": "中材科技",
+              "companyProfile": "公司是2001年12月28日在国家工商行政管理总局注册设立的股份制企业。2006年11月20日，公司A股股票在深交所上市。公司承继了原南京玻璃纤维研究设计院、北京玻璃钢研究设计院和苏州非金属矿工业设计研究院三个科研院所五十多年的核心技术资源和人才优势，拥有完整的非金属矿物材料、玻璃纤维、纤维复合材料技术产业链，是我国特种纤维复合材料领域集研发、设计、产品制造与销售、技术装备集成于一体的高新技术企业。2024年，公司围绕新能源、新材料、节能减排等战略新兴产业方向，聚焦特种纤维、复合材料、新能源材料三大赛道，集中优势资源大力发展风电叶片、玻璃纤维及制品、锂电池隔膜三大主导产业，同时从事高压复合气瓶、膜材料及其他复合材料制品的研发、制造及销售，业务产品紧扣新能源、航空航天、节能减排等应用领域。",
+              "profileSummary": "公司承继了原南京玻璃纤维研究设计院、北京玻璃钢研究设计院和苏州非金属矿工业设计研究院三个科研院所五十多年的核心技术资源和人才优势，拥有完整的非金属矿物材料、玻璃纤维、纤维复合材料技术产业链，是我国特种纤维复合材料领域集研发、设计、产品制造与销售、技术装备集成于一体的高新技术企业。2024年，公司围绕新能源、新材料、节能减排等战略新兴产业方向，聚焦特种纤维、复合材料、新能源材料三大赛道，集中优势资源大力发展风电叶片、玻璃纤维及制品、锂电…",
+              "majorProducts": "电子布、电子级细纱、短切毡、多轴向经编织物、方格布、风机叶片用高模量纱、热塑性纤维、无捻粗纱、中材AGM隔板、中材MW级风机叶片、中材TXZ型陶瓷纤维纸、中材摆锤法岩棉生产技术及设备、中材玻璃微纤维纸、中材玻纤覆膜滤料、中材玻纤空气过滤纸、中材玻纤生产线设计与安装、中材玻纤湿法薄毡生产技术及设备、中材玻纤装备、中材池窑拉丝技术装备、中材低介电玻璃纤维、中材高硅氧玻璃纤维、中材高模量玻璃纤维、中材高强度玻璃纤维、中材空气净化过滤毡、中材离心喷吹法生产技术及设备、中材平面仿形织物、中材自动换筒拉丝机",
+              "revenueComposition": "风电叶片:41.71%;玻璃纤维及制品:25.84%;锂电池隔膜:7.94%;特种纤维复合材料技术与装备:6.19%;工程复合材料:5.32%;高压复合气瓶:4.66%;先进复合材料:3.56%;膜材料制品:2.99%;其他:1.78%",
+              "revenueSegments": [
+                {
+                  "name": "风电叶片",
+                  "sharePct": 41.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "玻璃纤维及制品",
+                  "sharePct": 25.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锂电池隔膜",
+                  "sharePct": 7.94,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "特种纤维复合材料技术与装备",
+                  "sharePct": 6.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程复合材料",
+                  "sharePct": 5.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高压复合气瓶",
+                  "sharePct": 4.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "先进复合材料",
+                  "sharePct": 3.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "膜材料制品",
+                  "sharePct": 2.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "湿法锂电池隔膜",
+                    "category": "电池隔膜"
+                  }
+                ],
+                "knownProducts": [
+                  "耐碱纤维",
+                  "酚醛树脂",
+                  "玻璃纤维",
+                  "短切纤维",
+                  "玻璃纤维过滤纸",
+                  "玻璃钢地铁防护罩",
+                  "玻璃钢电杆",
+                  "玻璃钢雷达罩"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中材科技在事件链条中的位置是：国内领先的锂电池隔膜生产商，同时受益于AI电子布高景气，具备双重逻辑；锂电池隔膜占收入的7.94%，目前仍是较小的收入来源。因此，本次事件首先改变的可能是市场对业务上限的估计，随后才是供需缺口与产品价格经由“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”带来的实际利润。小基数提供增速弹性，也放大了预期与兑现之间的落差。产品报价、订单排期、产销率和毛利率若迟迟不能改善，或出现供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，这条逻辑就难以从期权走向主业。"
+          },
+          {
+            "sourceRowNumber": 14026,
+            "stockCode": "000973.SZ",
+            "stockName": "佛塑科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内5μm湿法隔膜主力供应商，受益于电池快充/大容量趋势，盈利修复弹性大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000973.SZ",
+              "companyName": "佛塑科技",
+              "companyProfile": "公司成立于1988年6月。2000年5月在深圳证券交易所挂牌上市，是“国家火炬计划重点高新技术企业”、“国家技术创新示范企业”和国务院国资委“科改示范企业”。公司专注于高分子功能薄膜与复合材料的研发与生产，围绕新材料主业发展定位，形成以光学薄膜、双向拉伸薄膜、渗析防护材料和塑编阻隔材料为重点的产业布局，为新能源、电工电气、光电显示、医疗卫生等战略性新兴产业提供核心功能薄膜材料，电容薄膜、偏光膜、透气膜等核心产品突破关键技术“卡脖子”难题，具有行业引领性。未来，佛塑科技将紧紧围绕高质量发展主题，坚持制造业当家，加快形成新质生产力，主动融入新发展格局，打造国有企业原创技术策源地，以数字化转型推动高端化、智能化、绿色化发展，向新向绿向未来，成为高分子功能薄膜与复合材料产业的引领者和链主企业。",
+              "profileSummary": "公司专注于高分子功能薄膜与复合材料的研发与生产，围绕新材料主业发展定位，形成以光学薄膜、双向拉伸薄膜、渗析防护材料和塑编阻隔材料为重点的产业布局，为新能源、电工电气、光电显示、医疗卫生等战略性新兴产业提供核心功能薄膜材料，电容薄膜、偏光膜、透气膜等核心产品突破关键技术“卡脖子”难题，具有行业引领性。未来，佛塑科技将紧紧围绕高质量发展主题，坚持制造业当家，加快形成新质生产力，主动融入新发展格局，打造国有企业原创技术策源地，以数字化转型推…",
+              "majorProducts": "包装薄膜、电工薄膜、光学薄膜、渗析防护材料、塑编阻隔材料",
+              "revenueComposition": "双向拉伸薄膜:35.57%;渗析材料:19.34%;编织阻隔材料:14.53%;其他业务收入:11.05%;其他:10%;光学薄膜:9.5%",
+              "revenueSegments": [
+                {
+                  "name": "双向拉伸薄膜",
+                  "sharePct": 35.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "渗析材料",
+                  "sharePct": 19.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "编织阻隔材料",
+                  "sharePct": 14.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务收入",
+                  "sharePct": 11.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 10.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光学薄膜",
+                  "sharePct": 9.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "普通填充母料",
+                  "尼龙包装膜",
+                  "双向拉伸聚乙烯薄膜(BOPE膜)",
+                  "双向拉伸聚丙烯薄膜(BOPP膜)",
+                  "PE透气膜",
+                  "跨境电商物流",
+                  "供应链管理服务",
+                  "篷盖布"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "佛塑科技的主要经营内容是双向拉伸薄膜（35.57%）、渗析材料（19.34%），具体产品集中在普通填充母料、尼龙包装膜、双向拉伸聚乙烯薄膜(BOPE膜)、双向拉伸聚丙烯薄膜(BOPP膜)。“国内5μm湿法隔膜主力供应商，受益于电池快充/大容量趋势，盈利修复弹性大”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善供需缺口与产品价格，也需要先补上产品落地和客户导入，再经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才可能影响业绩。产品报价、订单排期、产销率和毛利率没有同步改善时，股价反应更可能来自主题交易；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 14029,
+            "stockCode": "600458.SH",
+            "stockName": "时代新材",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内超级电容隔膜龙头，技术领先，是AI服务器需求爆发的核心受益标的之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600458.SH",
+              "companyName": "时代新材",
+              "companyProfile": "公司创立于1984年，前身为原铁道部株洲电力机车研究所橡胶试验室，现为中国中车股份有限公司核心一级子公司及A股上市企业。历经四十年发展，公司始终秉持“面向新兴产业、面向高端产品、面向全球整合”的战略导向，深度融入全球产业链，构建了覆盖德国、法国、斯洛伐克、墨西哥、澳大利亚、巴西等国家的国际化研发与生产网络，成长为高科技跨国制造企业。未来，公司将深耕全球化资源配置，加速新材料技术迭代与场景化应用，为全球客户提供更具竞争力的可持续产品与服务，践行“科技赋能绿色制造”的长期使命。",
+              "profileSummary": "历经四十年发展，公司始终秉持“面向新兴产业、面向高端产品、面向全球整合”的战略导向，深度融入全球产业链，构建了覆盖德国、法国、斯洛伐克、墨西哥、澳大利亚、巴西等国家的国际化研发与生产网络，成长为高科技跨国制造企业。未来，公司将深耕全球化资源配置，加速新材料技术迭代与场景化应用，为全球客户提供更具竞争力的可持续产品与服务，践行“科技赋能绿色制造”的长期使命。",
+              "majorProducts": "时代新材CA砂浆、时代新材船舶码头减振产品、时代新材弹性胶泥车挡缓冲器、时代新材地铁轻轨减振产品、时代新材电磁线、时代新材防水涂料、时代新材风电减振器、时代新材工程机械减振产品、时代新材公路汽车减振产品、时代新材建筑桥梁减振产品、时代新材其他领域减振产品、时代新材桥梁支座、时代新材铁路工矿车减振产品、时代新材铁路轨道减振产品、时代新材铁路货车减振产品、时代新材铁路机车减振产品、时代新材铁路客车减振产品、时代新材铁路扣件",
+              "revenueComposition": "风力发电:47.83%;汽车:31.96%;轨道交通:9.71%;工业与民用工程:8.09%;其他:2.41%",
+              "revenueSegments": [
+                {
+                  "name": "风力发电",
+                  "sharePct": 47.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车",
+                  "sharePct": 31.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "轨道交通",
+                  "sharePct": 9.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业与民用工程",
+                  "sharePct": 8.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "间位芳纶",
+                  "聚酰亚胺(PI)浆料",
+                  "LNG储罐隔震橡胶支座",
+                  "建筑隔震橡胶支座",
+                  "轨道交通用层式弹簧",
+                  "轨道交通用空气弹簧",
+                  "动车地板",
+                  "动车车顶板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "时代新材现有收入由风力发电（47.83%）、汽车（31.96%）贡献，主营产品为间位芳纶、聚酰亚胺(PI)浆料、LNG储罐隔震橡胶支座、建筑隔震橡胶支座，与国内超级电容隔膜龙头，技术领先，是AI服务器需求爆发的核心受益标的之一指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，供需缺口与产品价格才会通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”产生财务影响。现阶段产品报价、订单排期、产销率和毛利率比概念标签更重要；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件对公司中期业绩的贡献将十分有限。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 14027,
+            "stockCode": "002108.SZ",
+            "stockName": "沧州明珠",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内少数同时掌握干、湿法及涂覆技术的隔膜企业，近期多个隔膜项目全部投产，产能进入释放期。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002108.SZ",
+              "companyName": "沧州明珠",
+              "companyProfile": "公司主要产品有PE管道、BOPA薄膜和锂离子电池隔膜产品。PE管道产品主要应用于燃气、给水等地下管网的建设。PE管道因其所具有的耐腐蚀性、耐磨性、低阻性、良好的柔性、施工安全方便和使用寿命长等优点而备受青睐，已广泛应用于城镇燃气输送、给水、农业灌溉、矿山细颗粒固体输送以及油田、化工和邮电通讯等领域。随着我国城市化进程加快，全面推进新型城镇化建设，塑料管材的需求不断增加，在燃气、给排水等地下管网的建设方面发挥着越来越重要的作用。BOPA薄膜的优异性能满足了人们对包装材料高阻隔性、高强度、高透明度、薄型化、轻量化以及极宽的温度使用范围(-60℃~150℃)的要求，主要用于食品包装，此外还广泛用于一般工业包装、医药包装、化妆洗涤用品包装和机械电子、家居产品、气球装饰及部分粮食产品的包装等领域。锂离子电池隔膜产品应用于锂离子电池。目前，公司作为PE燃气、给水管的系统的生产基地之一，产销量多年保持行业领先，市场口碑良好，得到客户的普遍认可，是PE管道细分行业的领军企业；公司在BOPA薄膜产品方面凭借其规模和技术优势，产品通过布局同步、异步产品的生产来满足不同市场的客户需求，产品质量稳定优异，广泛得到客户认可，凭借生产规模和技术优势已成为细分行业的领军企业；在锂离子电池隔膜产品方面随着生产技术和生产工艺不断提高和完善，生产规模不断扩大，产品已进入国内、国际龙头企业。",
+              "profileSummary": "公司主要产品有PE管道、BOPA薄膜和锂离子电池隔膜产品。目前，公司作为PE燃气、给水管的系统的生产基地之一，产销量多年保持行业领先，市场口碑良好，得到客户的普遍认可，是PE管道细分行业的领军企业；公司在BOPA薄膜产品方面凭借其规模和技术优势，产品通过布局同步、异步产品的生产来满足不同市场的客户需求，产品质量稳定优异，广泛得到客户认可，凭借生产规模和技术优势已成为细分行业的领军企业；在锂离子电池隔膜产品方面随着生产技术和生产工艺不断…",
+              "majorProducts": "沧州明珠给排水塑料管件、沧州明珠工程服务、沧州明珠聚酰胺薄膜、沧州明珠排污双壁波纹管、沧州明珠燃气塑料管件、沧州明珠通信塑料管件、沧州明珠土木格栅、沧州明珠压力塑料管件、沧洲明珠硅胶管管材、沧洲明珠聚酰亚胺保鲜膜、锂离子电池隔膜产品",
+              "revenueComposition": "燃气管、给水管、给水管件:38.84%;尼龙薄膜:31.19%;锂离子电池隔膜:25.77%;其他业务:4.2%",
+              "revenueSegments": [
+                {
+                  "name": "燃气管、给水管、给水管件",
+                  "sharePct": 38.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "尼龙薄膜",
+                  "sharePct": 31.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锂离子电池隔膜",
+                  "sharePct": 25.77,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 4.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "湿法锂电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "半固态电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "干法锂电池隔膜",
+                    "category": "电池隔膜"
+                  },
+                  {
+                    "name": "锂电膜(BOPA)",
+                    "category": "电池隔膜"
+                  }
+                ],
+                "knownProducts": [
+                  "塑料薄膜废料",
+                  "PE管道",
+                  "半固态电池隔膜",
+                  "干法锂电池隔膜",
+                  "湿法锂电池隔膜",
+                  "锂电膜(BOPA)",
+                  "BOPA蒸煮膜"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对沧州明珠而言，国内少数同时掌握干、湿法及涂覆技术的隔膜企业，近期多个隔膜项目全部投产，产能进入释放期并非纯概念映射，因为锂离子电池隔膜占收入的25.77%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是供需缺口与产品价格，传导效率取决于“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由产品报价、订单排期、产销率和毛利率来区分；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 14045,
+            "stockCode": "002484.SZ",
+            "stockName": "江海股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内超级电容龙头，AI服务器需求爆发带动其产品需求，从而拉动上游超级电容隔膜等材料采购。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002484.SZ",
+              "companyName": "江海股份",
+              "companyProfile": "公司总部位于江苏省南通市，所属行业为电子元器件制造业，是从事电容器及其材料、仪器的研究开发、生产和销售的高新技术企业。公司拥有超过50年的电容器生产经验，通过为客户提供铝电解、薄膜、和超级电容器“一站式”的服务，持续开拓新的应用的市场，致力于成为全球电容器行业的领先者。江海牌电容器是中国电子元器件行业拥有自主知识产权、自有品牌，通过自己的渠道真正进入国际高端主流市场的民族品牌之一，是江苏省名牌产品，中国驰名商标。公司是中国电子元件行业副理事长单位、中国超级电容器标准工作副组长单位、高分子固体电容器国家标准主要起草单位，连续三十一年主要指标在全国电容器行业名列前茅。公司是全球在电力电子领域少数几家同时在铝电解电容器、薄膜电容器、超级电容器这三大类电容器进行研发、制造和销售的企业之一，产品广泛应用于工业自动化、机器人、消费电子、轨道交通、5G通讯设备、数据中心、新能源和储能、电动汽车、智能电网、军工等多个领域。同时，公司积极布局三大电容器用关键材料的技术工艺研究攻关和产业化，向铝电解电容器产业链上游延伸，开发出国内高比容、高强度、高一致性的电极箔(腐蚀箔和化成箔)，有效保障了材料性能、品质和供给，进一步提升了行业竞争优势。目前，公司已成为全球电力电子应用领域品种最齐全、产业链最完整的电容器公司。",
+              "profileSummary": "公司总部位于江苏省南通市，所属行业为电子元器件制造业，是从事电容器及其材料、仪器的研究开发、生产和销售的高新技术企业。目前，公司已成为全球电力电子应用领域品种最齐全、产业链最完整的电容器公司。",
+              "majorProducts": "薄膜电容器、超级电容器、铝电解电容器（及核心材料）",
+              "revenueComposition": "铝电解电容:80.55%;薄膜电容:10.49%;超级电容:6.42%;电极箔:2.19%;其他业务:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "铝电解电容",
+                  "sharePct": 80.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "薄膜电容",
+                  "sharePct": 10.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "超级电容",
+                  "sharePct": 6.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电极箔",
+                  "sharePct": 2.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "电极铝箔",
+                  "电力电子电容器",
+                  "薄膜电容器",
+                  "超级电容器",
+                  "铝电解电容器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "江海股份的业务范围能够覆盖国内超级电容龙头，AI服务器需求爆发带动其产品需求，从而拉动上游超级电容隔膜等材料采购所处的产业环节，但当前铝电解电容（80.55%）、薄膜电容（10.49%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。供需缺口与产品价格需要沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”完成兑现，并在产品报价、订单排期、产销率和毛利率上形成持续改善；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务联系对盈利的贡献会受到限制。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "16条低于3星的源记录已按当前关注口径排除。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

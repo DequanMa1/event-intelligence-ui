@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
-  "status": "no_company_product_mapping",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
+  "status": "no_four_star_stocks",
   "event": {
     "mainId": "26640",
     "uid": "0RB7WE9RZ1575",
@@ -9,47 +9,35 @@
     "date": "2026-06-30"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 1,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 0,
     "mappedStockCount": 0,
-    "unmappedStockCount": 1,
-    "stocks": [
-      {
-        "sourceRowNumber": 9322,
-        "stockCode": "未上市",
-        "stockName": "蔚来资本",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 9322,
-        "stockCode": "未上市",
-        "stockName": "蔚来资本",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStockCount": 0,
+    "stocks": [],
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 0,
     "selectedCoreProductCount": 0,
     "selectedCompanyCoreProductCount": 0,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 0,
-    "downstreamCandidateCount": 0,
-    "shownUpstreamCount": 0,
-    "shownDownstreamCount": 0
+    "level7ProductCount": 0,
+    "relatedIndustryCandidateCount": 0,
+    "shownRelatedIndustryCount": 0
   },
-  "chain": {
-    "upstream": [],
-    "core": [],
-    "downstream": []
+  "productIndustryMap": {
+    "coreProducts": [],
+    "relatedIndustries": []
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 0,
+    "mappedStockCount": 0,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 0,
+    "candidateIndustryCount": 0,
+    "relatedIndustryCount": 0,
+    "stocks": [],
+    "relatedIndustries": []
   },
   "industryAnalysis": {
     "status": "unavailable",
@@ -59,10 +47,34 @@
     "researchSources": [],
     "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
   },
+  "investmentOpportunities": {
+    "status": "no_a_share_stocks",
+    "sourceRowCount": 8,
+    "eligibleSourceRowCount": 0,
+    "totalStockCount": 0,
+    "groupCount": 0,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 2,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 0,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "2条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

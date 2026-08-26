@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26930",
@@ -9,20 +9,11 @@
     "date": "2026-07-03"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 6,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
     "mappedStockCount": 3,
-    "unmappedStockCount": 3,
+    "unmappedStockCount": 0,
     "stocks": [
-      {
-        "sourceRowNumber": 16044,
-        "stockCode": "SIE.DE",
-        "stockName": "西门子",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 16045,
         "stockCode": "688698.SH",
@@ -30,7 +21,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 15
+        "anchorProductCount": 5
       },
       {
         "sourceRowNumber": 16046,
@@ -39,25 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 11
-      },
-      {
-        "sourceRowNumber": 16047,
-        "stockCode": "ABBN.S",
-        "stockName": "ABB",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 16048,
-        "stockCode": "SU.PA",
-        "stockName": "施耐德电气",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 6
       },
       {
         "sourceRowNumber": 16056,
@@ -66,300 +39,32 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 23
+        "anchorProductCount": 9
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 16044,
-        "stockCode": "SIE.DE",
-        "stockName": "西门子",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 16047,
-        "stockCode": "ABBN.S",
-        "stockName": "ABB",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 16048,
-        "stockCode": "SU.PA",
-        "stockName": "施耐德电气",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 44,
     "selectedCoreProductCount": 17,
     "selectedCompanyCoreProductCount": 17,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 90,
-    "downstreamCandidateCount": 72,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 62,
+    "relatedIndustryCandidateCount": 8,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
-        "code": "1137000105",
-        "name": "伺服电机",
-        "anchorCount": 3,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033128",
-          "1140033827",
-          "1140084132"
-        ],
-        "linkedCoreProductNames": [
-          "SCARA机器人(圆柱坐标型机器人手臂)",
-          "巡检机器人",
-          "智能物流机器人"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140035220",
-        "name": "减速器",
-        "anchorCount": 3,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033128",
-          "1140033827",
-          "1140084132"
-        ],
-        "linkedCoreProductNames": [
-          "SCARA机器人(圆柱坐标型机器人手臂)",
-          "巡检机器人",
-          "智能物流机器人"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140096330",
-        "name": "中央处理器(CPU)",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140008128",
-          "1140218365"
-        ],
-        "linkedCoreProductNames": [
-          "可编辑组态人机界面(HMI)",
-          "运动控制器"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140011135",
-        "name": "蓄电池",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033827",
-          "1140084132"
-        ],
-        "linkedCoreProductNames": [
-          "巡检机器人",
-          "智能物流机器人"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040029",
-        "name": "I/O接口",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140020886",
-        "name": "MCU(微控制器)",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040028",
-        "name": "三相整流器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140031361",
-        "name": "励磁绕组",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040032",
-        "name": "印刷线路板",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1137000022",
-        "name": "变压器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040040",
-        "name": "可控硅整流放大器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040025",
-        "name": "定子三相绕组",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1130000714",
-        "name": "接触器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140040024",
-        "name": "控制绕组",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140033125"
-        ],
-        "linkedCoreProductNames": [
-          "机器人伺服系统"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
-      {
-        "code": "1140033125",
-        "name": "机器人伺服系统",
-        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 机器人伺服系统",
+        "code": "1140211652",
+        "name": "人形机器人空心杯电机",
+        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 人形机器人空心杯电机",
         "industryPath": [
           "机械设备",
           "通用机械",
           "其它通用机械",
           "机器人",
           "机器人部件",
-          "机器人伺服系统"
+          "人形机器人空心杯电机"
         ],
         "level5Industry": {
           "code": "1200000463",
@@ -370,27 +75,25 @@
           "name": "机器人部件"
         },
         "level7Product": {
-          "code": "1140033125",
-          "name": "机器人伺服系统"
+          "code": "1140211652",
+          "name": "人形机器人空心杯电机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "688698.SH",
             "stockName": "伟创电气",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "688320.SH",
             "stockName": "禾川科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 20,
-        "downstreamCount": 1,
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -423,23 +126,21 @@
           "name": "无框力矩电机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "688698.SH",
             "stockName": "伟创电气",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "688320.SH",
             "stockName": "禾川科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 1,
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -448,16 +149,16 @@
         ]
       },
       {
-        "code": "1140211652",
-        "name": "人形机器人空心杯电机",
-        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 人形机器人空心杯电机",
+        "code": "1140033125",
+        "name": "机器人伺服系统",
+        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 机器人伺服系统",
         "industryPath": [
           "机械设备",
           "通用机械",
           "其它通用机械",
           "机器人",
           "机器人部件",
-          "人形机器人空心杯电机"
+          "机器人伺服系统"
         ],
         "level5Industry": {
           "code": "1200000463",
@@ -468,251 +169,29 @@
           "name": "机器人部件"
         },
         "level7Product": {
-          "code": "1140211652",
-          "name": "人形机器人空心杯电机"
+          "code": "1140033125",
+          "name": "机器人伺服系统"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "688698.SH",
             "stockName": "伟创电气",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "688320.SH",
             "stockName": "禾川科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "机器人",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140084132",
-        "name": "智能物流机器人",
-        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 工业机器人 > 智能物流机器人",
-        "industryPath": [
-          "机械设备",
-          "通用机械",
-          "其它通用机械",
-          "机器人",
-          "工业机器人",
-          "智能物流机器人"
-        ],
-        "level5Industry": {
-          "code": "1200000463",
-          "name": "机器人"
-        },
-        "level6Industry": {
-          "code": "1200003045",
-          "name": "工业机器人"
-        },
-        "level7Product": {
-          "code": "1140084132",
-          "name": "智能物流机器人"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688777.SH",
-            "stockName": "中控技术",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 21,
-        "downstreamCount": 5,
-        "relevanceScore": 4,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "机器人",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140010319",
-        "name": "压力变送器",
-        "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 压力仪器 > 压力仪表 > 压力变送器",
-        "industryPath": [
-          "机械设备",
-          "仪器仪表",
-          "仪器仪表",
-          "压力仪器",
-          "压力仪表",
-          "压力变送器"
-        ],
-        "level5Industry": {
-          "code": "1200000494",
-          "name": "压力仪器"
-        },
-        "level6Industry": {
-          "code": "1200003118",
-          "name": "压力仪表"
-        },
-        "level7Product": {
-          "code": "1140010319",
-          "name": "压力变送器"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688777.SH",
-            "stockName": "中控技术",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 8,
-        "downstreamCount": 15,
-        "relevanceScore": 4,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "仪器仪表",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140033827",
-        "name": "巡检机器人",
-        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 特种机器人 > 巡检机器人",
-        "industryPath": [
-          "机械设备",
-          "通用机械",
-          "其它通用机械",
-          "机器人",
-          "特种机器人",
-          "巡检机器人"
-        ],
-        "level5Industry": {
-          "code": "1200000463",
-          "name": "机器人"
-        },
-        "level6Industry": {
-          "code": "1200003047",
-          "name": "特种机器人"
-        },
-        "level7Product": {
-          "code": "1140033827",
-          "name": "巡检机器人"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688777.SH",
-            "stockName": "中控技术",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 16,
-        "downstreamCount": 4,
-        "relevanceScore": 4,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "机器人",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140008128",
-        "name": "运动控制器",
-        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 运动控制器",
-        "industryPath": [
-          "机械设备",
-          "通用机械",
-          "其它通用机械",
-          "机器人",
-          "机器人部件",
-          "运动控制器"
-        ],
-        "level5Industry": {
-          "code": "1200000463",
-          "name": "机器人"
-        },
-        "level6Industry": {
-          "code": "1200003046",
-          "name": "机器人部件"
-        },
-        "level7Product": {
-          "code": "1140008128",
-          "name": "运动控制器"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688698.SH",
-            "stockName": "伟创电气",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 7,
-        "downstreamCount": 11,
-        "relevanceScore": 4,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "机器人",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140218365",
-        "name": "可编辑组态人机界面(HMI)",
-        "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 工控设备 > 工控自动化产品 > 可编辑组态人机界面(HMI)",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "其它专用机械",
-          "工控设备",
-          "工控自动化产品",
-          "可编辑组态人机界面(HMI)"
-        ],
-        "level5Industry": {
-          "code": "1210000607",
-          "name": "工控设备"
-        },
-        "level6Industry": {
-          "code": "1200002603",
-          "name": "工控自动化产品"
-        },
-        "level7Product": {
-          "code": "1140218365",
-          "name": "可编辑组态人机界面(HMI)"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688320.SH",
-            "stockName": "禾川科技",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 11,
-        "relevanceScore": 4,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工控设备",
           "机械设备"
         ]
       },
@@ -741,106 +220,15 @@
           "name": "SCARA机器人(圆柱坐标型机器人手臂)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688320.SH",
             "stockName": "禾川科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 5,
-        "downstreamCount": 10,
-        "relevanceScore": 4,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "机器人",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140126129",
-        "name": "安全仪表系统(SIS)",
-        "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 工控设备 > 工控自动化产品 > 安全仪表系统(SIS)",
-        "industryPath": [
-          "机械设备",
-          "专用设备",
-          "其它专用机械",
-          "工控设备",
-          "工控自动化产品",
-          "安全仪表系统(SIS)"
-        ],
-        "level5Industry": {
-          "code": "1210000607",
-          "name": "工控设备"
-        },
-        "level6Industry": {
-          "code": "1200002603",
-          "name": "工控自动化产品"
-        },
-        "level7Product": {
-          "code": "1140126129",
-          "name": "安全仪表系统(SIS)"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688777.SH",
-            "stockName": "中控技术",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 7,
-        "downstreamCount": 5,
-        "relevanceScore": 4,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "工控设备",
-          "机械设备"
-        ]
-      },
-      {
-        "code": "1140033222",
-        "name": "协作机器人",
-        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 特种机器人 > 协作机器人",
-        "industryPath": [
-          "机械设备",
-          "通用机械",
-          "其它通用机械",
-          "机器人",
-          "特种机器人",
-          "协作机器人"
-        ],
-        "level5Industry": {
-          "code": "1200000463",
-          "name": "机器人"
-        },
-        "level6Industry": {
-          "code": "1200003047",
-          "name": "特种机器人"
-        },
-        "level7Product": {
-          "code": "1140033222",
-          "name": "协作机器人"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "688777.SH",
-            "stockName": "中控技术",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 6,
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -873,18 +261,15 @@
           "name": "人形机器人"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688777.SH",
             "stockName": "中控技术",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -917,18 +302,15 @@
           "name": "人形机器人关节模组"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688698.SH",
             "stockName": "伟创电气",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -961,22 +343,265 @@
           "name": "信号隔离器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688777.SH",
             "stockName": "中控技术",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "仪器仪表",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140033222",
+        "name": "协作机器人",
+        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 特种机器人 > 协作机器人",
+        "industryPath": [
+          "机械设备",
+          "通用机械",
+          "其它通用机械",
+          "机器人",
+          "特种机器人",
+          "协作机器人"
+        ],
+        "level5Industry": {
+          "code": "1200000463",
+          "name": "机器人"
+        },
+        "level6Industry": {
+          "code": "1200003047",
+          "name": "特种机器人"
+        },
+        "level7Product": {
+          "code": "1140033222",
+          "name": "协作机器人"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688777.SH",
+            "stockName": "中控技术",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 4,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "机器人",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140010319",
+        "name": "压力变送器",
+        "hierarchyPath": "机械设备 > 仪器仪表 > 仪器仪表 > 压力仪器 > 压力仪表 > 压力变送器",
+        "industryPath": [
+          "机械设备",
+          "仪器仪表",
+          "仪器仪表",
+          "压力仪器",
+          "压力仪表",
+          "压力变送器"
+        ],
+        "level5Industry": {
+          "code": "1200000494",
+          "name": "压力仪器"
+        },
+        "level6Industry": {
+          "code": "1200003118",
+          "name": "压力仪表"
+        },
+        "level7Product": {
+          "code": "1140010319",
+          "name": "压力变送器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688777.SH",
+            "stockName": "中控技术",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 4,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "仪器仪表",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140218365",
+        "name": "可编辑组态人机界面(HMI)",
+        "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 工控设备 > 工控自动化产品 > 可编辑组态人机界面(HMI)",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "其它专用机械",
+          "工控设备",
+          "工控自动化产品",
+          "可编辑组态人机界面(HMI)"
+        ],
+        "level5Industry": {
+          "code": "1210000607",
+          "name": "工控设备"
+        },
+        "level6Industry": {
+          "code": "1200002603",
+          "name": "工控自动化产品"
+        },
+        "level7Product": {
+          "code": "1140218365",
+          "name": "可编辑组态人机界面(HMI)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688320.SH",
+            "stockName": "禾川科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 4,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工控设备",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140126129",
+        "name": "安全仪表系统(SIS)",
+        "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 工控设备 > 工控自动化产品 > 安全仪表系统(SIS)",
+        "industryPath": [
+          "机械设备",
+          "专用设备",
+          "其它专用机械",
+          "工控设备",
+          "工控自动化产品",
+          "安全仪表系统(SIS)"
+        ],
+        "level5Industry": {
+          "code": "1210000607",
+          "name": "工控设备"
+        },
+        "level6Industry": {
+          "code": "1200002603",
+          "name": "工控自动化产品"
+        },
+        "level7Product": {
+          "code": "1140126129",
+          "name": "安全仪表系统(SIS)"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688777.SH",
+            "stockName": "中控技术",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 4,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "工控设备",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140033827",
+        "name": "巡检机器人",
+        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 特种机器人 > 巡检机器人",
+        "industryPath": [
+          "机械设备",
+          "通用机械",
+          "其它通用机械",
+          "机器人",
+          "特种机器人",
+          "巡检机器人"
+        ],
+        "level5Industry": {
+          "code": "1200000463",
+          "name": "机器人"
+        },
+        "level6Industry": {
+          "code": "1200003047",
+          "name": "特种机器人"
+        },
+        "level7Product": {
+          "code": "1140033827",
+          "name": "巡检机器人"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688777.SH",
+            "stockName": "中控技术",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 4,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "机器人",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140084132",
+        "name": "智能物流机器人",
+        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 工业机器人 > 智能物流机器人",
+        "industryPath": [
+          "机械设备",
+          "通用机械",
+          "其它通用机械",
+          "机器人",
+          "工业机器人",
+          "智能物流机器人"
+        ],
+        "level5Industry": {
+          "code": "1200000463",
+          "name": "机器人"
+        },
+        "level6Industry": {
+          "code": "1200003045",
+          "name": "工业机器人"
+        },
+        "level7Product": {
+          "code": "1140084132",
+          "name": "智能物流机器人"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688777.SH",
+            "stockName": "中控技术",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 4,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "机器人",
           "机械设备"
         ]
       },
@@ -1005,18 +630,56 @@
           "name": "机器人用伺服电机"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688320.SH",
             "stockName": "禾川科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
+        "relevanceScore": 4,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "机器人",
+          "机械设备"
+        ]
+      },
+      {
+        "code": "1140008128",
+        "name": "运动控制器",
+        "hierarchyPath": "机械设备 > 通用机械 > 其它通用机械 > 机器人 > 机器人部件 > 运动控制器",
+        "industryPath": [
+          "机械设备",
+          "通用机械",
+          "其它通用机械",
+          "机器人",
+          "机器人部件",
+          "运动控制器"
+        ],
+        "level5Industry": {
+          "code": "1200000463",
+          "name": "机器人"
+        },
+        "level6Industry": {
+          "code": "1200003046",
+          "name": "机器人部件"
+        },
+        "level7Product": {
+          "code": "1140008128",
+          "name": "运动控制器"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "688698.SH",
+            "stockName": "伟创电气",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1049,18 +712,15 @@
           "name": "通用控制系统(UCS)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688777.SH",
             "stockName": "中控技术",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 4,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1093,18 +753,15 @@
           "name": "浪涌保护器"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688777.SH",
             "stockName": "中控技术",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 5,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1113,234 +770,788 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140006141",
-        "name": "工业机器人",
-        "anchorCount": 3,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140008128",
-          "1140033125",
-          "1140218365"
+        "code": "1200000371",
+        "name": "通用电控设备",
+        "description": "通用电控指电机控制与驱动系统，是工业自动化核心。因契合智能制造、机器人及新能源高景气赛道，具备国产替代潜力，业绩增长确定性强，故备受市场关注。",
+        "stockCount": 9,
+        "starWeight": 36,
+        "level7ProductCount": 12,
+        "relevanceScore": 344,
+        "stocks": [
+          {
+            "stockCode": "603416.SH",
+            "stockName": "信捷电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300124.SZ",
+            "stockName": "汇川技术",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002979.SZ",
+            "stockName": "雷赛智能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688777.SH",
+            "stockName": "中控技术",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688698.SH",
+            "stockName": "伟创电气",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688320.SH",
+            "stockName": "禾川科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002747.SZ",
+            "stockName": "埃斯顿",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688160.SH",
+            "stockName": "步科股份",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002334.SZ",
+            "stockName": "英威腾",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "可编辑组态人机界面(HMI)",
-          "机器人伺服系统",
-          "运动控制器"
+        "products": [
+          {
+            "code": "1140028995",
+            "name": "伺服驱动器",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变频器 > 伺服驱动器",
+            "matchedSourceLevel": 7,
+            "stockCount": 6,
+            "stocks": [
+              {
+                "stockCode": "603416.SH",
+                "stockName": "信捷电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002979.SZ",
+                "stockName": "雷赛智能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688320.SH",
+                "stockName": "禾川科技",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002747.SZ",
+                "stockName": "埃斯顿",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "变频器"
+            ]
+          },
+          {
+            "code": "1140029501",
+            "name": "伺服系统",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 电控系统 > 伺服系统",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688698.SH",
+                "stockName": "伟创电气",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002334.SZ",
+                "stockName": "英威腾",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "伺服系统"
+            ]
+          },
+          {
+            "code": "1140166387",
+            "name": "中压变频器",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变频器 > 中压变频器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002334.SZ",
+                "stockName": "英威腾",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "变频器"
+            ]
+          },
+          {
+            "code": "1140125913",
+            "name": "低压变频器",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变频器 > 低压变频器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002334.SZ",
+                "stockName": "英威腾",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "变频器"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140149145",
-        "name": "旋转执行器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140149185"
+        "code": "1200000307",
+        "name": "电动机",
+        "description": "A股电动机行业指研发制造各类电机的板块。因新能源汽车、机器人及工业自动化需求爆发，高效节能电机成为核心动力源，兼具绿色转型与高端制造属性，业绩增长预期强，故备受市场关注。",
+        "stockCount": 6,
+        "starWeight": 25,
+        "level7ProductCount": 3,
+        "relevanceScore": 96,
+        "stocks": [
+          {
+            "stockCode": "603416.SH",
+            "stockName": "信捷电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300124.SZ",
+            "stockName": "汇川技术",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002979.SZ",
+            "stockName": "雷赛智能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688320.SH",
+            "stockName": "禾川科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002747.SZ",
+            "stockName": "埃斯顿",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688160.SH",
+            "stockName": "步科股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "无框力矩电机"
+        "products": [
+          {
+            "code": "1137000105",
+            "name": "伺服电机",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 电动机 > 控制用电机 > 伺服电机",
+            "matchedSourceLevel": 7,
+            "stockCount": 6,
+            "stocks": [
+              {
+                "stockCode": "603416.SH",
+                "stockName": "信捷电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002979.SZ",
+                "stockName": "雷赛智能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688320.SH",
+                "stockName": "禾川科技",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002747.SZ",
+                "stockName": "埃斯顿",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140166471",
+            "name": "伺服抱闸线",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 电动机 > 电机零部件 > 伺服抱闸线",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002979.SZ",
+                "stockName": "雷赛智能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140166470",
+            "name": "伺服绕组线",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 电动机 > 电机零部件 > 伺服绕组线",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002979.SZ",
+                "stockName": "雷赛智能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 11,
+    "mappedStockCount": 11,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 62,
+    "candidateIndustryCount": 8,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 16041,
+        "stockCode": "300124.SZ",
+        "stockName": "汇川技术",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 11
       },
       {
-        "code": "1112000352",
-        "name": "光伏发电",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033128"
-        ],
-        "linkedCoreProductNames": [
-          "SCARA机器人(圆柱坐标型机器人手臂)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 16042,
+        "stockCode": "603416.SH",
+        "stockName": "信捷电气",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140026279",
-        "name": "包装",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008128"
-        ],
-        "linkedCoreProductNames": [
-          "运动控制器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 16043,
+        "stockCode": "002979.SZ",
+        "stockName": "雷赛智能",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140085847",
-        "name": "包装机械",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140218365"
-        ],
-        "linkedCoreProductNames": [
-          "可编辑组态人机界面(HMI)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 16045,
+        "stockCode": "688698.SH",
+        "stockName": "伟创电气",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 10
       },
       {
-        "code": "1140043826",
-        "name": "包装码垛",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033222"
-        ],
-        "linkedCoreProductNames": [
-          "协作机器人"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 16046,
+        "stockCode": "688320.SH",
+        "stockName": "禾川科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1137000044",
-        "name": "化工",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033128"
-        ],
-        "linkedCoreProductNames": [
-          "SCARA机器人(圆柱坐标型机器人手臂)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 16049,
+        "stockCode": "002334.SZ",
+        "stockName": "英威腾",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1140103168",
-        "name": "化工业",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140126129"
-        ],
-        "linkedCoreProductNames": [
-          "安全仪表系统(SIS)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 16050,
+        "stockCode": "688160.SH",
+        "stockName": "步科股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 9
       },
       {
-        "code": "1140043414",
-        "name": "化工厂巡检",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033827"
-        ],
-        "linkedCoreProductNames": [
-          "巡检机器人"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 16051,
+        "stockCode": "002747.SZ",
+        "stockName": "埃斯顿",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 10
       },
       {
-        "code": "1140077487",
-        "name": "医疗设备",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140218365"
-        ],
-        "linkedCoreProductNames": [
-          "可编辑组态人机界面(HMI)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 16056,
+        "stockCode": "688777.SH",
+        "stockName": "中控技术",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 17
       },
       {
-        "code": "1140043486",
-        "name": "半导体加工",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140008128"
-        ],
-        "linkedCoreProductNames": [
-          "运动控制器"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 16057,
+        "stockCode": "600845.SH",
+        "stockName": "宝信软件",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140042989",
-        "name": "印刷机械",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140218365"
+        "sourceRowNumber": 16058,
+        "stockCode": "002380.SZ",
+        "stockName": "科远智慧",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 13
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000371",
+        "name": "通用电控设备",
+        "description": "通用电控指电机控制与驱动系统，是工业自动化核心。因契合智能制造、机器人及新能源高景气赛道，具备国产替代潜力，业绩增长确定性强，故备受市场关注。",
+        "stockCount": 9,
+        "starWeight": 36,
+        "level7ProductCount": 12,
+        "relevanceScore": 344,
+        "stocks": [
+          {
+            "stockCode": "603416.SH",
+            "stockName": "信捷电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300124.SZ",
+            "stockName": "汇川技术",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002979.SZ",
+            "stockName": "雷赛智能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688777.SH",
+            "stockName": "中控技术",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688698.SH",
+            "stockName": "伟创电气",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688320.SH",
+            "stockName": "禾川科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002747.SZ",
+            "stockName": "埃斯顿",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688160.SH",
+            "stockName": "步科股份",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002334.SZ",
+            "stockName": "英威腾",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "可编辑组态人机界面(HMI)"
+        "products": [
+          {
+            "code": "1140028995",
+            "name": "伺服驱动器",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变频器 > 伺服驱动器",
+            "matchedSourceLevel": 7,
+            "stockCount": 6,
+            "stocks": [
+              {
+                "stockCode": "603416.SH",
+                "stockName": "信捷电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002979.SZ",
+                "stockName": "雷赛智能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688320.SH",
+                "stockName": "禾川科技",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002747.SZ",
+                "stockName": "埃斯顿",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "变频器"
+            ]
+          },
+          {
+            "code": "1140029501",
+            "name": "伺服系统",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 电控系统 > 伺服系统",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688698.SH",
+                "stockName": "伟创电气",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002334.SZ",
+                "stockName": "英威腾",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "伺服系统"
+            ]
+          },
+          {
+            "code": "1140166387",
+            "name": "中压变频器",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变频器 > 中压变频器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002334.SZ",
+                "stockName": "英威腾",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "变频器"
+            ]
+          },
+          {
+            "code": "1140125913",
+            "name": "低压变频器",
+            "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变频器 > 低压变频器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002334.SZ",
+                "stockName": "英威腾",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "变频器"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140043413",
-        "name": "变电站巡检",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033827"
+        "code": "1200000307",
+        "name": "电动机",
+        "description": "A股电动机行业指研发制造各类电机的板块。因新能源汽车、机器人及工业自动化需求爆发，高效节能电机成为核心动力源，兼具绿色转型与高端制造属性，业绩增长预期强，故备受市场关注。",
+        "stockCount": 6,
+        "starWeight": 25,
+        "level7ProductCount": 3,
+        "relevanceScore": 96,
+        "stocks": [
+          {
+            "stockCode": "603416.SH",
+            "stockName": "信捷电气",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "300124.SZ",
+            "stockName": "汇川技术",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002979.SZ",
+            "stockName": "雷赛智能",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "688320.SH",
+            "stockName": "禾川科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002747.SZ",
+            "stockName": "埃斯顿",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688160.SH",
+            "stockName": "步科股份",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "巡检机器人"
+        "products": [
+          {
+            "code": "1137000105",
+            "name": "伺服电机",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 电动机 > 控制用电机 > 伺服电机",
+            "matchedSourceLevel": 7,
+            "stockCount": 6,
+            "stocks": [
+              {
+                "stockCode": "603416.SH",
+                "stockName": "信捷电气",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "300124.SZ",
+                "stockName": "汇川技术",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002979.SZ",
+                "stockName": "雷赛智能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "688320.SH",
+                "stockName": "禾川科技",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002747.SZ",
+                "stockName": "埃斯顿",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688160.SH",
+                "stockName": "步科股份",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140166471",
+            "name": "伺服抱闸线",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 电动机 > 电机零部件 > 伺服抱闸线",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002979.SZ",
+                "stockName": "雷赛智能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140166470",
+            "name": "伺服绕组线",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 电动机 > 电机零部件 > 伺服绕组线",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002979.SZ",
+                "stockName": "雷赛智能",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140043825",
-        "name": "喷涂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140033222"
-        ],
-        "linkedCoreProductNames": [
-          "协作机器人"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -1355,10 +1566,1051 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 22,
+    "eligibleSourceRowCount": 11,
+    "totalStockCount": 11,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 8,
+    "excludedNonAShareCount": 3,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 11,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 16041,
+            "stockCode": "300124.SZ",
+            "stockName": "汇川技术",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "中国工控自动化龙头，产品覆盖伺服、变频器、PLC等，多款产品市占率国内第一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300124.SZ",
+              "companyName": "汇川技术",
+              "companyProfile": "公司是一家全球领先、创新驱动的工业科技集团。顺应工业智能发展和能源变革的时代浪潮，依托在自动化、数字化、智能化领域的深厚技术积淀与持续前沿创新，公司已构建起横跨工业自动化与数字化、新能源汽车动力系统、智能机器人、数字能源管理等技术同源、协同发展的业务生态，致力于为全球客户提供智能、高效、绿色、安全的综合产品和解决方案，以技术突破与应用推动工业文明演进。公司为工业客户主要提供变频器、伺服系统、PLC、HMI、CNC、高性能电机、精密机械、气动元件、传感器、工业视觉等产品及解决方案。新能源汽车动力系统业务核心聚焦电驱系统和电源系统。智能机器人业务涵盖工业机器人与人形机器人两大主要领域。数字能源业务主要产品包括储能变流器、储能一体机等核心硬件，和包括数字能源管理平台在内的能源管理与运营的数字化工具。",
+              "profileSummary": "顺应工业智能发展和能源变革的时代浪潮，依托在自动化、数字化、智能化领域的深厚技术积淀与持续前沿创新，公司已构建起横跨工业自动化与数字化、新能源汽车动力系统、智能机器人、数字能源管理等技术同源、协同发展的业务生态，致力于为全球客户提供智能、高效、绿色、安全的综合产品和解决方案，以技术突破与应用推动工业文明演进。公司为工业客户主要提供变频器、伺服系统、PLC、HMI、CNC、高性能电机、精密机械、气动元件、传感器、工业视觉等产品及解决方案。",
+              "majorProducts": "轨道交通、通用自动化、新能源汽车、智慧电梯",
+              "revenueComposition": "工业自动化与数字化:49.32%;新能源汽车动力系统:45.06%;新兴产业:3.98%;其他:1.64%",
+              "revenueSegments": [
+                {
+                  "name": "工业自动化与数字化",
+                  "sharePct": 49.32,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源汽车动力系统",
+                  "sharePct": 45.06,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新兴产业",
+                  "sharePct": 3.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "伺服驱动器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "伺服电机",
+                    "category": "控制用电机"
+                  },
+                  {
+                    "name": "伺服系统",
+                    "category": "电控系统"
+                  },
+                  {
+                    "name": "光电编码器",
+                    "category": "自动化控制装置"
+                  },
+                  {
+                    "name": "机器人专用控制系统",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "电液伺服系统",
+                    "category": "电控系统"
+                  }
+                ],
+                "knownProducts": [
+                  "电梯一体化控制器",
+                  "电梯一体化驱动器",
+                  "光电编码器",
+                  "机器人专用控制系统",
+                  "新能源汽车电控",
+                  "新能源汽车电驱动系统",
+                  "新能源汽车驱动电机",
+                  "新能源汽车驱动电机控制器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "汇川技术已经具备伺服驱动器、伺服电机、伺服系统等业务能力，中国工控自动化龙头，产品覆盖伺服、变频器、PLC等，多款产品市占率国内第一并非单纯概念映射。当前对应的收入被归入工业自动化与数字化（49.32%）、新能源汽车动力系统（45.06%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 16042,
+            "stockCode": "603416.SH",
+            "stockName": "信捷电气",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内小型PLC市占率第一的头部厂商，伺服系统等驱动产品高速增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603416.SH",
+              "companyName": "信捷电气",
+              "companyProfile": "公司是一家专业从事工业自动化产品研发、生产与销售的高新技术企业，公司于2008年成立于无锡，随后于2016年12月登陆上交所主板。主要经营小型可编程逻辑控制器(PLC)、人机界面(HMI)、伺服系统和机器视觉等机器人核心部件等产品，拥有视觉感知技术、运动控制技术、智能化信息处理技术、示教/编程等多项自动化领域关键核心技术。在“成为一流的工业自动化系统厂商”的愿景指引下，公司深入研究控制、驱动等工控技术，依靠本土化优势，开发出贴近客户需求的工控核心部件(可编程控制器、人机界面、伺服驱动系统等)和智能装置系统，灵活、快速地为客户开发出个性化的整体解决方案，逐渐形成了以可编程控制器控制产品为引领，伺服系统、视觉传感器、人机界面为助推，智能装置、整体化解决方案初具规模的企业发展态势。顺应当前工业互联网和智能机器人的发展趋势，公司采取行业营销和产品营销模式，聚焦细分行业和进口替代，为客户提供高质量、高性能的工控产品和服务，满足客户产业升级和自动化改造的需求。",
+              "profileSummary": "主要经营小型可编程逻辑控制器(PLC)、人机界面(HMI)、伺服系统和机器视觉等机器人核心部件等产品，拥有视觉感知技术、运动控制技术、智能化信息处理技术、示教/编程等多项自动化领域关键核心技术。顺应当前工业互联网和智能机器人的发展趋势，公司采取行业营销和产品营销模式，聚焦细分行业和进口替代，为客户提供高质量、高性能的工控产品和服务，满足客户产业升级和自动化改造的需求。",
+              "majorProducts": "步进驱动、低压变频器、工业触摸屏、机器视觉、可编程控制器、伺服系统、通讯模块、文本显示器、一体机",
+              "revenueComposition": "驱动系统:50.62%;PLC:35.14%;人机界面:10.2%;智能装置:3.38%;其他:0.45%;其他业务:0.2%",
+              "revenueSegments": [
+                {
+                  "name": "驱动系统",
+                  "sharePct": 50.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "PLC",
+                  "sharePct": 35.14,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "人机界面",
+                  "sharePct": 10.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能装置",
+                  "sharePct": 3.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "伺服电机",
+                    "category": "控制用电机"
+                  },
+                  {
+                    "name": "伺服驱动器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "可编程逻辑控制器(PLC)",
+                    "category": "控制柜"
+                  }
+                ],
+                "knownProducts": [
+                  "工业相机",
+                  "工业触摸屏",
+                  "伺服电机",
+                  "伺服驱动器",
+                  "可编程逻辑控制器(PLC)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对信捷电气而言，国内小型PLC市占率第一的头部厂商，伺服系统等驱动产品高速增长并非纯概念映射，因为PLC占收入的35.14%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是终端需求与渗透率变化，传导效率取决于“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由终端销量、客户采购量、公司出货和相关产品收入增速来区分；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 16043,
+            "stockCode": "002979.SZ",
+            "stockName": "雷赛智能",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国产运动控制龙头企业，步进系统市占率第一，伺服系统高速增长位居国产品牌前列。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002979.SZ",
+              "companyName": "雷赛智能",
+              "companyProfile": "公司是国内智能装备运动控制领域的领军企业之一，为国内外上万家智能装备制造企业提供稳定可靠、高附加值的运动控制核心部件及系统级解决方案。公司坚持成就客户、共创共赢的经营理念，持续对标全球最优秀同行，以先进的运动控制产品技术和贴身的顾问式服务开展进口替代；同时“渠道为主+互补共赢”的三线协同营销体系初步成型，战略行业开拓团队和产品线团队以及各区域销售服务网络，三者构建出公司营销协作大平台，通过引进优秀合作伙伴互补共赢，深耕细分行业工艺及终端大客户、打造TOP客户样板，提供整体解决方案营销，发挥渠道客户粘性及服务经验，逐步成长为“中国龙头、世界一流”的专业化运动控制集团。公司专业从事智能装备运动控制核心部件的研发、生产、销售与服务，主要产品为伺服系统、步进系统、控制技术类产品三大类，为下游设备客户提供完整的运动控制系列产品及组合型解决方案，帮助客户构建出快速、精准、稳定、智能的运动控制设备。公司产品以适用面广泛的通用型系列产品为主，极少数情况下也为大行业和大客户提供针对性定制产品。公司产品已经广泛应用于智能制造和智能服务领域的各种精密设备，例如光伏设备、锂电设备、3C制造设备、半导体设备、物流设备、特种机床、机器人、5G制造设备、PCB/PCBA制造设备、包装设备、医疗设备等。",
+              "profileSummary": "公司专业从事智能装备运动控制核心部件的研发、生产、销售与服务，主要产品为伺服系统、步进系统、控制技术类产品三大类，为下游设备客户提供完整的运动控制系列产品及组合型解决方案，帮助客户构建出快速、精准、稳定、智能的运动控制设备。公司产品已经广泛应用于智能制造和智能服务领域的各种精密设备，例如光伏设备、锂电设备、3C制造设备、半导体设备、物流设备、特种机床、机器人、5G制造设备、PCB/PCBA制造设备、包装设备、医疗设备等。",
+              "majorProducts": "PC-Based I/O 接口卡、PC-Based运动控制卡、闭环步进系统、步进电机、步进驱动器、伺服电机、伺服驱动器、低压伺服系统、独立式运动控制器、功能扩展模块、混合伺服电机、混合伺服驱动器、机械手控制器、交流伺服系统、空心杯电机、无框电机与微型伺服系统、绕线控制器、数字式步进系统、运动控制卡（高端轨迹型、通用点位型、经济点位型）、智能型运动控制器、智能一体式电机、智能一体式电机（数字步进、闭环步进、伺服电机）",
+              "revenueComposition": "伺服系统类:49.18%;步进系统类:34.83%;控制技术类:15.31%;其他:0.68%",
+              "revenueSegments": [
+                {
+                  "name": "伺服系统类",
+                  "sharePct": 49.18,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "步进系统类",
+                  "sharePct": 34.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "控制技术类",
+                  "sharePct": 15.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "中空编码器",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "人形机器人空心杯电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "伺服抱闸线",
+                    "category": "电机零部件"
+                  },
+                  {
+                    "name": "伺服电机",
+                    "category": "控制用电机"
+                  },
+                  {
+                    "name": "伺服绕组线",
+                    "category": "电机零部件"
+                  },
+                  {
+                    "name": "伺服驱动器",
+                    "category": "变频器"
+                  }
+                ],
+                "knownProducts": [
+                  "中空编码器",
+                  "人形机器人空心杯电机",
+                  "无框力矩电机",
+                  "运动控制器",
+                  "伺服电机",
+                  "步进电机",
+                  "伺服抱闸线",
+                  "伺服绕组线"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "雷赛智能的伺服系统类（49.18%）覆盖范围较宽，其中能够承载中空编码器、人形机器人空心杯电机、伺服抱闸线，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国产运动控制龙头企业，步进系统市占率第一，伺服系统高速增长位居国产品牌前列。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 16045,
+            "stockCode": "688698.SH",
+            "stockName": "伟创电气",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "以变频器为核心，伺服系统与控制系统快速发展的工控自动化厂商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688698.SH",
+              "companyName": "伟创电气",
+              "companyProfile": "公司自成立以来始终专注于电气传动和工业控制领域，是一家从事工业自动化产品研发、生产、销售于一体的高新技术企业。公司在苏州设立研发中心和生产基地，分别在深圳、西安设立研发中心，并在印度设立了全资子公司，目前业务遍及多个国家和地区，为全球客户提供有竞争力、安全可信赖的产品和服务。公司的产品种类丰富，包括变频器、伺服系统以及控制系统等；产品应用广泛，在重工、轻工、高端装备等行业均拥有成熟的应用案例，以场景化解决方案助力制造业数智化转型升级。同时，公司紧跟时代发展趋势，向机器人、新能源、医疗等新兴领域延伸，研制了空心杯电机、无框电机、光伏储能逆变器、手术动力系统等产品，为高景气度行业深度赋能。经过长期、持续的自主研发和创新，公司开发出一系列拥有自主知识产权的专利技术，已经掌握了交流永磁同步电机的矢量控制技术、碳化硅应用技术、电机高频注入控制技术、电机参数学习辨识技术、电机控制保护技术、电机转速跟踪启动控制技术、电机高速弱磁控制技术、电机V/F标量控制技术、电机矢量控制技术等关键核心技术。经过多年的发展，公司一步一个脚印，屡获国家和主管单位认证，荣获国家高新技术企业、江苏省工程技术研究中心、江苏省级企业技术中心、江苏省工业互联网发展示范企业(标杆工厂类)等荣誉称号。未来，伟创电气将持续秉承“以市场需求为导向、以技术创新为驱动”的经营理念，加大关键核心技术攻关和产品迭代，不断向高性能、高质量、高可靠性的应用领域拓展，为促进电气传动和工业控制领域发展做出力所能及的贡献。",
+              "profileSummary": "公司自成立以来始终专注于电气传动和工业控制领域，是一家从事工业自动化产品研发、生产、销售于一体的高新技术企业。公司在苏州设立研发中心和生产基地，分别在深圳、西安设立研发中心，并在印度设立了全资子公司，目前业务遍及多个国家和地区，为全球客户提供有竞争力、安全可信赖的产品和服务。",
+              "majorProducts": "AC01网络型变频器系列、AC10通用变频器系列、AC12高速电机专用驱动器系列、AC200高性能矢量变频器、AC300通用变频器系列、AC310高性能矢量变频器、AC320高速电机专用驱动器系列、AC330同步磁阻电机专用驱动器系列、AC500高可靠性工程型变频器、AC600系列高性能通用变频器、AC70通用变频器系列、AC800多机传动变频器系列、AC810标准多机传动变频器系列、AC830四象限变频器柜机系列、ACH200系列高压变频器、ACP系列矿用隔爆变频器机芯、AP系列空压机一体化驱动器、BLDC驱动器、EHS100液压集成伺服驱动器、EHS300电液伺服驱动器、LC320系列液冷型变频器、LS1高速液冷伺服电机、QT塔机一体化驱动器系列、S200系列施工升降机一体机、SD100低压伺服机器人专用系列、SD500主轴伺服系统、SD650电液伺服驱动器、SD700通用型伺服系统系列、SD710高性能伺服系统系列、SD780通用型伺服系统系列、SD810多传伺服系统系列、SD860多传伺服系统系列、SI系列光伏扬水逆变器、V5运动控制器系列、V680高性能矢量型变频器、V7E系列通用伺服电机、V7U系列多认证高性能伺服电机、V9E系列通用伺服电机、VC5/VC3/VC1系列小型PLC、VH600系列中型PLC、VH-RTU-ECT/VH-RTU-PN系列、暖通专用变频柜、碳化硅专用驱动器",
+              "revenueComposition": "变频器:64.04%;伺服系统及运动控制器:29.62%;数字能源:3.81%;其他业务:2.05%;其他:0.48%",
+              "revenueSegments": [
+                {
+                  "name": "变频器",
+                  "sharePct": 64.04,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "伺服系统及运动控制器",
+                  "sharePct": 29.62,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "数字能源",
+                  "sharePct": 3.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "伺服系统",
+                    "category": "电控系统"
+                  },
+                  {
+                    "name": "人形机器人关节模组",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "人形机器人空心杯电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "无框力矩电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "机器人伺服系统",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "运动控制器",
+                    "category": "机器人部件"
+                  }
+                ],
+                "knownProducts": [
+                  "塔机变频驱动专机",
+                  "人形机器人关节模组",
+                  "人形机器人空心杯电机",
+                  "无框力矩电机",
+                  "机器人伺服系统",
+                  "运动控制器",
+                  "工商用储能逆变器",
+                  "户用储能逆变器"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "伟创电气的相关业务已决定公司大部分经营表现：变频器（64.04%）、伺服系统及运动控制器（29.62%）合计约占收入的93.66%。公司与事件的直接业务联系是：以变频器为核心，伺服系统与控制系统快速发展的工控自动化厂商，真正的增量取决于终端需求与渗透率变化，并需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，终端销量、客户采购量、公司出货和相关产品收入增速需要显示公司获得超越行业的增量。终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 16046,
+            "stockCode": "688320.SH",
+            "stockName": "禾川科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "以伺服系统为核心的工业自动化厂商，下游多行业布局均衡，订单增长强劲。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688320.SH",
+              "companyName": "禾川科技",
+              "companyProfile": "公司是一家技术驱动的工业自动化控制核心部件及整体解决方案提供商，主要从事工业自动化产品的研发、生产、销售及应用集成。公司自设立起即以成为最具价值的工业自动化核心部件及方案提供商为使命，秉承“创新、诚信、服务”的核心价值观，通过核心技术及核心部件自主研发、国产产业链自主整合、优质终端客户自主开拓，力争成为一家在技术和产品领域具有全球竞争力的工业自动化企业，助力中国制造业的转型升级。公司的主要产品包括伺服系统、PLC等，覆盖了工业自动化领域的控制层、驱动层和执行传感层，并在近年在产业链上下游不断延伸，涉足上游的工控芯片、传感器和下游的高端精密数控机床等领域。其中，伺服系统作为公司的核心产品，搭载自主研发的编码器，在定位精度、速度控制、额定转矩等核心性能指标上均具有较强竞争力，在国内品牌厂商中保持优势地位。公司秉承“高性能、高可靠性、高性价比、高规格工业设计”的产品开发理念，全方位研究核心技术，不断完善各类产品，以持续增强核心竞争力。公司还是国内工业自动化厂商中较早实现编码器自主研发生产的企业，独立研发的高速高精度磁编码器项目为“浙江省重大科技专项重点工业项目”。",
+              "profileSummary": "公司是一家技术驱动的工业自动化控制核心部件及整体解决方案提供商，主要从事工业自动化产品的研发、生产、销售及应用集成。公司自设立起即以成为最具价值的工业自动化核心部件及方案提供商为使命，秉承“创新、诚信、服务”的核心价值观，通过核心技术及核心部件自主研发、国产产业链自主整合、优质终端客户自主开拓，力争成为一家在技术和产品领域具有全球竞争力的工业自动化企业，助力中国制造业的转型升级。",
+              "majorProducts": "A系列 小型PLC、E380、HC-LMD 系列、HC-LMF 系列、IQ系列 IPC、PLC、QX系列 IO模块、Q系列 中型PAC、R系列 扩展型PLC、SOLAR 系列、TP2000、V500系列、X1/X3系列 传统型伺服电机、X2/X6系列 轻量化伺服电机、X2系列 简易型伺服驱动器、X3系列 通用型伺服驱动器、X6系列 高阶型伺服驱动器、磁编/光编、伺服系统",
+              "revenueComposition": "伺服系统产品:73.18%;其他工控产品:9.15%;PLC:8.05%;机床:7.39%;其他业务:1.61%;其他产品:0.62%",
+              "revenueSegments": [
+                {
+                  "name": "伺服系统产品",
+                  "sharePct": 73.18,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他工控产品",
+                  "sharePct": 9.15,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "PLC",
+                  "sharePct": 8.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "机床",
+                  "sharePct": 7.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 0.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "SCARA机器人(圆柱坐标型机器人手臂)",
+                    "category": "工业机器人"
+                  },
+                  {
+                    "name": "人形机器人空心杯电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "伺服电机",
+                    "category": "控制用电机"
+                  },
+                  {
+                    "name": "伺服驱动器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "可编辑组态人机界面(HMI)",
+                    "category": "工控自动化产品"
+                  },
+                  {
+                    "name": "无框力矩电机",
+                    "category": "机器人部件"
+                  }
+                ],
+                "knownProducts": [
+                  "可编辑组态人机界面(HMI)",
+                  "SCARA机器人(圆柱坐标型机器人手臂)",
+                  "人形机器人空心杯电机",
+                  "无框力矩电机",
+                  "机器人伺服系统",
+                  "机器人用伺服电机",
+                  "数控机床",
+                  "伺服电机"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "禾川科技的事件暴露较为直接：伺服系统产品占收入的73.18%，相关业务不是边缘尝试；具体业务抓手是：以伺服系统为核心的工业自动化厂商，下游多行业布局均衡，订单增长强劲。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，尤其需要用客户认证、新增订单、交付节奏、相关业务收入和毛利率区分行业普涨与公司自身竞争力。如果客户验证或交付节奏低于预期，订单停留在小批量阶段，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 16056,
+            "stockCode": "688777.SH",
+            "stockName": "中控技术",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内流程工业自动化龙头，DCS市占率连续十五年位列国内第一，并积极拓展PLC与工业AI业务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688777.SH",
+              "companyName": "中控技术",
+              "companyProfile": "公司成立于20世纪90年代，是以工业数据为基础、AI大模型为核心、全场景智能体为触手的工业AI平台型公司，公司依托“技术创新+模式创新”的双轮驱动，培育AI新质生产力，重构流程工业生产、运营与决策范式，推动流程工业从自动化向自主化跃迁。公司秉持“让工业更智能，让客户更成功”的使命，打造“1+2+N”工业AI驱动的企业智能运行新架构，以全栈AI化的理念为客户提供“AI+安全”“AI+质量”“AI+低碳”“AI+效益”的智能化解决方案，基于“技术+场景+生态”的立体化布局，推动流程工业从单点智能向全链路智能跃迁，构建起涵盖技术创新、应用落地、商业协同的完整AI生态系统。核心产品被应用在全球50多个国家和地区，覆盖化工、石化、油气、电力、制药、冶金、建材、造纸、新材料、食品等数十个重点行业的海内外3.5万多家客户，为全球流程工业实现高质量可持续发展注入强大动力，为人类创造更加轻松美好的生活环境。",
+              "profileSummary": "公司秉持“让工业更智能，让客户更成功”的使命，打造“1+2+N”工业AI驱动的企业智能运行新架构，以全栈AI化的理念为客户提供“AI+安全”“AI+质量”“AI+低碳”“AI+效益”的智能化解决方案，基于“技术+场景+生态”的立体化布局，推动流程工业从单点智能向全链路智能跃迁，构建起涵盖技术创新、应用落地、商业协同的完整AI生态系统。核心产品被应用在全球50多个国家和地区，覆盖化工、石化、油气、电力、制药、冶金、建材、造纸、新材料、食…",
+              "majorProducts": "安全仪表系统(SIS)TCS-900、安全栅、仿真培训软件 VxOTS、集散控制系统(DCS)ECS-700、集散控制系统(DCS)JX-300XP、角行程控制阀、实时数据库 ESP-iSYS、网络化混合控制系统GCS G3、网络化混合控制系统GCS G5、先进控制与优化系列软件 APC-Suite（含ssRTO）、压力变送器、运维服务、直行程控制阀、制造执行系统 MES-Suite",
+              "revenueComposition": "控制系统+仪表:26.22%;自动化仪表:15.51%;控制系统+软件+其他:15.25%;控制系统:14.62%;S2B平台业务:13.06%;工业软件及服务:8.86%;运维服务:5.53%;其他业务:0.96%",
+              "revenueSegments": [
+                {
+                  "name": "控制系统+仪表",
+                  "sharePct": 26.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自动化仪表",
+                  "sharePct": 15.51,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "控制系统+软件+其他",
+                  "sharePct": 15.25,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "控制系统",
+                  "sharePct": 14.62,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "S2B平台业务",
+                  "sharePct": 13.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业软件及服务",
+                  "sharePct": 8.86,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "运维服务",
+                  "sharePct": 5.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "制造执行系统(MES)",
+                    "category": "工业IT"
+                  },
+                  {
+                    "name": "人形机器人",
+                    "category": "商用机器人"
+                  },
+                  {
+                    "name": "信号隔离器",
+                    "category": "自动化控制装置"
+                  },
+                  {
+                    "name": "先进过程控制(APC)",
+                    "category": "工业IT"
+                  },
+                  {
+                    "name": "协作机器人",
+                    "category": "特种机器人"
+                  },
+                  {
+                    "name": "压缩机控制系统(CCS)",
+                    "category": "工业IT"
+                  }
+                ],
+                "knownProducts": [
+                  "S2B线上平台运营",
+                  "安全仪表系统(SIS)",
+                  "通用控制系统(UCS)",
+                  "压力变送器",
+                  "信号隔离器",
+                  "人形机器人",
+                  "智能物流机器人",
+                  "协作机器人"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "中控技术的事件逻辑具备真实业务底座，但尚不足以代表全部公司：控制系统占收入的14.62%。公司与事件的具体联系在于：国内流程工业自动化龙头，DCS市占率连续十五年位列国内第一，并积极拓展PLC与工业AI业务，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 16049,
+            "stockCode": "002334.SZ",
+            "stockName": "英威腾",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "聚焦工业自动化与能源电力领域，提供变频器、伺服系统、PLC等工控产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002334.SZ",
+              "companyName": "英威腾",
+              "companyProfile": "公司业务聚焦于工业自动化与能源电力领域，专注电力电子、自动控制、信息技术，业务覆盖工业自动化、网络能源、新能源汽车及光伏储能，与国家节能降耗、双碳、智能制造、数字中国等发展方向紧密相连。全国共有多处研发中心，拥有各类专利多件，实验室拥有国内工控行业首家TUV SUD颁发的ACT资质，并通过UL目击实验室及CNAS国家实验室认证。深圳公明科技产业园和苏州工业产业园，能为客户提供先进的集成产品开发设计管理、全面的产品研发测试与自动化信息化的作业生产。分布在全球各地的分支机构和联保中心为用户提供解决方案、技术培训与服务支持的专业后勤保障，可以更加便捷快速地服务客户。公司秉承“众诚德厚、业精志远”的经营理念，立足于工业自动化和能源电力领域，以三大技术为基础，做大做强工业自动化、新能源汽车、网络能源、轨道交通等核心业务。",
+              "profileSummary": "公司业务聚焦于工业自动化与能源电力领域，专注电力电子、自动控制、信息技术，业务覆盖工业自动化、网络能源、新能源汽车及光伏储能，与国家节能降耗、双碳、智能制造、数字中国等发展方向紧密相连。深圳公明科技产业园和苏州工业产业园，能为客户提供先进的集成产品开发设计管理、全面的产品研发测试与自动化信息化的作业生产。",
+              "majorProducts": "变频器、车载电源、充电桩、传感器、伺服系统、电机、电驱、电梯驱动系统、工业互联网、光伏及储能逆变系统、控制器、人机界面、数据中心系统",
+              "revenueComposition": "变频器:53.69%;电源及电机驱动:16.91%;数据中心类:16.29%;其他:9.81%;逆变器类:3.3%",
+              "revenueSegments": [
+                {
+                  "name": "变频器",
+                  "sharePct": 53.69,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "电源及电机驱动",
+                  "sharePct": 16.91,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "数据中心类",
+                  "sharePct": 16.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "逆变器类",
+                  "sharePct": 3.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "伺服系统",
+                    "category": "电控系统"
+                  },
+                  {
+                    "name": "中压变频器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "低压变频器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "电梯专用变频器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "高压变频器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "可编程逻辑控制器(PLC)",
+                    "category": "控制柜"
+                  }
+                ],
+                "knownProducts": [
+                  "工程车牵引系统",
+                  "矿用车牵引系统",
+                  "地铁牵引系统",
+                  "新能源汽车驱动电机控制器",
+                  "组串式光伏逆变器",
+                  "集中式光伏逆变器",
+                  "集散式光伏逆变器",
+                  "交流充电桩"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "英威腾与事件的关系已经落在存量主业，而非远期概念：变频器占收入的53.69%。公司在产业链中的具体抓手是：聚焦工业自动化与能源电力领域，提供变频器、伺服系统、PLC等工控产品。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 16050,
+            "stockCode": "688160.SH",
+            "stockName": "步科股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "提供HMI、PLC、伺服系统等工控产品，并聚焦机器人部件、伺服一体机等方向。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688160.SH",
+              "companyName": "步科股份",
+              "companyProfile": "公司成立于1996年，2020年成功在上交所登陆科创板上市，是一家高度重视自主研发和创新的高新技术企业、专精特新企业，主要从事工业自动化及机器人核心部件与数字化工厂软硬件的研发、生产、销售以及相关技术服务，是中国领先的机器人与智能设备的运动控制与人机交互部件供应商。经过多年持续不断研发和创新，公司建立了完整的拥有自主知识产权的产品线，涵盖从机器物联网到人机交互、控制、驱动和执行等一系列产品，广泛应用于机器人、医疗设备、物流设备、包装设备、食品设备、服装设备、环保设备，新能源设备、轨道交通设备等自动化设备行业。其中公司基于综合性的工业自动化与数字化技术平台，深入机器人行业应用场景，为工业移动型机器人、协作机器人、工业机器人、泛服务机器人、仿生机器人提供显示、控制、驱动等多维度解决方案。公司通过对行业痛点的洞察，与机器人客户深度链接，结合产品研发优势，持续进行创新，推出引领行业的移动机器人专用低压伺服系列产品、一体化伺服轮、协作机器人专用无框力矩电机、机器人专用人机界面、机器人控制器等产品，形成较为完整的机器人核心部件能力，同时公司经过近10年在机器人行业的耕耘，成为移动机器人低压伺服领域领先企业，在行业内有较高品牌影响力。公司以“聚焦部件，成就全球机器人和智能设备”为使命，以“让机器人为人类智造美好生活”为愿景，秉承“成就客户、开放进取、艰苦奋斗、至诚守信”的价值观，坚持以创新的思维，实干的精神开发产品经营业务，长期致力于发展智能制造技术，期待智能制造的技术能让世界更美丽。",
+              "profileSummary": "经过多年持续不断研发和创新，公司建立了完整的拥有自主知识产权的产品线，涵盖从机器物联网到人机交互、控制、驱动和执行等一系列产品，广泛应用于机器人、医疗设备、物流设备、包装设备、食品设备、服装设备、环保设备，新能源设备、轨道交通设备等自动化设备行业。公司以“聚焦部件，成就全球机器人和智能设备”为使命，以“让机器人为人类智造美好生活”为愿景，秉承“成就客户、开放进取、艰苦奋斗、至诚守信”的价值观，坚持以创新的思维，实干的精神开发产品经营业…",
+              "majorProducts": "边缘服务器、步进系统、低压变频器、工厂内AGV、可编程逻辑控制器、人机界面、伺服系统、医疗影像设备、云服务平台",
+              "revenueComposition": "驱动系统:70.89%;控制系统:28.19%;其他业务:0.51%;其他:0.42%",
+              "revenueSegments": [
+                {
+                  "name": "驱动系统",
+                  "sharePct": 70.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "控制系统",
+                  "sharePct": 28.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "伺服系统",
+                    "category": "电控系统"
+                  },
+                  {
+                    "name": "无框力矩电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "机器人伺服系统",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "机器人用伺服电机",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "可编辑组态人机界面(HMI)",
+                    "category": "工控自动化产品"
+                  },
+                  {
+                    "name": "伺服电机",
+                    "category": "控制用电机"
+                  }
+                ],
+                "knownProducts": [
+                  "可编辑组态人机界面(HMI)",
+                  "步进系统",
+                  "无框力矩电机",
+                  "机器人伺服系统",
+                  "机器人用伺服电机",
+                  "电子白板",
+                  "伺服电机",
+                  "伺服驱动器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "步科股份实际经营中已有伺服系统、无框力矩电机、机器人伺服系统，与事件指向的提供HMI、PLC、伺服系统等工控产品，并聚焦机器人部件、伺服一体机等方向能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在驱动系统（70.89%）、控制系统（28.19%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 16051,
+            "stockCode": "002747.SZ",
+            "stockName": "埃斯顿",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "以光伏、锂电行业为切入口，依托机器人领域优势带动伺服等其他工控产品份额提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002747.SZ",
+              "companyName": "埃斯顿",
+              "companyProfile": "公司成立于1993年，始终秉承开放、创新、奋斗、共成长的经营发展理念，专注于自动化完整生态链布局，坚持走自主研发核心技术的发展道路，为公司走向全球化、成为一个受尊重的国际化品牌奠定坚实基础。历经三十余载的奋斗，公司已成功培育自动化核心部件及运动控制系统、工业机器人及智能制造系统、数字化产品及服务等核心业务，为行业提供全球领先的自动化、智能化、数字化完整解决方案。作为中国交流伺服及运动控制领域的拓路者，公司构建了运动控制完整解决方案，产品系列全面覆盖：信息层-控制层-驱动层-执行层，丰富的产品包括：高精度多轴运动控制器、交流伺服系统、变频器、PLC、触摸屏、机器视觉、传感器等产品。公司拥有全系列覆盖3-700kg负载，工业机器人产品。在汽车、光伏、锂电池、金属加工、电子制造、建材家居、物流包装、食品烟酒、轨道交通、工程机械、特种车辆、船舶海工、航空航天等细分行业携手行业领军品牌打造智能制造标杆产线及工厂。聚焦智能工厂数字化应用需求，打造全生命周期数字化完整解决方案，在产线设计、仿真与验证、集成交付、智能工厂运维等环节，提供数字化产品及服务；打造云平台，提供覆盖过程质量检测及优化、故障预警分析、远程运维等数字化功能，让设备参数、工艺参数、产能与质量等各项数据透明化，为用户提供数字化核心竞争力。",
+              "profileSummary": "历经三十余载的奋斗，公司已成功培育自动化核心部件及运动控制系统、工业机器人及智能制造系统、数字化产品及服务等核心业务，为行业提供全球领先的自动化、智能化、数字化完整解决方案。聚焦智能工厂数字化应用需求，打造全生命周期数字化完整解决方案，在产线设计、仿真与验证、集成交付、智能工厂运维等环节，提供数字化产品及服务；打造云平台，提供覆盖过程质量检测及优化、故障预警分析、远程运维等数字化功能，让设备参数、工艺参数、产能与质量等各项数据透明化…",
+              "majorProducts": "HMI、IO 模块、Motion PLC、SCARA 机器人、变频器、机器人专用伺服系统、机器人专用控制器、机器视觉和运动控制一体的智能控制单元、交流伺服系统、六轴通用机器人、四轴码垛机器人、协作机器人、行业专用定制机器人、运动控制器、直流伺服驱动器",
+              "revenueComposition": "工业机器人及智能制造系统:81.77%;自动化核心部件及运动控制系统:18.23%",
+              "revenueSegments": [
+                {
+                  "name": "工业机器人及智能制造系统",
+                  "sharePct": 81.77,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "自动化核心部件及运动控制系统",
+                  "sharePct": 18.23,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "SCARA机器人(圆柱坐标型机器人手臂)",
+                    "category": "工业机器人"
+                  },
+                  {
+                    "name": "伺服电机",
+                    "category": "控制用电机"
+                  },
+                  {
+                    "name": "伺服驱动器",
+                    "category": "变频器"
+                  },
+                  {
+                    "name": "多轴关节机器人",
+                    "category": "工业机器人"
+                  },
+                  {
+                    "name": "机器人伺服系统",
+                    "category": "机器人部件"
+                  },
+                  {
+                    "name": "机器人控制器",
+                    "category": "机器人部件"
+                  }
+                ],
+                "knownProducts": [
+                  "SCARA机器人(圆柱坐标型机器人手臂)",
+                  "多轴关节机器人",
+                  "机器人标准化工作单元",
+                  "机器人伺服系统",
+                  "机器人控制器",
+                  "运动控制器",
+                  "码垛机器人",
+                  "金属成形机床数控系统"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "埃斯顿与事件的关系已经落在存量主业，而非远期概念：工业机器人及智能制造系统占收入的81.77%。公司在产业链中的具体抓手是：以光伏、锂电行业为切入口，依托机器人领域优势带动伺服等其他工控产品份额提升。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 16057,
+            "stockCode": "600845.SH",
+            "stockName": "宝信软件",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "依托钢铁行业背景，发力自研天行系列PLC、工业机器人及工业互联网平台。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600845.SH",
+              "companyName": "宝信软件",
+              "companyProfile": "公司系中国宝武实际控制、宝钢股份控股的上市软件企业，总部位于上海自由贸易试验区，是国家规划布局内重点软件企业、国家级企业技术中心、中国最具竞争力IT服务企业之一。宝信软件依托以钢铁为代表的制造业雄厚产业基础和丰富的生产实践与应用场景，坚持以创新为驱动，为制造产业提供领先的数智化整体解决方案。历经40余年发展，公司在推动数实融合、赋能产业数智化转型升级等方面做出了重要的贡献，成为中国领先的工业软件行业应用解决方案和服务提供商，产品与服务业绩涵盖钢铁、有色、化工、矿山、交通等多个行业。作为央企旗下信息高科技公司及国产软件提供商，宝信软件坚持科技创新自立自强，聚焦工业软件和人工智能等核心技术，自主研发宝联登工业互联网平台、钢铁行业大模型，以及天行系列全栈自主可控工业操作系统，打造转型赋能标杆品牌。公司充分发挥“中国宝武工业智能研究院”“中国宝武数字工业研究院”“中国宝武网络安全运营中心”引领作用，把握前沿技术发展方向，全面提供以人工智能、工业互联网、云计算、大数据、工业数字化底座、算力中心、机器人为基础的相关工业软件产品和服务。公司将加快发展战略性新兴产业，致力于以领先的数智化整体解决方案支撑培育新质生产力，为新型工业化打造坚实的数字底座，不断增强核心功能、加速产业智慧化，不断提升核心竞争力、推动智慧产业化，全面提升中国制造业自动化、数字化、智能化水平，为建设可持续发展的智慧制造生态系统提供稳固的技术保障，推动产业变革和创新发展。",
+              "profileSummary": "历经40余年发展，公司在推动数实融合、赋能产业数智化转型升级等方面做出了重要的贡献，成为中国领先的工业软件行业应用解决方案和服务提供商，产品与服务业绩涵盖钢铁、有色、化工、矿山、交通等多个行业。公司充分发挥“中国宝武工业智能研究院”“中国宝武数字工业研究院”“中国宝武网络安全运营中心”引领作用，把握前沿技术发展方向，全面提供以人工智能、工业互联网、云计算、大数据、工业数字化底座、算力中心、机器人为基础的相关工业软件产品和服务。",
+              "majorProducts": "服务外包、软件开发及工程服务、系统集成",
+              "revenueComposition": "软件开发及工程服务:65.3%;服务外包收入:34.32%;系统集成收入:0.26%;其他业务:0.13%",
+              "revenueSegments": [
+                {
+                  "name": "软件开发及工程服务",
+                  "sharePct": 65.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "服务外包收入",
+                  "sharePct": 34.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "系统集成收入",
+                  "sharePct": 0.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "无人行车全自动仓库系统",
+                    "category": "工控自动化产品"
+                  },
+                  {
+                    "name": "机器人试样搬运跟踪系统",
+                    "category": "特种机器人"
+                  },
+                  {
+                    "name": "自动化设备运维服务",
+                    "category": "自动化设备技术服务"
+                  }
+                ],
+                "knownProducts": [
+                  "无人行车全自动仓库系统",
+                  "全自动包装线系统",
+                  "机器人试样搬运跟踪系统",
+                  "自动化设备运维服务",
+                  "公有云平台",
+                  "大模型服务平台",
+                  "工业智能体",
+                  "钢铁大模型"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "宝信软件与新闻之间有明确产品抓手：无人行车全自动仓库系统、机器人试样搬运跟踪系统、自动化设备运维服务，对应依托钢铁行业背景，发力自研天行系列PLC、工业机器人及工业互联网平台。收入主体目前是软件开发及工程服务（65.3%）、服务外包收入（34.32%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 16058,
+            "stockCode": "002380.SZ",
+            "stockName": "科远智慧",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "深耕电力行业的DCS龙头，大力发展工业AI，并掌握燃气轮机控制系统（ITCS）核心技术。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002380.SZ",
+              "companyName": "科远智慧",
+              "companyProfile": "公司创立于1993年5月，2010年3月在深交所主板上市，是国家级高新技术企业、国家级制造业单项冠军，智慧产业建设引领者。公司以自主创新为核心，业务涉及“自动化&智能化”、“产业数字化”等板块，积淀形成覆盖企业智能生产、智慧管理、智慧运营全流程的完整产品体系和解决方案，服务电力、化工、冶金、建材、3C制造、城市管理等众多行业，为国家“双碳目标”、“数字经济”、“产业链自主可控”提供支撑。公司总部位于南京江宁，拥有九龙湖科技园和滨江智能制造产业园，在全国各地和亚非拉地区建有30多个营销、交付和售后服务中心，服务全球超过30000家客户。智慧工业：让工业充满智慧、让智慧创造价值公司坚持“自主创新、自主可控”，以各种仪器仪表、NT6000智能分散控制系统(DCS)、SC200\\300\\8000大中小型可编程控制器(PLC)、TFS600SIL3等级故障安全型控制系统(SIS)、变频器、伺服驱动器、SyncBASE大型分布式实时数据库、SyncPlant管控信息平台等为基础，构建EmpoworX工业互联网赋能平台。融合大数据分析、人工智能、5G通信等前沿技术，推出“智慧能源”、“智慧化工”、“智慧医药”、“智慧冶金”、“智慧建材”、“智能工厂”等一系列智慧工业解决方案，帮助客户实现生产制造和企业运营自动化、智能化，成为智能制造的先行者。业绩遍布全国各地及东南亚、非洲、南美洲、东欧等数十个国家和地区，为全球客户提供真正高品质产品与服务。",
+              "profileSummary": "公司以自主创新为核心，业务涉及“自动化&智能化”、“产业数字化”等板块，积淀形成覆盖企业智能生产、智慧管理、智慧运营全流程的完整产品体系和解决方案，服务电力、化工、冶金、建材、3C制造、城市管理等众多行业，为国家“双碳目标”、“数字经济”、“产业链自主可控”提供支撑。业绩遍布全国各地及东南亚、非洲、南美洲、东欧等数十个国家和地区，为全球客户提供真正高品质产品与服务。",
+              "majorProducts": "电动执行机构及传感器、非标自动化、分散控制系统（DCS）、工艺包、慧联制造平台、机器人、可编程逻辑控制器（PLC）、人工智能工业软件、实时数据库、厂级信息化管控一体化平台、智慧电厂、智慧港口、智慧化工、智慧冶金",
+              "revenueComposition": "工业自动化:81.6%;工业互联网:14.27%;工业机器人:3.06%;其他:1.07%",
+              "revenueSegments": [
+                {
+                  "name": "工业自动化",
+                  "sharePct": 81.6,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "工业互联网",
+                  "sharePct": 14.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工业机器人",
+                  "sharePct": 3.06,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "分散控制系统(DCS)",
+                    "category": "工控自动化产品"
+                  },
+                  {
+                    "name": "垃圾焚烧发电控制系统",
+                    "category": "电力IT"
+                  },
+                  {
+                    "name": "燃机发电控制系统",
+                    "category": "电力IT"
+                  },
+                  {
+                    "name": "凝汽器在线清洗机器人",
+                    "category": "工业机器人"
+                  },
+                  {
+                    "name": "化工厂批量控制软件",
+                    "category": "工业IT"
+                  },
+                  {
+                    "name": "厂级信息化管控一体化平台",
+                    "category": "工业IT"
+                  }
+                ],
+                "knownProducts": [
+                  "分散控制系统(DCS)",
+                  "阀门开关电动执行机构",
+                  "凝汽器在线清洗机器人",
+                  "可编程逻辑控制器(PLC)",
+                  "实时数据库",
+                  "化工厂批量控制软件",
+                  "厂级信息化管控一体化平台",
+                  "旋转机械故障诊断系统"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "科远智慧在事件链条中的位置是：深耕电力行业的DCS龙头，大力发展工业AI，并掌握燃气轮机控制系统（ITCS）核心技术；工业机器人占收入的3.06%，目前仍是较小的收入来源。因此，本次事件首先改变的可能是市场对业务上限的估计，随后才是终端需求与渗透率变化经由“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”带来的实际利润。小基数提供增速弹性，也放大了预期与兑现之间的落差。终端销量、客户采购量、公司出货和相关产品收入增速若迟迟不能改善，或出现终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，这条逻辑就难以从期权走向主业。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "8条低于3星的源记录已按当前关注口径排除。",
+      "3条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

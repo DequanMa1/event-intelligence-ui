@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26407",
@@ -9,9 +9,9 @@
     "date": "2026-06-26"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 6,
-    "mappedStockCount": 4,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 4,
+    "mappedStockCount": 2,
     "unmappedStockCount": 2,
     "stocks": [
       {
@@ -20,8 +20,8 @@
         "stockName": "东方锆业",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 10
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 2930,
@@ -30,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 2934,
@@ -39,30 +39,12 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 15
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 2935,
         "stockCode": "603663.SH",
         "stockName": "三祥新材",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 8
-      },
-      {
-        "sourceRowNumber": 2937,
-        "stockCode": "未上市",
-        "stockName": "第一稀元素化学工业",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 2942,
-        "stockCode": "未上市",
-        "stockName": "义获嘉",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -71,18 +53,18 @@
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 2937,
-        "stockCode": "未上市",
-        "stockName": "第一稀元素化学工业",
-        "rating": "★★★★☆",
+        "sourceRowNumber": 2929,
+        "stockCode": "002167.SZ",
+        "stockName": "东方锆业",
+        "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       },
       {
-        "sourceRowNumber": 2942,
-        "stockCode": "未上市",
-        "stockName": "义获嘉",
+        "sourceRowNumber": 2935,
+        "stockCode": "603663.SH",
+        "stockName": "三祥新材",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -92,34 +74,14 @@
   },
   "totals": {
     "candidateCoreProductCount": 33,
-    "selectedCoreProductCount": 2,
+    "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 1,
-    "downstreamCandidateCount": 6,
-    "shownUpstreamCount": 1,
-    "shownDownstreamCount": 6
+    "level7ProductCount": 8,
+    "relatedIndustryCandidateCount": 3,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140077167",
-        "name": "氯氧化锆",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1114000222"
-        ],
-        "linkedCoreProductNames": [
-          "复合氧化锆"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140095542",
         "name": "纳米级复合氧化锆粉体材料",
@@ -145,166 +107,429 @@
           "name": "纳米级复合氧化锆粉体材料"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "300285.SZ",
             "stockName": "国瓷材料",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "603407.SH",
             "stockName": "长裕集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 8,
         "strongRelevanceScore": 6,
         "matchedTerms": [
           "氧化锆粉体",
           "化学原料"
         ]
-      },
-      {
-        "code": "1114000222",
-        "name": "复合氧化锆",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:纳米级复合氧化锆粉体材料",
-        "stockCount": 2,
-        "stocks": [
-          {
-            "stockCode": "300285.SZ",
-            "stockName": "国瓷材料",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "603407.SH",
-            "stockName": "长裕集团",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 6,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140077793",
-        "name": "光通讯器件",
-        "anchorCount": 1,
+        "code": "1210000318",
+        "name": "稀土原材料",
+        "description": "稀土是含镧系元素的矿产，被誉为“工业维生素”。A股该板块因稀土在新能源、军工等高精尖领域不可或缺，且中国拥有全球主导权，兼具战略资源属性与供需博弈热点，故备受市场关注。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1114000222"
+        "starWeight": 6,
+        "level7ProductCount": 4,
+        "relevanceScore": 192,
+        "stocks": [
+          {
+            "stockCode": "000831.SZ",
+            "stockName": "中国稀土",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600392.SH",
+            "stockName": "盛和资源",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "复合氧化锆"
+        "products": [
+          {
+            "code": "1114000069",
+            "name": "稀土氧化物",
+            "hierarchyPath": "有色金属 > 小金属 > 稀土 > 稀土原材料 > 稀土原材料 > 稀土氧化物",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000831.SZ",
+                "stockName": "中国稀土",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600392.SH",
+                "stockName": "盛和资源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "稀土原料"
+            ]
+          },
+          {
+            "code": "1114000242",
+            "name": "稀土金属",
+            "hierarchyPath": "有色金属 > 小金属 > 稀土 > 稀土原材料 > 稀土原材料 > 稀土金属",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000831.SZ",
+                "stockName": "中国稀土",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600392.SH",
+                "stockName": "盛和资源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "稀土原料"
+            ]
+          },
+          {
+            "code": "1140005229",
+            "name": "稀土盐类",
+            "hierarchyPath": "有色金属 > 小金属 > 稀土 > 稀土原材料 > 稀土原材料 > 稀土盐类",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600392.SH",
+                "stockName": "盛和资源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "稀土原料"
+            ]
+          },
+          {
+            "code": "1137000339",
+            "name": "稀土精矿",
+            "hierarchyPath": "有色金属 > 小金属 > 稀土 > 稀土原材料 > 稀土原材料 > 稀土精矿",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600392.SH",
+                "stockName": "盛和资源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "稀土原料"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140169140",
-        "name": "固体燃料正极",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1114000222"
+        "code": "1210000323",
+        "name": "锆及锆合金",
+        "description": "锆及锆合金指以锆为基的金属材料，具优异耐腐蚀性。A股关注该行业主要因核电重启带动核级锆材需求激增，叠加航空航天等高端应用拓展，国产替代加速，龙头企业受益于高景气周期与政策支持，具备长期成长潜力。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 10,
+        "stocks": [
+          {
+            "stockCode": "603663.SH",
+            "stockName": "三祥新材",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "复合氧化锆"
+        "products": [
+          {
+            "code": "1114000219",
+            "name": "电熔氧化锆",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 锆及锆合金 > 锆及锆合金 > 电熔氧化锆",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603663.SH",
+                "stockName": "三祥新材",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "电熔氧化锆"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 9,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 5,
+    "level7ProductCount": 8,
+    "candidateIndustryCount": 3,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 2927,
+        "stockCode": "600392.SH",
+        "stockName": "盛和资源",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
       },
       {
-        "code": "1130000273",
-        "name": "氧传感器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1114000222"
-        ],
-        "linkedCoreProductNames": [
-          "复合氧化锆"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 2928,
+        "stockCode": "000831.SZ",
+        "stockName": "中国稀土",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140166672",
-        "name": "氧化锆陶瓷结构件",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1114000222"
-        ],
-        "linkedCoreProductNames": [
-          "复合氧化锆"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 2929,
+        "stockCode": "002167.SZ",
+        "stockName": "东方锆业",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140169139",
-        "name": "牙科材料",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1114000222"
-        ],
-        "linkedCoreProductNames": [
-          "复合氧化锆"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 2930,
+        "stockCode": "603407.SH",
+        "stockName": "长裕集团",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140169138",
-        "name": "生物陶瓷",
-        "anchorCount": 1,
+        "sourceRowNumber": 2932,
+        "stockCode": "002584.SZ",
+        "stockName": "西陇科学",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 2934,
+        "stockCode": "300285.SZ",
+        "stockName": "国瓷材料",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 2935,
+        "stockCode": "603663.SH",
+        "stockName": "三祥新材",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 2936,
+        "stockCode": "600552.SH",
+        "stockName": "凯盛科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 2939,
+        "stockCode": "301580.SZ",
+        "stockName": "爱迪特",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210000318",
+        "name": "稀土原材料",
+        "description": "稀土是含镧系元素的矿产，被誉为“工业维生素”。A股该板块因稀土在新能源、军工等高精尖领域不可或缺，且中国拥有全球主导权，兼具战略资源属性与供需博弈热点，故备受市场关注。",
         "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1114000222"
+        "starWeight": 6,
+        "level7ProductCount": 4,
+        "relevanceScore": 192,
+        "stocks": [
+          {
+            "stockCode": "000831.SZ",
+            "stockName": "中国稀土",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600392.SH",
+            "stockName": "盛和资源",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "复合氧化锆"
+        "products": [
+          {
+            "code": "1114000069",
+            "name": "稀土氧化物",
+            "hierarchyPath": "有色金属 > 小金属 > 稀土 > 稀土原材料 > 稀土原材料 > 稀土氧化物",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000831.SZ",
+                "stockName": "中国稀土",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600392.SH",
+                "stockName": "盛和资源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "稀土原料"
+            ]
+          },
+          {
+            "code": "1114000242",
+            "name": "稀土金属",
+            "hierarchyPath": "有色金属 > 小金属 > 稀土 > 稀土原材料 > 稀土原材料 > 稀土金属",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000831.SZ",
+                "stockName": "中国稀土",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600392.SH",
+                "stockName": "盛和资源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "稀土原料"
+            ]
+          },
+          {
+            "code": "1140005229",
+            "name": "稀土盐类",
+            "hierarchyPath": "有色金属 > 小金属 > 稀土 > 稀土原材料 > 稀土原材料 > 稀土盐类",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600392.SH",
+                "stockName": "盛和资源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "稀土原料"
+            ]
+          },
+          {
+            "code": "1137000339",
+            "name": "稀土精矿",
+            "hierarchyPath": "有色金属 > 小金属 > 稀土 > 稀土原材料 > 稀土原材料 > 稀土精矿",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600392.SH",
+                "stockName": "盛和资源",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "稀土原料"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1210000323",
+        "name": "锆及锆合金",
+        "description": "锆及锆合金指以锆为基的金属材料，具优异耐腐蚀性。A股关注该行业主要因核电重启带动核级锆材需求激增，叠加航空航天等高端应用拓展，国产替代加速，龙头企业受益于高景气周期与政策支持，具备长期成长潜力。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 1,
+        "relevanceScore": 10,
+        "stocks": [
+          {
+            "stockCode": "603663.SH",
+            "stockName": "三祥新材",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1114000219",
+            "name": "电熔氧化锆",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 锆及锆合金 > 锆及锆合金 > 电熔氧化锆",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "603663.SH",
+                "stockName": "三祥新材",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 10,
+            "matchedTerms": [
+              "电熔氧化锆"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -319,11 +544,652 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 19,
+    "eligibleSourceRowCount": 9,
+    "totalStockCount": 9,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 6,
+    "excludedNonAShareCount": 4,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 8,
+    "companyProfileUnmatchedCount": 1,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 2939,
+            "stockCode": "301580.SZ",
+            "stockName": "爱迪特",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "直接收到东曹暂停供货通知，并已完成国产粉体替代，是承接全球市场份额的核心受益者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301580.SZ",
+              "companyName": "爱迪特",
+              "companyProfile": "公司是国内领先的口腔修复材料及口腔数字化设备提供商。自2007年成立起，公司始终致力于自主研发、生产、销售具有国际竞争力的氧化锆瓷块等口腔修复材料，并依托对口腔医疗行业的深入理解和良好的客户基础，设计及销售口腔数字化设备，通过技术创新和数字化改造传统齿科，助力口腔行业的数字化转型和智能化发展。公司为义齿技工所和口腔医疗门诊、口腔医院等口腔医疗服务机构提供高效、安全、优质的一站式数字化口腔综合服务，其由两大类产品组成：(1)口腔修复材料：包括氧化锆瓷块、玻璃陶瓷、树脂等；(2)口腔数字化设备：包括数字取像设备、切削设备、烧结设备等。同时，该综合服务配套严格的质量控制体系、学习及实践全流程的培训计划及快速响应的售后服务体系，助力客户加快数字化转型升级。其中，针对义齿技工所，公司打造了3D Pro绚彩快速美学修复方案，可帮助义齿技工所完成产品24小时快速交付；针对口腔医疗服务机构，公司打造了科美椅旁修复系统、科美隐形矫正解决方案等，满足口腔医生的实际需求，帮助其开展数字化修复、种植与正畸等业务。",
+              "profileSummary": "公司为义齿技工所和口腔医疗门诊、口腔医院等口腔医疗服务机构提供高效、安全、优质的一站式数字化口腔综合服务，其由两大类产品组成：(1)口腔修复材料：包括氧化锆瓷块、玻璃陶瓷、树脂等；(2)口腔数字化设备：包括数字取像设备、切削设备、烧结设备等。其中，针对义齿技工所，公司打造了3D Pro绚彩快速美学修复方案，可帮助义齿技工所完成产品24小时快速交付；针对口腔医疗服务机构，公司打造了科美椅旁修复系统、科美隐形矫正解决方案等，满足口腔医生的…",
+              "majorProducts": "爱迪特结构件、爱迪特全瓷义齿用氧化锆瓷块、爱迪特牙科设备及配件、爱迪特义齿加工相关耗材",
+              "revenueComposition": "口腔修复材料:71.16%;口腔数字化设备:21.42%;其他产品及服务:7.42%",
+              "revenueSegments": [
+                {
+                  "name": "口腔修复材料",
+                  "sharePct": 71.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "口腔数字化设备",
+                  "sharePct": 21.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品及服务",
+                  "sharePct": 7.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "全瓷义齿用氧化锆瓷块",
+                  "牙科可切削树脂块",
+                  "牙科用玻璃陶瓷块",
+                  "钛人工牙种植体",
+                  "口腔椅旁修复系统",
+                  "氧化锆瓷块烧结炉",
+                  "口腔修复材料切削机",
+                  "3D打印机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "爱迪特的事件主线是：直接收到东曹暂停供货通知，并已完成国产粉体替代，是承接全球市场份额的核心受益者，但当前收入结构尚未体现其重要性，收入重心仍是口腔修复材料（71.16%）、口腔数字化设备（21.42%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，技术商业化与产品迭代速度需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”传导，并在客户认证、量产良率、订单规模、产品收入占比和毛利率上留下可核验痕迹。若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 2929,
+            "stockCode": "002167.SZ",
+            "stockName": "东方锆业",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内锆全产业链龙头，直接受益于全线锆产品涨价和国产替代趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002167.SZ",
+              "companyName": "东方锆业",
+              "companyProfile": "公司深耕锆行业近三十年，是一家专注于锆系制品的研发、生产和销售的国家火炬计划重点高新技术企业。公司产品涵盖九大系列一百多个品种，广泛应用于生物陶瓷、电子陶瓷、结构陶瓷、色釉料、高温耐火材料及核能等行业，特别是在新能源电池材料、光伏、人造宝石、陶瓷基刹车片、种植牙及光通讯器件等领域市场占有率稳步提升。伴随宏观经济基本面的长期向好态势，锆系制品在传统市场的需求将持续扩大，同时，技术的创新和突破也推动着新兴领域对锆制品的需求不断增长。锆行业市场整体呈现出稳步增长的趋势，行业前景十分广阔。公司一直秉承着“做强做大，做精做细”的发展策略，不断延伸、拓展产业链，完善产业链，公司已成为国内锆行业中技术领先、规模居前，最具核心竞争力和综合竞争力的知名企业，更是全球锆产品品种最齐全的制造商之一。",
+              "profileSummary": "公司产品涵盖九大系列一百多个品种，广泛应用于生物陶瓷、电子陶瓷、结构陶瓷、色釉料、高温耐火材料及核能等行业，特别是在新能源电池材料、光伏、人造宝石、陶瓷基刹车片、种植牙及光通讯器件等领域市场占有率稳步提升。公司一直秉承着“做强做大，做精做细”的发展策略，不断延伸、拓展产业链，完善产业链，公司已成为国内锆行业中技术领先、规模居前，最具核心竞争力和综合竞争力的知名企业，更是全球锆产品品种最齐全的制造商之一。",
+              "majorProducts": "Y-TZP陶瓷刀、宇田二氧化锆、宇田复合氧化锆、宇田硅酸锆、宇田氯化锆、宇田氯氧化锆、宇田氧化锆结构陶瓷",
+              "revenueComposition": "无机非金属锆产品:89.61%;无机非金属材料产品:6.14%;附产品:2.26%;重矿物:1.77%;其他业务:0.22%",
+              "revenueSegments": [
+                {
+                  "name": "无机非金属锆产品",
+                  "sharePct": 89.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "无机非金属材料产品",
+                  "sharePct": 6.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "附产品",
+                  "sharePct": 2.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "重矿物",
+                  "sharePct": 1.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "二氧化锆",
+                  "复合氧化锆",
+                  "氯氧化锆",
+                  "海绵锆",
+                  "电熔氧化锆",
+                  "硅酸锆",
+                  "陶瓷手机后盖",
+                  "陶瓷刀具"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东方锆业当前收入集中在无机非金属锆产品（89.61%）、无机非金属材料产品（6.14%），而国内锆全产业链龙头，直接受益于全线锆产品涨价和国产替代趋势所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响供需缺口与产品价格预期，业务端仍需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导后才能确认。产品报价、订单排期、产销率和毛利率如果持续改善，相关业务可能从产业布局转为实际增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 2930,
+            "stockCode": "603407.SH",
+            "stockName": "长裕集团",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球氧氯化锆龙头，作为氧化锆核心前驱体供应商深度绑定下游产业链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": false,
+              "matchMethod": "none",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "",
+              "companyName": "",
+              "companyProfile": "",
+              "profileSummary": "",
+              "majorProducts": "",
+              "revenueComposition": "",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "unavailable",
+                "relevantProducts": [],
+                "knownProducts": [],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长裕集团具备事件相关的业务抓手：全球氧氯化锆龙头，作为氧化锆核心前驱体供应商深度绑定下游产业链，但相关业务的收入权重和利润贡献尚不清楚。即使事件能否转化为可确认的经营增量改善，也要经过产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表，才可能形成公司层面的业绩变化。因此，当前更适合把订单、收入确认、产品结构和毛利率变化作为经营兑现的关键刻度；这些信号持续改善，相关业务才可能从产业链布局上升为利润增量。反之，事件关联停留在主题层面，未形成可持续订单或利润贡献会使市场预期先于基本面回落。"
+          },
+          {
+            "sourceRowNumber": 2934,
+            "stockCode": "300285.SZ",
+            "stockName": "国瓷材料",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内高端氧化锆粉体龙头，采用与东曹类似的水热法工艺，是承接东曹断供份额的核心企业。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300285.SZ",
+              "companyName": "国瓷材料",
+              "companyProfile": "公司以“实现员工价值的、卓越材料的领导者”为愿景，持续推动材料科技创新与产业升级。公司创立于2005年4月，现已形成以山东东营总部为核心，辐射环渤海、长三角、珠三角的国内产业网络，并在欧洲、美洲等设立办事处、研发中心、生产基地等，构建全球化客户服务体系的战略布局。作为“一代材料、一代产业”的践行者，公司聚焦高端功能陶瓷材料的研发与产业化，通过持续的科技创新与国际化布局，已构建涵盖电子材料、催化材料、生物医疗材料、新能源材料、精密陶瓷、数码打印及其他材料在内的六大业务板块。创新成果深度渗透消费电子及5G通信、汽车尾气治理、口腔医疗、新能源动力系统、半导体封装、环保建材、光伏储能等战略性新兴产业。公司持续为客户提供定制化解决方案，以材料科技赋能产业升级，践行“好材料好生活”的企业使命，致力成为新材料领域具有全球影响力的价值创造者。",
+              "profileSummary": "公司创立于2005年4月，现已形成以山东东营总部为核心，辐射环渤海、长三角、珠三角的国内产业网络，并在欧洲、美洲等设立办事处、研发中心、生产基地等，构建全球化客户服务体系的战略布局。作为“一代材料、一代产业”的践行者，公司聚焦高端功能陶瓷材料的研发与产业化，通过持续的科技创新与国际化布局，已构建涵盖电子材料、催化材料、生物医疗材料、新能源材料、精密陶瓷、数码打印及其他材料在内的六大业务板块。",
+              "majorProducts": "MLCC介质瓷粉、玻璃陶瓷瓷块、勃姆石、电子浆料、电子用纳米级复合氧化锆粉体、分子筛、复合树脂陶瓷、高纯超细氧化铝、碱水制氢用纳米粉体、颗粒捕捉器（DPF、GPF）、锂电池正负极研磨用氧化锆微珠、锂电池正极添加剂、三元催化转化器载体（TWC）、铈锆固溶体氧化物、陶瓷管壳、陶瓷基板及金属化、陶瓷墨水、陶瓷色釉料、陶瓷套筒、陶瓷插芯等结构件、陶瓷轴承球、选择性催化还原载体（SCR）、牙科用纳米级复合氧化锆粉体、氧化锆瓷块、氧化性催化转化器载体（DOC）",
+              "revenueComposition": "数码打印及其他材料板块-建筑陶瓷:22.19%;催化材料板块:20.81%;生物医疗材料板块:20.29%;电子材料板块:15.13%;新能源材料板块:11.03%;精密陶瓷板块:9.1%",
+              "revenueSegments": [
+                {
+                  "name": "数码打印及其他材料板块-建筑陶瓷",
+                  "sharePct": 22.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "催化材料板块",
+                  "sharePct": 20.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生物医疗材料板块",
+                  "sharePct": 20.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子材料板块",
+                  "sharePct": 15.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源材料板块",
+                  "sharePct": 11.03,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "精密陶瓷板块",
+                  "sharePct": 9.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "纳米级复合氧化锆粉体材料",
+                    "category": "金属氧化物"
+                  }
+                ],
+                "knownProducts": [
+                  "MLCC陶瓷粉体",
+                  "全瓷义齿",
+                  "氧化铝陶瓷材料",
+                  "氧化锆陶瓷材料",
+                  "蜂窝陶瓷",
+                  "高端陶瓷球",
+                  "陶瓷墨水",
+                  "纳米级复合氧化锆粉体材料"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "国瓷材料已经具备纳米级复合氧化锆粉体材料等业务能力，国内高端氧化锆粉体龙头，采用与东曹类似的水热法工艺，是承接东曹断供份额的核心企业并非单纯概念映射。当前对应的收入被归入新能源材料板块（11.03%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 2935,
+            "stockCode": "603663.SH",
+            "stockName": "三祥新材",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "全球电熔氧化锆龙头，并布局纳米级氧化锆，受益于行业景气度提升和国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603663.SH",
+              "companyName": "三祥新材",
+              "companyProfile": "公司系国家高新技术企业、国家知识产权优势企业、全国文明单位及全国模范劳动关系和谐企业，2016年8月成功登陆上海证券交易所主板。公司建有CNAS国家认可实验室、博士后科研工作站、省级企业技术中心和省级锆材料工程研究中心。公司始终秉持“创造新材料，感受新生活”的企业使命，坚持节能环保的绿色发展战略，依法诚信经营，专注于新材料的研发、生产和销售，已形成“锆系、镁系和先进陶瓷系”三大业务板块，并持续延链拓展，产品主要涵盖电熔锆、纳米氧化锆、金属锆、氧氯化锆、铸改新材料、单晶电熔铝、锆基非晶合金(液态金属)、镁铝合金、先进陶瓷等160多个品种。产品被广泛应用于核能、冶金、化工、电子通讯、新能源、光伏、建筑、医疗及汽车等领域，业务遍及全球30多个国家和地区。面向“追求卓越，打造行业标杆”的发展愿景，公司将持续推进技术创新与产业升级，致力于为全球客户提供优质材料解决方案，矢志成为引领行业发展的世界级新材料企业。",
+              "profileSummary": "公司始终秉持“创造新材料，感受新生活”的企业使命，坚持节能环保的绿色发展战略，依法诚信经营，专注于新材料的研发、生产和销售，已形成“锆系、镁系和先进陶瓷系”三大业务板块，并持续延链拓展，产品主要涵盖电熔锆、纳米氧化锆、金属锆、氧氯化锆、铸改新材料、单晶电熔铝、锆基非晶合金(液态金属)、镁铝合金、先进陶瓷等160多个品种。产品被广泛应用于核能、冶金、化工、电子通讯、新能源、光伏、建筑、医疗及汽车等领域，业务遍及全球30多个国家和地区。",
+              "majorProducts": "包芯线系列产品、大型一体化压铸产品、电熔氧化锆、海绵锆、特种纳米氧化锆、特种陶瓷、无焊超轻镁合金建筑模板、先进陶瓷、新能源电池PACK结构件、氧氯化锆、铸造改性材料",
+              "revenueComposition": "锆系列产品:83.61%;铸造改性材料:10.64%;其他:4.17%;其他业务:1.57%",
+              "revenueSegments": [
+                {
+                  "name": "锆系列产品",
+                  "sharePct": 83.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铸造改性材料",
+                  "sharePct": 10.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "电熔氧化锆",
+                    "category": "锆及锆合金"
+                  }
+                ],
+                "knownProducts": [
+                  "氯化锆",
+                  "二氧化锆",
+                  "氯氧化锆",
+                  "海绵锆",
+                  "电熔氧化锆",
+                  "镁合金建筑模板",
+                  "氧化物固态电解质",
+                  "锂电池PACK结构件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三祥新材拥有电熔氧化锆，其产业链位置与全球电熔氧化锆龙头，并布局纳米级氧化锆，受益于行业景气度提升和国产替代一致；当前的锆系列产品（83.61%）、铸造改性材料（10.64%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由终端需求与渗透率变化决定，并需完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”。只有终端销量、客户采购量、公司出货和相关产品收入增速持续改善，产品能力才会转化为公司层面的收入和盈利提升；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 2927,
+            "stockCode": "600392.SH",
+            "stockName": "盛和资源",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "作为氧化锆关键稳定剂——氧化钇的核心供应商，直接受益于原料战略价值重估。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600392.SH",
+              "companyName": "盛和资源",
+              "companyProfile": "公司是国内稀土行业特色鲜明的混合所有制上市公司。公司以稀土业务为核心，兼顾锆钛与海外资源，已形成稀土产业链、锆钛独居石产业链、循环经济产业链三大业务方向，形成国内国外协同发展格局。盛和资源成长于国内，着眼于全球，立足国内、国外两种资源与两个市场，在四川、江西、内蒙古、山东、江苏等地布局生产基地，在海南、江苏建设锆钛选矿厂。国际资源布局成果显著，控股坦桑尼亚恩古拉稀土矿、锆钛矿及马达加斯加锆钛矿项目，投资多家境外资源类企业。坦桑尼亚Fungoni项目一号生产线2024年年底顺利投产，产量稳步攀升，标志着公司正式向资源控股型上市公司转型升级。",
+              "profileSummary": "公司以稀土业务为核心，兼顾锆钛与海外资源，已形成稀土产业链、锆钛独居石产业链、循环经济产业链三大业务方向，形成国内国外协同发展格局。国际资源布局成果显著，控股坦桑尼亚恩古拉稀土矿、锆钛矿及马达加斯加锆钛矿项目，投资多家境外资源类企业。",
+              "majorProducts": "化学品类、金属阀催化配剂及分子筛、稀土盐类、稀土氧化物、稀有稀土金属",
+              "revenueComposition": "稀土产品:94.1%;锆钛及其他:5.43%;其他业务:0.47%",
+              "revenueSegments": [
+                {
+                  "name": "稀土产品",
+                  "sharePct": 94.1,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "锆钛及其他",
+                  "sharePct": 5.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "稀土氧化物",
+                    "category": "稀土原材料"
+                  },
+                  {
+                    "name": "稀土盐类",
+                    "category": "稀土原材料"
+                  },
+                  {
+                    "name": "稀土精矿",
+                    "category": "稀土原材料"
+                  },
+                  {
+                    "name": "稀土金属",
+                    "category": "稀土原材料"
+                  },
+                  {
+                    "name": "金红石",
+                    "category": "钛矿采选"
+                  },
+                  {
+                    "name": "钛精矿",
+                    "category": "钛矿采选"
+                  }
+                ],
+                "knownProducts": [
+                  "稀土氧化物",
+                  "稀土盐类",
+                  "稀土精矿",
+                  "稀土金属",
+                  "金红石",
+                  "钛精矿",
+                  "锆英砂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "盛和资源的稀土产品（94.1%）覆盖范围较宽，其中能够承载稀土氧化物、稀土盐类、稀土精矿，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：作为氧化锆关键稳定剂——氧化钇的核心供应商，直接受益于原料战略价值重估。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 2928,
+            "stockCode": "000831.SZ",
+            "stockName": "中国稀土",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为氧化钇的主要生产商，受益于氧化钇价格上涨和战略地位提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000831.SZ",
+              "companyName": "中国稀土",
+              "companyProfile": "公司于1998年成立，是一家在深圳证券交易所挂牌的主板上市公司，证券简称“中国稀土”。2022年，公司注册地变更为江西省赣州市，实际控制人变更为中国稀土集团。中国稀土主要从事稀土矿、稀土氧化物等产品的生产运营，以及稀土技术研发、咨询服务。旗下中稀湖南拥有湖南省目前唯一一宗离子型稀土矿采矿权，拥有全国目前单证开采指标最大的湖南江华离子型稀土矿，是自然资源部确定的“国家级绿色矿山”中第一座离子型稀土矿。旗下主要分离企业已通过ISO9000、ISO14000、OHSAS18000三体系认证，并能实现十五种单一高纯稀土元素的全分离，有效地提高了稀土资源综合利用率；旗下稀土研究院系国家“863”和“973”计划承担单位，近年来所开发的联动萃取工艺设计和控制及钙皂化等多项技术在国内多家企业中成功应用，其在含酸和多组份体系萃取分离理论和工艺设计方面具有突出优势。公司始终专注于稀土产业的专业化运营，在生产技术、产品品质、质量控制、节能环保、贸易经营、团队管理、合规运营等方面建立了较好优势，近年来经营规模和业绩持续向好，资产质量不断提升，资产负债结构合理。作为中央企业实际控制的专业化稀土上市平台，中国稀土以其主业突出、股权多元、治理科学、运营高效、盈利良好等优势获得各方较好认可。",
+              "profileSummary": "中国稀土主要从事稀土矿、稀土氧化物等产品的生产运营，以及稀土技术研发、咨询服务。公司始终专注于稀土产业的专业化运营，在生产技术、产品品质、质量控制、节能环保、贸易经营、团队管理、合规运营等方面建立了较好优势，近年来经营规模和业绩持续向好，资产质量不断提升，资产负债结构合理。",
+              "majorProducts": "试剂、稀土技术服务、稀土矿、稀土氧化物",
+              "revenueComposition": "稀土氧化物:74.61%;稀土金属:24.75%;其他业务:0.34%;技术服务收入:0.3%",
+              "revenueSegments": [
+                {
+                  "name": "稀土氧化物",
+                  "sharePct": 74.61,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "稀土金属",
+                  "sharePct": 24.75,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务收入",
+                  "sharePct": 0.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "稀土氧化物",
+                    "category": "稀土原材料"
+                  },
+                  {
+                    "name": "稀土金属",
+                    "category": "稀土原材料"
+                  }
+                ],
+                "knownProducts": [
+                  "稀土氧化物",
+                  "稀土金属"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中国稀土与事件的关系已经落在存量主业，而非远期概念：稀土氧化物（74.61%）、稀土金属（24.75%）合计约占收入的99.36%。公司在产业链中的具体抓手是：作为氧化钇的主要生产商，受益于氧化钇价格上涨和战略地位提升。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 2932,
+            "stockCode": "002584.SZ",
+            "stockName": "西陇科学",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "自主量产高端氧化锆核心前驱体正丙醇锆，卡位上游关键原料环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002584.SZ",
+              "companyName": "西陇科学",
+              "companyProfile": "公司是化学试剂的专业制造商和集成供应商，有着40多年化学试剂专业生产的历史。主要从事化学试剂的研发、生产、销售，原料药及食品添加剂生产及销售，并从事部分化工原料贸易等业务。目前拥有佛山、汕头、成都的大型生产基地以及云南盈和磷酸铁锂正极材料生产基地，在全国主要城市均设立了销售子公司或者办事处提供产品销售和技术服务。公司拥有多种品类的生产能力，产品质量与服务质量在市场上具有较好的声誉。同时，公司又是化学试剂的集成供应商，基于和国内外大型化工企业长期良好的合作关系，公司具有很强的配套能力和集成供应能力，拥有50000多个SKU，能为客户提供化学试剂的一站式服务。公司入选工业和信息化部第四批专精特新“小巨人”企业，公司及主要子公司已先后被认定“国家高新技术企业”、“国家技术创新示范企业”、“国家级示范企业”，拥有“广东省企业技术中心”、“广东省精细化学品研究开发技术中心”，获批设立了“博士后科研工作站”等高端技术创新平台。",
+              "profileSummary": "主要从事化学试剂的研发、生产、销售，原料药及食品添加剂生产及销售，并从事部分化工原料贸易等业务。目前拥有佛山、汕头、成都的大型生产基地以及云南盈和磷酸铁锂正极材料生产基地，在全国主要城市均设立了销售子公司或者办事处提供产品销售和技术服务。",
+              "majorProducts": "光伏及新能源材料、化工原料、化学试剂、原料药及医药中间体",
+              "revenueComposition": "专用化学品:60.57%;化工原料:17.45%;电子化学品:11.01%;通用试剂:5.47%;锂电池正极材料:4.5%;原料药及食品添加剂:0.88%;其他:0.11%",
+              "revenueSegments": [
+                {
+                  "name": "专用化学品",
+                  "sharePct": 60.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "化工原料",
+                  "sharePct": 17.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子化学品",
+                  "sharePct": 11.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "通用试剂",
+                  "sharePct": 5.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锂电池正极材料",
+                  "sharePct": 4.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "原料药及食品添加剂",
+                  "sharePct": 0.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "食品级磷酸钠盐",
+                  "食品级磷酸钾盐",
+                  "贵金属化学试剂",
+                  "氯化钙",
+                  "碘化钾",
+                  "氢溴酸西酞普兰",
+                  "次硝酸铋",
+                  "化工原料销售"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "西陇科学当前收入集中在专用化学品（60.57%）、化工原料（17.45%），而自主量产高端氧化锆核心前驱体正丙醇锆，卡位上游关键原料环节所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响商业化进度和订单兑现预期，业务端仍需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导后才能确认。客户认证、新增订单、交付节奏、相关业务收入和毛利率如果持续改善，相关业务可能从产业布局转为实际增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 2936,
+            "stockCode": "600552.SH",
+            "stockName": "凯盛科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司纳米氧化锆产品出货量在百吨级别，受益于国产替代趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600552.SH",
+              "companyName": "凯盛科技",
+              "companyProfile": "公司原名安徽方兴科技股份有限公司，成立于2000年9月30日，2002年11月在上海证券交易所上市，2016年3月公司更名为凯盛科技股份有限公司。公司是世界500强中国建材集团的三级上市公司，也是凯盛科技集团“3+1”战略布局中显示材料和应用材料的核心研发和产业平台。总部位于蚌埠市高新技术产业开发区，在深圳、洛阳、池州等地拥有生产研发基地，是国家技术创新示范企业、国家企业技术中心、国家高新技术企业、国家火炬计划项目产业化示范企业。多年来，公司在集团的支持下，充分利用国家重点实验室、玻璃新材料国家制造业创新中心等顶级研发平台优势，汇聚创新研发的合力，累计承担十四五国家重点研发计划项目课题、国家发改委产业发展重点专项、建材行业“揭榜挂帅”项目等各类省级以上科研项目20项。",
+              "profileSummary": "公司是世界500强中国建材集团的三级上市公司，也是凯盛科技集团“3+1”战略布局中显示材料和应用材料的核心研发和产业平台。",
+              "majorProducts": "AR减反射玻璃、PDLC调光膜、TFT显示玻璃减薄、TP模块系列产品、车载模组系列产品、电容式触摸屏、方兴手机模组、钙稳定氧化锆、高纯电熔氧化锆、硅微粉、华光浮法玻璃、华光氧化铟锡ITO导电膜玻璃、华光在线镀膜玻璃、结晶石英粉、抛光粉、球形石英粉、球形氧化铝、熔融石英粉、数码显示模组系列产品、钛酸钡、脱硅锆、窄分布球铝、智能穿戴模组系列产品",
+              "revenueComposition": "显示材料:78.67%;应用材料:19.37%;其他业务:1.96%",
+              "revenueSegments": [
+                {
+                  "name": "显示材料",
+                  "sharePct": 78.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "应用材料",
+                  "sharePct": 19.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "ITO导电玻璃",
+                  "盖板玻璃",
+                  "复合氧化锆",
+                  "电熔氧化锆",
+                  "球形氧化铝",
+                  "ITO(氧化铟锡)导电膜",
+                  "抛光粉",
+                  "石英粉"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "凯盛科技的事件主线是：公司纳米氧化锆产品出货量在百吨级别，受益于国产替代趋势，但当前收入结构尚未体现其重要性，收入重心仍是显示材料（78.67%）、应用材料（19.37%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，技术商业化与产品迭代速度需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”传导，并在客户认证、量产良率、订单规模、产品收入占比和毛利率上留下可核验痕迹。若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "6条低于3星的源记录已按当前关注口径排除。",
+      "4条3至5星非A股、未上市或代码不规范记录未进入组合。",
+      "1只标的未匹配到A股2025年报公司资料，多为非A股、未上市或新近上市公司。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "2只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

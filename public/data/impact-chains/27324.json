@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
-  "status": "no_company_product_mapping",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
+  "status": "no_four_star_stocks",
   "event": {
     "mainId": "27324",
     "uid": "0RB7WE9Q715PG",
@@ -9,65 +9,438 @@
     "date": "2026-07-09"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 0,
     "mappedStockCount": 0,
-    "unmappedStockCount": 2,
-    "stocks": [
-      {
-        "sourceRowNumber": 25126,
-        "stockCode": "未上市",
-        "stockName": "远海汽车船",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 25127,
-        "stockCode": "未上市",
-        "stockName": "华轮威尔森",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 25126,
-        "stockCode": "未上市",
-        "stockName": "远海汽车船",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 25127,
-        "stockCode": "未上市",
-        "stockName": "华轮威尔森",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStockCount": 0,
+    "stocks": [],
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 0,
     "selectedCoreProductCount": 0,
     "selectedCompanyCoreProductCount": 0,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 0,
-    "downstreamCandidateCount": 0,
-    "shownUpstreamCount": 0,
-    "shownDownstreamCount": 0
+    "level7ProductCount": 27,
+    "relatedIndustryCandidateCount": 5,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [],
-    "core": [],
-    "downstream": []
+  "productIndustryMap": {
+    "coreProducts": [],
+    "relatedIndustries": [
+      {
+        "code": "1200000784",
+        "name": "远洋航运",
+        "description": "远洋航运指跨国海上货物运输。A股中该板块因全球贸易复苏、地缘冲突及供应链重构导致运价波动而受关注。其业绩与全球经济周期紧密相关，具备强周期性，常成为资金博弈宏观预期和通胀逻辑的重要标的。",
+        "stockCount": 2,
+        "starWeight": 8,
+        "level7ProductCount": 14,
+        "relevanceScore": 172,
+        "stocks": [
+          {
+            "stockCode": "600428.SH",
+            "stockName": "中远海特",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "601872.SH",
+            "stockName": "招商轮船",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140080733",
+            "name": "汽车船营运",
+            "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 汽车船营运",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600428.SH",
+                "stockName": "中远海特",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140144925",
+            "name": "LNG航运",
+            "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > LNG航运",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601872.SH",
+                "stockName": "招商轮船",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140080735",
+            "name": "半潜船营运",
+            "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 半潜船营运",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600428.SH",
+                "stockName": "中远海特",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140144923",
+            "name": "原油航运",
+            "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 原油航运",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601872.SH",
+                "stockName": "招商轮船",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001141",
+        "name": "民用船舶",
+        "description": "民用船舶指商船制造，涵盖散货、集装箱及LNG船等。近期因全球运力紧张、新造船价上涨及绿色转型需求，行业迎来高景气周期。中国作为造船大国，订单饱满且盈利改善，成为A股备受关注的出海优势板块。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 8,
+        "relevanceScore": 96,
+        "stocks": [
+          {
+            "stockCode": "600150.SH",
+            "stockName": "中国船舶",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140145627",
+            "name": "客滚船",
+            "hierarchyPath": "汽车 > 其他交运设备 > 其他交运设备 > 民用船舶 > 货运船舶 > 客滚船",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600150.SH",
+                "stockName": "中国船舶",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140008367",
+            "name": "散货船",
+            "hierarchyPath": "汽车 > 其他交运设备 > 其他交运设备 > 民用船舶 > 货运船舶 > 散货船",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600150.SH",
+                "stockName": "中国船舶",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140145628",
+            "name": "极地模块运输船",
+            "hierarchyPath": "汽车 > 其他交运设备 > 其他交运设备 > 民用船舶 > 特种船舶 > 极地模块运输船",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600150.SH",
+                "stockName": "中国船舶",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140078148",
+            "name": "油轮",
+            "hierarchyPath": "汽车 > 其他交运设备 > 其他交运设备 > 民用船舶 > 货运船舶 > 油轮",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600150.SH",
+                "stockName": "中国船舶",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 4,
+    "mappedStockCount": 3,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 27,
+    "candidateIndustryCount": 5,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 25125,
+        "stockCode": "600428.SH",
+        "stockName": "中远海特",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 9
+      },
+      {
+        "sourceRowNumber": 25128,
+        "stockCode": "601872.SH",
+        "stockName": "招商轮船",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 25129,
+        "stockCode": "601058.SH",
+        "stockName": "赛轮轮胎",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 25135,
+        "stockCode": "600150.SH",
+        "stockName": "中国船舶",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 12
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000784",
+        "name": "远洋航运",
+        "description": "远洋航运指跨国海上货物运输。A股中该板块因全球贸易复苏、地缘冲突及供应链重构导致运价波动而受关注。其业绩与全球经济周期紧密相关，具备强周期性，常成为资金博弈宏观预期和通胀逻辑的重要标的。",
+        "stockCount": 2,
+        "starWeight": 8,
+        "level7ProductCount": 14,
+        "relevanceScore": 172,
+        "stocks": [
+          {
+            "stockCode": "600428.SH",
+            "stockName": "中远海特",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "601872.SH",
+            "stockName": "招商轮船",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140080733",
+            "name": "汽车船营运",
+            "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 汽车船营运",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600428.SH",
+                "stockName": "中远海特",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140144925",
+            "name": "LNG航运",
+            "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > LNG航运",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601872.SH",
+                "stockName": "招商轮船",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140080735",
+            "name": "半潜船营运",
+            "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 半潜船营运",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600428.SH",
+                "stockName": "中远海特",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140144923",
+            "name": "原油航运",
+            "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 原油航运",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "601872.SH",
+                "stockName": "招商轮船",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001141",
+        "name": "民用船舶",
+        "description": "民用船舶指商船制造，涵盖散货、集装箱及LNG船等。近期因全球运力紧张、新造船价上涨及绿色转型需求，行业迎来高景气周期。中国作为造船大国，订单饱满且盈利改善，成为A股备受关注的出海优势板块。",
+        "stockCount": 1,
+        "starWeight": 3,
+        "level7ProductCount": 8,
+        "relevanceScore": 96,
+        "stocks": [
+          {
+            "stockCode": "600150.SH",
+            "stockName": "中国船舶",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140145627",
+            "name": "客滚船",
+            "hierarchyPath": "汽车 > 其他交运设备 > 其他交运设备 > 民用船舶 > 货运船舶 > 客滚船",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600150.SH",
+                "stockName": "中国船舶",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140008367",
+            "name": "散货船",
+            "hierarchyPath": "汽车 > 其他交运设备 > 其他交运设备 > 民用船舶 > 货运船舶 > 散货船",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600150.SH",
+                "stockName": "中国船舶",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140145628",
+            "name": "极地模块运输船",
+            "hierarchyPath": "汽车 > 其他交运设备 > 其他交运设备 > 民用船舶 > 特种船舶 > 极地模块运输船",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600150.SH",
+                "stockName": "中国船舶",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140078148",
+            "name": "油轮",
+            "hierarchyPath": "汽车 > 其他交运设备 > 其他交运设备 > 民用船舶 > 货运船舶 > 油轮",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600150.SH",
+                "stockName": "中国船舶",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
   },
   "industryAnalysis": {
     "status": "unavailable",
@@ -77,10 +450,353 @@
     "researchSources": [],
     "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 15,
+    "eligibleSourceRowCount": 4,
+    "totalStockCount": 4,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 9,
+    "excludedNonAShareCount": 2,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 4,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 25125,
+            "stockCode": "600428.SH",
+            "stockName": "中远海特",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球领先的特种船运输公司，是中国汽车和风电等高端装备出海的核心承运商",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600428.SH",
+              "companyName": "中远海特",
+              "companyProfile": "公司是中国远洋海运集团控股的上市公司，是中国远洋海运集团的战略产业集群之一，前身为新中国第一家国有远洋运输企业广州远洋运输公司。公司主营特种船运输业务，经营管理半潜船、多用途船、重吊船、纸浆船、汽车船、木材船、和沥青船等各类型船舶。公司船舶结构合理、运载能力和适货性强、节能环保，能够承运包括钻井平台、机车及火车车厢、风电设备、桥吊、成套设备等超长、超重、超大件、不适箱以及有特殊运载和装卸要求的货物。承运能力从1吨至10万吨全覆盖，可为客户提供安全、高效的运输服务。目前，公司航线覆盖全球160多个国家和地区，在欧洲、美洲、非洲、泛印度洋、泛太平洋航线上形成了较强的优势。同时，公司是全球唯一的具备北极和南极两个极地航线成功运营经验的航运公司。公司打造了数百个国际重大项目的经典运输案例，频频刷新“超极限”运输记录。",
+              "profileSummary": "公司主营特种船运输业务，经营管理半潜船、多用途船、重吊船、纸浆船、汽车船、木材船、和沥青船等各类型船舶。承运能力从1吨至10万吨全覆盖，可为客户提供安全、高效的运输服务。",
+              "majorProducts": "中远半潜船运输、中远多用途船运输、中远滚装船运输、中远国际杂货运输、中远汽车船运输、中远重吊船运输",
+              "revenueComposition": "纸浆船:25.67%;汽车船:18.96%;多用途船:17.63%;重吊船:13.88%;半潜船:12.47%;其他业务:6.98%;沥青船:2.29%;木材船:2.13%",
+              "revenueSegments": [
+                {
+                  "name": "纸浆船",
+                  "sharePct": 25.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车船",
+                  "sharePct": 18.96,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "多用途船",
+                  "sharePct": 17.63,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "重吊船",
+                  "sharePct": 13.88,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半潜船",
+                  "sharePct": 12.47,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 6.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "沥青船",
+                  "sharePct": 2.29,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "木材船",
+                  "sharePct": 2.13,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "汽车船营运",
+                    "category": "远洋货物航运"
+                  },
+                  {
+                    "name": "半潜船营运",
+                    "category": "远洋货物航运"
+                  },
+                  {
+                    "name": "多用途船营运",
+                    "category": "远洋货物航运"
+                  },
+                  {
+                    "name": "木材船营运",
+                    "category": "远洋货物航运"
+                  },
+                  {
+                    "name": "杂货船营运",
+                    "category": "远洋货物航运"
+                  },
+                  {
+                    "name": "沥青船营运",
+                    "category": "远洋货物航运"
+                  }
+                ],
+                "knownProducts": [
+                  "半潜船营运",
+                  "多用途船营运",
+                  "木材船营运",
+                  "杂货船营运",
+                  "汽车船营运",
+                  "沥青船营运",
+                  "滚装船营运",
+                  "纸浆船营运"
+                ],
+                "directSegmentCount": 5,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中远海特的相关业务已决定公司大部分经营表现：汽车船（18.96%）、多用途船（17.63%）合计约占收入的53.48%。公司与事件的直接业务联系是：全球领先的特种船运输公司，是中国汽车和风电等高端装备出海的核心承运商，真正的增量取决于事件能否转化为可确认的经营增量，并需经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，订单、收入确认、产品结构和毛利率变化需要显示公司获得超越行业的增量。事件关联停留在主题层面，未形成可持续订单或利润贡献是这条逻辑最主要的反向约束。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 25128,
+            "stockCode": "601872.SH",
+            "stockName": "招商轮船",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内油运龙头，受益于油运市场高景气，业绩表现强劲",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601872.SH",
+              "companyName": "招商轮船",
+              "companyProfile": "公司秉承航运百年基业，于2004年成立，2006年在上交所上市，将创始年份1872铸入股票代码，寓意传承航运基业的新起点。公司凭借多元化业务组合和丰富航运经验，展现强大核心竞争力和市场适应能力。公司拥有世界领先的VLCC3船队和干散货船队，经营规模和管理水平位居全球前列；油、散、气、车、集全船型船队布局初步形成，各船队协同服务客户，持续提升全供应链服务能力。公司船队经营历史悠久，成功穿越多轮市场周期，核心竞争力不断增强。同时，公司坚持科技创新驱动，积极推进物联网、大数据、区块链、AI等技术应用，加快数智化转型。公司致力于提升技术与数据驱动的“数字轮船”，构建业内领先的“智慧航运”平台，助力打造具备较强科技属性、具备产业生态服务能力的世界一流航运企业。",
+              "profileSummary": "公司凭借多元化业务组合和丰富航运经验，展现强大核心竞争力和市场适应能力。公司拥有世界领先的VLCC3船队和干散货船队，经营规模和管理水平位居全球前列；油、散、气、车、集全船型船队布局初步形成，各船队协同服务客户，持续提升全供应链服务能力。",
+              "majorProducts": "滚装船运输、集装箱运输、散货船运输、油轮运输",
+              "revenueComposition": "0",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "LNG航运",
+                    "category": "远洋货物航运"
+                  },
+                  {
+                    "name": "原油航运",
+                    "category": "远洋货物航运"
+                  },
+                  {
+                    "name": "干散货航运",
+                    "category": "远洋货物航运"
+                  },
+                  {
+                    "name": "杂货航运",
+                    "category": "远洋货物航运"
+                  },
+                  {
+                    "name": "货滚运输",
+                    "category": "沿海货物航运"
+                  },
+                  {
+                    "name": "集装箱航运业务",
+                    "category": "远洋货物航运"
+                  }
+                ],
+                "knownProducts": [
+                  "货滚运输",
+                  "LNG航运",
+                  "原油航运",
+                  "干散货航运",
+                  "杂货航运",
+                  "集装箱航运业务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "招商轮船已经拥有LNG航运、原油航运、干散货航运，与国内油运龙头，受益于油运市场高景气，业绩表现强劲处于同一产业链环节，业务联系可以成立。相关产品尚未形成独立的收入占比，因此能够确认公司参与，却不能直接判断对整体利润的贡献大小。本次事件若改善终端需求与渗透率变化，仍需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能形成财务增量。终端销量、客户采购量、公司出货和相关产品收入增速持续增强时，相关产品可能从能力储备进入规模化贡献；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品布局与实际盈利之间仍会存在较大距离。"
+          },
+          {
+            "sourceRowNumber": 25129,
+            "stockCode": "601058.SH",
+            "stockName": "赛轮轮胎",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球运力规模最大的油轮船东，受益于油运市场景气度提升",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601058.SH",
+              "companyName": "赛轮轮胎",
+              "companyProfile": "公司创建于2002年，2011年在上海证券交易所上市，是中国首家A股上市的民营轮胎企业。经过20多年的发展，我们已成为集轮胎研发、生产、销售和服务为一体的全球化集团公司。目前，我们在中国青岛、东营、沈阳、潍坊、越南及柬埔寨建有7大轮胎智能工厂并已投入运营，正在推进墨西哥、印度尼西亚和青岛董家口等轮胎智能工厂的建设。此外，我们在全球拥有4大研发中心，产品畅销全球180多个国家和地区。赛轮集团坚持创新驱动发展战略，发布了全球首个投入使用的橡胶轮胎行业工业互联网平台“橡链云”，实现了业务的一体化、平台化、多元化运营；掌握了具有自主知识产权的乘用车轮胎、卡客车轮胎、非公路轮胎三大技术体系；采用世界首创化学炼胶橡胶新材料开发了新一代绿色轮胎-液体黄金轮胎，其在降低滚动阻力的同时，提升抗湿滑性能和耐磨性能，成功打破了困扰轮胎行业多年的“魔鬼三角”定律，使行车更加安全、节能和舒适，被誉为世界橡胶轮胎工业第四个具有里程碑意义的技术创新。赛轮集团投资建设华东智能网联汽车试验场，为汽车产业提供先进的测试和验证平台，助力智能网联汽车技术从研发到市场的高效转化，也将为各方提供跨界协作、技术共享的高质量平台。",
+              "profileSummary": "目前，我们在中国青岛、东营、沈阳、潍坊、越南及柬埔寨建有7大轮胎智能工厂并已投入运营，正在推进墨西哥、印度尼西亚和青岛董家口等轮胎智能工厂的建设。赛轮集团投资建设华东智能网联汽车试验场，为汽车产业提供先进的测试和验证平台，助力智能网联汽车技术从研发到市场的高效转化，也将为各方提供跨界协作、技术共享的高质量平台。",
+              "majorProducts": "半钢子午线轮胎、非公路轮胎、全钢子午线轮胎",
+              "revenueComposition": "轮胎产品:98.94%;其他业务:1.06%",
+              "revenueSegments": [
+                {
+                  "name": "轮胎产品",
+                  "sharePct": 98.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "全钢子午胎",
+                  "半钢子午胎"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "赛轮轮胎的主要经营内容是轮胎产品（98.94%）、其他业务（1.06%），具体产品集中在全钢子午胎、半钢子午胎。“全球运力规模最大的油轮船东，受益于油运市场景气度提升”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善终端需求与渗透率变化，也需要先补上产品落地和客户导入，再经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才可能影响业绩。终端销量、客户采购量、公司出货和相关产品收入增速没有同步改善时，股价反应更可能来自主题交易；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，基本面解释力会继续下降。"
+          },
+          {
+            "sourceRowNumber": 25135,
+            "stockCode": "600150.SH",
+            "stockName": "中国船舶",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "全球造船龙头，直接受益于航运公司（包括中远海特）的新船订单和运力扩张计划",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600150.SH",
+              "companyName": "中国船舶",
+              "companyProfile": "公司是中船集团旗下核心军民品主业上市公司，我国海军装备供应的主体力量。公司于1998年5月在上海证券交易所挂牌上市，总部设在上海。2025年9月，公司实现换股吸收合并中国重工，总股本由44.72亿股增加至75.26亿股。公司主要业务包括造船业务(军、民)、修船业务、海洋工程及船舶配套、机电设备及其他。作为世界航运业的伙伴，公司拥有全谱系的船舶建造设计能力，能够建造满足国际通用技术标准和安全公约要求、适航于全球各航区的船舶海工装备。作为国内规模最大、技术最先进、产品结构最全的头部船企，公司聚焦价值创造，坚持创新引领发展，不断推动业务高端化、绿色化、数智化转型升级，为我国海洋强国建设贡献力量。",
+              "profileSummary": "公司主要业务包括造船业务(军、民)、修船业务、海洋工程及船舶配套、机电设备及其他。作为国内规模最大、技术最先进、产品结构最全的头部船企，公司聚焦价值创造，坚持创新引领发展，不断推动业务高端化、绿色化、数智化转型升级，为我国海洋强国建设贡献力量。",
+              "majorProducts": "中国船舶10.5万吨阿芙拉型原油轮、中国船舶15万吨FPSO储油轮、中国船舶17.5万吨好望角型散货船、中国船舶17万吨FPSO储油轮、中国船舶多用途重吊货船、中国船舶高速集装箱船、中国船舶沪东R8M四机四流连铸机、中国船舶沪东步进式加热炉、中国船舶沪东船用柴油机、中国船舶沪东带斗门机、中国船舶沪东堆取料机、中国船舶沪东盾构掘进机、中国船舶沪东门座吊机、中国船舶沪东四机四流小方胚连铸机、中国船舶沪东铜连铸连轧机组、中国船舶沪东直流超高功率电弧炉、中国船舶沪东装船机、中国船舶化学品船、中国船舶冷藏船、中国船舶修船业务",
+              "revenueComposition": "船舶造修:86.38%;机电设备及其他:12.25%;其他业务:1.37%",
+              "revenueSegments": [
+                {
+                  "name": "船舶造修",
+                  "sharePct": 86.38,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "机电设备及其他",
+                  "sharePct": 12.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "航空母舰",
+                    "category": "水面舰艇"
+                  },
+                  {
+                    "name": "船舶修理服务",
+                    "category": "船舶维修"
+                  },
+                  {
+                    "name": "船舶改装服务",
+                    "category": "船舶设计"
+                  },
+                  {
+                    "name": "驱逐舰",
+                    "category": "水面舰艇"
+                  },
+                  {
+                    "name": "客滚船",
+                    "category": "货运船舶"
+                  },
+                  {
+                    "name": "散货船",
+                    "category": "货运船舶"
+                  }
+                ],
+                "knownProducts": [
+                  "航空母舰",
+                  "驱逐舰",
+                  "船舶修理服务",
+                  "船舶改装服务",
+                  "海上浮式生产储油装置(FPSO)",
+                  "海洋钻井平台",
+                  "豪华邮轮",
+                  "海工辅助船"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中国船舶已经具备航空母舰、船舶修理服务、船舶改装服务等业务能力，全球造船龙头，直接受益于航运公司（包括中远海特）的新船订单和运力扩张计划并非单纯概念映射。当前对应的收入被归入船舶造修（86.38%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，并最终反映在客户认证、新增订单、交付节奏、相关业务收入和毛利率上；客户验证或交付节奏低于预期，订单停留在小批量阶段会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "9条低于3星的源记录已按当前关注口径排除。",
+      "2条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

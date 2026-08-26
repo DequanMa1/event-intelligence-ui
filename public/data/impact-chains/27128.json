@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27128",
@@ -9,10 +9,10 @@
     "date": "2026-07-07"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 2,
-    "mappedStockCount": 2,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 1,
+    "unmappedStockCount": 1,
     "stocks": [
       {
         "sourceRowNumber": 20576,
@@ -20,8 +20,8 @@
         "stockName": "宜宾纸业",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 6
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 20580,
@@ -33,134 +33,28 @@
         "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 20576,
+        "stockCode": "600793.SH",
+        "stockName": "宜宾纸业",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 7,
     "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 7,
-    "downstreamCandidateCount": 36,
-    "shownUpstreamCount": 7,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 14,
+    "relatedIndustryCandidateCount": 5,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140023807",
-        "name": "PVA",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140023808",
-        "name": "TAC",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140023365",
-        "name": "保护膜",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140048396",
-        "name": "压敏胶",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140023811",
-        "name": "相位差膜",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140023809",
-        "name": "离型膜",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140079699",
-        "name": "超细纤维无尘洁净制品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140000385",
         "name": "偏光片",
@@ -186,18 +80,15 @@
           "name": "偏光片"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002876.SZ",
             "stockName": "三利谱",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 7,
-        "downstreamCount": 36,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -207,230 +98,396 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140150835",
-        "name": "AMOLED显示面板",
-        "anchorCount": 1,
+        "code": "1210003298",
+        "name": "人造纤维",
+        "description": "人造纤维指以天然或合成高分子为原料制成的纤维。A股中该板块因新材料突破、绿色转型及下游纺织需求复苏受关注，兼具科技属性与消费韧性，是产业升级和国产替代的重要领域。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
+        "starWeight": 4,
+        "level7ProductCount": 3,
+        "relevanceScore": 76,
+        "stocks": [
+          {
+            "stockCode": "600793.SH",
+            "stockName": "宜宾纸业",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "偏光片"
+        "products": [
+          {
+            "code": "1140209459",
+            "name": "三醋酸纤维素",
+            "hierarchyPath": "化工 > 化学纤维 > 其他化学纤维 > 人造纤维 > 醋酸纤维 > 三醋酸纤维素",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600793.SH",
+                "stockName": "宜宾纸业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "三醋酸纤维素",
+              "醋酸纤维"
+            ]
+          },
+          {
+            "code": "1140209458",
+            "name": "塑料级二醋酸纤维素",
+            "hierarchyPath": "化工 > 化学纤维 > 其他化学纤维 > 人造纤维 > 醋酸纤维 > 塑料级二醋酸纤维素",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600793.SH",
+                "stockName": "宜宾纸业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "醋酸纤维"
+            ]
+          },
+          {
+            "code": "1140209457",
+            "name": "纺丝级二醋酸纤维素",
+            "hierarchyPath": "化工 > 化学纤维 > 其他化学纤维 > 人造纤维 > 醋酸纤维 > 纺丝级二醋酸纤维素",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600793.SH",
+                "stockName": "宜宾纸业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "醋酸纤维"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140108675",
-        "name": "LCD手机全面屏触控显示模组",
-        "anchorCount": 1,
+        "code": "1210002764",
+        "name": "显示屏",
+        "description": "A股显示屏行业涵盖LCD、OLED等面板制造及模组。受关注因它是消费电子核心部件，且受益于Mini/Micro LED等新技术迭代、国产替代加速及车载、VR等新场景需求爆发，具备高成长性与技术壁垒，是科技投资热点。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
+        "starWeight": 3,
+        "level7ProductCount": 5,
+        "relevanceScore": 60,
+        "stocks": [
+          {
+            "stockCode": "000725.SZ",
+            "stockName": "京东方A",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "偏光片"
+        "products": [
+          {
+            "code": "1140194497",
+            "name": "Micro LED显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > Micro LED > Micro LED显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140000442",
+            "name": "OLED显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > OLED > OLED显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135615",
+            "name": "户外LED广告机",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > LED显示屏 > 户外LED广告机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140026052",
+            "name": "电子标牌",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > 其他显示屏 > 电子标牌",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 5,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 14,
+    "candidateIndustryCount": 5,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 20576,
+        "stockCode": "600793.SH",
+        "stockName": "宜宾纸业",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140000224",
-        "name": "LCD显示屏",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 20577,
+        "stockCode": "301045.SZ",
+        "stockName": "天禄科技",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140153589",
-        "name": "LCD液晶显示器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 20578,
+        "stockCode": "600063.SH",
+        "stockName": "皖维高新",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140032476",
-        "name": "OLED显示产品",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 20580,
+        "stockCode": "002876.SZ",
+        "stockName": "三利谱",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140135744",
-        "name": "OLED显示面板",
-        "anchorCount": 1,
+        "sourceRowNumber": 20583,
+        "stockCode": "000725.SZ",
+        "stockName": "京东方A",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 9
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210003298",
+        "name": "人造纤维",
+        "description": "人造纤维指以天然或合成高分子为原料制成的纤维。A股中该板块因新材料突破、绿色转型及下游纺织需求复苏受关注，兼具科技属性与消费韧性，是产业升级和国产替代的重要领域。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
+        "starWeight": 4,
+        "level7ProductCount": 3,
+        "relevanceScore": 76,
+        "stocks": [
+          {
+            "stockCode": "600793.SH",
+            "stockName": "宜宾纸业",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "偏光片"
+        "products": [
+          {
+            "code": "1140209459",
+            "name": "三醋酸纤维素",
+            "hierarchyPath": "化工 > 化学纤维 > 其他化学纤维 > 人造纤维 > 醋酸纤维 > 三醋酸纤维素",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600793.SH",
+                "stockName": "宜宾纸业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "三醋酸纤维素",
+              "醋酸纤维"
+            ]
+          },
+          {
+            "code": "1140209458",
+            "name": "塑料级二醋酸纤维素",
+            "hierarchyPath": "化工 > 化学纤维 > 其他化学纤维 > 人造纤维 > 醋酸纤维 > 塑料级二醋酸纤维素",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600793.SH",
+                "stockName": "宜宾纸业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "醋酸纤维"
+            ]
+          },
+          {
+            "code": "1140209457",
+            "name": "纺丝级二醋酸纤维素",
+            "hierarchyPath": "化工 > 化学纤维 > 其他化学纤维 > 人造纤维 > 醋酸纤维 > 纺丝级二醋酸纤维素",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600793.SH",
+                "stockName": "宜宾纸业",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "醋酸纤维"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140135426",
-        "name": "STN显示屏",
-        "anchorCount": 1,
+        "code": "1210002764",
+        "name": "显示屏",
+        "description": "A股显示屏行业涵盖LCD、OLED等面板制造及模组。受关注因它是消费电子核心部件，且受益于Mini/Micro LED等新技术迭代、国产替代加速及车载、VR等新场景需求爆发，具备高成长性与技术壁垒，是科技投资热点。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
+        "starWeight": 3,
+        "level7ProductCount": 5,
+        "relevanceScore": 60,
+        "stocks": [
+          {
+            "stockCode": "000725.SZ",
+            "stockName": "京东方A",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "偏光片"
+        "products": [
+          {
+            "code": "1140194497",
+            "name": "Micro LED显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > Micro LED > Micro LED显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140000442",
+            "name": "OLED显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > OLED > OLED显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135615",
+            "name": "户外LED广告机",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > LED显示屏 > 户外LED广告机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140026052",
+            "name": "电子标牌",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > 其他显示屏 > 电子标牌",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140046072",
-        "name": "STN液晶材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140022933",
-        "name": "TFT-LCD(薄膜晶体管液晶显示器)",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140046073",
-        "name": "TFT-LCD液晶材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140135563",
-        "name": "TN/STN/HINK液晶显示屏",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140046071",
-        "name": "TN液晶材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140005878",
-        "name": "中小尺寸触控显示模组",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140088554",
-        "name": "偏光片材料解决方案",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140000385"
-        ],
-        "linkedCoreProductNames": [
-          "偏光片"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -445,9 +502,470 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 9,
+    "eligibleSourceRowCount": 5,
+    "totalStockCount": 5,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 4,
+    "excludedNonAShareCount": 0,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 5,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 20577,
+            "stockCode": "301045.SZ",
+            "stockName": "天禄科技",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "TAC膜国产化替代的核心实施主体，联合产业链下游龙头共同推进项目，是目前最有机会实现0到1突破的厂商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301045.SZ",
+              "companyName": "天禄科技",
+              "companyProfile": "公司是一家专业从事导光板研发、生产、销售的企业。公司建立了基于光学理论、数学计算、建模仿真、统计与分析的导光板研发方式，以研发路径创新为引导，设立精密模具加工部及光学分析实验室，创造性研发出“导光板入光调制透镜阵列加工技术”，构建起导光板生产技术体系，不断丰富产品类型，公司现有导光板产品型号规格多样，产品尺寸涵盖8寸至75寸，厚度涵盖0.3毫米至3毫米，可满足客户定制化的需求。同时，公司持续推动导光板产品创新，使产品厚度更薄，亮度更高，应用领域更广，适应了液晶显示器件的超薄化、窄边框、高解析度、低能耗发展方向，形成了优势聚集效应，公司持续高标准建设信息化与自动化高效融合的现代化工厂，建立了管理科学、技术先进、可柔性运作的生产体系，可根据不同产品需求进行相应适应的生产调整，严谨地进行生产计划安排，在合理利用产能的同时，满足大批量、多类型客户订单的快速交付需求。目前，公司已成为我国本土中大尺寸导光板领域生产规模领先的企业之一。公司2019年台式显示器类导光板市场占有率为19.11%，笔记本电脑类导光板市场占有率为13.34%1。",
+              "profileSummary": "同时，公司持续推动导光板产品创新，使产品厚度更薄，亮度更高，应用领域更广，适应了液晶显示器件的超薄化、窄边框、高解析度、低能耗发展方向，形成了优势聚集效应，公司持续高标准建设信息化与自动化高效融合的现代化工厂，建立了管理科学、技术先进、可柔性运作的生产体系，可根据不同产品需求进行相应适应的生产调整，严谨地进行生产计划安排，在合理利用产能的同时，满足大批量、多类型客户订单的快速交付需求。目前，公司已成为我国本土中大尺寸导光板领域生产规模…",
+              "majorProducts": "笔记本电脑导光板、车载工控类导光板、导光板、灯具类导光板、平板电脑类导光板、热压类导光板、台式显示器类导光板、液晶电视类导光板、印刷类导光板",
+              "revenueComposition": "台式显示器:47.15%;笔记本电脑:35.63%;液晶电视:11.26%;其他:4.43%;平板电脑:1.1%;灯具:0.44%",
+              "revenueSegments": [
+                {
+                  "name": "台式显示器",
+                  "sharePct": 47.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "笔记本电脑",
+                  "sharePct": 35.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液晶电视",
+                  "sharePct": 11.26,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "平板电脑",
+                  "sharePct": 1.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "灯具",
+                  "sharePct": 0.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "TAC膜",
+                    "category": "其他光学膜"
+                  }
+                ],
+                "knownProducts": [
+                  "TAC膜",
+                  "背光显示模组用导光板"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "天禄科技与事件存在真实业务交集：公司已有TAC膜，与TAC膜国产化替代的核心实施主体，联合产业链下游龙头共同推进项目，是目前最有机会实现0到1突破的厂商所处的产业环节一致。液晶电视（11.26%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响技术商业化与产品迭代速度，只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，才会形成可确认的收入和利润增量。客户认证、量产良率、订单规模、产品收入占比和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 20576,
+            "stockCode": "600793.SH",
+            "stockName": "宜宾纸业",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "子公司四川普什是TAC膜核心原材料三醋酸纤维素的国产供应商，是实现全产业链自主可控的关键环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600793.SH",
+              "companyName": "宜宾纸业",
+              "companyProfile": "公司前身为“中国造纸厂”，始建于1944年，是中国第一张新闻纸的诞生地。公司主要产品：食品包装原纸、生活用纸原纸、生活用纸成品纸、本色纸杯。公司通过整体搬迁顺利实现了“原料转型、产品转型、技术进步、规模提升、环保领先”的转型升级目标。公司充分依托宜宾本地丰富的竹资源优势，大力实施“竹浆纸及深加工一体化”发展战略，形成了以竹林基地建设、竹片加工、制浆造纸、终端制造、产品营销为一体的全产业链经营发展模式，最大程度地把本地的竹资源优势转化成公司的成本优势和竞争优势，实现了企业增效、农民增收、经济发展、环境友好的多赢局面。公司先后被评为“省级林业化产业龙头企业”、“农业产业化省级重点龙头企业”、“国家林业重点龙头企业”，并参与《品牌评价原则与基础》国家标准的起草工作，成为首批“品牌评价国际/国家标准应用示范单位”。",
+              "profileSummary": "公司前身为“中国造纸厂”，始建于1944年，是中国第一张新闻纸的诞生地。公司充分依托宜宾本地丰富的竹资源优势，大力实施“竹浆纸及深加工一体化”发展战略，形成了以竹林基地建设、竹片加工、制浆造纸、终端制造、产品营销为一体的全产业链经营发展模式，最大程度地把本地的竹资源优势转化成公司的成本优势和竞争优势，实现了企业增效、农民增收、经济发展、环境友好的多赢局面。",
+              "majorProducts": "宜宾纸业食品纸、宜宾纸业文化用纸、宜宾纸业新闻纸",
+              "revenueComposition": "纸品:64.77%;醋酸纤维:34.6%;其他业务:0.63%",
+              "revenueSegments": [
+                {
+                  "name": "纸品",
+                  "sharePct": 64.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "醋酸纤维",
+                  "sharePct": 34.6,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "三醋酸纤维素",
+                    "category": "醋酸纤维"
+                  },
+                  {
+                    "name": "塑料级二醋酸纤维素",
+                    "category": "醋酸纤维"
+                  },
+                  {
+                    "name": "纺丝级二醋酸纤维素",
+                    "category": "醋酸纤维"
+                  }
+                ],
+                "knownProducts": [
+                  "三醋酸纤维素",
+                  "塑料级二醋酸纤维素",
+                  "纺丝级二醋酸纤维素",
+                  "食品包装用纸",
+                  "卫生纸",
+                  "纸巾纸"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "宜宾纸业的事件逻辑具备真实业务底座，但尚不足以代表全部公司：醋酸纤维占收入的34.6%。公司与事件的具体联系在于：子公司四川普什是TAC膜核心原材料三醋酸纤维素的国产供应商，是实现全产业链自主可控的关键环节，对应的核心变量是技术商业化与产品迭代速度。若这一变量沿着“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，客户认证、量产良率、订单规模、产品收入占比和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；技术路线变化、良率爬坡缓慢或竞争方案更快成熟则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 20580,
+            "stockCode": "002876.SZ",
+            "stockName": "三利谱",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内偏光片龙头企业，作为下游客户及产业投资方，深度参与并推动天禄科技TAC膜的国产化进程。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002876.SZ",
+              "companyName": "三利谱",
+              "companyProfile": "公司设立于2007年，是国内偏光片行业的领先企业，凭借领先的研发技术能力、优秀的综合运营能力，已在中国大陆建成了7条全制程偏光片生产线，是国内偏光片行业最优秀的解决方案供应商之一。公司也是深圳市平板显示行业协会副会长单位、中国光学光电子行业液晶分会会员理事单位、中国光学光电子行业协会优秀会员单位、国家工信部专精特新“小巨人”、深圳市半导体显示行业协会优秀会员企业，曾荣获“中国最具投资价值企业50强”“广东省制造业企业500强”“中国光电行业“影响力企业”称号”“中国电子材料行业50强企业”“广东省制造业单项冠军产品”等多项荣誉，在行业内树立了良好的企业信誉和口碑。公司主要从事偏光片产品的研发、生产和销售，主要产品包括TFT系列和黑白系列偏光片两类。偏光片是将聚乙烯醇(PVA)膜和三醋酸纤维素(TAC)膜经拉伸、复合、涂布等工艺制成的一种高分子材料，是显示面板的关键原材料之一。公司主要为手机、电脑、液晶电视等消费类电子产品液晶显示屏，车载显示、医疗器械、仪器仪表等工控类电子产品液晶显示屏，以及3D眼镜、防眩光太阳镜等提供偏光片产品及周边产品技术解决方案。公司为我国国内少数具备传统无源显示，TFT及OLED用偏光片生产能力的企业之一，凭借丰富的产品品类、稳定的产品质量、优质的客户服务，公司已成为国内主要显示面板和主要显示模组生产企业的合格供应商。",
+              "profileSummary": "公司也是深圳市平板显示行业协会副会长单位、中国光学光电子行业液晶分会会员理事单位、中国光学光电子行业协会优秀会员单位、国家工信部专精特新“小巨人”、深圳市半导体显示行业协会优秀会员企业，曾荣获“中国最具投资价值企业50强”“广东省制造业企业500强”“中国光电行业“影响力企业”称号”“中国电子材料行业50强企业”“广东省制造业单项冠军产品”等多项荣誉，在行业内树立了良好的企业信誉和口碑。公司主要从事偏光片产品的研发、生产和销售，主要产…",
+              "majorProducts": "TFT系列偏光片、黑白系列偏光片",
+              "revenueComposition": "TFT系列:96.19%;黑白系列:2.41%;其他业务:1.4%",
+              "revenueSegments": [
+                {
+                  "name": "TFT系列",
+                  "sharePct": 96.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "黑白系列",
+                  "sharePct": 2.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "偏光片",
+                    "category": "偏光片"
+                  }
+                ],
+                "knownProducts": [
+                  "偏光片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三利谱实际经营中已有偏光片，与事件指向的国内偏光片龙头企业，作为下游客户及产业投资方，深度参与并推动天禄科技TAC膜的国产化进程能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在TFT系列（96.19%）、黑白系列（2.41%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善技术商业化与产品迭代速度，需要沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。客户认证、量产良率、订单规模、产品收入占比和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，产品存在不等于利润一定增加。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 20578,
+            "stockCode": "600063.SH",
+            "stockName": "皖维高新",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内PVA行业龙头，具备PVA光学膜量产能力，是偏光片上游核心材料国产化替代的重要参与者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600063.SH",
+              "companyName": "皖维高新",
+              "companyProfile": "公司是安徽省国有资产监督管理委员会管辖的大型企业。前身是安徽省维尼纶厂，始建于1969年，为国家“四五”期间投资建设的重点项目。集团公司下辖6家子公司,核心子公司安徽皖维高新材料股份有限公司于1997年5月在上海证券交易所上市。皖维集团是安徽省重要的化工、化纤、建材、新材料联合制造企业，总资产逾100亿元，年销售收入超70亿元，进出口额超1亿美元。集团先后被评为国家级高新技术企业、安徽省创新型企业、火炬计划重点高新技术企业。核心子公司安徽皖维高新材料股份有限公司拥有国家级企业技术中心等五个研发机构，以及博士后工作站和技能大师工作室。公司瞄准PVA光学薄膜“卡脖子”项目，采取产学研合作等多种方式，加快技术研发，力争早日突破，全面推进传统产业转型升级，将皖维打造成PVA行业领军企业。皖维集团坐落于中国五大淡水湖之巢湖，北依京福、商合杭、合武、合宁高铁，合巢芜高速公路，南靠淮南铁路运输动脉，东近长江黄金水道，交通十分便捷。集团位于“一带一路”、长江经济带建设、长三角一体化发展和中部崛起四大国家战略交汇的重要节点，独具“左右逢源”的战略优势，更为皖维高质量发展创造无限广阔空间。",
+              "profileSummary": "公司瞄准PVA光学薄膜“卡脖子”项目，采取产学研合作等多种方式，加快技术研发，力争早日突破，全面推进传统产业转型升级，将皖维打造成PVA行业领军企业。",
+              "majorProducts": "PVA光学薄膜、PVB胶片、PVB树脂、VAE乳液、可再分散乳胶粉、偏光片、皖维高新高强高模PVA纤维、皖维高新聚乙烯醇、皖维高新聚酯切片、皖维高新熟料、皖维高新水泥",
+              "revenueComposition": "聚乙烯醇:32.7%;醋酸甲酯:15.84%;其他:11.58%;水泥、熟料:7.1%;切片:7.01%;胶粉:6.67%;醋酸乙烯:5.18%;VAE乳液:4.39%;PVA超短纤:3.54%;其他业务:2.66%;PVB中间膜:2.43%;PVA光学膜:0.9%",
+              "revenueSegments": [
+                {
+                  "name": "聚乙烯醇",
+                  "sharePct": 32.7,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "醋酸甲酯",
+                  "sharePct": 15.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 11.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "水泥、熟料",
+                  "sharePct": 7.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "切片",
+                  "sharePct": 7.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "胶粉",
+                  "sharePct": 6.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "醋酸乙烯",
+                  "sharePct": 5.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "VAE乳液",
+                  "sharePct": 4.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "PVA超短纤",
+                  "sharePct": 3.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "PVB中间膜",
+                  "sharePct": 2.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "PVA光学膜",
+                  "sharePct": 0.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "VAE乳液",
+                  "聚乙烯醇缩丁醛(PVB)",
+                  "可再分散胶粉",
+                  "醋酸乙烯",
+                  "醋酸甲酯",
+                  "乙醇",
+                  "聚乙烯醇",
+                  "维纶"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "皖维高新的业务范围能够覆盖国内PVA行业龙头，具备PVA光学膜量产能力，是偏光片上游核心材料国产化替代的重要参与者所处的产业环节，但当前聚乙烯醇（32.7%）、醋酸甲酯（15.84%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。商业化进度和订单兑现需要沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”完成兑现，并在客户认证、新增订单、交付节奏、相关业务收入和毛利率上形成持续改善；若客户验证或交付节奏低于预期，订单停留在小批量阶段，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 20583,
+            "stockCode": "000725.SZ",
+            "stockName": "京东方A",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "全球显示面板龙头，是TAC膜的终端核心用户和国产化替代的主要推动者，并参股天禄科技TAC膜项目。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000725.SZ",
+              "companyName": "京东方A",
+              "companyProfile": "公司创立于1993年4月，是一家领先的物联网创新企业，为信息交互和人类健康提供智慧端口产品和专业服务，形成了以半导体显示为核心，物联网创新、传感器及解决方案、MLED、智慧医工融合发展的“1+4+N+生态链”业务发展架构。在“1+4+N+生态链”业务不断突破的同时，公司持续贯彻“技术+品牌”双轮驱动发展模式：国内科技企业首档自制技术科普综艺节目《BOE解忧实验室》、年度标杆性品牌巡展“你好，BOE”两大品牌IP，已成为科技企业破圈营销的创新典范。公司在北京、合肥、成都、重庆、福州、绵阳、武汉、昆明、鄂尔多斯等地拥有多个智造基地，子公司遍布美国、德国、日本、韩国、新加坡、印度、越南、墨西哥、巴西、阿联酋等多个国家和地区，服务体系覆盖欧、美、亚、非等全球多个区域。公司坚持“技术领先、全球首发、价值共创”的创新理念。",
+              "profileSummary": "公司创立于1993年4月，是一家领先的物联网创新企业，为信息交互和人类健康提供智慧端口产品和专业服务，形成了以半导体显示为核心，物联网创新、传感器及解决方案、MLED、智慧医工融合发展的“1+4+N+生态链”业务发展架构。公司在北京、合肥、成都、重庆、福州、绵阳、武汉、昆明、鄂尔多斯等地拥有多个智造基地，子公司遍布美国、德国、日本、韩国、新加坡、印度、越南、墨西哥、巴西、阿联酋等多个国家和地区，服务体系覆盖欧、美、亚、非等全球多个区域。",
+              "majorProducts": "“N”业务、MLED、传感、京东方LED显示系统、京东方TFT液晶显示器、京东方彩色显象管、京东方纯平CRT显示器、京东方锂电池、京东方液晶电视、京东方液晶显示模块、物联网创新、显示器件、智慧医工",
+              "revenueComposition": "显示器件业务:81.34%;物联网创新业务:19.04%;MLED业务:4.55%;智慧健康服务:0.93%;传感业务:0.29%;其他及抵销:-6.15%",
+              "revenueSegments": [
+                {
+                  "name": "显示器件业务",
+                  "sharePct": 81.34,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "物联网创新业务",
+                  "sharePct": 19.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "MLED业务",
+                  "sharePct": 4.55,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "智慧健康服务",
+                  "sharePct": 0.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "传感业务",
+                  "sharePct": 0.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他及抵销",
+                  "sharePct": -6.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "液晶面板",
+                    "category": "面板"
+                  },
+                  {
+                    "name": "LCD液晶显示模组",
+                    "category": "显示模组"
+                  },
+                  {
+                    "name": "LCD液晶电视",
+                    "category": "液晶电视"
+                  },
+                  {
+                    "name": "Micro LED显示屏",
+                    "category": "Micro LED"
+                  },
+                  {
+                    "name": "Mini LED显示模组",
+                    "category": "显示模组"
+                  },
+                  {
+                    "name": "OLED显示屏",
+                    "category": "OLED"
+                  }
+                ],
+                "knownProducts": [
+                  "投影仪",
+                  "LCD液晶电视",
+                  "户外LED广告机",
+                  "Micro LED显示屏",
+                  "OLED显示屏",
+                  "电子标牌",
+                  "电子白板",
+                  "液晶面板"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "京东方A已经参与事件相关业务，但收入基数仍小：MLED业务占收入的4.55%，说明公司已有业务抓手，但“全球显示面板龙头，是TAC膜的终端核心用户和国产化替代的主要推动者，并参股天禄科技TAC膜项目”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于技术商业化与产品迭代速度能否驱动“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，从而推动业务跨过小规模阶段。在此之前，客户认证、量产良率、订单规模、产品收入占比和毛利率比总收入增速更值得跟踪；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，市场对远期空间的定价可能缺少当期业绩支撑。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "4条低于3星的源记录已按当前关注口径排除。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

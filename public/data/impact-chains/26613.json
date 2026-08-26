@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26613",
@@ -9,10 +9,10 @@
     "date": "2026-06-30"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 9,
-    "mappedStockCount": 6,
-    "unmappedStockCount": 3,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 6,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 4,
     "stocks": [
       {
         "sourceRowNumber": 8523,
@@ -20,8 +20,8 @@
         "stockName": "帝尔激光",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 6
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 8530,
@@ -29,8 +29,8 @@
         "stockName": "京东方A",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 12
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 8531,
@@ -39,7 +39,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
+        "anchorProductCount": 3
       },
       {
         "sourceRowNumber": 8532,
@@ -47,8 +47,8 @@
         "stockName": "水晶光电",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 17
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 8535,
@@ -57,39 +57,12 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 15
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 8536,
         "stockCode": "301486.SZ",
         "stockName": "致尚科技",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 14
-      },
-      {
-        "sourceRowNumber": 8543,
-        "stockCode": "NVDA.US",
-        "stockName": "英伟达",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 8544,
-        "stockCode": "INTC.US",
-        "stockName": "英特尔",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 8545,
-        "stockCode": "TSM.US",
-        "stockName": "台积电",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -98,27 +71,36 @@
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 8543,
-        "stockCode": "NVDA.US",
-        "stockName": "英伟达",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 8544,
-        "stockCode": "INTC.US",
-        "stockName": "英特尔",
+        "sourceRowNumber": 8523,
+        "stockCode": "300776.SZ",
+        "stockName": "帝尔激光",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       },
       {
-        "sourceRowNumber": 8545,
-        "stockCode": "TSM.US",
-        "stockName": "台积电",
+        "sourceRowNumber": 8530,
+        "stockCode": "000725.SZ",
+        "stockName": "京东方A",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 8532,
+        "stockCode": "002273.SZ",
+        "stockName": "水晶光电",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 8536,
+        "stockCode": "301486.SZ",
+        "stockName": "致尚科技",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -128,34 +110,14 @@
   },
   "totals": {
     "candidateCoreProductCount": 70,
-    "selectedCoreProductCount": 5,
+    "selectedCoreProductCount": 4,
     "selectedCompanyCoreProductCount": 4,
-    "semanticBridgeCount": 1,
-    "upstreamCandidateCount": 1,
-    "downstreamCandidateCount": 34,
-    "shownUpstreamCount": 1,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 96,
+    "relatedIndustryCandidateCount": 20,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140057929",
-        "name": "成套玻璃基板生产装备",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140194520",
         "name": "玻璃基板切割",
@@ -181,18 +143,15 @@
           "name": "玻璃基板切割"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603773.SH",
             "stockName": "沃格光电",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 13,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -228,18 +187,15 @@
           "name": "玻璃基板薄化"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603773.SH",
             "stockName": "沃格光电",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 13,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -275,18 +231,15 @@
           "name": "玻璃基板镀膜"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603773.SH",
             "stockName": "沃格光电",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 13,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -322,18 +275,15 @@
           "name": "光芯片封装用陶瓷壳体"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300394.SZ",
             "stockName": "天孚通信",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -341,266 +291,771 @@
           "通信设备",
           "通信"
         ]
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001393",
+        "name": "光通信设备",
+        "description": "光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注。",
+        "stockCount": 7,
+        "starWeight": 23,
+        "level7ProductCount": 39,
+        "relevanceScore": 1308,
+        "stocks": [
+          {
+            "stockCode": "300394.SZ",
+            "stockName": "天孚通信",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301486.SZ",
+            "stockName": "致尚科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300308.SZ",
+            "stockName": "中际旭创",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688313.SH",
+            "stockName": "仕佳光子",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300570.SZ",
+            "stockName": "太辰光",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300502.SZ",
+            "stockName": "新易盛",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688025.SH",
+            "stockName": "杰普特",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140022886",
+            "name": "光纤连接器",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 无源光器件 > 光纤连接器",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "300394.SZ",
+                "stockName": "天孚通信",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "301486.SZ",
+                "stockName": "致尚科技",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688313.SH",
+                "stockName": "仕佳光子",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "300570.SZ",
+                "stockName": "太辰光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688025.SH",
+                "stockName": "杰普特",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 48,
+            "matchedTerms": [
+              "光连接器",
+              "光连接器无源器件",
+              "无源器件"
+            ]
+          },
+          {
+            "code": "1140221152",
+            "name": "共封装光学(CPO)模块",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 光模块 > 共封装光学(CPO)模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300308.SZ",
+                "stockName": "中际旭创",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "300502.SZ",
+                "stockName": "新易盛",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 38,
+            "matchedTerms": [
+              "cpo",
+              "光模块"
+            ]
+          },
+          {
+            "code": "1140220977",
+            "name": "近封装光模块(NPO)",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 光模块 > 近封装光模块(NPO)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300308.SZ",
+                "stockName": "中际旭创",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "300502.SZ",
+                "stockName": "新易盛",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 38,
+            "matchedTerms": [
+              "npo",
+              "光模块"
+            ]
+          },
+          {
+            "code": "1140020902",
+            "name": "PON光模块",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 光模块 > PON光模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300502.SZ",
+                "stockName": "新易盛",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 38,
+            "matchedTerms": [
+              "npo",
+              "光模块"
+            ]
+          }
+        ],
+        "rank": 1
       },
       {
-        "code": "1140047142",
-        "name": "玻璃基板",
-        "hierarchyPath": "",
-        "industryPath": [],
-        "level5Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level6Industry": {
-          "code": "",
-          "name": ""
-        },
-        "level7Product": {
-          "code": "",
-          "name": ""
-        },
-        "matchedSourceLevel": 0,
-        "mappingType": "semantic_bridge",
-        "bridgeBasis": "company_product:玻璃基板切割",
-        "stockCount": 1,
+        "code": "1210002764",
+        "name": "显示屏",
+        "description": "A股显示屏行业涵盖LCD、OLED等面板制造及模组。受关注因它是消费电子核心部件，且受益于Mini/Micro LED等新技术迭代、国产替代加速及车载、VR等新场景需求爆发，具备高成长性与技术壁垒，是科技投资热点。",
+        "stockCount": 3,
+        "starWeight": 11,
+        "level7ProductCount": 6,
+        "relevanceScore": 96,
         "stocks": [
+          {
+            "stockCode": "000725.SZ",
+            "stockName": "京东方A",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
           {
             "stockCode": "603773.SH",
             "stockName": "沃格光电",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300088.SZ",
+            "stockName": "长信科技",
+            "rating": "★★★",
+            "filledStars": 3
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 34,
-        "relevanceScore": 0,
-        "strongRelevanceScore": 0,
-        "matchedTerms": []
+        "products": [
+          {
+            "code": "1140000442",
+            "name": "OLED显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > OLED > OLED显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300088.SZ",
+                "stockName": "长信科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140025202",
+            "name": "车载显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > LCD > 车载显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603773.SH",
+                "stockName": "沃格光电",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300088.SZ",
+                "stockName": "长信科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140194497",
+            "name": "Micro LED显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > Micro LED > Micro LED显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135615",
+            "name": "户外LED广告机",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > LED显示屏 > 户外LED广告机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 20,
+    "mappedStockCount": 19,
+    "unmappedStockCount": 1,
+    "level7ProductCount": 96,
+    "candidateIndustryCount": 20,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 8518,
+        "stockCode": "301188.SZ",
+        "stockName": "力诺药包",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 8519,
+        "stockCode": "601636.SH",
+        "stockName": "旗滨集团",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 8520,
+        "stockCode": "600552.SH",
+        "stockName": "凯盛科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 8523,
+        "stockCode": "300776.SZ",
+        "stockName": "帝尔激光",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 8524,
+        "stockCode": "300757.SZ",
+        "stockName": "罗博特科",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 2
+      },
+      {
+        "sourceRowNumber": 8525,
+        "stockCode": "688090.SH",
+        "stockName": "瑞松科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 8526,
+        "stockCode": "688700.SH",
+        "stockName": "东威科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 8528,
+        "stockCode": "688603.SH",
+        "stockName": "天承科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 8530,
+        "stockCode": "000725.SZ",
+        "stockName": "京东方A",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 9
+      },
+      {
+        "sourceRowNumber": 8531,
+        "stockCode": "603773.SH",
+        "stockName": "沃格光电",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
+      },
+      {
+        "sourceRowNumber": 8532,
+        "stockCode": "002273.SZ",
+        "stockName": "水晶光电",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 8533,
+        "stockCode": "300433.SZ",
+        "stockName": "蓝思科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 8534,
+        "stockCode": "300088.SZ",
+        "stockName": "长信科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 8535,
+        "stockCode": "300394.SZ",
+        "stockName": "天孚通信",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 15
+      },
+      {
+        "sourceRowNumber": 8536,
+        "stockCode": "301486.SZ",
+        "stockName": "致尚科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 8537,
+        "stockCode": "300570.SZ",
+        "stockName": "太辰光",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
+      },
+      {
+        "sourceRowNumber": 8538,
+        "stockCode": "688025.SH",
+        "stockName": "杰普特",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 8539,
+        "stockCode": "688313.SH",
+        "stockName": "仕佳光子",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 20
+      },
+      {
+        "sourceRowNumber": 8547,
+        "stockCode": "300308.SZ",
+        "stockName": "中际旭创",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 8548,
+        "stockCode": "300502.SZ",
+        "stockName": "新易盛",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140144792",
-        "name": "10G无源光纤网络滤光片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
+        "code": "1200001393",
+        "name": "光通信设备",
+        "description": "光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注。",
+        "stockCount": 7,
+        "starWeight": 23,
+        "level7ProductCount": 39,
+        "relevanceScore": 1308,
+        "stocks": [
+          {
+            "stockCode": "300394.SZ",
+            "stockName": "天孚通信",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "301486.SZ",
+            "stockName": "致尚科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300308.SZ",
+            "stockName": "中际旭创",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688313.SH",
+            "stockName": "仕佳光子",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300570.SZ",
+            "stockName": "太辰光",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300502.SZ",
+            "stockName": "新易盛",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688025.SH",
+            "stockName": "杰普特",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
+        "products": [
+          {
+            "code": "1140022886",
+            "name": "光纤连接器",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 无源光器件 > 光纤连接器",
+            "matchedSourceLevel": 7,
+            "stockCount": 5,
+            "stocks": [
+              {
+                "stockCode": "300394.SZ",
+                "stockName": "天孚通信",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "301486.SZ",
+                "stockName": "致尚科技",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "688313.SH",
+                "stockName": "仕佳光子",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "300570.SZ",
+                "stockName": "太辰光",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688025.SH",
+                "stockName": "杰普特",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 48,
+            "matchedTerms": [
+              "光连接器",
+              "光连接器无源器件",
+              "无源器件"
+            ]
+          },
+          {
+            "code": "1140221152",
+            "name": "共封装光学(CPO)模块",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 光模块 > 共封装光学(CPO)模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300308.SZ",
+                "stockName": "中际旭创",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "300502.SZ",
+                "stockName": "新易盛",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 38,
+            "matchedTerms": [
+              "cpo",
+              "光模块"
+            ]
+          },
+          {
+            "code": "1140220977",
+            "name": "近封装光模块(NPO)",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 光模块 > 近封装光模块(NPO)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300308.SZ",
+                "stockName": "中际旭创",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "300502.SZ",
+                "stockName": "新易盛",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 38,
+            "matchedTerms": [
+              "npo",
+              "光模块"
+            ]
+          },
+          {
+            "code": "1140020902",
+            "name": "PON光模块",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 光模块 > PON光模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300502.SZ",
+                "stockName": "新易盛",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 38,
+            "matchedTerms": [
+              "npo",
+              "光模块"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
       },
       {
-        "code": "1140023102",
-        "name": "3D玻璃",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
+        "code": "1210002764",
+        "name": "显示屏",
+        "description": "A股显示屏行业涵盖LCD、OLED等面板制造及模组。受关注因它是消费电子核心部件，且受益于Mini/Micro LED等新技术迭代、国产替代加速及车载、VR等新场景需求爆发，具备高成长性与技术壁垒，是科技投资热点。",
+        "stockCount": 3,
+        "starWeight": 11,
+        "level7ProductCount": 6,
+        "relevanceScore": 96,
+        "stocks": [
+          {
+            "stockCode": "000725.SZ",
+            "stockName": "京东方A",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "603773.SH",
+            "stockName": "沃格光电",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300088.SZ",
+            "stockName": "长信科技",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
+        "products": [
+          {
+            "code": "1140000442",
+            "name": "OLED显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > OLED > OLED显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300088.SZ",
+                "stockName": "长信科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140025202",
+            "name": "车载显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > LCD > 车载显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "603773.SH",
+                "stockName": "沃格光电",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300088.SZ",
+                "stockName": "长信科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140194497",
+            "name": "Micro LED显示屏",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > Micro LED > Micro LED显示屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135615",
+            "name": "户外LED广告机",
+            "hierarchyPath": "电子 > 光学光电子 > 显示器件 > 显示屏 > LED显示屏 > 户外LED广告机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000725.SZ",
+                "stockName": "京东方A",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140150835",
-        "name": "AMOLED显示面板",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140000224",
-        "name": "LCD显示屏",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140153589",
-        "name": "LCD液晶显示器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140135426",
-        "name": "STN显示屏",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140046072",
-        "name": "STN液晶材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140022933",
-        "name": "TFT-LCD(薄膜晶体管液晶显示器)",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140046073",
-        "name": "TFT-LCD液晶材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140135563",
-        "name": "TN/STN/HINK液晶显示屏",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140046071",
-        "name": "TN液晶材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140102627",
-        "name": "VFD小尺寸显示屏阳极",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140022843",
-        "name": "中小尺寸显示面板",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1140144793",
-        "name": "二向色滤光片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140047142"
-        ],
-        "linkedCoreProductNames": [
-          "玻璃基板"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 2
       }
     ]
   },
@@ -615,11 +1070,1690 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 32,
+    "eligibleSourceRowCount": 20,
+    "totalStockCount": 20,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 7,
+    "excludedNonAShareCount": 5,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 20,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 8523,
+            "stockCode": "300776.SZ",
+            "stockName": "帝尔激光",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内TGV激光设备领先者，已推出一站式解决方案并获批量出货。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300776.SZ",
+              "companyName": "帝尔激光",
+              "companyProfile": "公司在全球范围内是领先的激光精密微纳加工装备制造企业，于2008年在中国光谷创立，并在武汉、无锡、新加坡设有研发生产基地，在以色列设有研发中心。公司以自主创新激光技术为核心，面向光伏新能源和AI新基建领域提供一体化激光加工综合解决方案。帝尔激光秉承“激光方案探险者”的使命，始终坚持原始创新，探索激光技术应用“无人区”，以客户价值为导向开发从0到1的技术，以产业赋能为目标打造变革性的产品。帝尔激光创造性地将激光技术引入光伏行业，广泛应用于各类太阳能电池及组件制程，核心产品全球综合市占率第一。公司开发的激光消融、激光掺杂、激光诱导烧结、激光转印等技术和装备多次推动光伏技术升级。当前，公司开发的激光微刻蚀、组件激光技术正在推动BC成为新一代光伏电池主流技术路线。公司聚焦先进封装、化合物半导体、新型显示等产业革新需求，推出了TGV激光微孔、PCB超快激光钻孔、SiC晶锭激光剥片、MicroLED激光巨量转移/键合等应用于新技术和新材料领域的先进激光装备。",
+              "profileSummary": "公司以自主创新激光技术为核心，面向光伏新能源和AI新基建领域提供一体化激光加工综合解决方案。公司聚焦先进封装、化合物半导体、新型显示等产业革新需求，推出了TGV激光微孔、PCB超快激光钻孔、SiC晶锭激光剥片、MicroLED激光巨量转移/键合等应用于新技术和新材料领域的先进激光装备。",
+              "majorProducts": "帝尔激光FPC/陶瓷加工设备、帝尔激光薄膜太阳能电池激光设备、帝尔激光高效太阳能电池激光设备、帝尔激光激光精密加工设备",
+              "revenueComposition": "光伏电池及组件激光设备:98.55%;技术服务、维护和其他:1.44%;半导体先进封装和下一代显示激光设备:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "光伏电池及组件激光设备",
+                  "sharePct": 98.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务、维护和其他",
+                  "sharePct": 1.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半导体先进封装和下一代显示激光设备",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "TGV激光微孔设备",
+                    "category": "半导体封装设备"
+                  }
+                ],
+                "knownProducts": [
+                  "TGV激光微孔设备",
+                  "太阳能电池激光打孔设备",
+                  "太阳能电池激光消融设备",
+                  "太阳能电池片激光修复设备",
+                  "太阳能电池片激光划裂片设备",
+                  "太阳能电池片激光掺杂设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "帝尔激光已经具备TGV激光微孔设备等业务能力，国内TGV激光设备领先者，已推出一站式解决方案并获批量出货并非单纯概念映射。当前对应的收入被归入半导体先进封装和下一代显示激光设备（0.02%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于研发里程碑与商业化成功概率是否通过“研发或授权进展改变项目成功率和未来现金流预期，再通过里程碑收入、销售分成或费用投入影响利润”放大，并最终反映在临床数据、监管节点、首付款及里程碑确认和销售放量上；研发、审批或商业化进度不及预期，且前期投入难以形成对应回报会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 8530,
+            "stockCode": "000725.SZ",
+            "stockName": "京东方A",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内玻璃基板全流程制造龙头，与康宁达成战略合作，技术与产能布局领先。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000725.SZ",
+              "companyName": "京东方A",
+              "companyProfile": "公司创立于1993年4月，是一家领先的物联网创新企业，为信息交互和人类健康提供智慧端口产品和专业服务，形成了以半导体显示为核心，物联网创新、传感器及解决方案、MLED、智慧医工融合发展的“1+4+N+生态链”业务发展架构。在“1+4+N+生态链”业务不断突破的同时，公司持续贯彻“技术+品牌”双轮驱动发展模式：国内科技企业首档自制技术科普综艺节目《BOE解忧实验室》、年度标杆性品牌巡展“你好，BOE”两大品牌IP，已成为科技企业破圈营销的创新典范。公司在北京、合肥、成都、重庆、福州、绵阳、武汉、昆明、鄂尔多斯等地拥有多个智造基地，子公司遍布美国、德国、日本、韩国、新加坡、印度、越南、墨西哥、巴西、阿联酋等多个国家和地区，服务体系覆盖欧、美、亚、非等全球多个区域。公司坚持“技术领先、全球首发、价值共创”的创新理念。",
+              "profileSummary": "公司创立于1993年4月，是一家领先的物联网创新企业，为信息交互和人类健康提供智慧端口产品和专业服务，形成了以半导体显示为核心，物联网创新、传感器及解决方案、MLED、智慧医工融合发展的“1+4+N+生态链”业务发展架构。公司在北京、合肥、成都、重庆、福州、绵阳、武汉、昆明、鄂尔多斯等地拥有多个智造基地，子公司遍布美国、德国、日本、韩国、新加坡、印度、越南、墨西哥、巴西、阿联酋等多个国家和地区，服务体系覆盖欧、美、亚、非等全球多个区域。",
+              "majorProducts": "“N”业务、MLED、传感、京东方LED显示系统、京东方TFT液晶显示器、京东方彩色显象管、京东方纯平CRT显示器、京东方锂电池、京东方液晶电视、京东方液晶显示模块、物联网创新、显示器件、智慧医工",
+              "revenueComposition": "显示器件业务:81.34%;物联网创新业务:19.04%;MLED业务:4.55%;智慧健康服务:0.93%;传感业务:0.29%;其他及抵销:-6.15%",
+              "revenueSegments": [
+                {
+                  "name": "显示器件业务",
+                  "sharePct": 81.34,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "物联网创新业务",
+                  "sharePct": 19.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "MLED业务",
+                  "sharePct": 4.55,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "智慧健康服务",
+                  "sharePct": 0.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "传感业务",
+                  "sharePct": 0.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他及抵销",
+                  "sharePct": -6.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "LCD液晶显示模组",
+                    "category": "显示模组"
+                  },
+                  {
+                    "name": "LCD液晶电视",
+                    "category": "液晶电视"
+                  },
+                  {
+                    "name": "Micro LED显示屏",
+                    "category": "Micro LED"
+                  },
+                  {
+                    "name": "Mini LED显示模组",
+                    "category": "显示模组"
+                  },
+                  {
+                    "name": "OLED显示屏",
+                    "category": "OLED"
+                  },
+                  {
+                    "name": "户外LED广告机",
+                    "category": "LED显示屏"
+                  }
+                ],
+                "knownProducts": [
+                  "投影仪",
+                  "LCD液晶电视",
+                  "户外LED广告机",
+                  "Micro LED显示屏",
+                  "OLED显示屏",
+                  "电子标牌",
+                  "电子白板",
+                  "液晶面板"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "京东方A已经参与事件相关业务，但收入基数仍小：MLED业务占收入的4.55%，说明公司已有业务抓手，但“国内玻璃基板全流程制造龙头，与康宁达成战略合作，技术与产能布局领先”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于商业化进度和订单兑现能否驱动“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”，从而推动业务跨过小规模阶段。在此之前，客户认证、新增订单、交付节奏、相关业务收入和毛利率比总收入增速更值得跟踪；若客户验证或交付节奏低于预期，订单停留在小批量阶段，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 8531,
+            "stockCode": "603773.SH",
+            "stockName": "沃格光电",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内最早商业化TGV产线的厂商之一，技术指标领先，已打通全产业链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603773.SH",
+              "companyName": "沃格光电",
+              "companyProfile": "公司成立于2009年12月，于2018年4月在上交所主板上市。公司注册地位于江西省新余市，是中国领先的玻璃基线路板及相关电子器件研发、制造企业。公司坚持以技术创新引领企业发展,先后荣获国家高新技术企业、国家企业技术中心、国家工业设计中心、国家博士后科研工作站、国家知识产权优势企业、中国海关AEO高级认证企业等国家级奖项和资质平台。公司主营业务围绕显示和半导体两大业务板块，具体包括平板显示器件精加工业务、光电子器件产品、光学膜材模切、新型半导体显示以及半导体先进封装等细分业务领域，形成了汇聚玻璃线路板所涉及的玻璃减薄、镀膜、巨量通孔、填孔以及多层铜线路互联的技术储备、装备开发以及产能投放等核心产业化能力。玻璃基线路板对传统有机载板的性能和成本优势，使其在新型Mini/Micro LED高端显示和未来半导体大算力芯片先进封装领域具有广阔应用空间。2024年，公司持续践行深化改革，优化战略组织管理体系，引进优秀人才，推出集团化组织变革体系，强化集团与各分子公司的协同效应，落实各业务单元经营计划，在保障现有产品业务稳定发展的基础上，持续推进玻璃基集成电路板在MiniLED背光、直显及半导体大算力芯片先进封装等领域的渗透。公司产品应用终端包括智能手机、笔电/pad、显示器、车载、TV、中大尺寸室内外商显，透明显示等各类智慧化显示场景以及大型AI算力服务器(CPU/GPU)、数据中心、自动驾驶、光通信、CPO光模块、射频(含手机)、5G/6G通信基站、MEMS(微型传感器)等高性能计算或高性能信号传输应用场景。公司技术在行业内领先，尤其是作为公司核心竞争力的自主研发能力，在业内更是位居前列。",
+              "profileSummary": "公司主营业务围绕显示和半导体两大业务板块，具体包括平板显示器件精加工业务、光电子器件产品、光学膜材模切、新型半导体显示以及半导体先进封装等细分业务领域，形成了汇聚玻璃线路板所涉及的玻璃减薄、镀膜、巨量通孔、填孔以及多层铜线路互联的技术储备、装备开发以及产能投放等核心产业化能力。公司产品应用终端包括智能手机、笔电/pad、显示器、车载、TV、中大尺寸室内外商显，透明显示等各类智慧化显示场景以及大型AI算力服务器(CPU/GPU)、数据中…",
+              "majorProducts": "沃格光电ITO镀膜、沃格光电OGS二次强化、沃格光电光电玻璃薄化、沃格光电切割",
+              "revenueComposition": "光电显示器件:52.36%;光电玻璃精加工:31.11%;其他:16.43%;其他业务:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "光电显示器件",
+                  "sharePct": 52.36,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "光电玻璃精加工",
+                  "sharePct": 31.11,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 16.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "玻璃基板切割",
+                    "category": "电子玻璃"
+                  },
+                  {
+                    "name": "玻璃基板薄化",
+                    "category": "电子玻璃"
+                  },
+                  {
+                    "name": "玻璃基板镀膜",
+                    "category": "电子玻璃"
+                  },
+                  {
+                    "name": "3D玻璃",
+                    "category": "电子玻璃"
+                  },
+                  {
+                    "name": "LED背光模组",
+                    "category": "背光模组"
+                  },
+                  {
+                    "name": "光学膜模切",
+                    "category": "其他光学膜"
+                  }
+                ],
+                "knownProducts": [
+                  "3D玻璃",
+                  "玻璃基板切割",
+                  "玻璃基板薄化",
+                  "玻璃基板镀膜",
+                  "盖板玻璃",
+                  "LED背光模组",
+                  "光学膜模切",
+                  "车载显示屏"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "沃格光电的光电显示器件（52.36%）、光电玻璃精加工（31.11%）覆盖范围较宽，其中能够承载玻璃基板切割、玻璃基板薄化、玻璃基板镀膜，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：国内最早商业化TGV产线的厂商之一，技术指标领先，已打通全产业链。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 8532,
+            "stockCode": "002273.SZ",
+            "stockName": "水晶光电",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "与康宁签订协议，为其GlassBridge方案提供离子交换波导代工，已进入送样阶段。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002273.SZ",
+              "companyName": "水晶光电",
+              "companyProfile": "公司是国内专业从事精密薄膜光学产品研发、生产和销售的知名光电元器件制造的企业，是浙江省高新技术企业和国家火炬计划重点高新技术企业。公司专业从事光学影像、薄膜光学面板、汽车电子(AR+)、反光材料等领域相关产品的研发、生产和销售，坚守光学赛道创新发展，致力于成为全球卓越的一站式光学解决方案专家。目前公司已构建光学元器件、薄膜光学面板、半导体光学、汽车电子(AR+)、反光材料五大业务板块，产品形态已由单一的光学元器件向元器件、模组及解决方案并存转型，产品已广泛应用于智能手机、相机、智能可穿戴设备、智能家居、安防监控、车载光电、元宇宙AR/VR等领域。公司是数码产业及手机通讯产业多家国际知名企业或行业龙头企业的主要配套供应商。公司拥有精密光学冷加工技术、超硬材料光学加工技术、精密光学薄膜、半导体加工、涂覆、植珠等核心技术，光学低通滤波器、红外截止滤光片及组立件、窄带滤光片、投影机散热板、LED蓝宝石衬底、微型投影、反光材料等系列产品均具有国内、国际领先水平。",
+              "profileSummary": "公司专业从事光学影像、薄膜光学面板、汽车电子(AR+)、反光材料等领域相关产品的研发、生产和销售，坚守光学赛道创新发展，致力于成为全球卓越的一站式光学解决方案专家。目前公司已构建光学元器件、薄膜光学面板、半导体光学、汽车电子(AR+)、反光材料五大业务板块，产品形态已由单一的光学元器件向元器件、模组及解决方案并存转型，产品已广泛应用于智能手机、相机、智能可穿戴设备、智能家居、安防监控、车载光电、元宇宙AR/VR等领域。",
+              "majorProducts": "半导体光学元组件、薄膜光学面板、反光材料、精密薄膜光学元器件、汽车抬头显示器、新型显示组件",
+              "revenueComposition": "消费电子:85.04%;汽车电子(AR+):8.46%;反光材料:5.76%;其他业务:0.74%",
+              "revenueSegments": [
+                {
+                  "name": "消费电子",
+                  "sharePct": 85.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车电子(AR+)",
+                  "sharePct": 8.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "反光材料",
+                  "sharePct": 5.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "CMOS封装玻璃",
+                    "category": "电子玻璃"
+                  },
+                  {
+                    "name": "反光膜",
+                    "category": "其他光学膜"
+                  },
+                  {
+                    "name": "盖板玻璃",
+                    "category": "电子玻璃"
+                  },
+                  {
+                    "name": "窄带滤光片",
+                    "category": "滤光片"
+                  },
+                  {
+                    "name": "红外截止滤光片",
+                    "category": "滤光片"
+                  },
+                  {
+                    "name": "镜头盖玻璃",
+                    "category": "电子玻璃"
+                  }
+                ],
+                "knownProducts": [
+                  "CMOS封装玻璃",
+                  "盖板玻璃",
+                  "镜头盖玻璃",
+                  "抬头显示器(HUD)",
+                  "低通滤波器",
+                  "车载激光雷达视窗片",
+                  "AR眼镜光学模组",
+                  "反光膜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "水晶光电与新闻之间有明确产品抓手：CMOS封装玻璃、反光膜、盖板玻璃，对应与康宁签订协议，为其GlassBridge方案提供离子交换波导代工，已进入送样阶段。收入主体目前是消费电子（85.04%）、汽车电子(AR+)（8.46%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变事件能否转化为可确认的经营增量预期，随后要经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能进入利润表。订单、收入确认、产品结构和毛利率变化若形成连续改善，相关产品对整体经营的贡献会逐步提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 8535,
+            "stockCode": "300394.SZ",
+            "stockName": "天孚通信",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "FAU全球龙头，积极布局D-FAU及TGV封装等新技术以应对GlassBridge等方案演进，被英伟达列入官方生态名单。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300394.SZ",
+              "companyName": "天孚通信",
+              "companyProfile": "公司是业界领先的光器件整体解决方案提供商和光电封装制造服务商，致力于高速光器件的研发、生产和销售。产品广泛应用于人工智能、数据中心、光纤通信、激光雷达、生物光子学等领域。公司通过自主研发和外延并购，经过多年发展，形成两大核心业务板块，包括无源光器件整体解决方案业务和光电封装业务。公司积极推进国际化战略，形成双总部、双生产基地、多地研发中心的产业布局：在苏州和新加坡分别设立海内外总部；在日本、深圳、苏州设立研发中心；在江西和泰国建立量产基地，为客户提供多元化选择和本地化技术支持与服务。",
+              "profileSummary": "公司通过自主研发和外延并购，经过多年发展，形成两大核心业务板块，包括无源光器件整体解决方案业务和光电封装业务。公司积极推进国际化战略，形成双总部、双生产基地、多地研发中心的产业布局：在苏州和新加坡分别设立海内外总部；在日本、深圳、苏州设立研发中心；在江西和泰国建立量产基地，为客户提供多元化选择和本地化技术支持与服务。",
+              "majorProducts": "光收发接口组件、光纤适配器、陶瓷套管",
+              "revenueComposition": "光有源器件:58.06%;光无源器件:40.37%;其他业务:1.57%",
+              "revenueSegments": [
+                {
+                  "name": "光有源器件",
+                  "sharePct": 58.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光无源器件",
+                  "sharePct": 40.37,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "光纤连接器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "光纤阵列单元(FAU)",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "MT-FA光组件",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "Z-block波分组件",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "光纤准直器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "光纤适配器",
+                    "category": "无源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "MT-FA光组件",
+                  "Z-block波分组件",
+                  "光纤准直器",
+                  "光纤连接器",
+                  "光纤适配器",
+                  "光纤透镜阵列",
+                  "光纤阵列单元(FAU)",
+                  "光纤陶瓷插芯"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "天孚通信已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：光无源器件占收入的40.37%。公司在产业链中的位置是：FAU全球龙头，积极布局D-FAU及TGV封装等新技术以应对GlassBridge等方案演进，被英伟达列入官方生态名单，技术商业化与产品迭代速度则决定增量大小。只有完成“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，相关业务的增长才可能改善公司整体盈利。客户认证、量产良率、订单规模、产品收入占比和毛利率还需与其他主业表现同时改善；技术路线变化、良率爬坡缓慢或竞争方案更快成熟会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 8536,
+            "stockCode": "301486.SZ",
+            "stockName": "致尚科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "深度绑定Senko，受益于其MPO、SN-MT及MPC产品放量；同时MMC产品通过US Conec认证，卡位两大MPO标准体系。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301486.SZ",
+              "companyName": "致尚科技",
+              "companyProfile": "公司专注于精密电子零部件的研发和制造，致力于游戏机、VR/AR设备、专业音响为主的消费电子、通讯电子及汽车电子等零部件的研发、设计、生产和销售。目前，公司产品形成以游戏机、VR/AR设备的精密零部件为核心，以电子连接器、光纤连接器为重要构成的布局。未来，公司将以知名电子制造企业为标杆，通过提供核心产品和解决方案，与品牌商进一步深化合作，力争成为具有国际竞争力的电子零部件生产商和技术服务商。公司具备完善的质量管理体系，通过了ISO9001质量管理体系认证、ISO14001环境管理体系认证、IATF16949质量管理体系认证、GJB9001C质量管理体系认证、IECQ质量认证、德国VDE安全认证及美国UL安全认证等国际国内标准体系认证，并先后通过日本知名企业N公司、Facebook及SENKO等国际知名企业的合格供应商认证，具有较强的市场竞争力。",
+              "profileSummary": "目前，公司产品形成以游戏机、VR/AR设备的精密零部件为核心，以电子连接器、光纤连接器为重要构成的布局。未来，公司将以知名电子制造企业为标杆，通过提供核心产品和解决方案，与品牌商进一步深化合作，力争成为具有国际竞争力的电子零部件生产商和技术服务商。",
+              "majorProducts": "精密制造及其他、连接器、游戏机零部件",
+              "revenueComposition": "光通信产品:56.17%;游戏机零部件:22.37%;自动化设备:10.69%;电子连接器:7.69%;其他业务:2.22%;其他产品:0.87%",
+              "revenueSegments": [
+                {
+                  "name": "光通信产品",
+                  "sharePct": 56.17,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "游戏机零部件",
+                  "sharePct": 22.37,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "自动化设备",
+                  "sharePct": 10.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子连接器",
+                  "sharePct": 7.69,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 0.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "光纤连接器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "USB连接器",
+                    "category": "消费电子连接器"
+                  },
+                  {
+                    "name": "HDMI连接器",
+                    "category": "计算机连接器"
+                  },
+                  {
+                    "name": "游戏机电源连接器",
+                    "category": "消费电子连接器"
+                  },
+                  {
+                    "name": "车载媒体设备连接器",
+                    "category": "通用汽车连接器"
+                  },
+                  {
+                    "name": "音频连接器",
+                    "category": "消费电子连接器"
+                  }
+                ],
+                "knownProducts": [
+                  "手机辅料自动贴合机",
+                  "AOI光学检测仪",
+                  "数控研磨抛光机",
+                  "USB连接器",
+                  "游戏机电源连接器",
+                  "音频连接器",
+                  "HDMI连接器",
+                  "车载媒体设备连接器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "致尚科技更接近“小基数、高弹性”的事件期权，而不是当前利润主线。电子连接器占收入的7.69%，公司在产业链中的具体抓手是：深度绑定Senko，受益于其MPO、SN-MT及MPC产品放量；同时MMC产品通过US Conec认证，卡位两大MPO标准体系。若政策约束与需求释放节奏沿着“政策先改变客户采购意愿或行业准入，再通过项目落地、订单转化和成本变化影响经营结果”兑现，相关业务增速可能很高，但较低的收入基数意味着短期贡献未必足以改变公司整体业绩。这类标的最重要的不是行业空间叙事，而是政策细则、招投标规模、项目开工率和回款进度能否证明业务开始跨越规模门槛；若政策执行弱于预期、补贴退坡或项目回款周期拉长，估值弹性往往会先于报表弹性消退。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 14,
+        "stocks": [
+          {
+            "sourceRowNumber": 8518,
+            "stockCode": "301188.SZ",
+            "stockName": "力诺药包",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "具备高硼硅技术储备，适配TGV低膨胀系数材料要求，已进入海外产业链送样验证。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301188.SZ",
+              "companyName": "力诺药包",
+              "companyProfile": "公司始于1995年，是玻璃新材料高新技术企业。现拥有医药包装、耐热玻璃系列产品，凭借全产业链、先进技术、多元产品、卓越品质与一流服务，赢得全球客户认可，产品畅销世界多国。凭借卓越实力与深厚积淀，公司荣任中国医药包装协会副会长单位、药用玻璃容器专委会主任单位、标准化工作委员会副主任单位，成为全国唯一的中国医药包装协会药用玻璃培训基地。公司还参与20余项国际、国家及行业标准的制定和修订，拥有CNAS认可实验室及140余项专利技术，荣获国家级制造业单项冠军企业、国家知识产权示范企业、环保部关于重点企业环保绩效分级-A级企业、中国轻工业数字化转型“领跑者”以及山东省民营经济高质量发展突出贡献企业、山东省智能制造标杆企业、山东省绿色工厂、山东省先进级(省级)智能工厂等诸多荣誉，并凭借在智能制造方面的深入实践，成为国内医药包装行业首个通过智能制造能力成熟度(CMMM)四级认证的企业。公司恪守“产业报国，追求卓越”精神，秉承“成为全球客户信赖的医药包装企业”的愿景和“产品主义、长期主义、利他主义”的价值观，践行“服务客户，造福社会，富裕员工，回报股东”的使命，力诺药包聚焦细分市场，立足产业定位；智能制造驱动，全球布局发展，在医药包装、耐热玻璃主营业务领域砥砺奋进，与广大客户携手，于时代浪潮中并肩前行，为医药包装产业高质量发展注入活力，为让全世界人民都用上健康的耐热玻璃矢志奋斗。",
+              "profileSummary": "现拥有医药包装、耐热玻璃系列产品，凭借全产业链、先进技术、多元产品、卓越品质与一流服务，赢得全球客户认可，产品畅销世界多国。公司恪守“产业报国，追求卓越”精神，秉承“成为全球客户信赖的医药包装企业”的愿景和“产品主义、长期主义、利他主义”的价值观，践行“服务客户，造福社会，富裕员工，回报股东”的使命，力诺药包聚焦细分市场，立足产业定位；智能制造驱动，全球布局发展，在医药包装、耐热玻璃主营业务领域砥砺奋进，与广大客户携手，于时代浪潮中并…",
+              "majorProducts": "高硼硅耐热玻璃、中硼硅药用玻璃",
+              "revenueComposition": "耐热玻璃:62.09%;药用包装:36.34%;其他业务:1.57%",
+              "revenueSegments": [
+                {
+                  "name": "耐热玻璃",
+                  "sharePct": 62.09,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "药用包装",
+                  "sharePct": 36.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "中硼硅药用玻璃",
+                    "category": "玻璃瓶罐"
+                  },
+                  {
+                    "name": "低硼硅药用玻璃",
+                    "category": "玻璃瓶罐"
+                  },
+                  {
+                    "name": "电光源玻璃",
+                    "category": "液晶显示材料"
+                  },
+                  {
+                    "name": "高硼硅玻璃",
+                    "category": "其他玻璃"
+                  }
+                ],
+                "knownProducts": [
+                  "高硼硅玻璃",
+                  "电光源玻璃",
+                  "中硼硅药用玻璃",
+                  "低硼硅药用玻璃"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "力诺药包已经具备中硼硅药用玻璃、低硼硅药用玻璃、电光源玻璃等业务能力，具备高硼硅技术储备，适配TGV低膨胀系数材料要求，已进入海外产业链送样验证并非单纯概念映射。当前对应的收入被归入耐热玻璃（62.09%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于技术商业化与产品迭代速度是否通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”放大，并最终反映在客户认证、量产良率、订单规模、产品收入占比和毛利率上；技术路线变化、良率爬坡缓慢或竞争方案更快成熟会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 8519,
+            "stockCode": "601636.SH",
+            "stockName": "旗滨集团",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "拟定增布局射频玻璃基板，已突破高硼硅低介电玻璃配方等关键技术。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601636.SH",
+              "companyName": "旗滨集团",
+              "companyProfile": "公司成立于2005年7月8日，2011年8月12日在上海证券交易所A股主板上市。公司从事玻璃产品研发、制造与销售。经过多年的发展，公司已成为一家集硅砂原料、优质浮法玻璃及深加工玻璃、光伏光电玻璃、高性能电子玻璃、中性硼硅药用玻璃研发、生产、销售为一体的大型玻璃企业集团，是国内建筑玻璃原片、深加工玻璃、光伏光电玻璃、高性能电子玻璃等领域的龙头企业之一。公司业务布局位于中国经济发展活跃的珠三角、长三角、福建沿海、长株潭经济带、西部云贵川、京津冀经济带的同时，以“一带一路”战略为契机，积极布局马来西亚及沿线国家和地区的投资，开拓海外市场。在福建漳州、广东河源、湖南醴陵、浙江绍兴、浙江长兴、浙江平湖、马来西亚森美兰州等建有大型浮法玻璃原片生产基地；在湖南郴州、福建漳州、浙江宁波、云南昭通、马来西亚沙巴州建有或在建光伏玻璃基地；在湖南醴陵、广东河源、浙江长兴、浙江绍兴、天津、马来西亚森美兰州建有节能建筑玻璃基地；在福建东山、湖南醴陵、广东河源、马来西亚森美兰州配套建设有普通硅砂矿，普通硅砂自给率位于行业前列；在湖南资兴、云南彝良、马来西亚沙巴州古达配套建设有超白硅砂矿，同时在福建漳州建设有大型超白砂加工基地，砂矿及加工厂达产后，超白硅砂自给率有望达到100%。2024年，公司继续入围“中国制造业民营企业500强”，被中国上市公司协会列入“上市公司董事会最佳实践案例”、“上市公司董办最佳实践案例”。",
+              "profileSummary": "公司从事玻璃产品研发、制造与销售。公司业务布局位于中国经济发展活跃的珠三角、长三角、福建沿海、长株潭经济带、西部云贵川、京津冀经济带的同时，以“一带一路”战略为契机，积极布局马来西亚及沿线国家和地区的投资，开拓海外市场。",
+              "majorProducts": "高新玻璃、光伏玻璃、节能建筑玻璃、特种玻璃、优质浮法玻璃、中性硼硅药用玻璃",
+              "revenueComposition": "超白光伏玻璃:44.25%;优质浮法玻璃原片:37.48%;节能建筑玻璃:14.56%;其他功能玻璃:2.57%;其他业务:1.1%;物流:0.03%",
+              "revenueSegments": [
+                {
+                  "name": "超白光伏玻璃",
+                  "sharePct": 44.25,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "优质浮法玻璃原片",
+                  "sharePct": 37.48,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "节能建筑玻璃",
+                  "sharePct": 14.56,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他功能玻璃",
+                  "sharePct": 2.57,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物流",
+                  "sharePct": 0.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "中硼硅药用玻璃",
+                    "category": "玻璃瓶罐"
+                  },
+                  {
+                    "name": "中空玻璃",
+                    "category": "工程建筑玻璃"
+                  },
+                  {
+                    "name": "光伏玻璃",
+                    "category": "光伏电池辅件"
+                  },
+                  {
+                    "name": "汽车玻璃",
+                    "category": "汽车车身附件"
+                  },
+                  {
+                    "name": "浮法玻璃",
+                    "category": "工程建筑玻璃"
+                  },
+                  {
+                    "name": "热反射镀膜玻璃",
+                    "category": "工程建筑玻璃"
+                  }
+                ],
+                "knownProducts": [
+                  "中空玻璃",
+                  "浮法玻璃",
+                  "热反射镀膜玻璃",
+                  "着色玻璃",
+                  "电子玻璃",
+                  "汽车玻璃",
+                  "光伏玻璃",
+                  "中硼硅药用玻璃"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "旗滨集团的相关业务已决定公司大部分经营表现：超白光伏玻璃（44.25%）、优质浮法玻璃原片（37.48%）合计约占收入的81.73%。公司与事件的直接业务联系是：拟定增布局射频玻璃基板，已突破高硼硅低介电玻璃配方等关键技术，真正的增量取决于技术商业化与产品迭代速度，并需经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，客户认证、量产良率、订单规模、产品收入占比和毛利率需要显示公司获得超越行业的增量。技术路线变化、良率爬坡缓慢或竞争方案更快成熟是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 8520,
+            "stockCode": "600552.SH",
+            "stockName": "凯盛科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "依托央企平台，同步布局玻璃原片、TGV打孔、镀铜全产业链技术。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600552.SH",
+              "companyName": "凯盛科技",
+              "companyProfile": "公司原名安徽方兴科技股份有限公司，成立于2000年9月30日，2002年11月在上海证券交易所上市，2016年3月公司更名为凯盛科技股份有限公司。公司是世界500强中国建材集团的三级上市公司，也是凯盛科技集团“3+1”战略布局中显示材料和应用材料的核心研发和产业平台。总部位于蚌埠市高新技术产业开发区，在深圳、洛阳、池州等地拥有生产研发基地，是国家技术创新示范企业、国家企业技术中心、国家高新技术企业、国家火炬计划项目产业化示范企业。多年来，公司在集团的支持下，充分利用国家重点实验室、玻璃新材料国家制造业创新中心等顶级研发平台优势，汇聚创新研发的合力，累计承担十四五国家重点研发计划项目课题、国家发改委产业发展重点专项、建材行业“揭榜挂帅”项目等各类省级以上科研项目20项。",
+              "profileSummary": "公司是世界500强中国建材集团的三级上市公司，也是凯盛科技集团“3+1”战略布局中显示材料和应用材料的核心研发和产业平台。",
+              "majorProducts": "AR减反射玻璃、PDLC调光膜、TFT显示玻璃减薄、TP模块系列产品、车载模组系列产品、电容式触摸屏、方兴手机模组、钙稳定氧化锆、高纯电熔氧化锆、硅微粉、华光浮法玻璃、华光氧化铟锡ITO导电膜玻璃、华光在线镀膜玻璃、结晶石英粉、抛光粉、球形石英粉、球形氧化铝、熔融石英粉、数码显示模组系列产品、钛酸钡、脱硅锆、窄分布球铝、智能穿戴模组系列产品",
+              "revenueComposition": "显示材料:78.67%;应用材料:19.37%;其他业务:1.96%",
+              "revenueSegments": [
+                {
+                  "name": "显示材料",
+                  "sharePct": 78.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "应用材料",
+                  "sharePct": 19.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "ITO导电玻璃",
+                    "category": "电子玻璃"
+                  },
+                  {
+                    "name": "盖板玻璃",
+                    "category": "电子玻璃"
+                  }
+                ],
+                "knownProducts": [
+                  "ITO导电玻璃",
+                  "盖板玻璃",
+                  "复合氧化锆",
+                  "电熔氧化锆",
+                  "球形氧化铝",
+                  "ITO(氧化铟锡)导电膜",
+                  "抛光粉",
+                  "石英粉"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "凯盛科技拥有ITO导电玻璃、盖板玻璃，其产业链位置与依托央企平台，同步布局玻璃原片、TGV打孔、镀铜全产业链技术一致；当前的显示材料（78.67%）、应用材料（19.37%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由技术商业化与产品迭代速度决定，并需完成“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”。只有客户认证、量产良率、订单规模、产品收入占比和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；技术路线变化、良率爬坡缓慢或竞争方案更快成熟则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 8524,
+            "stockCode": "300757.SZ",
+            "stockName": "罗博特科",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "子公司ficonTEC与英伟达联合开发CPO规模化制造测试方案，深度受益于GlassBridge等被动耦合方案。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300757.SZ",
+              "companyName": "罗博特科",
+              "companyProfile": "公司是一家研制高端自动化装备和基于工业互联网技术的智能制造执行系统软件(MES)的高新技术企业,公司拥有完整的研发、设计、装配、测试、销售和服务体系，为光伏电池、电子及半导体、汽车精密零部件、食品药品等领域提供柔性、智能、高效的高端自动化装备及制造MES执行系统软件。公司高端自动化装备主要应用于工业生产过程，具体产品包括智能自动化设备、智能检测设备、智能仓储及物料转运系统，通过上述装备可以帮助客户提高生产效率，降低人力成本，为未来智能工厂打下硬件基础。经过多年的研究开发和技术沉淀，公司已获得与生产经营相关的多项授权专利,及MES软件著作权，掌握多项核心技术。",
+              "profileSummary": "公司是一家研制高端自动化装备和基于工业互联网技术的智能制造执行系统软件(MES)的高新技术企业,公司拥有完整的研发、设计、装配、测试、销售和服务体系，为光伏电池、电子及半导体、汽车精密零部件、食品药品等领域提供柔性、智能、高效的高端自动化装备及制造MES执行系统软件。公司高端自动化装备主要应用于工业生产过程，具体产品包括智能自动化设备、智能检测设备、智能仓储及物料转运系统，通过上述装备可以帮助客户提高生产效率，降低人力成本，为未来智能…",
+              "majorProducts": "光伏清洗工艺设备、太阳能电池铜互联整体解决方案、智能制造系统R2 Fab、智能装配、测试设备及系统、智能自动化设备",
+              "revenueComposition": "光电子及半导体封测设备:46.23%;光伏设备及整体解决方案:45.59%;其他:8.17%",
+              "revenueSegments": [
+                {
+                  "name": "光电子及半导体封测设备",
+                  "sharePct": 46.23,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "光伏设备及整体解决方案",
+                  "sharePct": 45.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "共封装光学(CPO)测试设备",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "光子器件集成耦合设备",
+                    "category": "半导体封装设备"
+                  }
+                ],
+                "knownProducts": [
+                  "硅锭红外检测设备",
+                  "光子器件集成耦合设备",
+                  "共封装光学(CPO)测试设备",
+                  "光伏用硅片分选机",
+                  "太阳能电池片自动装卸片机",
+                  "制造执行系统(MES)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "罗博特科的光电子及半导体封测设备（46.23%）覆盖范围较宽，其中能够承载共封装光学(CPO)测试设备、光子器件集成耦合设备，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：子公司ficonTEC与英伟达联合开发CPO规模化制造测试方案，深度受益于GlassBridge等被动耦合方案。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 8525,
+            "stockCode": "688090.SH",
+            "stockName": "瑞松科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "MPO自动化设备重复位移精度达0.3微米，契合GlassBridge方案推动的高芯数MPO趋势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688090.SH",
+              "companyName": "瑞松科技",
+              "companyProfile": "公司是一家业务涵盖机器人、AI机器视觉、工业软件、智能制造领域的研发、设计、制造、应用和销售服务，为客户提供柔性自动化、智能化系统解决方案的高新技术企业。2020年，公司成功在上海证券交易所科创板上市。公司坚持以“技术引领企业发展”的理念，在各工业领域从事机器人、工业软件、关键部件、工艺方案、工业服务等业务活动，获取过多项自主研发核心技术成果，并服务国内外高端制造业用户。客户广泛覆盖新能源汽车、燃油车、汽车零部件、两轮车、机械重工、3C电子、电梯、轨道交通、海工船舶等多个领域。",
+              "profileSummary": "公司是一家业务涵盖机器人、AI机器视觉、工业软件、智能制造领域的研发、设计、制造、应用和销售服务，为客户提供柔性自动化、智能化系统解决方案的高新技术企业。公司坚持以“技术引领企业发展”的理念，在各工业领域从事机器人、工业软件、关键部件、工艺方案、工业服务等业务活动，获取过多项自主研发核心技术成果，并服务国内外高端制造业用户。",
+              "majorProducts": "白车身柔性总拼焊装生产线、侧围焊装生产线、地板焊装生产线、电梯机器人生产线、动力电池智能制造产线、机器人工作站、机器人配件销售、机械重工智能制造产线、精密电子柔性自动化装配生产线、精密电子智能制造产线、门盖焊装生产线、摩托车、电动车轻量化焊接生产线、汽车智能制造产线",
+              "revenueComposition": "机器人自动化生产线:82.26%;机器人工作站:8.93%;机器人配件销售及其他:8.67%;其他业务:0.14%",
+              "revenueSegments": [
+                {
+                  "name": "机器人自动化生产线",
+                  "sharePct": 82.26,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "机器人工作站",
+                  "sharePct": 8.93,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "机器人配件销售及其他",
+                  "sharePct": 8.67,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "摩托车、电动车轻量化焊接生产线",
+                    "category": "自动化生产设备"
+                  },
+                  {
+                    "name": "机器人配件销售",
+                    "category": "机械设备贸易"
+                  },
+                  {
+                    "name": "汽车车身智能焊装系统(生产线)",
+                    "category": "汽车自动化生产线"
+                  },
+                  {
+                    "name": "焊接机器人工作站",
+                    "category": "工业机器人"
+                  },
+                  {
+                    "name": "电梯机器人生产线",
+                    "category": "自动化生产设备"
+                  },
+                  {
+                    "name": "精密电子柔性自动化装配生产线",
+                    "category": "自动化装配设备"
+                  }
+                ],
+                "knownProducts": [
+                  "机器人配件销售",
+                  "焊接机器人工作站",
+                  "装配机器人工作站",
+                  "汽车车身智能焊装系统(生产线)",
+                  "摩托车、电动车轻量化焊接生产线",
+                  "电梯机器人生产线",
+                  "精密电子柔性自动化装配生产线"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "瑞松科技已经参与事件相关业务，但收入基数仍小：机器人工作站占收入的8.93%，说明公司已有业务抓手，但“MPO自动化设备重复位移精度达0.3微米，契合GlassBridge方案推动的高芯数MPO趋势”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于事件能否转化为可确认的经营增量能否驱动“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，从而推动业务跨过小规模阶段。在此之前，订单、收入确认、产品结构和毛利率变化比总收入增速更值得跟踪；若事件关联停留在主题层面，未形成可持续订单或利润贡献，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 8526,
+            "stockCode": "688700.SH",
+            "stockName": "东威科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "玻璃基板电镀环节潜在核心供应商，可提供镀铜设备。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688700.SH",
+              "companyName": "东威科技",
+              "companyProfile": "公司于2021年6月15日在上海证券交易所科创板上市。公司主要从事高端精密电镀设备及其配套设备的研发、设计、生产及销售的国家级高新技术企业，主要产品分为三大领域，第一是高端印制电路(PCB)电镀专用设备(包括VCP、水平式除胶化铜、水平镀三合一、陶瓷镀、MSAP移载式VCP等设备)，第二类是五金表面处理专用设备(包括龙门、五金连续电镀等设备)，第三类面向新能源动力电池正、负极材料专用设备、光伏领域专用设备、真空溅射专用设备的研发与制造。公司自主研发的垂直连续电镀设备可以用于各种基材特性、特殊工艺，应用场景包含5G通讯、消费电子、汽车电子、工控医疗、航空航天等。目前公司下游客户已覆盖大多数国内一线PCB制造厂商，同时已成功将产品出口至日本、韩国、欧洲和东南亚等地区。公司的新能源专用设备——卷式水平膜材电镀设备生产的PET复合铜膜作为锂电负极集流体新材料能有效提高电池安全性和续航里程，该材料可用于动力电池、储能电池及3C电池等领域。公司的光伏镀铜设备利用铜代替银技术可大大降低目前晶硅电池生产成本，突破光伏电力大规模应用的材料瓶颈，将为“碳中和”目标作出重要贡献。2023年6月13日，公司全球存托凭证(GDR)于瑞士证券交易所正式挂牌上市交易，GDR的成功发行有利于公司持续强化竞争优势，稳步推进全球市场的业务发展和扩张。展望未来，公司将始终坚持“以客户需求为导向，以技术创新为动力”的经营理念，凭借持续研发能力为下游客户提供技术支持与服务，成为填补技术空白、解决行业痛点的电镀设备专家。",
+              "profileSummary": "公司主要从事高端精密电镀设备及其配套设备的研发、设计、生产及销售的国家级高新技术企业，主要产品分为三大领域，第一是高端印制电路(PCB)电镀专用设备(包括VCP、水平式除胶化铜、水平镀三合一、陶瓷镀、MSAP移载式VCP等设备)，第二类是五金表面处理专用设备(包括龙门、五金连续电镀等设备)，第三类面向新能源动力电池正、负极材料专用设备、光伏领域专用设备、真空溅射专用设备的研发与制造。目前公司下游客户已覆盖大多数国内一线PCB制造厂商…",
+              "majorProducts": "刚性板VCP、连续滚镀设备、龙门式电镀设备、柔性板卷对卷VCP、柔性板片对片VCP、水平式除胶化铜设备",
+              "revenueComposition": "垂直连续电镀设备:69.76%;龙门式电镀设备:9.85%;其他:7.84%;水平式表面处理设备:5.09%;五金连续电镀设备:4.26%;卷式水平膜材电镀设备:2.47%;其他业务:0.48%;光伏镀铜设备:0.26%",
+              "revenueSegments": [
+                {
+                  "name": "垂直连续电镀设备",
+                  "sharePct": 69.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "龙门式电镀设备",
+                  "sharePct": 9.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 7.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "水平式表面处理设备",
+                  "sharePct": 5.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "五金连续电镀设备",
+                  "sharePct": 4.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "卷式水平膜材电镀设备",
+                  "sharePct": 2.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.48,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光伏镀铜设备",
+                  "sharePct": 0.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "PCB专用水平式除胶化铜设备",
+                  "刚性板垂直连续电镀设备",
+                  "卷式水平膜材电镀设备",
+                  "柔性板垂直连续电镀设备",
+                  "龙门式五金电镀设备"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东威科技当前收入集中在垂直连续电镀设备（69.76%）、龙门式电镀设备（9.85%），现有产品以PCB专用水平式除胶化铜设备、刚性板垂直连续电镀设备、卷式水平膜材电镀设备、柔性板垂直连续电镀设备为主，与新闻所指的“玻璃基板电镀环节潜在核心供应商，可提供镀铜设备”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，事件能否转化为可确认的经营增量才可能沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”进入经营结果。在此之前，订单、收入确认、产品结构和毛利率变化若没有出现，事件对公司基本面的影响应按较弱处理；事件关联停留在主题层面，未形成可持续订单或利润贡献会进一步压低相关性。"
+          },
+          {
+            "sourceRowNumber": 8528,
+            "stockCode": "688603.SH",
+            "stockName": "天承科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "是为数不多可实现微米级微孔填实的厂商，在玻璃基板电镀液添加剂领域卡位优势领先。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688603.SH",
+              "companyName": "天承科技",
+              "companyProfile": "公司主要从事电子电路所需要的功能性湿电子化学品的研发、生产和销售。自设立以来，公司一直致力于功能性湿电子化学品制备及应用技术的开发，掌握了PCB、封装载板、触摸屏沉铜产品制备及应用技术和电镀铜产品制备及应用技术等多项核心技术，并开发出水平沉铜、电镀、表面处理专用化学品等多种产品。在PCB领域，公司研发出水平沉铜专用化学品，产品拥有良好的可靠性以及稳定的制程能力，适用现行的高频高速材料、PI材料和BT材料，能够有效满足客户生产高端PCB的需求。针对适用于不溶性阳极电镀、脉冲电镀的电镀添加剂技术进行研发，成功研发出SkyPlateCu6257和SkyPlateCu6258两大产品系列，解决了传统可溶性阳极的电镀成本高、效率低、均匀性不足和繁重的阳极铜球保养问题。在封装载板领域，ABF载板除胶沉铜技术得到中科院微电子所认可，积极推进技术迭代和产品升级，兼容新型ABF材料和类ABF材料，正在提供极具竞争力的解决方案。公司立足高端PCB制造专用功能性湿电子化学品领域，正重点发展IC载板专用功能性湿电子化学品领域，并在显示屏、半导体、新能源专用功能性湿电子化学品等领域重点布局。随着AI技术迅猛发展，先进封装成为推动半导体发展的关键力量之一，新工艺和新材料的引入对功能性湿电子化学品提出了更新、更高的要求。公司围绕2.5D和3D技术等领域需求研发了涵盖TSV、RDL、Bumping、TGV和大马士革等工艺所需电镀添加剂，不断实现关键技术突破与产品应用，提速半导体制造关键材料及技术进口替代。上海工厂集成电路功能性湿电子化学品项目建设已顺利投产，陆续进入客户验证、产品放量阶段。",
+              "profileSummary": "公司主要从事电子电路所需要的功能性湿电子化学品的研发、生产和销售。在封装载板领域，ABF载板除胶沉铜技术得到中科院微电子所认可，积极推进技术迭代和产品升级，兼容新型ABF材料和类ABF材料，正在提供极具竞争力的解决方案。",
+              "majorProducts": "SAP孔金属化专用化学品（ABF载板除胶沉铜）、触摸屏专用电子化学品、垂直沉铜专用化学品、电镀专用化学品、其他表面处理产品、水平沉铜专用化学品、铜面处理专用化学品",
+              "revenueComposition": "沉铜电镀专用化学品:87.68%;铜面处理专用化学品:7.03%;其他:3.89%;其他业务:1.4%",
+              "revenueSegments": [
+                {
+                  "name": "沉铜电镀专用化学品",
+                  "sharePct": 87.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜面处理专用化学品",
+                  "sharePct": 7.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "PCB化学沉铜专用化学品",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "PCB化学沉锡专用化学品",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "PCB电镀专用化学品",
+                    "category": "电路板材料"
+                  },
+                  {
+                    "name": "PCB表面处理专用化学品",
+                    "category": "电路板材料"
+                  }
+                ],
+                "knownProducts": [
+                  "PCB化学沉铜专用化学品",
+                  "PCB化学沉锡专用化学品",
+                  "PCB电镀专用化学品",
+                  "PCB表面处理专用化学品"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "天承科技与新闻之间有明确产品抓手：PCB化学沉铜专用化学品、PCB化学沉锡专用化学品、PCB电镀专用化学品，对应是为数不多可实现微米级微孔填实的厂商，在玻璃基板电镀液添加剂领域卡位优势领先。收入主体目前是沉铜电镀专用化学品（87.68%）、铜面处理专用化学品（7.03%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变事件能否转化为可确认的经营增量预期，随后要经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能进入利润表。订单、收入确认、产品结构和毛利率变化若形成连续改善，相关产品对整体经营的贡献会逐步提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 8533,
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "掌握TGV玻璃基板中前段核心自主技术，并已建成中试线和专用厂房。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300433.SZ",
+              "companyName": "蓝思科技",
+              "companyProfile": "公司以科技创新为核心、智能智造为驱动，是业内领先的智能终端全产业链一站式精密制造解决方案提供商。公司前身于1993年在深圳成立，2006年总部落户湖南长沙，随后实现“A+H”双资本平台战略布局。公司在新材料应用领域持续突破，率先将玻璃、蓝宝石、陶瓷等脆性材料引入消费电子行业。凭借对玻璃、金属、陶瓷、塑胶、皮革、硅胶、玻纤、碳纤、化纤等十余种材料的深度技术积累，以及强大的平台化能力，公司实现了从原材料生产、功能模块贴合到整机组装的垂直整合能力，并与全球头部消费电子及智能汽车品牌建立了长期战略合作。公司通过“新材料、新技术、新装备、新领域”战略，持续拓展新领域。业务覆盖AI智能终端(包含智能手机、AI眼镜、智能汽车、具身智能等)、AI服务器、商业航天、光通信等领域，形成多场景协同发展的业务布局。",
+              "profileSummary": "公司在新材料应用领域持续突破，率先将玻璃、蓝宝石、陶瓷等脆性材料引入消费电子行业。业务覆盖AI智能终端(包含智能手机、AI眼镜、智能汽车、具身智能等)、AI服务器、商业航天、光通信等领域，形成多场景协同发展的业务布局。",
+              "majorProducts": "新能源汽车及智能座舱类、智能手机与电脑类、智能头显与智能穿戴类",
+              "revenueComposition": "智能手机与电脑类:82.23%;新能源汽车及智能座舱类:8.68%;智能头显与智能穿戴类:5.35%;其他业务:2.33%;其他智能终端类:1.41%",
+              "revenueSegments": [
+                {
+                  "name": "智能手机与电脑类",
+                  "sharePct": 82.23,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源汽车及智能座舱类",
+                  "sharePct": 8.68,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "智能头显与智能穿戴类",
+                  "sharePct": 5.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他智能终端类",
+                  "sharePct": 1.41,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "盖板玻璃",
+                    "category": "电子玻璃"
+                  },
+                  {
+                    "name": "触控显示模组",
+                    "category": "触控模组"
+                  },
+                  {
+                    "name": "超薄夹胶多功能车窗玻璃",
+                    "category": "汽车车身附件"
+                  }
+                ],
+                "knownProducts": [
+                  "盖板玻璃",
+                  "人形机器人",
+                  "超薄夹胶多功能车窗玻璃",
+                  "AI眼镜结构件",
+                  "指纹识别模组",
+                  "手机影像模组",
+                  "手机摄像头陶瓷圈口",
+                  "手机摄像头装饰件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "蓝思科技已经具备盖板玻璃、触控显示模组、超薄夹胶多功能车窗玻璃等业务能力，掌握TGV玻璃基板中前段核心自主技术，并已建成中试线和专用厂房并非单纯概念映射。当前对应的收入被归入智能手机与电脑类（82.23%）、新能源汽车及智能座舱类（8.68%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于技术商业化与产品迭代速度是否通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”放大，并最终反映在客户认证、量产良率、订单规模、产品收入占比和毛利率上；技术路线变化、良率爬坡缓慢或竞争方案更快成熟会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 8534,
+            "stockCode": "300088.SZ",
+            "stockName": "长信科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "绑定台系面板厂切入TGV前道加工环节，工艺链条完整，具备RDL制造能力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300088.SZ",
+              "companyName": "长信科技",
+              "companyProfile": "公司系2000年4月成立的股份制高新技术企业，2010年5月在创业板上市，为芜湖市第一家在创业板上市企业。公司专业从事平板显示器件中关键基础材料、器件的研发、生产、销售和服务，产品包括ITO透明导电玻璃、触控Sensor和模组、TFT-LCD面板减薄、高端手机LCM液晶模组等。公司拥有深圳德普特电子有限公司、深圳分公司、赣州德普特科技有限公司、天津美泰真空技术有限公司和重庆永信科技有限公司等子分公司。公司坚持以市场、研发为导向，拥有国家级企业技术中心、国家级博士工作站、省级工程技术中心等研发平台，构建了多技术方向、多层次的研发体系。经过二十余年的努力，长信科技在触控显示行业快速成长，成为国内该行业为数不多的具有核心竞争力的优秀企业，公司凭借其创新的解决方案占据了行业的领先地位。目前为全球最大的ITO导电玻璃制造商，TFT液晶基板减薄也是国际上综合能力最强，车载触控显示模组综合实力位居国内前列，手机LCM模组为国内高端手机品牌指定供应商。",
+              "profileSummary": "公司专业从事平板显示器件中关键基础材料、器件的研发、生产、销售和服务，产品包括ITO透明导电玻璃、触控Sensor和模组、TFT-LCD面板减薄、高端手机LCM液晶模组等。目前为全球最大的ITO导电玻璃制造商，TFT液晶基板减薄也是国际上综合能力最强，车载触控显示模组综合实力位居国内前列，手机LCM模组为国内高端手机品牌指定供应商。",
+              "majorProducts": "超薄玻璃盖板（UTG）、超薄液晶显示面板、汽车电子、消费电子触控显示模组",
+              "revenueComposition": "显示器件材料:100%",
+              "revenueSegments": [
+                {
+                  "name": "显示器件材料",
+                  "sharePct": 100.0,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "触控显示模组",
+                    "category": "触控模组"
+                  },
+                  {
+                    "name": "ITO导电玻璃",
+                    "category": "电子玻璃"
+                  },
+                  {
+                    "name": "OLED显示屏",
+                    "category": "OLED"
+                  },
+                  {
+                    "name": "液晶面板减薄",
+                    "category": "面板"
+                  },
+                  {
+                    "name": "车载显示屏",
+                    "category": "LCD"
+                  }
+                ],
+                "knownProducts": [
+                  "ITO导电玻璃",
+                  "车载显示屏",
+                  "OLED显示屏",
+                  "液晶面板减薄",
+                  "触控显示模组"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "长信科技已经具备触控显示模组、ITO导电玻璃、OLED显示屏等业务能力，绑定台系面板厂切入TGV前道加工环节，工艺链条完整，具备RDL制造能力并非单纯概念映射。当前对应的收入被归入显示器件材料（100%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 8537,
+            "stockCode": "300570.SZ",
+            "stockName": "太辰光",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内唯一获US Conec授权可生产MT插芯的企业，深度绑定康宁供应链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300570.SZ",
+              "companyName": "太辰光",
+              "companyProfile": "公司是一家集研发、生产、销售为一体的高科技企业，是中国陶瓷插芯行业的主导企业之一，也是国内MPO/MTP光连接器细分市场的领先企业，是全球数据中心建设相关光互联器件产品需求的重要供应商之一。公司主要从事的产品包括陶瓷插芯、光纤连接器、耦合器、光纤光栅等光器件以及光传感监测系统，产品主要销往海外。公司作为一家高科技民营企业，十多年来发展快速而稳健。公司拥有完整的研发体系，通过SGS机构的ISO9001：2000质量管理体系认证，认定为深圳市高新技术企业和国家高新技术企业。在光通信领域，公司的光器件产品得到国内外用户的高度认可，优良的产品品质与服务使企业保持着高速的增长；在光纤传感领域，公司在智能电网的配电使用安全监控上处于国内领先的地位。公司一直致力于产品创新、工艺提升和设备自动化研发，拥有各类专利，并作为我国光传感行业代表企业之一，参与了中国电力企业联合会行业标准、团体标准和中国电器工业协会相关团体标准的部分起草工作。",
+              "profileSummary": "公司是一家集研发、生产、销售为一体的高科技企业，是中国陶瓷插芯行业的主导企业之一，也是国内MPO/MTP光连接器细分市场的领先企业，是全球数据中心建设相关光互联器件产品需求的重要供应商之一。公司主要从事的产品包括陶瓷插芯、光纤连接器、耦合器、光纤光栅等光器件以及光传感监测系统，产品主要销往海外。",
+              "majorProducts": "AWG 芯片、MT 插芯、PLC 分路器、PLC 芯片、波分复用器、常规及高密度光纤连接器、光传感、光缆熔接箱、光模块、光纤配线机箱、光纤柔性板、陶瓷插芯、有源光缆（AOC）",
+              "revenueComposition": "光器件-产品:97.96%;其他:1.8%;光纤传感产品:0.24%",
+              "revenueSegments": [
+                {
+                  "name": "光器件-产品",
+                  "sharePct": 97.96,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光纤传感产品",
+                  "sharePct": 0.24,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "光纤连接器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "MT插芯",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "PLC分路器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "PLC分路器晶圆",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "PLC分路器芯片",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "光纤适配器",
+                    "category": "无源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "含DSP可插拔光模块(DPO)",
+                  "光纤光缆",
+                  "有源光缆(AOC)",
+                  "MT插芯",
+                  "PLC分路器",
+                  "PLC分路器晶圆",
+                  "PLC分路器芯片",
+                  "光纤连接器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "太辰光的相关业务已决定公司大部分经营表现：光器件-产品占收入的97.96%。公司与事件的直接业务联系是：国内唯一获US Conec授权可生产MT插芯的企业，深度绑定康宁供应链，真正的增量取决于研发里程碑与商业化成功概率，并需经过“研发或授权进展改变项目成功率和未来现金流预期，再通过里程碑收入、销售分成或费用投入影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，临床数据、监管节点、首付款及里程碑确认和销售放量需要显示公司获得超越行业的增量。研发、审批或商业化进度不及预期，且前期投入难以形成对应回报是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 8538,
+            "stockCode": "688025.SH",
+            "stockName": "杰普特",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "MPO产品同时通过US Conec和Senko认证，具备自研设备能力，成本优势突出。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688025.SH",
+              "companyName": "杰普特",
+              "companyProfile": "公司主营业务为研发、生产和销售激光器以及主要用于集成电路和半导体光电相关器件精密检测及微加工的智能装备。公司是中国首家商用“脉宽可调高功率脉冲光纤激光器(MOPA脉冲光纤激光器)”生产制造商和领先的光电精密检测及激光加工智能装备提供商。经过多年发展，公司以激光器研发为基础，打造激光与光学、测试与测量、运动控制与自动化、机器视觉等技术平台。在产业布局方面，公司将进一步聚焦“激光光源+核心模块”，为客户提供标准化产品的同时，提供个性化解决方案，针对重点领域研发进口替代的专用设备。目前公司已拥有一支以深圳和新加坡为中心的国际化研发、销售团队，产品和服务覆盖亚洲、北美、欧洲等地区的众多知名客户。公司生产的各类核心激光器及激光/光学智能装备产品已获得A公司、M公司、英特尔、国巨股份、厚声电子、意法半导体、风华高科、顺络电子、东山精密以及宁德时代、比亚迪、亿纬锂能、一汽弗迪等全球领先的消费电子、半导体、光电元器件及动力电池头部厂商的认可。",
+              "profileSummary": "在产业布局方面，公司将进一步聚焦“激光光源+核心模块”，为客户提供标准化产品的同时，提供个性化解决方案，针对重点领域研发进口替代的专用设备。目前公司已拥有一支以深圳和新加坡为中心的国际化研发、销售团队，产品和服务覆盖亚洲、北美、欧洲等地区的众多知名客户。",
+              "majorProducts": "MR眼镜检测系统、VCSEL 激光模组检测系统、VCSEL激光模组检测系统、超快激光器、电容测试分选机、钙钛矿模切设备、固体激光器、光纤连接器、光纤组件、硅光晶圆测试系统、激光二维码激光微加工设备、激光划线机、激光调阻机、杰普特光通信器件、杰普特光纤激光器、杰普特光学智能装备、连续光纤激光器、脉冲光纤激光器、手机摄像头光电检测/校准设备、芯片激光标识追溯系统、新能源动力电池激光焊接整体解决方案、一体成型电感自动化加工检测设备、智能光谱检测机",
+              "revenueComposition": "激光器:48.85%;激光/光学智能装备:35.18%;其他:9.03%;光纤器件:6.9%;其他业务:0.05%",
+              "revenueSegments": [
+                {
+                  "name": "激光器",
+                  "sharePct": 48.85,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "激光/光学智能装备",
+                  "sharePct": 35.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光纤器件",
+                  "sharePct": 6.9,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "光纤连接器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "MT-FA光组件",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "PLC分路器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "光纤阵列单元(FAU)",
+                    "category": "无源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "智能光谱检测机",
+                  "激光划线机",
+                  "激光模组检测系统",
+                  "激光调阻机",
+                  "芯片激光标识追溯系统",
+                  "固体激光器",
+                  "脉冲光纤激光器",
+                  "超快激光器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "杰普特已经具备光纤连接器、MT-FA光组件、PLC分路器等业务能力，MPO产品同时通过US Conec和Senko认证，具备自研设备能力，成本优势突出并非单纯概念映射。当前对应的收入被归入激光器（48.85%）、光纤器件（6.9%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 8539,
+            "stockCode": "688313.SH",
+            "stockName": "仕佳光子",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "MPO产品通过Senko体系认证，深度绑定海外综合布线龙头，NPO业务高速增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688313.SH",
+              "companyName": "仕佳光子",
+              "companyProfile": "公司成立于2010年10月，于2020年8月成功登陆上交所科创板，是国内光芯片及器件领域的重要企业。公司主营业务覆盖光芯片及器件、室内光缆、线缆高分子材料三大板块。主营产品包括PLC、AWG、OSW、VOA等无源芯片系列产品；AWG、MT-FA、FAU等无源光组件系列产品；AWG、WDM、VMUX等无源智能模块系列产品；FP、DFB、EML等有源激光器芯片系列产品；室内软光缆系列产品；高速连接器跳线系列产品；高分子线缆材料等系列产品。主营产品广泛应用于海内外的电信、数通市场及光学传感领域。作为致力于成为全球领先光芯片与器件解决方案提供商的企业，公司始终将人才与研发作为发展核心。经过多年技术沉淀与产业化实践，公司针对光通信行业核心芯片环节，已构建起覆盖芯片设计、晶圆制造、芯片加工、封装测试的“无源+有源”IDM全流程业务体系，成功突破多项关键技术，可支撑多款光芯片高效开发。目前，公司已建成国家地方联合实验室、河南省光电芯片与集成重点实验室、河南省光子集成芯片中试基地、博士后科研工作站等国家级、省部级研发机构，打造了国内领先的光子集成芯片工艺平台，先后获得国家科技进步二等奖、国家制造业单项冠军等，产品远销全球多个国家和地区，市场认可度与行业影响力持续提升。",
+              "profileSummary": "公司主营业务覆盖光芯片及器件、室内光缆、线缆高分子材料三大板块。主营产品包括PLC、AWG、OSW、VOA等无源芯片系列产品；AWG、MT-FA、FAU等无源光组件系列产品；AWG、WDM、VMUX等无源智能模块系列产品；FP、DFB、EML等有源激光器芯片系列产品；室内软光缆系列产品；高速连接器跳线系列产品；高分子线缆材料等系列产品。",
+              "majorProducts": "10G DFB激光器芯片、2.5G DFB激光器芯片、AWG晶圆、AWG芯片、DFB激光器器件、PLC分路器晶圆、PLC分路器器件、PLC分路器芯片、常规光纤连接器、单芯光缆、多芯光缆、多芯束连接器、射频拉远光缆、室内光缆、数据中心AWG器件、无源芯片/器件、线缆高分子材料、有源芯片/器件",
+              "revenueComposition": "光纤连接器:40.16%;AWG芯片系列产品:25.61%;室内光缆:12.01%;线缆材料:11.81%;DFB激光器芯片系列产品:3.95%;PLC分路器芯片系列产品:3.51%;其他光器件:1.49%;其他业务:1.45%",
+              "revenueSegments": [
+                {
+                  "name": "光纤连接器",
+                  "sharePct": 40.16,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "AWG芯片系列产品",
+                  "sharePct": 25.61,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "室内光缆",
+                  "sharePct": 12.01,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "线缆材料",
+                  "sharePct": 11.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "DFB激光器芯片系列产品",
+                  "sharePct": 3.95,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "PLC分路器芯片系列产品",
+                  "sharePct": 3.51,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他光器件",
+                  "sharePct": 1.49,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "光纤连接器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "MEMS光开关",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "MT-FA光组件",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "MT插芯",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "PLC分路器",
+                    "category": "无源光器件"
+                  },
+                  {
+                    "name": "PLC分路器晶圆",
+                    "category": "无源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "DFB激光器芯片",
+                  "聚烯烃电缆料",
+                  "通用聚氯乙烯电缆料",
+                  "光纤光缆",
+                  "射频拉远光缆",
+                  "MEMS光开关",
+                  "MT-FA光组件",
+                  "MT插芯"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 4
+              }
+            },
+            "analysis": "仕佳光子的事件逻辑具备真实业务底座，但尚不足以代表全部公司：光纤连接器（40.16%）、PLC分路器芯片系列产品（3.51%）合计约占收入的43.67%。公司与事件的具体联系在于：MPO产品通过Senko体系认证，深度绑定海外综合布线龙头，NPO业务高速增长，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 8547,
+            "stockCode": "300308.SZ",
+            "stockName": "中际旭创",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球光模块龙头，积极布局CPO、NPO等新技术，玻璃基板产品已导入其1.6T光模块。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300308.SZ",
+              "companyName": "中际旭创",
+              "companyProfile": "公司是领先的高速光互联解决方案提供商，专注于高端光模块与光通信技术创新，服务全球云计算与AI算力基础设施建设。公司在高速率光模块领域具备领先优势，是推动新一代算力网络和数字基础设施升级的重要参与者。凭借持续的技术创新、领先的产品性能和稳定的规模化交付能力，公司在业内建立了稳固的市场地位和良好的品牌声誉。公司坚持以技术创新为核心驱动力，持续强化研发投入与产业链协同，并积极拓展光电技术应用边界，力求为更多客户创造更多价值。",
+              "profileSummary": "公司是领先的高速光互联解决方案提供商，专注于高端光模块与光通信技术创新，服务全球云计算与AI算力基础设施建设。公司在高速率光模块领域具备领先优势，是推动新一代算力网络和数字基础设施升级的重要参与者。",
+              "majorProducts": "1.6T OSFP、100G QSFP+、100G QSFP28 Single Lambda、10G SFP+ Ethernet、10G SFP+ SONET、25G SFP28、400G OSFP、400G QSFP-DD、40G QSFP+、800G OSFP、800G QSFP-DD",
+              "revenueComposition": "高端光通讯收发模块:97.95%;其他:2.05%",
+              "revenueSegments": [
+                {
+                  "name": "高端光通讯收发模块",
+                  "sharePct": 97.95,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "共封装光学(CPO)模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "近封装光模块(NPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "含DSP可插拔光模块(DPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "线性可插拔光模块(LPO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "超高密度可插拔光模块(XPO)",
+                    "category": "无源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "汽车光电子传感器",
+                  "共封装光学(CPO)模块",
+                  "含DSP可插拔光模块(DPO)",
+                  "近封装光模块(NPO)",
+                  "超高密度可插拔光模块(XPO)",
+                  "线性可插拔光模块(LPO)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中际旭创与事件的关系已经落在存量主业，而非远期概念：高端光通讯收发模块占收入的97.95%。公司在产业链中的具体抓手是：全球光模块龙头，积极布局CPO、NPO等新技术，玻璃基板产品已导入其1.6T光模块。本次事件若改变技术商业化与产品迭代速度，影响会沿着“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；客户认证、量产良率、订单规模、产品收入占比和毛利率比主题热度更有解释力。若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 8548,
+            "stockCode": "300502.SZ",
+            "stockName": "新易盛",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球光模块龙头，积极布局CPO、NPO等新技术，玻璃基板产品已导入其1.6T光模块。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300502.SZ",
+              "companyName": "新易盛",
+              "companyProfile": "公司是全球高速光互联解决方案的创新者与领导者。公司自主掌握高速率光器件封装并提供多种技术方案的光互联产品，具备全系列高速可插拔光模块的规模化量产能力，产品广泛应用于人工智能算力集群、云数据中心、电信网络等领域，为各行业的高速网络互连与数据传输提供核心支撑。",
+              "profileSummary": "公司自主掌握高速率光器件封装并提供多种技术方案的光互联产品，具备全系列高速可插拔光模块的规模化量产能力，产品广泛应用于人工智能算力集群、云数据中心、电信网络等领域，为各行业的高速网络互连与数据传输提供核心支撑。",
+              "majorProducts": "800G/400G相干系列模块、CFP2 PAM4 200G、CFPx系列、OSFP 400G、OSFP 800G单波100G、OSFP 800G单波200G、OSFP-XD 1.6T、PON光模块、QSFP112 400G、QSFP28 PAM4 50G、QSFP28 Single Lambda、QSFP28/QSFP+、QSFP56 PAM4 200G、QSFP-DD 200G、QSFP-DD 400G、QSFP-DD 800G 单波100G、QSFP-DD 800G 单波200G、SFP+/SFP系列模块、SFP112 PAM4 100G、SFP28系列、SFP56 PAM4 50G、SFP-DD PAM4 100G、XFP系列模块、点对点光模块",
+              "revenueComposition": "光互联产品:99.72%;其他:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "光互联产品",
+                  "sharePct": 99.72,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PON光模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "共封装光学(CPO)模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "近封装光模块(NPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "含DSP可插拔光模块(DPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "线性可插拔光模块(LPO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "线性接收光模块(LRO)",
+                    "category": "有源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "PON光模块",
+                  "共封装光学(CPO)模块",
+                  "含DSP可插拔光模块(DPO)",
+                  "近封装光模块(NPO)",
+                  "超高密度可插拔光模块(XPO)",
+                  "三向光发射接受组件(TRI-OSA)",
+                  "光发射接收组件(BOSA)",
+                  "光发射组件(TOSA)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "新易盛与事件存在真实业务交集：公司已有PON光模块、共封装光学(CPO)模块、近封装光模块(NPO)，与全球光模块龙头，积极布局CPO、NPO等新技术，玻璃基板产品已导入其1.6T光模块所处的产业环节一致。光互联产品（99.72%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响技术商业化与产品迭代速度，只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，才会形成可确认的收入和利润增量。客户认证、量产良率、订单规模、产品收入占比和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "7条低于3星的源记录已按当前关注口径排除。",
+      "5条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "公司精确产品缺少直接边时，使用同名主题/上位产品作为显式标记的语义桥接节点。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "4只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

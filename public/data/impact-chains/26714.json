@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26714",
@@ -9,10 +9,10 @@
     "date": "2026-07-01"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 4,
-    "mappedStockCount": 4,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 3,
+    "unmappedStockCount": 1,
     "stocks": [
       {
         "sourceRowNumber": 10868,
@@ -21,7 +21,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 30
+        "anchorProductCount": 9
       },
       {
         "sourceRowNumber": 10871,
@@ -30,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 17
+        "anchorProductCount": 4
       },
       {
         "sourceRowNumber": 10874,
@@ -39,7 +39,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 10
+        "anchorProductCount": 5
       },
       {
         "sourceRowNumber": 10876,
@@ -47,254 +47,74 @@
         "stockName": "春晖智控",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 10
+        "mapped": false,
+        "anchorProductCount": 0
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 10876,
+        "stockCode": "300943.SZ",
+        "stockName": "春晖智控",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 67,
     "selectedCoreProductCount": 18,
     "selectedCompanyCoreProductCount": 18,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 70,
-    "downstreamCandidateCount": 84,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 5,
+    "relatedIndustryCandidateCount": 3,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
-        "code": "1140082039",
-        "name": "铆钉",
-        "anchorCount": 2,
+        "code": "1140154403",
+        "name": "多层片式陶瓷电容器(MLCC)",
+        "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
+        "industryPath": [
+          "电子",
+          "元件",
+          "被动元件",
+          "电路类器件",
+          "电容器",
+          "多层片式陶瓷电容器(MLCC)"
+        ],
+        "level5Industry": {
+          "code": "1200001354",
+          "name": "电路类器件"
+        },
+        "level6Industry": {
+          "code": "1200005109",
+          "name": "电容器"
+        },
+        "level7Product": {
+          "code": "1140154403",
+          "name": "多层片式陶瓷电容器(MLCC)"
+        },
+        "matchedSourceLevel": 7,
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136286"
+        "stocks": [
+          {
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "relevanceScore": 6,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "被动元件",
+          "元件",
+          "电子"
+        ]
       },
-      {
-        "code": "1140068407",
-        "name": "铬酸钾",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140007490",
-          "1140067152"
-        ],
-        "linkedCoreProductNames": [
-          "硫铬酸钾",
-          "重铬酸钾"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140137646",
-        "name": "上垫圈",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140024512"
-        ],
-        "linkedCoreProductNames": [
-          "火花塞"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140137648",
-        "name": "下垫圈",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140024512"
-        ],
-        "linkedCoreProductNames": [
-          "火花塞"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140137651",
-        "name": "中心电极",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140024512"
-        ],
-        "linkedCoreProductNames": [
-          "火花塞"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140054603",
-        "name": "从动盘",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221"
-        ],
-        "linkedCoreProductNames": [
-          "汽车离合器从动盘总成"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140054604",
-        "name": "从动盘毂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221"
-        ],
-        "linkedCoreProductNames": [
-          "汽车离合器从动盘总成"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140038086",
-        "name": "低碳合金钢",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136285"
-        ],
-        "linkedCoreProductNames": [
-          "汽车发动机活塞销"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140037924",
-        "name": "低碳钢",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136285"
-        ],
-        "linkedCoreProductNames": [
-          "汽车发动机活塞销"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140053960",
-        "name": "供油系统",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140053789"
-        ],
-        "linkedCoreProductNames": [
-          "汽车变速箱"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140137649",
-        "name": "侧电极",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140024512"
-        ],
-        "linkedCoreProductNames": [
-          "火花塞"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140137654",
-        "name": "冷挤压机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136285"
-        ],
-        "linkedCoreProductNames": [
-          "汽车发动机活塞销"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140053962",
-        "name": "动力输入",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140053789"
-        ],
-        "linkedCoreProductNames": [
-          "汽车变速箱"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140053963",
-        "name": "动力输出",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140053789"
-        ],
-        "linkedCoreProductNames": [
-          "汽车变速箱"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
       {
         "code": "1140108774",
         "name": "氧化铝陶瓷基板",
@@ -320,18 +140,15 @@
           "name": "氧化铝陶瓷基板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300408.SZ",
             "stockName": "三环集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 15,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -365,18 +182,15 @@
           "name": "氮化铝陶瓷基板"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300408.SZ",
             "stockName": "三环集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 3,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -410,69 +224,21 @@
           "name": "铬粉"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603067.SH",
             "stockName": "振华股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 3,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
           "其他小金属",
           "小金属",
           "有色金属"
-        ]
-      },
-      {
-        "code": "1140154403",
-        "name": "多层片式陶瓷电容器(MLCC)",
-        "hierarchyPath": "电子 > 元件 > 被动元件 > 电路类器件 > 电容器 > 多层片式陶瓷电容器(MLCC)",
-        "industryPath": [
-          "电子",
-          "元件",
-          "被动元件",
-          "电路类器件",
-          "电容器",
-          "多层片式陶瓷电容器(MLCC)"
-        ],
-        "level5Industry": {
-          "code": "1200001354",
-          "name": "电路类器件"
-        },
-        "level6Industry": {
-          "code": "1200005109",
-          "name": "电容器"
-        },
-        "level7Product": {
-          "code": "1140154403",
-          "name": "多层片式陶瓷电容器(MLCC)"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "300408.SZ",
-            "stockName": "三环集团",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
-        "relevanceScore": 6,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "被动元件",
-          "元件",
-          "电子"
         ]
       },
       {
@@ -500,18 +266,15 @@
           "name": "陶瓷封装基座(PKG)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300408.SZ",
             "stockName": "三环集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -521,16 +284,16 @@
         ]
       },
       {
-        "code": "1140007490",
-        "name": "重铬酸钾",
-        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 重铬酸钾",
+        "code": "1140067152",
+        "name": "硫铬酸钾",
+        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 硫铬酸钾",
         "industryPath": [
           "化工",
           "化学原料",
           "无机盐",
           "金属氧化物及过氧化物酸盐",
           "金属氧化物及过氧化物酸盐",
-          "重铬酸钾"
+          "硫铬酸钾"
         ],
         "level5Industry": {
           "code": "1200000890",
@@ -541,66 +304,19 @@
           "name": "金属氧化物及过氧化物酸盐"
         },
         "level7Product": {
-          "code": "1140007490",
-          "name": "重铬酸钾"
+          "code": "1140067152",
+          "name": "硫铬酸钾"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603067.SH",
             "stockName": "振华股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 8,
-        "relevanceScore": 5,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "无机盐",
-          "化学原料"
-        ]
-      },
-      {
-        "code": "1140007285",
-        "name": "重铬酸钠",
-        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 重铬酸钠",
-        "industryPath": [
-          "化工",
-          "化学原料",
-          "无机盐",
-          "金属氧化物及过氧化物酸盐",
-          "金属氧化物及过氧化物酸盐",
-          "重铬酸钠"
-        ],
-        "level5Industry": {
-          "code": "1200000890",
-          "name": "金属氧化物及过氧化物酸盐"
-        },
-        "level6Industry": {
-          "code": "1200003989",
-          "name": "金属氧化物及过氧化物酸盐"
-        },
-        "level7Product": {
-          "code": "1140007285",
-          "name": "重铬酸钠"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "603067.SH",
-            "stockName": "振华股份",
-            "rating": "★★★★☆"
-          }
-        ],
-        "upstreamCount": 1,
-        "downstreamCount": 7,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -633,18 +349,15 @@
           "name": "碱式硫酸铬"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603067.SH",
             "stockName": "振华股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 2,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -653,16 +366,16 @@
         ]
       },
       {
-        "code": "1140067152",
-        "name": "硫铬酸钾",
-        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 硫铬酸钾",
+        "code": "1140007285",
+        "name": "重铬酸钠",
+        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 重铬酸钠",
         "industryPath": [
           "化工",
           "化学原料",
           "无机盐",
           "金属氧化物及过氧化物酸盐",
           "金属氧化物及过氧化物酸盐",
-          "硫铬酸钾"
+          "重铬酸钠"
         ],
         "level5Industry": {
           "code": "1200000890",
@@ -673,22 +386,19 @@
           "name": "金属氧化物及过氧化物酸盐"
         },
         "level7Product": {
-          "code": "1140067152",
-          "name": "硫铬酸钾"
+          "code": "1140007285",
+          "name": "重铬酸钠"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "603067.SH",
             "stockName": "振华股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 3,
         "relevanceScore": 5,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -697,16 +407,57 @@
         ]
       },
       {
-        "code": "1140053789",
-        "name": "汽车变速箱",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 汽车变速箱",
+        "code": "1140007490",
+        "name": "重铬酸钾",
+        "hierarchyPath": "化工 > 化学原料 > 无机盐 > 金属氧化物及过氧化物酸盐 > 金属氧化物及过氧化物酸盐 > 重铬酸钾",
+        "industryPath": [
+          "化工",
+          "化学原料",
+          "无机盐",
+          "金属氧化物及过氧化物酸盐",
+          "金属氧化物及过氧化物酸盐",
+          "重铬酸钾"
+        ],
+        "level5Industry": {
+          "code": "1200000890",
+          "name": "金属氧化物及过氧化物酸盐"
+        },
+        "level6Industry": {
+          "code": "1200003989",
+          "name": "金属氧化物及过氧化物酸盐"
+        },
+        "level7Product": {
+          "code": "1140007490",
+          "name": "重铬酸钾"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "603067.SH",
+            "stockName": "振华股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 5,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "无机盐",
+          "化学原料"
+        ]
+      },
+      {
+        "code": "1140173708",
+        "name": "客车车桥",
+        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 客车车桥",
         "industryPath": [
           "汽车",
           "汽车零部件",
           "汽车零部件",
           "汽车底盘系统",
           "汽车底盘传动系统",
-          "汽车变速箱"
+          "客车车桥"
         ],
         "level5Industry": {
           "code": "1200001153",
@@ -717,198 +468,19 @@
           "name": "汽车底盘传动系统"
         },
         "level7Product": {
-          "code": "1140053789",
-          "name": "汽车变速箱"
+          "code": "1140173708",
+          "name": "客车车桥"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000338.SZ",
             "stockName": "潍柴动力",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 28,
-        "downstreamCount": 1,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "汽车零部件",
-          "汽车"
-        ]
-      },
-      {
-        "code": "1140136281",
-        "name": "燃气发动机",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机曲柄连杆机构 > 燃气发动机",
-        "industryPath": [
-          "汽车",
-          "汽车零部件",
-          "汽车零部件",
-          "汽车发动机系统",
-          "汽车发动机曲柄连杆机构",
-          "燃气发动机"
-        ],
-        "level5Industry": {
-          "code": "1200001151",
-          "name": "汽车发动机系统"
-        },
-        "level6Industry": {
-          "code": "1200004615",
-          "name": "汽车发动机曲柄连杆机构"
-        },
-        "level7Product": {
-          "code": "1140136281",
-          "name": "燃气发动机"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "000338.SZ",
-            "stockName": "潍柴动力",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 3,
-        "downstreamCount": 24,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "汽车零部件",
-          "汽车"
-        ]
-      },
-      {
-        "code": "1140136221",
-        "name": "汽车离合器从动盘总成",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 汽车离合器从动盘总成",
-        "industryPath": [
-          "汽车",
-          "汽车零部件",
-          "汽车零部件",
-          "汽车底盘系统",
-          "汽车底盘传动系统",
-          "汽车离合器从动盘总成"
-        ],
-        "level5Industry": {
-          "code": "1200001153",
-          "name": "汽车底盘系统"
-        },
-        "level6Industry": {
-          "code": "1200004624",
-          "name": "汽车底盘传动系统"
-        },
-        "level7Product": {
-          "code": "1140136221",
-          "name": "汽车离合器从动盘总成"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "000338.SZ",
-            "stockName": "潍柴动力",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 17,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "汽车零部件",
-          "汽车"
-        ]
-      },
-      {
-        "code": "1140136286",
-        "name": "汽车离合器压盘总成",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 汽车离合器压盘总成",
-        "industryPath": [
-          "汽车",
-          "汽车零部件",
-          "汽车零部件",
-          "汽车底盘系统",
-          "汽车底盘传动系统",
-          "汽车离合器压盘总成"
-        ],
-        "level5Industry": {
-          "code": "1200001153",
-          "name": "汽车底盘系统"
-        },
-        "level6Industry": {
-          "code": "1200004624",
-          "name": "汽车底盘传动系统"
-        },
-        "level7Product": {
-          "code": "1140136286",
-          "name": "汽车离合器压盘总成"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "000338.SZ",
-            "stockName": "潍柴动力",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 4,
-        "downstreamCount": 18,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "汽车零部件",
-          "汽车"
-        ]
-      },
-      {
-        "code": "1140024512",
-        "name": "火花塞",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机点火系统 > 火花塞",
-        "industryPath": [
-          "汽车",
-          "汽车零部件",
-          "汽车零部件",
-          "汽车发动机系统",
-          "汽车发动机点火系统",
-          "火花塞"
-        ],
-        "level5Industry": {
-          "code": "1200001151",
-          "name": "汽车发动机系统"
-        },
-        "level6Industry": {
-          "code": "1200004620",
-          "name": "汽车发动机点火系统"
-        },
-        "level7Product": {
-          "code": "1140024512",
-          "name": "火花塞"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "000338.SZ",
-            "stockName": "潍柴动力",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 10,
-        "downstreamCount": 12,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -941,18 +513,15 @@
           "name": "汽车减差总成"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000338.SZ",
             "stockName": "潍柴动力",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 17,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -985,18 +554,220 @@
           "name": "汽车发动机活塞销"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000338.SZ",
             "stockName": "潍柴动力",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 12,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "汽车零部件",
+          "汽车"
+        ]
+      },
+      {
+        "code": "1140053789",
+        "name": "汽车变速箱",
+        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 汽车变速箱",
+        "industryPath": [
+          "汽车",
+          "汽车零部件",
+          "汽车零部件",
+          "汽车底盘系统",
+          "汽车底盘传动系统",
+          "汽车变速箱"
+        ],
+        "level5Industry": {
+          "code": "1200001153",
+          "name": "汽车底盘系统"
+        },
+        "level6Industry": {
+          "code": "1200004624",
+          "name": "汽车底盘传动系统"
+        },
+        "level7Product": {
+          "code": "1140053789",
+          "name": "汽车变速箱"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "汽车零部件",
+          "汽车"
+        ]
+      },
+      {
+        "code": "1140136221",
+        "name": "汽车离合器从动盘总成",
+        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 汽车离合器从动盘总成",
+        "industryPath": [
+          "汽车",
+          "汽车零部件",
+          "汽车零部件",
+          "汽车底盘系统",
+          "汽车底盘传动系统",
+          "汽车离合器从动盘总成"
+        ],
+        "level5Industry": {
+          "code": "1200001153",
+          "name": "汽车底盘系统"
+        },
+        "level6Industry": {
+          "code": "1200004624",
+          "name": "汽车底盘传动系统"
+        },
+        "level7Product": {
+          "code": "1140136221",
+          "name": "汽车离合器从动盘总成"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "汽车零部件",
+          "汽车"
+        ]
+      },
+      {
+        "code": "1140136286",
+        "name": "汽车离合器压盘总成",
+        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 汽车离合器压盘总成",
+        "industryPath": [
+          "汽车",
+          "汽车零部件",
+          "汽车零部件",
+          "汽车底盘系统",
+          "汽车底盘传动系统",
+          "汽车离合器压盘总成"
+        ],
+        "level5Industry": {
+          "code": "1200001153",
+          "name": "汽车底盘系统"
+        },
+        "level6Industry": {
+          "code": "1200004624",
+          "name": "汽车底盘传动系统"
+        },
+        "level7Product": {
+          "code": "1140136286",
+          "name": "汽车离合器压盘总成"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "汽车零部件",
+          "汽车"
+        ]
+      },
+      {
+        "code": "1140024512",
+        "name": "火花塞",
+        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机点火系统 > 火花塞",
+        "industryPath": [
+          "汽车",
+          "汽车零部件",
+          "汽车零部件",
+          "汽车发动机系统",
+          "汽车发动机点火系统",
+          "火花塞"
+        ],
+        "level5Industry": {
+          "code": "1200001151",
+          "name": "汽车发动机系统"
+        },
+        "level6Industry": {
+          "code": "1200004620",
+          "name": "汽车发动机点火系统"
+        },
+        "level7Product": {
+          "code": "1140024512",
+          "name": "火花塞"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "汽车零部件",
+          "汽车"
+        ]
+      },
+      {
+        "code": "1140136281",
+        "name": "燃气发动机",
+        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机曲柄连杆机构 > 燃气发动机",
+        "industryPath": [
+          "汽车",
+          "汽车零部件",
+          "汽车零部件",
+          "汽车发动机系统",
+          "汽车发动机曲柄连杆机构",
+          "燃气发动机"
+        ],
+        "level5Industry": {
+          "code": "1200001151",
+          "name": "汽车发动机系统"
+        },
+        "level6Industry": {
+          "code": "1200004615",
+          "name": "汽车发动机曲柄连杆机构"
+        },
+        "level7Product": {
+          "code": "1140136281",
+          "name": "燃气发动机"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 1,
+        "stocks": [
+          {
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1029,62 +800,15 @@
           "name": "重型车桥"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "000338.SZ",
             "stockName": "潍柴动力",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 1,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "汽车零部件",
-          "汽车"
-        ]
-      },
-      {
-        "code": "1140173708",
-        "name": "客车车桥",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车底盘系统 > 汽车底盘传动系统 > 客车车桥",
-        "industryPath": [
-          "汽车",
-          "汽车零部件",
-          "汽车零部件",
-          "汽车底盘系统",
-          "汽车底盘传动系统",
-          "客车车桥"
-        ],
-        "level5Industry": {
-          "code": "1200001153",
-          "name": "汽车底盘系统"
-        },
-        "level6Industry": {
-          "code": "1200004624",
-          "name": "汽车底盘传动系统"
-        },
-        "level7Product": {
-          "code": "1140173708",
-          "name": "客车车桥"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "000338.SZ",
-            "stockName": "潍柴动力",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -1093,328 +817,316 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140135961",
-        "name": "中型卡车",
-        "anchorCount": 5,
+        "code": "1210000387",
+        "name": "其他电池",
+        "description": "“其他电池”指除锂电、铅酸外，如钠离子、固态、液流等新兴或小众电池。因具备低成本、高安全或长寿命等优势，被视为下一代储能与动力技术突破点，备受市场关注，旨在解决资源瓶颈并推动能源转型。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136281",
-          "1140136284",
-          "1140136285",
-          "1140136286"
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 50,
+        "stocks": [
+          {
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成",
-          "燃气发动机"
+        "products": [
+          {
+            "code": "1140220408",
+            "name": "SOFC电堆",
+            "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > SOFC电堆",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "sofc",
+              "sofc电堆"
+            ]
+          },
+          {
+            "code": "1140108778",
+            "name": "阳极支撑SOFC单电池",
+            "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > 阳极支撑SOFC单电池",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "sofc"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140135816",
-        "name": "中型燃油客车",
-        "anchorCount": 5,
+        "code": "1210003320",
+        "name": "电解质",
+        "description": "电解质是锂电池核心材料，负责离子传导。A股中该板块受关注，主要因新能源汽车及储能需求爆发带动高增长预期，且技术迭代（如固态电池）带来新机遇，被视为新能源产业链关键赛道，具备较高景气度与投资热度。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136281",
-          "1140136284",
-          "1140136285",
-          "1140136286"
+        "starWeight": 3,
+        "level7ProductCount": 2,
+        "relevanceScore": 60,
+        "stocks": [
+          {
+            "stockCode": "300285.SZ",
+            "stockName": "国瓷材料",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成",
-          "燃气发动机"
+        "products": [
+          {
+            "code": "1140209681",
+            "name": "氧化物固态电解质",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解质 > 电解质 > 氧化物固态电解质",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300285.SZ",
+                "stockName": "国瓷材料",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "电解质"
+            ]
+          },
+          {
+            "code": "1140209682",
+            "name": "硫化物固态电解质",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解质 > 电解质 > 硫化物固态电解质",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300285.SZ",
+                "stockName": "国瓷材料",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "电解质"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 7,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 5,
+    "level7ProductCount": 5,
+    "candidateIndustryCount": 3,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 10868,
+        "stockCode": "000338.SZ",
+        "stockName": "潍柴动力",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140135817",
-        "name": "大型燃油客车",
-        "anchorCount": 5,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136281",
-          "1140136284",
-          "1140136285",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成",
-          "燃气发动机"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10871,
+        "stockCode": "300408.SZ",
+        "stockName": "三环集团",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140135809",
-        "name": "燃油多功能乘用车(MPV)",
-        "anchorCount": 5,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136281",
-          "1140136284",
-          "1140136285",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成",
-          "燃气发动机"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10872,
+        "stockCode": "002167.SZ",
+        "stockName": "东方锆业",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140131414",
-        "name": "燃油轿车",
-        "anchorCount": 5,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136281",
-          "1140136284",
-          "1140136285",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成",
-          "燃气发动机"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10873,
+        "stockCode": "300285.SZ",
+        "stockName": "国瓷材料",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140131415",
-        "name": "燃油运动型多用途乘用车(SUV)",
-        "anchorCount": 5,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136281",
-          "1140136284",
-          "1140136285",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成",
-          "燃气发动机"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10874,
+        "stockCode": "603067.SH",
+        "stockName": "振华股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140135916",
-        "name": "轻型卡车",
-        "anchorCount": 5,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136281",
-          "1140136284",
-          "1140136285",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成",
-          "燃气发动机"
-        ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10876,
+        "stockCode": "300943.SZ",
+        "stockName": "春晖智控",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140135815",
-        "name": "轻型燃油客车",
-        "anchorCount": 5,
+        "sourceRowNumber": 10877,
+        "stockCode": "688021.SH",
+        "stockName": "奥福科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210000387",
+        "name": "其他电池",
+        "description": "“其他电池”指除锂电、铅酸外，如钠离子、固态、液流等新兴或小众电池。因具备低成本、高安全或长寿命等优势，被视为下一代储能与动力技术突破点，备受市场关注，旨在解决资源瓶颈并推动能源转型。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136281",
-          "1140136284",
-          "1140136285",
-          "1140136286"
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 50,
+        "stocks": [
+          {
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成",
-          "燃气发动机"
+        "products": [
+          {
+            "code": "1140220408",
+            "name": "SOFC电堆",
+            "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > SOFC电堆",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "sofc",
+              "sofc电堆"
+            ]
+          },
+          {
+            "code": "1140108778",
+            "name": "阳极支撑SOFC单电池",
+            "hierarchyPath": "电气设备 > 电池 > 蓄电池及其他电池 > 其他电池 > 其他电池 > 阳极支撑SOFC单电池",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300408.SZ",
+                "stockName": "三环集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "sofc"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140135962",
-        "name": "重型卡车(重卡)",
-        "anchorCount": 5,
+        "code": "1210003320",
+        "name": "电解质",
+        "description": "电解质是锂电池核心材料，负责离子传导。A股中该板块受关注，主要因新能源汽车及储能需求爆发带动高增长预期，且技术迭代（如固态电池）带来新机遇，被视为新能源产业链关键赛道，具备较高景气度与投资热度。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136281",
-          "1140136284",
-          "1140136285",
-          "1140136286"
+        "starWeight": 3,
+        "level7ProductCount": 2,
+        "relevanceScore": 60,
+        "stocks": [
+          {
+            "stockCode": "300285.SZ",
+            "stockName": "国瓷材料",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成",
-          "燃气发动机"
+        "products": [
+          {
+            "code": "1140209681",
+            "name": "氧化物固态电解质",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解质 > 电解质 > 氧化物固态电解质",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300285.SZ",
+                "stockName": "国瓷材料",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "电解质"
+            ]
+          },
+          {
+            "code": "1140209682",
+            "name": "硫化物固态电解质",
+            "hierarchyPath": "电气设备 > 电池 > 电池化学品 > 电解质 > 电解质 > 硫化物固态电解质",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300285.SZ",
+                "stockName": "国瓷材料",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "电解质"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 5,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140135819",
-        "name": "气电混动新能源客车",
-        "anchorCount": 4,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136284",
-          "1140136285",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140135870",
-        "name": "油电混动新能源乘用车",
-        "anchorCount": 4,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136284",
-          "1140136285",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140135964",
-        "name": "油电混动新能源客车",
-        "anchorCount": 4,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136284",
-          "1140136285",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车发动机活塞销",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140135963",
-        "name": "燃料电池新能源乘用车",
-        "anchorCount": 3,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136284",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140135965",
-        "name": "燃料电池新能源客车",
-        "anchorCount": 3,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136221",
-          "1140136284",
-          "1140136286"
-        ],
-        "linkedCoreProductNames": [
-          "汽车减差总成",
-          "汽车离合器从动盘总成",
-          "汽车离合器压盘总成"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -1429,9 +1141,590 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 14,
+    "eligibleSourceRowCount": 7,
+    "totalStockCount": 7,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 1,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 7,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 4,
+        "stocks": [
+          {
+            "sourceRowNumber": 10868,
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "获Ceres Power技术授权，是国内金属支撑型SOFC路线的核心企业，同时覆盖柴发、气发等AIDC电源产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000338.SZ",
+              "companyName": "潍柴动力",
+              "companyProfile": "公司成立于2002年，由原潍坊柴油机厂作为主发起人、联合境内外投资者发起设立，是中国内燃机行业首家在中国香港H股上市的企业，也是首家通过换股吸收合并方式实现“HtoA”两地上市的企业。公司主营业务涵盖动力系统、商用车、农业装备、智慧物流等业务板块，分子公司遍及欧洲、北美、亚洲等地区，产品远销150多个国家和地区。重型发动机、重型变速器销量全球第一，工业叉车全球领先，农业装备销量中国第一，重型卡车中国领先。公司始终将技术创新作为核心驱动力，公司拥有内燃机与动力系统全国重点实验室、国家燃料电池技术创新中心、国家商用汽车动力系统总成工程技术研究中心、国家级工业设计中心、国家内燃机产品质量检验检测中心、国家内燃机产业计量测试中心、国家认定企业技术中心等国家创新平台，设有“博士后工作站”等研究基地，在全球多地设立十大前沿创新中心，建立了全球协同研发体系。先后荣获国家级科技奖励9项，其中国家科技进步一等奖1项(2018年度)。公司以“绿色动力，国际潍柴”为使命，不断提升自身的核心竞争力，推动全球动力行业的绿色转型和可持续发展。",
+              "profileSummary": "公司主营业务涵盖动力系统、商用车、农业装备、智慧物流等业务板块，分子公司遍及欧洲、北美、亚洲等地区，产品远销150多个国家和地区。公司始终将技术创新作为核心驱动力，公司拥有内燃机与动力系统全国重点实验室、国家燃料电池技术创新中心、国家商用汽车动力系统总成工程技术研究中心、国家级工业设计中心、国家内燃机产品质量检验检测中心、国家内燃机产业计量测试中心、国家认定企业技术中心等国家创新平台，设有“博士后工作站”等研究基地，在全球多地设立十大…",
+              "majorProducts": "变速箱、叉车、车桥、供应链解决方案、农业装备、汽车电子及零部件、全系列发动机、燃料电池系统及零部件、液压产品、重型汽车",
+              "revenueComposition": "动力总成、整车整机及关键零部件:43.32%;智慧物流:39.29%;农业装备:8.11%;其他零部件:5.12%;其他:4.17%",
+              "revenueSegments": [
+                {
+                  "name": "动力总成、整车整机及关键零部件",
+                  "sharePct": 43.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智慧物流",
+                  "sharePct": 39.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "农业装备",
+                  "sharePct": 8.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他零部件",
+                  "sharePct": 5.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "垃圾车",
+                  "扫路车",
+                  "洒水车",
+                  "洗扫车",
+                  "清洗车",
+                  "轮式拖拉机",
+                  "小麦收获机",
+                  "玉米收获机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "潍柴动力现有收入由动力总成、整车整机及关键零部件（43.32%）、智慧物流（39.29%）贡献，主营产品为垃圾车、扫路车、洒水车、洗扫车，与获Ceres Power技术授权，是国内金属支撑型SOFC路线的核心企业，同时覆盖柴发、气发等AIDC电源产品指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，研发里程碑与商业化成功概率才会通过“研发或授权进展改变项目成功率和未来现金流预期，再通过里程碑收入、销售分成或费用投入影响利润”产生财务影响。现阶段临床数据、监管节点、首付款及里程碑确认和销售放量比概念标签更重要；若研发、审批或商业化进度不及预期，且前期投入难以形成对应回报，事件对公司中期业绩的贡献将十分有限。"
+          },
+          {
+            "sourceRowNumber": 10871,
+            "stockCode": "300408.SZ",
+            "stockName": "三环集团",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "BE电解质隔膜片的核心供应商，同时自主研发阳极支撑型SOFC电堆，深度绑定SOFC产业链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300408.SZ",
+              "companyName": "三环集团",
+              "companyProfile": "公司成立于1970年，2014年在深交所上市，是一家专注于先进材料研发、生产及销售的综合性高新技术企业。产品覆盖通信、电子、新能源、半导体、移动智能终端等众多应用领域。其中，光通信用陶瓷插芯、片式电阻用氧化铝陶瓷基板、半导体陶瓷封装基座等产品产销量均居全球前列，多项产品先后荣获国家优质产品金奖。公司被认定为国家高新技术企业、国家技术创新示范企业、国家企业技术中心、中国制造业单项冠军示范企业，连续多年入选中国电子元件百强企业。",
+              "profileSummary": "产品覆盖通信、电子、新能源、半导体、移动智能终端等众多应用领域。公司被认定为国家高新技术企业、国家技术创新示范企业、国家企业技术中心、中国制造业单项冠军示范企业，连续多年入选中国电子元件百强企业。",
+              "majorProducts": "三环MLCC、三环电阻、三环光纤陶瓷插芯及套筒、三环接线端子、三环燃料电池隔膜板、三环陶瓷封装基座、三环陶瓷基片、三环陶瓷基体",
+              "revenueComposition": "电子元件:36.73%;通信器件:28.8%;电子及陶瓷材料:21.75%;设备组件:6.68%;其他:4.5%;其他业务:1.54%",
+              "revenueSegments": [
+                {
+                  "name": "电子元件",
+                  "sharePct": 36.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "通信器件",
+                  "sharePct": 28.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子及陶瓷材料",
+                  "sharePct": 21.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备组件",
+                  "sharePct": 6.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "SOFC电堆",
+                    "category": "其他电池"
+                  },
+                  {
+                    "name": "阳极支撑SOFC单电池",
+                    "category": "其他电池"
+                  }
+                ],
+                "knownProducts": [
+                  "氧化铝陶瓷基板",
+                  "氮化铝陶瓷基板",
+                  "陶瓷封装基座(PKG)",
+                  "多层片式陶瓷电容器(MLCC)",
+                  "半导体封装点胶机",
+                  "刻蚀环",
+                  "压缩机接线端子",
+                  "沉积室衬垫"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "三环集团与新闻之间有明确产品抓手：SOFC电堆、阳极支撑SOFC单电池，对应BE电解质隔膜片的核心供应商，同时自主研发阳极支撑型SOFC电堆，深度绑定SOFC产业链。收入主体目前是电子元件（36.73%）、通信器件（28.8%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变商业化进度和订单兑现预期，随后要经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才能进入利润表。客户认证、新增订单、交付节奏、相关业务收入和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若客户验证或交付节奏低于预期，订单停留在小批量阶段，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 10874,
+            "stockCode": "603067.SH",
+            "stockName": "振华股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "全球铬盐龙头，为SOFC连接体提供核心原材料金属铬，供给受限叠加需求爆发，具备显著量价弹性。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603067.SH",
+              "companyName": "振华股份",
+              "companyProfile": "公司是目前全球范围内最具规模的铬盐上市企业，公司维生素K3的生产能力位居全球前列。公司是高新技术企业，分别在湖北黄石、重庆潼南设有生产基地，拥有“民众”、“楚高”两大业内知名品牌，公司综合竞争力全球领先。公司主要产品有重铬酸钠、重铬酸钾、铬酸酐、氧化铬绿、碱式硫酸铬、精制元明粉、铬黄、金属铬、超细氢氧化铝及维生素K3等。目前，公司正深度融入液流储能产业链，逐步开展在液流储能关键原材料领域的投资布局。未来，公司将秉承“诚信、奉献、创新、争先”的企业宗旨，持续、充分完善铬化学品全产业链一体化经营布局，构筑价值多元、内涵丰富、本质安全的铬盐产品生态圈，打造资源节约型、环境友好型、经济效益型、本质安全型绿色铬盐生产企业，加速全球铬盐行业朝着绿色清洁生产、资源化利用、技术创新、智能制造的方向发展，争做世界铬盐行业引领者。",
+              "profileSummary": "目前，公司正深度融入液流储能产业链，逐步开展在液流储能关键原材料领域的投资布局。未来，公司将秉承“诚信、奉献、创新、争先”的企业宗旨，持续、充分完善铬化学品全产业链一体化经营布局，构筑价值多元、内涵丰富、本质安全的铬盐产品生态圈，打造资源节约型、环境友好型、经济效益型、本质安全型绿色铬盐生产企业，加速全球铬盐行业朝着绿色清洁生产、资源化利用、技术创新、智能制造的方向发展，争做世界铬盐行业引领者。",
+              "majorProducts": "超细氢氧化铝、铬酸酐、碱式硫酸铬、维生素K3、氧化铬绿、重铬酸钠",
+              "revenueComposition": "铬的氧化物:52%;铬基冶金材料:14.79%;其他:12.89%;铬盐联产产品:8.73%;重铬酸盐:7.2%;超细氢氧化铝:3.72%;其他业务:0.67%",
+              "revenueSegments": [
+                {
+                  "name": "铬的氧化物",
+                  "sharePct": 52.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铬基冶金材料",
+                  "sharePct": 14.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 12.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铬盐联产产品",
+                  "sharePct": 8.73,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "重铬酸盐",
+                  "sharePct": 7.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "超细氢氧化铝",
+                  "sharePct": 3.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "饲料级维生素K3",
+                  "氧化铬绿",
+                  "铬黄",
+                  "铬酸酐",
+                  "硫铬酸钾",
+                  "重铬酸钠",
+                  "重铬酸钾",
+                  "碱式硫酸铬"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "振华股份当前收入集中在铬的氧化物（52%）、铬基冶金材料（14.79%），而全球铬盐龙头，为SOFC连接体提供核心原材料金属铬，供给受限叠加需求爆发，具备显著量价弹性所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响供需缺口与产品价格预期，业务端仍需沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”传导后才能确认。产品报价、订单排期、产销率和毛利率如果持续改善，相关业务可能从产业布局转为实际增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 10876,
+            "stockCode": "300943.SZ",
+            "stockName": "春晖智控",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "拟全资收购的子公司春晖仪表是BE温度传感器的第一大供应商（份额超70%），产品具备强耗材属性。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300943.SZ",
+              "companyName": "春晖智控",
+              "companyProfile": "公司是国家重点扶持的高新技术企业、浙江省隐形冠军企业、浙江省制造业单项冠军培育企业、浙江省专精特新中小企业、浙江省创新型试点企业、浙江省内外贸一体领跑者企业、浙江省创新型中小企业、绍兴市云上企业。公司建有春晖流体控制省级企业研究院、春晖流体控制省级高新技术研究开发中心，与中国计量大学共同组建院士工作站，多项研究成果被列入国家火炬计划、国家级重点新产品。公司产品涉及材料工程、机械设计与制造、流体力学、控制科学与工程、测量技术与仪表等相关交叉学科技术以及信息系统集成和技术服务。",
+              "profileSummary": "公司建有春晖流体控制省级企业研究院、春晖流体控制省级高新技术研究开发中心，与中国计量大学共同组建院士工作站，多项研究成果被列入国家火炬计划、国家级重点新产品。公司产品涉及材料工程、机械设计与制造、流体力学、控制科学与工程、测量技术与仪表等相关交叉学科技术以及信息系统集成和技术服务。",
+              "majorProducts": "@MRS智慧燃气调压站、电磁比例阀、电磁热力膨胀阀、电子膨胀阀、电子气液比调节阀、阀门井智能监控终端、供热水路控制阀、户内调压器、换热站、紧急切断阀、拉断阀、流量电磁阀、汽车空调电磁阀、汽车空调热力膨胀阀、氢能进堆电磁阀、氢能驱动阀、燃气过滤器、燃气流量计、燃气调压器、燃气调压器预警系统、双流量电磁阀、水路电机、调压器检修智能检测仪、调压箱/柜、牺牲阳极管地电位检测系统、油气回收装置",
+              "revenueComposition": "供热控制产品:33.61%;燃气控制产品:19.71%;油气控制产品:13.99%;其他业务:12.2%;内燃机配件产品:10.61%;空调控制产品:6.16%;技术服务:2.58%;信息系统集成:1.14%",
+              "revenueSegments": [
+                {
+                  "name": "供热控制产品",
+                  "sharePct": 33.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "燃气控制产品",
+                  "sharePct": 19.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "油气控制产品",
+                  "sharePct": 13.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 12.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内燃机配件产品",
+                  "sharePct": 10.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "空调控制产品",
+                  "sharePct": 6.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 2.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "信息系统集成",
+                  "sharePct": 1.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "空调四通阀",
+                  "空调电子膨胀阀",
+                  "燃气报警器",
+                  "柴油机凸轮轴",
+                  "柴油机挺柱",
+                  "调压阀组",
+                  "供热水路控制阀",
+                  "双流量电磁阀"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "春晖智控的主要经营内容是供热控制产品（33.61%）、燃气控制产品（19.71%），具体产品集中在空调四通阀、空调电子膨胀阀、燃气报警器、柴油机凸轮轴。“拟全资收购的子公司春晖仪表是BE温度传感器的第一大供应商（份额超70%），产品具备强耗材属性”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善商业化进度和订单兑现，也需要先补上产品落地和客户导入，再经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才可能影响业绩。客户认证、新增订单、交付节奏、相关业务收入和毛利率没有同步改善时，股价反应更可能来自主题交易；若客户验证或交付节奏低于预期，订单停留在小批量阶段，基本面解释力会继续下降。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 10872,
+            "stockCode": "002167.SZ",
+            "stockName": "东方锆业",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内领先的锆制品企业，重点布局SOFC电解质核心材料YSZ，产品处于送样阶段。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002167.SZ",
+              "companyName": "东方锆业",
+              "companyProfile": "公司深耕锆行业近三十年，是一家专注于锆系制品的研发、生产和销售的国家火炬计划重点高新技术企业。公司产品涵盖九大系列一百多个品种，广泛应用于生物陶瓷、电子陶瓷、结构陶瓷、色釉料、高温耐火材料及核能等行业，特别是在新能源电池材料、光伏、人造宝石、陶瓷基刹车片、种植牙及光通讯器件等领域市场占有率稳步提升。伴随宏观经济基本面的长期向好态势，锆系制品在传统市场的需求将持续扩大，同时，技术的创新和突破也推动着新兴领域对锆制品的需求不断增长。锆行业市场整体呈现出稳步增长的趋势，行业前景十分广阔。公司一直秉承着“做强做大，做精做细”的发展策略，不断延伸、拓展产业链，完善产业链，公司已成为国内锆行业中技术领先、规模居前，最具核心竞争力和综合竞争力的知名企业，更是全球锆产品品种最齐全的制造商之一。",
+              "profileSummary": "公司产品涵盖九大系列一百多个品种，广泛应用于生物陶瓷、电子陶瓷、结构陶瓷、色釉料、高温耐火材料及核能等行业，特别是在新能源电池材料、光伏、人造宝石、陶瓷基刹车片、种植牙及光通讯器件等领域市场占有率稳步提升。公司一直秉承着“做强做大，做精做细”的发展策略，不断延伸、拓展产业链，完善产业链，公司已成为国内锆行业中技术领先、规模居前，最具核心竞争力和综合竞争力的知名企业，更是全球锆产品品种最齐全的制造商之一。",
+              "majorProducts": "Y-TZP陶瓷刀、宇田二氧化锆、宇田复合氧化锆、宇田硅酸锆、宇田氯化锆、宇田氯氧化锆、宇田氧化锆结构陶瓷",
+              "revenueComposition": "无机非金属锆产品:89.61%;无机非金属材料产品:6.14%;附产品:2.26%;重矿物:1.77%;其他业务:0.22%",
+              "revenueSegments": [
+                {
+                  "name": "无机非金属锆产品",
+                  "sharePct": 89.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "无机非金属材料产品",
+                  "sharePct": 6.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "附产品",
+                  "sharePct": 2.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "重矿物",
+                  "sharePct": 1.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "二氧化锆",
+                  "复合氧化锆",
+                  "氯氧化锆",
+                  "海绵锆",
+                  "电熔氧化锆",
+                  "硅酸锆",
+                  "陶瓷手机后盖",
+                  "陶瓷刀具"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "东方锆业现有业务与国内领先的锆制品企业，重点布局SOFC电解质核心材料YSZ，产品处于送样阶段处于同一产业方向，收入主体为无机非金属锆产品（89.61%）、无机非金属材料产品（6.14%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变商业化进度和订单兑现，只有经由“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”，业务交集才会转化为业绩增量。客户认证、新增订单、交付节奏、相关业务收入和毛利率若逐步增强，相关业务的重要性会提高；若客户验证或交付节奏低于预期，订单停留在小批量阶段，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 10873,
+            "stockCode": "300285.SZ",
+            "stockName": "国瓷材料",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球MLCC介质粉体龙头，纳米氧化锆粉体技术国内领先，有望切入全球高端氧化锆供应链。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300285.SZ",
+              "companyName": "国瓷材料",
+              "companyProfile": "公司以“实现员工价值的、卓越材料的领导者”为愿景，持续推动材料科技创新与产业升级。公司创立于2005年4月，现已形成以山东东营总部为核心，辐射环渤海、长三角、珠三角的国内产业网络，并在欧洲、美洲等设立办事处、研发中心、生产基地等，构建全球化客户服务体系的战略布局。作为“一代材料、一代产业”的践行者，公司聚焦高端功能陶瓷材料的研发与产业化，通过持续的科技创新与国际化布局，已构建涵盖电子材料、催化材料、生物医疗材料、新能源材料、精密陶瓷、数码打印及其他材料在内的六大业务板块。创新成果深度渗透消费电子及5G通信、汽车尾气治理、口腔医疗、新能源动力系统、半导体封装、环保建材、光伏储能等战略性新兴产业。公司持续为客户提供定制化解决方案，以材料科技赋能产业升级，践行“好材料好生活”的企业使命，致力成为新材料领域具有全球影响力的价值创造者。",
+              "profileSummary": "公司创立于2005年4月，现已形成以山东东营总部为核心，辐射环渤海、长三角、珠三角的国内产业网络，并在欧洲、美洲等设立办事处、研发中心、生产基地等，构建全球化客户服务体系的战略布局。作为“一代材料、一代产业”的践行者，公司聚焦高端功能陶瓷材料的研发与产业化，通过持续的科技创新与国际化布局，已构建涵盖电子材料、催化材料、生物医疗材料、新能源材料、精密陶瓷、数码打印及其他材料在内的六大业务板块。",
+              "majorProducts": "MLCC介质瓷粉、玻璃陶瓷瓷块、勃姆石、电子浆料、电子用纳米级复合氧化锆粉体、分子筛、复合树脂陶瓷、高纯超细氧化铝、碱水制氢用纳米粉体、颗粒捕捉器（DPF、GPF）、锂电池正负极研磨用氧化锆微珠、锂电池正极添加剂、三元催化转化器载体（TWC）、铈锆固溶体氧化物、陶瓷管壳、陶瓷基板及金属化、陶瓷墨水、陶瓷色釉料、陶瓷套筒、陶瓷插芯等结构件、陶瓷轴承球、选择性催化还原载体（SCR）、牙科用纳米级复合氧化锆粉体、氧化锆瓷块、氧化性催化转化器载体（DOC）",
+              "revenueComposition": "数码打印及其他材料板块-建筑陶瓷:22.19%;催化材料板块:20.81%;生物医疗材料板块:20.29%;电子材料板块:15.13%;新能源材料板块:11.03%;精密陶瓷板块:9.1%",
+              "revenueSegments": [
+                {
+                  "name": "数码打印及其他材料板块-建筑陶瓷",
+                  "sharePct": 22.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "催化材料板块",
+                  "sharePct": 20.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "生物医疗材料板块",
+                  "sharePct": 20.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电子材料板块",
+                  "sharePct": 15.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源材料板块",
+                  "sharePct": 11.03,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "精密陶瓷板块",
+                  "sharePct": 9.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "氧化物固态电解质",
+                    "category": "电解质"
+                  },
+                  {
+                    "name": "硫化物固态电解质",
+                    "category": "电解质"
+                  },
+                  {
+                    "name": "MLCC陶瓷粉体",
+                    "category": "化学陶瓷"
+                  }
+                ],
+                "knownProducts": [
+                  "MLCC陶瓷粉体",
+                  "全瓷义齿",
+                  "氧化铝陶瓷材料",
+                  "氧化锆陶瓷材料",
+                  "蜂窝陶瓷",
+                  "高端陶瓷球",
+                  "陶瓷墨水",
+                  "纳米级复合氧化锆粉体材料"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "国瓷材料已经具备氧化物固态电解质、硫化物固态电解质、MLCC陶瓷粉体等业务能力，全球MLCC介质粉体龙头，纳米氧化锆粉体技术国内领先，有望切入全球高端氧化锆供应链并非单纯概念映射。当前对应的收入被归入新能源材料板块（11.03%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，并最终反映在客户认证、新增订单、交付节奏、相关业务收入和毛利率上；客户验证或交付节奏低于预期，订单停留在小批量阶段会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 10877,
+            "stockCode": "688021.SH",
+            "stockName": "奥福科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "为SOFC提供核心的丙烷重整器部件。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688021.SH",
+              "companyName": "奥福科技",
+              "companyProfile": "公司专注于大气污染治理核心部件的研发与产业化，尤其在柴油车尾气后处理领域具有显著优势。公司成立于2009年7月，总部位于山东德州临邑县，2019年在科创板上市。公司产品覆盖柴油车(SCR/DPF载体)、汽油车(GPF/TWC载体)、天然汽车(TWC/ASC)载体、船机、非道路移动机械及蓄热体等，产品广泛应用于机动车尾气净化、工业废气治理等新兴领域，主要销售市场为机动车和船机主机厂、催化剂企业、机动车船售后市场等。公司拥有多项发明专利，核心技术涵盖“堇青石材料结构及结晶控制”“高性能蜂窝陶瓷载体制备工艺”等，填补国内大尺寸载体技术空白。",
+              "profileSummary": "公司产品覆盖柴油车(SCR/DPF载体)、汽油车(GPF/TWC载体)、天然汽车(TWC/ASC)载体、船机、非道路移动机械及蓄热体等，产品广泛应用于机动车尾气净化、工业废气治理等新兴领域，主要销售市场为机动车和船机主机厂、催化剂企业、机动车船售后市场等。",
+              "majorProducts": "DOC载体、RCO设备、RTO设备、壁流式载体（DPF、ACT-DPF、SiC-DPF 和 GPF）、车用SCR载体、船机SCR载体、船机后处理用载体、对称孔DPF、非对称孔DPF、节能蓄热体、直通式载体（DOC、SCR、ASC 和 TWC）",
+              "revenueComposition": "蜂窝陶瓷载体:95.05%;节能蓄热体:3.86%;其他业务:0.68%;其他:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "蜂窝陶瓷载体",
+                  "sharePct": 95.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "节能蓄热体",
+                  "sharePct": 3.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "直通式蜂窝陶瓷载体",
+                  "节能蓄热体",
+                  "柴油颗粒过滤器(DPF)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "奥福科技目前更依赖蜂窝陶瓷载体（95.05%）、节能蓄热体（3.86%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：为SOFC提供核心的丙烷重整器部件，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变商业化进度和订单兑现；公司的产业链位置只有经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才能转化为收入。现阶段可以用客户认证、新增订单、交付节奏、相关业务收入和毛利率判断预期差方向；若客户验证或交付节奏低于预期，订单停留在小批量阶段，短期主题弹性与中期业绩贡献可能明显背离。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "1条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "1只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

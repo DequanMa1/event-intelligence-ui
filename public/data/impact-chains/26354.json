@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
-  "status": "no_company_product_mapping",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
+  "status": "no_four_star_stocks",
   "event": {
     "mainId": "26354",
     "uid": "0RB7WE8A315H9",
@@ -9,47 +9,390 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 1,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 0,
     "mappedStockCount": 0,
-    "unmappedStockCount": 1,
-    "stocks": [
-      {
-        "sourceRowNumber": 1918,
-        "stockCode": "00780.HK",
-        "stockName": "同程旅行",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 1918,
-        "stockCode": "00780.HK",
-        "stockName": "同程旅行",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStockCount": 0,
+    "stocks": [],
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 0,
     "selectedCoreProductCount": 0,
     "selectedCompanyCoreProductCount": 0,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 0,
-    "downstreamCandidateCount": 0,
-    "shownUpstreamCount": 0,
-    "shownDownstreamCount": 0
+    "level7ProductCount": 7,
+    "relatedIndustryCandidateCount": 4,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [],
-    "core": [],
-    "downstream": []
+  "productIndustryMap": {
+    "coreProducts": [],
+    "relatedIndustries": [
+      {
+        "code": "1200001194",
+        "name": "一般酒店",
+        "description": "一般酒店指A股中主营住宿服务的上市公司。其受关注因具备强周期性与消费复苏风向标属性，业绩随商旅及旅游需求波动显著，且头部企业通过连锁化扩张提升集中度，是观察宏观经济活力与大消费板块景气度的重要窗口。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 3,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "600754.SH",
+            "stockName": "锦江酒店",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600258.SH",
+            "stockName": "首旅酒店",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140014026",
+            "name": "中端酒店",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 一般酒店 > 中端酒店 > 中端酒店",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140014027",
+            "name": "经济型酒店",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 一般酒店 > 经济型酒店 > 经济型酒店",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140014022",
+            "name": "高端酒店",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 一般酒店 > 高端酒店 > 高端酒店",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001196",
+        "name": "酒店管理",
+        "description": "A股酒店管理指经营连锁酒店及提供管理服务的上市公司。其受关注主要因具备轻资产、高扩张性及强现金流特征，且业绩与旅游消费复苏紧密挂钩，是观察内需回暖的重要风向标，兼具周期弹性与长期成长逻辑。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 2,
+        "relevanceScore": 16,
+        "stocks": [
+          {
+            "stockCode": "600754.SH",
+            "stockName": "锦江酒店",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600258.SH",
+            "stockName": "首旅酒店",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140127110",
+            "name": "酒店委托管理",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 酒店管理 > 酒店委托管理 > 酒店委托管理",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140127116",
+            "name": "酒店特许经营",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 酒店管理 > 酒店特许经营 > 酒店特许经营",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 2,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 7,
+    "candidateIndustryCount": 4,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 1924,
+        "stockCode": "600754.SH",
+        "stockName": "锦江酒店",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 1925,
+        "stockCode": "600258.SH",
+        "stockName": "首旅酒店",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001194",
+        "name": "一般酒店",
+        "description": "一般酒店指A股中主营住宿服务的上市公司。其受关注因具备强周期性与消费复苏风向标属性，业绩随商旅及旅游需求波动显著，且头部企业通过连锁化扩张提升集中度，是观察宏观经济活力与大消费板块景气度的重要窗口。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 3,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "600754.SH",
+            "stockName": "锦江酒店",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600258.SH",
+            "stockName": "首旅酒店",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140014026",
+            "name": "中端酒店",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 一般酒店 > 中端酒店 > 中端酒店",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140014027",
+            "name": "经济型酒店",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 一般酒店 > 经济型酒店 > 经济型酒店",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140014022",
+            "name": "高端酒店",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 一般酒店 > 高端酒店 > 高端酒店",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001196",
+        "name": "酒店管理",
+        "description": "A股酒店管理指经营连锁酒店及提供管理服务的上市公司。其受关注主要因具备轻资产、高扩张性及强现金流特征，且业绩与旅游消费复苏紧密挂钩，是观察内需回暖的重要风向标，兼具周期弹性与长期成长逻辑。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 2,
+        "relevanceScore": 16,
+        "stocks": [
+          {
+            "stockCode": "600754.SH",
+            "stockName": "锦江酒店",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600258.SH",
+            "stockName": "首旅酒店",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140127110",
+            "name": "酒店委托管理",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 酒店管理 > 酒店委托管理 > 酒店委托管理",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140127116",
+            "name": "酒店特许经营",
+            "hierarchyPath": "休闲服务 > 酒店 > 酒店 > 酒店管理 > 酒店特许经营 > 酒店特许经营",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600754.SH",
+                "stockName": "锦江酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "600258.SH",
+                "stockName": "首旅酒店",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
   },
   "industryAnalysis": {
     "status": "unavailable",
@@ -59,10 +402,182 @@
     "researchSources": [],
     "reason": "入选核心产品尚未形成可追溯的七级产品到五级产业路径"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 10,
+    "eligibleSourceRowCount": 2,
+    "totalStockCount": 2,
+    "groupCount": 1,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 1,
+    "excludedNonAShareCount": 7,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 2,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 1924,
+            "stockCode": "600754.SH",
+            "stockName": "锦江酒店",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内头部连锁酒店集团，受益于服务消费复苏和旅游市场景气度提升",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600754.SH",
+              "companyName": "锦江酒店",
+              "companyProfile": "公司于1993年6月成立，并自1994年在上海证券交易所上市，是中国领先的酒店业上市公司。公司所从事的主要业务为“全服务及有限服务型酒店营运及管理业务”和“食品及餐饮业务”。围绕“深耕国内、全球布局、跨国经营”发展战略，公司于2015年收购法国卢浮酒店集团，于2016年先后战略投资铂涛集团及收购维也纳酒店集团，在提升酒店规模的同时成功实施有限服务酒店业务的全球布局。2023年11月，公司收购锦江国际酒店管理有限公司100%股权，进一步完善品牌矩阵，优化品牌结构，实现从经济型、中端酒店到全服务、高端酒店的全面覆盖，形成全系列、多样化的品牌格局。",
+              "profileSummary": "公司所从事的主要业务为“全服务及有限服务型酒店营运及管理业务”和“食品及餐饮业务”。围绕“深耕国内、全球布局、跨国经营”发展战略，公司于2015年收购法国卢浮酒店集团，于2016年先后战略投资铂涛集团及收购维也纳酒店集团，在提升酒店规模的同时成功实施有限服务酒店业务的全球布局。",
+              "majorProducts": "锦江海伦宾馆、锦江建国饭店、锦江上海东亚饭店、锦江上海肯德基、锦江上海闵行饭店、锦江上海南京饭店、锦江上海新城饭店、锦江上海新亚饭店、锦江上海中亚饭店、锦江温州王朝大酒店、锦江新亚大包、锦江新亚汤臣洲际大酒店、锦江新亚之光、锦江扬子江大酒店、锦江之星、锦江之星旅馆",
+              "revenueComposition": "0",
+              "revenueSegments": [],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "中端酒店",
+                    "category": "中端酒店"
+                  },
+                  {
+                    "name": "经济型酒店",
+                    "category": "经济型酒店"
+                  },
+                  {
+                    "name": "酒店委托管理",
+                    "category": "酒店委托管理"
+                  },
+                  {
+                    "name": "酒店特许经营",
+                    "category": "酒店特许经营"
+                  },
+                  {
+                    "name": "高端酒店",
+                    "category": "高端酒店"
+                  }
+                ],
+                "knownProducts": [
+                  "中端酒店",
+                  "经济型酒店",
+                  "高端酒店",
+                  "酒店委托管理",
+                  "酒店特许经营",
+                  "餐饮配餐服务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "锦江酒店与事件之间有具体产品连接：中端酒店、经济型酒店、酒店委托管理，对应国内头部连锁酒店集团，受益于服务消费复苏和旅游市场景气度提升。目前无法单独量化这些产品的收入权重，因而不能把公司归为纯概念，也不能把产业空间直接等同于利润弹性。经营约束及需求或供给冲击只有沿“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”完成兑现，才会改变公司经营结果。订单变化、产品价格、交付节奏和减值迹象将决定业务能否跨过小规模阶段；若冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力，事件对公司的影响会主要停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 1925,
+            "stockCode": "600258.SH",
+            "stockName": "首旅酒店",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内头部连锁酒店集团，受益于服务消费复苏和旅游市场景气度提升",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600258.SH",
+              "companyName": "首旅酒店",
+              "companyProfile": "公司是一家领先的、具有市场规模较为突出优势的酒店集团公司，专注于经济连锁型及中高端酒店的投资与运营管理，并兼有景区经营业务。公司酒店业务包括酒店运营和酒店管理两种模式。第一，酒店运营模式主要指通过租赁物业来经营酒店，公司通过向顾客提供住宿及相关服务取得收入，并承担酒店房屋租金，装修及运营过程中的管理、维护、运营费用及相关税费后实现盈利。第二，酒店管理业务包括品牌加盟、输出管理和其他特许业务。对于景区业务，公司海南南山景区运营主要通过景区的门票、餐饮、商品、住宿、园区内交通等获得收入利润。公司拥有强大的信息化系统，面客系统、运营系统和支持系统分别应用服务、经营和管理，并作持续地改进和研发，为连锁酒店的高效管理和服务效率提供强大的IT工具支撑。公司本着“产品全系列”、“信息全覆盖”、“会员全流通”、“价值全方位”的目标，会员权益全面贯通，“如旅随行”的移动端规划、设计实施已迈向新高度。未来公司仍将以住宿为核心，充分利用自身品牌、规模、资源、平台、技术优势，继续加大资源整合力度，提高经营效率、效益，优化、改造服务和产品，践行中国服务，不忘初心地实践，牢牢把握住酒店行业内核。",
+              "profileSummary": "公司是一家领先的、具有市场规模较为突出优势的酒店集团公司，专注于经济连锁型及中高端酒店的投资与运营管理，并兼有景区经营业务。公司酒店业务包括酒店运营和酒店管理两种模式。",
+              "majorProducts": "北京京伦饭店、北京民族饭店、北京前门饭店、北京神舟国际旅行社、北京展览馆、海南南山文化旅游区、酒店管理、酒店运营",
+              "revenueComposition": "酒店运营:61.59%;酒店管理:31.67%;景区:6.74%",
+              "revenueSegments": [
+                {
+                  "name": "酒店运营",
+                  "sharePct": 61.59,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "酒店管理",
+                  "sharePct": 31.67,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "景区",
+                  "sharePct": 6.74,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "中端酒店",
+                    "category": "中端酒店"
+                  },
+                  {
+                    "name": "景区饭店经营",
+                    "category": "景区餐饮"
+                  },
+                  {
+                    "name": "经济型酒店",
+                    "category": "经济型酒店"
+                  },
+                  {
+                    "name": "自然景区门票",
+                    "category": "自然景区门票"
+                  },
+                  {
+                    "name": "酒店委托管理",
+                    "category": "酒店委托管理"
+                  },
+                  {
+                    "name": "酒店特许经营",
+                    "category": "酒店特许经营"
+                  }
+                ],
+                "knownProducts": [
+                  "自然景区门票",
+                  "中端酒店",
+                  "经济型酒店",
+                  "高端酒店",
+                  "酒店委托管理",
+                  "酒店特许经营",
+                  "景区饭店经营"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "首旅酒店已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：酒店管理（31.67%）、景区（6.74%）合计约占收入的38.41%。公司在产业链中的位置是：国内头部连锁酒店集团，受益于服务消费复苏和旅游市场景气度提升，经营约束及需求或供给冲击则决定增量大小。只有完成“事件影响订单、价格或交付能力，再传导至收入、毛利率及潜在减值压力”，相关业务的增长才可能改善公司整体盈利。订单变化、产品价格、交付节奏和减值迹象还需与其他主业表现同时改善；冲击持续时间超预期，或公司缺少转嫁成本和替代客户的能力会使局部业务亮点难以转化为公司层面的业绩变化。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "1条低于3星的源记录已按当前关注口径排除。",
+      "7条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

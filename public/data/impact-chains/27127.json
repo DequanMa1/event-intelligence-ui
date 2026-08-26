@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27127",
@@ -9,10 +9,10 @@
     "date": "2026-07-07"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 4,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 2,
     "mappedStockCount": 2,
-    "unmappedStockCount": 2,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 20555,
@@ -21,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 20559,
@@ -30,110 +30,21 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
-      },
-      {
-        "sourceRowNumber": 20560,
-        "stockCode": "APH.N",
-        "stockName": "安费诺",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 20573,
-        "stockCode": "2317.TW",
-        "stockName": "富士康",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 20560,
-        "stockCode": "APH.N",
-        "stockName": "安费诺",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 20573,
-        "stockCode": "2317.TW",
-        "stockName": "富士康",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 20,
     "selectedCoreProductCount": 2,
     "selectedCompanyCoreProductCount": 2,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 3,
-    "downstreamCandidateCount": 1,
-    "shownUpstreamCount": 3,
-    "shownDownstreamCount": 1
+    "level7ProductCount": 48,
+    "relatedIndustryCandidateCount": 21,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140149624",
-        "name": "表面处理试剂",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140149592"
-        ],
-        "linkedCoreProductNames": [
-          "液态金属铰链"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140010756",
-        "name": "转轴",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140149592"
-        ],
-        "linkedCoreProductNames": [
-          "液态金属铰链"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140149623",
-        "name": "非晶合金材料",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140149592"
-        ],
-        "linkedCoreProductNames": [
-          "液态金属铰链"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140218456",
         "name": "AI眼镜结构件",
@@ -159,18 +70,15 @@
           "name": "AI眼镜结构件"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300433.SZ",
             "stockName": "蓝思科技",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 15,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -205,18 +113,15 @@
           "name": "液态金属铰链"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300328.SZ",
             "stockName": "宜安科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 1,
         "relevanceScore": 7,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -225,22 +130,481 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140149680",
-        "name": "折叠手机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140149592"
+        "code": "1210002746",
+        "name": "消费电子外壳",
+        "description": "消费电子外壳指手机、电脑等设备的结构件。因AI终端创新推动换机潮，叠加钛合金、3D玻璃等新材质应用提升单机价值，该行业受益量价齐升预期，成为A股关注焦点。",
+        "stockCount": 4,
+        "starWeight": 13,
+        "level7ProductCount": 10,
+        "relevanceScore": 44,
+        "stocks": [
+          {
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300709.SZ",
+            "stockName": "精研科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300115.SZ",
+            "stockName": "长盈精密",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002600.SZ",
+            "stockName": "领益智造",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "液态金属铰链"
+        "products": [
+          {
+            "code": "1140135624",
+            "name": "手机摄像头支架",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 消费电子外壳 > 消费电子外壳 > 手机摄像头支架",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300709.SZ",
+                "stockName": "精研科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002600.SZ",
+                "stockName": "领益智造",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135626",
+            "name": "手机卡托",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 消费电子外壳 > 消费电子外壳 > 手机卡托",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300709.SZ",
+                "stockName": "精研科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140174122",
+            "name": "手机按键",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 消费电子外壳 > 消费电子外壳 > 手机按键",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002600.SZ",
+                "stockName": "领益智造",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140170121",
+            "name": "手机摄像头装饰件",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 消费电子外壳 > 消费电子外壳 > 手机摄像头装饰件",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300433.SZ",
+                "stockName": "蓝思科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1210002739",
+        "name": "触控模组",
+        "description": "触控模组是将触摸感应与显示结合的核心组件。A股关注该行业，主要因智能手机、车载屏及可穿戴设备需求增长，叠加国产替代加速及技术升级（如柔性屏），推动头部企业业绩提升，具备较高成长性与投资价值。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 3,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600552.SH",
+            "stockName": "凯盛科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002600.SZ",
+            "stockName": "领益智造",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140204730",
+            "name": "笔记本电脑触控模组",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 触控模组 > 触控模组 > 笔记本电脑触控模组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002600.SZ",
+                "stockName": "领益智造",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140005566",
+            "name": "触控显示模组",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 触控模组 > 触控模组 > 触控显示模组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300433.SZ",
+                "stockName": "蓝思科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140006107",
+            "name": "触摸屏",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 触控模组 > 触控模组 > 触摸屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600552.SH",
+                "stockName": "凯盛科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 8,
+    "mappedStockCount": 8,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 48,
+    "candidateIndustryCount": 21,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 20555,
+        "stockCode": "300433.SZ",
+        "stockName": "蓝思科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 11
+      },
+      {
+        "sourceRowNumber": 20556,
+        "stockCode": "600552.SH",
+        "stockName": "凯盛科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 20557,
+        "stockCode": "002938.SZ",
+        "stockName": "鹏鼎控股",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 20559,
+        "stockCode": "300328.SZ",
+        "stockName": "宜安科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 20562,
+        "stockCode": "300115.SZ",
+        "stockName": "长盈精密",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 20563,
+        "stockCode": "002600.SZ",
+        "stockName": "领益智造",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
+      },
+      {
+        "sourceRowNumber": 20564,
+        "stockCode": "300709.SZ",
+        "stockName": "精研科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 20569,
+        "stockCode": "300134.SZ",
+        "stockName": "大富科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210002746",
+        "name": "消费电子外壳",
+        "description": "消费电子外壳指手机、电脑等设备的结构件。因AI终端创新推动换机潮，叠加钛合金、3D玻璃等新材质应用提升单机价值，该行业受益量价齐升预期，成为A股关注焦点。",
+        "stockCount": 4,
+        "starWeight": 13,
+        "level7ProductCount": 10,
+        "relevanceScore": 44,
+        "stocks": [
+          {
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300709.SZ",
+            "stockName": "精研科技",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300115.SZ",
+            "stockName": "长盈精密",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002600.SZ",
+            "stockName": "领益智造",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140135624",
+            "name": "手机摄像头支架",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 消费电子外壳 > 消费电子外壳 > 手机摄像头支架",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "300709.SZ",
+                "stockName": "精研科技",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002600.SZ",
+                "stockName": "领益智造",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140135626",
+            "name": "手机卡托",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 消费电子外壳 > 消费电子外壳 > 手机卡托",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300709.SZ",
+                "stockName": "精研科技",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140174122",
+            "name": "手机按键",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 消费电子外壳 > 消费电子外壳 > 手机按键",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002600.SZ",
+                "stockName": "领益智造",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140170121",
+            "name": "手机摄像头装饰件",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 消费电子外壳 > 消费电子外壳 > 手机摄像头装饰件",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300433.SZ",
+                "stockName": "蓝思科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1210002739",
+        "name": "触控模组",
+        "description": "触控模组是将触摸感应与显示结合的核心组件。A股关注该行业，主要因智能手机、车载屏及可穿戴设备需求增长，叠加国产替代加速及技术升级（如柔性屏），推动头部企业业绩提升，具备较高成长性与投资价值。",
+        "stockCount": 3,
+        "starWeight": 10,
+        "level7ProductCount": 3,
+        "relevanceScore": 12,
+        "stocks": [
+          {
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600552.SH",
+            "stockName": "凯盛科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002600.SZ",
+            "stockName": "领益智造",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140204730",
+            "name": "笔记本电脑触控模组",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 触控模组 > 触控模组 > 笔记本电脑触控模组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002600.SZ",
+                "stockName": "领益智造",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140005566",
+            "name": "触控显示模组",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 触控模组 > 触控模组 > 触控显示模组",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "300433.SZ",
+                "stockName": "蓝思科技",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140006107",
+            "name": "触摸屏",
+            "hierarchyPath": "电子 > 消费电子 > 消费电子零部件 > 触控模组 > 触控模组 > 触摸屏",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600552.SH",
+                "stockName": "凯盛科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -255,10 +619,742 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 23,
+    "eligibleSourceRowCount": 8,
+    "totalStockCount": 8,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 8,
+    "excludedNonAShareCount": 7,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 8,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 20555,
+            "stockCode": "300433.SZ",
+            "stockName": "蓝思科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "为折叠屏手机提供UTG超薄柔性玻璃、玻璃支撑板等核心结构件，并已于2026年Q2末开始向大客户出货交付。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300433.SZ",
+              "companyName": "蓝思科技",
+              "companyProfile": "公司以科技创新为核心、智能智造为驱动，是业内领先的智能终端全产业链一站式精密制造解决方案提供商。公司前身于1993年在深圳成立，2006年总部落户湖南长沙，随后实现“A+H”双资本平台战略布局。公司在新材料应用领域持续突破，率先将玻璃、蓝宝石、陶瓷等脆性材料引入消费电子行业。凭借对玻璃、金属、陶瓷、塑胶、皮革、硅胶、玻纤、碳纤、化纤等十余种材料的深度技术积累，以及强大的平台化能力，公司实现了从原材料生产、功能模块贴合到整机组装的垂直整合能力，并与全球头部消费电子及智能汽车品牌建立了长期战略合作。公司通过“新材料、新技术、新装备、新领域”战略，持续拓展新领域。业务覆盖AI智能终端(包含智能手机、AI眼镜、智能汽车、具身智能等)、AI服务器、商业航天、光通信等领域，形成多场景协同发展的业务布局。",
+              "profileSummary": "公司在新材料应用领域持续突破，率先将玻璃、蓝宝石、陶瓷等脆性材料引入消费电子行业。业务覆盖AI智能终端(包含智能手机、AI眼镜、智能汽车、具身智能等)、AI服务器、商业航天、光通信等领域，形成多场景协同发展的业务布局。",
+              "majorProducts": "新能源汽车及智能座舱类、智能手机与电脑类、智能头显与智能穿戴类",
+              "revenueComposition": "智能手机与电脑类:82.23%;新能源汽车及智能座舱类:8.68%;智能头显与智能穿戴类:5.35%;其他业务:2.33%;其他智能终端类:1.41%",
+              "revenueSegments": [
+                {
+                  "name": "智能手机与电脑类",
+                  "sharePct": 82.23,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源汽车及智能座舱类",
+                  "sharePct": 8.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能头显与智能穿戴类",
+                  "sharePct": 5.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他智能终端类",
+                  "sharePct": 1.41,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "AI眼镜结构件",
+                    "category": "其他消费电子零部件"
+                  },
+                  {
+                    "name": "手机影像模组",
+                    "category": "摄像头模组"
+                  },
+                  {
+                    "name": "手机摄像头装饰件",
+                    "category": "消费电子外壳"
+                  },
+                  {
+                    "name": "手机摄像头陶瓷圈口",
+                    "category": "摄像头模组"
+                  },
+                  {
+                    "name": "手机陶瓷侧键",
+                    "category": "消费电子外壳"
+                  },
+                  {
+                    "name": "手表陶瓷外壳",
+                    "category": "消费电子外壳"
+                  }
+                ],
+                "knownProducts": [
+                  "盖板玻璃",
+                  "人形机器人",
+                  "超薄夹胶多功能车窗玻璃",
+                  "AI眼镜结构件",
+                  "指纹识别模组",
+                  "手机影像模组",
+                  "手机摄像头陶瓷圈口",
+                  "手机摄像头装饰件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "蓝思科技已经具备AI眼镜结构件、手机影像模组、手机摄像头装饰件等业务能力，为折叠屏手机提供UTG超薄柔性玻璃、玻璃支撑板等核心结构件，并已于2026年Q2末开始向大客户出货交付并非单纯概念映射。当前对应的收入被归入智能手机与电脑类（82.23%）、其他智能终端类（1.41%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，并最终反映在客户认证、新增订单、交付节奏、相关业务收入和毛利率上；客户验证或交付节奏低于预期，订单停留在小批量阶段会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 20559,
+            "stockCode": "300328.SZ",
+            "stockName": "宜安科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司液态金属铰链主轴结构件已实现量产，并向铰链组装厂商安费诺交付，安费诺是苹果折叠屏铰链两大组装商之一。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300328.SZ",
+              "companyName": "宜安科技",
+              "companyProfile": "公司是一家集轻合金材料研发、生产、营销为一体的国家火炬计划重点高新技术企业，液态金属、生物可降解医用镁合金、镁铝合金汽车产品为公司三大重点板块业务。产品范围包括消费电子、高端LED幕墙、医疗器械、汽车配件、通讯设备、大型结构件(车门、电视幕墙等)等。公司先后建有“宜安科技-中科院金属所非晶态材料研究联合实验室”、“国家博士后科研工作站”、“广东省轻合金工程技术研究开发中心”、“省企业技术中心”、“广东省院士专家工作站”、“广东省企业重点试验室”、“国际科技合作基地”等多个科研机构。",
+              "profileSummary": "公司是一家集轻合金材料研发、生产、营销为一体的国家火炬计划重点高新技术企业，液态金属、生物可降解医用镁合金、镁铝合金汽车产品为公司三大重点板块业务。产品范围包括消费电子、高端LED幕墙、医疗器械、汽车配件、通讯设备、大型结构件(车门、电视幕墙等)等。",
+              "majorProducts": "3C产品、LED产品、电动工具、高端电器、工业配件、汽车零部件、通讯设备、医疗设备",
+              "revenueComposition": "铝制品:45.41%;镁制品:35.72%;有机硅胶:6.66%;液态金属:3.41%;模具:2.89%;其他:2.87%;其他业务:1.99%;电木制品:1.05%",
+              "revenueSegments": [
+                {
+                  "name": "铝制品",
+                  "sharePct": 45.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "镁制品",
+                  "sharePct": 35.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "有机硅胶",
+                  "sharePct": 6.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "液态金属",
+                  "sharePct": 3.41,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "模具",
+                  "sharePct": 2.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电木制品",
+                  "sharePct": 1.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "液态金属铰链",
+                    "category": "铰链"
+                  }
+                ],
+                "knownProducts": [
+                  "室温硫化硅橡胶(RTV)",
+                  "高纯镁骨钉",
+                  "液态金属铰链",
+                  "新能源汽车电池包壳体",
+                  "新能源汽车铝合金电池包端板",
+                  "新能源汽车铝合金电控箱体",
+                  "液态金属车门锁盖",
+                  "镁制汽车仪表盘支架"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "宜安科技已经参与事件相关业务，但收入基数仍小：液态金属占收入的3.41%，说明公司已有业务抓手，但“公司液态金属铰链主轴结构件已实现量产，并向铰链组装厂商安费诺交付，安费诺是苹果折叠屏铰链两大组装商之一”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于商业化进度和订单兑现能否驱动“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”，从而推动业务跨过小规模阶段。在此之前，客户认证、新增订单、交付节奏、相关业务收入和毛利率比总收入增速更值得跟踪；若客户验证或交付节奏低于预期，订单停留在小批量阶段，市场对远期空间的定价可能缺少当期业绩支撑。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 20556,
+            "stockCode": "600552.SH",
+            "stockName": "凯盛科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "作为折叠屏手机盖板材料UTG的供应商，有望受益于苹果入局带来的市场增量。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600552.SH",
+              "companyName": "凯盛科技",
+              "companyProfile": "公司原名安徽方兴科技股份有限公司，成立于2000年9月30日，2002年11月在上海证券交易所上市，2016年3月公司更名为凯盛科技股份有限公司。公司是世界500强中国建材集团的三级上市公司，也是凯盛科技集团“3+1”战略布局中显示材料和应用材料的核心研发和产业平台。总部位于蚌埠市高新技术产业开发区，在深圳、洛阳、池州等地拥有生产研发基地，是国家技术创新示范企业、国家企业技术中心、国家高新技术企业、国家火炬计划项目产业化示范企业。多年来，公司在集团的支持下，充分利用国家重点实验室、玻璃新材料国家制造业创新中心等顶级研发平台优势，汇聚创新研发的合力，累计承担十四五国家重点研发计划项目课题、国家发改委产业发展重点专项、建材行业“揭榜挂帅”项目等各类省级以上科研项目20项。",
+              "profileSummary": "公司是世界500强中国建材集团的三级上市公司，也是凯盛科技集团“3+1”战略布局中显示材料和应用材料的核心研发和产业平台。",
+              "majorProducts": "AR减反射玻璃、PDLC调光膜、TFT显示玻璃减薄、TP模块系列产品、车载模组系列产品、电容式触摸屏、方兴手机模组、钙稳定氧化锆、高纯电熔氧化锆、硅微粉、华光浮法玻璃、华光氧化铟锡ITO导电膜玻璃、华光在线镀膜玻璃、结晶石英粉、抛光粉、球形石英粉、球形氧化铝、熔融石英粉、数码显示模组系列产品、钛酸钡、脱硅锆、窄分布球铝、智能穿戴模组系列产品",
+              "revenueComposition": "显示材料:78.67%;应用材料:19.37%;其他业务:1.96%",
+              "revenueSegments": [
+                {
+                  "name": "显示材料",
+                  "sharePct": 78.67,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "应用材料",
+                  "sharePct": 19.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "触摸屏",
+                    "category": "触控模组"
+                  }
+                ],
+                "knownProducts": [
+                  "ITO导电玻璃",
+                  "盖板玻璃",
+                  "复合氧化锆",
+                  "电熔氧化锆",
+                  "球形氧化铝",
+                  "ITO(氧化铟锡)导电膜",
+                  "抛光粉",
+                  "石英粉"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "凯盛科技的显示材料（78.67%）覆盖范围较宽，其中能够承载触摸屏，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：作为折叠屏手机盖板材料UTG的供应商，受益环节在于苹果入局带来的市场增量。现阶段无法用整个分部占比直接衡量受益程度，因为技术商业化与产品迭代速度还需沿“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、量产良率、订单规模、产品收入占比和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 20557,
+            "stockCode": "002938.SZ",
+            "stockName": "鹏鼎控股",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "作为苹果FPC核心供应商，有望为折叠屏手机提供关键的柔性电路板解决方案。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002938.SZ",
+              "companyName": "鹏鼎控股",
+              "companyProfile": "公司由富葵精密组件(深圳)有限公司整体变更设立。公司成立于1999年4月29日，并于2018年9月18日在深圳证券交易所上市。公司为全球范围内少数同时具备各类PCB产品研发、设计、制造与销售服务的专业大型厂商，拥有优质多样的PCB产品线，主要产品范围涵盖FPC、SMA、SLP、HDI、RPCB、RigidFlex等多类产品，并广泛应用于通讯电子产品、消费电子及高性能计算机类产品以及EV汽车和AI服务器等产品，具备为不同客户提供打造全方位PCB电子互联产品及服务的强大实力，打造了全方位的PCB产品一站式服务平台。公司高度重视研究开发工作，在深圳市设有研发中心，不断加强产学研合作，与包含清华大学、香港城市大学、东南大学、深圳大学、燕山大学、河北工业大学及广东工业大学等大陆院校，以及台湾大学、新竹清华大学、成功大学、中央大学、台湾科技大学、中原大学、元智大学、龙华科技大学等台湾研究机构及院校建立了长期的合作关系。截止2025年6月30日，公司累计申请专利2732件，累计获得国内外授权专利数1525件。根据Prismark2018至2025年以营收计算的全球PCB企业排名，公司2017年-2024年连续八年位列全球最大PCB生产企业。产品领域INDUSTRIALOPERATION公司是主要从事各类印制电路板的设计、研发、制造与销售业务的专业服务公司，专注于为行业领先客户提供全方位PCB产品及服务。鹏鼎控股拥有一流质量的产品与服务，可提供全方位电路板系列产品，满足客户「onestopshopping」的需求。",
+              "profileSummary": "公司为全球范围内少数同时具备各类PCB产品研发、设计、制造与销售服务的专业大型厂商，拥有优质多样的PCB产品线，主要产品范围涵盖FPC、SMA、SLP、HDI、RPCB、RigidFlex等多类产品，并广泛应用于通讯电子产品、消费电子及高性能计算机类产品以及EV汽车和AI服务器等产品，具备为不同客户提供打造全方位PCB电子互联产品及服务的强大实力，打造了全方位的PCB产品一站式服务平台。产品领域INDUSTRIALOPERATION公…",
+              "majorProducts": "其他领域用板、通讯用板、消费电子及计算机用板",
+              "revenueComposition": "通讯用板:64.98%;消费电子及计算机用板:28.83%;汽车、服务器用板:5.41%;其他业务:0.78%",
+              "revenueSegments": [
+                {
+                  "name": "通讯用板",
+                  "sharePct": 64.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "消费电子及计算机用板",
+                  "sharePct": 28.83,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "汽车、服务器用板",
+                  "sharePct": 5.41,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "FPC(柔性电路板)",
+                    "category": "柔性电路板"
+                  },
+                  {
+                    "name": "消费电子用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "RPCB(刚性电路板)",
+                    "category": "刚性电路板"
+                  },
+                  {
+                    "name": "服务器用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "汽车用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  },
+                  {
+                    "name": "计算机用PCB(印刷电路板)",
+                    "category": "特种电路板"
+                  }
+                ],
+                "knownProducts": [
+                  "RPCB(刚性电路板)",
+                  "高密度互联板(HDI)",
+                  "FPC(柔性电路板)",
+                  "服务器用PCB(印刷电路板)",
+                  "汽车用PCB(印刷电路板)",
+                  "消费电子用PCB(印刷电路板)",
+                  "计算机用PCB(印刷电路板)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "鹏鼎控股已经具备FPC(柔性电路板)、消费电子用PCB(印刷电路板)、RPCB(刚性电路板)等业务能力，作为苹果FPC核心供应商，有望为折叠屏手机提供关键的柔性电路板解决方案并非单纯概念映射。当前对应的收入被归入消费电子及计算机用板（28.83%）、汽车、服务器用板（5.41%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于技术商业化与产品迭代速度是否通过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”放大，并最终反映在客户认证、量产良率、订单规模、产品收入占比和毛利率上；技术路线变化、良率爬坡缓慢或竞争方案更快成熟会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 20562,
+            "stockCode": "300115.SZ",
+            "stockName": "长盈精密",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为苹果金属结构件供应商，有望受益于折叠屏手机铰链等复杂结构件带来的价值量提升。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300115.SZ",
+              "companyName": "长盈精密",
+              "companyProfile": "公司成立于2001年7月，主要经营活动为开发、生产、销售智能终端及电子产品精密零组件、新能源关键结构件及连接组件、具身智能与新兴科技硬件等。公司坚持稳健经营，持续创新，致力于为行业及客户提供更具竞争力的产品和服务。公司主营业务涵盖智能终端及电子产品精密零组件、新能源关键结构件及连接组件、具身智能与新兴科技硬件三大板块。公司紧跟电子信息产业及新能源产业快速发展的步伐，持续开发、设计高精密、高性能、高附加值的新产品，并拓展、完善公司的业务及产品体系，逐步由精密制造向智能制造方向发展。目前，公司服务领域已拓展至智能终端、新能源、具身智能以及新兴科技领域等，形成了消费电子和新能源双支柱加人工智能的发展格局。近年来，生成式人工智能和大语言模型的迅速发展催化具身智能进入商业化应用阶段，公司也加快人形机器人相关产能的建设，加大研发投入。同时，公司持续看好AI服务器行业及基于铜连接的高速通信模组业务，积极布局AI算力相关领域，进一步强化在人工智能方向的产业布局。",
+              "profileSummary": "公司主营业务涵盖智能终端及电子产品精密零组件、新能源关键结构件及连接组件、具身智能与新兴科技硬件三大板块。目前，公司服务领域已拓展至智能终端、新能源、具身智能以及新兴科技领域等，形成了消费电子和新能源双支柱加人工智能的发展格局。",
+              "majorProducts": "IO 连接器、LCD∕LED 端子、SIM 卡连接器、USB 连接器、板对板连接器、表面贴装式LED精密支架、电池连接器、各种小五金端子、精密连接器端子、射频连接器、手机电池金手指、手机耳机插座、手机复合屏蔽件、手机滑轨、手机屏蔽件、手机转轴、数码产品五金零件、通信设备卡接簧片、小型记忆卡",
+              "revenueComposition": "智能终端及电子产品:58.73%;新能源产品零组件及连接器:36.46%;其他:3.83%;具身智能与新兴科技硬件:0.98%",
+              "revenueSegments": [
+                {
+                  "name": "智能终端及电子产品",
+                  "sharePct": 58.73,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源产品零组件及连接器",
+                  "sharePct": 36.46,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "具身智能与新兴科技硬件",
+                  "sharePct": 0.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "SCARA机器人(圆柱坐标型机器人手臂)",
+                    "category": "工业机器人"
+                  },
+                  {
+                    "name": "SIM卡连接器",
+                    "category": "消费电子连接器"
+                  },
+                  {
+                    "name": "USB连接器",
+                    "category": "消费电子连接器"
+                  },
+                  {
+                    "name": "弹片连接器",
+                    "category": "消费电子连接器"
+                  },
+                  {
+                    "name": "消费类电子升降模组",
+                    "category": "摄像头模组"
+                  },
+                  {
+                    "name": "消费类电子金属外观件",
+                    "category": "消费电子外壳"
+                  }
+                ],
+                "knownProducts": [
+                  "SCARA机器人(圆柱坐标型机器人手臂)",
+                  "新能源汽车动力电池盖板",
+                  "新能源汽车母排",
+                  "氢燃料电池用不锈钢水冷板",
+                  "氢燃料电池用不锈钢风冷板",
+                  "新能源汽车充电座",
+                  "汽车尾灯组件",
+                  "汽车门锁组件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "长盈精密与事件存在真实业务交集：公司已有SCARA机器人(圆柱坐标型机器人手臂)、SIM卡连接器、USB连接器，与作为苹果金属结构件供应商，受益环节在于折叠屏手机铰链等复杂结构件带来的价值量提升所处的产业环节一致。智能终端及电子产品（58.73%）、新能源产品零组件及连接器（36.46%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响技术商业化与产品迭代速度，只有经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”，才会形成可确认的收入和利润增量。客户认证、量产良率、订单规模、产品收入占比和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 20563,
+            "stockCode": "002600.SZ",
+            "stockName": "领益智造",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司MIM结构件技术有望应用于折叠屏手机复杂的铰链系统，是产业链核心增量环节的潜在受益者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002600.SZ",
+              "companyName": "领益智造",
+              "companyProfile": "公司成立于2006年，2018年登陆A股资本市场。作为值得信赖的AI终端硬件核心供应商，公司在全球范围内为客户提供精密功能件、结构件、模组等一站式智能制造服务及解决方案。公司精密功能件产品的市场份额及出货量已连续多年稳居全球消费电子市场领先地位，在质量、制程、技术等多个方面设定了行业标准，成为全球客户值得信赖的“功能件专家”，并进一步渗透机器人、新能源汽车、光伏储能等新兴市场。近年来，公司综合实力持续提升，从单一加工制程到多种加工制程，从产品制造专家到解决方案专家，成为值得信赖的全球AI终端硬件制造平台。公司连续8年入选《财富》中国500强，并多次入选《财富》中国上市公司500强、中国民营企业500强、中国制造业民营企业500强等榜单。2023-2024年，公司MSCI-ESG评级连续2年为“A”。2024年公司实现营业收入442.11亿元，同比增长29.56%。其中，AI终端业务全年实现收入约407.31亿元，同比增长32.75%；汽车及低空经济业务实现收入21.17亿元，同比增长52.90%；公司其它业务实现收入约13.63亿元，其中公司清洁能源业务收入11.71亿元。截至2024年底，公司累计获得各项专利2178项，研发人员6367人。2024年公司研发投入19.78亿，较2023年同比增长9.10%。未来，公司将继续坚持创新引领和国际化发展的理念，聚焦主业并向上游延伸，全面发力机器人、服务器散热、AI眼镜、低空经济等第N增长曲线；拓展海外市场，提升海外盈利能力；深挖国内需求，进一步提升企业护城河；着力打造集“精益化、数字化、自动化、绿色化”于一体的智能制造平台，持续增强核心竞争力。",
+              "profileSummary": "作为值得信赖的AI终端硬件核心供应商，公司在全球范围内为客户提供精密功能件、结构件、模组等一站式智能制造服务及解决方案。公司精密功能件产品的市场份额及出货量已连续多年稳居全球消费电子市场领先地位，在质量、制程、技术等多个方面设定了行业标准，成为全球客户值得信赖的“功能件专家”，并进一步渗透机器人、新能源汽车、光伏储能等新兴市场。",
+              "majorProducts": "2.2kW 储能 PCS、600W 功率优化器、700W 微型光伏逆变器、CSV 减速器、hinge-无线耳机配件、Mesh产品、Mini LED 背光模组、MnZn软磁铁氧体材料、OCUG-室外微波合分路单元、PD3.1 140W+小型化 GaN 充电器、XR 无线充电、钣金滤波器、笔记本电脑触控模组、便携式户外储能电源、玻纤结构外观件产品、传感器精密金属件、导光板背光模组、导热类产品、电池铜/铝转接片、电磁屏蔽材料、动力电池顶盖、动力电池铝壳、多频 OMT组件、防水产品方案、复合板材手机电池盖、工业控制器一体化解决方案、工业用 IoT Sensor、光伏无线网络通讯模块、硅胶类产品、硅胶组件方案、键盘反光模组类产品、键盘模组、键盘组件方案、结构件 3D 打印方案、金属小件类产品----卡托类、全 CNC 笔电外壳、热管理产品方案、散热产品-不锈钢 VC、散热产品-钛合金 VC、射频腔体滤波器、声学类产品、手机按键-静音键、手机金属中框、手机摄像头支架、钛合金结构件 MIM方案、碳纤维产品-Hinge 零件、碳纤维桨叶产品、陶瓷纤维产品、微波定频双工、微波介质陶瓷、微波可调谐双工器、无线充电器外壳、智能耳机耳套、智能手机保护套",
+              "revenueComposition": "AI终端:87.1%;其他:7.16%;汽车及低空经济:5.74%",
+              "revenueSegments": [
+                {
+                  "name": "AI终端",
+                  "sharePct": 87.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 7.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车及低空经济",
+                  "sharePct": 5.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "VC均热板",
+                    "category": "散热模块"
+                  },
+                  {
+                    "name": "VR眼罩",
+                    "category": "VR/AR设备"
+                  },
+                  {
+                    "name": "充电器代工",
+                    "category": "有线充电"
+                  },
+                  {
+                    "name": "声学模组防护罩",
+                    "category": "声学组件"
+                  },
+                  {
+                    "name": "手机按键",
+                    "category": "消费电子外壳"
+                  },
+                  {
+                    "name": "手机摄像头支架",
+                    "category": "消费电子外壳"
+                  }
+                ],
+                "knownProducts": [
+                  "无人机碳纤维桨叶",
+                  "纳米晶材料",
+                  "软磁铁氧体",
+                  "汽车传动轴",
+                  "汽车驱动轴",
+                  "汽车转向轴",
+                  "电磁屏蔽吸波片",
+                  "VR眼罩"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "领益智造拥有VC均热板、VR眼罩、充电器代工，其产业链位置与公司MIM结构件技术有望应用于折叠屏手机复杂的铰链系统，是产业链核心增量环节的潜在受益者一致；当前的AI终端（87.1%）、其他（7.16%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由技术商业化与产品迭代速度决定，并需完成“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”。只有客户认证、量产良率、订单规模、产品收入占比和毛利率持续改善，产品能力才会转化为公司层面的收入和盈利提升；技术路线变化、良率爬坡缓慢或竞争方案更快成熟则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 20564,
+            "stockCode": "300709.SZ",
+            "stockName": "精研科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司核心的MIM工艺是制造高精度、复杂结构铰链的关键技术之一，有望受益于苹果折叠屏手机的推出。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300709.SZ",
+              "companyName": "精研科技",
+              "companyProfile": "公司主要为智能手机、可穿戴设备、笔记本及平板电脑等消费电子领域和汽车领域大批量提供高复杂度、高精度、高强度、外观精美的定制化MIM核心零部件产品，产品涵盖了诸如手机卡托、摄像头装饰圈、按键、穿戴设备表壳、表扣、笔记本散热风扇、汽车零部件等多个细分门类。公司一直将技术创新作为业务发展的持续动力，现已被认定为“高新技术企业”、“国家火炬计划高新技术企业”、“常州市粉末注射成型工程技术研究中心”及“常州市企业技术中心”，并担任“江苏省钛合金粉末注射成型技术工程中心”的承建单位。",
+              "profileSummary": "公司主要为智能手机、可穿戴设备、笔记本及平板电脑等消费电子领域和汽车领域大批量提供高复杂度、高精度、高强度、外观精美的定制化MIM核心零部件产品，产品涵盖了诸如手机卡托、摄像头装饰圈、按键、穿戴设备表壳、表扣、笔记本散热风扇、汽车零部件等多个细分门类。公司一直将技术创新作为业务发展的持续动力，现已被认定为“高新技术企业”、“国家火炬计划高新技术企业”、“常州市粉末注射成型工程技术研究中心”及“常州市企业技术中心”，并担任“江苏省钛合金…",
+              "majorProducts": "VC等散热部品、笔记本及平板电脑用MIM产品、风冷模组、金属产品表面处理服务、精密塑胶零部件及组件、可穿戴设备用MIM产品、其他MIM产品、汽车制造用MIM产品、手机折叠屏转轴、液冷板以及模组子件热管、液冷模组、医疗器械用MIM产品、智能手机用MIM产品",
+              "revenueComposition": "MIM零部件及组件:56.45%;传动、散热类组件及其他:25.76%;精密塑胶零部件及组件:9.63%;其他业务:5.55%;终端产品:2.61%",
+              "revenueSegments": [
+                {
+                  "name": "MIM零部件及组件",
+                  "sharePct": 56.45,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "传动、散热类组件及其他",
+                  "sharePct": 25.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密塑胶零部件及组件",
+                  "sharePct": 9.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 5.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "终端产品",
+                  "sharePct": 2.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "TWS蓝牙耳机代工",
+                    "category": "耳机"
+                  },
+                  {
+                    "name": "唱片机代工",
+                    "category": "家用音响"
+                  },
+                  {
+                    "name": "手机卡托",
+                    "category": "消费电子外壳"
+                  },
+                  {
+                    "name": "手机摄像头支架",
+                    "category": "消费电子外壳"
+                  },
+                  {
+                    "name": "手机装饰圈",
+                    "category": "消费电子外壳"
+                  },
+                  {
+                    "name": "手机转轴件",
+                    "category": "消费电子结构件"
+                  }
+                ],
+                "knownProducts": [
+                  "电机齿轮箱模组",
+                  "汽车塑胶件",
+                  "汽车电气系统连接器",
+                  "传感器外壳",
+                  "TWS蓝牙耳机代工",
+                  "唱片机代工",
+                  "手机卡托",
+                  "手机摄像头支架"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "精研科技与新闻之间有明确产品抓手：TWS蓝牙耳机代工、唱片机代工、手机卡托，对应公司核心的MIM工艺是制造高精度、复杂结构铰链的关键技术之一，受益环节在于苹果折叠屏手机的推出。收入主体目前是MIM零部件及组件（56.45%）、传动、散热类组件及其他（25.76%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变技术商业化与产品迭代速度预期，随后要经过“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”才能进入利润表。客户认证、量产良率、订单规模、产品收入占比和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 20569,
+            "stockCode": "300134.SZ",
+            "stockName": "大富科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是苹果天线、无线充电、散热及精密结构件的核心供应商，有望参与折叠屏手机相关结构件供应。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300134.SZ",
+              "companyName": "大富科技",
+              "companyProfile": "公司以智能制造和高端装备解决方案为核心业务，聚焦移动通信、消费类电子、汽车零部件及工业母机等领域。通过构建涵盖智能制造服务、高端装备服务及解决方案的业务闭环，公司为国内外客户提供一站式专业服务。目前，公司已形成以珠三角、长三角为核心，覆盖深圳、东莞、蚌埠等多地的生产和研发基地布局。",
+              "profileSummary": "公司以智能制造和高端装备解决方案为核心业务，聚焦移动通信、消费类电子、汽车零部件及工业母机等领域。目前，公司已形成以珠三角、长三角为核心，覆盖深圳、东莞、蚌埠等多地的生产和研发基地布局。",
+              "majorProducts": "合路器、滤波器、射频器件的盖板、射频器件的腔体、射频器件的外壳、双工器",
+              "revenueComposition": "射频产品:59.71%;智能终端结构件:29.12%;汽车零配件:7.31%;其他业务:2.62%;智能装备系列:1.25%",
+              "revenueSegments": [
+                {
+                  "name": "射频产品",
+                  "sharePct": 59.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能终端结构件",
+                  "sharePct": 29.12,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "汽车零配件",
+                  "sharePct": 7.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.62,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能装备系列",
+                  "sharePct": 1.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "射频结构件",
+                    "category": "滤波器"
+                  },
+                  {
+                    "name": "消费电子结构件",
+                    "category": "消费电子结构件"
+                  },
+                  {
+                    "name": "5G射频滤波器",
+                    "category": "滤波器"
+                  },
+                  {
+                    "name": "塔顶放大器",
+                    "category": "放大器"
+                  },
+                  {
+                    "name": "陶瓷介质滤波器",
+                    "category": "滤波器"
+                  }
+                ],
+                "knownProducts": [
+                  "加工中心",
+                  "新能源汽车空调压缩机",
+                  "汽车精密压铸件",
+                  "5G射频滤波器",
+                  "射频结构件",
+                  "陶瓷介质滤波器",
+                  "塔顶放大器",
+                  "消费电子结构件"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对大富科技而言，公司是苹果天线、无线充电、散热及精密结构件的核心供应商，有望参与折叠屏手机相关结构件供应并非纯概念映射，因为智能终端结构件占收入的29.12%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是技术商业化与产品迭代速度，传导效率取决于“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由客户认证、量产良率、订单规模、产品收入占比和毛利率来区分；若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，重估逻辑会被削弱。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "8条低于3星的源记录已按当前关注口径排除。",
+      "7条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

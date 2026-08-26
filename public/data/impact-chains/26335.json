@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26335",
@@ -9,20 +9,11 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 5,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
     "mappedStockCount": 3,
-    "unmappedStockCount": 2,
+    "unmappedStockCount": 0,
     "stocks": [
-      {
-        "sourceRowNumber": 1315,
-        "stockCode": "7011.T",
-        "stockName": "三菱重工",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 1324,
         "stockCode": "300153.SZ",
@@ -30,7 +21,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 4
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 1325,
@@ -39,16 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 8
-      },
-      {
-        "sourceRowNumber": 1336,
-        "stockCode": "BE.N",
-        "stockName": "Bloom Energy",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 1339,
@@ -57,268 +39,21 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 10
+        "anchorProductCount": 3
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 1315,
-        "stockCode": "7011.T",
-        "stockName": "三菱重工",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1336,
-        "stockCode": "BE.N",
-        "stockName": "Bloom Energy",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 21,
     "selectedCoreProductCount": 4,
     "selectedCompanyCoreProductCount": 4,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 24,
-    "downstreamCandidateCount": 26,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 79,
+    "relatedIndustryCandidateCount": 30,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140036704",
-        "name": "发电机(电球)",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140012300",
-        "name": "散热器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140032708",
-        "name": "柴油发动机",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140036703",
-        "name": "柴油发电机组底座",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140036705",
-        "name": "柴油发电机组控制器",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140054611",
-        "name": "油箱",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140036706",
-        "name": "静音箱",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140080112",
-        "name": "DOC催化器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140080101"
-        ],
-        "linkedCoreProductNames": [
-          "柴油机选择性催化还原器型产品(SCR)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140076414",
-        "name": "DPF压差传感器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136350"
-        ],
-        "linkedCoreProductNames": [
-          "柴油颗粒过滤器(DPF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140080111",
-        "name": "SCR催化器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140080101"
-        ],
-        "linkedCoreProductNames": [
-          "柴油机选择性催化还原器型产品(SCR)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140076417",
-        "name": "压差传感器插头",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136350"
-        ],
-        "linkedCoreProductNames": [
-          "柴油颗粒过滤器(DPF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140076419",
-        "name": "废气温度传感器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136350"
-        ],
-        "linkedCoreProductNames": [
-          "柴油颗粒过滤器(DPF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140080114",
-        "name": "排温传感器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140080101"
-        ],
-        "linkedCoreProductNames": [
-          "柴油机选择性催化还原器型产品(SCR)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140076416",
-        "name": "氧化催化转换器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140136350"
-        ],
-        "linkedCoreProductNames": [
-          "柴油颗粒过滤器(DPF)"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140032784",
         "name": "柴油发电机组",
@@ -344,23 +79,21 @@
           "name": "柴油发电机组"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600590.SH",
             "stockName": "泰豪科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "300153.SZ",
             "stockName": "科泰电源",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 7,
-        "downstreamCount": 15,
         "relevanceScore": 12,
         "strongRelevanceScore": 12,
         "matchedTerms": [
@@ -369,16 +102,16 @@
         ]
       },
       {
-        "code": "1140136350",
-        "name": "柴油颗粒过滤器(DPF)",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车进排气系统 > 汽车发动机排气系统 > 柴油颗粒过滤器(DPF)",
+        "code": "1140080105",
+        "name": "柴油机氧化催化器(DOC)",
+        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车进排气系统 > 汽车发动机排气系统 > 柴油机氧化催化器(DOC)",
         "industryPath": [
           "汽车",
           "汽车零部件",
           "汽车零部件",
           "汽车进排气系统",
           "汽车发动机排气系统",
-          "柴油颗粒过滤器(DPF)"
+          "柴油机氧化催化器(DOC)"
         ],
         "level5Industry": {
           "code": "1200001152",
@@ -389,22 +122,19 @@
           "name": "汽车发动机排气系统"
         },
         "level7Product": {
-          "code": "1140136350",
-          "name": "柴油颗粒过滤器(DPF)"
+          "code": "1140080105",
+          "name": "柴油机氧化催化器(DOC)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002126.SZ",
             "stockName": "银轮股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 5,
-        "downstreamCount": 9,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -438,18 +168,15 @@
           "name": "柴油机选择性催化还原器型产品(SCR)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002126.SZ",
             "stockName": "银轮股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 7,
-        "downstreamCount": 2,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -459,16 +186,16 @@
         ]
       },
       {
-        "code": "1140080105",
-        "name": "柴油机氧化催化器(DOC)",
-        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车进排气系统 > 汽车发动机排气系统 > 柴油机氧化催化器(DOC)",
+        "code": "1140136350",
+        "name": "柴油颗粒过滤器(DPF)",
+        "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车进排气系统 > 汽车发动机排气系统 > 柴油颗粒过滤器(DPF)",
         "industryPath": [
           "汽车",
           "汽车零部件",
           "汽车零部件",
           "汽车进排气系统",
           "汽车发动机排气系统",
-          "柴油机氧化催化器(DOC)"
+          "柴油颗粒过滤器(DPF)"
         ],
         "level5Industry": {
           "code": "1200001152",
@@ -479,22 +206,19 @@
           "name": "汽车发动机排气系统"
         },
         "level7Product": {
-          "code": "1140080105",
-          "name": "柴油机氧化催化器(DOC)"
+          "code": "1140136350",
+          "name": "柴油颗粒过滤器(DPF)"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002126.SZ",
             "stockName": "银轮股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 5,
-        "downstreamCount": 1,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -504,232 +228,562 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140080140",
-        "name": "中轻型柴油车柴油机",
-        "anchorCount": 2,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140080101",
-          "1140080105"
+        "code": "1200001151",
+        "name": "汽车发动机系统",
+        "description": "汽车发动机系统指内燃机核心部件，涵盖缸体、曲轴等。虽受新能源冲击，但因混动技术普及及存量市场巨大，具备高壁垒与稳定现金流，且涉及高端制造升级，故在A股仍受关注，尤其聚焦于转型混动或出海龙头的企业。",
+        "stockCount": 3,
+        "starWeight": 12,
+        "level7ProductCount": 13,
+        "relevanceScore": 156,
+        "stocks": [
+          {
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002126.SZ",
+            "stockName": "银轮股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002448.SZ",
+            "stockName": "中原内配",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "柴油机氧化催化器(DOC)",
-          "柴油机选择性催化还原器型产品(SCR)"
+        "products": [
+          {
+            "code": "1140136281",
+            "name": "燃气发动机",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机曲柄连杆机构 > 燃气发动机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000338.SZ",
+                "stockName": "潍柴动力",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "燃气"
+            ]
+          },
+          {
+            "code": "1140054532",
+            "name": "EGR冷却器",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机燃料供给系统 > EGR冷却器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002126.SZ",
+                "stockName": "银轮股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140053525",
+            "name": "内燃机气缸套",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机曲柄连杆机构 > 内燃机气缸套",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002448.SZ",
+                "stockName": "中原内配",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140171196",
+            "name": "柴油发动机活塞环",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机曲柄连杆机构 > 柴油发动机活塞环",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002448.SZ",
+                "stockName": "中原内配",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140042349",
-        "name": "农田灌溉",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
+        "code": "1200000310",
+        "name": "发电机组",
+        "description": "发电机组指将机械能转化为电能的设备。A股中该板块受关注，主要因电力保供需求、数据中心及新能源配套带来的增量市场，以及出海机遇。其兼具基建属性与高端制造逻辑，是能源安全与算力基础设施的关键环节。",
+        "stockCount": 3,
+        "starWeight": 11,
+        "level7ProductCount": 2,
+        "relevanceScore": 136,
+        "stocks": [
+          {
+            "stockCode": "600590.SH",
+            "stockName": "泰豪科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300153.SZ",
+            "stockName": "科泰电源",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "605100.SH",
+            "stockName": "华丰股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
+        "products": [
+          {
+            "code": "1140032784",
+            "name": "柴油发电机组",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 发电机组 > 发电机组 > 柴油发电机组",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600590.SH",
+                "stockName": "泰豪科技",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300153.SZ",
+                "stockName": "科泰电源",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "605100.SH",
+                "stockName": "华丰股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 38,
+            "matchedTerms": [
+              "发电机组",
+              "发电机组柴油",
+              "柴油"
+            ]
+          },
+          {
+            "code": "1140141002",
+            "name": "混合动力供电系统",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 发电机组 > 发电机组 > 混合动力供电系统",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "605100.SH",
+                "stockName": "华丰股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "发电机组"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 19,
+    "mappedStockCount": 14,
+    "unmappedStockCount": 5,
+    "level7ProductCount": 79,
+    "candidateIndustryCount": 30,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 1316,
+        "stockCode": "002353.SZ",
+        "stockName": "杰瑞股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
       },
       {
-        "code": "1140042351",
-        "name": "国防工程",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1317,
+        "stockCode": "600875.SH",
+        "stockName": "东方电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 13
       },
       {
-        "code": "1140042348",
-        "name": "林区",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1318,
+        "stockCode": "601727.SH",
+        "stockName": "上海电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 17
       },
       {
-        "code": "1140042347",
-        "name": "筑路",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1323,
+        "stockCode": "000338.SZ",
+        "stockName": "潍柴动力",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140013748",
-        "name": "船舶",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1324,
+        "stockCode": "300153.SZ",
+        "stockName": "科泰电源",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1140017451",
-        "name": "通讯",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1325,
+        "stockCode": "600590.SH",
+        "stockName": "泰豪科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 2
       },
       {
-        "code": "1140042346",
-        "name": "采矿",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1327,
+        "stockCode": "605100.SH",
+        "stockName": "华丰股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140042350",
-        "name": "野外施工",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 1328,
+        "stockCode": "000800.SZ",
+        "stockName": "一汽解放",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140095904",
-        "name": "发电机组业务",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 1339,
+        "stockCode": "002126.SZ",
+        "stockName": "银轮股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 10
       },
       {
-        "code": "1140088084",
-        "name": "应急电源车",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 1340,
+        "stockCode": "002448.SZ",
+        "stockName": "中原内配",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140031154",
-        "name": "拖车电站",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 1341,
+        "stockCode": "603308.SH",
+        "stockName": "应流股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140166561",
-        "name": "汽车电站",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
-        ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 1342,
+        "stockCode": "000534.SZ",
+        "stockName": "万泽股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140111486",
-        "name": "混合能源发电机组",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140032784"
+        "sourceRowNumber": 1347,
+        "stockCode": "300373.SZ",
+        "stockName": "扬杰科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 1348,
+        "stockCode": "605111.SH",
+        "stockName": "新洁能",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 1349,
+        "stockCode": "688187.SH",
+        "stockName": "时代电气",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 6
+      },
+      {
+        "sourceRowNumber": 1353,
+        "stockCode": "002580.SZ",
+        "stockName": "圣阳股份",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 1354,
+        "stockCode": "600405.SH",
+        "stockName": "动力源",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 1355,
+        "stockCode": "002851.SZ",
+        "stockName": "麦格米特",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 1356,
+        "stockCode": "300274.SZ",
+        "stockName": "阳光电源",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001151",
+        "name": "汽车发动机系统",
+        "description": "汽车发动机系统指内燃机核心部件，涵盖缸体、曲轴等。虽受新能源冲击，但因混动技术普及及存量市场巨大，具备高壁垒与稳定现金流，且涉及高端制造升级，故在A股仍受关注，尤其聚焦于转型混动或出海龙头的企业。",
+        "stockCount": 3,
+        "starWeight": 12,
+        "level7ProductCount": 13,
+        "relevanceScore": 156,
+        "stocks": [
+          {
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002126.SZ",
+            "stockName": "银轮股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002448.SZ",
+            "stockName": "中原内配",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "柴油发电机组"
+        "products": [
+          {
+            "code": "1140136281",
+            "name": "燃气发动机",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机曲柄连杆机构 > 燃气发动机",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000338.SZ",
+                "stockName": "潍柴动力",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": [
+              "燃气"
+            ]
+          },
+          {
+            "code": "1140054532",
+            "name": "EGR冷却器",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机燃料供给系统 > EGR冷却器",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002126.SZ",
+                "stockName": "银轮股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140053525",
+            "name": "内燃机气缸套",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机曲柄连杆机构 > 内燃机气缸套",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002448.SZ",
+                "stockName": "中原内配",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140171196",
+            "name": "柴油发动机活塞环",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车发动机系统 > 汽车发动机曲柄连杆机构 > 柴油发动机活塞环",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002448.SZ",
+                "stockName": "中原内配",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200000310",
+        "name": "发电机组",
+        "description": "发电机组指将机械能转化为电能的设备。A股中该板块受关注，主要因电力保供需求、数据中心及新能源配套带来的增量市场，以及出海机遇。其兼具基建属性与高端制造逻辑，是能源安全与算力基础设施的关键环节。",
+        "stockCount": 3,
+        "starWeight": 11,
+        "level7ProductCount": 2,
+        "relevanceScore": 136,
+        "stocks": [
+          {
+            "stockCode": "600590.SH",
+            "stockName": "泰豪科技",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "300153.SZ",
+            "stockName": "科泰电源",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "605100.SH",
+            "stockName": "华丰股份",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140032784",
+            "name": "柴油发电机组",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 发电机组 > 发电机组 > 柴油发电机组",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600590.SH",
+                "stockName": "泰豪科技",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "300153.SZ",
+                "stockName": "科泰电源",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "605100.SH",
+                "stockName": "华丰股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 38,
+            "matchedTerms": [
+              "发电机组",
+              "发电机组柴油",
+              "柴油"
+            ]
+          },
+          {
+            "code": "1140141002",
+            "name": "混合动力供电系统",
+            "hierarchyPath": "电气设备 > 电机 > 电机 > 发电机组 > 发电机组 > 混合动力供电系统",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "605100.SH",
+                "stockName": "华丰股份",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 22,
+            "matchedTerms": [
+              "发电机组"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -744,10 +798,1604 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 48,
+    "eligibleSourceRowCount": 19,
+    "totalStockCount": 19,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 21,
+    "excludedNonAShareCount": 8,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 19,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 1323,
+            "stockCode": "000338.SZ",
+            "stockName": "潍柴动力",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内大功率发动机龙头，积极扩产以满足AI数据中心备用电源需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000338.SZ",
+              "companyName": "潍柴动力",
+              "companyProfile": "公司成立于2002年，由原潍坊柴油机厂作为主发起人、联合境内外投资者发起设立，是中国内燃机行业首家在中国香港H股上市的企业，也是首家通过换股吸收合并方式实现“HtoA”两地上市的企业。公司主营业务涵盖动力系统、商用车、农业装备、智慧物流等业务板块，分子公司遍及欧洲、北美、亚洲等地区，产品远销150多个国家和地区。重型发动机、重型变速器销量全球第一，工业叉车全球领先，农业装备销量中国第一，重型卡车中国领先。公司始终将技术创新作为核心驱动力，公司拥有内燃机与动力系统全国重点实验室、国家燃料电池技术创新中心、国家商用汽车动力系统总成工程技术研究中心、国家级工业设计中心、国家内燃机产品质量检验检测中心、国家内燃机产业计量测试中心、国家认定企业技术中心等国家创新平台，设有“博士后工作站”等研究基地，在全球多地设立十大前沿创新中心，建立了全球协同研发体系。先后荣获国家级科技奖励9项，其中国家科技进步一等奖1项(2018年度)。公司以“绿色动力，国际潍柴”为使命，不断提升自身的核心竞争力，推动全球动力行业的绿色转型和可持续发展。",
+              "profileSummary": "公司主营业务涵盖动力系统、商用车、农业装备、智慧物流等业务板块，分子公司遍及欧洲、北美、亚洲等地区，产品远销150多个国家和地区。公司始终将技术创新作为核心驱动力，公司拥有内燃机与动力系统全国重点实验室、国家燃料电池技术创新中心、国家商用汽车动力系统总成工程技术研究中心、国家级工业设计中心、国家内燃机产品质量检验检测中心、国家内燃机产业计量测试中心、国家认定企业技术中心等国家创新平台，设有“博士后工作站”等研究基地，在全球多地设立十大…",
+              "majorProducts": "变速箱、叉车、车桥、供应链解决方案、农业装备、汽车电子及零部件、全系列发动机、燃料电池系统及零部件、液压产品、重型汽车",
+              "revenueComposition": "动力总成、整车整机及关键零部件:43.32%;智慧物流:39.29%;农业装备:8.11%;其他零部件:5.12%;其他:4.17%",
+              "revenueSegments": [
+                {
+                  "name": "动力总成、整车整机及关键零部件",
+                  "sharePct": 43.32,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "智慧物流",
+                  "sharePct": 39.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "农业装备",
+                  "sharePct": 8.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他零部件",
+                  "sharePct": 5.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.17,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "柴油发动机",
+                    "category": "柴油发动机"
+                  },
+                  {
+                    "name": "燃气发动机",
+                    "category": "汽车发动机曲柄连杆机构"
+                  }
+                ],
+                "knownProducts": [
+                  "垃圾车",
+                  "扫路车",
+                  "洒水车",
+                  "洗扫车",
+                  "清洗车",
+                  "轮式拖拉机",
+                  "小麦收获机",
+                  "玉米收获机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "潍柴动力已经具备柴油发动机、燃气发动机等业务能力，国内大功率发动机龙头，积极扩产以满足AI数据中心备用电源需求并非单纯概念映射。当前对应的收入被归入动力总成、整车整机及关键零部件（43.32%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于产能释放与行业供给变化是否通过“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”放大，并最终反映在在建工程转固、产能利用率、产销率、库存和产品价格上；需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 1324,
+            "stockCode": "300153.SZ",
+            "stockName": "科泰电源",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "国内数据中心备用电源核心供应商，产品可快速启动并带载，性能稳定。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300153.SZ",
+              "companyName": "科泰电源",
+              "companyProfile": "公司产品涉及备用电源及混合能源、输配电产品、专用车业务三大模块，其中备用电源业务主要涉及智能环保电源设备的开发、设计、生产、销售，并为客户提供技术咨询、培训、安装、维修等售前、售后服务；输配电公司主要从事中压开关柜及低压开关柜设备的设计、制造和销售业务；专用车公司以原有的车载电源业务为基础，向其他专用车领域进行拓展。经过多年的发展，公司产品已覆盖全国市场，并远销东南亚、中东、非洲、南美、澳洲等地区，以优良的品质和良好的服务获得了客户的认可。公司注重通信、IDC、电力、交通运输、石油石化、海外施工等重点行业市场，累积了丰富的行业运行经验，在行业内拥有良好的知名度和美誉度，具有一定的品牌优势。公司近年来获得了“上海市高新技术企业”、“上海市科技企业”、“上海市实施卓越绩效管理先进企业”、“上海市品牌企业”、“AAA资信等级企业”、“上海市明星侨资企业”、“中国电器工业最具影响力企业”、“内燃机电站行业优势企业”等诸多荣誉。",
+              "profileSummary": "公司产品涉及备用电源及混合能源、输配电产品、专用车业务三大模块，其中备用电源业务主要涉及智能环保电源设备的开发、设计、生产、销售，并为客户提供技术咨询、培训、安装、维修等售前、售后服务；输配电公司主要从事中压开关柜及低压开关柜设备的设计、制造和销售业务；专用车公司以原有的车载电源业务为基础，向其他专用车领域进行拓展。经过多年的发展，公司产品已覆盖全国市场，并远销东南亚、中东、非洲、南美、澳洲等地区，以优良的品质和良好的服务获得了客户的…",
+              "majorProducts": "KJ系列电站、KM大功率系列电站、KM小功率系列电站、KP系列电站、KS系列电站、KV系列电站、车载电站、电动电缆绞盘、方舱电站、挂车电站、机房降噪工程、机组冷却系统改造、机组自动化电脑监控系统升级、静音型电站、控制系统、通讯基站用电站、油田用电站、远置水箱、自动并车系统、自动切换系统",
+              "revenueComposition": "环保低噪声柴油发电机组:93.04%;新能源类销售:3.12%;工程劳务零配件:2.82%;设备厂房租赁:0.96%;其他主营业务:0.06%",
+              "revenueSegments": [
+                {
+                  "name": "环保低噪声柴油发电机组",
+                  "sharePct": 93.04,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "新能源类销售",
+                  "sharePct": 3.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程劳务零配件",
+                  "sharePct": 2.82,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备厂房租赁",
+                  "sharePct": 0.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他主营业务",
+                  "sharePct": 0.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "柴油发电机组",
+                    "category": "发电机组"
+                  }
+                ],
+                "knownProducts": [
+                  "厂房租赁",
+                  "汽车4s店经营",
+                  "柴油发电机组",
+                  "开关柜"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "科泰电源的相关业务已决定公司大部分经营表现：环保低噪声柴油发电机组占收入的93.04%。公司与事件的直接业务联系是：国内数据中心备用电源核心供应商，产品可快速启动并带载，性能稳定，真正的增量取决于终端需求与渗透率变化，并需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，终端销量、客户采购量、公司出货和相关产品收入增速需要显示公司获得超越行业的增量。终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 1325,
+            "stockCode": "600590.SH",
+            "stockName": "泰豪科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内稀缺的高端柴发出口标的，为AI算力服务器需求提供备用电源。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600590.SH",
+              "companyName": "泰豪科技",
+              "companyProfile": "公司是在江西省和清华大学“省校合作”推动下，在南昌国家高新开发区设立的高科技公司。公司自创立以来，不断地完善和升级产业体系，优化产业结构。近年来，公司主营业务已逐步聚焦于围绕武器装备数字化、智能化方向的军工装备产业，以及践行军民融合在民用市场围绕应急保障方向的应急装备产业。公司以军工装备信息化、智能化、无人化为主赛道，积极布局通信、导航及电子对抗等领域，实现从平台产品到核心设备的完整产业链覆盖，同时以军用新能源为辅赛道，围绕军用电站、氢能装备等，实现从传统能源到新能源及军用微电网的布局。历经多年的发展，公司对内不断加强技术研发攻关、严控产品质量，提升产品核心竞争力；对外积极开展产业链上下游的外延式并购，整合产业和市场资源，在管理、制造、信息、安全等多方面获得各项认证与资质，为公司的进一步发展与经营奠定了坚实的基础，公司将不断向一流的创新型国防装备供应商迈进。",
+              "profileSummary": "近年来，公司主营业务已逐步聚焦于围绕武器装备数字化、智能化方向的军工装备产业，以及践行军民融合在民用市场围绕应急保障方向的应急装备产业。公司以军工装备信息化、智能化、无人化为主赛道，积极布局通信、导航及电子对抗等领域，实现从平台产品到核心设备的完整产业链覆盖，同时以军用新能源为辅赛道，围绕军用电站、氢能装备等，实现从传统能源到新能源及军用微电网的布局。",
+              "majorProducts": "IT运维及系统集成、军用电源装备、军用通信装备、配电设备、智能应急电源",
+              "revenueComposition": "应急电源:64.3%;通信指挥系统:26.86%;军用电源装备:7.11%;其他业务:1.74%",
+              "revenueSegments": [
+                {
+                  "name": "应急电源",
+                  "sharePct": 64.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "通信指挥系统",
+                  "sharePct": 26.86,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "军用电源装备",
+                  "sharePct": 7.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "柴油发电机组",
+                    "category": "发电机组"
+                  },
+                  {
+                    "name": "车载通信指挥系统",
+                    "category": "军用指挥系统"
+                  }
+                ],
+                "knownProducts": [
+                  "车载通信指挥系统",
+                  "舰载作战辅助系统",
+                  "应急电源(EPS)",
+                  "军用机动式电源",
+                  "军用电站",
+                  "柴油发电机组",
+                  "军用卫星导航装备",
+                  "军用陆基导航装备"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对泰豪科技而言，国内稀缺的高端柴发出口标的，为AI算力服务器需求提供备用电源并非纯概念映射，因为通信指挥系统占收入的26.86%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是终端需求与渗透率变化，传导效率取决于“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由终端销量、客户采购量、公司出货和相关产品收入增速来区分；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 1339,
+            "stockCode": "002126.SZ",
+            "stockName": "银轮股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "为数据中心发电机组提供冷却及后处理系统，是海外紧缺需求的配套商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002126.SZ",
+              "companyName": "银轮股份",
+              "companyProfile": "公司前身是始建于1958年的天台机械厂，1999年改制为民营股份制企业。公司围绕“节能、减排、智能、安全”产品发展主线，专注于油、水、气、冷媒间的热交换器、汽车空调等热管理产品及后处理排气系统相关产品的研发、制造和销售，产品主要应用于新能源车、燃油车、非道路机械、数据中心、储能、超充、热泵空调等领域。在公司远景发展战略总纲引领下，公司走过了“规模扩大、客户拓展、品牌树立”为核心任务的第一次创业阶段，正进入以“加快推进国际化、实现技术引领、提升综合竞争力”为目标的二次创业新阶段。目前已在中国上海、湖北、山东、江苏、江西、广东、广西、安徽、陕西、四川等地，在境外美国、墨西哥、瑞典、波兰、德国、印度、马来西亚等国家设有全资和控股下属公司，在全球拥有员工。公司与奔驰戴姆勒、康明斯、卡特彼勒、约翰迪尔、福特、通用、沃尔沃、吉利、广汽、长城、比亚迪、一汽、重汽、三一重工、徐工、潍柴、玉柴等国内外著名企业建立了长期稳定合作关系。公司热交换器产品产销量连续二十年保持国内行业领先，是我国热交换器行业首家民营上市公司、国家首批汽车零部件出口基地企业、第一批中国汽车零部件CT30企业和国家第一批制造业单项冠军培育企业，是我国汽车、工程机械等领域最具影响力的民族品牌之一。公司是国家级高新技术企业，建有国家级企业技术中心、国家试验检测中心、省级重点企业研究院、省级工程实验室、省级双创示范基地和国家级博士后工作站。先后获得“国家技术创新示范企业”“国家创新团队奖”“浙江省雄鹰企业”“浙江省级重点企业研究院”“浙江省级创新团队奖”等殊荣。",
+              "profileSummary": "公司围绕“节能、减排、智能、安全”产品发展主线，专注于油、水、气、冷媒间的热交换器、汽车空调等热管理产品及后处理排气系统相关产品的研发、制造和销售，产品主要应用于新能源车、燃油车、非道路机械、数据中心、储能、超充、热泵空调等领域。公司热交换器产品产销量连续二十年保持国内行业领先，是我国热交换器行业首家民营上市公司、国家首批汽车零部件出口基地企业、第一批中国汽车零部件CT30企业和国家第一批制造业单项冠军培育企业，是我国汽车、工程机械等…",
+              "majorProducts": "后处理排气系统、汽车空调等热管理产品、银轮EGR、银轮板翅式冷却器、银轮封条式冷却器、银轮管翅式冷却器、银轮管壳式冷却器、银轮机油冷却器、银轮冷却模块、银轮冷却器模块总成、银轮冷却器总成、银轮铝冷却器、银轮中冷器",
+              "revenueComposition": "热交换器:93.98%;其他产品:5.49%;贸易:0.53%",
+              "revenueSegments": [
+                {
+                  "name": "热交换器",
+                  "sharePct": 93.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 5.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "EGR冷却器",
+                    "category": "汽车发动机燃料供给系统"
+                  },
+                  {
+                    "name": "柴油机氧化催化器(DOC)",
+                    "category": "汽车发动机排气系统"
+                  },
+                  {
+                    "name": "柴油机选择性催化还原器型产品(SCR)",
+                    "category": "汽车发动机排气系统"
+                  },
+                  {
+                    "name": "柴油颗粒过滤器(DPF)",
+                    "category": "汽车发动机排气系统"
+                  },
+                  {
+                    "name": "汽车EGR阀",
+                    "category": "汽车发动机燃料供给系统"
+                  },
+                  {
+                    "name": "汽车中冷器",
+                    "category": "汽车发动机冷却系统"
+                  }
+                ],
+                "knownProducts": [
+                  "汽车中冷器",
+                  "汽车发动机油冷器",
+                  "汽车变速箱油冷器",
+                  "EGR冷却器",
+                  "汽车EGR阀",
+                  "汽车空调冷凝器",
+                  "汽车空调散热器",
+                  "柴油机氧化催化器(DOC)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "银轮股份拥有EGR冷却器、柴油机氧化催化器(DOC)、柴油机选择性催化还原器型产品(SCR)，其产业链位置与为数据中心发电机组提供冷却及后处理系统，是海外紧缺需求的配套商一致；当前的热交换器（93.98%）、其他产品（5.49%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由终端需求与渗透率变化决定，并需完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”。只有终端销量、客户采购量、公司出货和相关产品收入增速持续改善，产品能力才会转化为公司层面的收入和盈利提升；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则会限制兑现幅度。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 15,
+        "stocks": [
+          {
+            "sourceRowNumber": 1316,
+            "stockCode": "002353.SZ",
+            "stockName": "杰瑞股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "与西门子能源签署战略合作，面向AI数据中心等场景提供燃气轮机解决方案。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002353.SZ",
+              "companyName": "杰瑞股份",
+              "companyProfile": "公司成立于1999年，是一家以创新为驱动的多元化产业集团，业务涵盖高端装备制造、油气工程与技术服务、油气田开发、新能源、环境治理、工业互联网协同创新、数字孪生引擎、大健康及养老产业等多个领域，致力于为客户提供安全、可信赖且有竞争力的产品与系统化解决方案。从创立之初，公司就把真诚作为企业文化的基石，在持续为客户创造价值的同时，积极履行社会责任，传递友善与尊重。如今，公司业务遍及全球多个国家和地区，正在与世界各地的合作伙伴携手前行，共同探索可持续发展的新路径，满足人们对美好生活的期待。公司旗下拥有多个上市平台，是国家级技术创新示范企业和知识产权示范企业。集团在多个省市设有子公司和研发中心，构建了较为完善的科技创新体系。通过长期投入研发，公司打造了包括企业技术中心、工业设计中心在内的十余个国家级和省部级科研平台。同时，旗下多家企业被认定为专精特新、科技领军、瞪羚企业等，体现了较强的综合创新能力和行业影响力。在技术研发方面，公司承担了多项国家及地方科研项目，取得了一系列具有领先水平的技术成果。部分关键技术已在行业内广泛应用，推动相关产业升级。公司始终坚持技术创新与产业融合并进，不断探索高质量发展新模式，立志成为全球领先的科技驱动型产业集团。",
+              "profileSummary": "公司成立于1999年，是一家以创新为驱动的多元化产业集团，业务涵盖高端装备制造、油气工程与技术服务、油气田开发、新能源、环境治理、工业互联网协同创新、数字孪生引擎、大健康及养老产业等多个领域，致力于为客户提供安全、可信赖且有竞争力的产品与系统化解决方案。如今，公司业务遍及全球多个国家和地区，正在与世界各地的合作伙伴携手前行，共同探索可持续发展的新路径，满足人们对美好生活的期待。",
+              "majorProducts": "采油技术服务、氮气发生及泵送设备、地质及油藏研究服务、固井成套装备、锂离子电池负极材料、连续油管成套装备、气体增压设备、燃气发电设备、燃气轮机发电机组、天然气集输及储运工程、土壤修复、污泥减量化、压裂成套装备、油泥处理、油气处理及 LNG 工程、油气田地面工程、油气田运维管理服务、油气田增产技术服务、智慧油田解决方案、钻完井一体化技术服务",
+              "revenueComposition": "高端装备制造:61.74%;油气工程及技术服务:29.08%;新能源、再生循环:5.89%;油气田开发:2.42%;其他业务:0.86%",
+              "revenueSegments": [
+                {
+                  "name": "高端装备制造",
+                  "sharePct": 61.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "油气工程及技术服务",
+                  "sharePct": 29.08,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源、再生循环",
+                  "sharePct": 5.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "油气田开发",
+                  "sharePct": 2.42,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "燃气轮机",
+                    "category": "燃气轮机"
+                  },
+                  {
+                    "name": "原油",
+                    "category": "天然原油"
+                  },
+                  {
+                    "name": "含油污水处理设备",
+                    "category": "油气处理设备"
+                  },
+                  {
+                    "name": "天然气",
+                    "category": "陆地天然气开采"
+                  },
+                  {
+                    "name": "完井服务",
+                    "category": "完井服务"
+                  },
+                  {
+                    "name": "油田压裂车组",
+                    "category": "油气开采设备"
+                  }
+                ],
+                "knownProducts": [
+                  "燃气轮机",
+                  "离心式天然气压缩机",
+                  "水下清管橇",
+                  "水下试压橇",
+                  "连续油管",
+                  "含油污水处理设备",
+                  "油田压裂车组",
+                  "固井车"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "杰瑞股份的油气工程及技术服务（29.08%）、油气田开发（2.42%）覆盖范围较宽，其中能够承载燃气轮机、原油、含油污水处理设备，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：与西门子能源签署战略合作，面向AI数据中心等场景提供燃气轮机解决方案。现阶段无法用整个分部占比直接衡量受益程度，因为商业化进度和订单兑现还需沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”传导，相关产品在分部内部的收入权重才会逐步显现。客户认证、新增订单、交付节奏、相关业务收入和毛利率若持续增强，事件影响可以从产品层面扩散到公司盈利；若客户验证或交付节奏低于预期，订单停留在小批量阶段，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 1317,
+            "stockCode": "600875.SH",
+            "stockName": "东方电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内燃机总装环节核心企业，受益于国产燃机出海及AI电力需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600875.SH",
+              "companyName": "东方电气",
+              "companyProfile": "公司总部位于四川省成都市，是中国东方电气集团有限公司控股的特大型企业。公司秉承“求实、创新、人和、图强”的企业精神，历经六十余年的发展，已成为全球最大的发电设备供应商和电站工程总承包商之一。公司拥有东方电机、东方汽轮机、东方锅炉、东方重机、东方武核、东方风电、东方自控、东方阿海珐、东方印度、东方印尼等下属企业，业务分布在中国四川、广东、天津、浙江、湖北等省市自治区以及印度西孟邦、印尼雅加达等地。公司产品和服务已出口到美国、加拿大、印度、巴基斯坦、越南、印度尼西亚、沙特、波黑、瑞典、巴西等近110多个国家和地区，累计生产发电设备规模巨大，在全球同行业中保持领先地位。作为国家重大技术装备国产化基地和国家级企业技术中心，公司拥有中国发电设备制造行业中一流的综合技术开发能力。通过自主开发和产学研合作，形成了一批拥有自主知识产权的重大技术装备产品，具备了大型水电、火电、核电、气电、风电及太阳能发电设备的开发、设计、制造、销售、设备供应及电站工程总承包能力。公司可批量研制多种高端装备，包括1000兆瓦等级水轮发电机组、700兆瓦超超临界循环流化床锅炉、50兆瓦至1750兆瓦等级核电机组、重型燃气轮机设备、直驱和双馈全系列风力发电机组、高效太阳能电站设备、氢能客货车及公交车、大型环保及水处理设备、电力电子与控制系统、新能源电池及储能系统、智能装备等。这些产品涵盖了传统能源与新能源领域，展现了公司在清洁能源和高端装备制造方面的强大实力与技术储备。",
+              "profileSummary": "公司产品和服务已出口到美国、加拿大、印度、巴基斯坦、越南、印度尼西亚、沙特、波黑、瑞典、巴西等近110多个国家和地区，累计生产发电设备规模巨大，在全球同行业中保持领先地位。公司可批量研制多种高端装备，包括1000兆瓦等级水轮发电机组、700兆瓦超超临界循环流化床锅炉、50兆瓦至1750兆瓦等级核电机组、重型燃气轮机设备、直驱和双馈全系列风力发电机组、高效太阳能电站设备、氢能客货车及公交车、大型环保及水处理设备、电力电子与控制系统、新能…",
+              "majorProducts": "300MW循环流化床锅炉、600MW超临界“W”火焰锅炉、东方电机\"W\"形火焰燃低挥发份无烟煤锅炉、东方电机600MW超临界锅炉、东方电机600MW超临界循环流化床锅炉、东方电机超高压自然循环中间再热锅炉、东方电机超临界本生直流机组锅炉、东方电机电站辅机设备、东方电机风电发电机组、东方电机火电发电机组、东方电机交直流电机、东方电机汽轮发电机组、东方电机水电发电机组、东方电机水轮发电机组、东方电机循环流化床锅炉、东方电机亚临界自然循环或控制循环中间再热锅炉、东方电机亚临界自然循环前后墙对冲燃东锅烧中间再热锅炉",
+              "revenueComposition": "煤电:31.15%;风电能源设备:23.18%;新兴成长产业:9.81%;现代制造服务业-电站服务:7.35%;清洁高效发电设备-核电常规岛设备:7.2%;清洁高效发电设备-燃机:7.16%;水电设备:4.96%;金融服务:1.31%",
+              "revenueSegments": [
+                {
+                  "name": "煤电",
+                  "sharePct": 31.15,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "风电能源设备",
+                  "sharePct": 23.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新兴成长产业",
+                  "sharePct": 9.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "现代制造服务业-电站服务",
+                  "sharePct": 7.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "清洁高效发电设备-核电常规岛设备",
+                  "sharePct": 7.2,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "清洁高效发电设备-燃机",
+                  "sharePct": 7.16,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "水电设备",
+                  "sharePct": 4.96,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "金融服务",
+                  "sharePct": 1.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "发电用燃气轮机",
+                    "category": "燃气轮机"
+                  },
+                  {
+                    "name": "光伏电站工程",
+                    "category": "发电工程"
+                  },
+                  {
+                    "name": "循环流化床锅炉",
+                    "category": "火电站用锅炉"
+                  },
+                  {
+                    "name": "核电工程",
+                    "category": "发电工程"
+                  },
+                  {
+                    "name": "核电蒸汽发生器",
+                    "category": "核电设备"
+                  },
+                  {
+                    "name": "水电站工程",
+                    "category": "发电工程"
+                  }
+                ],
+                "knownProducts": [
+                  "建材物流服务",
+                  "光伏电站工程",
+                  "核电工程",
+                  "水电站工程",
+                  "风电场工程",
+                  "发电用燃气轮机",
+                  "石油化工容器",
+                  "镜场与聚光吸热系统"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "东方电气与事件存在真实业务交集：公司已有发电用燃气轮机、光伏电站工程、循环流化床锅炉，与国内燃机总装环节核心企业，受益于国产燃机出海及AI电力需求所处的产业环节一致。清洁高效发电设备-核电常规岛设备（7.2%）、清洁高效发电设备-燃机（7.16%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响终端需求与渗透率变化，只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，才会形成可确认的收入和利润增量。终端销量、客户采购量、公司出货和相关产品收入增速能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 1318,
+            "stockCode": "601727.SH",
+            "stockName": "上海电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内燃机总装环节核心企业，在燃机控制系统国产化方面取得突破。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "601727.SH",
+              "companyName": "上海电气",
+              "companyProfile": "公司是全球领先的工业级绿色智能系统解决方案提供商，专注于智慧能源、智能制造、数智集成三大业务领域，业务遍及全球。公司聚焦高端、智能、绿色的发展方向，以科技赋能推动中国及全球工业高质量发展，为人类美好生活创造绿色可持续价值。作为中国动力工业的摇篮，上海电气有着多年的历史，创造了众多中国和世界第一，荣获中国工业大奖。在智慧能源领域，公司打造风光储氢多能互补和源网荷储一体化解决方案，构建遍布全球的“全方位”新型电力系统和“立体式”零碳产业园区；在智能制造领域，公司提供锂电产线、数字医疗、轨道交通及通用装备系统解决方案；在数智集成领域，公司以扎实的极限制造能力成为新能源汽车产业链、大飞机产业链、现代船舶产业链及数字化解决方案提供商。秉承“开放协同、合作共赢”的理念，上海电气携手多家世界一流企业，协同全球客户、合作伙伴、员工等创造者，赋能全球创新与绿色可持续发展。",
+              "profileSummary": "公司是全球领先的工业级绿色智能系统解决方案提供商，专注于智慧能源、智能制造、数智集成三大业务领域，业务遍及全球。公司聚焦高端、智能、绿色的发展方向，以科技赋能推动中国及全球工业高质量发展，为人类美好生活创造绿色可持续价值。",
+              "majorProducts": "大型船用曲轴、电动机、电梯、电站辅机、电站锅炉、电站汽轮机、电站脱硫脱硝系统、断路器、风电设备、轨道车辆及关键部件、轨道交通机电设备集成工程、轨道交通站台屏蔽门系统、轨道交通综合监控系统、核电核岛设备、环保工程及污水固废处理系统、继电保护、接触器、金属切削机床、起重运输机械、汽轮发电机、太阳能电池及组件、印刷包装设备、重型机械设备",
+              "revenueComposition": "销售商品:79.98%;提供劳务:8.67%;工程建造:6.71%;其他业务:4.65%",
+              "revenueSegments": [
+                {
+                  "name": "销售商品",
+                  "sharePct": 79.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "提供劳务",
+                  "sharePct": 8.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程建造",
+                  "sharePct": 6.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 4.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "燃气轮机",
+                    "category": "燃气轮机"
+                  },
+                  {
+                    "name": "光伏发电",
+                    "category": "太阳能发电"
+                  },
+                  {
+                    "name": "光伏电站工程",
+                    "category": "发电工程"
+                  },
+                  {
+                    "name": "大型储能EMS",
+                    "category": "资源管理IT"
+                  },
+                  {
+                    "name": "工商业储能EMS",
+                    "category": "资源管理IT"
+                  },
+                  {
+                    "name": "循环流化床锅炉",
+                    "category": "火电站用锅炉"
+                  }
+                ],
+                "knownProducts": [
+                  "固废处理",
+                  "烟气脱硫脱硝工程",
+                  "工业废水处理",
+                  "光伏发电",
+                  "光伏电站工程",
+                  "火电站工程",
+                  "燃气发电工程",
+                  "激光切割机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "上海电气与新闻之间有明确产品抓手：燃气轮机、光伏发电、光伏电站工程，对应国内燃机总装环节核心企业，在燃机控制系统国产化方面取得突破。收入主体目前是销售商品（79.98%）、提供劳务（8.67%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 1327,
+            "stockCode": "605100.SH",
+            "stockName": "华丰股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "智能化发电机组可作为备用电源应用于算力/智算中心，并参股智算基础设施运营商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "605100.SH",
+              "companyName": "华丰股份",
+              "companyProfile": "公司前身创始于1920年，原名为潍县华丰机器厂，是中国最早生产柴油发动机的厂家之一，在当时享有“长江以北第一厂”的美誉。作为“中国内燃机行业排头兵企业”之一，公司坚持技术和模式创新，业务已从单一的柴油发动机和智能化发电机组的研发、生产和销售，向上游延伸至柴油发动机核心零部件业务，向下游拓展至通信基站发电机组等电源设施综合运维服务业务，形成互为支撑、协同发展的良好业务模式。公司是国家级高新技术企业。公司拥有一支高效、稳定的研发团队，不断提高工艺水平和技术升级；公司坚持精工制造，拥有现代化的发动机、发电机组装配线以及先进的柔性机械加工生产线；公司柴油发动机业务专注于非道路领域，核心零部件业务专注于重卡领域，智能化发电机组及运维业务专注于移动通信和数据中心领域；公司已建立起国际化的售后服务网络，能够为客户提供及时、便利的售后服务。公司坚持专业化、国际化的发展方向，构建了“制造+服务”协同发展格局。公司在印度和缅甸等国家的通信基站电源设施综合运维业务已形成7*24小时的高效运维服务能力，网络辐射广、复制能力强。公司将继续秉承“创新、进取、和谐、求优”的管理理念，坚持“柴油发动机与核心零部件”、“制造与服务”双轮驱动，不断提升公司核心竞争力和盈利能力，努力打造行业领先的民族制造企业。",
+              "profileSummary": "作为“中国内燃机行业排头兵企业”之一，公司坚持技术和模式创新，业务已从单一的柴油发动机和智能化发电机组的研发、生产和销售，向上游延伸至柴油发动机核心零部件业务，向下游拓展至通信基站发电机组等电源设施综合运维服务业务，形成互为支撑、协同发展的良好业务模式。公司拥有一支高效、稳定的研发团队，不断提高工艺水平和技术升级；公司坚持精工制造，拥有现代化的发动机、发电机组装配线以及先进的柔性机械加工生产线；公司柴油发动机业务专注于非道路领域，核心…",
+              "majorProducts": "柴油发动机、华丰动力非道路柴油机、华丰动力机组、华丰动力精密零部件、连杆、气缸盖、气缸体、曲轴（曲轴箱）、凸轮轴、智能化发电机组",
+              "revenueComposition": "零部件:80.53%;柴油发动机:16.78%;材料销售:1.36%;运维服务:1.32%",
+              "revenueSegments": [
+                {
+                  "name": "零部件",
+                  "sharePct": 80.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "柴油发动机",
+                  "sharePct": 16.78,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "材料销售",
+                  "sharePct": 1.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "运维服务",
+                  "sharePct": 1.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "柴油发电机组",
+                    "category": "发电机组"
+                  },
+                  {
+                    "name": "混合动力供电系统",
+                    "category": "发电机组"
+                  },
+                  {
+                    "name": "柴油发动机",
+                    "category": "柴油发动机"
+                  }
+                ],
+                "knownProducts": [
+                  "通信基站动力设备安装维护",
+                  "通信基站铁塔安装维护",
+                  "柴油发动机",
+                  "卡车发动机曲轴箱",
+                  "卡车发动机气缸体",
+                  "卡车发动机气缸盖",
+                  "柴油发电机组",
+                  "混合动力供电系统"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对华丰股份而言，智能化发电机组可作为备用电源应用于算力/智算中心，并参股智算基础设施运营商并非纯概念映射，因为柴油发动机占收入的16.78%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是终端需求与渗透率变化，传导效率取决于“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由终端销量、客户采购量、公司出货和相关产品收入增速来区分；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，重估逻辑会被削弱。"
+          },
+          {
+            "sourceRowNumber": 1328,
+            "stockCode": "000800.SZ",
+            "stockName": "一汽解放",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司发电动力产品出口业务发展良好，可用于数据中心等备用电源领域。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000800.SZ",
+              "companyName": "一汽解放",
+              "companyProfile": "公司是中国第一汽车股份有限公司的控股子公司，总部位于吉林省长春市。是在原第一汽车制造厂卡车业务的基础上组建的中、重、轻型卡车及客车研、产、供、销全价值链的制造企业。公司是商用车制造企业，生产车型涵盖重型、中型、轻型卡车、客车，以及发动机、变速箱、车桥等核心零部件，公司拥有从毛坯原材料到核心零部件、从关键大总成到整车的完整制造体系。公司产品主要用于牵引、载货、自卸、专用、公路客运、公交客运等各个细分市场，同时提供标准化及定制化的商用车产品。公司致力于成为“中国第一、世界一流”的绿色智能交通运输解决方案提供者，聚焦产品主线，坚持创新驱动和变革驱动，打造领航趋势。公司已布局五大整车生产基地，形成“主辅搭配、柔性互补”的产能布局。公司近年来持续加大技术改造投入，加快推进产能结构调整，围绕产品高端化、新能源化等持续实施资源优化和智能升级，已形成多个具有行业领先水平的先进制造基地，在商用车行业具有突出的技术和能力优势，为公司持续市场领先奠定坚实基础。",
+              "profileSummary": "公司产品主要用于牵引、载货、自卸、专用、公路客运、公交客运等各个细分市场，同时提供标准化及定制化的商用车产品。公司近年来持续加大技术改造投入，加快推进产能结构调整，围绕产品高端化、新能源化等持续实施资源优化和智能升级，已形成多个具有行业领先水平的先进制造基地，在商用车行业具有突出的技术和能力优势，为公司持续市场领先奠定坚实基础。",
+              "majorProducts": "J6E、J6F、J6G、J6L、J6P、J6V、JH5、JH6、JK6、变速器、车桥、发动机、房车、公路车、悍 V2.0、虎 6G、虎 V、领途、龙 V、新能源产品、新能源公交车、一汽解放 J7、鹰途",
+              "revenueComposition": "商用车:92.68%;备品及其他:7.32%",
+              "revenueSegments": [
+                {
+                  "name": "商用车",
+                  "sharePct": 92.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "备品及其他",
+                  "sharePct": 7.32,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "垃圾车",
+                  "洒水车",
+                  "洗扫车",
+                  "工程自卸车",
+                  "油罐车",
+                  "牵引车",
+                  "中型卡车",
+                  "轻型卡车"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "一汽解放的业务范围能够覆盖公司发电动力产品出口业务发展良好，可用于数据中心等备用电源领域所处的产业环节，但当前商用车（92.68%）、备品及其他（7.32%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”完成兑现，并在终端销量、客户采购量、公司出货和相关产品收入增速上形成持续改善；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 1340,
+            "stockCode": "002448.SZ",
+            "stockName": "中原内配",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司大缸径气缸套产品广泛应用于大功率发电机组，配套卡特彼勒、康明斯等龙头。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002448.SZ",
+              "companyName": "中原内配",
+              "companyProfile": "公司从事的主要业务为汽车核心零部件产品的研发、生产和销售。公司目前已发展成为行业先进的动力活塞组件系统供应商，公司生产的气缸套、活塞、活塞环、轴瓦等内燃机的核心关键零部件，为全球乘用车、商用车、工程机械、农业机械、船舶工业等动力领域提供绿色、环保、节能气缸套及摩擦副的全套解决方案。作为世界级的汽车零部件供应商，公司具备行业内特有的科研优势、质量优势、装备优势、物流优势及市场优势，具备批量生产国六、欧V、欧VI标准气缸套的能力。同时，公司不断完善和延伸汽车零部件产业链条，公司的双金属复合制动鼓产品、电控执行器产品已进入国内主流供应商体系。在全球双碳背景下，氢能产业布局成为未来低碳经济转型的重点发展方向。公司积极在氢能及燃料电池系统零部件领域展开布局，先后与上海重塑能源科技有限公司、北京氢璞创能科技有限公司、西安交通大学、宇通集团、天朤(江苏)氢能源科技有限公司等单位围绕氢燃料电池系统及核心零部件领域建立了合作关系，完成了对氢燃料电池系统及空压机、双极板、增湿器等关键核心零部件进行产业化布局。公司是全球领先的动力活塞组件系统供应商和端对端供应链管理服务商，主营产品气缸套产销量位居行业前列，为全球高端乘用车、商用车、工程机械、农业机械、船舶工业等动力领域提供绿色、环保、节能气缸套及摩擦副的全套解决方案。主营摩擦副产品(缸套、活塞、活塞环)为全球内燃机提供动力保障和技术支持，综合实力稳居行业首位，先后获得国家“制造业单项冠军示范企业”“工业品牌培育示范企业”“质量标杆企业”等荣誉称号。",
+              "profileSummary": "公司从事的主要业务为汽车核心零部件产品的研发、生产和销售。同时，公司不断完善和延伸汽车零部件产业链条，公司的双金属复合制动鼓产品、电控执行器产品已进入国内主流供应商体系。",
+              "majorProducts": "乘用车标致系列气缸套、乘用车东安动力系列气缸套、乘用车福建华擎系列气缸套、乘用车吉利系列气缸套、乘用车江铃系列气缸套、乘用车奇瑞系列气缸套、单缸农机系列气缸套、电控执行器、活塞环业务、两缸农机系列气缸套、汽配常柴系列气缸套、汽配莱动系列气缸套、汽配全柴系列气缸套、商用车朝柴系列气缸套、商用车大柴系列气缸套、商用车东风系列气缸套、商用车康明斯系列气缸套、商用车潍柴斯太尔系列气缸套、商用车锡柴系列气缸套、双金属制动鼓、微型面包车系列气缸套",
+              "revenueComposition": "气缸套:50.01%;制动鼓:16.86%;其他产品:11.8%;电控执行器:8.74%;活塞环:7.76%;活塞:2.74%;轴瓦:1.69%;氢燃料电池系统及核心零部件:0.42%",
+              "revenueSegments": [
+                {
+                  "name": "气缸套",
+                  "sharePct": 50.01,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "制动鼓",
+                  "sharePct": 16.86,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 11.8,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电控执行器",
+                  "sharePct": 8.74,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "活塞环",
+                  "sharePct": 7.76,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "活塞",
+                  "sharePct": 2.74,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "轴瓦",
+                  "sharePct": 1.69,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "氢燃料电池系统及核心零部件",
+                  "sharePct": 0.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "内燃机气缸套",
+                    "category": "汽车发动机曲柄连杆机构"
+                  },
+                  {
+                    "name": "卡车制动鼓",
+                    "category": "汽车底盘制动系统"
+                  },
+                  {
+                    "name": "柴油发动机活塞环",
+                    "category": "汽车发动机曲柄连杆机构"
+                  },
+                  {
+                    "name": "汽油机轴瓦",
+                    "category": "汽车发动机曲柄连杆机构"
+                  },
+                  {
+                    "name": "汽车发动机活塞",
+                    "category": "汽车发动机曲柄连杆机构"
+                  },
+                  {
+                    "name": "汽车发动机连杆轴瓦",
+                    "category": "汽车发动机曲柄连杆机构"
+                  }
+                ],
+                "knownProducts": [
+                  "锪钻",
+                  "珩磨头",
+                  "汽车柴油机电控执行器",
+                  "汽车汽油机尾气阀门电控执行器",
+                  "内燃机气缸套",
+                  "柴油发动机活塞环",
+                  "汽油机轴瓦",
+                  "汽车发动机活塞"
+                ],
+                "directSegmentCount": 5,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中原内配与事件的关系已经落在存量主业，而非远期概念：气缸套（50.01%）、制动鼓（16.86%）合计约占收入的79.06%。公司在产业链中的具体抓手是：公司大缸径气缸套产品广泛应用于大功率发电机组，配套卡特彼勒、康明斯等龙头。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 1341,
+            "stockCode": "603308.SH",
+            "stockName": "应流股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为西门子等海外燃机巨头供应热端叶片等核心部件，受益于AI数据中心带动的燃机需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603308.SH",
+              "companyName": "应流股份",
+              "companyProfile": "公司自1990年进入铸造行业以来，坚持科技创新引领产业升级，建立了以铸造为源头，涵盖热等静压、机械加工和喷涂，以及母合金、陶瓷芯在内的高端装备零部件完整生产体系，装备水平、技术能力和产业规模行业领先，产品主要服务于航空航天、燃气轮机、核能核电、海洋工程、油气化工、工矿设备和流体机械等高端装备领域，出口40多个国家和地区，服务100多家全球行业龙头客户，是国际知名高端装备关键零部件制造企业，是全球航空发动机、燃气轮机、民用核电等高端装备制造产业链重要成员。通过实施“产业链延伸、价值链延伸”，实现高端部件、航空科技和先进材料三大业务协同推进。航空发动机和燃气轮机高温合金热端部件，核电站主泵泵壳、金属保温层、乏燃料格架、中子吸收和辐射屏蔽材料，中小型涡轴发动机、混合动力系统、大载重高原无人直升机等产品达到国内先进乃至国际领先水平。",
+              "profileSummary": "公司自1990年进入铸造行业以来，坚持科技创新引领产业升级，建立了以铸造为源头，涵盖热等静压、机械加工和喷涂，以及母合金、陶瓷芯在内的高端装备零部件完整生产体系，装备水平、技术能力和产业规模行业领先，产品主要服务于航空航天、燃气轮机、核能核电、海洋工程、油气化工、工矿设备和流体机械等高端装备领域，出口40多个国家和地区，服务100多家全球行业龙头客户，是国际知名高端装备关键零部件制造企业，是全球航空发动机、燃气轮机、民用核电等高端装备…",
+              "majorProducts": "应流超级奥氏体不锈钢阀体、应流大型地面采矿设备-电铲履带板、应流大型地下采矿设备-输送机、应流电站高压主气阀阀体、应流电站耐高温阀门阀体、应流非公路重载大型矿用卡车后轮、应流非公路重载大型矿用卡车后桥、应流高压加氢阀门阀体、应流哈氏合金阀体、应流核电站泵泵壳、应流核电站泵叶轮、应流核级泵叶轮、导叶、应流核级阀门、应流核一级主泵泵壳、应流蒙乃尔合金阀体、应流镍基合金高压氧阀阀体、应流双相不锈钢阀体、应流天然气长输管线压缩机、应流涡轮燃气轮机压缩机、应流英康乃尔合金阀体",
+              "revenueComposition": "机械装备构件:56.61%;泵及阀门零件:40.49%;其他业务:2.9%",
+              "revenueSegments": [
+                {
+                  "name": "机械装备构件",
+                  "sharePct": 56.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "泵及阀门零件",
+                  "sharePct": 40.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "压盖",
+                  "叶轮",
+                  "泵壳",
+                  "泵盖",
+                  "泵轴",
+                  "轴承架",
+                  "交叉横梁",
+                  "摇臂"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "应流股份的业务范围能够覆盖为西门子等海外燃机巨头供应热端叶片等核心部件，受益于AI数据中心带动的燃机需求所处的产业环节，但当前机械装备构件（56.61%）、泵及阀门零件（40.49%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”完成兑现，并在终端销量、客户采购量、公司出货和相关产品收入增速上形成持续改善；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 1342,
+            "stockCode": "000534.SZ",
+            "stockName": "万泽股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "已打通中小燃机叶片完全自主可控技术，受益于数据中心青睐的中小燃机需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000534.SZ",
+              "companyName": "万泽股份",
+              "companyProfile": "公司前身为汕头电力发展股份有限公司，成立于1992年，1994年1月在深交所上市。2013年5月，公司更名为“万泽实业股份有限公司”。2019年3月完成重大资产置换后，主营业务由房地产开发与销售变更为微生态活菌产品、高温合金及其制品的研发、生产及销售。在微生态活菌产品方面，公司是国内唯一专注于消化和妇科两大微生态系统的企业，主要产品双歧杆菌乳杆菌三联活菌片(商品名称：“金双歧”)和阴道用乳杆菌活菌胶囊(商品名称：“定君生”)，均是由人体原籍菌组成的微生态活菌制品，连续多年被纳入国家医保目录，在细分领域内具有较高的市场知名度和市场占有率。在高温合金业务方面，公司是国内极少数具备从高温合金材料研发到部件制备全流程研制能力的民营企业。公司专注高温合金材料和核心部件的研发制造，致力于研发、生产具有自主知识产权和国际竞争力的精密铸造叶片、高温合金粉末盘件、高温母合金及其合金粉末等。目前公司所生产的定向、单晶及等轴晶叶片和粉末涡轮盘等产品已先后在我国多型号航空发动机、燃气轮机等装备中获得应用。",
+              "profileSummary": "2019年3月完成重大资产置换后，主营业务由房地产开发与销售变更为微生态活菌产品、高温合金及其制品的研发、生产及销售。目前公司所生产的定向、单晶及等轴晶叶片和粉末涡轮盘等产品已先后在我国多型号航空发动机、燃气轮机等装备中获得应用。",
+              "majorProducts": "高温合金及其制品的研发、生产及销售、微生态活菌产品",
+              "revenueComposition": "金双歧:46.65%;高温合金材料销售:25.84%;定君生:25.05%;其他业务:1.99%;金属检测:0.39%;微生态大健康产品:0.08%",
+              "revenueSegments": [
+                {
+                  "name": "金双歧",
+                  "sharePct": 46.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高温合金材料销售",
+                  "sharePct": 25.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "定君生",
+                  "sharePct": 25.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金属检测",
+                  "sharePct": 0.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "微生态大健康产品",
+                  "sharePct": 0.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "双歧杆菌乳杆菌三联活菌",
+                  "阴道用乳杆菌活菌胶囊",
+                  "铸造高温合金",
+                  "金属检测",
+                  "益生菌固体饮料"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "万泽股份的业务范围能够覆盖已打通中小燃机叶片完全自主可控技术，受益于数据中心青睐的中小燃机需求增长所处的产业环节，但当前金双歧（46.65%）、高温合金材料销售（25.84%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”完成兑现，并在终端销量、客户采购量、公司出货和相关产品收入增速上形成持续改善；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 1347,
+            "stockCode": "300373.SZ",
+            "stockName": "扬杰科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "其功率半导体器件是AI服务器电源、数据中心电源的核心器件，已批量用于高效电源转换场景。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300373.SZ",
+              "companyName": "扬杰科技",
+              "companyProfile": "公司主营：新型电子元器件及其它电子元器件的制造、加工，销售本公司自产产品；分布式光伏发电；从事光伏发电项目的建设及其相关工程咨询服务；光伏电力项目的开发以及光伏产业项目的开发；光伏太阳能组件、太阳能应用工程零部件的销售；太阳能应用系统集成开发；道路普通货物运输；自营和代理各类商品及技术的进出口业务。",
+              "profileSummary": "公司主营：新型电子元器件及其它电子元器件的制造、加工，销售本公司自产产品；分布式光伏发电；从事光伏发电项目的建设及其相关工程咨询服务；光伏电力项目的开发以及光伏产业项目的开发；光伏太阳能组件、太阳能应用工程零部件的销售；太阳能应用系统集成开发；道路普通货物运输；自营和代理各类商品及技术的进出口业务。",
+              "majorProducts": "扬杰科技Automobile Rectifier、扬杰科技Bridge Rectifier、扬杰科技Fast Recovery Rectifier、扬杰科技General Purpose Rectifier、扬杰科技High Efficient Rectifier、扬杰科技Module、扬杰科技Schottry Rectifier、扬杰科技Silicon Bidirectional、扬杰科技Small Singnal Diode、扬杰科技solar diode、扬杰科技Super Fast Rectifier、扬杰科技TVS、扬杰科技Zener Diode",
+              "revenueComposition": "半导体功率器件:87.75%;半导体芯片:7.49%;其他业务:2.41%;半导体硅片:2.35%",
+              "revenueSegments": [
+                {
+                  "name": "半导体功率器件",
+                  "sharePct": 87.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半导体芯片",
+                  "sharePct": 7.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 2.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "半导体硅片",
+                  "sharePct": 2.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "IGBT(绝缘栅双极型晶体管)",
+                  "MOSFET(金氧半场效晶体管)",
+                  "FRED(快恢复外延型二极管)",
+                  "PMBD(平面MOS势垒二极管)",
+                  "PSBD(平面肖特基势垒二极管)",
+                  "TSBD(沟槽肖特基势垒二极管)",
+                  "功率二极管",
+                  "碳化硅SBD(肖特基二极管)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "扬杰科技与新闻存在业务方向上的交集：其功率半导体器件是AI服务器电源、数据中心电源的核心器件，已批量用于高效电源转换场景；公司当前收入主要来自半导体功率器件（87.75%）、半导体芯片（7.49%）。由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。事件对终端需求与渗透率变化的推动只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入报表，终端销量、客户采购量、公司出货和相关产品收入增速决定这一交集能否升级为实际增量；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是主要失效条件。"
+          },
+          {
+            "sourceRowNumber": 1348,
+            "stockCode": "605111.SH",
+            "stockName": "新洁能",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "作为IC设计公司，其功率器件受益于AI数据中心需求，且具备提价能力。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "605111.SH",
+              "companyName": "新洁能",
+              "companyProfile": "公司成立于2013年1月，2020年9月28日，在上交所主板完成挂牌。成立以来即专注于MOSFET、IGBT等半导体芯片和功率器件的研发、设计及销售，产品优质且系列齐全，广泛应用于消费电子、汽车电子、工业电子、新能源汽车及充电桩、智能装备制造、轨道交通、光伏新能源、5G等领域；未来随着云计算、大数据、智能电网、无人驾驶等领域的蓬勃发展，公司产品将在该等新兴领域发挥重要作用。公司为国内MOSFET等半导体功率器件设计领域领军企业，2016年以来连续五年名列“中国半导体功率器件十强企业”。公司已建立江苏省功率器件工程技术研究中心、江苏省企业研究生工作站、东南大学-无锡新洁能功率器件技术联合研发中心、江南大学-无锡新洁能功率器件技术联合研发中心。公司参与的“智能功率驱动芯片设计及制备的关键技术与应用”项目获得了2019年度江苏省科学技术一等奖，且获得2020年度技术发明奖。公司基于全球半导体功率器件先进理论技术开发先进产品，是国内率先掌握超结理论技术，并量产屏蔽栅功率MOSFET及超结功率MOSFET的企业之一，是国内提前早在12英寸工艺平台实现沟槽型MOSFET、屏蔽栅MOSFET量产的企业。公司产品电压已经覆盖了12V~1700V的全系列产品、达1700余种，为国内MOSFET等功率器件市场占有率排名前列的本土企业。公司将进一步依托技术、品牌、渠道等综合优势，结合大尺寸晶圆芯片(8英寸、12英寸)先进工艺技术，开拓国际先进功率器件封装制造技术，全力推进高端功率MOSFET、IGBT、集成功率器件的研发与产业化，持续布局半导体功率器件先进前沿的技术领域，并投入对SiC/GaN宽禁带半导体、智能功率器件的研发及产业化，提升公司核心产品竞争力和国内外市场地位。",
+              "profileSummary": "成立以来即专注于MOSFET、IGBT等半导体芯片和功率器件的研发、设计及销售，产品优质且系列齐全，广泛应用于消费电子、汽车电子、工业电子、新能源汽车及充电桩、智能装备制造、轨道交通、光伏新能源、5G等领域；未来随着云计算、大数据、智能电网、无人驾驶等领域的蓬勃发展，公司产品将在该等新兴领域发挥重要作用。公司将进一步依托技术、品牌、渠道等综合优势，结合大尺寸晶圆芯片(8英寸、12英寸)先进工艺技术，开拓国际先进功率器件封装制造技术，全…",
+              "majorProducts": "IGBT、超结功率MOSFET、沟槽型功率MOSFET、屏蔽栅功率MOSFET、新洁能1200V~1350V绝缘栅双极型晶体管(IGBT)、新洁能20V-250V沟槽型功率MOSFET、新洁能20V-250V屏蔽栅沟槽型功率MOSFET、新洁能500V-900V超结功率MOSFET、新洁能650V绝缘栅双极型晶体管(IGBT)、新洁能MOSFET或IGBT功率模块",
+              "revenueComposition": "封装成品:95.61%;芯片:2.65%;IC:1.35%;其他业务:0.4%",
+              "revenueSegments": [
+                {
+                  "name": "封装成品",
+                  "sharePct": 95.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "芯片",
+                  "sharePct": 2.65,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "IC",
+                  "sharePct": 1.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "IGBT(绝缘栅双极型晶体管)",
+                  "IGBT模块",
+                  "MOSFET模块",
+                  "中低压屏蔽栅MOSFET",
+                  "沟槽型MOSFET",
+                  "高压超级结MOSFET"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "新洁能现有业务与作为IC设计公司，其功率器件受益于AI数据中心需求，且具备提价能力处于同一产业方向，收入主体为封装成品（95.61%）、芯片（2.65%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变供需缺口与产品价格，只有经由“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，业务交集才会转化为业绩增量。产品报价、订单排期、产销率和毛利率若逐步增强，相关业务的重要性会提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，影响仍可能局限在估值预期。"
+          },
+          {
+            "sourceRowNumber": 1349,
+            "stockCode": "688187.SH",
+            "stockName": "时代电气",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司IGBT和SiC产品具备服务AI电源、HVDC的完整产品型谱。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688187.SH",
+              "companyName": "时代电气",
+              "companyProfile": "公司立足于交通和能源两大赛道，以创一流和高质量发展为目标，始终坚持创新驱动和同心多元化发展，致力于为社会提供安全、智能、绿色、舒适的高端装备，励志成为交通与能源领域电气系统全面解决方案全球首选供应商和世界一流专业领军示范企业。经过长期的积淀与发展，目前已形成了“基础器件+装置与系统+整机与工程”的完整产业链结构，产业涉及轨道交通、新能源发电、电力电子器件、乘用车电驱、传感器、工业传动、海工装备等领域；具备完备的供应链体系、生产制造体系、营销及售后服务网络，业务遍及全球20多个国家和地区；主导制定了多项国际标准，累计获得中国专利金奖、国家科学进步二等奖等各类科技奖励百余项，锤炼了一支以院士为核心的高端技术人才队伍，是一家拥有自主知识产权的高科技企业，具有广阔的发展空间和前景。公司始终践行央企担当，积极投身国家重大战略。作为中国电气化铁路装备事业的开拓者和领先者，致力于被誉为列车“心脏”和“大脑”的牵引传动和控制系统自主研发及产业化，持续领跑国内轨道交通电气系统市场，支撑了我国“一带一路”、“高端装备走出去的”目标；在建设现代化产业体系，加快构建新发展格局的新时期，牢牢把握新一轮科技革命和产业变革历史发展机遇，纵深推进战略性新兴产业发展，半导体领域已成为国内头部企业；新能源发电、新能源汽车等绿色装备进入了行业第一梯队，充分发挥了国企在构建安全稳健、自主可控的产业链供应链上发挥了积极作用。",
+              "profileSummary": "公司立足于交通和能源两大赛道，以创一流和高质量发展为目标，始终坚持创新驱动和同心多元化发展，致力于为社会提供安全、智能、绿色、舒适的高端装备，励志成为交通与能源领域电气系统全面解决方案全球首选供应商和世界一流专业领军示范企业。经过长期的积淀与发展，目前已形成了“基础器件+装置与系统+整机与工程”的完整产业链结构，产业涉及轨道交通、新能源发电、电力电子器件、乘用车电驱、传感器、工业传动、海工装备等领域；具备完备的供应链体系、生产制造体系…",
+              "majorProducts": "功率半导体器件、轨道工程机械、轨道交通电气装备、通信信号系统",
+              "revenueComposition": "轨道交通装备:55.07%;新兴装备:44.53%;其他业务:0.41%",
+              "revenueSegments": [
+                {
+                  "name": "轨道交通装备",
+                  "sharePct": 55.07,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新兴装备",
+                  "sharePct": 44.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "IGBT模块",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "IGBT芯片",
+                    "category": "IGBT"
+                  },
+                  {
+                    "name": "中国机车远程监测与诊断系统(CMD)",
+                    "category": "交运信息化"
+                  },
+                  {
+                    "name": "工业变流器",
+                    "category": "变流器"
+                  },
+                  {
+                    "name": "碳化硅MOSFET(氧化物场效应晶体管)",
+                    "category": "MOSFET"
+                  },
+                  {
+                    "name": "碳化硅SBD(肖特基二极管)",
+                    "category": "功率二极管"
+                  }
+                ],
+                "knownProducts": [
+                  "接触网作业车",
+                  "动车组车载接触网运行状态检测装置(3C)",
+                  "机车无线重联控制系统",
+                  "机车自动驾驶系统",
+                  "机车车载安全防护系统(6A)",
+                  "轨道交通再生能量回馈装置",
+                  "轨道交通智能供电系统",
+                  "轨道交通智能电分相装置"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "时代电气与新闻之间有明确产品抓手：IGBT模块、IGBT芯片、中国机车远程监测与诊断系统(CMD)，对应公司IGBT和SiC产品具备服务AI电源、HVDC的完整产品型谱。收入主体目前是轨道交通装备（55.07%）、新兴装备（44.53%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 1353,
+            "stockCode": "002580.SZ",
+            "stockName": "圣阳股份",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "为数据中心提供备用电源及储能系统，并推出全浸没液冷方舱解决方案。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002580.SZ",
+              "companyName": "圣阳股份",
+              "companyProfile": "公司是国家高新技术企业、国家科改企业，创建于1991年，2011年在深交所上市，现为山东国惠投资控股集团有限公司权属企业。公司面向海内外市场，向客户提供电池产品、储能系统和一体化智能电源解决方案，是国际知名、国内领先的绿色能源解决方案供应商。公司深耕行业三十余年，已经形成锂离子电池及电源系统、铅蓄电池及系统、新能源系统集成产品和解决方案的研究、开发、设计和服务技术能力。主要产品为铅蓄电池及系统、锂离子电池及电源系统、新能源储能系统集成产品及服务等。其中，锂离子电池产品主要包括方型铝壳磷酸铁锂电池、圆柱三元锂离子电池，铅蓄电池产品主要包括AGM电池、GEL电池、新型高功率电池、高温电池、铅炭电池,新能源储能产品主要包括户用储能系统、工商业储能系统及大型储能系统等，可在标准化产品基础上，根据客户需求提供定制化解决方案和系统集成服务，产品主要应用于通信备用、数据中心、轨道交通、户用储能、工商业储能、大型储能系统、工程机械车辆、非道路用车、电动工具、园林工具、智能家居等领域，目前，公司拥有圣阳电源(Sacred Sun)、FNS，Power、Powercan、Cellnike等品牌。公司在国内设有三十余个营销服务机构，实现华东、华北、华南、华中、西部等国内市场地区全覆盖，在海外依托圣阳香港、欧洲、亚太、中东非洲、北美子公司平台，建立了完善的海外销售网络，产品远销130多个国家和地区。公司高度重视科技创新，作为国家高新技术企业，搭建了以国家级科研平台为依托的多层次、高水平研发平台体系，形成了以企业为主、以市场为导向、产学研相结合的技术创新体系。",
+              "profileSummary": "公司深耕行业三十余年，已经形成锂离子电池及电源系统、铅蓄电池及系统、新能源系统集成产品和解决方案的研究、开发、设计和服务技术能力。其中，锂离子电池产品主要包括方型铝壳磷酸铁锂电池、圆柱三元锂离子电池，铅蓄电池产品主要包括AGM电池、GEL电池、新型高功率电池、高温电池、铅炭电池,新能源储能产品主要包括户用储能系统、工商业储能系统及大型储能系统等，可在标准化产品基础上，根据客户需求提供定制化解决方案和系统集成服务，产品主要应用于通信备用…",
+              "majorProducts": "锂离子电池及电源系统、铅蓄电池及系统、新能源储能系统集成产品及服务",
+              "revenueComposition": "通信:42.86%;数据/算力中心:23.22%;储能及电力:17.32%;其他场景:16.6%",
+              "revenueSegments": [
+                {
+                  "name": "通信",
+                  "sharePct": 42.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "数据/算力中心",
+                  "sharePct": 23.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "储能及电力",
+                  "sharePct": 17.32,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他场景",
+                  "sharePct": 16.6,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "工商用储能一体柜",
+                    "category": "储能系统"
+                  },
+                  {
+                    "name": "户用储能一体机",
+                    "category": "储能系统"
+                  },
+                  {
+                    "name": "户用储能系统",
+                    "category": "储能系统"
+                  },
+                  {
+                    "name": "集装箱储能系统",
+                    "category": "储能系统"
+                  }
+                ],
+                "knownProducts": [
+                  "铅-锂混合供电系统",
+                  "工商用储能一体柜",
+                  "户用储能一体机",
+                  "户用储能系统",
+                  "集装箱储能系统",
+                  "铅酸动力电池",
+                  "铅酸蓄电池",
+                  "小动力锂电池"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "圣阳股份的储能及电力（17.32%）覆盖范围较宽，其中能够承载工商用储能一体柜、户用储能一体机、户用储能系统，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：为数据中心提供备用电源及储能系统，并推出全浸没液冷方舱解决方案。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 1354,
+            "stockCode": "600405.SH",
+            "stockName": "动力源",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为AI智算中心提供高功率、高效率、高可靠的HVDC供电系统及整机柜服务器集中供电方案。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600405.SH",
+              "companyName": "动力源",
+              "companyProfile": "公司成立于1995年，总部坐落于北京中关村科技园丰台园区。作为中国电源行业首家上市企业，公司于2004年在上海证券交易所主板上市。多年来，公司一直致力于电力电子及信息技术相关产品在绿色能源、智慧能源领域的研发和应用，在数据通信、智慧能源、新能源汽车等领域拥有良好的口碑和市场。旗下拥有安徽动力源、雄安动力源、氢沐科技等多家全资及控股子公司。公司是国家高新技术企业、中关村高新技术企业、北京市企业技术中心、北京市工程技术研究中心、北京市工程实验室、北京市“专精特新”小巨人企业、北京市“专精特新”中小企业、北京市高精尖产业设计中心、北京市知识产权优势单位，是丰台区高精尖产业链龙头企业、丰台发展伙伴。公司已通过ISO9001、ISO14001、ISO45001认证、信息安全管理体系认证、能源管理体系认证、知识产权管理体系认证、两化融合管理体系认证、安全生产许可认证、安全生产标准化认证、建筑业企业资质认证。",
+              "profileSummary": "多年来，公司一直致力于电力电子及信息技术相关产品在绿色能源、智慧能源领域的研发和应用，在数据通信、智慧能源、新能源汽车等领域拥有良好的口碑和市场。",
+              "majorProducts": "电力电子产品、动力源UPS电源、动力源高压变频器、动力源逆变电源、动力源逆变焊机、动力源嵌入式电源、动力源通信电源、动力源应急电源、合同能源管理服务、可再生绿色能源解决方案、全生命周期服务、新能源汽车配套产品业务",
+              "revenueComposition": "通信电源:33.41%;定制及模块电源:27.98%;光储相关电源:16.27%;高压变频器及综合节能:9.42%;充换电电源:5.98%;其他业务:4.39%;车载相关电源:2.55%",
+              "revenueSegments": [
+                {
+                  "name": "通信电源",
+                  "sharePct": 33.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "定制及模块电源",
+                  "sharePct": 27.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光储相关电源",
+                  "sharePct": 16.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "高压变频器及综合节能",
+                  "sharePct": 9.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "充换电电源",
+                  "sharePct": 5.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 4.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "车载相关电源",
+                  "sharePct": 2.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "IDC高压直流电源系统",
+                    "category": "IDC硬件产品"
+                  },
+                  {
+                    "name": "交流充电桩",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "光伏混动系统",
+                    "category": "资源管理IT"
+                  },
+                  {
+                    "name": "直流充电桩",
+                    "category": "充电桩"
+                  }
+                ],
+                "knownProducts": [
+                  "合同能源管理服务(EMC)",
+                  "新能源汽车电驱动系统辅驱系统",
+                  "车载DC/DC转换器",
+                  "交流充电桩",
+                  "直流充电桩",
+                  "不间断电源(UPS)",
+                  "工业电源",
+                  "应急电源(EPS)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "动力源实际经营中已有IDC高压直流电源系统、交流充电桩、光伏混动系统，与事件指向的为AI智算中心提供高功率、高效率、高可靠的HVDC供电系统及整机柜服务器集中供电方案能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在通信电源（33.41%）、定制及模块电源（27.98%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          },
+          {
+            "sourceRowNumber": 1355,
+            "stockCode": "002851.SZ",
+            "stockName": "麦格米特",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为AI数据中心提供从电力接入到算力终端的全链路自主化电源产品。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002851.SZ",
+              "companyName": "麦格米特",
+              "companyProfile": "公司是电气自动化领域硬件和软件研发、生产、销售与服务的一站式解决方案提供商，二十多年砥砺前行形成以数字化电源控制、系统控制与通讯、功率变换硬件为核心的技术平台，衍生出电源产品、工业自动化、新能源&轨道交通、智能装备、智能家电电控、精密连接等六大业务领域，同时在全球各地建立研发中心、生产制造中心以及市场服务中心。作为全球专业的电气自动化领域解决方案提供商，麦格米特始终坚持技术领先、工艺精湛、品质高端、服务一流的经营方针，致力于人类电能使用更加高效、生存环境更加洁净、生产效率持续进步，以人类生活日益美好为重任，打造全球电气自动化行业标杆！麦格米特聚焦电力电子及相关控制核心技术，不断向与核心技术相关的交叉领域和新兴领域延伸，从最初的电视电源领域，稳扎稳打，逐步拓宽到消费类电源控制器、工业类电源、工控产品、消费类终端和工业装备，从板件产品逐步升级到模块产品、系统产品及集成产品，多年来布局逐步取得效果，并产生了越来越多的协同效应。产品的拓展也带动公司从家用电视市场逐步拓展到各类商业显示、变频家电、智能卫浴、医疗、通信、智能装备、新能源汽车、轨道交通、微波工业应用、智能采油设备、热管理、光储充、焊接技术和电机相关控制等消费和工业的众多行业。在产品和行业的拓展中，不断产生裂变效应，从而发现更多的市场需求，进入更多的细分领域。",
+              "profileSummary": "公司是电气自动化领域硬件和软件研发、生产、销售与服务的一站式解决方案提供商，二十多年砥砺前行形成以数字化电源控制、系统控制与通讯、功率变换硬件为核心的技术平台，衍生出电源产品、工业自动化、新能源&轨道交通、智能装备、智能家电电控、精密连接等六大业务领域，同时在全球各地建立研发中心、生产制造中心以及市场服务中心。麦格米特聚焦电力电子及相关控制核心技术，不断向与核心技术相关的交叉领域和新兴领域延伸，从最初的电视电源领域，稳扎稳打，逐步拓宽…",
+              "majorProducts": "电源产品、工业自动化、精密连接、新能源及轨道交通部件、智能家电电控产品、智能装备",
+              "revenueComposition": "智能家电电控产品:37.85%;电源产品:28.5%;新能源及轨道交通产品:12.18%;工业自动化:9.33%;智能装备:6.44%;精密连接:4.78%;其他业务:0.93%",
+              "revenueSegments": [
+                {
+                  "name": "智能家电电控产品",
+                  "sharePct": 37.85,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电源产品",
+                  "sharePct": 28.5,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "新能源及轨道交通产品",
+                  "sharePct": 12.18,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "工业自动化",
+                  "sharePct": 9.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能装备",
+                  "sharePct": 6.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "精密连接",
+                  "sharePct": 4.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "FFC柔性扁平线缆",
+                    "category": "普通电力电缆"
+                  },
+                  {
+                    "name": "充电桩电源模块",
+                    "category": "充电桩"
+                  },
+                  {
+                    "name": "同轴电缆",
+                    "category": "专用电力电缆"
+                  },
+                  {
+                    "name": "服务器电源",
+                    "category": "计算机电源"
+                  },
+                  {
+                    "name": "汽车电力电子集成模块(PEU)",
+                    "category": "新能源汽车车身系统"
+                  }
+                ],
+                "knownProducts": [
+                  "空调变频驱控系统",
+                  "轨道交通空调控制器",
+                  "逆变焊机",
+                  "汽车电力电子集成模块(PEU)",
+                  "车载充电机",
+                  "新能源汽车驱动电机驱动器(MCU)",
+                  "车载DC/DC转换器",
+                  "温度控制器"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "麦格米特已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：电源产品占收入的28.5%。公司在产业链中的位置是：为AI数据中心提供从电力接入到算力终端的全链路自主化电源产品，终端需求与渗透率变化则决定增量大小。只有完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，相关业务的增长才可能改善公司整体盈利。终端销量、客户采购量、公司出货和相关产品收入增速还需与其他主业表现同时改善；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 1356,
+            "stockCode": "300274.SZ",
+            "stockName": "阳光电源",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "为下一代AI数据中心提供高可靠、高效率、高功率密度的全栈式电源解决方案。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300274.SZ",
+              "companyName": "阳光电源",
+              "companyProfile": "公司是一家全球领先的清洁能源科技企业，专注于光伏逆变器、储能系统、风电变流及传动产品、新能源汽车电控及电源系统、充电设备、可再生能源制氢系统等新能源电源设备的研产销服和新能源电站投资开发，并布局AIDC电源业务。自成立以来，阳光电源持续推动清洁电力转换技术发展，以光伏、风电、储能、电动汽车及充电、氢能的赛道布局，助力清洁能源转换的应用场景更丰富，用能方式更创意，使用体验更友好。目前，公司已在全球100多个国家和地区开展业务，设立20多个国际分支机构，布局四大制造基地和七大研发中心，核心产品光伏逆变器、储能系统累计出货量保持全球领先。截至2025年12月底，在全球市场已累计实现电力电子转换设备装机超1000GW，携手客户每年可避免二氧化碳排放约6亿吨。阳光电源坚持以市场需求为导向、以技术创新作为企业发展的动力源，培育了一支研发经验丰富、自主创新能力较强的专业研发队伍。当前研发技术人员占比40%，累计申请专利超11000件，是行业内为数极少的掌握多项自主核心技术的企业之一。公司先后荣获“全球新能源企业500强”“福布斯中国创新力企业50强”“德勤中国卓越管理企业”“全球化企业最佳雇主品牌”“MSCIESG评级AAA”等荣誉，综合实力位居全球新能源发电行业第一方阵。",
+              "profileSummary": "公司是一家全球领先的清洁能源科技企业，专注于光伏逆变器、储能系统、风电变流及传动产品、新能源汽车电控及电源系统、充电设备、可再生能源制氢系统等新能源电源设备的研产销服和新能源电站投资开发，并布局AIDC电源业务。目前，公司已在全球100多个国家和地区开展业务，设立20多个国际分支机构，布局四大制造基地和七大研发中心，核心产品光伏逆变器、储能系统累计出货量保持全球领先。",
+              "majorProducts": "充电设备、储能系统、风能变流器、光伏逆变器、氢能、水面光伏系统、新能源汽车驱动系统、新能源投资开发、智慧能源运维服务",
+              "revenueComposition": "储能系统:41.81%;光伏逆变器等电力转换设备:34.91%;新能源建设开发:18.57%;其他:2.94%;光伏电站发电收入:1.47%;其他业务:0.3%",
+              "revenueSegments": [
+                {
+                  "name": "储能系统",
+                  "sharePct": 41.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光伏逆变器等电力转换设备",
+                  "sharePct": 34.91,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "新能源建设开发",
+                  "sharePct": 18.57,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光伏电站发电收入",
+                  "sharePct": 1.47,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "光伏发电",
+                    "category": "太阳能发电"
+                  },
+                  {
+                    "name": "光伏电站工程",
+                    "category": "发电工程"
+                  },
+                  {
+                    "name": "分布式光伏电站工程",
+                    "category": "发电工程"
+                  },
+                  {
+                    "name": "风电场工程",
+                    "category": "发电工程"
+                  }
+                ],
+                "knownProducts": [
+                  "光伏发电",
+                  "光伏电站工程",
+                  "分布式光伏电站工程",
+                  "风电场工程",
+                  "制氢电解槽",
+                  "新能源汽车驱动电机控制器",
+                  "微型逆变器",
+                  "模块化逆变器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "阳光电源已经具备光伏发电、光伏电站工程、分布式光伏电站工程等业务能力，为下一代AI数据中心提供高可靠、高效率、高功率密度的全栈式电源解决方案并非单纯概念映射。当前对应的收入被归入光伏逆变器等电力转换设备（34.91%）、新能源建设开发（18.57%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "21条低于3星的源记录已按当前关注口径排除。",
+      "8条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

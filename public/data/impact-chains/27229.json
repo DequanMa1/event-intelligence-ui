@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27229",
@@ -9,10 +9,10 @@
     "date": "2026-07-08"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
+    "rule": "A-share and filled_star_count == 4",
     "sourceStockCount": 5,
-    "mappedStockCount": 5,
-    "unmappedStockCount": 0,
+    "mappedStockCount": 2,
+    "unmappedStockCount": 3,
     "stocks": [
       {
         "sourceRowNumber": 22842,
@@ -20,8 +20,8 @@
         "stockName": "奥瑞金",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 4
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 22843,
@@ -30,7 +30,7 @@
         "rating": "★★★★☆",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 5
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 22844,
@@ -38,8 +38,8 @@
         "stockName": "星宸科技",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 22845,
@@ -47,8 +47,8 @@
         "stockName": "安凯微",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 3
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 22848,
@@ -57,41 +57,49 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 3
+        "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": []
+    "unmappedStocks": [
+      {
+        "sourceRowNumber": 22842,
+        "stockCode": "002701.SZ",
+        "stockName": "奥瑞金",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 22844,
+        "stockCode": "301536.SZ",
+        "stockName": "星宸科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 22845,
+        "stockCode": "688620.SH",
+        "stockName": "安凯微",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ]
   },
   "totals": {
     "candidateCoreProductCount": 19,
     "selectedCoreProductCount": 2,
     "selectedCompanyCoreProductCount": 2,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 1,
-    "downstreamCandidateCount": 1,
-    "shownUpstreamCount": 1,
-    "shownDownstreamCount": 1
+    "level7ProductCount": 56,
+    "relatedIndustryCandidateCount": 13,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140111849",
-        "name": "半导体IP",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111364"
-        ],
-        "linkedCoreProductNames": [
-          "半导体IP授权服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140111364",
         "name": "半导体IP授权服务",
@@ -117,18 +125,15 @@
           "name": "半导体IP授权服务"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688521.SH",
             "stockName": "芯原股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -162,18 +167,15 @@
           "name": "视频解码SoC"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688099.SH",
             "stockName": "晶晨股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 9,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -183,22 +185,550 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140160951",
-        "name": "集成电路设计厂商",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111364"
+        "code": "1200001283",
+        "name": "IC制造",
+        "description": "IC制造指芯片晶圆代工，是半导体核心环节。因国产替代加速、AI算力需求爆发及政策强力支持，该行业备受瞩目。作为科技自主可控的关键，其高成长性与战略地位吸引大量资金关注。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 3,
+        "relevanceScore": 48,
+        "stocks": [
+          {
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688347.SH",
+            "stockName": "华虹宏力",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "半导体IP授权服务"
+        "products": [
+          {
+            "code": "1140200586",
+            "name": "晶圆代工",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆制造 > 晶圆代工",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688347.SH",
+                "stockName": "华虹宏力",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "晶圆代工"
+            ]
+          },
+          {
+            "code": "1140200968",
+            "name": "芯片定制",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片定制",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "芯片定制"
+            ]
+          },
+          {
+            "code": "1140111363",
+            "name": "芯片量产代理",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片量产代理",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200001155",
+        "name": "汽车电子",
+        "description": "汽车电子指车辆中所有电子控制系统。因受益于电动化、智能化及自动驾驶趋势，其单车价值量显著提升，成为A股高成长赛道，吸引资金重点关注产业链中的芯片、传感器及智能座舱等核心环节。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 18,
+        "relevanceScore": 440,
+        "stocks": [
+          {
+            "stockCode": "002906.SZ",
+            "stockName": "华阳集团",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002920.SZ",
+            "stockName": "德赛西威",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140204763",
+            "name": "座舱域控制器",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车电子 > 汽车车身电子控制系统 > 座舱域控制器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002906.SZ",
+                "stockName": "华阳集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002920.SZ",
+                "stockName": "德赛西威",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "汽车电子"
+            ]
+          },
+          {
+            "code": "1140135995",
+            "name": "抬头显示器(HUD)",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车电子 > 汽车车身电子控制系统 > 抬头显示器(HUD)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002906.SZ",
+                "stockName": "华阳集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002920.SZ",
+                "stockName": "德赛西威",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "汽车电子"
+            ]
+          },
+          {
+            "code": "1140005711",
+            "name": "车载摄像头",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车电子 > 汽车车身电子控制系统 > 车载摄像头",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002906.SZ",
+                "stockName": "华阳集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002920.SZ",
+                "stockName": "德赛西威",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "汽车电子"
+            ]
+          },
+          {
+            "code": "1140017261",
+            "name": "高级驾驶辅助系统(ADAS)",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车电子 > 汽车车身电子控制系统 > 高级驾驶辅助系统(ADAS)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002906.SZ",
+                "stockName": "华阳集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002920.SZ",
+                "stockName": "德赛西威",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "汽车电子"
+            ]
+          }
+        ],
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 13,
+    "mappedStockCount": 11,
+    "unmappedStockCount": 2,
+    "level7ProductCount": 56,
+    "candidateIndustryCount": 13,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 22841,
+        "stockCode": "603893.SH",
+        "stockName": "瑞芯微",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 22842,
+        "stockCode": "002701.SZ",
+        "stockName": "奥瑞金",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 22843,
+        "stockCode": "688099.SH",
+        "stockName": "晶晨股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 22844,
+        "stockCode": "301536.SZ",
+        "stockName": "星宸科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 22845,
+        "stockCode": "688620.SH",
+        "stockName": "安凯微",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 22846,
+        "stockCode": "688049.SH",
+        "stockName": "炬芯科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 22847,
+        "stockCode": "002290.SZ",
+        "stockName": "禾盛新材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 22848,
+        "stockCode": "688521.SH",
+        "stockName": "芯原股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 22850,
+        "stockCode": "688347.SH",
+        "stockName": "华虹宏力",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 1
+      },
+      {
+        "sourceRowNumber": 22851,
+        "stockCode": "688362.SH",
+        "stockName": "甬矽电子",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 22854,
+        "stockCode": "002920.SZ",
+        "stockName": "德赛西威",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 13
+      },
+      {
+        "sourceRowNumber": 22855,
+        "stockCode": "002906.SZ",
+        "stockName": "华阳集团",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 19
+      },
+      {
+        "sourceRowNumber": 22856,
+        "stockCode": "301536.SZ",
+        "stockName": "星宸科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001283",
+        "name": "IC制造",
+        "description": "IC制造指芯片晶圆代工，是半导体核心环节。因国产替代加速、AI算力需求爆发及政策强力支持，该行业备受瞩目。作为科技自主可控的关键，其高成长性与战略地位吸引大量资金关注。",
+        "stockCount": 2,
+        "starWeight": 7,
+        "level7ProductCount": 3,
+        "relevanceScore": 48,
+        "stocks": [
+          {
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "688347.SH",
+            "stockName": "华虹宏力",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140200586",
+            "name": "晶圆代工",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆制造 > 晶圆代工",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688347.SH",
+                "stockName": "华虹宏力",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 30,
+            "matchedTerms": [
+              "晶圆代工"
+            ]
+          },
+          {
+            "code": "1140200968",
+            "name": "芯片定制",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片定制",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 14,
+            "matchedTerms": [
+              "芯片定制"
+            ]
+          },
+          {
+            "code": "1140111363",
+            "name": "芯片量产代理",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片量产代理",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001155",
+        "name": "汽车电子",
+        "description": "汽车电子指车辆中所有电子控制系统。因受益于电动化、智能化及自动驾驶趋势，其单车价值量显著提升，成为A股高成长赛道，吸引资金重点关注产业链中的芯片、传感器及智能座舱等核心环节。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 18,
+        "relevanceScore": 440,
+        "stocks": [
+          {
+            "stockCode": "002906.SZ",
+            "stockName": "华阳集团",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "002920.SZ",
+            "stockName": "德赛西威",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140204763",
+            "name": "座舱域控制器",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车电子 > 汽车车身电子控制系统 > 座舱域控制器",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002906.SZ",
+                "stockName": "华阳集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002920.SZ",
+                "stockName": "德赛西威",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "汽车电子"
+            ]
+          },
+          {
+            "code": "1140135995",
+            "name": "抬头显示器(HUD)",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车电子 > 汽车车身电子控制系统 > 抬头显示器(HUD)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002906.SZ",
+                "stockName": "华阳集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002920.SZ",
+                "stockName": "德赛西威",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "汽车电子"
+            ]
+          },
+          {
+            "code": "1140005711",
+            "name": "车载摄像头",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车电子 > 汽车车身电子控制系统 > 车载摄像头",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002906.SZ",
+                "stockName": "华阳集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002920.SZ",
+                "stockName": "德赛西威",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "汽车电子"
+            ]
+          },
+          {
+            "code": "1140017261",
+            "name": "高级驾驶辅助系统(ADAS)",
+            "hierarchyPath": "汽车 > 汽车零部件 > 汽车零部件 > 汽车电子 > 汽车车身电子控制系统 > 高级驾驶辅助系统(ADAS)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002906.SZ",
+                "stockName": "华阳集团",
+                "rating": "★★★",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "002920.SZ",
+                "stockName": "德赛西威",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "汽车电子"
+            ]
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -213,9 +743,982 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 16,
+    "eligibleSourceRowCount": 13,
+    "totalStockCount": 12,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 0,
+    "excludedNonAShareCount": 3,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 12,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 22841,
+            "stockCode": "603893.SH",
+            "stockName": "瑞芯微",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "公司是国内领先的AIoT SoC芯片设计厂商，本次业绩预增事件的核心主角。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603893.SH",
+              "companyName": "瑞芯微",
+              "companyProfile": "公司成立于2001年，总部位于福州，在深圳、上海、北京、杭州、香港设有分/子公司，主要致力于大规模集成电路及应用方案的设计、开发和销售，是国内人工智能物联网AIoT SoC芯片的领先者。公司长期深耕AIoT领域，致力于为下游客户提供不同算力、不同性能层次的AIoT SoC系列芯片平台，以及配套的电源管理芯片、接口转换芯片、无线连接芯片等数模混合芯片和模组等。公司拥有一支以系统级芯片、模拟电路芯片设计和算法研究为特长的研发团队，在处理器和数模混合芯片设计、多媒体处理、影像算法、系统软件开发上具有丰富的经验和技术储备。公司主要产品除各类型处理器芯片外，还包括电源管理芯片、数模混合芯片、光电产品及开发板产品。AI技术的创新突破正在为社会、经济、产业发展等带来变革。公司积极拥抱AI发展，基于多年来积累的AIoT各种技术、产品、客户、场景优势，围绕“大音频、大视频、大感知、大软件”的技术发展方向不断创新，保持核心技术水平的领先性，同时持续深耕汽车电子、机器视觉、工业应用、教育办公、商业金融、智能家居以及消费电子等下游众多领域，致力于为AIoT各领域客户提供多层次、多平台、多场景的专业解决方案，赋能百行百业数字化、智能化升级。公司以市场为导向，技术创新为核心，致力于为客户提供多层次、多平台、多场景的专业解决方案，赋能汽车电子、机器视觉、工业应用、教育办公、商业金融、智能家居以及消费电子等多元领域。",
+              "profileSummary": "公司长期深耕AIoT领域，致力于为下游客户提供不同算力、不同性能层次的AIoT SoC系列芯片平台，以及配套的电源管理芯片、接口转换芯片、无线连接芯片等数模混合芯片和模组等。公司积极拥抱AI发展，基于多年来积累的AIoT各种技术、产品、客户、场景优势，围绕“大音频、大视频、大感知、大软件”的技术发展方向不断创新，保持核心技术水平的领先性，同时持续深耕汽车电子、机器视觉、工业应用、教育办公、商业金融、智能家居以及消费电子等下游众多领域…",
+              "majorProducts": "电源管理芯片RK8XX系列、其他芯片Nano系列、其他芯片RK6XX、RK9XX、RK10XX系列、智能应用处理器芯片RK110X系列、智能应用处理器芯片RK3036系列RK16XX系列、智能应用处理器芯片RK3066系列、智能应用处理器芯片RK312X系列、智能应用处理器芯片RK3188系列、智能应用处理器芯片RK322X系列、智能应用处理器芯片RK3288系列、智能应用处理器芯片RK3308系列、智能应用处理器芯片RK332X系列、智能应用处理器芯片RK3368系列、智能应用处理器芯片RK3399系列、智能应用处理器芯片SoFIA3GR、组件开源平台硬件(开发板)、组件人工智能计算棒",
+              "revenueComposition": "智能应用处理器芯片:89.21%;数模混合芯片:8.19%;其他芯片:2.22%;技术服务及其他:0.36%;其他业务:0.02%",
+              "revenueSegments": [
+                {
+                  "name": "智能应用处理器芯片",
+                  "sharePct": 89.21,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "数模混合芯片",
+                  "sharePct": 8.19,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他芯片",
+                  "sharePct": 2.22,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务及其他",
+                  "sharePct": 0.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "多路输出PMIC",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "平板处理器",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "快充协议芯片",
+                    "category": "电源管理芯片"
+                  },
+                  {
+                    "name": "扫地机处理器",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "接口转换芯片",
+                    "category": "接口芯片"
+                  },
+                  {
+                    "name": "无线互联芯片",
+                    "category": "通信芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "接口转换芯片",
+                  "多路输出PMIC",
+                  "快充协议芯片",
+                  "平板处理器",
+                  "扫地机处理器",
+                  "无线互联芯片",
+                  "网络摄像机处理器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "瑞芯微的智能应用处理器芯片（89.21%）、数模混合芯片（8.19%）覆盖范围较宽，其中能够承载多路输出PMIC、平板处理器、快充协议芯片，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司是国内领先的AIoT SoC芯片设计厂商，本次业绩预增事件的核心主角。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 22842,
+            "stockCode": "002701.SZ",
+            "stockName": "奥瑞金",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司是瑞芯微在AIoT SoC领域的主要竞争对手之一，受益于相似的下游需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002701.SZ",
+              "companyName": "奥瑞金",
+              "companyProfile": "公司是中国领先的金属包装企业之一，于1994年在海南文昌创立，于2012年在深圳证券交易所上市，是首家在国内A股市场上市的金属包装企业。公司2021年、2022年、2023年连续三年蝉联北京民营企业百强。2023年，公司蝉联由中国包装联合会颁发的2022年度中国包装企业百强榜第4位、2022年度中国包装企业百强金属包装企业首位。作为综合包装解决方案提供商，奥瑞金为各类快消品客户提供涵盖包装方案策划、以各类金属易拉罐为主的包装产品设计与制造、灌装服务、基于智能包装载体的信息化服务等一站式解决方案。公司已与百余家全球知名碳酸饮料、啤酒、功能饮料和国内知名茶饮料及食品企业建立起长期战略合作关系。公司搭建起可以辐射全国的金属包装制造、销售、服务网络，截至2023年底，公司已在全国16个省市自治区拥有五十余家制造基地，近百条国际领先的生产线和配套检验检测设备，年产能超百亿罐。",
+              "profileSummary": "作为综合包装解决方案提供商，奥瑞金为各类快消品客户提供涵盖包装方案策划、以各类金属易拉罐为主的包装产品设计与制造、灌装服务、基于智能包装载体的信息化服务等一站式解决方案。公司搭建起可以辐射全国的金属包装制造、销售、服务网络，截至2023年底，公司已在全国16个省市自治区拥有五十余家制造基地，近百条国际领先的生产线和配套检验检测设备，年产能超百亿罐。",
+              "majorProducts": "食品罐、饮料罐",
+              "revenueComposition": "金属包装产品及服务:93.41%;其他业务:6.08%;灌装:0.5%",
+              "revenueSegments": [
+                {
+                  "name": "金属包装产品及服务",
+                  "sharePct": 93.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 6.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "灌装",
+                  "sharePct": 0.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "二维码广告",
+                  "品牌咨询设计服务",
+                  "三片罐",
+                  "二片罐"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "奥瑞金的业务范围能够覆盖公司是瑞芯微在AIoT SoC领域的主要竞争对手之一，受益于相似的下游需求增长所处的产业环节，但当前金属包装产品及服务（93.41%）、其他业务（6.08%）仍是收入主体，事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。终端需求与渗透率变化需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”完成兑现，并在终端销量、客户采购量、公司出货和相关产品收入增速上形成持续改善；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务联系对盈利的贡献会受到限制。"
+          },
+          {
+            "sourceRowNumber": 22843,
+            "stockCode": "688099.SH",
+            "stockName": "晶晨股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司是全球领先的智能机顶盒、智能电视等领域的SoC芯片供应商，与瑞芯微在部分AIoT市场存在竞争。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688099.SH",
+              "companyName": "晶晨股份",
+              "companyProfile": "公司是全球布局、国内领先的无晶圆半导体系统设计厂商，为智能机顶盒、智能电视、音视频系统终端、无线连接及车载信息娱乐系统等多个产品领域提供多媒体SoC芯片和系统级解决方案，业务覆盖全球主要经济区域，积累了全球知名的客户群。产品技术先进性和市场覆盖率位居行业前列，为智能机顶盒芯片的领导者、智能电视芯片的引领者和音视频系统终端芯片的开拓者。公司拥有丰富的SoC全流程设计经验，坚持超高清多媒体编解码和显示处理、内容安全保护、系统IP等核心软硬件技术开发，整合业界领先的CPU/GPU技术和先进制程工艺，实现前所未有的成本、性能和功耗优化，提供基于多种开放平台的完整系统解决方案，帮助全球顶级运营商、OEM、ODM等客户快速部署市场。公司成立于美国硅谷，总部设立于美国硅谷核心区山景城，并在全球多个科技与产业枢纽设有分支机构，包括：班加罗尔(印度)、首尔(韩国)、上海(中国)、新加坡、东京(日本)、伦敦(英国)、米兰(意大利)、慕尼黑(德国)及诺维萨德(塞尔维亚)。",
+              "profileSummary": "公司是全球布局、国内领先的无晶圆半导体系统设计厂商，为智能机顶盒、智能电视、音视频系统终端、无线连接及车载信息娱乐系统等多个产品领域提供多媒体SoC芯片和系统级解决方案，业务覆盖全球主要经济区域，积累了全球知名的客户群。公司拥有丰富的SoC全流程设计经验，坚持超高清多媒体编解码和显示处理、内容安全保护、系统IP等核心软硬件技术开发，整合业界领先的CPU/GPU技术和先进制程工艺，实现前所未有的成本、性能和功耗优化，提供基于多种开放平台…",
+              "majorProducts": "A系列SoC芯片、S系列SoC芯片、T系列SoC芯片、W系列芯片、汽车电子芯片",
+              "revenueComposition": "销售商品:99.95%;租赁服务:0.04%;技术服务:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "销售商品",
+                  "sharePct": 99.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁服务",
+                  "sharePct": 0.04,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "视频解码SoC",
+                    "category": "音视频芯片"
+                  },
+                  {
+                    "name": "无线互联芯片",
+                    "category": "通信芯片"
+                  },
+                  {
+                    "name": "智能座舱芯片",
+                    "category": "专用芯片"
+                  },
+                  {
+                    "name": "智能语音处理器",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "机顶盒芯片",
+                    "category": "音视频芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "智能座舱芯片",
+                  "智能语音处理器",
+                  "无线互联芯片",
+                  "机顶盒芯片",
+                  "视频解码SoC"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "晶晨股份与新闻之间有明确产品抓手：视频解码SoC、无线互联芯片、智能座舱芯片，对应公司是全球领先的智能机顶盒、智能电视等领域的SoC芯片供应商，与瑞芯微在部分AIoT市场存在竞争。收入主体目前是销售商品（99.95%）、租赁服务（0.04%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变事件能否转化为可确认的经营增量预期，随后要经过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”才能进入利润表。订单、收入确认、产品结构和毛利率变化若形成连续改善，相关产品对整体经营的贡献会逐步提高；若事件关联停留在主题层面，未形成可持续订单或利润贡献，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 22844,
+            "stockCode": "301536.SZ",
+            "stockName": "星宸科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "公司在视频监控、智能座舱等领域与瑞芯微存在竞争，同属SoC赛道高景气标的。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301536.SZ",
+              "companyName": "星宸科技",
+              "companyProfile": "公司为全球领先的视频监控芯片企业，主营业务为视频监控芯片的研发及销售，产品主要应用于智能安防、视频对讲、智能车载等领域。公司在芯片设计全流程具有丰富经验，可支撑大型先进工艺下的SoC设计。公司自研全套AI技术，包含AI处理器指令集、AI处理器IP及其编译器、仿真器等全套AI处理器工具链。公司拥有大量核心IP资源，包含图像IP、视频IP、高速模拟IP和音频IP等。公司在视频监控领域持续研发创新，在图像信号处理、音视频编解码、显示处理等领域具有领先优势，并积极投入AI等新领域的芯片研发。公司拥有ISP技术、AI处理器技术、多模视频编码技术、高速高精度模拟电路技术、先进制程SoC芯片设计技术等多项核心技术，公司拥有已授权专利92项，其中境内发明专利11项，境外专利81项；在申请中专利154项，其中境内发明专利63项，境外专利91项。",
+              "profileSummary": "公司为全球领先的视频监控芯片企业，主营业务为视频监控芯片的研发及销售，产品主要应用于智能安防、视频对讲、智能车载等领域。公司在芯片设计全流程具有丰富经验，可支撑大型先进工艺下的SoC设计。",
+              "majorProducts": "视频对讲芯片、智能安防芯片、智能车载芯片",
+              "revenueComposition": "智能安防:65.1%;智能物联:22.14%;智能车载:10.69%;其他IC:1.05%;蓝牙芯片:0.92%;经营租赁收入:0.08%;其他:0.02%;技术服务:0.01%",
+              "revenueSegments": [
+                {
+                  "name": "智能安防",
+                  "sharePct": 65.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能物联",
+                  "sharePct": 22.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能车载",
+                  "sharePct": 10.69,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他IC",
+                  "sharePct": 1.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "蓝牙芯片",
+                  "sharePct": 0.92,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "经营租赁收入",
+                  "sharePct": 0.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.02,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 0.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "WIFI芯片",
+                    "category": "通信芯片"
+                  },
+                  {
+                    "name": "扫地机处理器",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "网络录像机处理器",
+                    "category": "音视频芯片"
+                  },
+                  {
+                    "name": "网络摄像机处理器",
+                    "category": "音视频芯片"
+                  },
+                  {
+                    "name": "行车记录仪处理器",
+                    "category": "音视频芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "扫地机处理器",
+                  "WIFI芯片",
+                  "网络录像机处理器",
+                  "网络摄像机处理器",
+                  "行车记录仪处理器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "星宸科技的蓝牙芯片（0.92%）覆盖范围较宽，其中能够承载WIFI芯片、扫地机处理器、网络录像机处理器，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司在视频监控、智能座舱等领域与瑞芯微存在竞争，同属SoC赛道高景气标的。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 22845,
+            "stockCode": "688620.SH",
+            "stockName": "安凯微",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司主营物联网摄像机和蓝牙芯片，受益于SoC板块景气度提升，上半年业绩实现扭亏。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688620.SH",
+              "companyName": "安凯微",
+              "companyProfile": "公司于2001年注册成立，在深圳和浙江金华设有分支机构。公司是一家芯片设计公司，设计并销售赋能智能硬件与智能体的AI SOC芯片。公司产品广泛应用于智能家居、智能穿戴、智慧安防、智慧办公和工业物联网等领域。公司是国家高新技术企业、专精特新“小巨人”、知识产权优势企业，获评全国博士后科研工作站分站、物联网智能硬件核心芯片广东省工程研究中心、广东省制造业单项冠军企业等诸多资质，并已通过ISO9001认证/ISO56005认证/T29490-2023认证。",
+              "profileSummary": "公司是一家芯片设计公司，设计并销售赋能智能硬件与智能体的AI SOC芯片。公司产品广泛应用于智能家居、智能穿戴、智慧安防、智慧办公和工业物联网等领域。",
+              "majorProducts": "BLE（Bluetooth Low Energy，低功耗蓝牙）芯片、BLE芯片、HMI（Human-Machine Interface，人机交互）芯片、HMI芯片、物联网摄像机芯片",
+              "revenueComposition": "物联网摄像机芯片:80.71%;物联网应用处理器芯片:16.73%;其他产品:1.79%;其他业务:0.77%",
+              "revenueSegments": [
+                {
+                  "name": "物联网摄像机芯片",
+                  "sharePct": 80.71,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "物联网应用处理器芯片",
+                  "sharePct": 16.73,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 1.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "IoT MCU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "楼宇可视对讲芯片",
+                    "category": "专用芯片"
+                  },
+                  {
+                    "name": "网络摄像机处理器",
+                    "category": "音视频芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "楼宇可视对讲芯片",
+                  "IoT MCU",
+                  "网络摄像机处理器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "安凯微的物联网摄像机芯片（80.71%）、物联网应用处理器芯片（16.73%）覆盖范围较宽，其中能够承载IoT MCU、楼宇可视对讲芯片、网络摄像机处理器，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司主营物联网摄像机和蓝牙芯片，受益于SoC板块景气度提升，上半年业绩实现扭亏。现阶段无法用整个分部占比直接衡量受益程度，因为终端需求与渗透率变化还需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导，相关产品在分部内部的收入权重才会逐步显现。终端销量、客户采购量、公司出货和相关产品收入增速若持续增强，事件影响可以从产品层面扩散到公司盈利；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 22848,
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司是一站式芯片定制服务和半导体IP授权服务提供商，为瑞芯微等芯片设计公司提供核心IP，是国产算力上游的关键环节。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688521.SH",
+              "companyName": "芯原股份",
+              "companyProfile": "公司是一家依托自主半导体IP，为客户提供平台化、全方位、一站式芯片定制服务和半导体IP授权服务的企业。公司拥有自主可控的图形处理器IP(GPU IP)、神经网络处理器IP(NPU IP)、视频处理器IP(VPU IP)、数字信号处理器IP(DSP IP)、图像信号处理器IP(ISP IP)和显示处理器IP(Display Processing IP)这六类处理器IP，以及1,600多个数模混合IP和射频IP。基于自有的IP，公司已拥有丰富的面向人工智能(AI)应用的软硬件芯片定制平台解决方案，涵盖如智能手表、AR/VR眼镜等始终在线(Always-on)的轻量化空间计算设备，AI PC、AI手机、智慧汽车、机器人等高效率端侧计算设备，以及数据中心/服务器等高性能云侧计算设备。为顺应大算力需求所推动的SoC(系统级芯片)向SiP(系统级封装)发展的趋势，公司正在以“IP芯片化(IP as a Chiplet)”、“芯片平台化(Chiplet as a Platform)”和“平台生态化(Platform as an Ecosystem)”理念为行动指导方针，从接口IP、Chiplet芯片架构、先进封装技术、面向AIGC和智慧出行的解决方案等方面入手，持续推进公司Chiplet技术、项目的研发和产业化。基于公司独有的芯片设计平台即服务(Silicon Platform as a Service,SiPaaS)经营模式，目前公司主营业务的应用领域广泛包括消费电子、汽车电子、计算机及周边、工业、数据处理、物联网等，主要客户包括芯片设计公司、IDM、系统厂商、大型互联网公司、云服务提供商等。公司成立于2001年，总部位于中国上海，在全球设有9个设计研发中心，以及11个销售和客户支持办事处。",
+              "profileSummary": "公司是一家依托自主半导体IP，为客户提供平台化、全方位、一站式芯片定制服务和半导体IP授权服务的企业。基于公司独有的芯片设计平台即服务(Silicon Platform as a Service,SiPaaS)经营模式，目前公司主营业务的应用领域广泛包括消费电子、汽车电子、计算机及周边、工业、数据处理、物联网等，主要客户包括芯片设计公司、IDM、系统厂商、大型互联网公司、云服务提供商等。",
+              "majorProducts": "半导体IP授权服务、一站式芯片定制服务",
+              "revenueComposition": "芯片量产业务收入:47.25%;芯片设计业务收入:27.81%;知识产权授权使用费收入:21.29%;特许权使用费收入:3.52%;其他业务:0.13%",
+              "revenueSegments": [
+                {
+                  "name": "芯片量产业务收入",
+                  "sharePct": 47.25,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "芯片设计业务收入",
+                  "sharePct": 27.81,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "知识产权授权使用费收入",
+                  "sharePct": 21.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特许权使用费收入",
+                  "sharePct": 3.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "半导体IP授权服务",
+                    "category": "电子技术服务"
+                  },
+                  {
+                    "name": "芯片定制",
+                    "category": "晶圆加工"
+                  },
+                  {
+                    "name": "芯片量产代理",
+                    "category": "晶圆加工"
+                  }
+                ],
+                "knownProducts": [
+                  "半导体IP授权服务",
+                  "芯片定制",
+                  "芯片量产代理"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "芯原股份与事件的关系已经落在存量主业，而非远期概念：芯片量产业务收入（47.25%）、芯片设计业务收入（27.81%）合计约占收入的75.06%。公司在产业链中的具体抓手是：公司是一站式芯片定制服务和半导体IP授权服务提供商，为瑞芯微等芯片设计公司提供核心IP，是国产算力上游的关键环节。本次事件若改变研发里程碑与商业化成功概率，影响会沿着“研发或授权进展改变项目成功率和未来现金流预期，再通过里程碑收入、销售分成或费用投入影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；临床数据、监管节点、首付款及里程碑确认和销售放量比主题热度更有解释力。若研发、审批或商业化进度不及预期，且前期投入难以形成对应回报，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 22846,
+            "stockCode": "688049.SH",
+            "stockName": "炬芯科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司主营中高端智能音频SoC芯片，受益于端侧AI趋势，与瑞芯微在音频及AIoT领域有一定协同和竞争。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688049.SH",
+              "companyName": "炬芯科技",
+              "companyProfile": "公司成立于2014年，于2021年科创板上市。总部位于珠海，在深圳、合肥、上海、成都、香港等地均设有分部。公司是中国领先的低功耗AIoT芯片设计厂商，主营业务为中高端智能音频SoC芯片的研发、设计及销售，专注于为无线音频、智能穿戴及智能交互等基于人工智能的物联网(AIoT)领域提供专业集成芯片。公司的主要产品为蓝牙音频SoC芯片系列、便携式音视频SoC芯片系列、端侧AI处理器芯片系列等，广泛应用于蓝牙音箱、无线家庭影院、智能手表、无线麦克风、无线收发dongle、蓝牙耳机、无线电竞耳机、蓝牙语音遥控器及低功耗端侧AI处理器等领域。承继与发扬近20年的研发沉淀和经验，公司擅长在低功耗的前提下提供高音质及低延迟的无线音频体验。公司深耕以高性能音频ADC/DAC、语音前处理、音频编解码、音频后处理为核心的高音质音频全信号链技术；以及以蓝牙射频、基带和协议栈技术为核心的低延迟无线连接技术。顺应人工智能的发展大势，从高端音频芯片入手，整合低功耗AI加速引擎，逐步全面升级为CPU、DSP加NPU(神经网络处理器)的三核异构AI计算架构，以打造低功耗端侧AI算力。专精将射频通信、电源管理、模数混合音频、CPU、DSP以及存储单元等模块高集成于一颗单芯片SoC上。公司积累了较完备、较先进的自主知识产权，通过融合软件开发包和核心算法提升SoC的价值，帮助客户降低基于芯片开发量产的门槛，让终端产品可以快速推向市场。",
+              "profileSummary": "公司是中国领先的低功耗AIoT芯片设计厂商，主营业务为中高端智能音频SoC芯片的研发、设计及销售，专注于为无线音频、智能穿戴及智能交互等基于人工智能的物联网(AIoT)领域提供专业集成芯片。公司的主要产品为蓝牙音频SoC芯片系列、便携式音视频SoC芯片系列、端侧AI处理器芯片系列等，广泛应用于蓝牙音箱、无线家庭影院、智能手表、无线麦克风、无线收发dongle、蓝牙耳机、无线电竞耳机、蓝牙语音遥控器及低功耗端侧AI处理器等领域。",
+              "majorProducts": "便携式音视频SoC芯片、端侧AI处理器芯片、蓝牙音频SoC芯片、智能语音交互SoC芯片",
+              "revenueComposition": "蓝牙音频SoC芯片系列:73.98%;端侧AI处理器芯片:17.07%;便携式音视频SoC芯片系列:8.85%;其他业务:0.09%",
+              "revenueSegments": [
+                {
+                  "name": "蓝牙音频SoC芯片系列",
+                  "sharePct": 73.98,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "端侧AI处理器芯片",
+                  "sharePct": 17.07,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "便携式音视频SoC芯片系列",
+                  "sharePct": 8.85,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.09,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "蓝牙音频SoC",
+                    "category": "音视频芯片"
+                  },
+                  {
+                    "name": "视频解码SoC",
+                    "category": "音视频芯片"
+                  },
+                  {
+                    "name": "音频编解码SoC",
+                    "category": "音视频芯片"
+                  },
+                  {
+                    "name": "IoT MCU",
+                    "category": "计算控制芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "IoT MCU",
+                  "蓝牙音频SoC",
+                  "视频解码SoC",
+                  "音频编解码SoC"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "炬芯科技的事件暴露较为直接：蓝牙音频SoC芯片系列（73.98%）、便携式音视频SoC芯片系列（8.85%）合计约占收入的82.83%，相关业务不是边缘尝试；具体业务抓手是：公司主营中高端智能音频SoC芯片，受益于端侧AI趋势，与瑞芯微在音频及AIoT领域有一定协同和竞争。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 22847,
+            "stockCode": "002290.SZ",
+            "stockName": "禾盛新材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司通过增资成为一家ARM CPU芯片设计公司（纯民营）的第二大股东，该芯片公司与瑞芯微在服务器CPU领域形成竞争。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002290.SZ",
+              "companyName": "禾盛新材",
+              "companyProfile": "公司是国内最早进入家电用外观复合材料行业的企业之一，主要从事家电用外观复合材料(PCM/VCM)的研发、生产与销售，产品广泛应用于冰箱、洗衣机、空调等各类家电外观部件。公司产品的主要原材料为钢材，主要应用领域为家电行业。公司客户网络已经覆盖圈内外多数白色家电品牌制造商，核心客户为国内外一流家电制造商。经过多年的业务积累，公司已发展成国内家电用复合材料行业最具研发实力和规模生产能力的专业服务商之一，产品主要用于冰箱、洗衣机、微波炉等白色家电外观部件。公司客户网络已经覆盖圈内外多数白色家电品牌制造商，核心客户为国内外一流家电制造商，在市场规模上处于国内同行业厂商的前列，核心客户包括LG、三星、西门子、松下、夏普、日立、美的、海信、三洋等家用电器行业内的知名厂商。",
+              "profileSummary": "经过多年的业务积累，公司已发展成国内家电用复合材料行业最具研发实力和规模生产能力的专业服务商之一，产品主要用于冰箱、洗衣机、微波炉等白色家电外观部件。公司客户网络已经覆盖圈内外多数白色家电品牌制造商，核心客户为国内外一流家电制造商，在市场规模上处于国内同行业厂商的前列，核心客户包括LG、三星、西门子、松下、夏普、日立、美的、海信、三洋等家用电器行业内的知名厂商。",
+              "majorProducts": "禾盛PCM彩色印刷复合材料、禾盛PET/AL/PP复塑复合材料、禾盛PET/PCM彩色层压复合材料、禾盛钢化玻璃内表面复合型涂装、禾盛环保聚氯乙烯装饰贴面用高光复合薄膜、禾盛家电用覆塑产品(VCM)、禾盛家电用涂层产品(PCM)、禾盛聚酯装饰贴面用高光复合薄膜、禾盛双层PET复塑材料、禾盛印刷PCM特种钢板、禾盛印刷层装饰贴面用高光复合薄膜",
+              "revenueComposition": "家电用复合材料:96.89%;其他业务:1.76%;系统集成板块:1.35%",
+              "revenueSegments": [
+                {
+                  "name": "家电用复合材料",
+                  "sharePct": 96.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.76,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "系统集成板块",
+                  "sharePct": 1.35,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "生成式大模型一体机",
+                    "category": "人工智能"
+                  }
+                ],
+                "knownProducts": [
+                  "家电用有机涂层板(PCM)",
+                  "家电用覆膜板(VCM)",
+                  "生成式大模型一体机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "禾盛新材的系统集成板块（1.35%）覆盖范围较宽，其中能够承载生成式大模型一体机，因此业务名称不同不等于与事件无关。公司与新闻的具体连接点是：公司通过增资成为一家ARM CPU芯片设计公司（纯民营）的第二大股东，该芯片公司与瑞芯微在服务器CPU领域形成竞争。现阶段无法用整个分部占比直接衡量受益程度，因为事件能否转化为可确认的经营增量还需沿“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”传导，相关产品在分部内部的收入权重才会逐步显现。订单、收入确认、产品结构和毛利率变化若持续增强，事件影响可以从产品层面扩散到公司盈利；若事件关联停留在主题层面，未形成可持续订单或利润贡献，宽口径业务规模不会自动转化为事件带来的业绩增量。"
+          },
+          {
+            "sourceRowNumber": 22850,
+            "stockCode": "688347.SH",
+            "stockName": "华虹宏力",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是全球领先的特色工艺晶圆代工企业，为瑞芯微等客户提供电源管理、射频等芯片的制造服务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688347.SH",
+              "companyName": "华虹公司",
+              "companyProfile": "公司是全球领先的特色工艺晶圆代工企业，也是行业内特色工艺平台覆盖最全面的晶圆代工企业。公司立足于先进“特色IC+功率器件”的战略目标，以拓展特色工艺技术为基础，提供包括嵌入式/独立式非易失性存储器、功率器件、模拟与电源管理、逻辑与射频等多元化特色工艺平台的晶圆代工及配套服务。公司在半导体制造领域拥有多年的技术积累，长期坚持自主创新，不断研发并掌握了特色工艺的关键核心技术。公司的功率器件种类丰富度行业领先，拥有全球领先的深沟槽式超级结MOSFET以及IGBT技术成果。公司的技术研发成果曾先后荣获“国家科学技术进步奖二等奖”、“上海市科学技术奖一等奖”、“上海市质量金奖”、“优秀院士工作站”及“上海知识产权创新奖(创造)”等奖项及荣誉。公司依靠卓越的特色工艺技术实力、稳定的产品性能和品质以及产能供给能力赢得了全球客户的广泛认可。公司代工产品性能优越、可靠性高，在新能源汽车、工业、通讯、消费电子等重要终端市场得到广泛应用。未来，公司将继续坚定不移地执行先进“特色IC+功率器件”的发展战略，持续提升产品性能和品质，深耕多元化的“特色IC”平台，不断创新器件结构、丰富拓展车规级工艺，持续保持领先的“功率器件”平台。公司致力于发展先进特色工艺，为全球客户服务。",
+              "profileSummary": "公司是全球领先的特色工艺晶圆代工企业，也是行业内特色工艺平台覆盖最全面的晶圆代工企业。公司立足于先进“特色IC+功率器件”的战略目标，以拓展特色工艺技术为基础，提供包括嵌入式/独立式非易失性存储器、功率器件、模拟与电源管理、逻辑与射频等多元化特色工艺平台的晶圆代工及配套服务。",
+              "majorProducts": "IP设计服务、测试服务、功率器件、晶圆代工服务、晶圆后道加工服务、逻辑与射频、模拟与电源管理、嵌入式/独立式非易失性存储器",
+              "revenueComposition": "集成电路晶圆代工:94.99%;其他:4.42%;租赁收入:0.59%",
+              "revenueSegments": [
+                {
+                  "name": "集成电路晶圆代工",
+                  "sharePct": 94.99,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "租赁收入",
+                  "sharePct": 0.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "晶圆代工",
+                    "category": "晶圆制造"
+                  }
+                ],
+                "knownProducts": [
+                  "晶圆代工"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华虹宏力的事件暴露较为直接：集成电路晶圆代工占收入的94.99%，相关业务不是边缘尝试；具体业务抓手是：公司是全球领先的特色工艺晶圆代工企业，为瑞芯微等客户提供电源管理、射频等芯片的制造服务。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，尤其需要用订单、收入确认、产品结构和毛利率变化区分行业普涨与公司自身竞争力。如果事件关联停留在主题层面，未形成可持续订单或利润贡献，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          },
+          {
+            "sourceRowNumber": 22851,
+            "stockCode": "688362.SH",
+            "stockName": "甬矽电子",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是国内领先的先进封装企业，下游客户包括瑞芯微等SoC公司，受益于国产算力芯片增长带来的先进封装需求。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688362.SH",
+              "companyName": "甬矽电子",
+              "companyProfile": "公司于2022年11月在上交所科创板上市。公司成立于2017年11月，主要从事集成电路封装和测试方案开发、不同种类集成电路芯片的封装加工和测试。公司以中高端封装及先进封装技术和产品为主，一期厂区占地面积约126亩，总投资约45亿元，主要生产QFN/DFN、WBLGA、WBBGA等中高端先进封装形式产品。二期总占地500亩，总投资111亿，以先进晶圆级封装为主，技术涉及Fan-in WLCSP、Fan-out WLP、FCCSP、FCBGA、2D堆叠POP及2.5D/3D先进封装等。作为专业从事集成电路封测的高新技术企业，注重新技术的开发，重视研发投入。核心团队均有国内外行业龙头封测企业从业经历，具备丰富的行业经验。工厂具备完善的IT系统及生产自动化能力，公司产品结构优良，已成功进入国内外行业知名设计公司供应链。",
+              "profileSummary": "公司成立于2017年11月，主要从事集成电路封装和测试方案开发、不同种类集成电路芯片的封装加工和测试。作为专业从事集成电路封测的高新技术企业，注重新技术的开发，重视研发投入。",
+              "majorProducts": "扁平无引脚封装产品（QFN/DFN）、高密度细间距凸点倒装产品（FC类产品）、微机电系统传感器（MEMS）、系统级封装产品（SiP）",
+              "revenueComposition": "系统级封装产品:39.23%;扁平无引脚封装产品:38.12%;高密度细间距凸点倒装产品:16.12%;晶圆级封测产品:4.44%;其他业务:1.61%;其他产品:0.47%",
+              "revenueSegments": [
+                {
+                  "name": "系统级封装产品",
+                  "sharePct": 39.23,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "扁平无引脚封装产品",
+                  "sharePct": 38.12,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "高密度细间距凸点倒装产品",
+                  "sharePct": 16.12,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "晶圆级封测产品",
+                  "sharePct": 4.44,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.61,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 0.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "凸块加工",
+                    "category": "凸版光掩模"
+                  },
+                  {
+                    "name": "微机电系统传感器(MEMS)",
+                    "category": "其他传感器"
+                  },
+                  {
+                    "name": "扁平无引脚封装(QFN/DFN)",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "系统级封装(SiP)",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "高密度细间距凸点倒装(FC类产品)",
+                    "category": "芯片封装测试"
+                  }
+                ],
+                "knownProducts": [
+                  "微机电系统传感器(MEMS)",
+                  "凸块加工",
+                  "扁平无引脚封装(QFN/DFN)",
+                  "系统级封装(SiP)",
+                  "高密度细间距凸点倒装(FC类产品)"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "甬矽电子的相关业务已决定公司大部分经营表现：系统级封装产品（39.23%）、扁平无引脚封装产品（38.12%）合计约占收入的93.47%。公司与事件的直接业务联系是：公司是国内领先的先进封装企业，下游客户包括瑞芯微等SoC公司，受益于国产算力芯片增长带来的先进封装需求，真正的增量取决于终端需求与渗透率变化，并需经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，终端销量、客户采购量、公司出货和相关产品收入增速需要显示公司获得超越行业的增量。终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 22854,
+            "stockCode": "002920.SZ",
+            "stockName": "德赛西威",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是国内领先的汽车电子供应商，在智能座舱、智能驾驶等领域与瑞芯微等SoC厂商有合作与竞争关系。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002920.SZ",
+              "companyName": "德赛西威",
+              "companyProfile": "公司是国际领先的移动出行科技公司之一，致力于实现智慧出行的全球共享。公司深度聚焦于智能座舱、组合辅助驾驶和网联服务三大领域的高效融合，持续开发高度集成的智能硬件和领先的软件算法，为全球客户提供安全、愉悦和绿色的移动出行整体解决方案和服务。凭借39年来在设计、开发、生产过程中的深厚积淀，公司不断拓展自身在研发创新、客户服务、安全验证方面的综合实力，构筑从智慧出行到智慧交通的技术链路，积极应对汽车行业在新四化趋势下的挑战，满足汽车厂商对不同产品组合及业务开发模式的多元需求。为驾乘者提供卓越的出行体验的同时，也给未来出行带来更多想象空间。公司积极响应全球碳中和战略，从经济、社会、环境三个维度出发，推动落实安全可靠、成长共赢、绿色环保三大可持续发展目标。在回馈社会的同时，尊重公司每一位员工，为雇员打造多元共生的工作环境和高能成长的发展平台。我们鼓励全球各分部之间平等开放、协同发展，公司人秉承同一使命，共赴一致目标——创领安全、愉悦和绿色的出行生活。",
+              "profileSummary": "公司深度聚焦于智能座舱、组合辅助驾驶和网联服务三大领域的高效融合，持续开发高度集成的智能硬件和领先的软件算法，为全球客户提供安全、愉悦和绿色的移动出行整体解决方案和服务。凭借39年来在设计、开发、生产过程中的深厚积淀，公司不断拓展自身在研发创新、客户服务、安全验证方面的综合实力，构筑从智慧出行到智慧交通的技术链路，积极应对汽车行业在新四化趋势下的挑战，满足汽车厂商对不同产品组合及业务开发模式的多元需求。",
+              "majorProducts": "网联服务、智能驾驶、智能座舱",
+              "revenueComposition": "智能座舱:63.23%;智能驾驶:29.79%;其他:6.98%",
+              "revenueSegments": [
+                {
+                  "name": "智能座舱",
+                  "sharePct": 63.23,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "智能驾驶",
+                  "sharePct": 29.79,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 6.98,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "座舱域控制器",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "抬头显示器(HUD)",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "智能驾驶域控制器(ADCU)",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "毫米波汽车雷达",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "汽车电子后视镜",
+                    "category": "汽车车身附件"
+                  },
+                  {
+                    "name": "汽车车身域控制器(BDC)",
+                    "category": "汽车车身电子控制系统"
+                  }
+                ],
+                "knownProducts": [
+                  "座舱域控制器",
+                  "抬头显示器(HUD)",
+                  "智能驾驶域控制器(ADCU)",
+                  "毫米波汽车雷达",
+                  "汽车车身域控制器(BDC)",
+                  "车载摄像头",
+                  "高级驾驶辅助系统(ADAS)",
+                  "车载信息智能终端"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "德赛西威的相关业务已决定公司大部分经营表现：智能座舱（63.23%）、智能驾驶（29.79%）合计约占收入的93.02%。公司与事件的直接业务联系是：公司是国内领先的汽车电子供应商，在智能座舱、智能驾驶等领域与瑞芯微等SoC厂商有合作与竞争关系，真正的增量取决于商业化进度和订单兑现，并需经过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，客户认证、新增订单、交付节奏、相关业务收入和毛利率需要显示公司获得超越行业的增量。客户验证或交付节奏低于预期，订单停留在小批量阶段是这条逻辑最主要的反向约束。"
+          },
+          {
+            "sourceRowNumber": 22855,
+            "stockCode": "002906.SZ",
+            "stockName": "华阳集团",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是国内汽车电子及精密压铸龙头，与英特尔合作推出AI BOX产品，是车载AI算力终端的重要参与者。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002906.SZ",
+              "companyName": "华阳集团",
+              "companyProfile": "公司创立于1993年，致力于成为国内外领先的汽车电子产品及零部件的系统供应商。近年来重点围绕汽车智能化、轻量化进行产品布局，主要业务为汽车电子和精密压铸，其他业务包括精密电子部件以及LED照明等。汽车电子业务拥有丰富的智能座舱、智能驾驶和智能网联产品线。产品包括信息娱乐、液晶仪表、抬头显示(HUD)、电子内外后视镜、座舱域控制器、数字声学系统、空调控制器、无线充电、360环视系统、自动泊车系统(APA)、驾驶域控制器、盲区监测(BSD)、驾驶员监测系统、高清摄像头、其它驾驶辅助系统、车联网服务等。凭借完善的质量管理体系及专业的智能制造能力，不断为全球更多汽车制造厂商提供更具市场竞争力的创新产品和服务，成为客户可靠的合作伙伴。精密压铸业务包括汽车关键零部件、精密3C电子部件及工业控制部件等产品线，为客户提供产品协同开发、模具设计及制造、精密压铸及机加工、表面处理、组装等一站式服务。产品主要应用于汽车底盘系统、汽车转向系统、汽车发动机及变速箱、汽车传动系统、智能钥匙、新能源三电系统(电池、电机、电控)等。凭借先进的精密模具技术、强大的FA能力和质量管控能力，已成为精密压铸行业竞争力最强的企业之一。经过多年的发展，在业内树立了良好的品牌形象，在行业内以及下游客户中享有良好的声誉以及较高的影响力，旗下品牌ADAYO、FORYOU均为行业知名品牌。始终秉承“提供有竞争力的产品和服务，持续为客户创造价值，回报员工、股东和社会”的经营宗旨，致力于做强做大，并朝着国内外行业领先的战略目标迈进！",
+              "profileSummary": "近年来重点围绕汽车智能化、轻量化进行产品布局，主要业务为汽车电子和精密压铸，其他业务包括精密电子部件以及LED照明等。精密压铸业务包括汽车关键零部件、精密3C电子部件及工业控制部件等产品线，为客户提供产品协同开发、模具设计及制造、精密压铸及机加工、表面处理、组装等一站式服务。",
+              "majorProducts": "HUD抬头显示器、LED灯具、LED电源、LED封装、MP5无机芯导航系统、WeLink、阿里高德AMAP AUTO、安卓智能微型投影仪、百度CarLife、车载CD/DVD播放器、车载高清摄像头、车载互联系统、车载滑动机构、车载机芯、车载空气净化器、车载无线充电、车载音频系统、高清车载行车记录仪、精密3C电子部件、精密激光头部品、精密压铸业务、空调控制器、流媒体后视镜、汽车关键部件、胎压监控系统、腾讯ROM、专车专用DVD导航",
+              "revenueComposition": "汽车电子:74.15%;精密压铸:21.91%;其他:3.94%",
+              "revenueSegments": [
+                {
+                  "name": "汽车电子",
+                  "sharePct": 74.15,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "精密压铸",
+                  "sharePct": 21.91,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 3.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "光驱机芯",
+                    "category": "汽车动力电子控制系统"
+                  },
+                  {
+                    "name": "光驱激光头",
+                    "category": "汽车动力电子控制系统"
+                  },
+                  {
+                    "name": "座舱域控制器",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "抬头显示器(HUD)",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "汽车360环视系统",
+                    "category": "汽车车身电子控制系统"
+                  },
+                  {
+                    "name": "汽车数字钥匙",
+                    "category": "RFID标签"
+                  }
+                ],
+                "knownProducts": [
+                  "光驱机芯",
+                  "光驱激光头",
+                  "座舱域控制器",
+                  "抬头显示器(HUD)",
+                  "汽车360环视系统",
+                  "汽车用LED灯",
+                  "自动泊车辅助系统(APA)",
+                  "车用空调控制器"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "华阳集团的事件暴露较为直接：汽车电子（74.15%）、精密压铸（21.91%）合计约占收入的96.06%，相关业务不是边缘尝试；具体业务抓手是：公司是国内汽车电子及精密压铸龙头，与英特尔合作推出AI BOX产品，是车载AI算力终端的重要参与者。事件对公司的意义更接近存量主业景气变化，而不是新增题材。利润端能否同步改善，仍取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，尤其需要用客户认证、新增订单、交付节奏、相关业务收入和毛利率区分行业普涨与公司自身竞争力。如果客户验证或交付节奏低于预期，订单停留在小批量阶段，高收入相关度也可能只带来收入波动，而非利润质量提升。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "3条3至5星非A股、未上市或代码不规范记录未进入组合。",
+      "1条重复标的记录已保留较高星级或更完整 reason。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "3只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

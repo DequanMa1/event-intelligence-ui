@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "27123",
@@ -9,20 +9,11 @@
     "date": "2026-07-07"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 2,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 1,
     "mappedStockCount": 1,
-    "unmappedStockCount": 1,
+    "unmappedStockCount": 0,
     "stocks": [
-      {
-        "sourceRowNumber": 20419,
-        "stockCode": "5802.T",
-        "stockName": "住友电工",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 20420,
         "stockCode": "300489.SZ",
@@ -30,163 +21,21 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 5
+        "anchorProductCount": 3
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 20419,
-        "stockCode": "5802.T",
-        "stockName": "住友电工",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 5,
     "selectedCoreProductCount": 3,
     "selectedCompanyCoreProductCount": 3,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 8,
-    "downstreamCandidateCount": 29,
-    "shownUpstreamCount": 8,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 32,
+    "relatedIndustryCandidateCount": 6,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140139642",
-        "name": "ED镜片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023921"
-        ],
-        "linkedCoreProductNames": [
-          "红外镜头"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140137098",
-        "name": "LD光学玻璃",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023921"
-        ],
-        "linkedCoreProductNames": [
-          "红外镜头"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140137100",
-        "name": "中央处理单元",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023921"
-        ],
-        "linkedCoreProductNames": [
-          "红外镜头"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1114000335",
-        "name": "区熔锗锭",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140005167"
-        ],
-        "linkedCoreProductNames": [
-          "锗单晶"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140024923",
-        "name": "调焦装置",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023921"
-        ],
-        "linkedCoreProductNames": [
-          "红外镜头"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1114000009",
-        "name": "铝合金",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
-        ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140010283",
-        "name": "驱动机构",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023921"
-        ],
-        "linkedCoreProductNames": [
-          "红外镜头"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140077172",
-        "name": "驱动电机",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023921"
-        ],
-        "linkedCoreProductNames": [
-          "红外镜头"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140023921",
         "name": "红外镜头",
@@ -212,18 +61,15 @@
           "name": "红外镜头"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300489.SZ",
             "stockName": "光智科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 6,
-        "downstreamCount": 5,
         "relevanceScore": 8,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -258,18 +104,15 @@
           "name": "锗单晶"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300489.SZ",
             "stockName": "光智科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 7,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -303,18 +146,15 @@
           "name": "铝合金铸棒"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "300489.SZ",
             "stockName": "光智科技",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 17,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -323,230 +163,623 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140009952",
-        "name": "兵器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
+        "code": "1200001393",
+        "name": "光通信设备",
+        "description": "光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注。",
+        "stockCount": 5,
+        "starWeight": 15,
+        "level7ProductCount": 16,
+        "relevanceScore": 654,
+        "stocks": [
+          {
+            "stockCode": "600703.SH",
+            "stockName": "三安光电",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300308.SZ",
+            "stockName": "中际旭创",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300502.SZ",
+            "stockName": "新易盛",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688498.SH",
+            "stockName": "源杰科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688048.SH",
+            "stockName": "长光华芯",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
+        "products": [
+          {
+            "code": "1140209541",
+            "name": "CW激光器芯片",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 有源光器件 > CW激光器芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688498.SH",
+                "stockName": "源杰科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "光芯片",
+              "cw"
+            ]
+          },
+          {
+            "code": "1140218252",
+            "name": "电吸收调制激光器芯片(EML)",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 有源光器件 > 电吸收调制激光器芯片(EML)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "光芯片",
+              "eml"
+            ]
+          },
+          {
+            "code": "1140220986",
+            "name": "FP激光器芯片",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 有源光器件 > FP激光器芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688498.SH",
+                "stockName": "源杰科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          },
+          {
+            "code": "1140220993",
+            "name": "VCSEL激光器芯片",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 有源光器件 > VCSEL激光器芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140026279",
-        "name": "包装",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
+        "code": "1200001359",
+        "name": "激光器件",
+        "description": "激光器件指产生、传输激光的核心组件。A股该板块因受益于高端制造升级、新能源及半导体需求爆发而受关注，具备高技术壁垒和高成长潜力，是硬科技投资的重要方向。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 8,
+        "relevanceScore": 276,
+        "stocks": [
+          {
+            "stockCode": "600703.SH",
+            "stockName": "三安光电",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688498.SH",
+            "stockName": "源杰科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688048.SH",
+            "stockName": "长光华芯",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
+        "products": [
+          {
+            "code": "1140111291",
+            "name": "DFB激光器芯片",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 激光器件 > 激光器件 > DFB激光器芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688498.SH",
+                "stockName": "源杰科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          },
+          {
+            "code": "1140164751",
+            "name": "半导体激光单管芯片",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 激光器件 > 激光器件 > 半导体激光单管芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          },
+          {
+            "code": "1140164754",
+            "name": "半导体激光巴条芯片",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 激光器件 > 激光器件 > 半导体激光巴条芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          },
+          {
+            "code": "1140164756",
+            "name": "激光巴条芯片集成模块",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 激光器件 > 激光器件 > 激光巴条芯片集成模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 8,
+    "mappedStockCount": 5,
+    "unmappedStockCount": 3,
+    "level7ProductCount": 32,
+    "candidateIndustryCount": 6,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 20417,
+        "stockCode": "002428.SZ",
+        "stockName": "云南锗业",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140098426",
-        "name": "地铁车辆",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
-        ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 20420,
+        "stockCode": "300489.SZ",
+        "stockName": "光智科技",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140169162",
-        "name": "太阳能电池晶片",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140005167"
-        ],
-        "linkedCoreProductNames": [
-          "锗单晶"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 20422,
+        "stockCode": "300450.SZ",
+        "stockName": "先导智能",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140012300",
-        "name": "散热器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
-        ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 20427,
+        "stockCode": "600703.SH",
+        "stockName": "三安光电",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 13
       },
       {
-        "code": "1140014916",
-        "name": "汽车",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
-        ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 20428,
+        "stockCode": "688498.SH",
+        "stockName": "源杰科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
       },
       {
-        "code": "1140169402",
-        "name": "汽车发动机零件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
-        ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 20429,
+        "stockCode": "688048.SH",
+        "stockName": "长光华芯",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
       },
       {
-        "code": "1140055152",
-        "name": "电子",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
-        ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 20436,
+        "stockCode": "300308.SZ",
+        "stockName": "中际旭创",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
       },
       {
-        "code": "1140056397",
-        "name": "空调器",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
+        "sourceRowNumber": 20437,
+        "stockCode": "300502.SZ",
+        "stockName": "新易盛",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 11
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001393",
+        "name": "光通信设备",
+        "description": "光通信设备指利用光纤传输数据的硬件设施。因AI算力爆发驱动高速光模块需求激增，叠加5G建设及数据中心升级，该行业成为A股核心科技赛道，具备高成长性与国产替代逻辑，备受市场关注。",
+        "stockCount": 5,
+        "starWeight": 15,
+        "level7ProductCount": 16,
+        "relevanceScore": 654,
+        "stocks": [
+          {
+            "stockCode": "600703.SH",
+            "stockName": "三安光电",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300308.SZ",
+            "stockName": "中际旭创",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "300502.SZ",
+            "stockName": "新易盛",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688498.SH",
+            "stockName": "源杰科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688048.SH",
+            "stockName": "长光华芯",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
+        "products": [
+          {
+            "code": "1140209541",
+            "name": "CW激光器芯片",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 有源光器件 > CW激光器芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688498.SH",
+                "stockName": "源杰科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "光芯片",
+              "cw"
+            ]
+          },
+          {
+            "code": "1140218252",
+            "name": "电吸收调制激光器芯片(EML)",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 有源光器件 > 电吸收调制激光器芯片(EML)",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 40,
+            "matchedTerms": [
+              "光芯片",
+              "eml"
+            ]
+          },
+          {
+            "code": "1140220986",
+            "name": "FP激光器芯片",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 有源光器件 > FP激光器芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688498.SH",
+                "stockName": "源杰科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          },
+          {
+            "code": "1140220993",
+            "name": "VCSEL激光器芯片",
+            "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 有源光器件 > VCSEL激光器芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140166676",
-        "name": "红外光学件",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140005167"
+        "code": "1200001359",
+        "name": "激光器件",
+        "description": "激光器件指产生、传输激光的核心组件。A股该板块因受益于高端制造升级、新能源及半导体需求爆发而受关注，具备高技术壁垒和高成长潜力，是硬科技投资的重要方向。",
+        "stockCount": 3,
+        "starWeight": 9,
+        "level7ProductCount": 8,
+        "relevanceScore": 276,
+        "stocks": [
+          {
+            "stockCode": "600703.SH",
+            "stockName": "三安光电",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688498.SH",
+            "stockName": "源杰科技",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688048.SH",
+            "stockName": "长光华芯",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "锗单晶"
+        "products": [
+          {
+            "code": "1140111291",
+            "name": "DFB激光器芯片",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 激光器件 > 激光器件 > DFB激光器芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "600703.SH",
+                "stockName": "三安光电",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688498.SH",
+                "stockName": "源杰科技",
+                "rating": "★★★☆",
+                "filledStars": 3
+              },
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          },
+          {
+            "code": "1140164751",
+            "name": "半导体激光单管芯片",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 激光器件 > 激光器件 > 半导体激光单管芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          },
+          {
+            "code": "1140164754",
+            "name": "半导体激光巴条芯片",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 激光器件 > 激光器件 > 半导体激光巴条芯片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          },
+          {
+            "code": "1140164756",
+            "name": "激光巴条芯片集成模块",
+            "hierarchyPath": "电子 > 光学光电子 > 光学元件 > 激光器件 > 激光器件 > 激光巴条芯片集成模块",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688048.SH",
+                "stockName": "长光华芯",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 32,
+            "matchedTerms": [
+              "光芯片"
+            ]
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140139675",
-        "name": "红外设备",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140023921"
-        ],
-        "linkedCoreProductNames": [
-          "红外镜头"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140077420",
-        "name": "航空航天",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
-        ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140043501",
-        "name": "舰艇",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
-        ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140103421",
-        "name": "装饰",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140003820"
-        ],
-        "linkedCoreProductNames": [
-          "铝合金铸棒"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -561,10 +794,659 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 30,
+    "eligibleSourceRowCount": 8,
+    "totalStockCount": 8,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 16,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 8,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 20417,
+            "stockCode": "002428.SZ",
+            "stockName": "云南锗业",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "公司是国内磷化铟衬底绝对龙头，已实现6英寸产品量产，深度受益于AI算力驱动的光通信需求爆发和国产替代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002428.SZ",
+              "companyName": "云南锗业",
+              "companyProfile": "公司是集锗矿开采、精深加工和研发为一体的、锗产业链较为完整的高新技术企业，具有40余年的锗生产历史。公司主要业务为锗矿开采、火法富集、湿法提纯、区熔精炼、精深加工及研究开发。目前公司矿山开采的矿石及粗加工产品不对外销售，仅作为公司及子公司下游加工的原料。公司目前材料级锗产品主要为锗锭(金属锗)、二氧化锗；深加工方面，光伏级锗产品主要为太阳能锗晶片，红外级锗产品主要为红外级锗单晶及毛坯(光学元件)、锗镜片、镜头、红外热像仪、光学系统，光纤级锗产品为光纤用四氯化锗，化合物半导体材料主要为砷化镓晶片、磷化铟晶片。公司产品主要运用包括红外光电、太阳能电池、光纤通讯、发光二极管、垂直腔面发射激光器(VCSEL)、大功率激光器、光通信用激光器和探测器等领域。公司拥有全资和控股子公司8家，下属企业分布在云南临沧、云南昆明、湖北武汉等地。公司于2004年通过了ISO9001国际质量管理体系认证，于2015年通过了ISO14001环境管理体系ISO18001职业健康安全体系认证。是2008年云南省第一批认定的“高新技术企业”和“国家火炬计划重点高新技术企业”，是2010年国家科学技术部认定的“临沧国家锗材料高新技术产业化基地骨干企业”。至2016年底，公司已拥有10大类产品：高纯二氧化锗、有机锗、区熔锗、红外锗光学元件、红外热像仪整机、太阳能电池用锗单晶及晶片、高效聚光太阳电池模组、光纤四氯化锗、高纯度砷化镓单晶及晶片、磷化铟单晶及晶片。",
+              "profileSummary": "目前公司矿山开采的矿石及粗加工产品不对外销售，仅作为公司及子公司下游加工的原料。公司产品主要运用包括红外光电、太阳能电池、光纤通讯、发光二极管、垂直腔面发射激光器(VCSEL)、大功率激光器、光通信用激光器和探测器等领域。",
+              "majorProducts": "光纤级四氯化锗、红外级锗单晶、毛坯（光学元件）、红外热像仪、磷化铟晶片、砷化镓晶片、太阳能电池用锗单晶片、锗锭、锗镜片、镜头",
+              "revenueComposition": "材料系锗产品:34.11%;光纤级锗产品:18.75%;光伏级锗产品:18.5%;化合物半导体材料:12.93%;红外系锗产品:11.36%;其他:4.34%",
+              "revenueSegments": [
+                {
+                  "name": "材料系锗产品",
+                  "sharePct": 34.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光纤级锗产品",
+                  "sharePct": 18.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光伏级锗产品",
+                  "sharePct": 18.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "化合物半导体材料",
+                  "sharePct": 12.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "红外系锗产品",
+                  "sharePct": 11.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "profile_supported",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "磷化铟单晶片",
+                  "二氧化锗",
+                  "区熔锗锭",
+                  "四氯化锗",
+                  "太阳能电池用锗单晶片",
+                  "锗单晶",
+                  "红外热像仪",
+                  "红外镜头"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "云南锗业现有业务与公司是国内磷化铟衬底绝对龙头，已实现6英寸产品量产，深度受益于AI算力驱动的光通信需求爆发和国产替代处于同一产业方向，收入主体为材料系锗产品（34.11%）、光纤级锗产品（18.75%）。相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。本次事件主要改变供需缺口与产品价格，只有经由“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，业务交集才会转化为业绩增量。产品报价、订单排期、产销率和毛利率若逐步增强，相关业务的重要性会提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，影响仍可能局限在估值预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 20420,
+            "stockCode": "300489.SZ",
+            "stockName": "光智科技",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "公司通过增资收购先睿科技切入磷化铟赛道，后者是国内少数实现材料自供、全产业链打通的厂商。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300489.SZ",
+              "companyName": "光智科技",
+              "companyProfile": "公司是领先的、专注于光电技术的国家高新技术企业，具备光电材料生长、芯片设计、关键器件制备到系统集成的全产业链规模化生产能力，可向全球客户供应先进红外材料、精密MEMS芯片和探测器、定制机芯和镜头、多功能热像仪、个性化集成光电系统与解决方案，公司产品可广泛应用于人工智能、半导体、新材料、新能源、医疗检测、高端科学仪器、大科学装置、户外夜视、工业测温、机器视觉、物联网、环境保护、无人机载荷、自动驾驶等领域。光智科技是全球少数打通红外产业链的平台型企业，公司通过持续的技术创新，建立了丰富的产品矩阵，不断拓展红外技术应用场景，以更低的成本为客户创造价值。",
+              "profileSummary": "公司是领先的、专注于光电技术的国家高新技术企业，具备光电材料生长、芯片设计、关键器件制备到系统集成的全产业链规模化生产能力，可向全球客户供应先进红外材料、精密MEMS芯片和探测器、定制机芯和镜头、多功能热像仪、个性化集成光电系统与解决方案，公司产品可广泛应用于人工智能、半导体、新材料、新能源、医疗检测、高端科学仪器、大科学装置、户外夜视、工业测温、机器视觉、物联网、环境保护、无人机载荷、自动驾驶等领域。光智科技是全球少数打通红外产业链…",
+              "majorProducts": "机加工件、铝板材、铝棒材、铝管材、铝合金模锻件、铝型材",
+              "revenueComposition": "红外光学与激光材料:89.01%;铝合金材料及零部件:10.99%",
+              "revenueSegments": [
+                {
+                  "name": "红外光学与激光材料",
+                  "sharePct": 89.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铝合金材料及零部件",
+                  "sharePct": 10.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "硒化锌",
+                  "硫化锌",
+                  "锗单晶",
+                  "铝合金铸棒",
+                  "红外镜头"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "光智科技的主要经营内容是红外光学与激光材料（89.01%）、铝合金材料及零部件（10.99%），具体产品集中在硒化锌、硫化锌、锗单晶、铝合金铸棒。“公司通过增资收购先睿科技切入磷化铟赛道，后者是国内少数实现材料自供、全产业链打通的厂商”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。本次事件即使改善供需缺口与产品价格，也需要先补上产品落地和客户导入，再经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才可能影响业绩。产品报价、订单排期、产销率和毛利率没有同步改善时，股价反应更可能来自主题交易；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，基本面解释力会继续下降。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 6,
+        "stocks": [
+          {
+            "sourceRowNumber": 20422,
+            "stockCode": "300450.SZ",
+            "stockName": "先导智能",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司拟通过子公司先导基电收购实控人旗下先导微电子，后者具备年产24万片磷化铟衬底产能，实现产业链延伸。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300450.SZ",
+              "companyName": "先导智能",
+              "companyProfile": "公司业务涵盖锂电池智能装备、固态电池智能装备、光伏智能装备、3C智能装备、智能物流、汽车产线、氢能智能装备等领域，是全球领先的新能源智能制造解决方案服务商。公司致力于为客户提供从咨询、设计、制造、安装、调试、培训及后续升级的一站式整体解决方案，持续提升客户体验。",
+              "profileSummary": "公司业务涵盖锂电池智能装备、固态电池智能装备、光伏智能装备、3C智能装备、智能物流、汽车产线、氢能智能装备等领域，是全球领先的新能源智能制造解决方案服务商。公司致力于为客户提供从咨询、设计、制造、安装、调试、培训及后续升级的一站式整体解决方案，持续提升客户体验。",
+              "majorProducts": "光伏智能装备业务、激光精密加工装备业务、锂电池智能装备业务、汽车智能产线业务、氢能装备业务、视觉、流体、测试业务、智能物流系统业务",
+              "revenueComposition": "锂电池设备:65.57%;其他:8.23%;智能物流系统:8%;光伏自动化生产配套设备:7.77%;汽车智能产线:6.23%;3C智能设备:4.2%",
+              "revenueSegments": [
+                {
+                  "name": "锂电池设备",
+                  "sharePct": 65.57,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "智能物流系统",
+                  "sharePct": 8.0,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光伏自动化生产配套设备",
+                  "sharePct": 7.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车智能产线",
+                  "sharePct": 6.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "3C智能设备",
+                  "sharePct": 4.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "智能搬运机器人(自动导引运输车AGV)",
+                  "车门密封条粘接设备",
+                  "轮胎安装及拧紧设备",
+                  "风挡天窗涂胶及装配设备",
+                  "堆垛机",
+                  "穿梭车",
+                  "辊筒输送机",
+                  "太阳能电池片自动串焊机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "先导智能当前收入集中在锂电池设备（65.57%）、其他（8.23%），现有产品以智能搬运机器人(自动导引运输车AGV)、车门密封条粘接设备、轮胎安装及拧紧设备、风挡天窗涂胶及装配设备为主，与新闻所指的“公司拟通过子公司先导基电收购实控人旗下先导微电子，后者具备年产24万片磷化铟衬底产能，实现产业链延伸”并不是同一业务链条。这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。只有公司真正形成与事件一致的产品、客户和订单，供需缺口与产品价格才可能沿“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。在此之前，产品报价、订单排期、产销率和毛利率若没有出现，事件对公司基本面的影响应按较弱处理；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会进一步压低相关性。"
+          },
+          {
+            "sourceRowNumber": 20427,
+            "stockCode": "600703.SH",
+            "stockName": "三安光电",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "国内化合物半导体龙头，可提供用于光模块的激光器、探测器等磷化铟光芯片，产品覆盖400G/800G，1.6T在研。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600703.SH",
+              "companyName": "三安光电",
+              "companyProfile": "公司总部位于福建省厦门市。公司在厦门、天津、芜湖、泉州、鄂州、长沙、重庆等多地设有产业化基地。在化合物半导体领域，公司实力备受认可，被《国家集成电路产业发展纲要》列为重大生产力发展布局的集成电路骨干企业，先后承担了国家科技部、工信部等多项重大专项任务。同时，公司搭建了完善的科研创新平台，拥有国家级博士后科研工作站、国家级企业技术中心及院士工作站。公司聚焦核心业务，专注于化合物半导体材料与器件的研发、生产和销售。公司自成立起，便锚定“技术+人才”驱动的科技成果产业化路径，以技术创新为引擎，以成果落地为导向，持续拓展业务版图、增强综合实力。公司在国内化合物半导体领域，构建起垂直产业链布局优势。在稳固传统LED优势领域市场份额的同时，公司主动向Mini/MicroLED、车用LED、植物照明LED等细分领域发力，加速产品市场应用推广。此外，公司布局的射频、电力电子、光技术化合物半导体集成电路业务，也伴随产能逐步释放，营收规模稳步增长。",
+              "profileSummary": "公司聚焦核心业务，专注于化合物半导体材料与器件的研发、生产和销售。此外，公司布局的射频、电力电子、光技术化合物半导体集成电路业务，也伴随产能逐步释放，营收规模稳步增长。",
+              "majorProducts": "三安光电LED外延片、三安光电PIN光电二极管、三安光电氮化镓LED芯片、三安光电砷化镓LED芯片、三安光电太阳能电池",
+              "revenueComposition": "芯片销售:32.66%;材料、废料销售:32.46%;LED应用产品:17.99%;集成电路芯片:16.25%;租金、物业、服务收入:0.64%",
+              "revenueSegments": [
+                {
+                  "name": "芯片销售",
+                  "sharePct": 32.66,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "材料、废料销售",
+                  "sharePct": 32.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "LED应用产品",
+                  "sharePct": 17.99,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "集成电路芯片",
+                  "sharePct": 16.25,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "租金、物业、服务收入",
+                  "sharePct": 0.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "CW激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "DFB激光器芯片",
+                    "category": "激光器件"
+                  },
+                  {
+                    "name": "FP激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "VCSEL激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "电吸收调制激光器芯片(EML)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "LED芯片",
+                    "category": "LED芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "办公楼租赁",
+                  "厂房租赁",
+                  "汽车用LED灯",
+                  "金属化陶瓷电路基片",
+                  "SAW滤波器",
+                  "射频前端器件",
+                  "LED芯片",
+                  "LED衬底"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 3
+              }
+            },
+            "analysis": "三安光电与事件存在真实业务交集：公司已有CW激光器芯片、DFB激光器芯片、FP激光器芯片，与国内化合物半导体龙头，可提供用于光模块的激光器、探测器等磷化铟光芯片，产品覆盖400G/800G，1.6T在研所处的产业环节一致。芯片销售（32.66%）、LED应用产品（17.99%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 20428,
+            "stockCode": "688498.SH",
+            "stockName": "源杰科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "公司是国内领先的光芯片供应商，产品覆盖EML、CW等，深度受益于光模块向高速率迭代。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688498.SH",
+              "companyName": "源杰科技",
+              "companyProfile": "公司成立于2013年。自成立以来，公司一直专注于光芯片的研发，设计、生产与销售。主要产品包括2.5G、10G、25G、50G、100G光芯片产品、CW光源、车载激光雷达光源等产品，主要应用于电信市场、数据中心市场、车载激光雷达市场等领域。经过多年研发与产业化积累，公司逐步发展为国内领先的光芯片供应商。公司创始团队来源于激光器芯片领域的学术专家与行业专家，拥有多年研发经验，始终秉承“以科技创新为驱动”的宗旨，重视研发投入及高端产品开发。公司已建立了包含芯片设计、晶圆制造、芯片加工和测试的IDM全流程业务体系，已实现国际前十大及国内主流光模块厂商批量供货，并最终应用于国内外知名运营商网络及互联网公司数据中心中。未来，公司将立足“一平台、两方向、三关键”的战略部署，在光通信领域中继续深耕，推出更高速率、更长传输距离，更大功率的光芯片产品，同时不断扩充光芯片产品的应用场景，积极向激光雷达、传感器、消费电子等领域拓展，致力于成为国际一流光电半导体芯片和技术服务供应商。",
+              "profileSummary": "主要产品包括2.5G、10G、25G、50G、100G光芯片产品、CW光源、车载激光雷达光源等产品，主要应用于电信市场、数据中心市场、车载激光雷达市场等领域。未来，公司将立足“一平台、两方向、三关键”的战略部署，在光通信领域中继续深耕，推出更高速率、更长传输距离，更大功率的光芯片产品，同时不断扩充光芯片产品的应用场景，积极向激光雷达、传感器、消费电子等领域拓展，致力于成为国际一流光电半导体芯片和技术服务供应商。",
+              "majorProducts": "1270/1290/1310/1330nm大功率25/50/70mW 激光器芯片、1270nm DFB激光器芯片、1310nm DFB激光器芯片、1310nm FP激光器芯片、1490nm DFB激光器芯片、1550nm DFB激光器芯片、CWDM 4波段 DFB激光器芯片、CWDM 6波段 DFB激光器芯片、LWDM 12波段 DFB激光器芯片、LWDM 4波段 DFB激光器芯片、MWDM 12波段 DFB激光器芯片、PAM4 CWDM 4波段DFB激光器芯片",
+              "revenueComposition": "数据中心类产品:65.39%;电信市场类:34.33%;其他类产品:0.18%;其他业务:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "数据中心类产品",
+                  "sharePct": 65.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电信市场类",
+                  "sharePct": 34.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他类产品",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "CW激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "DFB激光器芯片",
+                    "category": "激光器件"
+                  },
+                  {
+                    "name": "FP激光器芯片",
+                    "category": "有源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "DFB激光器芯片",
+                  "CW激光器芯片",
+                  "FP激光器芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "源杰科技与新闻之间有明确产品抓手：CW激光器芯片、DFB激光器芯片、FP激光器芯片，对应公司是国内领先的光芯片供应商，产品覆盖EML、CW等，深度受益于光模块向高速率迭代。收入主体目前是数据中心类产品（65.39%）、电信市场类（34.33%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 20429,
+            "stockCode": "688048.SH",
+            "stockName": "长光华芯",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司是全球核心的CW激光器供应商，在EML、硅光等领域布局全面，受益于光通信需求增长。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688048.SH",
+              "companyName": "长光华芯",
+              "companyProfile": "公司成立于2012年，位于江苏苏州，公司主要致力于高功率半导体激光器芯片、高效率激光雷达与3D传感芯片、高速光通信半导体激光芯片及器件和系统的研发、生产和销售。产品广泛应用于：工业激光器泵浦、激光先进制造装备、生物医学美容、高速光通信、机器视觉与传感等。公司已建成从芯片设计、MOCVD(外延)、光刻、解理/镀膜、封装测试、光纤耦合等完整的工艺平台和量产线，是全球少数几家研发和量产高功率半导体激光器芯片的公司。公司高亮度单管芯片和光纤耦合输出模块、高功率巴条和叠阵等产品，在功率、亮度、光电转换效率、寿命等方面屡次突破，获多项专利，与全球先进水平同步。公司建立了完整的研发、生产及质量管理体系，通过了ISO9001质量体系，以高性能和高可靠性产品服务客户。未来，公司将牢记“中国激光芯，光耀美好生活”的企业使命，以“POSS”(“专业”—Professional，“用心”—Observant，“服务”—Serving，“奋斗”—Striving)企业精神和价值观，服务客户和社会，实现“在激光芯片领域综合实力和创新能力具有全球竞争力”的目标。——“心所往，光所至”。",
+              "profileSummary": "公司成立于2012年，位于江苏苏州，公司主要致力于高功率半导体激光器芯片、高效率激光雷达与3D传感芯片、高速光通信半导体激光芯片及器件和系统的研发、生产和销售。未来，公司将牢记“中国激光芯，光耀美好生活”的企业使命，以“POSS”(“专业”—Professional，“用心”—Observant，“服务”—Serving，“奋斗”—Striving)企业精神和价值观，服务客户和社会，实现“在激光芯片领域综合实力和创新能力具有全球竞争力…",
+              "majorProducts": "DFB系列、EML系列、SL系列、TOF系列、VCSEL系列、VCSEL芯片-PS系列、VCSEL芯片-SL系列、VCSEL芯片-TOF系列、百瓦级直接半导体激光器-DDLM系列、高功率巴条器件、高功率巴条芯片、高功率单管器件、高功率单管器件 -TO系列、高功率单管器件-COS系列、高功率单管芯片、高功率直接半导体激光器-DDLF系列、高亮度直接半导体激光器-DDLV系列、光通信芯片系列产品、光纤耦合模块、光纤耦合模块-F系列、光纤耦合模块-M系列、激光雷达EEL系列、激光雷达VLR系列、数百瓦直接半导体激光器-DDLM系列、阵列模块、阵列模块 -MCP-V、VQ系列、阵列模块-QCP-M系列、阵列模块-QCP-V系列、直接半导体激光器、中功率直接半导体激光器-DDLF系列",
+              "revenueComposition": "高功率单管系列:80.9%;VCSEL芯片系列:8.63%;高功率巴条系列:6.13%;其他:4.35%",
+              "revenueSegments": [
+                {
+                  "name": "高功率单管系列",
+                  "sharePct": 80.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "VCSEL芯片系列",
+                  "sharePct": 8.63,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "高功率巴条系列",
+                  "sharePct": 6.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电吸收调制激光器芯片(EML)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "DFB激光器芯片",
+                    "category": "激光器件"
+                  },
+                  {
+                    "name": "VCSEL激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "半导体激光单管芯片",
+                    "category": "激光器件"
+                  },
+                  {
+                    "name": "半导体激光巴条芯片",
+                    "category": "激光器件"
+                  },
+                  {
+                    "name": "激光巴条芯片集成模块",
+                    "category": "激光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "DFB激光器芯片",
+                  "光纤耦合模块",
+                  "半导体激光单管器件",
+                  "半导体激光单管芯片",
+                  "半导体激光巴条器件",
+                  "半导体激光巴条芯片",
+                  "激光巴条芯片集成模块",
+                  "直接半导体激光器"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "长光华芯已经具备电吸收调制激光器芯片(EML)、DFB激光器芯片、VCSEL激光器芯片等业务能力，公司是全球核心的CW激光器供应商，在EML、硅光等领域布局全面，受益于光通信需求增长并非单纯概念映射。当前对应的收入被归入VCSEL芯片系列（8.63%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于供需缺口与产品价格是否通过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”放大，并最终反映在产品报价、订单排期、产销率和毛利率上；供给恢复、库存反转或终端需求转弱使价格弹性快速收敛会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 20436,
+            "stockCode": "300308.SZ",
+            "stockName": "中际旭创",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球光模块龙头，深度受益于AI算力驱动的800G/1.6T光模块需求爆发，是磷化铟光芯片的核心下游。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300308.SZ",
+              "companyName": "中际旭创",
+              "companyProfile": "公司是领先的高速光互联解决方案提供商，专注于高端光模块与光通信技术创新，服务全球云计算与AI算力基础设施建设。公司在高速率光模块领域具备领先优势，是推动新一代算力网络和数字基础设施升级的重要参与者。凭借持续的技术创新、领先的产品性能和稳定的规模化交付能力，公司在业内建立了稳固的市场地位和良好的品牌声誉。公司坚持以技术创新为核心驱动力，持续强化研发投入与产业链协同，并积极拓展光电技术应用边界，力求为更多客户创造更多价值。",
+              "profileSummary": "公司是领先的高速光互联解决方案提供商，专注于高端光模块与光通信技术创新，服务全球云计算与AI算力基础设施建设。公司在高速率光模块领域具备领先优势，是推动新一代算力网络和数字基础设施升级的重要参与者。",
+              "majorProducts": "1.6T OSFP、100G QSFP+、100G QSFP28 Single Lambda、10G SFP+ Ethernet、10G SFP+ SONET、25G SFP28、400G OSFP、400G QSFP-DD、40G QSFP+、800G OSFP、800G QSFP-DD",
+              "revenueComposition": "高端光通讯收发模块:97.95%;其他:2.05%",
+              "revenueSegments": [
+                {
+                  "name": "高端光通讯收发模块",
+                  "sharePct": 97.95,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "共封装光学(CPO)模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "含DSP可插拔光模块(DPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "近封装光模块(NPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "线性可插拔光模块(LPO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "超高密度可插拔光模块(XPO)",
+                    "category": "无源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "汽车光电子传感器",
+                  "共封装光学(CPO)模块",
+                  "含DSP可插拔光模块(DPO)",
+                  "近封装光模块(NPO)",
+                  "超高密度可插拔光模块(XPO)",
+                  "线性可插拔光模块(LPO)"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "中际旭创与事件的关系已经落在存量主业，而非远期概念：高端光通讯收发模块占收入的97.95%。公司在产业链中的具体抓手是：全球光模块龙头，深度受益于AI算力驱动的800G/1.6T光模块需求爆发，是磷化铟光芯片的核心下游。本次事件若改变供需缺口与产品价格，影响会沿着“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；产品报价、订单排期、产销率和毛利率比主题热度更有解释力。若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 20437,
+            "stockCode": "300502.SZ",
+            "stockName": "新易盛",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "全球光模块核心供应商之一，产品覆盖800G、1.6T等高速光模块，是磷化铟光芯片的核心下游。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300502.SZ",
+              "companyName": "新易盛",
+              "companyProfile": "公司是全球高速光互联解决方案的创新者与领导者。公司自主掌握高速率光器件封装并提供多种技术方案的光互联产品，具备全系列高速可插拔光模块的规模化量产能力，产品广泛应用于人工智能算力集群、云数据中心、电信网络等领域，为各行业的高速网络互连与数据传输提供核心支撑。",
+              "profileSummary": "公司自主掌握高速率光器件封装并提供多种技术方案的光互联产品，具备全系列高速可插拔光模块的规模化量产能力，产品广泛应用于人工智能算力集群、云数据中心、电信网络等领域，为各行业的高速网络互连与数据传输提供核心支撑。",
+              "majorProducts": "800G/400G相干系列模块、CFP2 PAM4 200G、CFPx系列、OSFP 400G、OSFP 800G单波100G、OSFP 800G单波200G、OSFP-XD 1.6T、PON光模块、QSFP112 400G、QSFP28 PAM4 50G、QSFP28 Single Lambda、QSFP28/QSFP+、QSFP56 PAM4 200G、QSFP-DD 200G、QSFP-DD 400G、QSFP-DD 800G 单波100G、QSFP-DD 800G 单波200G、SFP+/SFP系列模块、SFP112 PAM4 100G、SFP28系列、SFP56 PAM4 50G、SFP-DD PAM4 100G、XFP系列模块、点对点光模块",
+              "revenueComposition": "光互联产品:99.72%;其他:0.28%",
+              "revenueSegments": [
+                {
+                  "name": "光互联产品",
+                  "sharePct": 99.72,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "PON光模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "共封装光学(CPO)模块",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "含DSP可插拔光模块(DPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "近封装光模块(NPO)",
+                    "category": "光模块"
+                  },
+                  {
+                    "name": "线性可插拔光模块(LPO)",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "线性接收光模块(LRO)",
+                    "category": "有源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "PON光模块",
+                  "共封装光学(CPO)模块",
+                  "含DSP可插拔光模块(DPO)",
+                  "近封装光模块(NPO)",
+                  "超高密度可插拔光模块(XPO)",
+                  "三向光发射接受组件(TRI-OSA)",
+                  "光发射接收组件(BOSA)",
+                  "光发射组件(TOSA)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "新易盛与事件存在真实业务交集：公司已有PON光模块、共封装光学(CPO)模块、含DSP可插拔光模块(DPO)，与全球光模块核心供应商之一，产品覆盖800G、1.6T等高速光模块，是磷化铟光芯片的核心下游所处的产业环节一致。光互联产品（99.72%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响供需缺口与产品价格，只有经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”，才会形成可确认的收入和利润增量。产品报价、订单排期、产销率和毛利率能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "16条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "1只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

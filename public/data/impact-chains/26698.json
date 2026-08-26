@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26698",
@@ -9,10 +9,10 @@
     "date": "2026-07-01"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 5,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 3,
     "mappedStockCount": 3,
-    "unmappedStockCount": 2,
+    "unmappedStockCount": 0,
     "stocks": [
       {
         "sourceRowNumber": 10326,
@@ -33,318 +33,27 @@
         "anchorProductCount": 7
       },
       {
-        "sourceRowNumber": 10328,
-        "stockCode": "02057.HK",
-        "stockName": "中通快递",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 10329,
-        "stockCode": "01519.HK",
-        "stockName": "极兔速递",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
         "sourceRowNumber": 10330,
         "stockCode": "002352.SZ",
         "stockName": "顺丰控股",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 12
+        "anchorProductCount": 11
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 10328,
-        "stockCode": "02057.HK",
-        "stockName": "中通快递",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 10329,
-        "stockCode": "01519.HK",
-        "stockName": "极兔速递",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 12,
     "selectedCoreProductCount": 11,
     "selectedCompanyCoreProductCount": 11,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 47,
-    "downstreamCandidateCount": 41,
-    "shownUpstreamCount": 14,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 13,
+    "relatedIndustryCandidateCount": 4,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140065288",
-        "name": "机械运输设备",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144883",
-          "1140144886",
-          "1140144887",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "同城配送服务",
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140065269",
-        "name": "仓储货架设备",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144883",
-          "1140144886",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "同城配送服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140145055",
-        "name": "装卸搬运器械",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144883",
-          "1140144886",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "同城配送服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1130000111",
-        "name": "货车",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144883",
-          "1140144886",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "同城配送服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140125950",
-        "name": "快递公司",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144884",
-          "1140144885"
-        ],
-        "linkedCoreProductNames": [
-          "代收货款服务",
-          "保价服务"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140013748",
-        "name": "船舶",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144886",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140061319",
-        "name": "货物",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144883",
-          "1140144886"
-        ],
-        "linkedCoreProductNames": [
-          "同城配送服务",
-          "时效快递服务"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140019000",
-        "name": "飞机",
-        "anchorCount": 2,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144886",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140081869",
-        "name": "不干胶",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140098525"
-        ],
-        "linkedCoreProductNames": [
-          "电子面单"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140062931",
-        "name": "仓储设备",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144887"
-        ],
-        "linkedCoreProductNames": [
-          "国际快递服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140080969",
-        "name": "仓库",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144887"
-        ],
-        "linkedCoreProductNames": [
-          "国际快递服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140060422",
-        "name": "仓库管理",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140033776"
-        ],
-        "linkedCoreProductNames": [
-          "物流仓储服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140145057",
-        "name": "代收货款合同",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144884"
-        ],
-        "linkedCoreProductNames": [
-          "代收货款服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140036476",
-        "name": "企业冷链安全追溯系统",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140033776"
-        ],
-        "linkedCoreProductNames": [
-          "物流仓储服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140144887",
         "name": "国际快递服务",
@@ -370,28 +79,27 @@
           "name": "国际快递服务"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "002468.SZ",
             "stockName": "申通快递",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002120.SZ",
             "stockName": "韵达股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002352.SZ",
             "stockName": "顺丰控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 8,
-        "downstreamCount": 10,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -425,28 +133,27 @@
           "name": "时效快递服务"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "002468.SZ",
             "stockName": "申通快递",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002120.SZ",
             "stockName": "韵达股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002352.SZ",
             "stockName": "顺丰控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 7,
-        "downstreamCount": 10,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -480,73 +187,27 @@
           "name": "电子面单"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "002468.SZ",
             "stockName": "申通快递",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002120.SZ",
             "stockName": "韵达股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002352.SZ",
             "stockName": "顺丰控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 4,
-        "downstreamCount": 1,
-        "relevanceScore": 6,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
-          "快递",
-          "物流",
-          "交通运输"
-        ]
-      },
-      {
-        "code": "1140144898",
-        "name": "经济快递服务",
-        "hierarchyPath": "交通运输 > 物流 > 物流 > 跨城物流 > 快递 > 经济快递服务",
-        "industryPath": [
-          "交通运输",
-          "物流",
-          "物流",
-          "跨城物流",
-          "快递",
-          "经济快递服务"
-        ],
-        "level5Industry": {
-          "code": "1200000794",
-          "name": "跨城物流"
-        },
-        "level6Industry": {
-          "code": "1200003740",
-          "name": "快递"
-        },
-        "level7Product": {
-          "code": "1140144898",
-          "name": "经济快递服务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 1,
-        "stocks": [
-          {
-            "stockCode": "002352.SZ",
-            "stockName": "顺丰控股",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 6,
-        "downstreamCount": 10,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -580,18 +241,15 @@
           "name": "无人机快递服务"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002352.SZ",
             "stockName": "顺丰控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 0,
-        "downstreamCount": 0,
         "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -601,109 +259,43 @@
         ]
       },
       {
-        "code": "1140033776",
-        "name": "物流仓储服务",
-        "hierarchyPath": "交通运输 > 物流 > 物流 > 物流服务 > 仓储 > 物流仓储服务",
+        "code": "1140144898",
+        "name": "经济快递服务",
+        "hierarchyPath": "交通运输 > 物流 > 物流 > 跨城物流 > 快递 > 经济快递服务",
         "industryPath": [
           "交通运输",
           "物流",
           "物流",
-          "物流服务",
-          "仓储",
-          "物流仓储服务"
+          "跨城物流",
+          "快递",
+          "经济快递服务"
         ],
         "level5Industry": {
-          "code": "1200000796",
-          "name": "物流服务"
+          "code": "1200000794",
+          "name": "跨城物流"
         },
         "level6Industry": {
-          "code": "1200003744",
-          "name": "仓储"
+          "code": "1200003740",
+          "name": "快递"
         },
         "level7Product": {
-          "code": "1140033776",
-          "name": "物流仓储服务"
+          "code": "1140144898",
+          "name": "经济快递服务"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 3,
+        "stockCount": 1,
         "stocks": [
-          {
-            "stockCode": "002468.SZ",
-            "stockName": "申通快递",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "002120.SZ",
-            "stockName": "韵达股份",
-            "rating": "★★★★☆"
-          },
           {
             "stockCode": "002352.SZ",
             "stockName": "顺丰控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 8,
-        "downstreamCount": 4,
-        "relevanceScore": 3,
+        "relevanceScore": 6,
         "strongRelevanceScore": 0,
         "matchedTerms": [
-          "物流",
-          "交通运输"
-        ]
-      },
-      {
-        "code": "1140144883",
-        "name": "同城配送服务",
-        "hierarchyPath": "交通运输 > 物流 > 物流 > 同城物流 > 同城货运 > 同城配送服务",
-        "industryPath": [
-          "交通运输",
-          "物流",
-          "物流",
-          "同城物流",
-          "同城货运",
-          "同城配送服务"
-        ],
-        "level5Industry": {
-          "code": "1200000793",
-          "name": "同城物流"
-        },
-        "level6Industry": {
-          "code": "1200003736",
-          "name": "同城货运"
-        },
-        "level7Product": {
-          "code": "1140144883",
-          "name": "同城配送服务"
-        },
-        "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
-        "stockCount": 3,
-        "stocks": [
-          {
-            "stockCode": "002468.SZ",
-            "stockName": "申通快递",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "002120.SZ",
-            "stockName": "韵达股份",
-            "rating": "★★★★☆"
-          },
-          {
-            "stockCode": "002352.SZ",
-            "stockName": "顺丰控股",
-            "rating": "★★★★"
-          }
-        ],
-        "upstreamCount": 5,
-        "downstreamCount": 4,
-        "relevanceScore": 3,
-        "strongRelevanceScore": 0,
-        "matchedTerms": [
+          "快递",
           "物流",
           "交通运输"
         ]
@@ -733,28 +325,27 @@
           "name": "代收货款服务"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "002468.SZ",
             "stockName": "申通快递",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002120.SZ",
             "stockName": "韵达股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002352.SZ",
             "stockName": "顺丰控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 2,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -787,28 +378,133 @@
           "name": "保价服务"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 3,
         "stocks": [
           {
             "stockCode": "002468.SZ",
             "stockName": "申通快递",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002120.SZ",
             "stockName": "韵达股份",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002352.SZ",
             "stockName": "顺丰控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 2,
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "物流",
+          "交通运输"
+        ]
+      },
+      {
+        "code": "1140144883",
+        "name": "同城配送服务",
+        "hierarchyPath": "交通运输 > 物流 > 物流 > 同城物流 > 同城货运 > 同城配送服务",
+        "industryPath": [
+          "交通运输",
+          "物流",
+          "物流",
+          "同城物流",
+          "同城货运",
+          "同城配送服务"
+        ],
+        "level5Industry": {
+          "code": "1200000793",
+          "name": "同城物流"
+        },
+        "level6Industry": {
+          "code": "1200003736",
+          "name": "同城货运"
+        },
+        "level7Product": {
+          "code": "1140144883",
+          "name": "同城配送服务"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 3,
+        "stocks": [
+          {
+            "stockCode": "002468.SZ",
+            "stockName": "申通快递",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002120.SZ",
+            "stockName": "韵达股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002352.SZ",
+            "stockName": "顺丰控股",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "relevanceScore": 3,
+        "strongRelevanceScore": 0,
+        "matchedTerms": [
+          "物流",
+          "交通运输"
+        ]
+      },
+      {
+        "code": "1140033776",
+        "name": "物流仓储服务",
+        "hierarchyPath": "交通运输 > 物流 > 物流 > 物流服务 > 仓储 > 物流仓储服务",
+        "industryPath": [
+          "交通运输",
+          "物流",
+          "物流",
+          "物流服务",
+          "仓储",
+          "物流仓储服务"
+        ],
+        "level5Industry": {
+          "code": "1200000796",
+          "name": "物流服务"
+        },
+        "level6Industry": {
+          "code": "1200003744",
+          "name": "仓储"
+        },
+        "level7Product": {
+          "code": "1140033776",
+          "name": "物流仓储服务"
+        },
+        "matchedSourceLevel": 7,
+        "stockCount": 3,
+        "stocks": [
+          {
+            "stockCode": "002468.SZ",
+            "stockName": "申通快递",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002120.SZ",
+            "stockName": "韵达股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002352.SZ",
+            "stockName": "顺丰控股",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -841,23 +537,21 @@
           "name": "冷链物流"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "002468.SZ",
             "stockName": "申通快递",
-            "rating": "★★★★☆"
+            "rating": "★★★★☆",
+            "filledStars": 4
           },
           {
             "stockCode": "002352.SZ",
             "stockName": "顺丰控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 11,
-        "downstreamCount": 19,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -890,18 +584,15 @@
           "name": "医药物流"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "002352.SZ",
             "stockName": "顺丰控股",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 6,
-        "downstreamCount": 5,
         "relevanceScore": 3,
         "strongRelevanceScore": 0,
         "matchedTerms": [
@@ -910,282 +601,531 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1119001540",
-        "name": "医药",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144883",
-          "1140144886",
-          "1140144887",
-          "1140144898"
+        "code": "1200000793",
+        "name": "同城物流",
+        "description": "同城物流指城市内短途货运。A股关注该行业，因其受益于电商即时配送需求爆发及政策利好，具备高成长性与科技赋能潜力，是消费升级和智慧物流的重要赛道，吸引资本聚焦头部企业以提升市场份额与效率。",
+        "stockCount": 4,
+        "starWeight": 17,
+        "level7ProductCount": 3,
+        "relevanceScore": 136,
+        "stocks": [
+          {
+            "stockCode": "600233.SH",
+            "stockName": "圆通速递",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002468.SZ",
+            "stockName": "申通快递",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002120.SZ",
+            "stockName": "韵达股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002352.SZ",
+            "stockName": "顺丰控股",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "同城配送服务",
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
+        "products": [
+          {
+            "code": "1140144886",
+            "name": "时效快递服务",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 同城物流 > 即时物流 > 时效快递服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600233.SH",
+                "stockName": "圆通速递",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002468.SZ",
+                "stockName": "申通快递",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002120.SZ",
+                "stockName": "韵达股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "快递物流服务"
+            ]
+          },
+          {
+            "code": "1140208319",
+            "name": "无人机快递服务",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 同城物流 > 即时物流 > 无人机快递服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "快递物流服务"
+            ]
+          },
+          {
+            "code": "1140144883",
+            "name": "同城配送服务",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 同城物流 > 同城货运 > 同城配送服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "002468.SZ",
+                "stockName": "申通快递",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002120.SZ",
+                "stockName": "韵达股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140065450",
-        "name": "日用品行业",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144883",
-          "1140144886",
-          "1140144887",
-          "1140144898"
+        "code": "1200000794",
+        "name": "跨城物流",
+        "description": "跨城物流指城市间货物运输。A股关注该行业，因其受益于电商增长、供应链升级及政策扶持，具备高景气度与整合潜力，是经济循环关键纽带，龙头企业受益于规模效应和技术赋能，业绩增长确定性较强。",
+        "stockCount": 4,
+        "starWeight": 17,
+        "level7ProductCount": 3,
+        "relevanceScore": 92,
+        "stocks": [
+          {
+            "stockCode": "600233.SH",
+            "stockName": "圆通速递",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002468.SZ",
+            "stockName": "申通快递",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002120.SZ",
+            "stockName": "韵达股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002352.SZ",
+            "stockName": "顺丰控股",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "同城配送服务",
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
+        "products": [
+          {
+            "code": "1140144898",
+            "name": "经济快递服务",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 跨城物流 > 快递 > 经济快递服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "快递物流服务"
+            ]
+          },
+          {
+            "code": "1140098525",
+            "name": "电子面单",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 跨城物流 > 快递 > 电子面单",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600233.SH",
+                "stockName": "圆通速递",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002468.SZ",
+                "stockName": "申通快递",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002120.SZ",
+                "stockName": "韵达股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140053618",
+            "name": "冷链物流",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 跨城物流 > 冷链物流 > 冷链物流",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002468.SZ",
+                "stockName": "申通快递",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 4,
+    "mappedStockCount": 4,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 13,
+    "candidateIndustryCount": 4,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 10325,
+        "stockCode": "600233.SH",
+        "stockName": "圆通速递",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140065446",
-        "name": "服装行业",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144883",
-          "1140144886",
-          "1140144887",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "同城配送服务",
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10326,
+        "stockCode": "002468.SZ",
+        "stockName": "申通快递",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140065453",
-        "name": "烟酒食品行业",
-        "anchorCount": 4,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144883",
-          "1140144886",
-          "1140144887",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "同城配送服务",
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 4,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10327,
+        "stockCode": "002120.SZ",
+        "stockName": "韵达股份",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140065448",
-        "name": "五金业",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144886",
-          "1140144887",
-          "1140144898"
+        "sourceRowNumber": 10330,
+        "stockCode": "002352.SZ",
+        "stockName": "顺丰控股",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 11
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200000793",
+        "name": "同城物流",
+        "description": "同城物流指城市内短途货运。A股关注该行业，因其受益于电商即时配送需求爆发及政策利好，具备高成长性与科技赋能潜力，是消费升级和智慧物流的重要赛道，吸引资本聚焦头部企业以提升市场份额与效率。",
+        "stockCount": 4,
+        "starWeight": 17,
+        "level7ProductCount": 3,
+        "relevanceScore": 136,
+        "stocks": [
+          {
+            "stockCode": "600233.SH",
+            "stockName": "圆通速递",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002468.SZ",
+            "stockName": "申通快递",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002120.SZ",
+            "stockName": "韵达股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002352.SZ",
+            "stockName": "顺丰控股",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
+        "products": [
+          {
+            "code": "1140144886",
+            "name": "时效快递服务",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 同城物流 > 即时物流 > 时效快递服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600233.SH",
+                "stockName": "圆通速递",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002468.SZ",
+                "stockName": "申通快递",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002120.SZ",
+                "stockName": "韵达股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "快递物流服务"
+            ]
+          },
+          {
+            "code": "1140208319",
+            "name": "无人机快递服务",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 同城物流 > 即时物流 > 无人机快递服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "快递物流服务"
+            ]
+          },
+          {
+            "code": "1140144883",
+            "name": "同城配送服务",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 同城物流 > 同城货运 > 同城配送服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 3,
+            "stocks": [
+              {
+                "stockCode": "002468.SZ",
+                "stockName": "申通快递",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002120.SZ",
+                "stockName": "韵达股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
+        "rank": 1
       },
       {
-        "code": "1140065451",
-        "name": "交通设备行业",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144886",
-          "1140144887",
-          "1140144898"
+        "code": "1200000794",
+        "name": "跨城物流",
+        "description": "跨城物流指城市间货物运输。A股关注该行业，因其受益于电商增长、供应链升级及政策扶持，具备高景气度与整合潜力，是经济循环关键纽带，龙头企业受益于规模效应和技术赋能，业绩增长确定性较强。",
+        "stockCount": 4,
+        "starWeight": 17,
+        "level7ProductCount": 3,
+        "relevanceScore": 92,
+        "stocks": [
+          {
+            "stockCode": "600233.SH",
+            "stockName": "圆通速递",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "002468.SZ",
+            "stockName": "申通快递",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002120.SZ",
+            "stockName": "韵达股份",
+            "rating": "★★★★☆",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "002352.SZ",
+            "stockName": "顺丰控股",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
+        "products": [
+          {
+            "code": "1140144898",
+            "name": "经济快递服务",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 跨城物流 > 快递 > 经济快递服务",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "快递物流服务"
+            ]
+          },
+          {
+            "code": "1140098525",
+            "name": "电子面单",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 跨城物流 > 快递 > 电子面单",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "600233.SH",
+                "stockName": "圆通速递",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "002468.SZ",
+                "stockName": "申通快递",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002120.SZ",
+                "stockName": "韵达股份",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140053618",
+            "name": "冷链物流",
+            "hierarchyPath": "交通运输 > 物流 > 物流 > 跨城物流 > 冷链物流 > 冷链物流",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "002468.SZ",
+                "stockName": "申通快递",
+                "rating": "★★★★☆",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "002352.SZ",
+                "stockName": "顺丰控股",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140065454",
-        "name": "化工品行业",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144886",
-          "1140144887",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140045059",
-        "name": "大宗商品",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144886",
-          "1140144887",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140065449",
-        "name": "玻璃塑料业",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144886",
-          "1140144887",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140065452",
-        "name": "电气设备行业",
-        "anchorCount": 3,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140144886",
-          "1140144887",
-          "1140144898"
-        ],
-        "linkedCoreProductNames": [
-          "国际快递服务",
-          "时效快递服务",
-          "经济快递服务"
-        ],
-        "evidence": {
-          "original": 3,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140022663",
-        "name": "药品",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140003735",
-          "1140053618"
-        ],
-        "linkedCoreProductNames": [
-          "冷链物流",
-          "医药物流"
-        ],
-        "evidence": {
-          "original": 2,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140053797",
-        "name": "道路货运与物流服务",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1140003735",
-          "1140053618"
-        ],
-        "linkedCoreProductNames": [
-          "冷链物流",
-          "医药物流"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
-      },
-      {
-        "code": "1140099861",
-        "name": "快件配送",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140098525"
-        ],
-        "linkedCoreProductNames": [
-          "电子面单"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140104669",
-        "name": "深加工企业",
-        "anchorCount": 1,
-        "stockCount": 3,
-        "linkedCoreProductCodes": [
-          "1140033776"
-        ],
-        "linkedCoreProductNames": [
-          "物流仓储服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
       }
     ]
   },
@@ -1200,10 +1140,464 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 23,
+    "eligibleSourceRowCount": 4,
+    "totalStockCount": 4,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 13,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 4,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 10325,
+            "stockCode": "600233.SH",
+            "stockName": "圆通速递",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "事件主角，二季度业绩超预期增长验证行业反内卷成效。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600233.SH",
+              "companyName": "圆通速递",
+              "companyProfile": "公司以互联网信息技术快递平台为定位，是国内领先的综合性快递物流运营商。依托自营枢纽转运中心与扁平化终端加盟网络，公司以快递服务为核心，推进数字化、智能化发展，积极布局物流生态，深化拓展国际市场，围绕客户需求提供国内及国际快递、仓配一体、商贸、航空货运及供应链等综合服务。公司深耕快递主业，以客户体验为中心，创新应用人工智能等前沿技术，全面推进智能化发展。快递服务流程涵盖快件揽收、中转、干线运输及派送。其中，中转环节由自营枢纽转运中心体系承担，揽收和派送环节由加盟商网络负责。公司通过自主研发的信息化平台与数字化系统，实施路由管控、操作节点监控、转运中心及加盟商管理、资金结算等，实现快件全生命周期的信息化控制与跟踪，达成全网数字化、智能化管理。同时，公司深化国际化发展布局，依托自有机队、优质航线、全球网络和专业团队等优势资源，着力拓展国际快递、国际货运和国际供应链业务。通过不断强化国内国际一体化协同，公司增强了跨境全链路物流服务能力，国际综合服务能力稳步提升。",
+              "profileSummary": "依托自营枢纽转运中心与扁平化终端加盟网络，公司以快递服务为核心，推进数字化、智能化发展，积极布局物流生态，深化拓展国际市场，围绕客户需求提供国内及国际快递、仓配一体、商贸、航空货运及供应链等综合服务。同时，公司深化国际化发展布局，依托自有机队、优质航线、全球网络和专业团队等优势资源，着力拓展国际快递、国际货运和国际供应链业务。",
+              "majorProducts": "保价服务、仓配一体服务、代取件业务、代收货款、到付件业务、电子运单、港台件、国际件、冷运、签单返还、夜间服务、专机次晨达/次日达",
+              "revenueComposition": "国内时效产品:89.78%;货代服务:3.03%;航空业务:2.34%;其他:2.31%;其他业务:1.25%;国际快递产品:0.83%;增值服务:0.46%",
+              "revenueSegments": [
+                {
+                  "name": "国内时效产品",
+                  "sharePct": 89.78,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "货代服务",
+                  "sharePct": 3.03,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "航空业务",
+                  "sharePct": 2.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.31,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.25,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "国际快递产品",
+                  "sharePct": 0.83,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "增值服务",
+                  "sharePct": 0.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "国际快递服务",
+                    "category": "跨境物流"
+                  },
+                  {
+                    "name": "时效快递服务",
+                    "category": "即时物流"
+                  },
+                  {
+                    "name": "代收货款服务",
+                    "category": "综合贸易物流"
+                  },
+                  {
+                    "name": "保价服务",
+                    "category": "综合贸易物流"
+                  },
+                  {
+                    "name": "物流仓储服务",
+                    "category": "仓储"
+                  },
+                  {
+                    "name": "电子面单",
+                    "category": "快递"
+                  }
+                ],
+                "knownProducts": [
+                  "时效快递服务",
+                  "物流仓储服务",
+                  "代收货款服务",
+                  "保价服务",
+                  "签单返还服务",
+                  "电子面单",
+                  "国际快递服务",
+                  "航空货运业务"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "圆通速递更接近“小基数、高弹性”的事件期权，而不是当前利润主线。国际快递产品占收入的0.83%，公司在产业链中的具体抓手是：事件主角，二季度业绩超预期增长验证行业反内卷成效。若终端需求与渗透率变化沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务增速可能很高，但较低的收入基数意味着短期贡献未必足以改变公司整体业绩。这类标的最重要的不是行业空间叙事，而是终端销量、客户采购量、公司出货和相关产品收入增速能否证明业务开始跨越规模门槛；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，估值弹性往往会先于报表弹性消退。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 3,
+        "stocks": [
+          {
+            "sourceRowNumber": 10326,
+            "stockCode": "002468.SZ",
+            "stockName": "申通快递",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "核心加盟制快递企业之一，业务量增速持续领跑，受益于行业反内卷，业绩弹性大。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002468.SZ",
+              "companyName": "申通快递",
+              "companyProfile": "公司初创于1993年，是中国率先成立的民营快递公司，开快递加盟制先河，同时也是国家5A级物流企业。公司秉承“正道经营、长期主义”的发展理念，坚定“打造中国体验领先的经济型快递”战略目标，持续引领中国快递物流业改革、创新、发展。公司继续秉承“用心服务，成就你我”的企业理念，持续推进“三年百亿”产能提升计划，加强基础设施建设。作为全站上云的快递企业，公司将进一步深化数智化运营，精细化管理，改善时效及服务质量，推动全链路降本增效，以科技和人才为推动力，全力提升中国快递业特别是经济型快递的服务能力和水平。",
+              "profileSummary": "公司初创于1993年，是中国率先成立的民营快递公司，开快递加盟制先河，同时也是国家5A级物流企业。公司秉承“正道经营、长期主义”的发展理念，坚定“打造中国体验领先的经济型快递”战略目标，持续引领中国快递物流业改革、创新、发展。",
+              "majorProducts": "“申咚咚”服务、24小时件、48小时件、72小时件、仓储、承诺达、次晨递、代收货款、当日递、国际小包、国际邮政包裹、海外仓、冷链、汽运时效产品、文件袋、限时递、信封、预售下沉、纸箱、重点城市间24小时件",
+              "revenueComposition": "经济快递:89.05%;时效快递:9.65%;其他业务:1.3%",
+              "revenueSegments": [
+                {
+                  "name": "经济快递",
+                  "sharePct": 89.05,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "时效快递",
+                  "sharePct": 9.65,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "国际快递服务",
+                    "category": "跨境物流"
+                  },
+                  {
+                    "name": "时效快递服务",
+                    "category": "即时物流"
+                  },
+                  {
+                    "name": "代收货款服务",
+                    "category": "综合贸易物流"
+                  },
+                  {
+                    "name": "保价服务",
+                    "category": "综合贸易物流"
+                  },
+                  {
+                    "name": "冷链物流",
+                    "category": "冷链物流"
+                  },
+                  {
+                    "name": "同城配送服务",
+                    "category": "同城货运"
+                  }
+                ],
+                "knownProducts": [
+                  "时效快递服务",
+                  "同城配送服务",
+                  "物流仓储服务",
+                  "代收货款服务",
+                  "保价服务",
+                  "冷链物流",
+                  "电子面单",
+                  "国际快递服务"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "申通快递已经参与事件相关业务，但收入基数仍小：时效快递占收入的9.65%，说明公司已有业务抓手，但“核心加盟制快递企业之一，业务量增速持续领跑，受益于行业反内卷，业绩弹性大”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于事件能否转化为可确认的经营增量能否驱动“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”，从而推动业务跨过小规模阶段。在此之前，订单、收入确认、产品结构和毛利率变化比总收入增速更值得跟踪；若事件关联停留在主题层面，未形成可持续订单或利润贡献，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 10327,
+            "stockCode": "002120.SZ",
+            "stockName": "韵达股份",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "核心加盟制快递企业之一，正积极调整经营策略以应对市场变化，受益于行业价格修复。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002120.SZ",
+              "companyName": "韵达股份",
+              "companyProfile": "公司创建于1999年8月8日，总部位于上海，致力于成为领先的综合快递物流服务商。公司以“传爱心，送温暖，更便利”为企业使命，努力实现“成为受人尊敬、值得信赖、服务更好的一流快递企业”愿景。公司经营以快递业务为主业，同时还包括供应链、国际、冷链等丰富的周边产品线，持续打造综合快递物流服务提供商。服务网络覆盖全国31个省(区、市)及港澳台地区，通达全球30余个国家和地区，为国内外客户提供优质的生活方式体验。2020年，递送包裹超140亿件，同比增速达41%，市场份额近17%。在规模快递企业中，在快件时限、客户满意度等方面名列前茅。公司是入选上海首批44家民营企业总部名单的企业之一，先后获得“2014-2015年度全国交通运输行业文明单位”等荣誉。在资本市场，被纳入MSCI中国指数，荣登“2018年中联百强”排行榜前三甲。还入围中华全国工商业联合会发布的“2020中国服务业民营企业100强”和“2020中国民营企业500强”名单。在发展的过程中，始终坚持“以客户为中心”，利用科技的力量推动高质量发展，通过大数据、信息化、智能化技术，打造智慧物流，构建以快递为核心的生态圈，为实现具有国际竞争力的全球化综合快递物流服务商而不懈努力。",
+              "profileSummary": "公司创建于1999年8月8日，总部位于上海，致力于成为领先的综合快递物流服务商。公司经营以快递业务为主业，同时还包括供应链、国际、冷链等丰富的周边产品线，持续打造综合快递物流服务提供商。",
+              "majorProducts": "保价业务、标准快递服务、仓配、承诺达、次晨达、次日达、代收货款、当日达、到付件快递服务、电子商务快递服务、贵重物品快递服务、国际业务、门店调拨、逆向物流、企业项目快递服务、签单返还、签单返回服务、隐私面单、预约配送、云便利、韵达门店驿站",
+              "revenueComposition": "派送服务收入:64.29%;中转费收入:31.16%;面单销售收入:3.11%;其他:1.24%;物料销售收入:0.14%;特许收入:0.06%",
+              "revenueSegments": [
+                {
+                  "name": "派送服务收入",
+                  "sharePct": 64.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "中转费收入",
+                  "sharePct": 31.16,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "面单销售收入",
+                  "sharePct": 3.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "物料销售收入",
+                  "sharePct": 0.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特许收入",
+                  "sharePct": 0.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "国际快递服务",
+                    "category": "跨境物流"
+                  },
+                  {
+                    "name": "时效快递服务",
+                    "category": "即时物流"
+                  },
+                  {
+                    "name": "代收货款服务",
+                    "category": "综合贸易物流"
+                  },
+                  {
+                    "name": "保价服务",
+                    "category": "综合贸易物流"
+                  },
+                  {
+                    "name": "同城配送服务",
+                    "category": "同城货运"
+                  },
+                  {
+                    "name": "物流仓储服务",
+                    "category": "仓储"
+                  }
+                ],
+                "knownProducts": [
+                  "时效快递服务",
+                  "同城配送服务",
+                  "物流仓储服务",
+                  "代收货款服务",
+                  "保价服务",
+                  "电子面单",
+                  "国际快递服务"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "韵达股份与新闻之间有明确产品抓手：国际快递服务、时效快递服务、代收货款服务，对应核心加盟制快递企业之一，正积极调整经营策略以应对市场变化，受益于行业价格修复。收入主体目前是派送服务收入（64.29%）、中转费收入（31.16%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变供需缺口与产品价格预期，随后要经过“供需变化先影响报价和订单排期，再通过销量、产能利用率和单位盈利进入报表”才能进入利润表。产品报价、订单排期、产销率和毛利率若形成连续改善，相关产品对整体经营的贡献会逐步提高；若供给恢复、库存反转或终端需求转弱使价格弹性快速收敛，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 10330,
+            "stockCode": "002352.SZ",
+            "stockName": "顺丰控股",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内综合物流龙头，时效件优势稳固，同时积极拓展国际及供应链业务。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002352.SZ",
+              "companyName": "顺丰控股",
+              "companyProfile": "公司围绕物流生态圈，持续完善服务能力与产品体系，业务拓展至时效快递、经济快递、快运、冷运及医药、同城即时配送、国际快递、国际货运及代理、供应链等物流板块，能够为客户提供国内及国际端到端一站式供应链服务。同时，依托领先的科技研发能力，公司致力于构建数智化供应链生态，以技术赋能客户打造安全高效的智慧供应链体系，成为备受尊重全球领先的数智物流解决方案服务商。公司坚持可持续健康发展和前瞻长远的战略部署，这使得公司在过去三十二年的发展历程中，能够准确抓住机遇，不断扩大规模，持续领跑行业，成为中国及亚洲物流行业中的领军企业，公司的旗舰产品时效快递占据国内绝对领先的市场份额，并依托时效快递网络的资源与能力，快速高效地拓展至更多物流服务细分领域，从轻小包裹到大型重货，从标准快递到定制化供应链服务，从中国市场拓展到亚洲乃至全球市场。公司于国内的快递、快运、冷运、同城即时配送2及供应链3业务五个细分领域，以及于亚洲的快递、快运、同城即时配送2及国际业务4四个领域均处于细分市场第一的领先地位。",
+              "profileSummary": "公司围绕物流生态圈，持续完善服务能力与产品体系，业务拓展至时效快递、经济快递、快运、冷运及医药、同城即时配送、国际快递、国际货运及代理、供应链等物流板块，能够为客户提供国内及国际端到端一站式供应链服务。公司坚持可持续健康发展和前瞻长远的战略部署，这使得公司在过去三十二年的发展历程中，能够准确抓住机遇，不断扩大规模，持续领跑行业，成为中国及亚洲物流行业中的领军企业，公司的旗舰产品时效快递占据国内绝对领先的市场份额，并依托时效快递网络的资…",
+              "majorProducts": "仓储服务、快递服务、冷运服务",
+              "revenueComposition": "国内时效产品:42.52%;供应链:23.66%;快运:13.67%;经济:10.4%;同城配:4.13%;冷运及医药:3.44%;供应链及国际-其他:1.11%;速运-其他:0.56%;未分配部分:0.47%;同城即时配送-其他:0.05%",
+              "revenueSegments": [
+                {
+                  "name": "国内时效产品",
+                  "sharePct": 42.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "供应链",
+                  "sharePct": 23.66,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "快运",
+                  "sharePct": 13.67,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "经济",
+                  "sharePct": 10.4,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "同城配",
+                  "sharePct": 4.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "冷运及医药",
+                  "sharePct": 3.44,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "供应链及国际-其他",
+                  "sharePct": 1.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "速运-其他",
+                  "sharePct": 0.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "未分配部分",
+                  "sharePct": 0.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "同城即时配送-其他",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "国际快递服务",
+                    "category": "跨境物流"
+                  },
+                  {
+                    "name": "无人机快递服务",
+                    "category": "即时物流"
+                  },
+                  {
+                    "name": "时效快递服务",
+                    "category": "即时物流"
+                  },
+                  {
+                    "name": "经济快递服务",
+                    "category": "快递"
+                  },
+                  {
+                    "name": "代收货款服务",
+                    "category": "综合贸易物流"
+                  },
+                  {
+                    "name": "保价服务",
+                    "category": "综合贸易物流"
+                  }
+                ],
+                "knownProducts": [
+                  "无人机快递服务",
+                  "时效快递服务",
+                  "同城配送服务",
+                  "医药物流",
+                  "物流仓储服务",
+                  "代收货款服务",
+                  "保价服务",
+                  "冷链物流"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "对顺丰控股而言，国内综合物流龙头，时效件优势稳固，同时积极拓展国际及供应链业务并非纯概念映射，因为供应链（23.66%）、经济（10.4%）合计约占收入的34.06%。这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。本次事件改变的是事件能否转化为可确认的经营增量，传导效率取决于“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”。市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，两者需要由订单、收入确认、产品结构和毛利率变化来区分；若事件关联停留在主题层面，未形成可持续订单或利润贡献，重估逻辑会被削弱。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "13条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "2只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }

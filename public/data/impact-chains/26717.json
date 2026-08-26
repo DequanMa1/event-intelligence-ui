@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26717",
@@ -9,9 +9,9 @@
     "date": "2026-07-01"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 8,
-    "mappedStockCount": 5,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 5,
+    "mappedStockCount": 2,
     "unmappedStockCount": 3,
     "stocks": [
       {
@@ -21,7 +21,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 10
+        "anchorProductCount": 2
       },
       {
         "sourceRowNumber": 10955,
@@ -30,7 +30,7 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 9
+        "anchorProductCount": 1
       },
       {
         "sourceRowNumber": 10964,
@@ -38,8 +38,8 @@
         "stockName": "光智科技",
         "rating": "★★★★☆",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 5
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 10965,
@@ -47,40 +47,13 @@
         "stockName": "宿迁联盛",
         "rating": "★★★★",
         "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 7
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
         "sourceRowNumber": 10966,
         "stockCode": "600141.SH",
         "stockName": "兴发集团",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": true,
-        "anchorProductCount": 21
-      },
-      {
-        "sourceRowNumber": 10967,
-        "stockCode": "AXTI.US",
-        "stockName": "AXT Inc",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 10968,
-        "stockCode": "5802.T",
-        "stockName": "住友电工",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 10969,
-        "stockCode": "未上市",
-        "stockName": "JX金属",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -89,27 +62,27 @@
     ],
     "unmappedStocks": [
       {
-        "sourceRowNumber": 10967,
-        "stockCode": "AXTI.US",
-        "stockName": "AXT Inc",
+        "sourceRowNumber": 10964,
+        "stockCode": "300489.SZ",
+        "stockName": "光智科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
+      },
+      {
+        "sourceRowNumber": 10965,
+        "stockCode": "603065.SH",
+        "stockName": "宿迁联盛",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
         "anchorProductCount": 0
       },
       {
-        "sourceRowNumber": 10968,
-        "stockCode": "5802.T",
-        "stockName": "住友电工",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 10969,
-        "stockCode": "未上市",
-        "stockName": "JX金属",
+        "sourceRowNumber": 10966,
+        "stockCode": "600141.SH",
+        "stockName": "兴发集团",
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": false,
@@ -121,96 +94,12 @@
     "candidateCoreProductCount": 49,
     "selectedCoreProductCount": 2,
     "selectedCompanyCoreProductCount": 2,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 5,
-    "downstreamCandidateCount": 26,
-    "shownUpstreamCount": 5,
-    "shownDownstreamCount": 14
+    "level7ProductCount": 64,
+    "relatedIndustryCandidateCount": 26,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1114000043",
-        "name": "锌精矿",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1140005159",
-        "name": "电解锌",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      },
-      {
-        "code": "1114000048",
-        "name": "粗铅",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000609"
-        ],
-        "linkedCoreProductNames": [
-          "电解铅"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1114000045",
-        "name": "精铅",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000609"
-        ],
-        "linkedCoreProductNames": [
-          "电解铅"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      },
-      {
-        "code": "1130000608",
-        "name": "铅精矿",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1130000609"
-        ],
-        "linkedCoreProductNames": [
-          "电解铅"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1137000010",
         "name": "锌锭",
@@ -236,23 +125,21 @@
           "name": "锌锭"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 2,
         "stocks": [
           {
             "stockCode": "600301.SH",
             "stockName": "华锡有色",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           },
           {
             "stockCode": "600961.SH",
             "stockName": "株冶集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 2,
-        "downstreamCount": 18,
         "relevanceScore": 12,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -287,18 +174,15 @@
           "name": "电解铅"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "600961.SH",
             "stockName": "株冶集团",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 3,
-        "downstreamCount": 9,
         "relevanceScore": 12,
         "strongRelevanceScore": 6,
         "matchedTerms": [
@@ -309,232 +193,693 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140165635",
-        "name": "黄铜管",
-        "anchorCount": 2,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1130000609",
-          "1137000010"
+        "code": "1210000329",
+        "name": "其他小金属及合金",
+        "description": "该行业涵盖钨、钼、锑等小众金属及其合金。因具备稀缺性及在军工、新能源、半导体等领域的关键应用，受地缘政治与供需错配影响大。其战略价值凸显，价格弹性高，常随政策变动或技术突破成为市场炒作热点。",
+        "stockCount": 5,
+        "starWeight": 21,
+        "level7ProductCount": 4,
+        "relevanceScore": 84,
+        "stocks": [
+          {
+            "stockCode": "002428.SZ",
+            "stockName": "云南锗业",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000960.SZ",
+            "stockName": "锡业股份",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600301.SH",
+            "stockName": "华锡有色",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000060.SZ",
+            "stockName": "中金岭南",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "电解铅",
-          "锌锭"
+        "products": [
+          {
+            "code": "1140200573",
+            "name": "磷化铟单晶片",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 磷化铟单晶片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002428.SZ",
+                "stockName": "云南锗业",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "磷化铟"
+            ]
+          },
+          {
+            "code": "1114000075",
+            "name": "精锑",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 精锑",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600301.SH",
+                "stockName": "华锡有色",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1114000068",
+            "name": "铟锭",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 铟锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "000960.SZ",
+                "stockName": "锡业股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600301.SH",
+                "stockName": "华锡有色",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000060.SZ",
+                "stockName": "中金岭南",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140217994",
+            "name": "镉锭",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 镉锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 2
-        }
+        "rank": 1
       },
       {
-        "code": "1114000093",
-        "name": "氧化锌",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
+        "code": "1200001164",
+        "name": "工业品贸易",
+        "description": "工业品贸易指B2B模式下MRO等物资的流通服务。因受益于制造业升级、供应链数字化及国产替代，具备规模效应与效率提升逻辑，成为资本市场关注焦点，旨在通过整合长尾需求降低企业采购成本。",
+        "stockCount": 5,
+        "starWeight": 19,
+        "level7ProductCount": 4,
+        "relevanceScore": 64,
+        "stocks": [
+          {
+            "stockCode": "000960.SZ",
+            "stockName": "锡业股份",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600141.SH",
+            "stockName": "兴发集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000060.SZ",
+            "stockName": "中金岭南",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600497.SH",
+            "stockName": "驰宏锌锗",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "锌锭"
+        "products": [
+          {
+            "code": "1140062786",
+            "name": "有色金属贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 有色金属贸易 > 有色金属贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000060.SZ",
+                "stockName": "中金岭南",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140127795",
+            "name": "电解铜贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 有色金属贸易 > 电解铜贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000960.SZ",
+                "stockName": "锡业股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600497.SH",
+                "stockName": "驰宏锌锗",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1114000203",
+            "name": "锡锭贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 有色金属贸易 > 锡锭贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000960.SZ",
+                "stockName": "锡业股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140078843",
+            "name": "化工产品贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 化工产品贸易 > 化工产品贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600141.SH",
+                "stockName": "兴发集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 18,
+    "mappedStockCount": 13,
+    "unmappedStockCount": 5,
+    "level7ProductCount": 64,
+    "candidateIndustryCount": 26,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 10953,
+        "stockCode": "000960.SZ",
+        "stockName": "锡业股份",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1114000042",
-        "name": "锌合金",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10954,
+        "stockCode": "600961.SH",
+        "stockName": "株冶集团",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 9
       },
       {
-        "code": "1140035392",
-        "name": "黄铜",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "sourceRowNumber": 10955,
+        "stockCode": "600301.SH",
+        "stockName": "华锡有色",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 8
       },
       {
-        "code": "1140034047",
-        "name": "不锈钢丝",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10956,
+        "stockCode": "600497.SH",
+        "stockName": "驰宏锌锗",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 13
       },
       {
-        "code": "1140075729",
-        "name": "仪器售后维修服务",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10957,
+        "stockCode": "000060.SZ",
+        "stockName": "中金岭南",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 12
       },
       {
-        "code": "1140127397",
-        "name": "方矩镀锌管",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10963,
+        "stockCode": "002428.SZ",
+        "stockName": "云南锗业",
+        "rating": "★★★★★",
+        "filledStars": 5,
+        "mapped": true,
+        "anchorProductCount": 1
       },
       {
-        "code": "1113000030",
-        "name": "热浸镀锌钢管",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10964,
+        "stockCode": "300489.SZ",
+        "stockName": "光智科技",
+        "rating": "★★★★☆",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1114000041",
-        "name": "热镀锌",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10965,
+        "stockCode": "603065.SH",
+        "stockName": "宿迁联盛",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140132834",
-        "name": "电镀锌钢板",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10966,
+        "stockCode": "600141.SH",
+        "stockName": "兴发集团",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 18
       },
       {
-        "code": "1140135981",
-        "name": "金属锌锭贸易",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10970,
+        "stockCode": "600531.SH",
+        "stockName": "豫光金铅",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
       },
       {
-        "code": "1140061264",
-        "name": "铝合金管",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10971,
+        "stockCode": "002674.SZ",
+        "stockName": "兴业科技",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1140103117",
-        "name": "锌制品",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
-        ],
-        "linkedCoreProductNames": [
-          "锌锭"
-        ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "sourceRowNumber": 10972,
+        "stockCode": "002975.SZ",
+        "stockName": "博杰股份",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
       },
       {
-        "code": "1114000065",
-        "name": "锌基中间合金",
-        "anchorCount": 1,
-        "stockCount": 2,
-        "linkedCoreProductCodes": [
-          "1137000010"
+        "sourceRowNumber": 10973,
+        "stockCode": "600206.SH",
+        "stockName": "有研新材",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 10978,
+        "stockCode": "688498.SH",
+        "stockName": "源杰科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 10980,
+        "stockCode": "000711.SZ",
+        "stockName": "ST京蓝",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 10981,
+        "stockCode": "603588.SH",
+        "stockName": "高能环境",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 5
+      },
+      {
+        "sourceRowNumber": 10982,
+        "stockCode": "301500.SZ",
+        "stockName": "飞南资源",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 10983,
+        "stockCode": "300187.SZ",
+        "stockName": "永清环保",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": false,
+        "anchorProductCount": 0
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1210000329",
+        "name": "其他小金属及合金",
+        "description": "该行业涵盖钨、钼、锑等小众金属及其合金。因具备稀缺性及在军工、新能源、半导体等领域的关键应用，受地缘政治与供需错配影响大。其战略价值凸显，价格弹性高，常随政策变动或技术突破成为市场炒作热点。",
+        "stockCount": 5,
+        "starWeight": 21,
+        "level7ProductCount": 4,
+        "relevanceScore": 84,
+        "stocks": [
+          {
+            "stockCode": "002428.SZ",
+            "stockName": "云南锗业",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "000960.SZ",
+            "stockName": "锡业股份",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600301.SH",
+            "stockName": "华锡有色",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000060.SZ",
+            "stockName": "中金岭南",
+            "rating": "★★★",
+            "filledStars": 3
+          }
         ],
-        "linkedCoreProductNames": [
-          "锌锭"
+        "products": [
+          {
+            "code": "1140200573",
+            "name": "磷化铟单晶片",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 磷化铟单晶片",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "002428.SZ",
+                "stockName": "云南锗业",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 8,
+            "matchedTerms": [
+              "磷化铟"
+            ]
+          },
+          {
+            "code": "1114000075",
+            "name": "精锑",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 精锑",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600301.SH",
+                "stockName": "华锡有色",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          },
+          {
+            "code": "1114000068",
+            "name": "铟锭",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 铟锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 4,
+            "stocks": [
+              {
+                "stockCode": "000960.SZ",
+                "stockName": "锡业股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600301.SH",
+                "stockName": "华锡有色",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000060.SZ",
+                "stockName": "中金岭南",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140217994",
+            "name": "镉锭",
+            "hierarchyPath": "有色金属 > 小金属 > 其他小金属 > 其他小金属及合金 > 其他小金属及合金 > 镉锭",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 0,
-          "directionalCompletion": 1
-        }
+        "rank": 1
+      },
+      {
+        "code": "1200001164",
+        "name": "工业品贸易",
+        "description": "工业品贸易指B2B模式下MRO等物资的流通服务。因受益于制造业升级、供应链数字化及国产替代，具备规模效应与效率提升逻辑，成为资本市场关注焦点，旨在通过整合长尾需求降低企业采购成本。",
+        "stockCount": 5,
+        "starWeight": 19,
+        "level7ProductCount": 4,
+        "relevanceScore": 64,
+        "stocks": [
+          {
+            "stockCode": "000960.SZ",
+            "stockName": "锡业股份",
+            "rating": "★★★★★",
+            "filledStars": 5
+          },
+          {
+            "stockCode": "600141.SH",
+            "stockName": "兴发集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★★",
+            "filledStars": 4
+          },
+          {
+            "stockCode": "000060.SZ",
+            "stockName": "中金岭南",
+            "rating": "★★★",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "600497.SH",
+            "stockName": "驰宏锌锗",
+            "rating": "★★★☆",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140062786",
+            "name": "有色金属贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 有色金属贸易 > 有色金属贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "600961.SH",
+                "stockName": "株冶集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              },
+              {
+                "stockCode": "000060.SZ",
+                "stockName": "中金岭南",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140127795",
+            "name": "电解铜贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 有色金属贸易 > 电解铜贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 2,
+            "stocks": [
+              {
+                "stockCode": "000960.SZ",
+                "stockName": "锡业股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              },
+              {
+                "stockCode": "600497.SH",
+                "stockName": "驰宏锌锗",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1114000203",
+            "name": "锡锭贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 有色金属贸易 > 锡锭贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "000960.SZ",
+                "stockName": "锡业股份",
+                "rating": "★★★★★",
+                "filledStars": 5
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140078843",
+            "name": "化工产品贸易",
+            "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 化工产品贸易 > 化工产品贸易",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "600141.SH",
+                "stockName": "兴发集团",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 4,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -549,10 +894,1637 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 32,
+    "eligibleSourceRowCount": 18,
+    "totalStockCount": 18,
+    "groupCount": 3,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 8,
+    "excludedNonAShareCount": 6,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 18,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 5,
+        "rating": "★★★★★",
+        "name": "核心强相关组合",
+        "relevance": "最强相关",
+        "stockCount": 2,
+        "stocks": [
+          {
+            "sourceRowNumber": 10953,
+            "stockCode": "000960.SZ",
+            "stockName": "锡业股份",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "全球最大的原生铟生产基地，铟资源储量全球第一",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000960.SZ",
+              "companyName": "锡业股份",
+              "companyProfile": "公司是云南锡业集团(控股)有限责任公司控股的国有上市公司。1998年，经云南省人民政府批准，由云南锡业公司、个旧锡都有色金属加工厂、个旧银冠锡工艺美术厂、个旧锡资工业公司、个旧聚源工矿公司作为发起人，以发起方式设立。1999年10月经中国证券监督管理委员会批准，首次向社会公众发行人民币普通股，并于2000年2月在深圳证券交易所挂牌上市，是A股唯一的锡全产业链上市公司。公司具有集锡、铟、锌、铜等有色金属勘探、开采、选矿和冶炼等全产业链供应链一体化的产业格局，锡、铟资源储量均居全球第一。公司是世界锡行业的龙头企业，拥有中国最大的锡生产、加工基地，拥有世界上最长、最完整的锡产业链，代表着世界锡工业的领先水平。公司主要产品有锡锭、阴极铜、锌锭、压铸锌合金、铟锭，重要参股企业云锡新材料有限公司拥有锡材及锡化工产品等。在伦敦金属交易所注册的“YT”商标是国际知名品牌，自2005年以来锡产品销量稳居全球第一。",
+              "profileSummary": "1998年，经云南省人民政府批准，由云南锡业公司、个旧锡都有色金属加工厂、个旧银冠锡工艺美术厂、个旧锡资工业公司、个旧聚源工矿公司作为发起人，以发起方式设立。公司具有集锡、铟、锌、铜等有色金属勘探、开采、选矿和冶炼等全产业链供应链一体化的产业格局，锡、铟资源储量均居全球第一。",
+              "majorProducts": "锌锭、压铸锌合金、阴极铜、云锡铋锭、云锡焊锡锭、云锡金锭、云锡铅锭、云锡铜精矿、云锡锡锭及锡产品、云锡锡铅焊料、云锡铟锭、云锡银锭",
+              "revenueComposition": "锡锭:44.38%;铜产品:21.11%;其他:9.49%;铜产品(贸易):7.49%;锌产品:6.28%;锡锭(贸易):6.12%;锡材产品:2.54%;贸易-其他产品:2.24%;其他业务:0.35%",
+              "revenueSegments": [
+                {
+                  "name": "锡锭",
+                  "sharePct": 44.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜产品",
+                  "sharePct": 21.11,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜产品(贸易)",
+                  "sharePct": 7.49,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "锌产品",
+                  "sharePct": 6.28,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锡锭(贸易)",
+                  "sharePct": 6.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锡材产品",
+                  "sharePct": 2.54,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贸易-其他产品",
+                  "sharePct": 2.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.35,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "电解铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "锌锭",
+                    "category": "锌冶炼"
+                  },
+                  {
+                    "name": "电解铜贸易",
+                    "category": "有色金属贸易"
+                  },
+                  {
+                    "name": "铟锭",
+                    "category": "其他小金属及合金"
+                  },
+                  {
+                    "name": "锡基焊料",
+                    "category": "锡及锡合金"
+                  },
+                  {
+                    "name": "锡锭",
+                    "category": "锡及锡合金"
+                  }
+                ],
+                "knownProducts": [
+                  "电解铜贸易",
+                  "锡锭贸易",
+                  "铟锭",
+                  "锡基焊料",
+                  "锡锭",
+                  "锡阳极",
+                  "锌锭",
+                  "电解铜"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "锡业股份与事件存在真实业务交集：公司已有电解铜、锌锭、电解铜贸易，与全球最大的原生铟生产基地，铟资源储量全球第一所处的产业环节一致。铜产品（21.11%）、铜产品(贸易)（7.49%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响终端需求与渗透率变化，只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，才会形成可确认的收入和利润增量。终端销量、客户采购量、公司出货和相关产品收入增速能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 10963,
+            "stockCode": "002428.SZ",
+            "stockName": "云南锗业",
+            "rating": "★★★★★",
+            "filledStars": 5,
+            "reason": "国内磷化铟衬底龙头，是少数能量产磷化铟晶片的企业，直接受益于光模块需求爆发和国产替代",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002428.SZ",
+              "companyName": "云南锗业",
+              "companyProfile": "公司是集锗矿开采、精深加工和研发为一体的、锗产业链较为完整的高新技术企业，具有40余年的锗生产历史。公司主要业务为锗矿开采、火法富集、湿法提纯、区熔精炼、精深加工及研究开发。目前公司矿山开采的矿石及粗加工产品不对外销售，仅作为公司及子公司下游加工的原料。公司目前材料级锗产品主要为锗锭(金属锗)、二氧化锗；深加工方面，光伏级锗产品主要为太阳能锗晶片，红外级锗产品主要为红外级锗单晶及毛坯(光学元件)、锗镜片、镜头、红外热像仪、光学系统，光纤级锗产品为光纤用四氯化锗，化合物半导体材料主要为砷化镓晶片、磷化铟晶片。公司产品主要运用包括红外光电、太阳能电池、光纤通讯、发光二极管、垂直腔面发射激光器(VCSEL)、大功率激光器、光通信用激光器和探测器等领域。公司拥有全资和控股子公司8家，下属企业分布在云南临沧、云南昆明、湖北武汉等地。公司于2004年通过了ISO9001国际质量管理体系认证，于2015年通过了ISO14001环境管理体系ISO18001职业健康安全体系认证。是2008年云南省第一批认定的“高新技术企业”和“国家火炬计划重点高新技术企业”，是2010年国家科学技术部认定的“临沧国家锗材料高新技术产业化基地骨干企业”。至2016年底，公司已拥有10大类产品：高纯二氧化锗、有机锗、区熔锗、红外锗光学元件、红外热像仪整机、太阳能电池用锗单晶及晶片、高效聚光太阳电池模组、光纤四氯化锗、高纯度砷化镓单晶及晶片、磷化铟单晶及晶片。",
+              "profileSummary": "目前公司矿山开采的矿石及粗加工产品不对外销售，仅作为公司及子公司下游加工的原料。公司目前材料级锗产品主要为锗锭(金属锗)、二氧化锗；深加工方面，光伏级锗产品主要为太阳能锗晶片，红外级锗产品主要为红外级锗单晶及毛坯(光学元件)、锗镜片、镜头、红外热像仪、光学系统，光纤级锗产品为光纤用四氯化锗，化合物半导体材料主要为砷化镓晶片、磷化铟晶片。",
+              "majorProducts": "光纤级四氯化锗、红外级锗单晶、毛坯（光学元件）、红外热像仪、磷化铟晶片、砷化镓晶片、太阳能电池用锗单晶片、锗锭、锗镜片、镜头",
+              "revenueComposition": "材料系锗产品:34.11%;光纤级锗产品:18.75%;光伏级锗产品:18.5%;化合物半导体材料:12.93%;红外系锗产品:11.36%;其他:4.34%",
+              "revenueSegments": [
+                {
+                  "name": "材料系锗产品",
+                  "sharePct": 34.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光纤级锗产品",
+                  "sharePct": 18.75,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "光伏级锗产品",
+                  "sharePct": 18.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "化合物半导体材料",
+                  "sharePct": 12.93,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "红外系锗产品",
+                  "sharePct": 11.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 4.34,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "磷化铟单晶片",
+                    "category": "其他小金属及合金"
+                  }
+                ],
+                "knownProducts": [
+                  "磷化铟单晶片",
+                  "二氧化锗",
+                  "区熔锗锭",
+                  "四氯化锗",
+                  "太阳能电池用锗单晶片",
+                  "锗单晶",
+                  "红外热像仪",
+                  "红外镜头"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "云南锗业实际经营中已有磷化铟单晶片，与事件指向的国内磷化铟衬底龙头，是少数能量产磷化铟晶片的企业，直接受益于光模块需求爆发和国产替代能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在材料系锗产品（34.11%）、光纤级锗产品（18.75%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善商业化进度和订单兑现，需要沿“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”进入经营结果。客户认证、新增订单、交付节奏、相关业务收入和毛利率将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若客户验证或交付节奏低于预期，订单停留在小批量阶段，产品存在不等于利润一定增加。"
+          }
+        ]
+      },
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 10954,
+            "stockCode": "600961.SH",
+            "stockName": "株冶集团",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "国内铅锌冶炼龙头，综合回收铟等稀贵金属",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600961.SH",
+              "companyName": "株冶集团",
+              "companyProfile": "公司源于1956年始建的株洲冶炼厂，是国家“一五”计划第一批重点建设企业，2004年在上海证券交易所上市，2009年并入中国五矿，成为央企骨干子企业。株冶集团是一家拥有铅锌矿产资源和采选、黄金白银和铅锌冶炼的全产业链公司。公司具备86万吨铅锌铜采选、68万吨锌产品、10万吨铅冶炼的生产能力，并拥有4500公斤黄金、470吨白银的生产能力。公司“火炬”“水口山”商标为中国驰名商标，所产锌锭、铅锭、银锭为伦敦金属交易所和上交所注册品牌，也是国家出口免检产品。",
+              "profileSummary": "株冶集团是一家拥有铅锌矿产资源和采选、黄金白银和铅锌冶炼的全产业链公司。公司具备86万吨铅锌铜采选、68万吨锌产品、10万吨铅冶炼的生产能力，并拥有4500公斤黄金、470吨白银的生产能力。",
+              "majorProducts": "火炬铋锭、火炬海绵铂、火炬海绵钯、火炬金锭、火炬硫酸、火炬铅锭、火炬锌锭、火炬氧化钴、火炬银锭",
+              "revenueComposition": "锌产品:56.66%;金锭:17.92%;银锭:12.39%;铅产品:7.63%;其他:2.41%;硫酸:1.38%;铜精矿及含铜物料:0.99%;铟锭:0.42%;镉锭:0.14%;自营贸易:0.05%",
+              "revenueSegments": [
+                {
+                  "name": "锌产品",
+                  "sharePct": 56.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "金锭",
+                  "sharePct": 17.92,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "银锭",
+                  "sharePct": 12.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铅产品",
+                  "sharePct": 7.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 2.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硫酸",
+                  "sharePct": 1.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铜精矿及含铜物料",
+                  "sharePct": 0.99,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铟锭",
+                  "sharePct": 0.42,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "镉锭",
+                  "sharePct": 0.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "自营贸易",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "锌锭",
+                    "category": "锌冶炼"
+                  },
+                  {
+                    "name": "电解铅",
+                    "category": "铅冶炼"
+                  },
+                  {
+                    "name": "有色金属贸易",
+                    "category": "有色金属贸易"
+                  },
+                  {
+                    "name": "白银",
+                    "category": "白银产品"
+                  },
+                  {
+                    "name": "金锭",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "铜精矿",
+                    "category": "铜矿采选"
+                  }
+                ],
+                "knownProducts": [
+                  "工业硫酸",
+                  "有色金属贸易",
+                  "铟锭",
+                  "镉锭",
+                  "电解铅",
+                  "锌锭",
+                  "锌合金",
+                  "白银"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "株冶集团在事件链条中的位置是：国内铅锌冶炼龙头，综合回收铟等稀贵金属；铜精矿及含铜物料占收入的0.99%，目前仍是较小的收入来源。因此，本次事件首先改变的可能是市场对业务上限的估计，随后才是终端需求与渗透率变化经由“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”带来的实际利润。小基数提供增速弹性，也放大了预期与兑现之间的落差。终端销量、客户采购量、公司出货和相关产品收入增速若迟迟不能改善，或出现终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，这条逻辑就难以从期权走向主业。"
+          },
+          {
+            "sourceRowNumber": 10955,
+            "stockCode": "600301.SH",
+            "stockName": "华锡有色",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "广西关键矿产整合平台，是国内重要的铟生产商，并已成功研发7N级高纯铟",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600301.SH",
+              "companyName": "华锡有色",
+              "companyProfile": "公司作为广西壮族自治区人民政府直属国有大型企业广西关键金属产业发展集团有限公司控股的上市公司，是广西有色金属行业唯一国有控股上市公司。2023年，公司完成重大资产重组，正式更名为“华锡有色”，承接原集团核心主业。旗下拥有十余家分公司及子公司，主营业务涵盖有色金属勘探、开采、选矿和深加工研发，并受托管理冶炼企业，构建了从探矿、采矿、选矿到冶炼、深加工及新材料的有色金属全产业链。重组以来，公司产能持续释放，经营业绩与生产规模同步跨越，展现出强劲成长势头。公司矿山位于享有“中国锡都”美称的广西河池市南丹县，地处世界罕见的多金属群生富矿区丹池矿带，拥有得天独厚的矿产资源。依托优质资源禀赋，公司是亚洲最大的锡多金属矿选矿基地，也是国家首批矿产资源综合利用示范基地及国家铟锡锑资源综合利用示范基地，是国内主要的锡、锑金属生产企业之一。公司主要产品包括锡品、锑品、铟品、锌品、铅品、白银、黄金及高纯锑等高端新材料，广泛应用于新能源、光伏、风能、储能、军工、航空航天及智能高端制造等领域。公司深耕关键核心技术创新，坚持绿色发展与智能转型，持续推进智慧矿山和绿色矿山建设。公司搭建多个自治区级科研平台，累计授权国内发明专利百余件，参与制定多项国际、行业和团体标准。多项技术成果在同行业处于领先水平，为资源高效利用和产业高端化发展提供了坚实技术保障。此外，公司可持续发展与治理实践成效获得广泛认可，连续两年获ESG评级“A级”，并多次入选中国上市公司协会可持续发展及董事会办公室最佳实践案例等权威榜单。",
+              "profileSummary": "公司作为广西壮族自治区人民政府直属国有大型企业广西关键金属产业发展集团有限公司控股的上市公司，是广西有色金属行业唯一国有控股上市公司。旗下拥有十余家分公司及子公司，主营业务涵盖有色金属勘探、开采、选矿和深加工研发，并受托管理冶炼企业，构建了从探矿、采矿、选矿到冶炼、深加工及新材料的有色金属全产业链。",
+              "majorProducts": "铅锑精矿、锡锭、锌锭",
+              "revenueComposition": "锡锭:45.5%;铅锑精矿:17.89%;锌锭:11.59%;其他:8.86%;锌精矿:6.41%;有色金属深加工产品:4.54%;监理:2.63%;锑锭:1.5%;铟锭:1.08%",
+              "revenueSegments": [
+                {
+                  "name": "锡锭",
+                  "sharePct": 45.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铅锑精矿",
+                  "sharePct": 17.89,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "锌锭",
+                  "sharePct": 11.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 8.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锌精矿",
+                  "sharePct": 6.41,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "有色金属深加工产品",
+                  "sharePct": 4.54,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "监理",
+                  "sharePct": 2.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锑锭",
+                  "sharePct": 1.5,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "铟锭",
+                  "sharePct": 1.08,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "锌锭",
+                    "category": "锌冶炼"
+                  },
+                  {
+                    "name": "精锑",
+                    "category": "其他小金属及合金"
+                  },
+                  {
+                    "name": "铅锑精矿",
+                    "category": "锑矿采选"
+                  },
+                  {
+                    "name": "铜精矿",
+                    "category": "铜矿采选"
+                  },
+                  {
+                    "name": "铟锭",
+                    "category": "其他小金属及合金"
+                  },
+                  {
+                    "name": "锌精矿",
+                    "category": "铅锌矿采选"
+                  }
+                ],
+                "knownProducts": [
+                  "水运工程监理",
+                  "精锑",
+                  "铟锭",
+                  "锡锭",
+                  "锌锭",
+                  "锌精矿",
+                  "铜精矿",
+                  "铅锑精矿"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "华锡有色的事件逻辑具备真实业务底座，但尚不足以代表全部公司：铅锑精矿（17.89%）、锌精矿（6.41%）合计约占收入的24.3%。公司与事件的具体联系在于：广西关键矿产整合平台，是国内重要的铟生产商，并已成功研发7N级高纯铟，对应的核心变量是终端需求与渗透率变化。若这一变量沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，终端销量、客户采购量、公司出货和相关产品收入增速既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则可能令增量低于预期。"
+          },
+          {
+            "sourceRowNumber": 10964,
+            "stockCode": "300489.SZ",
+            "stockName": "光智科技",
+            "rating": "★★★★☆",
+            "filledStars": 4,
+            "reason": "通过增资收购先锐科技切入磷化铟赛道，先锐科技背靠先导集团，具备全产业链优势和较大扩产弹性",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300489.SZ",
+              "companyName": "光智科技",
+              "companyProfile": "公司是领先的、专注于光电技术的国家高新技术企业，具备光电材料生长、芯片设计、关键器件制备到系统集成的全产业链规模化生产能力，可向全球客户供应先进红外材料、精密MEMS芯片和探测器、定制机芯和镜头、多功能热像仪、个性化集成光电系统与解决方案，公司产品可广泛应用于人工智能、半导体、新材料、新能源、医疗检测、高端科学仪器、大科学装置、户外夜视、工业测温、机器视觉、物联网、环境保护、无人机载荷、自动驾驶等领域。光智科技是全球少数打通红外产业链的平台型企业，公司通过持续的技术创新，建立了丰富的产品矩阵，不断拓展红外技术应用场景，以更低的成本为客户创造价值。",
+              "profileSummary": "公司是领先的、专注于光电技术的国家高新技术企业，具备光电材料生长、芯片设计、关键器件制备到系统集成的全产业链规模化生产能力，可向全球客户供应先进红外材料、精密MEMS芯片和探测器、定制机芯和镜头、多功能热像仪、个性化集成光电系统与解决方案，公司产品可广泛应用于人工智能、半导体、新材料、新能源、医疗检测、高端科学仪器、大科学装置、户外夜视、工业测温、机器视觉、物联网、环境保护、无人机载荷、自动驾驶等领域。光智科技是全球少数打通红外产业链…",
+              "majorProducts": "机加工件、铝板材、铝棒材、铝管材、铝合金模锻件、铝型材",
+              "revenueComposition": "红外光学与激光材料:89.01%;铝合金材料及零部件:10.99%",
+              "revenueSegments": [
+                {
+                  "name": "红外光学与激光材料",
+                  "sharePct": 89.01,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铝合金材料及零部件",
+                  "sharePct": 10.99,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "硒化锌",
+                  "硫化锌",
+                  "锗单晶",
+                  "铝合金铸棒",
+                  "红外镜头"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "光智科技的事件主线是：通过增资收购先锐科技切入磷化铟赛道，先锐科技背靠先导集团，具备全产业链优势和较大扩产弹性，但当前收入结构尚未体现其重要性，收入重心仍是红外光学与激光材料（89.01%）、铝合金材料及零部件（10.99%）。因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，而不是立刻改变当期利润。要让逻辑成立，产能释放与行业供给变化需要沿“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”传导，并在在建工程转固、产能利用率、产销率、库存和产品价格上留下可核验痕迹。若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，事件相关性仍可能成立，但对公司整体业绩的解释力有限。"
+          },
+          {
+            "sourceRowNumber": 10965,
+            "stockCode": "603065.SH",
+            "stockName": "宿迁联盛",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "跨界布局磷化铟衬底，拟成立合资公司，项目团队具备深厚产业背景",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603065.SH",
+              "companyName": "宿迁联盛",
+              "companyProfile": "公司总部位于江苏宿迁生态化工科技产业园，是一家集化工研发、应用研发、生产、销售、进出口贸易、机械制造于一体的大型企业集团。公司作为全球光稳定剂的主要生产商，专注于为客户提供防老化解决方案。专业生产以光稳定剂为主的相关聚合物添加剂、化工中间体、化工环保设备等产品，以及塑料防老化解决方案和相关国内外贸易服务。产品在农膜、塑编、人造草、木塑、改性塑料、涂料等行业得到广泛应用，远销30多个国家和地区。公司已在宿迁、南充、欧洲等地建立研发场所、试验基地和营销中心，与多所高校开展产学研合作，共建国家级CNAS实验室、省博士后创新实践基地、省工程技术研究中心、省工程研究中心、省企业技术中心等研发机构。不仅如此，联盛更注重人才教育、科技、消防和环保，在公益扶贫、体育文化、党建工建等方面更是获得了诸多成绩和荣誉。荣获国家高新技术企业、国家专精特新小巨人企业、国家单项冠军企业、江苏省绿色工厂、绿色发展领军企业、潜在独角兽企业、江苏精品、宿迁市市长质量奖等荣誉。用心做助剂，同行创未来，公司以更高的品质和口碑，努力赢得更多的青睐与赞赏。追求卓越品质，创造大国品牌。“联”动生活美好，“盛”开万千纷繁。",
+              "profileSummary": "公司作为全球光稳定剂的主要生产商，专注于为客户提供防老化解决方案。专业生产以光稳定剂为主的相关聚合物添加剂、化工中间体、化工环保设备等产品，以及塑料防老化解决方案和相关国内外贸易服务。",
+              "majorProducts": "复配助剂、受阻胺光稳定剂、中间体、阻聚剂",
+              "revenueComposition": "受阻胺光稳定剂:53.58%;复配制剂:21.26%;紫外线吸收剂:13.12%;阻聚剂:5.29%;化工设备:3.87%;中间体:2.24%;其他业务:0.64%",
+              "revenueSegments": [
+                {
+                  "name": "受阻胺光稳定剂",
+                  "sharePct": 53.58,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "复配制剂",
+                  "sharePct": 21.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "紫外线吸收剂",
+                  "sharePct": 13.12,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "阻聚剂",
+                  "sharePct": 5.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "化工设备",
+                  "sharePct": 3.87,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "中间体",
+                  "sharePct": 2.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.64,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "受阻胺光稳定剂",
+                  "紫外线吸收剂(UVA)",
+                  "阻聚剂",
+                  "三丙酮胺(TAA)",
+                  "癸二酸二甲酯",
+                  "四甲基哌啶醇(TMP)",
+                  "防老化(抗UV)母粒"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "宿迁联盛当前收入集中在受阻胺光稳定剂（53.58%）、复配制剂（21.26%），而跨界布局磷化铟衬底，拟成立合资公司，项目团队具备深厚产业背景所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响终端需求与渗透率变化预期，业务端仍需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导后才能确认。终端销量、客户采购量、公司出货和相关产品收入增速如果持续改善，相关业务可能从产业布局转为实际增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 10966,
+            "stockCode": "600141.SH",
+            "stockName": "兴发集团",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "磷化工龙头，依托技术优势布局电子级红磷，并已掌握磷化铟合成技术，有望实现全产业链布局",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600141.SH",
+              "companyName": "兴发集团",
+              "companyProfile": "公司成立于1994年，注册地位于湖北省宜昌市兴山县境内，1999年在上海证券交易所上市。公司以全球领先的精细磷化工为核心，致力于绿色循环发展，是一家全球化运营企业。公司长期专注于精细化工产品开发，形成了规模大、种类全、附加值和技术含量较高的产品链，现有食品级、医药级、电子级等9个门类26个系列674个品种，是全国精细磷产品门类最全、品种最多的企业之一。近年来公司加快实施以高端新材料、新能源产业为核心的战略布局，持续加码研发投入及成果转化，全面提高资源、能源自给率，推进磷、硅、硫、盐、氟化工融合发展，形成了“资源能源为基础、精细化工为主导、关联产业相配套”的产业格局。公司是国家高新技术企业、国家科技创新示范企业，多年来始终坚持“精细化、绿色化、高端化、国际化”发展思路，持续加强自主创新能力建设，截至目前，先后组织实施了40多个国家、省市级重点科技计划项目；参与制定国际标准2项，主持和参与制定国家、行业及团体各类标准106项；截至2024年末，公司拥有专利授权1,421件，其中发明专利483件、实用新型专利938件，公司合并报表范围内高新技术企业达到15家。2024年，公司“集成电路用超高纯电子级硫酸生产关键技术及应用”荣获中国石油和化学工业联合会科技进步奖一等奖，“草甘膦连续催化合成与副产物增甘膦分离回收新技术及产业化”获湖北省科技进步二等奖，“基于乙烯基摩尔量的甲基乙烯基硅橡胶生产关键技术”获湖北省科技进步三等奖。",
+              "profileSummary": "公司长期专注于精细化工产品开发，形成了规模大、种类全、附加值和技术含量较高的产品链，现有食品级、医药级、电子级等9个门类26个系列674个品种，是全国精细磷产品门类最全、品种最多的企业之一。近年来公司加快实施以高端新材料、新能源产业为核心的战略布局，持续加码研发投入及成果转化，全面提高资源、能源自给率，推进磷、硅、硫、盐、氟化工融合发展，形成了“资源能源为基础、精细化工为主导、关联产业相配套”的产业格局。",
+              "majorProducts": "兴发二甲基亚砜、兴发黄磷、兴发磷矿石、兴发六偏磷酸钠、兴发三聚磷酸钠",
+              "revenueComposition": "特种化学品:18.27%;农药:18.18%;肥料:13.79%;矿山采选:11.96%;其他:11.5%;商贸物流:11.19%;有机硅系列:9.63%;新能源:5.49%",
+              "revenueSegments": [
+                {
+                  "name": "特种化学品",
+                  "sharePct": 18.27,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "农药",
+                  "sharePct": 18.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "肥料",
+                  "sharePct": 13.79,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "矿山采选",
+                  "sharePct": 11.96,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 11.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "商贸物流",
+                  "sharePct": 11.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "有机硅系列",
+                  "sharePct": 9.63,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "新能源",
+                  "sharePct": 5.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "107胶",
+                    "category": "硅橡胶"
+                  },
+                  {
+                    "name": "110生胶",
+                    "category": "硅橡胶"
+                  },
+                  {
+                    "name": "三聚磷酸钠",
+                    "category": "磷化物及磷酸盐"
+                  },
+                  {
+                    "name": "二甲基硅氧烷混合环体(DMC)",
+                    "category": "有机硅中间体"
+                  },
+                  {
+                    "name": "六偏磷酸钠",
+                    "category": "磷化物及磷酸盐"
+                  },
+                  {
+                    "name": "刻蚀液",
+                    "category": "刻蚀液"
+                  }
+                ],
+                "knownProducts": [
+                  "草甘膦除草剂",
+                  "草甘膦",
+                  "黄磷",
+                  "磷酸一铵",
+                  "磷酸二铵",
+                  "磷酸二氢锂",
+                  "电子级磷酸",
+                  "二甲基硅氧烷混合环体(DMC)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "兴发集团实际经营中已有107胶、110生胶、三聚磷酸钠，与事件指向的磷化工龙头，依托技术优势布局电子级红磷，并已掌握磷化铟合成技术，有望实现全产业链布局能够对应，业务联系并不因分部名称不同而消失。公司当前收入集中在特种化学品（18.27%）、农药（18.18%），相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。本次事件若改善终端需求与渗透率变化，需要沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。终端销量、客户采购量、公司出货和相关产品收入增速将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，产品存在不等于利润一定增加。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 11,
+        "stocks": [
+          {
+            "sourceRowNumber": 10956,
+            "stockCode": "600497.SH",
+            "stockName": "驰宏锌锗",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "铅锌冶炼企业，综合回收锗、铟等稀散金属，并规划高纯铟生产项目",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600497.SH",
+              "companyName": "驰宏锌锗",
+              "companyProfile": "公司是中国百家最大的有色金属冶炼企业之一，集探矿、采矿、选矿、冶炼、化工和科研为一体的国家大型企业，是我国最早从氧化铅锌矿中提取锗用于国防尖端工业建设的企业。公司主要产品有铅、锌、锗三大系列20余个品种，拥有矿山厂、麒麟厂两座自备矿山，曲靖和会泽两个生产基地，其中麒麟厂矿山资源储量大、品位高。现公司拥有“高锗沉矾液的处理方法”发明专利权等七项核心技术，铅、锌、锗系列产品覆盖我国十余个省市，“银晶”牌锗锭、“银鑫”牌锌锭、“银磊”牌粗铅、“华达”牌等多种产品多次获奖，其中“银鑫”牌锌锭为伦敦金属交易所(LME)注册商品；公司锗产量和质量则居全国同行业之首。",
+              "profileSummary": "公司是中国百家最大的有色金属冶炼企业之一，集探矿、采矿、选矿、冶炼、化工和科研为一体的国家大型企业，是我国最早从氧化铅锌矿中提取锗用于国防尖端工业建设的企业。现公司拥有“高锗沉矾液的处理方法”发明专利权等七项核心技术，铅、锌、锗系列产品覆盖我国十余个省市，“银晶”牌锗锭、“银鑫”牌锌锭、“银磊”牌粗铅、“华达”牌等多种产品多次获奖，其中“银鑫”牌锌锭为伦敦金属交易所(LME)注册商品；公司锗产量和质量则居全国同行业之首。",
+              "majorProducts": "催化剂、二氧化锗、高纯二氧化锗、高纯锌、红外镜头、红外锗片、铅锭、铅基合金、区熔锗、四氯化锗、锌锭、锌粉、锌基合金、锗单晶",
+              "revenueComposition": "锌产品:58.36%;银产品:13.38%;铅产品:10.24%;其他:9.06%;其他业务:4.14%;锌精矿:2.05%;硫酸:1.59%;硫精矿:1.18%",
+              "revenueSegments": [
+                {
+                  "name": "锌产品",
+                  "sharePct": 58.36,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "银产品",
+                  "sharePct": 13.38,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "铅产品",
+                  "sharePct": 10.24,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.06,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 4.14,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锌精矿",
+                  "sharePct": 2.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硫酸",
+                  "sharePct": 1.59,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硫精矿",
+                  "sharePct": 1.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "锌锭",
+                    "category": "锌冶炼"
+                  },
+                  {
+                    "name": "电解铅",
+                    "category": "铅冶炼"
+                  },
+                  {
+                    "name": "铅锭",
+                    "category": "铅冶炼"
+                  },
+                  {
+                    "name": "二氧化锗",
+                    "category": "锗及锗合金"
+                  },
+                  {
+                    "name": "区熔锗锭",
+                    "category": "锗及锗合金"
+                  },
+                  {
+                    "name": "四氯化锗",
+                    "category": "锗及锗合金"
+                  }
+                ],
+                "knownProducts": [
+                  "工业硫酸",
+                  "电解铜贸易",
+                  "二氧化锗",
+                  "区熔锗锭",
+                  "四氯化锗",
+                  "锗单晶",
+                  "电解铅",
+                  "铅锭"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "驰宏锌锗与新闻之间有明确产品抓手：锌锭、电解铅、铅锭，对应铅锌冶炼企业，综合回收锗、铟等稀散金属，并规划高纯铟生产项目。收入主体目前是锌产品（58.36%）、银产品（13.38%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变政策约束与需求释放节奏预期，随后要经过“政策先改变客户采购意愿或行业准入，再通过项目落地、订单转化和成本变化影响经营结果”才能进入利润表。政策细则、招投标规模、项目开工率和回款进度若形成连续改善，相关产品对整体经营的贡献会逐步提高；若政策执行弱于预期、补贴退坡或项目回款周期拉长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 10957,
+            "stockCode": "000060.SZ",
+            "stockName": "中金岭南",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "铅锌冶炼企业，将铟等战略金属的高效回收与高纯化制备列为重要发展方向",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000060.SZ",
+              "companyName": "中金岭南",
+              "companyProfile": "公司成立于1984年9月，1997年1月在深圳证券交易所挂牌上市，是以铅、锌、铜采选冶，综合回收金、银、镓、锗、铟、硒、碲、铋、铂、钯、铑等稀有稀散稀贵金属为主业的国际化全产业链资源公司，为广东省属国有独资重点企业广晟控股集团的控股上市公司。中金岭南业务范围涵盖矿山、冶炼、新材料、供应链等板块，中金岭南坚持资源为王的理念，充分利用国内国外两个市场、两种资源，通过强化内部资源勘探、实施外部资源并购，全力提升矿产资源掌控能力。目前在中国、澳大利亚、多米尼加拥有4座矿山，掌控已探明的铅、锌、铜以及“三稀”等有色金属资源金属。中金岭南坚持以“新”促质，逐“绿”而行，秉承“在资源中寻找资源”的理念，加快推动矿山、冶炼等传统产业高端化、智能化、绿色化转型升级，强化金、银、镓、锗、铟、硒、碲、铋、铂、钯、铑等“三稀”金属综合回收，培育壮大新材料、先进制造等战略性新兴产业，科学谋划未来产业，加快形成新质生产力，全力打造世界一流的多金属国际化全产业链资源公司。",
+              "profileSummary": "中金岭南业务范围涵盖矿山、冶炼、新材料、供应链等板块，中金岭南坚持资源为王的理念，充分利用国内国外两个市场、两种资源，通过强化内部资源勘探、实施外部资源并购，全力提升矿产资源掌控能力。目前在中国、澳大利亚、多米尼加拥有4座矿山，掌控已探明的铅、锌、铜以及“三稀”等有色金属资源金属。",
+              "majorProducts": "白银、粗铜、电镓、工业硫酸、黄金、硫磺、铅锭、锌锭、锌合金、阴极铜",
+              "revenueComposition": "铜冶炼产品:72.24%;铅锌冶炼产品:14.51%;精矿产品:6.2%;电池、复合材料:4.89%;有色金属贸易业务:3.81%;铝型材:0.85%;其他:0.53%;其他业务:0.49%;内部抵销:-3.52%",
+              "revenueSegments": [
+                {
+                  "name": "铜冶炼产品",
+                  "sharePct": 72.24,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铅锌冶炼产品",
+                  "sharePct": 14.51,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "精矿产品",
+                  "sharePct": 6.2,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电池、复合材料",
+                  "sharePct": 4.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "有色金属贸易业务",
+                  "sharePct": 3.81,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铝型材",
+                  "sharePct": 0.85,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.53,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.49,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "内部抵销",
+                  "sharePct": -3.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "锌锭",
+                    "category": "锌冶炼"
+                  },
+                  {
+                    "name": "电解铅",
+                    "category": "铅冶炼"
+                  },
+                  {
+                    "name": "电解铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "粗铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "有色金属贸易",
+                    "category": "有色金属贸易"
+                  },
+                  {
+                    "name": "白银",
+                    "category": "白银产品"
+                  }
+                ],
+                "knownProducts": [
+                  "工业硫酸",
+                  "硫磺",
+                  "有色金属贸易",
+                  "铟锭",
+                  "电解铅",
+                  "锌锭",
+                  "锌合金",
+                  "电解铜"
+                ],
+                "directSegmentCount": 3,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "中金岭南与事件的关系已经落在存量主业，而非远期概念：铜冶炼产品（72.24%）、铅锌冶炼产品（14.51%）合计约占收入的90.56%。公司在产业链中的具体抓手是：铅锌冶炼企业，将铟等战略金属的高效回收与高纯化制备列为重要发展方向。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 10970,
+            "stockCode": "600531.SH",
+            "stockName": "豫光金铅",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "布局泛半导体高纯金属材料，已成功制备7N级高纯铟产品",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600531.SH",
+              "companyName": "豫光金铅",
+              "companyProfile": "公司主要从事电解铅、白银、黄金等有色金属及贵金属产品的冶炼及进出口贸易。公司主要产品为电解铅及铅合金、白银、黄金、阴极铜、硫酸等。公司已通过ISO9001(2000版)质量管理体系、ISO14001环境管理体系和OHSAS18001职业健康安全管理体系、计量检测体系认证。公司先后建设了博士后科研工作站，有色金属产学研基地、铅锌行业技术开发中心等科研基地。重点突破了制约公司发展的资源、环境、循环经济等领域关键的前沿技术和关键技术，形成了高铅渣直接还原炼铅、废旧铅酸蓄电池自动分离-底吹熔炼再生铅工艺研究、底吹炉炼金银、铜锍底吹连续吹炼等一批国际领先拥有自主知识产权的核心技术，引领了行业发展。公司技术装备及环保治理水平在国际国内都处于领先地位。",
+              "profileSummary": "公司主要从事电解铅、白银、黄金等有色金属及贵金属产品的冶炼及进出口贸易。公司先后建设了博士后科研工作站，有色金属产学研基地、铅锌行业技术开发中心等科研基地。",
+              "majorProducts": "豫光金铅白银、豫光金铅粗铜、豫光金铅电解铅、豫光金铅黄金、豫光金铅硫酸、豫光金铅氧化锌",
+              "revenueComposition": "银产品:27.73%;铜产品:24.61%;金产品:21.54%;铅产品:21.18%;锌产品:1.46%;其他:1.41%;锑产品:1.3%;硫酸:0.77%",
+              "revenueSegments": [
+                {
+                  "name": "银产品",
+                  "sharePct": 27.73,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铜产品",
+                  "sharePct": 24.61,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "金产品",
+                  "sharePct": 21.54,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "铅产品",
+                  "sharePct": 21.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锌产品",
+                  "sharePct": 1.46,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 1.41,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "锑产品",
+                  "sharePct": 1.3,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硫酸",
+                  "sharePct": 0.77,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "回收白银",
+                    "category": "白银产品"
+                  },
+                  {
+                    "name": "回收黄金",
+                    "category": "黄金产品"
+                  },
+                  {
+                    "name": "氧化锌",
+                    "category": "其他锌制品"
+                  },
+                  {
+                    "name": "电解铅",
+                    "category": "铅冶炼"
+                  },
+                  {
+                    "name": "电解铜",
+                    "category": "铜冶炼"
+                  },
+                  {
+                    "name": "白银",
+                    "category": "白银产品"
+                  }
+                ],
+                "knownProducts": [
+                  "工业硫酸",
+                  "电解铅",
+                  "氧化锌",
+                  "电解铜",
+                  "回收白银",
+                  "白银",
+                  "回收黄金",
+                  "金锭"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "豫光金铅已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：银产品（27.73%）、金产品（21.54%）合计约占收入的49.27%。公司在产业链中的位置是：布局泛半导体高纯金属材料，已成功制备7N级高纯铟产品，终端需求与渗透率变化则决定增量大小。只有完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，相关业务的增长才可能改善公司整体盈利。终端销量、客户采购量、公司出货和相关产品收入增速还需与其他主业表现同时改善；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使局部业务亮点难以转化为公司层面的业绩变化。"
+          },
+          {
+            "sourceRowNumber": 10971,
+            "stockCode": "002674.SZ",
+            "stockName": "兴业科技",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "拟通过收购青岛立昂晶电切入磷化铟衬底业务",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002674.SZ",
+              "companyName": "兴业科技",
+              "companyProfile": "公司成立于1992年，2012年5月7日股票在深圳证券交易所挂牌上市。公司以“绿色皮革、百年兴业”为使命，以“做中国绿色皮革带头人，为世界名牌提供优质皮革产品和服务”为愿景，从成立至今一直专注于中高档牛头层皮革的开发、生产与销售。公司为世界制革技术权威组织SATRA的成员。公司检测中心于2009年被认可为国家级检测实验室，是国内高标准的皮革检验机构。公司于2008年首次被认定为高新技术企业，最近一次于2023年通过高新技术企业复评。2014年公司企业技术中心被科学技术部、财政部、海关总署、国家税务总局认定为“国家认定企业技术中心”，成为行业内首家获得国家认定企业技术中心的企业。经过多年来的发展，公司目前已成为技术水平领先的国内大型制革企业。",
+              "profileSummary": "公司以“绿色皮革、百年兴业”为使命，以“做中国绿色皮革带头人，为世界名牌提供优质皮革产品和服务”为愿景，从成立至今一直专注于中高档牛头层皮革的开发、生产与销售。",
+              "majorProducts": "家具用皮革、汽车内饰用皮革、特殊功能性皮革、鞋包带用皮革",
+              "revenueComposition": "鞋包带用皮革:63.51%;汽车内饰用皮革:27.94%;二层皮胶原产品原料:3.72%;其他用皮革:3.37%;其他业务:1.47%",
+              "revenueSegments": [
+                {
+                  "name": "鞋包带用皮革",
+                  "sharePct": 63.51,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "汽车内饰用皮革",
+                  "sharePct": 27.94,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "二层皮胶原产品原料",
+                  "sharePct": 3.72,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他用皮革",
+                  "sharePct": 3.37,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 1.47,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "牛皮革"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "兴业科技目前更依赖鞋包带用皮革（63.51%）、汽车内饰用皮革（27.94%），事件相关业务尚未形成独立收入分部。公司与事件的具体联系在于：拟通过收购青岛立昂晶电切入磷化铟衬底业务，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。本次事件的研究价值，在于它是否改变终端需求与渗透率变化；公司的产业链位置只有经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能转化为收入。现阶段可以用终端销量、客户采购量、公司出货和相关产品收入增速判断预期差方向；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，短期主题弹性与中期业绩贡献可能明显背离。"
+          },
+          {
+            "sourceRowNumber": 10972,
+            "stockCode": "002975.SZ",
+            "stockName": "博杰股份",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "通过参股珠海鼎泰芯源（24.68%）间接布局磷化铟衬底业务",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "002975.SZ",
+              "companyName": "博杰股份",
+              "companyProfile": "公司成立于2005年，深耕智能制造领域近20年，已成长为一家专注于智能制造领域工业自动化、智能化设备及系统解决方案的高新技术企业，业务覆盖设备的研发、生产、销售及相关技术服务，帮助客户提高生产效率和产品良品率。在多年非标设备研发及行业应用经验积淀中，总结并形成了运动控制、人工智能、机器人软件算法等平台化模块，以及射频、声学、电学、光学等各项功能技术模块。公司基于技术同心圆战略，利用平台化、模块化技术，采用“积木式搭建”方式，实现快速交付、快速迭代、高效低成本的研发与生产，进而在行业应用领域、客户开拓及新产品开发方面形成较强的延展性和竞争力，并开发了自动化测试设备、自动化组装设备、工业机器人和整线自动化设备，以及高技术高附加值的智能制造解决方案等多类型、多型号产品系列。公司业务涵盖消费电子、大数据云服务、新能源汽车、半导体、被动元器件等众多行业领域，主要客户以世界500强企业为主，包括苹果、META、微软、思科、特斯拉、谷歌、亚马逊、高通等全球著名高科技公司，以及比亚迪、鸿海集团、广达集团、仁宝集团等全球著名电子产品智能制造商；同时，境内业务拓展持续稳步推进，公司服务的终端客户包括舜宇光学、风华高科、麦捷科技、顺络电子、华为、蔚来、大疆等。",
+              "profileSummary": "公司基于技术同心圆战略，利用平台化、模块化技术，采用“积木式搭建”方式，实现快速交付、快速迭代、高效低成本的研发与生产，进而在行业应用领域、客户开拓及新产品开发方面形成较强的延展性和竞争力，并开发了自动化测试设备、自动化组装设备、工业机器人和整线自动化设备，以及高技术高附加值的智能制造解决方案等多类型、多型号产品系列。公司业务涵盖消费电子、大数据云服务、新能源汽车、半导体、被动元器件等众多行业领域，主要客户以世界500强企业为主，包括…",
+              "majorProducts": "半导体设备及被动元器件领域、大数据云服务领域、消费电子领域、新能源汽车领域",
+              "revenueComposition": "工业自动化设备:83.43%;设备配件:9.86%;技术服务:6.71%",
+              "revenueSegments": [
+                {
+                  "name": "工业自动化设备",
+                  "sharePct": 83.43,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "设备配件",
+                  "sharePct": 9.86,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 6.71,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "unverified",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "FCT测试设备",
+                  "ICT测试设备",
+                  "LED测试设备",
+                  "声学测试设备",
+                  "射频测试设备",
+                  "环境光感应器测试设备",
+                  "电子产品传感器测试设备",
+                  "电子产品自动涂胶机"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "博杰股份当前收入集中在工业自动化设备（83.43%）、设备配件（9.86%），而通过参股珠海鼎泰芯源（24.68%）间接布局磷化铟衬底业务所指业务尚未形成可单独识别的经营规模。这意味着新闻首先影响终端需求与渗透率变化预期，业务端仍需沿“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”传导后才能确认。终端销量、客户采购量、公司出货和相关产品收入增速如果持续改善，相关业务可能从产业布局转为实际增量；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
+          },
+          {
+            "sourceRowNumber": 10973,
+            "stockCode": "600206.SH",
+            "stockName": "有研新材",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内半导体材料龙头，具备高纯金属制备能力，在铟产业链中具备技术储备",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600206.SH",
+              "companyName": "有研新材",
+              "companyProfile": "公司成立于2001年6月，是高新技术企业，拥有国家企业技术中心、国家技术创新示范企业、集成电路关键材料国家工程研究中心(原半导体材料国家工程研究中心)等多项行业资质。公司前身为中国有研科技集团有限公司(原北京有色金属研究总院)401室，自上世纪50年代开始硅材料研究，历经半个多世纪的时间，积累了丰富的硅材料研发核心技术及生产经验，同时培养造就了一批科技创新和经营管理人才。公司目前主要从事硅及其它半导体材料、设备的研究、开发、生产与经营，提供相关技术开发、技术转让和技术咨询服务。现有山东德州和北京顺义两处国内一流的半导体硅材料生产基地，主要产品包括集成电路用硅单晶及硅片、集成电路刻蚀工艺用大直径硅单晶及制品、区熔硅单晶及硅片、多晶产品、半导体洁净管阀件等。公司在国内率先实现了6英寸、8英寸硅片的产业化，率先实现12英寸工艺的技术研发，有力支持了中国集成电路产业的发展。公司控股股东是目前全球最大的半导体晶圆片再生制造企业，约占有全球30%的市场份额，是全球领先的半导体材料供应商。公司重要参股股东是中国有色金属行业综合实力雄厚的研究开发和高新技术产业培育机构，是国资委直管的中央企业。公司以创新、挑战、诚信、卓越为企业核心价值观，努力为社会创造价值，为员工达成梦想，为股东实现回报，为实现世界一流半导体企业的愿景不懈努力。",
+              "profileSummary": "公司目前主要从事硅及其它半导体材料、设备的研究、开发、生产与经营，提供相关技术开发、技术转让和技术咨询服务。公司控股股东是目前全球最大的半导体晶圆片再生制造企业，约占有全球30%的市场份额，是全球领先的半导体材料供应商。",
+              "majorProducts": "150mm硅抛光片、200mm硅抛光片、半导体材料进出口贸易、电子薄膜材料、光电材料、光纤材料、红外光学材料、区熔硅单晶片、稀土磁效应材料、稀土发光材料、稀土金属及合金、医用材料、重掺砷硅单晶片",
+              "revenueComposition": "铂族:41.84%;稀土材料:24.81%;薄膜材料:23.97%;贵金属、有色金属及高端制造:5.9%;红外光学、光纤材料:2.56%;医疗器械材料:0.66%;其他业务:0.26%",
+              "revenueSegments": [
+                {
+                  "name": "铂族",
+                  "sharePct": 41.84,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "稀土材料",
+                  "sharePct": 24.81,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "薄膜材料",
+                  "sharePct": 23.97,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "贵金属、有色金属及高端制造",
+                  "sharePct": 5.9,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "红外光学、光纤材料",
+                  "sharePct": 2.56,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "医疗器械材料",
+                  "sharePct": 0.66,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.26,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "金靶材",
+                    "category": "金属靶材"
+                  },
+                  {
+                    "name": "钴靶材",
+                    "category": "金属靶材"
+                  },
+                  {
+                    "name": "铜靶材",
+                    "category": "金属靶材"
+                  },
+                  {
+                    "name": "镍铂合金靶材",
+                    "category": "合金靶材"
+                  }
+                ],
+                "knownProducts": [
+                  "硒化锌",
+                  "硫化锌",
+                  "高纯四氯化硅",
+                  "口腔正畸器材",
+                  "消化道支架",
+                  "漏斗胸矫形器",
+                  "磷化镓单晶",
+                  "铂锭"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "有研新材拥有金靶材、钴靶材、铜靶材，其产业链位置与国内半导体材料龙头，具备高纯金属制备能力，在铟产业链中具备技术储备一致；当前的铂族（41.84%）、稀土材料（24.81%）并未把这部分产品单独列示。这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。真正的业绩增量仍由终端需求与渗透率变化决定，并需完成“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”。只有终端销量、客户采购量、公司出货和相关产品收入增速持续改善，产品能力才会转化为公司层面的收入和盈利提升；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长则会限制兑现幅度。"
+          },
+          {
+            "sourceRowNumber": 10978,
+            "stockCode": "688498.SH",
+            "stockName": "源杰科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内光芯片领先企业，是磷化铟衬底的直接下游客户",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688498.SH",
+              "companyName": "源杰科技",
+              "companyProfile": "公司成立于2013年。自成立以来，公司一直专注于光芯片的研发，设计、生产与销售。主要产品包括2.5G、10G、25G、50G、100G光芯片产品、CW光源、车载激光雷达光源等产品，主要应用于电信市场、数据中心市场、车载激光雷达市场等领域。经过多年研发与产业化积累，公司逐步发展为国内领先的光芯片供应商。公司创始团队来源于激光器芯片领域的学术专家与行业专家，拥有多年研发经验，始终秉承“以科技创新为驱动”的宗旨，重视研发投入及高端产品开发。公司已建立了包含芯片设计、晶圆制造、芯片加工和测试的IDM全流程业务体系，已实现国际前十大及国内主流光模块厂商批量供货，并最终应用于国内外知名运营商网络及互联网公司数据中心中。未来，公司将立足“一平台、两方向、三关键”的战略部署，在光通信领域中继续深耕，推出更高速率、更长传输距离，更大功率的光芯片产品，同时不断扩充光芯片产品的应用场景，积极向激光雷达、传感器、消费电子等领域拓展，致力于成为国际一流光电半导体芯片和技术服务供应商。",
+              "profileSummary": "主要产品包括2.5G、10G、25G、50G、100G光芯片产品、CW光源、车载激光雷达光源等产品，主要应用于电信市场、数据中心市场、车载激光雷达市场等领域。未来，公司将立足“一平台、两方向、三关键”的战略部署，在光通信领域中继续深耕，推出更高速率、更长传输距离，更大功率的光芯片产品，同时不断扩充光芯片产品的应用场景，积极向激光雷达、传感器、消费电子等领域拓展，致力于成为国际一流光电半导体芯片和技术服务供应商。",
+              "majorProducts": "1270/1290/1310/1330nm大功率25/50/70mW 激光器芯片、1270nm DFB激光器芯片、1310nm DFB激光器芯片、1310nm FP激光器芯片、1490nm DFB激光器芯片、1550nm DFB激光器芯片、CWDM 4波段 DFB激光器芯片、CWDM 6波段 DFB激光器芯片、LWDM 12波段 DFB激光器芯片、LWDM 4波段 DFB激光器芯片、MWDM 12波段 DFB激光器芯片、PAM4 CWDM 4波段DFB激光器芯片",
+              "revenueComposition": "数据中心类产品:65.39%;电信市场类:34.33%;其他类产品:0.18%;其他业务:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "数据中心类产品",
+                  "sharePct": 65.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "电信市场类",
+                  "sharePct": 34.33,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他类产品",
+                  "sharePct": 0.18,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "product_confirmed",
+                "relevantProducts": [
+                  {
+                    "name": "CW激光器芯片",
+                    "category": "有源光器件"
+                  },
+                  {
+                    "name": "DFB激光器芯片",
+                    "category": "激光器件"
+                  },
+                  {
+                    "name": "FP激光器芯片",
+                    "category": "有源光器件"
+                  }
+                ],
+                "knownProducts": [
+                  "DFB激光器芯片",
+                  "CW激光器芯片",
+                  "FP激光器芯片"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "源杰科技与新闻之间有明确产品抓手：CW激光器芯片、DFB激光器芯片、FP激光器芯片，对应国内光芯片领先企业，是磷化铟衬底的直接下游客户。收入主体目前是数据中心类产品（65.39%）、电信市场类（34.33%），事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。新闻首先改变终端需求与渗透率变化预期，随后要经过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”才能进入利润表。终端销量、客户采购量、公司出货和相关产品收入增速若形成连续改善，相关产品对整体经营的贡献会逐步提高；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件影响更可能停留在产品布局层面。"
+          },
+          {
+            "sourceRowNumber": 10980,
+            "stockCode": "000711.SZ",
+            "stockName": "ST京蓝",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "核心经营主体从事工业固危废资源化利用，精铟产量已具规模",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "000711.SZ",
+              "companyName": "ST京蓝",
+              "companyProfile": "公司创立于1993年，1997年在深圳证券交易所上市,管理总部位于北京。公司始终秉承绿色发展理念,以行业核心技术为引擎,以人工智能、大数据、云计算和物联网技术为加速器，推动传统行业提档升级，已成为国内节水灌溉、土壤修复、环境治理等领域的重要贡献者和引领者。公司主要从事土壤修复、耕地土壤环境综合治理保护、高标准农田建设等业务。公司主要从事的业务由公司控股子公司中科鼎实环境工程有限公司承接，中科鼎实是致力于污染场地治理的环保企业，专注于污染土壤修复、污染地下水修复、固体废弃物环境污染治理及运营、流域环境综合治理、农田土壤环境综合治理、荒漠化治理等领域。中科鼎实拥有完善的核心技术体系，包括以热脱附技术、常温解吸技术、固化稳定化技术以及化学氧化技术等为核心的土壤修复技术、地下水修复技术、固体废物环境治理技术、垃圾填埋场好氧降解加速稳定化技术，生态掩埋式生物固定渗透缓冲带技术、农田植物修复技术、矿山土壤重构技术、生物固沙技术等多项核心技术。公司依靠自身资源整合能力进行战略性产业布局，夯实业务基础，集中加速推进业务转型，积极投身国家绿色环保工作最前沿，为社会、为股东创造价值。",
+              "profileSummary": "公司主要从事的业务由公司控股子公司中科鼎实环境工程有限公司承接，中科鼎实是致力于污染场地治理的环保企业，专注于污染土壤修复、污染地下水修复、固体废弃物环境污染治理及运营、流域环境综合治理、农田土壤环境综合治理、荒漠化治理等领域。中科鼎实拥有完善的核心技术体系，包括以热脱附技术、常温解吸技术、固化稳定化技术以及化学氧化技术等为核心的土壤修复技术、地下水修复技术、固体废物环境治理技术、垃圾填埋场好氧降解加速稳定化技术，生态掩埋式生物固定渗…",
+              "majorProducts": "废水资源化利用、固体废弃物环境污染治理及运营、荒漠化治理、金属元素分级提取、矿山生态环境治理、流域环境综合治理、农田土壤环境综合治理、污染地下水修复、污染土壤修复、窑渣资源化利用",
+              "revenueComposition": "产品销售:95.89%;土壤修复:2.15%;其他产品:1.95%",
+              "revenueSegments": [
+                {
+                  "name": "产品销售",
+                  "sharePct": 95.89,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "土壤修复",
+                  "sharePct": 2.15,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他产品",
+                  "sharePct": 1.95,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "回收粗铟",
+                    "category": "资源回收加工服务"
+                  },
+                  {
+                    "name": "土壤修复工程",
+                    "category": "土壤环境生态修复工程"
+                  },
+                  {
+                    "name": "高标准农田建设",
+                    "category": "综合环境工程"
+                  }
+                ],
+                "knownProducts": [
+                  "土壤修复工程",
+                  "高标准农田建设",
+                  "回收粗铟",
+                  "水利工程"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "ST京蓝已经参与事件相关业务，但收入基数仍小：土壤修复占收入的2.15%，说明公司已有业务抓手，但“核心经营主体从事工业固危废资源化利用，精铟产量已具规模”所隐含的空间仍明显大于当前收入贡献。真正的预期差在于终端需求与渗透率变化能否驱动“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”，从而推动业务跨过小规模阶段。在此之前，终端销量、客户采购量、公司出货和相关产品收入增速比总收入增速更值得跟踪；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，市场对远期空间的定价可能缺少当期业绩支撑。"
+          },
+          {
+            "sourceRowNumber": 10981,
+            "stockCode": "603588.SH",
+            "stockName": "高能环境",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "固危废资源化龙头，回收多种稀有金属，存货中含铟，计划新增产线提取",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "603588.SH",
+              "companyName": "高能环境",
+              "companyProfile": "公司2014年在A股主板上市；2016年，入列国家企业技术中心；2017年，核心技术获评“国家科学技术进步二等奖”；2022年，总资产超200亿。公司与国内外知名的科研院所及环保企业建立了长期的战略合作关系，并获批成立“中关村科技园区海淀园博士后工作站分站”经过30余年的沉潜，高能环境以技术创新推动产业转型升级，形成以固废危废资源化利用、生活垃圾处理、环境修复为核心业务板块，兼顾固废危废无害化处置、水处理、大气污染治理、有机垃圾治理等多领域协同发展的综合型环保服务平台。公司以再生资源循环利用全产业链建设为核心战略，固废危废资源化利用业务覆盖甘肃、湖北、贵州、重庆、浙江、江西等地，回收利用品类涵盖铜、镍、铅、锌、锡及多种稀贵金属，并拓展至废橡胶、废轮胎等非金属领域，产业链延伸至深加工产品及新能源材料领域，成功入列固废危废资源化利用标杆企业。公司深入布局生活垃圾治理综合系统服务，建设运营了十余座生活垃圾焚烧发电精品项目，日焚烧处置能力达11000吨，并实现垃圾焚烧协同污泥、餐厨垃圾、有机垃圾的无害化、资源化处置，岳阳生活垃圾焚烧发电项目更是被评为全国生活垃圾处理设施无害化AAA级生活垃圾焚烧厂。公司深耕环境修复领域，在国内完成百余个成功标杆案例，业务覆盖污染土壤修复、地下水修复、矿山修复、农田修复、流域治理等领域，稳居国内环境修复领域第一梯队。公司牢牢树立“科技保障安全”的经营理念，秉承“科技创新、服务利人”的指导原则，专注专行，打造中华领先、国际一流的环境技术企业，全面践行“为人类为社会创造持久安全的环境”的企业使命。",
+              "profileSummary": "公司与国内外知名的科研院所及环保企业建立了长期的战略合作关系，并获批成立“中关村科技园区海淀园博士后工作站分站”经过30余年的沉潜，高能环境以技术创新推动产业转型升级，形成以固废危废资源化利用、生活垃圾处理、环境修复为核心业务板块，兼顾固废危废无害化处置、水处理、大气污染治理、有机垃圾治理等多领域协同发展的综合型环保服务平台。公司以再生资源循环利用全产业链建设为核心战略，固废危废资源化利用业务覆盖甘肃、湖北、贵州、重庆、浙江、江西等地…",
+              "majorProducts": "高能环境垂直生态屏障系统、高能环境废液厌氧屏障系统、高能环境封场生态屏障系统、高能环境固体废物填埋屏障系统、高能环境水体生态屏障系统、高能环境土壤和地下水修复系统",
+              "revenueComposition": "资源化:80.77%;运营服务:11.68%;工程承包:7.55%",
+              "revenueSegments": [
+                {
+                  "name": "资源化",
+                  "sharePct": 80.77,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "运营服务",
+                  "sharePct": 11.68,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "工程承包",
+                  "sharePct": 7.55,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "危废处理",
+                    "category": "危废处理"
+                  },
+                  {
+                    "name": "土壤修复工程",
+                    "category": "土壤环境生态修复工程"
+                  },
+                  {
+                    "name": "土壤矿山修复",
+                    "category": "土壤环境生态修复工程"
+                  },
+                  {
+                    "name": "地下水修复",
+                    "category": "水环境生态修复工程"
+                  },
+                  {
+                    "name": "生活垃圾处理",
+                    "category": "生活固废处理"
+                  }
+                ],
+                "knownProducts": [
+                  "危废处理",
+                  "生活垃圾处理",
+                  "土壤修复工程",
+                  "土壤矿山修复",
+                  "地下水修复",
+                  "垃圾焚烧发电"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "高能环境与事件存在真实业务交集：公司已有危废处理、土壤修复工程、土壤矿山修复，与固危废资源化龙头，回收多种稀有金属，存货中含铟，计划新增产线提取所处的产业环节一致。资源化（80.77%）属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。本次变化主要影响产能释放与行业供给变化，只有经过“新增产能改变可交付规模和行业供需，再通过产销率、价格和折旧负担影响利润”，才会形成可确认的收入和利润增量。在建工程转固、产能利用率、产销率、库存和产品价格能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；若需求承接不足导致新增产能闲置，折旧上升反而压低盈利能力，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
+          },
+          {
+            "sourceRowNumber": 10982,
+            "stockCode": "301500.SZ",
+            "stockName": "飞南资源",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "从事固危废资源化利用，回收产品包括铟锭",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301500.SZ",
+              "companyName": "飞南资源",
+              "companyProfile": "公司成立于2008年8月，位于广东省肇庆市四会市罗源镇罗源工业园。2023年9月21日，公司正式登陆深圳证券交易所创业板，开启资本市场发展新篇章。公司主要从事有色金属类危险废物处置业务和再生资源回收利用业务，是一家覆盖“危险废物收集、无害化处置、资源回收利用”的环保企业。公司将传统的冶金工艺运用于有色金属类危废处置利用业务，能够将不同批次金属品位低、杂质含量不同的危险废物，配合含铜物料，采用领先工艺技术，最终产出电解铜、冰铜、阳极泥等资源化产品，真正实现资源再生、变废为宝。",
+              "profileSummary": "公司主要从事有色金属类危险废物处置业务和再生资源回收利用业务，是一家覆盖“危险废物收集、无害化处置、资源回收利用”的环保企业。公司将传统的冶金工艺运用于有色金属类危废处置利用业务，能够将不同批次金属品位低、杂质含量不同的危险废物，配合含铜物料，采用领先工艺技术，最终产出电解铜、冰铜、阳极泥等资源化产品，真正实现资源再生、变废为宝。",
+              "majorProducts": "含贵金属产品、含铜产品-冰铜、含铜产品-电解铜、其他产品-含镍产品、其他产品-含锡产品、其他产品-含锌产品、危废处置业务、资源化产品业务",
+              "revenueComposition": "资源化产品销售业务:99.54%;危废处置业务:0.24%;其他业务:0.22%",
+              "revenueSegments": [
+                {
+                  "name": "资源化产品销售业务",
+                  "sharePct": 99.54,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "危废处置业务",
+                  "sharePct": 0.24,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.22,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "贱金属回收",
+                    "category": "资源回收加工服务"
+                  },
+                  {
+                    "name": "贵金属回收",
+                    "category": "资源回收加工服务"
+                  },
+                  {
+                    "name": "危废处理",
+                    "category": "危废处理"
+                  }
+                ],
+                "knownProducts": [
+                  "危废处理",
+                  "贱金属回收",
+                  "贵金属回收"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "飞南资源已经具备贱金属回收、贵金属回收、危废处理等业务能力，从事固危废资源化利用，回收产品包括铟锭并非单纯概念映射。当前对应的收入被归入资源化产品销售业务（99.54%）、危废处置业务（0.24%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于终端需求与渗透率变化是否通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”放大，并最终反映在终端销量、客户采购量、公司出货和相关产品收入增速上；终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 10983,
+            "stockCode": "300187.SZ",
+            "stockName": "永清环保",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "公司明确布局铟、锗、镓、锡等稀散金属的绿色循环回收全产业链",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300187.SZ",
+              "companyName": "永清环保",
+              "companyProfile": "公司成立于2004年，于2011年在深交所成功上市，是湖南省首家登陆A股市场的环保企业，同时也是环境治理技术及应用产业链中的“链主”企业。公司拥有“国家企业技术中心”、“博士后科研工作站”、“国家工程研究中心”三大国家科研技术平台，业务广泛覆盖能源管理、AI应用、零碳园区打造、新能源资产开发运营、土壤修复、大气治理、固(危)废处理、环境检测等多个领域。依托涵盖研发、咨询、设计、制造、工程总承包、运营及投融资于一体的全产业链整合能力，公司致力于为地方政府、工业园区和企业客户提供全方位的能源管理、AI智能体应用、零碳园区打造等“一站式”综合解决方案，持续推动绿色低碳与可持续发展。",
+              "profileSummary": "公司成立于2004年，于2011年在深交所成功上市，是湖南省首家登陆A股市场的环保企业，同时也是环境治理技术及应用产业链中的“链主”企业。公司拥有“国家企业技术中心”、“博士后科研工作站”、“国家工程研究中心”三大国家科研技术平台，业务广泛覆盖能源管理、AI应用、零碳园区打造、新能源资产开发运营、土壤修复、大气治理、固(危)废处理、环境检测等多个领域。",
+              "majorProducts": "场地修复、大气治理、耕地治理、固废处理、环境咨询、清洁能源、危废处置",
+              "revenueComposition": "环境运营服务:55.11%;环境工程服务:42.5%;环境咨询服务:2.39%",
+              "revenueSegments": [
+                {
+                  "name": "环境运营服务",
+                  "sharePct": 55.11,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "环境工程服务",
+                  "sharePct": 42.5,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "环境咨询服务",
+                  "sharePct": 2.39,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "business_mismatch",
+                "relevantProducts": [],
+                "knownProducts": [
+                  "危废处理",
+                  "垃圾渗滤液处理",
+                  "烟气脱硫脱硝除尘",
+                  "大气污染治理",
+                  "土壤修复工程",
+                  "垃圾焚烧发电",
+                  "生活垃圾清运",
+                  "光伏电站工程"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "永清环保现有收入由环境运营服务（55.11%）、环境工程服务（42.5%）贡献，主营产品为危废处理、垃圾渗滤液处理、烟气脱硫脱硝除尘、大气污染治理，与公司明确布局铟、锗、镓、锡等稀散金属的绿色循环回收全产业链指向的产品形态存在明显差异。因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。在业务连接真正形成后，终端需求与渗透率变化才会通过“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”产生财务影响。现阶段终端销量、客户采购量、公司出货和相关产品收入增速比概念标签更重要；若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，事件对公司中期业绩的贡献将十分有限。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "8条低于3星的源记录已按当前关注口径排除。",
+      "6条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "3只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。",
+    "3只4星A股标的未穿透到事件相关七级产品。"
   ]
 }

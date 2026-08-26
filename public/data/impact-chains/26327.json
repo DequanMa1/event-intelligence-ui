@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 7,
-  "generatedAt": "2026-08-24T15:04:27+08:00",
+  "schemaVersion": 14,
+  "generatedAt": "2026-08-26T13:30:38+08:00",
   "status": "ready",
   "event": {
     "mainId": "26327",
@@ -9,65 +9,11 @@
     "date": "2026-06-25"
   },
   "selection": {
-    "rule": "filled_star_count == 4",
-    "sourceStockCount": 7,
+    "rule": "A-share and filled_star_count == 4",
+    "sourceStockCount": 1,
     "mappedStockCount": 1,
-    "unmappedStockCount": 6,
+    "unmappedStockCount": 0,
     "stocks": [
-      {
-        "sourceRowNumber": 1092,
-        "stockCode": "未上市",
-        "stockName": "字节跳动",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1093,
-        "stockCode": "BABA.N",
-        "stockName": "阿里巴巴",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1094,
-        "stockCode": "GOOGL.O",
-        "stockName": "谷歌",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1095,
-        "stockCode": "未上市",
-        "stockName": "Anthropic",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1096,
-        "stockCode": "未上市",
-        "stockName": "华为",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1102,
-        "stockCode": "AVGO.O",
-        "stockName": "博通",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
       {
         "sourceRowNumber": 1103,
         "stockCode": "688521.SH",
@@ -75,96 +21,21 @@
         "rating": "★★★★",
         "filledStars": 4,
         "mapped": true,
-        "anchorProductCount": 3
+        "anchorProductCount": 1
       }
     ],
-    "unmappedStocks": [
-      {
-        "sourceRowNumber": 1092,
-        "stockCode": "未上市",
-        "stockName": "字节跳动",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1093,
-        "stockCode": "BABA.N",
-        "stockName": "阿里巴巴",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1094,
-        "stockCode": "GOOGL.O",
-        "stockName": "谷歌",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1095,
-        "stockCode": "未上市",
-        "stockName": "Anthropic",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1096,
-        "stockCode": "未上市",
-        "stockName": "华为",
-        "rating": "★★★★",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      },
-      {
-        "sourceRowNumber": 1102,
-        "stockCode": "AVGO.O",
-        "stockName": "博通",
-        "rating": "★★★★☆",
-        "filledStars": 4,
-        "mapped": false,
-        "anchorProductCount": 0
-      }
-    ]
+    "unmappedStocks": []
   },
   "totals": {
     "candidateCoreProductCount": 3,
     "selectedCoreProductCount": 1,
     "selectedCompanyCoreProductCount": 1,
-    "semanticBridgeCount": 0,
-    "upstreamCandidateCount": 1,
-    "downstreamCandidateCount": 1,
-    "shownUpstreamCount": 1,
-    "shownDownstreamCount": 1
+    "level7ProductCount": 25,
+    "relatedIndustryCandidateCount": 8,
+    "shownRelatedIndustryCount": 2
   },
-  "chain": {
-    "upstream": [
-      {
-        "code": "1140111849",
-        "name": "半导体IP",
-        "anchorCount": 1,
-        "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111364"
-        ],
-        "linkedCoreProductNames": [
-          "半导体IP授权服务"
-        ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
-      }
-    ],
-    "core": [
+  "productIndustryMap": {
+    "coreProducts": [
       {
         "code": "1140111364",
         "name": "半导体IP授权服务",
@@ -190,18 +61,15 @@
           "name": "半导体IP授权服务"
         },
         "matchedSourceLevel": 7,
-        "mappingType": "company_product",
-        "bridgeBasis": "",
         "stockCount": 1,
         "stocks": [
           {
             "stockCode": "688521.SH",
             "stockName": "芯原股份",
-            "rating": "★★★★"
+            "rating": "★★★★",
+            "filledStars": 4
           }
         ],
-        "upstreamCount": 1,
-        "downstreamCount": 1,
         "relevanceScore": 8,
         "strongRelevanceScore": 5,
         "matchedTerms": [
@@ -211,22 +79,381 @@
         ]
       }
     ],
-    "downstream": [
+    "relatedIndustries": [
       {
-        "code": "1140160951",
-        "name": "集成电路设计厂商",
-        "anchorCount": 1,
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 7,
+        "relevanceScore": 116,
+        "stocks": [
+          {
+            "stockCode": "688256.SH",
+            "stockName": "寒武纪",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688041.SH",
+            "stockName": "海光信息",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140170230",
+            "name": "工作站CPU",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 工作站CPU",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688041.SH",
+                "stockName": "海光信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "cpu"
+            ]
+          },
+          {
+            "code": "1140215344",
+            "name": "数据中心CPU",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 数据中心CPU",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688041.SH",
+                "stockName": "海光信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "cpu"
+            ]
+          },
+          {
+            "code": "1140007907",
+            "name": "服务器CPU",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 服务器CPU",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688041.SH",
+                "stockName": "海光信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "cpu"
+            ]
+          },
+          {
+            "code": "1140108412",
+            "name": "云端智能加速卡",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 云端智能加速卡",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688256.SH",
+                "stockName": "寒武纪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001283",
+        "name": "IC制造",
+        "description": "IC制造指芯片晶圆代工，是半导体核心环节。因国产替代加速、AI算力需求爆发及政策强力支持，该行业备受瞩目。作为科技自主可控的关键，其高成长性与战略地位吸引大量资金关注。",
         "stockCount": 1,
-        "linkedCoreProductCodes": [
-          "1140111364"
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
         ],
-        "linkedCoreProductNames": [
-          "半导体IP授权服务"
+        "products": [
+          {
+            "code": "1140200968",
+            "name": "芯片定制",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片定制",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140111363",
+            "name": "芯片量产代理",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片量产代理",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
         ],
-        "evidence": {
-          "original": 1,
-          "directionalCompletion": 0
-        }
+        "rank": 2
+      }
+    ]
+  },
+  "industryPortfolio": {
+    "rule": "A-share and 3 <= filled_star_count <= 5; real level-7 product -> level-5 industry",
+    "sourceStockCount": 6,
+    "mappedStockCount": 6,
+    "unmappedStockCount": 0,
+    "level7ProductCount": 25,
+    "candidateIndustryCount": 8,
+    "relatedIndustryCount": 2,
+    "stocks": [
+      {
+        "sourceRowNumber": 1103,
+        "stockCode": "688521.SH",
+        "stockName": "芯原股份",
+        "rating": "★★★★",
+        "filledStars": 4,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 1105,
+        "stockCode": "688256.SH",
+        "stockName": "寒武纪",
+        "rating": "★★★☆",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 7
+      },
+      {
+        "sourceRowNumber": 1106,
+        "stockCode": "688041.SH",
+        "stockName": "海光信息",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 1114,
+        "stockCode": "600584.SH",
+        "stockName": "长电科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      },
+      {
+        "sourceRowNumber": 1116,
+        "stockCode": "300604.SZ",
+        "stockName": "长川科技",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 3
+      },
+      {
+        "sourceRowNumber": 1117,
+        "stockCode": "301269.SZ",
+        "stockName": "华大九天",
+        "rating": "★★★",
+        "filledStars": 3,
+        "mapped": true,
+        "anchorProductCount": 4
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "code": "1200001282",
+        "name": "IC设计",
+        "description": "IC设计指芯片电路设计，处于半导体产业链上游。因契合国产替代战略、受益于AI与智能终端需求爆发，且具备高毛利、轻资产特性，成为A股科技板块核心赛道，备受资本关注。",
+        "stockCount": 2,
+        "starWeight": 6,
+        "level7ProductCount": 7,
+        "relevanceScore": 116,
+        "stocks": [
+          {
+            "stockCode": "688256.SH",
+            "stockName": "寒武纪",
+            "rating": "★★★☆",
+            "filledStars": 3
+          },
+          {
+            "stockCode": "688041.SH",
+            "stockName": "海光信息",
+            "rating": "★★★",
+            "filledStars": 3
+          }
+        ],
+        "products": [
+          {
+            "code": "1140170230",
+            "name": "工作站CPU",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 工作站CPU",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688041.SH",
+                "stockName": "海光信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "cpu"
+            ]
+          },
+          {
+            "code": "1140215344",
+            "name": "数据中心CPU",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 数据中心CPU",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688041.SH",
+                "stockName": "海光信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "cpu"
+            ]
+          },
+          {
+            "code": "1140007907",
+            "name": "服务器CPU",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 服务器CPU",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688041.SH",
+                "stockName": "海光信息",
+                "rating": "★★★",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 20,
+            "matchedTerms": [
+              "cpu"
+            ]
+          },
+          {
+            "code": "1140108412",
+            "name": "云端智能加速卡",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 云端智能加速卡",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688256.SH",
+                "stockName": "寒武纪",
+                "rating": "★★★☆",
+                "filledStars": 3
+              }
+            ],
+            "relevanceScore": 16,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "code": "1200001283",
+        "name": "IC制造",
+        "description": "IC制造指芯片晶圆代工，是半导体核心环节。因国产替代加速、AI算力需求爆发及政策强力支持，该行业备受瞩目。作为科技自主可控的关键，其高成长性与战略地位吸引大量资金关注。",
+        "stockCount": 1,
+        "starWeight": 4,
+        "level7ProductCount": 2,
+        "relevanceScore": 24,
+        "stocks": [
+          {
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4
+          }
+        ],
+        "products": [
+          {
+            "code": "1140200968",
+            "name": "芯片定制",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片定制",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          },
+          {
+            "code": "1140111363",
+            "name": "芯片量产代理",
+            "hierarchyPath": "电子 > 半导体 > 集成电路 > IC制造 > 晶圆加工 > 芯片量产代理",
+            "matchedSourceLevel": 7,
+            "stockCount": 1,
+            "stocks": [
+              {
+                "stockCode": "688521.SH",
+                "stockName": "芯原股份",
+                "rating": "★★★★",
+                "filledStars": 4
+              }
+            ],
+            "relevanceScore": 12,
+            "matchedTerms": []
+          }
+        ],
+        "rank": 2
       }
     ]
   },
@@ -241,10 +468,481 @@
     "researchSources": [],
     "reason": "该产业的专项研究内容正在补充中"
   },
+  "investmentOpportunities": {
+    "status": "ready",
+    "sourceRowCount": 31,
+    "eligibleSourceRowCount": 6,
+    "totalStockCount": 6,
+    "groupCount": 2,
+    "invalidRatingCount": 0,
+    "excludedLowStarCount": 9,
+    "excludedNonAShareCount": 16,
+    "missingReasonCount": 0,
+    "companyProfileMatchedCount": 6,
+    "companyProfileUnmatchedCount": 0,
+    "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+    "analysisPromptVersion": "investment-opportunity-analyst-v4.md",
+    "groups": [
+      {
+        "filledStars": 4,
+        "rating": "★★★★☆",
+        "name": "高度相关组合",
+        "relevance": "强相关",
+        "stockCount": 1,
+        "stocks": [
+          {
+            "sourceRowNumber": 1103,
+            "stockCode": "688521.SH",
+            "stockName": "芯原股份",
+            "rating": "★★★★",
+            "filledStars": 4,
+            "reason": "作为与国内头部大模型厂商合作定制ASIC芯片的标的，将直接受益于大模型厂商自研芯片的趋势。**",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688521.SH",
+              "companyName": "芯原股份",
+              "companyProfile": "公司是一家依托自主半导体IP，为客户提供平台化、全方位、一站式芯片定制服务和半导体IP授权服务的企业。公司拥有自主可控的图形处理器IP(GPU IP)、神经网络处理器IP(NPU IP)、视频处理器IP(VPU IP)、数字信号处理器IP(DSP IP)、图像信号处理器IP(ISP IP)和显示处理器IP(Display Processing IP)这六类处理器IP，以及1,600多个数模混合IP和射频IP。基于自有的IP，公司已拥有丰富的面向人工智能(AI)应用的软硬件芯片定制平台解决方案，涵盖如智能手表、AR/VR眼镜等始终在线(Always-on)的轻量化空间计算设备，AI PC、AI手机、智慧汽车、机器人等高效率端侧计算设备，以及数据中心/服务器等高性能云侧计算设备。为顺应大算力需求所推动的SoC(系统级芯片)向SiP(系统级封装)发展的趋势，公司正在以“IP芯片化(IP as a Chiplet)”、“芯片平台化(Chiplet as a Platform)”和“平台生态化(Platform as an Ecosystem)”理念为行动指导方针，从接口IP、Chiplet芯片架构、先进封装技术、面向AIGC和智慧出行的解决方案等方面入手，持续推进公司Chiplet技术、项目的研发和产业化。基于公司独有的芯片设计平台即服务(Silicon Platform as a Service,SiPaaS)经营模式，目前公司主营业务的应用领域广泛包括消费电子、汽车电子、计算机及周边、工业、数据处理、物联网等，主要客户包括芯片设计公司、IDM、系统厂商、大型互联网公司、云服务提供商等。公司成立于2001年，总部位于中国上海，在全球设有9个设计研发中心，以及11个销售和客户支持办事处。",
+              "profileSummary": "公司是一家依托自主半导体IP，为客户提供平台化、全方位、一站式芯片定制服务和半导体IP授权服务的企业。基于公司独有的芯片设计平台即服务(Silicon Platform as a Service,SiPaaS)经营模式，目前公司主营业务的应用领域广泛包括消费电子、汽车电子、计算机及周边、工业、数据处理、物联网等，主要客户包括芯片设计公司、IDM、系统厂商、大型互联网公司、云服务提供商等。",
+              "majorProducts": "半导体IP授权服务、一站式芯片定制服务",
+              "revenueComposition": "芯片量产业务收入:47.25%;芯片设计业务收入:27.81%;知识产权授权使用费收入:21.29%;特许权使用费收入:3.52%;其他业务:0.13%",
+              "revenueSegments": [
+                {
+                  "name": "芯片量产业务收入",
+                  "sharePct": 47.25,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "芯片设计业务收入",
+                  "sharePct": 27.81,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "知识产权授权使用费收入",
+                  "sharePct": 21.29,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "特许权使用费收入",
+                  "sharePct": 3.52,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.13,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "半导体IP授权服务",
+                    "category": "电子技术服务"
+                  },
+                  {
+                    "name": "芯片定制",
+                    "category": "晶圆加工"
+                  },
+                  {
+                    "name": "芯片量产代理",
+                    "category": "晶圆加工"
+                  }
+                ],
+                "knownProducts": [
+                  "半导体IP授权服务",
+                  "芯片定制",
+                  "芯片量产代理"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "芯原股份的事件逻辑具备真实业务底座，但尚不足以代表全部公司：芯片量产业务收入占收入的47.25%。公司与事件的具体联系在于：作为与国内头部大模型厂商合作定制ASIC芯片的标的，将直接受益于大模型厂商自研芯片的趋势。**，对应的核心变量是商业化进度和订单兑现。若这一变量沿着“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”兑现，相关业务可以贡献实质增量，但整体利润弹性仍会被其他主业的景气和产品结构稀释。因此，客户认证、新增订单、交付节奏、相关业务收入和毛利率既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；客户验证或交付节奏低于预期，订单停留在小批量阶段则可能令增量低于预期。"
+          }
+        ]
+      },
+      {
+        "filledStars": 3,
+        "rating": "★★★☆☆",
+        "name": "中度相关组合",
+        "relevance": "中等相关",
+        "stockCount": 5,
+        "stocks": [
+          {
+            "sourceRowNumber": 1105,
+            "stockCode": "688256.SH",
+            "stockName": "寒武纪",
+            "rating": "★★★☆",
+            "filledStars": 3,
+            "reason": "新一代思元690芯片是目前国内最顶尖的单卡国产算力产品，已获头部大厂订单，深度受益于国产替代和AI应用爆发。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688256.SH",
+              "companyName": "寒武纪",
+              "companyProfile": "公司是智能芯片领域全球知名的新兴公司，能提供云边端一体、软硬件协同、训练推理融合、具备统一生态的系列化智能芯片产品和平台化基础系统软件。公司掌握的智能处理器指令集、智能处理器微架构、智能芯片编程语言、智能芯片数学库等核心技术，具有壁垒高、研发难、应用广等特点，对集成电路行业与人工智能产业具有重要的技术价值、经济价值和生态价值。公司自成立以来一直专注于人工智能芯片产品的研发与技术创新，致力于打造人工智能领域的核心处理器芯片，让机器更好地理解和服务人类。公司的主营业务是应用于各类云服务器、边缘计算设备、终端设备中人工智能核心芯片的研发、设计和销售，以及为客户提供芯片产品。目前，公司的主要产品线包括云端产品线、边缘产品线、IP授权及软件。",
+              "profileSummary": "公司的主营业务是应用于各类云服务器、边缘计算设备、终端设备中人工智能核心芯片的研发、设计和销售，以及为客户提供芯片产品。目前，公司的主要产品线包括云端产品线、边缘产品线、IP授权及软件。",
+              "majorProducts": "Cambricon Neuware软件开发平台、寒武纪1A处理器、寒武纪1H处理器、寒武纪1M处理器、加速卡、思元100（MLU100）芯片及云端智能加速卡、思元220（MLU220）芯片及边缘智能加速卡、思元270（MLU270）芯片及云端智能加速卡、思元290（MLU290）芯片及云端智能加速卡、训练整机、云端智能芯片",
+              "revenueComposition": "云端产品线:99.69%;其他:0.23%;边缘产品线:0.05%;IP授权及软件:0.04%",
+              "revenueSegments": [
+                {
+                  "name": "云端产品线",
+                  "sharePct": 99.69,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 0.23,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "边缘产品线",
+                  "sharePct": 0.05,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "IP授权及软件",
+                  "sharePct": 0.04,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "智能处理器IP授权服务",
+                    "category": "电子技术服务"
+                  },
+                  {
+                    "name": "云端智能加速卡",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "云端智能芯片",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "推理软件平台",
+                    "category": "人工智能"
+                  },
+                  {
+                    "name": "训练开发平台",
+                    "category": "人工智能"
+                  },
+                  {
+                    "name": "边缘智能加速卡",
+                    "category": "计算控制芯片"
+                  }
+                ],
+                "knownProducts": [
+                  "智能处理器IP授权服务",
+                  "云端智能加速卡",
+                  "云端智能芯片",
+                  "边缘智能加速卡",
+                  "边缘智能芯片",
+                  "智能计算集群系统",
+                  "推理软件平台",
+                  "训练开发平台"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "寒武纪已经具备智能处理器IP授权服务、云端智能加速卡、云端智能芯片等业务能力，新一代思元690芯片是目前国内最顶尖的单卡国产算力产品，已获头部大厂订单，深度受益于国产替代和AI应用爆发并非单纯概念映射。当前对应的收入被归入云端产品线（99.69%）、IP授权及软件（0.04%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于商业化进度和订单兑现是否通过“客户验证转化为订单，再通过交付量、产品结构和产能利用率影响收入及毛利率”放大，并最终反映在客户认证、新增订单、交付节奏、相关业务收入和毛利率上；客户验证或交付节奏低于预期，订单停留在小批量阶段会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 1106,
+            "stockCode": "688041.SH",
+            "stockName": "海光信息",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "GPU产品已在头部大厂测试，CPU业务受益于AI Agent发展，具备CPU+GPU双轮驱动优势。",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "688041.SH",
+              "companyName": "海光信息",
+              "companyProfile": "公司主营业务是研发、设计和销售应用于服务器、工作站等计算、存储设备中的高端处理器。公司产品包括海光通用处理器(CPU)和海光协处理器(DCU)。公司专注于高端处理器的研发、设计与技术创新，研发团队在高端处理器设计、SoC架构设计、处理器安全、处理器验证、高主频与低功耗处理器实现、高端芯片IP设计、工艺物理设计、先进封装设计、基础软件等关键技术上不断实现突破。秉承“销售一代、验证一代、研发一代”的产品研发策略，公司建立了完善的高端处理器的研发环境和流程，产品性能逐代提升，功能不断丰富，已经研发出可广泛应用于服务器、工作站的高端处理器产品。海光CPU系列产品兼容x86指令集以及国际上主流操作系统和应用软件，性能优异，软硬件生态丰富，安全可靠，得到了国内用户的高度认可，已经广泛应用于电信、金融、互联网、教育、交通等重要行业或领域。海光DCU系列产品以GPGPU架构为基础，兼容通用的“类CUDA”环境以及国际主流商业计算软件和人工智能软件，软硬件生态丰富，可广泛应用于大数据处理、人工智能、商业计算等应用领域。",
+              "profileSummary": "公司主营业务是研发、设计和销售应用于服务器、工作站等计算、存储设备中的高端处理器。公司产品包括海光通用处理器(CPU)和海光协处理器(DCU)。",
+              "majorProducts": "海光3000系列、海光5000系列、海光7000系列、海光8000系列、通用处理器-海光CPU、协处理器-海光DCU",
+              "revenueComposition": "高端处理器:99.9%;其他业务:0.1%",
+              "revenueSegments": [
+                {
+                  "name": "高端处理器",
+                  "sharePct": 99.9,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.1,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "工作站CPU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "数据中心CPU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "服务器CPU",
+                    "category": "计算控制芯片"
+                  },
+                  {
+                    "name": "深度计算处理器(DCU)",
+                    "category": "中央处理器"
+                  }
+                ],
+                "knownProducts": [
+                  "工作站CPU",
+                  "数据中心CPU",
+                  "服务器CPU",
+                  "深度计算处理器(DCU)"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 1
+              }
+            },
+            "analysis": "海光信息已经具备工作站CPU、数据中心CPU、服务器CPU等业务能力，GPU产品已在头部大厂测试，CPU业务受益于AI Agent发展，具备CPU+GPU双轮驱动优势并非单纯概念映射。当前对应的收入被归入高端处理器（99.9%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          },
+          {
+            "sourceRowNumber": 1114,
+            "stockCode": "600584.SH",
+            "stockName": "长电科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内封测龙头，积极布局AI/HPC先进封装，拟投资78亿元在上海临港建设高端先进封测工厂，向平台型公司升级。**",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "600584.SH",
+              "companyName": "长电科技",
+              "companyProfile": "公司是全球领先的集成电路制造与技术服务提供商，向全球半导体客户提供全方位、一站式芯片成品制造解决方案，涵盖微系统集成、设计仿真、晶圆中测、芯片及器件封装、成品测试、产品认证以及全球直运等服务。公司始终秉持“为智慧生活提供先进、可靠的集成电路器件成品制造技术和服务”的使命，拥有先进和全面的芯片成品制造技术，包括晶圆级封装(WLP)、2.5D/3D封装、系统级封装(SiP)、倒装芯片封装、引线键合封装及传统封装先进化解决方案，广泛应用于汽车电子、人工智能、高性能计算、高密度存储、网络通信、智能终端、工业与医疗、功率与能源等领域，在中国、韩国和新加坡设有八大生产基地和两大研发中心，并在20多个国家和地区设有业务机构，为客户提供紧密的技术合作与高效的产业链支持。",
+              "profileSummary": "公司是全球领先的集成电路制造与技术服务提供商，向全球半导体客户提供全方位、一站式芯片成品制造解决方案，涵盖微系统集成、设计仿真、晶圆中测、芯片及器件封装、成品测试、产品认证以及全球直运等服务。公司始终秉持“为智慧生活提供先进、可靠的集成电路器件成品制造技术和服务”的使命，拥有先进和全面的芯片成品制造技术，包括晶圆级封装(WLP)、2.5D/3D封装、系统级封装(SiP)、倒装芯片封装、引线键合封装及传统封装先进化解决方案，广泛应用于汽…",
+              "majorProducts": "芯片封测",
+              "revenueComposition": "芯片封测:99.6%;其他业务:0.4%",
+              "revenueSegments": [
+                {
+                  "name": "芯片封测",
+                  "sharePct": 99.6,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他业务",
+                  "sharePct": 0.4,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "共封装光学(CPO)封装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "晶圆测试",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "芯片封装",
+                    "category": "芯片封装测试"
+                  },
+                  {
+                    "name": "芯片测试",
+                    "category": "芯片封装测试"
+                  }
+                ],
+                "knownProducts": [
+                  "共封装光学(CPO)封装",
+                  "晶圆测试",
+                  "芯片封装",
+                  "芯片测试"
+                ],
+                "directSegmentCount": 1,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长电科技与事件的关系已经落在存量主业，而非远期概念：芯片封测占收入的99.6%。公司在产业链中的具体抓手是：国内封测龙头，积极布局AI/HPC先进封装，拟投资78亿元在上海临港建设高端先进封测工厂，向平台型公司升级。**。本次事件若改变技术商业化与产品迭代速度，影响会沿着“技术验证先影响客户导入和产品结构，再通过订单放量、良率和单位价值量改变盈利”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；客户认证、量产良率、订单规模、产品收入占比和毛利率比主题热度更有解释力。若技术路线变化、良率爬坡缓慢或竞争方案更快成熟，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 1116,
+            "stockCode": "300604.SZ",
+            "stockName": "长川科技",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国产测试机龙头，受益于AI芯片、HBM、Chiplet带来的测试需求增长，SoC/GPU测试机已大规模放量。**",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "300604.SZ",
+              "companyName": "长川科技",
+              "companyProfile": "公司成立于2008年4月，是一家专注于集成电路封装和晶圆测试装备的高新技术企业。公司总部坐落于浙江省杭州市滨江区创智街500号，研发人员占比50%以上。公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。公司累计拥有海内外授权专利超1,400项，其中发明专利超400项，先后被认定为国家级高新技术企业、国家知识产权优势企业、专精特新“小巨人”企业。",
+              "profileSummary": "公司先后在日本、上海、北京、成都、苏州、深圳、哈尔滨、内江(四川)等地设立研发及服务中心，并通过并购新加坡STI、日本SATO半导体事业部及马来西亚EXIS，实现全球化布局，海外市场已拓展至美国、英国、德国、韩国等十余个国家和地区。作为集成电路封装测试和晶圆检测系统解决方案提供商，公司主营产品包括测试机、分选机、探针台及AOI设备，广泛应用于消费电子、5G通信、智慧计算、人工智能等高端领域。",
+              "majorProducts": "C6系列、Cfocus、D9000Soc测试机系列、HEXA、NanoX-6000、NanoX-8000、SLT系列、大功率测试机系列、老化测试机系列、三温平移式分选机系列、数模混合测试机系列、重力式分选机系列、转塔式分选机系列",
+              "revenueComposition": "测试机:60.53%;分选机:29.64%;其他:9.83%",
+              "revenueSegments": [
+                {
+                  "name": "测试机",
+                  "sharePct": 60.53,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "分选机",
+                  "sharePct": 29.64,
+                  "relatedToEvent": true,
+                  "relationType": "direct"
+                },
+                {
+                  "name": "其他",
+                  "sharePct": 9.83,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                }
+              ],
+              "businessRelation": {
+                "status": "direct_segment",
+                "relevantProducts": [
+                  {
+                    "name": "数模混合测试机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "芯片分选机",
+                    "category": "半导体测试设备"
+                  },
+                  {
+                    "name": "AOI光学检测仪",
+                    "category": "光学测试仪器"
+                  }
+                ],
+                "knownProducts": [
+                  "AOI光学检测仪",
+                  "数模混合测试机",
+                  "芯片分选机"
+                ],
+                "directSegmentCount": 2,
+                "containedSegmentCount": 0
+              }
+            },
+            "analysis": "长川科技与事件的关系已经落在存量主业，而非远期概念：测试机（60.53%）、分选机（29.64%）合计约占收入的90.17%。公司在产业链中的具体抓手是：国产测试机龙头，受益于AI芯片、HBM、Chiplet带来的测试需求增长，SoC/GPU测试机已大规模放量。**。本次事件若改变终端需求与渗透率变化，影响会沿着“终端需求传导至客户采购和公司出货，再通过销量、产品结构和规模效应影响利润”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，而在新增需求能否超过既有规模并转化为份额或盈利改善；终端销量、客户采购量、公司出货和相关产品收入增速比主题热度更有解释力。若终端需求低于预期，或竞争加剧使收入增长无法转化为利润增长，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
+          },
+          {
+            "sourceRowNumber": 1117,
+            "stockCode": "301269.SZ",
+            "stockName": "华大九天",
+            "rating": "★★★",
+            "filledStars": 3,
+            "reason": "国内EDA龙头，其数字电路设计EDA工具已导入国内龙头AI芯片设计的核心流程，并提供支持3DIC设计的全流程解决方案。**",
+            "reasonSourceAvailable": true,
+            "companyEvidence": {
+              "matched": true,
+              "matchMethod": "stock_code",
+              "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
+              "companyCode": "301269.SZ",
+              "companyName": "华大九天",
+              "companyProfile": "公司成立于2009年，一直聚焦于EDA工具的研发、销售与技术服务，致力于成为全流程、全领域、全球领先的EDA提供商，为我国集成电路产业持续健康发展提供支撑和保障。公司核心产品包括全定制设计平台EDA工具系统、数字电路设计EDA工具、晶圆制造EDA工具、先进封装设计EDA工具和3DIC设计EDA工具及相关技术服务。其中，全定制设计平台EDA工具系统包括模拟电路设计全流程EDA工具系统、存储电路设计全流程EDA工具系统、射频电路设计全流程EDA工具系统和平板显示电路设计全流程EDA工具系统；技术服务主要包括基础IP、晶圆制造工程服务及其他相关服务。产品和服务主要应用于集成电路设计、制造及封装领域。公司总部设于北京，在南京、成都、深圳、上海、香港、北京亦庄、西安、天津、武汉、重庆等地设有全资子公司，在厦门、苏州等地设有分支机构，逐步构建起覆盖全国的技术服务与业务运营网络，持续为客户提供高效、稳定的国产化EDA产品与专业服务，助力集成电路产业高质量发展。",
+              "profileSummary": "公司成立于2009年，一直聚焦于EDA工具的研发、销售与技术服务，致力于成为全流程、全领域、全球领先的EDA提供商，为我国集成电路产业持续健康发展提供支撑和保障。公司核心产品包括全定制设计平台EDA工具系统、数字电路设计EDA工具、晶圆制造EDA工具、先进封装设计EDA工具和3DIC设计EDA工具及相关技术服务。",
+              "majorProducts": "EDA工具软件产品、晶圆制造EDA工具、平板显示电路设计全流程EDA工具系统、数字电路设计EDA工具",
+              "revenueComposition": "EDA软件销售:81.1%;技术服务:15.19%;硬件、代理软件销售及其他:3.71%",
+              "revenueSegments": [
+                {
+                  "name": "EDA软件销售",
+                  "sharePct": 81.1,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                },
+                {
+                  "name": "技术服务",
+                  "sharePct": 15.19,
+                  "relatedToEvent": false,
+                  "relationType": "unrelated"
+                },
+                {
+                  "name": "硬件、代理软件销售及其他",
+                  "sharePct": 3.71,
+                  "relatedToEvent": false,
+                  "relationType": "contained"
+                }
+              ],
+              "businessRelation": {
+                "status": "broad_segment",
+                "relevantProducts": [
+                  {
+                    "name": "平板显示电路设计软件",
+                    "category": "集成电路软件开发"
+                  },
+                  {
+                    "name": "数字电路设计软件",
+                    "category": "集成电路软件开发"
+                  },
+                  {
+                    "name": "晶圆制造软件",
+                    "category": "集成电路软件开发"
+                  },
+                  {
+                    "name": "模拟电路设计软件",
+                    "category": "集成电路软件开发"
+                  }
+                ],
+                "knownProducts": [
+                  "平板显示电路设计软件",
+                  "数字电路设计软件",
+                  "晶圆制造软件",
+                  "模拟电路设计软件"
+                ],
+                "directSegmentCount": 0,
+                "containedSegmentCount": 2
+              }
+            },
+            "analysis": "华大九天已经具备平板显示电路设计软件、数字电路设计软件、晶圆制造软件等业务能力，国内EDA龙头，其数字电路设计EDA工具已导入国内龙头AI芯片设计的核心流程，并提供支持3DIC设计的全流程解决方案。**并非单纯概念映射。当前对应的收入被归入EDA软件销售（81.1%）、硬件、代理软件销售及其他（3.71%）这类综合分部，具体占比无法单独量化，既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。事件能否提升公司价值，取决于事件能否转化为可确认的经营增量是否通过“产业链位置先转化为客户需求和订单，再通过交付、收入确认及盈利质量进入报表”放大，并最终反映在订单、收入确认、产品结构和毛利率变化上；事件关联停留在主题层面，未形成可持续订单或利润贡献会使产品相关性与利润贡献出现明显落差。"
+          }
+        ]
+      }
+    ],
+    "caveats": [
+      "投资机会仅纳入 origin_star_num 中3至5个实心星的标的，并按星级从高到低分组。",
+      "股票范围仅限沪深北交易所A股；源数据中的上海市场 .SS 后缀统一转换为 .SH。",
+      "公司简介与2025年主营收入构成来自《2025年报公司简介和主营业务占比.xlsx》，优先按证券代码匹配，名称仅作唯一兜底。",
+      "星级表示事件与公司业务的相对关联强度，不构成收益排序或买卖建议。",
+      "9条低于3星的源记录已按当前关注口径排除。",
+      "16条3至5星非A股、未上市或代码不规范记录未进入组合。"
+    ]
+  },
   "caveats": [
-    "4星按 origin_star_num 中恰好4个实心星解析，包含★★★★与★★★★☆。",
-    "核心产品仅来自 stock_name 公司映射；事件行业标签兜底不用于上下游扩展。",
-    "上下游为双向补全明细中的直接一跳关系，未做多跳推断。",
-    "6只4星标的未在本地公司产品图谱中穿透。"
+    "核心产品仅纳入沪深北A股中恰好4个实心星的标的。",
+    "相关产业仅纳入3至5星A股标的，先确认真实七级产品，再按该产品的父级五级产业聚合。",
+    "两个相关产业会排除核心产业，并按支持标的数、星级权重、事件相关度和七级产品覆盖排序。",
+    "本阶段暂不展示或推断上下游关系；证据不足时不会强行补足两个产业。"
   ]
 }
