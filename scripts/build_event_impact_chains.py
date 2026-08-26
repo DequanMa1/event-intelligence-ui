@@ -148,6 +148,13 @@ INVESTMENT_ANALYSIS_BANNED_PHRASES = (
     "年报口径",
     "输入信息",
     "处理过程",
+    "本次事件首先改变",
+    "只有经过",
+    "才会形成收入和利润增量",
+    "产业链位置仍然成立",
+    "利润弹性会低于主题预期",
+    "预期进入经营结果仍需完成",
+    "相关性停留在估值预期",
 )
 
 INVESTMENT_GROUPS = {
@@ -325,6 +332,10 @@ BUSINESS_SEMANTIC_GROUPS = {
         "石油", "天然气", "油气", "煤炭", "lng", "炼化", "成品油", "电力", "发电",
         "核电", "水电", "火电",
     ),
+    "biofuel": (
+        "可持续航空燃料", "航空生物燃料", "生物航油", "生物燃料", "生物柴油",
+        "废弃油脂", "餐厨废油", "地沟油", "再生废油", "生物能源", "saf", "uco", "hvo",
+    ),
     "chemicals": (
         "化工", "化学品", "化学材料", "树脂", "涂料", "胶", "添加剂", "催化剂",
         "氟化工", "气体", "农药", "化肥",
@@ -397,6 +408,8 @@ BROAD_REVENUE_CONTAINMENT = (
     ("ict基础设施", {"network_compute", "optical_communication", "software_ai"}),
     ("新能源", {"battery_storage", "solar", "wind_power", "power_grid", "hydrogen_energy"}),
     ("新能源材料", {"battery_storage", "solar", "advanced_materials", "chemicals"}),
+    ("生物能源", {"biofuel", "oil_gas_energy", "environmental"}),
+    ("生物能源产业", {"biofuel", "oil_gas_energy", "environmental"}),
     ("化工材料", {"chemicals", "advanced_materials"}),
     ("电子元件", {"pcb_components", "semiconductor_chip", "optical_communication"}),
     ("电子元器件", {"pcb_components", "semiconductor_chip", "optical_communication"}),
@@ -1046,6 +1059,7 @@ def build_company_evidence(
         (
             company["companyProfile"],
             company["majorProducts"],
+            company["revenueComposition"],
             *(path_text(path) for path in stock_paths),
         )
     )
@@ -1129,47 +1143,63 @@ def build_investment_analysis(
     company_evidence: dict[str, Any],
     filled_stars: int,
 ) -> str:
-    reason_text = compact_text(professionalize_reason(reason), 92)
+    """Write a fact-first stock note without forcing every company into one rhetoric arc."""
+
+    reason_text = compact_text(professionalize_reason(reason), 108)
+    reason_clause = (
+        clean_text(reason_text).rstrip("。；;，, ")
+        or "现有事件线索尚未明确公司的具体供货产品与客户位置"
+    )
+    event_label = clean_text(event_title)
+    for source_term, client_term in (
+        ("半年度报告", "中期业绩"),
+        ("半年报", "中期业绩"),
+        ("年度报告", "年度业绩"),
+        ("年报", "年度业绩"),
+        ("季度报告", "季度业绩"),
+        ("季报", "季度业绩"),
+    ):
+        event_label = event_label.replace(source_term, client_term)
     transmission = infer_event_transmission(event_title, reason_text)
-    variant = narrative_variant(stock_name)
-    reason_clause = reason_text or "公司在产业链中的具体参与环节尚未充分明确"
 
-    def finalize(text: str) -> str:
-        return finalize_investment_analysis(text, stock_name)
-
-    if not company_evidence["matched"]:
-        unmatched_variants = (
-            (
-                f"{stock_name}与事件的具体业务联系在于：{reason_clause}。本次变化首先影响{transmission['driver']}，"
-                f"只有经由{transmission['path']}，才会转化为可确认的经营增量。相关业务目前究竟属于存量主业、"
-                "小基数增量还是产业链布局尚不清晰，因此业绩弹性暂时不能量化。"
-                f"判断强弱应聚焦{transmission['signals']}；若{transmission['risk']}，"
-                "相关性仍可能存在，但对公司盈利的解释力会明显下降。"
-            ),
-            (
-                f"{stock_name}具备事件相关的业务抓手：{reason_clause}，但相关业务的收入权重和利润贡献尚不清楚。"
-                f"即使{transmission['driver']}改善，也要经过{transmission['path']}，才可能形成公司层面的业绩变化。"
-                f"因此，当前更适合把{transmission['signals']}作为经营兑现的关键刻度；这些信号持续改善，"
-                "相关业务才可能从产业链布局上升为利润增量。"
-                f"反之，{transmission['risk']}会使市场预期先于基本面回落。"
-            ),
-            (
-                f"本次事件首先改变{stock_name}的{transmission['driver']}预期，业务抓手是：{reason_clause}。"
-                f"预期进入经营结果仍需完成{transmission['path']}这一整段传导，而相关业务的真实基数和战略重要性尚不明确。"
-                "这意味着公司可能同时具备产业趋势弹性和较大的兑现不确定性。"
-                f"{transmission['signals']}若连续强化，逻辑可信度会随之提升；若{transmission['risk']}，"
-                "当前相关性更可能停留在估值预期，而难以转化为利润贡献。"
-            ),
+    business_relation = company_evidence.get("businessRelation", {})
+    relation_status = clean_text(business_relation.get("status")) or "unavailable"
+    relevant_product_names = list(
+        dict.fromkeys(
+            clean_text(product.get("name"))
+            for product in business_relation.get("relevantProducts", [])
+            if clean_text(product.get("name"))
         )
-        return finalize(unmatched_variants[variant])
+    )
+    known_products = list(
+        dict.fromkeys(
+            clean_text(product)
+            for product in business_relation.get("knownProducts", [])
+            if clean_text(product)
+        )
+    )
+    product_text = "、".join(relevant_product_names[:4])
+    known_product_text = "、".join(known_products[:4])
+
+    profile_focus = compact_text(
+        company_evidence.get("profileSummary")
+        or company_evidence.get("majorProducts"),
+        104,
+    ).rstrip("。；;，, ")
+    business_base = compact_text(
+        company_evidence.get("majorProducts")
+        or profile_focus
+        or known_product_text
+        or "现有业务",
+        104,
+    ).rstrip("。；;，, ")
 
     positive_segments = [
         segment
-        for segment in company_evidence["revenueSegments"]
-        if segment["sharePct"] > 0
+        for segment in company_evidence.get("revenueSegments", [])
+        if segment.get("sharePct", 0) > 0
     ]
-    top_segments = positive_segments[:3]
-    related_segments = [
+    direct_segments = [
         segment
         for segment in positive_segments
         if segment.get("relationType") == "direct"
@@ -1179,318 +1209,339 @@ def build_investment_analysis(
         for segment in positive_segments
         if segment.get("relationType") == "contained"
     ]
-    business_relation = company_evidence.get("businessRelation", {})
-    relation_status = business_relation.get("status", "unverified")
-    relevant_product_names = [
-        product["name"]
-        for product in business_relation.get("relevantProducts", [])
-        if clean_text(product.get("name"))
-    ]
-    known_product_names = [
-        clean_text(name)
-        for name in business_relation.get("knownProducts", [])
-        if clean_text(name)
-    ]
-    product_text = "、".join(relevant_product_names[:3]) or "相关产品"
-    profile_focus = compact_text(company_evidence["profileSummary"], 88)
-    major_products = compact_text(company_evidence.get("majorProducts", ""), 88)
-    business_base = "、".join(known_product_names[:4]) or major_products or profile_focus or "现有业务"
-
-    if related_segments:
-        related_text = format_segment_evidence(related_segments)
-        related_share = sum(segment["sharePct"] for segment in related_segments)
-        if len(related_segments) == 1:
-            only_segment = related_segments[0]
-            related_evidence = (
-                f"{only_segment['name']}占收入的"
-                f"{format_share_pct(only_segment['sharePct'])}"
-            )
-        elif related_share <= 100.5:
-            related_evidence = f"{related_text}合计约占收入的{format_share_pct(related_share)}"
-        else:
-            related_evidence = f"{related_text}已经形成可识别收入"
-
-        if related_share >= 50:
-            high_exposure_variants = (
-                (
-                    f"{stock_name}与事件的关系已经落在存量主业，而非远期概念：{related_evidence}。"
-                    f"公司在产业链中的具体抓手是：{reason_clause}。本次事件若改变{transmission['driver']}，"
-                    f"影响会沿着“{transmission['path']}”进入经营结果。对这类高基数业务，市场分歧不在公司是否参与，"
-                    f"而在新增需求能否超过既有规模并转化为份额或盈利改善；{transmission['signals']}比主题热度更有解释力。"
-                    f"若{transmission['risk']}，业务相关性仍然成立，但业绩上修空间可能低于市场定价。"
-                ),
-                (
-                    f"{stock_name}的相关业务已决定公司大部分经营表现：{related_evidence}。"
-                    f"公司与事件的直接业务联系是：{reason_clause}，真正的增量取决于{transmission['driver']}，"
-                    f"并需经过“{transmission['path']}”才能体现。由于存量基数已经较高，单纯行业放量未必自动带来更高利润弹性，"
-                    f"{transmission['signals']}需要显示公司获得超越行业的增量。"
-                    f"{transmission['risk']}是这条逻辑最主要的反向约束。"
-                ),
-                (
-                    f"{stock_name}的事件暴露较为直接：{related_evidence}，相关业务不是边缘尝试；"
-                    f"具体业务抓手是：{reason_clause}。事件对公司的意义更接近存量主业景气变化，而不是新增题材。"
-                    f"利润端能否同步改善，仍取决于{transmission['driver']}是否通过“{transmission['path']}”放大，"
-                    f"尤其需要用{transmission['signals']}区分行业普涨与公司自身竞争力。"
-                    f"如果{transmission['risk']}，高收入相关度也可能只带来收入波动，而非利润质量提升。"
-                ),
-            )
-            return finalize(high_exposure_variants[variant])
-        elif related_share >= 10:
-            medium_exposure_variants = (
-                (
-                    f"{stock_name}的事件逻辑具备真实业务底座，但尚不足以代表全部公司：{related_evidence}。"
-                    f"公司与事件的具体联系在于：{reason_clause}，对应的核心变量是{transmission['driver']}。"
-                    f"若这一变量沿着“{transmission['path']}”兑现，相关业务可以贡献实质增量，"
-                    "但整体利润弹性仍会被其他主业的景气和产品结构稀释。"
-                    f"因此，{transmission['signals']}既是催化验证，也是判断事件影响能否从局部扩散到公司层面的关键；"
-                    f"{transmission['risk']}则可能令增量低于预期。"
-                ),
-                (
-                    f"对{stock_name}而言，{reason_clause}并非纯概念映射，因为{related_evidence}。"
-                    "这意味着事件影响有进入报表的基础，却仍是一项重要增量而非唯一主业。"
-                    f"本次事件改变的是{transmission['driver']}，传导效率取决于“{transmission['path']}”。"
-                    f"市场可能低估相关业务放量对产品结构的改善，也可能高估它对公司总利润的贡献，"
-                    f"两者需要由{transmission['signals']}来区分；若{transmission['risk']}，重估逻辑会被削弱。"
-                ),
-                (
-                    f"{stock_name}已有可跟踪的事件相关经营分部，而不是从零开始的远期期权：{related_evidence}。"
-                    f"公司在产业链中的位置是：{reason_clause}，{transmission['driver']}则决定增量大小。"
-                    f"只有完成“{transmission['path']}”，相关业务的增长才可能改善公司整体盈利。"
-                    f"{transmission['signals']}还需与其他主业表现同时改善；"
-                    f"{transmission['risk']}会使局部业务亮点难以转化为公司层面的业绩变化。"
-                ),
-            )
-            return finalize(medium_exposure_variants[variant])
-        else:
-            low_exposure_variants = (
-                (
-                    f"{stock_name}更接近“小基数、高弹性”的事件期权，而不是当前利润主线。"
-                    f"{related_evidence}，公司在产业链中的具体抓手是：{reason_clause}。"
-                    f"若{transmission['driver']}沿着“{transmission['path']}”兑现，相关业务增速可能很高，"
-                    "但较低的收入基数意味着短期贡献未必足以改变公司整体业绩。"
-                    f"这类标的最重要的不是行业空间叙事，而是{transmission['signals']}能否证明业务开始跨越规模门槛；"
-                    f"若{transmission['risk']}，估值弹性往往会先于报表弹性消退。"
-                ),
-                (
-                    f"{stock_name}在事件链条中的位置是：{reason_clause}；{related_evidence}，目前仍是较小的收入来源。"
-                    f"因此，本次事件首先改变的可能是市场对业务上限的估计，随后才是{transmission['driver']}经由"
-                    f"“{transmission['path']}”带来的实际利润。小基数提供增速弹性，也放大了预期与兑现之间的落差。"
-                    f"{transmission['signals']}若迟迟不能改善，或出现{transmission['risk']}，这条逻辑就难以从期权走向主业。"
-                ),
-                (
-                    f"{stock_name}已经参与事件相关业务，但收入基数仍小：{related_evidence}，"
-                    f"说明公司已有业务抓手，但“{reason_clause}”所隐含的空间仍明显大于当前收入贡献。"
-                    f"真正的预期差在于{transmission['driver']}能否驱动“{transmission['path']}”，从而推动业务跨过小规模阶段。"
-                    f"在此之前，{transmission['signals']}比总收入增速更值得跟踪；若{transmission['risk']}，"
-                    "市场对远期空间的定价可能缺少当期业绩支撑。"
-                ),
-            )
-            return finalize(low_exposure_variants[variant])
-
-    if contained_segments:
-        contained_text = format_segment_evidence(contained_segments)
-        contained_variants = (
+    top_segments = positive_segments[:3]
+    direct_share = sum(segment["sharePct"] for segment in direct_segments)
+    top_revenue_text = format_segment_evidence(top_segments, 3)
+    business_context = normalize_text(
+        " ".join(
             (
-                f"{stock_name}与事件存在真实业务交集：公司已有{product_text}，与{reason_clause}所处的产业环节一致。"
-                f"{contained_text}属于更宽的经营口径，相关产品可能包含其中，但不能把该分部的全部收入都视为事件敞口。"
-                f"本次变化主要影响{transmission['driver']}，只有经过“{transmission['path']}”，才会形成可确认的收入和利润增量。"
-                f"{transmission['signals']}能够判断相关产品是否从宽口径业务中的一部分成长为重要增量；"
-                f"若{transmission['risk']}，产业链位置仍然成立，但公司层面的利润弹性会低于主题预期。"
-            ),
-            (
-                f"{stock_name}的{contained_text}覆盖范围较宽，其中能够承载{product_text}，因此业务名称不同不等于与事件无关。"
-                f"公司与新闻的具体连接点是：{reason_clause}。现阶段无法用整个分部占比直接衡量受益程度，"
-                f"因为{transmission['driver']}还需沿“{transmission['path']}”传导，相关产品在分部内部的收入权重才会逐步显现。"
-                f"{transmission['signals']}若持续增强，事件影响可以从产品层面扩散到公司盈利；"
-                f"若{transmission['risk']}，宽口径业务规模不会自动转化为事件带来的业绩增量。"
-            ),
-            (
-                f"{stock_name}已经具备{product_text}等业务能力，{reason_clause}并非单纯概念映射。"
-                f"当前对应的收入被归入{contained_text}这类综合分部，具体占比无法单独量化，"
-                "既不能把整个分部都算作受益业务，也不能因为没有同名分部就把贡献判为零。"
-                f"事件能否提升公司价值，取决于{transmission['driver']}是否通过“{transmission['path']}”放大，"
-                f"并最终反映在{transmission['signals']}上；{transmission['risk']}会使产品相关性与利润贡献出现明显落差。"
-            ),
+                event_title,
+                reason_clause,
+                product_text,
+                known_product_text,
+                business_base,
+            )
         )
-        return finalize(contained_variants[variant])
-
-    if top_segments:
-        revenue_text = format_segment_evidence(top_segments)
-        if relation_status == "product_confirmed":
-            product_variants = (
-                (
-                    f"{stock_name}实际经营中已有{product_text}，与事件指向的{reason_clause}能够对应，业务联系并不因分部名称不同而消失。"
-                    f"公司当前收入集中在{revenue_text}，相关产品没有单独拆分，因此只能确认参与环节，暂时不能把收入权重或利润弹性量化。"
-                    f"本次事件若改善{transmission['driver']}，需要沿“{transmission['path']}”进入经营结果。"
-                    f"{transmission['signals']}将决定这部分业务是维持小规模配套，还是成长为能够影响公司整体业绩的增量；"
-                    f"若{transmission['risk']}，产品存在不等于利润一定增加。"
-                ),
-                (
-                    f"{stock_name}拥有{product_text}，其产业链位置与{reason_clause}一致；当前的{revenue_text}并未把这部分产品单独列示。"
-                    "这意味着事件关联可以在业务层面成立，但相关收入可能分散在多个经营口径中，不能简单按零处理，也不能直接套用整个分部占比。"
-                    f"真正的业绩增量仍由{transmission['driver']}决定，并需完成“{transmission['path']}”。"
-                    f"只有{transmission['signals']}持续改善，产品能力才会转化为公司层面的收入和盈利提升；"
-                    f"{transmission['risk']}则会限制兑现幅度。"
-                ),
-                (
-                    f"{stock_name}与新闻之间有明确产品抓手：{product_text}，对应{reason_clause}。"
-                    f"收入主体目前是{revenue_text}，事件相关产品被包含在现有业务体系内而非独立分部，因而无法直接读取其规模。"
-                    f"新闻首先改变{transmission['driver']}预期，随后要经过“{transmission['path']}”才能进入利润表。"
-                    f"{transmission['signals']}若形成连续改善，相关产品对整体经营的贡献会逐步提高；"
-                    f"若{transmission['risk']}，事件影响更可能停留在产品布局层面。"
-                ),
-            )
-            return finalize(product_variants[variant])
-
-        if relation_status == "business_mismatch":
-            mismatch_variants = (
-                (
-                    f"{stock_name}当前收入集中在{revenue_text}，现有产品以{business_base}为主，"
-                    f"与新闻所指的“{reason_clause}”并不是同一业务链条。"
-                    "这类名称或主题上的关联不能直接推导为公司具备对应产品，更不能据此估算收入弹性。"
-                    f"只有公司真正形成与事件一致的产品、客户和订单，{transmission['driver']}才可能沿“{transmission['path']}”进入经营结果。"
-                    f"在此之前，{transmission['signals']}若没有出现，事件对公司基本面的影响应按较弱处理；"
-                    f"{transmission['risk']}会进一步压低相关性。"
-                ),
-                (
-                    f"{stock_name}的主要经营内容是{revenue_text}，具体产品集中在{business_base}。"
-                    f"“{reason_clause}”描述的产业环节与公司现有产品体系缺少可确认的业务衔接，因此不能仅凭星级或题材把两者等同。"
-                    f"本次事件即使改善{transmission['driver']}，也需要先补上产品落地和客户导入，再经过“{transmission['path']}”才可能影响业绩。"
-                    f"{transmission['signals']}没有同步改善时，股价反应更可能来自主题交易；"
-                    f"若{transmission['risk']}，基本面解释力会继续下降。"
-                ),
-                (
-                    f"{stock_name}现有收入由{revenue_text}贡献，主营产品为{business_base}，与{reason_clause}指向的产品形态存在明显差异。"
-                    "因此，新闻并不能直接改变公司当前订单和利润，相关性需要由新增产品、明确客户或批量交付重新建立。"
-                    f"在业务连接真正形成后，{transmission['driver']}才会通过“{transmission['path']}”产生财务影响。"
-                    f"现阶段{transmission['signals']}比概念标签更重要；若{transmission['risk']}，事件对公司中期业绩的贡献将十分有限。"
-                ),
-            )
-            return finalize(mismatch_variants[variant])
-
-        if relation_status == "profile_supported":
-            supported_variants = (
-                (
-                    f"{stock_name}现有业务与{reason_clause}处于同一产业方向，收入主体为{revenue_text}。"
-                    "相关业务没有单独形成清晰分部，说明其规模和盈利贡献仍难量化，但不能因此认定公司与事件无关。"
-                    f"本次事件主要改变{transmission['driver']}，只有经由“{transmission['path']}”，业务交集才会转化为业绩增量。"
-                    f"{transmission['signals']}若逐步增强，相关业务的重要性会提高；若{transmission['risk']}，"
-                    "影响仍可能局限在估值预期。"
-                ),
-                (
-                    f"{stock_name}的业务范围能够覆盖{reason_clause}所处的产业环节，但当前{revenue_text}仍是收入主体，"
-                    "事件相关部分尚未单独量化。公司不是完全缺席，也尚不足以确认其对整体利润具有决定性影响。"
-                    f"{transmission['driver']}需要沿“{transmission['path']}”完成兑现，"
-                    f"并在{transmission['signals']}上形成持续改善；若{transmission['risk']}，业务联系对盈利的贡献会受到限制。"
-                ),
-                (
-                    f"{stock_name}与新闻存在业务方向上的交集：{reason_clause}；公司当前收入主要来自{revenue_text}。"
-                    "由于相关产品没有独立收入口径，合理结论是业务具备承接可能，但利润弹性暂时无法确认。"
-                    f"事件对{transmission['driver']}的推动只有经过“{transmission['path']}”才能进入报表，"
-                    f"{transmission['signals']}决定这一交集能否升级为实际增量；{transmission['risk']}是主要失效条件。"
-                ),
-            )
-            return finalize(supported_variants[variant])
-
-        no_segment_variants = (
-            (
-                f"{stock_name}当前收入集中在{revenue_text}，而{reason_clause}所指业务尚未形成可单独识别的经营规模。"
-                f"这意味着新闻首先影响{transmission['driver']}预期，业务端仍需沿“{transmission['path']}”传导后才能确认。"
-                f"{transmission['signals']}如果持续改善，相关业务可能从产业布局转为实际增量；"
-                f"若{transmission['risk']}，公司与事件的联系即使存在，也难以解释整体收入和利润变化。"
-            ),
-            (
-                f"{stock_name}的事件主线是：{reason_clause}，但当前收入结构尚未体现其重要性，收入重心仍是{revenue_text}。"
-                "因此，这条新闻更可能先改变市场对新产品、客户导入或产业链卡位的估值，"
-                f"而不是立刻改变当期利润。要让逻辑成立，{transmission['driver']}需要沿“{transmission['path']}”传导，"
-                f"并在{transmission['signals']}上留下可核验痕迹。若{transmission['risk']}，事件相关性仍可能成立，"
-                "但对公司整体业绩的解释力有限。"
-            ),
-            (
-                f"{stock_name}目前更依赖{revenue_text}，事件相关业务尚未形成独立收入分部。"
-                f"公司与事件的具体联系在于：{reason_clause}，更接近一条待兑现的增量主线，而非已经占据利润表的重要业务。"
-                f"本次事件的研究价值，在于它是否改变{transmission['driver']}；公司的产业链位置只有经过"
-                f"“{transmission['path']}”才能转化为收入。现阶段可以用{transmission['signals']}判断预期差方向；"
-                f"若{transmission['risk']}，短期主题弹性与中期业绩贡献可能明显背离。"
-            ),
-        )
-        return finalize(no_segment_variants[variant])
-
-    if relevant_product_names:
-        no_revenue_product_variants = (
-            (
-                f"{stock_name}已经拥有{product_text}，与{reason_clause}处于同一产业链环节，业务联系可以成立。"
-                "相关产品尚未形成独立的收入占比，因此能够确认公司参与，却不能直接判断对整体利润的贡献大小。"
-                f"本次事件若改善{transmission['driver']}，仍需经过“{transmission['path']}”才能形成财务增量。"
-                f"{transmission['signals']}持续增强时，相关产品可能从能力储备进入规模化贡献；"
-                f"若{transmission['risk']}，产品布局与实际盈利之间仍会存在较大距离。"
-            ),
-            (
-                f"{stock_name}与事件之间有具体产品连接：{product_text}，对应{reason_clause}。"
-                "目前无法单独量化这些产品的收入权重，因而不能把公司归为纯概念，也不能把产业空间直接等同于利润弹性。"
-                f"{transmission['driver']}只有沿“{transmission['path']}”完成兑现，才会改变公司经营结果。"
-                f"{transmission['signals']}将决定业务能否跨过小规模阶段；若{transmission['risk']}，"
-                "事件对公司的影响会主要停留在产品布局层面。"
-            ),
-            (
-                f"{stock_name}现有产品包括{product_text}，因此{reason_clause}具备现实业务基础。"
-                "由于相关业务尚未单独拆分收入，其在公司整体经营中的重要性仍不能量化。"
-                f"新闻对{transmission['driver']}的推动还要经过“{transmission['path']}”，"
-                f"并最终体现为{transmission['signals']}的持续改善。若{transmission['risk']}，"
-                "业务相关性仍然存在，但利润贡献可能明显低于市场预期。"
-            ),
-        )
-        return finalize(no_revenue_product_variants[variant])
-
-    if relation_status == "business_mismatch":
-        no_revenue_mismatch_variants = (
-            (
-                f"{stock_name}现有产品以{business_base}为主，与{reason_clause}指向的业务并非同一产品链条。"
-                "在缺少对应产品、客户和批量订单的情况下，新闻无法直接改变公司的收入和利润。"
-                f"只有业务连接真实建立，{transmission['driver']}才可能通过“{transmission['path']}”形成经营增量。"
-                f"{transmission['signals']}没有同步出现时，相关性应按较弱处理；若{transmission['risk']}，"
-                "事件对公司基本面的解释力会进一步下降。"
-            ),
-            (
-                f"{stock_name}当前业务集中在{business_base}，与新闻所述的{reason_clause}缺少明确产品衔接。"
-                "这意味着星级或产业标签本身不足以确认公司受益，后续必须先出现对应产品落地和客户导入。"
-                f"此后{transmission['driver']}才可能沿“{transmission['path']}”进入经营结果。"
-                f"若{transmission['signals']}迟迟没有改善，或出现{transmission['risk']}，"
-                "新闻影响更可能停留在短期主题层面。"
-            ),
-            (
-                f"{stock_name}的实际产品是{business_base}，与{reason_clause}描述的产品形态存在明显差异。"
-                "因此，本次事件尚不能直接映射到公司订单，相关业务需要由新增产品、明确客户或交付记录重新确认。"
-                f"在此之前，{transmission['driver']}缺少进入“{transmission['path']}”的业务入口，"
-                f"{transmission['signals']}也难以形成持续改善；{transmission['risk']}会进一步削弱中期业绩贡献。"
-            ),
-        )
-        return finalize(no_revenue_mismatch_variants[variant])
-
-    no_revenue_variants = (
-        (
-            f"{stock_name}现有业务为{profile_focus}；公司与事件的具体联系在于：{reason_clause}。"
-            "相关收入尚未单独拆分，真实权重无法判断。"
-            f"当前更有价值的问题是{transmission['driver']}能否通过{transmission['path']}形成独立披露。"
-            f"在{transmission['signals']}出现前，业绩弹性仍难量化；若{transmission['risk']}，事件影响可能停留在预期层面。"
-        ),
-        (
-            f"对{stock_name}而言，公司与事件的业务交集是：{reason_clause}，但相关收入权重尚未单独拆分，"
-            "这条逻辑暂时无法完成重要性判断。"
-            f"{transmission['driver']}究竟影响主业还是边缘布局，要看{transmission['signals']}能否显示"
-            f"{transmission['path']}正在发生。若{transmission['risk']}，更强的利润判断便难以成立。"
-        ),
-        (
-            f"{stock_name}的事件方向较为清楚，但业务权重仍不明确：{profile_focus}；"
-            f"公司在事件链条中的具体位置是：{reason_clause}，相关收入尚未单独拆分。"
-            f"这意味着盈利判断需要保留弹性，重点观察{transmission['driver']}是否经由{transmission['path']}"
-            f"转化为可识别收入。{transmission['signals']}若没有改善，或出现{transmission['risk']}，"
-            "就不能把业务交集进一步外推成利润贡献。"
-        ),
     )
-    return finalize(no_revenue_variants[variant])
+    role_context = normalize_text(
+        " ".join(
+            (
+                product_text,
+                " ".join(segment["name"] for segment in direct_segments),
+                " ".join(segment["name"] for segment in contained_segments),
+                reason_clause,
+            )
+        )
+    )
 
+    def operating_mechanism() -> str:
+        driver = transmission["driver"]
+        signals = transmission["signals"]
 
+        if relation_status in {"business_mismatch", "unverified", "unavailable"}:
+            return (
+                f"行业层面的{driver}不会自动落到{stock_name}的经营结果上；公司需要先出现与新闻产品一致的"
+                f"产品定型、客户验证或订单记录，才具备讨论收入贡献的基础。"
+            )
+        if "cpo" in business_context or "共封装光" in business_context:
+            if any(term in role_context for term in ("测试设备", "耦合设备", "封装设备", "自动化设备")):
+                return (
+                    f"罗列CPO出货量并不能直接估算{stock_name}的设备收入，设备商真正对应的是客户扩线、工艺改造和新增测试工位。"
+                    "订单通常领先于收入确认，验收节奏决定收入落点，设备标准化程度、交付效率与售后投入则决定毛利质量。"
+                )
+            if any(term in role_context for term in ("fau", "光纤阵列", "连接器", "光组件", "跳线", "耦合")):
+                return (
+                    f"{stock_name}提供的是CPO高密度连接和精密耦合部件，价值量来自通道数、耦合精度及在客户方案中的单机用量。"
+                    "真正影响收入的是平台定点能否转成稳定份额；量产良率和自动化程度决定新增订单会放大利润，还是被制造成本和交付损耗消化。"
+                )
+            if any(term in role_context for term in ("光模块", "光通讯收发", "光互联产品", "光收发")):
+                return (
+                    f"CPO量产对{stock_name}并不等同于传统可插拔光模块需求同比例增加，因为交换机侧架构正在改变产品形态。"
+                    "公司能否把既有客户和封装能力迁移到光引擎、CPO或相关新方案，并维持价值量与份额，决定新业务增量能否覆盖旧产品被替代的压力。"
+                )
+            if any(term in role_context for term in ("激光器", "光芯片", "dfb", "cw激光", "els")):
+                return (
+                    f"{stock_name}处在CPO外置光源或发射芯片环节，需求增量取决于单套系统的光源数量、功率要求和公司供货份额。"
+                    "高功率可靠性、良率与客户认证速度会同时影响出货和单位成本，因此行业量产与公司利润之间并不是简单的销量倍增关系。"
+                )
+        if any(term in business_context for term in ("功率半导体", "功率器件", "igbt", "mosfet")):
+            if "设备" in role_context:
+                return (
+                    f"功率器件缺货不会立即增加{stock_name}的设备收入，只有晶圆厂和器件厂把高产销率转化为扩线计划，设备订单才会出现。"
+                    "从客户资本开支到设备验收存在时间差，订单覆盖度、国产化份额和验收周期比短期芯片报价更能决定利润。"
+                )
+            return (
+                f"缺货环境对{stock_name}的作用主要落在产能利用率、产品报价和高端器件占比。"
+                "公司已有产能能否快速切换到紧缺型号决定销量弹性；价格涨幅若被晶圆、封装和渠道成本吸收，收入改善也未必带来同幅度的毛利提升。"
+            )
+        if any(term in business_context for term in ("创新药", "新药", "临床", "医药", "生物制药")):
+            if any(term in role_context for term in ("cro", "cdmo", "研发服务", "临床服务", "外包服务")):
+                return (
+                    f"授权交易提高的是药企研发投入和项目推进意愿，{stock_name}作为研发或生产服务商，受益点应落在新增项目数、在手订单和产能利用率。"
+                    "项目取消率、订单执行周期和价格竞争会决定行业交易活跃度能否转成服务收入与现金回款。"
+                )
+            if any(term in role_context for term in ("原料药", "中间体", "制剂生产", "商业化生产")):
+                return (
+                    f"{stock_name}若承担原料、制剂或商业化生产，授权金额本身不属于公司收入，真正相关的是项目推进后新增的生产批次和供货份额。"
+                    "临床进度、放量节奏与产线利用率决定订单规模，质量体系和制造成本决定收入兑现后的利润水平。"
+                )
+            return (
+                f"{stock_name}在创新药事件中的价值取决于是否拥有相关药物权益。自研项目应区分首付款、里程碑、销售分成与持续研发费用，"
+                "不能把交易总额一次性理解为利润；适应症竞争、临床成功率和商业化费用会显著改变项目净价值。"
+            )
+        if any(term in business_context for term in ("saf", "可持续航空燃料", "uco", "废弃油脂", "地沟油")):
+            if any(term in role_context for term in ("废弃油脂", "uco", "回收", "原料", "贸易")):
+                return (
+                    f"{stock_name}位于废弃油脂收集、加工或贸易端，SAF需求增长首先改变原料采购价差和出口流向。"
+                    "销量增加并不必然改善利润，关键在于采购成本能否向下游转嫁、库存周转是否稳定，以及认证与追溯能力能否维持客户溢价。"
+                )
+            if any(term in role_context for term in ("生物柴油", "航空燃料", "炼化", "燃料", "hvo", "saf")):
+                return (
+                    f"{stock_name}的业绩敏感项是SAF或生物燃料产销量、原料成本和产品价差。"
+                    "装置利用率提高能够摊薄固定成本，但原料价格上涨、工艺收率和认证进度会决定需求增长最终体现为销量还是毛利。"
+                )
+            return (
+                f"SAF需求对{stock_name}的影响取决于公司在原料、生产或使用端的实际合同位置。"
+                "没有采购量、供货量或价差变化支撑时，行业需求增长不能直接解释公司收入，更不能据此估算利润。"
+            )
+        if "供需缺口" in driver:
+            return (
+                f"事件中的供需缺口如果覆盖上述产品，{stock_name}最先感受到的是报价、排产和产销率变化。"
+                "售价提升能否覆盖原料与制造成本、产能是否已有足够利用空间，决定收入增长能否同步改善毛利。"
+            )
+        if "研发里程碑" in driver:
+            return (
+                f"研发、获批或授权节点对{stock_name}的价值取决于公司在项目中拥有的权益：自有产品看获批后的销售放量，"
+                "授权合作看首付款、里程碑和分成，研发服务则看新增订单与项目执行，三者不能按同一种利润弹性估算。"
+            )
+        if "政策约束" in driver:
+            return (
+                f"政策本身不直接贡献{stock_name}的收入，真正影响经营的是准入范围、客户采购预算和项目落地速度。"
+                "招投标规模、开工率与回款周期会共同决定订单增长最终对应的是利润还是应收账款占用。"
+            )
+        if "商业化进度" in driver:
+            return (
+                f"量产、采购或客户采用对{stock_name}的含义，要落实到其产品在客户方案中的用量和价值量。"
+                "认证转为批量订单后，交付节奏、良率和产能利用率共同决定收入规模，产品结构则决定利润增幅是否高于收入增幅。"
+            )
+        if "产能释放" in driver:
+            return (
+                f"扩产提高的是{stock_name}的可交付上限，而不是确定收入。需求能否填满新增产线、产品价格能否覆盖折旧和爬坡成本，"
+                "会决定产能投放是扩大盈利还是增加闲置负担。"
+            )
+        if "终端需求" in driver:
+            return (
+                f"需求增长对{stock_name}的影响取决于客户采购量、公司份额和产品单价能否同时保持。"
+                "出货增长只有在价格竞争可控、产品结构改善或单位成本下降时，才可能带来更明显的利润变化。"
+            )
+        if "技术商业化" in driver:
+            return (
+                f"技术进展对{stock_name}的价值不在于概念发布，而在于相关产品能否通过客户认证并稳定批量交付。"
+                "良率、单位价值量和客户导入速度决定技术优势是转化为收入，还是继续停留在研发投入和小批量验证阶段。"
+            )
+        if "经营约束" in driver:
+            return (
+                f"限制、停产或需求冲击对{stock_name}的实际影响取决于受影响订单占比、替代客户和成本转嫁能力。"
+                "销量损失、价格变化与减值压力需要分开判断，不能把行业冲击简单等同为公司利润同比例变化。"
+            )
+        return (
+            f"{stock_name}的经营敏感项是{signals}，这些指标需要与相关产品的订单和收入变化相互印证。"
+            "行业热度本身不能替代公司的客户份额、交付能力和单位盈利。"
+        )
+
+    def validation_focus() -> str:
+        if "cpo" in business_context or "共封装光" in business_context:
+            if any(term in role_context for term in ("测试设备", "耦合设备", "封装设备", "自动化设备")):
+                return (
+                    "验证重点是CPO相关新增设备订单、单机价值量和验收收入，而不是整个光通信行业的出货增速；"
+                    "客户扩产延后或验收周期拉长会直接改变设备收入确认节奏。"
+                )
+            if any(term in role_context for term in ("fau", "光纤阵列", "连接器", "光组件", "跳线", "耦合")):
+                return (
+                    "平台定点、单机用量、量产良率和相关产品收入是这条逻辑的有效验证项；"
+                    "如果连接方案切换或客户自制比例提高，行业放量也可能无法转化为公司份额。"
+                )
+            if any(term in role_context for term in ("光模块", "光通讯收发", "光互联产品", "光收发")):
+                return (
+                    "研究上应分开跟踪传统可插拔模块与CPO、光引擎等新产品的收入和毛利，"
+                    "只有新方案取得明确份额且抵消旧产品替代压力，整体盈利判断才有支撑。"
+                )
+            if any(term in role_context for term in ("激光器", "光芯片", "dfb", "cw激光", "els")):
+                return (
+                    "高功率光源认证、批量出货、良率和产品单价比CPO概念热度更重要；"
+                    "客户方案减少外置光源用量或认证周期延长，都会压低芯片环节的实际增量。"
+                )
+        if any(term in business_context for term in ("功率半导体", "功率器件", "igbt", "mosfet")):
+            return (
+                "需要同时核对紧缺型号报价、排产周期、产能利用率和毛利率：只有报价与利用率改善且库存没有异常累积，"
+                "缺货才是公司盈利改善而不是渠道补库。"
+            )
+        if any(term in business_context for term in ("创新药", "新药", "临床", "医药", "生物制药")):
+            if any(term in role_context for term in ("cro", "cdmo", "研发服务", "临床服务", "外包服务")):
+                return (
+                    "服务商应检查新增项目、在手订单、项目执行率和经营现金流，不能用药企授权总额替代公司订单；"
+                    "研发项目缩减或价格竞争加剧会削弱交易活跃度带来的收入增量。"
+                )
+            if any(term in role_context for term in ("原料药", "中间体", "制剂生产", "商业化生产")):
+                return (
+                    "生产端应跟踪供货批次、产线利用率、质量认证和客户集中度；项目仍在临床阶段时，"
+                    "授权交易对当期制造收入的解释力有限。"
+                )
+            return (
+                "应把具体项目权益、首付款确认、后续里程碑、销售分成和持续研发费用分别建模，"
+                "同业授权金额只能提供估值参照，不能直接替代公司的收入和净利润。"
+            )
+        if any(term in business_context for term in ("saf", "可持续航空燃料", "uco", "废弃油脂", "地沟油")):
+            if any(term in role_context for term in ("废弃油脂", "uco", "回收", "原料", "贸易")):
+                return (
+                    "UCO采购价、销售价、库存周转和出口量需要合并观察；销量上升但价差收窄时，"
+                    "收入增长可能伴随盈利能力下降。"
+                )
+            if any(term in role_context for term in ("生物柴油", "航空燃料", "炼化", "燃料", "hvo", "saf")):
+                return (
+                    "SAF或HVO的实际产量、认证进度、装置利用率和单位价差决定经营弹性，"
+                    "原料上涨速度快于产品提价时，需求扩张反而可能挤压利润。"
+                )
+        return (
+            f"研究上应把{transmission['signals']}与相关业务收入、毛利率和现金回款相互核对，"
+            f"并留意{transmission['risk']}。"
+        )
+
+    sentences: list[str] = []
+
+    if not company_evidence.get("matched"):
+        sentences.append(
+            f"{stock_name}被纳入“{event_label}”的具体线索是{reason_clause}，但目前还不能把这条描述定位到"
+            "公司哪一项存量产品或收入来源。"
+        )
+        sentences.append(operating_mechanism())
+        sentences.append(
+            f"研究判断应暂时停留在业务线索层面，验证点是{transmission['signals']}；"
+            "没有明确产品、客户和收入权重之前，星级不能替代基本面关联。"
+        )
+    elif relation_status == "direct_segment" and direct_segments:
+        direct_text = format_segment_evidence(direct_segments, 3)
+        anchor = product_text or reason_clause
+        sentences.append(
+            f"{stock_name}与“{event_label}”的业务连接落在{anchor}，{reason_clause}。"
+        )
+        if direct_share >= 50:
+            sentences.append(
+                f"{direct_text}合计约占收入{format_share_pct(direct_share)}，已经是公司经营主体，"
+                "事件对订单、售价或交付量的影响具备改变整体收入增速的条件。"
+            )
+        elif direct_share >= 15:
+            sentences.append(
+                f"{direct_text}合计约占收入{format_share_pct(direct_share)}，相关业务已有足够规模影响经营，"
+                "但其他业务仍会稀释其对公司整体利润的贡献。"
+            )
+        else:
+            sentences.append(
+                f"{direct_text}合计约占收入{format_share_pct(direct_share)}，业务连接真实但基数较小，"
+                "即使增速较高，短期也未必足以主导公司整体业绩。"
+            )
+        sentences.append(operating_mechanism())
+        if direct_share >= 50:
+            sentences.append(
+                "相关分部已经足以影响公司整体经营，验证时应直接比较该分部收入、毛利率与现金回款是否同步改善。"
+                + validation_focus()
+            )
+        elif direct_share >= 15:
+            sentences.append(
+                "相关业务需要跑赢公司其他分部，才能明显抬升整体利润增速。" + validation_focus()
+            )
+        else:
+            sentences.append(
+                "小基数业务应看绝对收入、客户数量和毛利贡献是否跨过规模门槛，不能只看同比增速。"
+                + validation_focus()
+            )
+    elif relation_status == "broad_segment" and contained_segments:
+        contained_text = format_segment_evidence(contained_segments, 3)
+        anchor = product_text or reason_clause
+        sentences.append(
+            f"{stock_name}确有{anchor}这一业务抓手，与“{event_label}”并非单纯题材映射；{reason_clause}。"
+        )
+        sentences.append(
+            f"相关收入被并入{contained_text}等宽口径分部，能够确认公司参与，却不能把整个分部占比都当成事件敞口。"
+        )
+        sentences.append(operating_mechanism())
+        sentences.append(validation_focus())
+    elif relation_status == "product_confirmed":
+        anchor = product_text or known_product_text or reason_clause
+        sentences.append(
+            f"{stock_name}已经经营{anchor}，与“{event_label}”所指产业环节能够对应；{reason_clause}。"
+        )
+        if top_revenue_text:
+            sentences.append(
+                f"公司收入目前主要由{top_revenue_text}承载，事件相关产品没有独立拆分，"
+                "因此可以确认参与位置，但无法据此直接计算收入权重和利润弹性。"
+            )
+        else:
+            sentences.append(
+                "事件相关产品尚未形成可单独量化的收入项目，当前更适合判断产品能力和客户位置，而不是估算利润贡献。"
+            )
+        sentences.append(operating_mechanism())
+        sentences.append(validation_focus())
+    elif relation_status == "profile_supported":
+        focus = profile_focus or business_base
+        sentences.append(
+            f"{stock_name}的现有业务范围覆盖“{event_label}”涉及的方向，具体交集是{reason_clause}。"
+        )
+        if top_revenue_text:
+            sentences.append(
+                f"现有收入重心在{top_revenue_text}，而上述业务没有独立列示，说明公司具备承接场景，"
+                "但它对总收入和利润的实际权重仍不能确认。"
+            )
+        else:
+            sentences.append(
+                f"公司业务基础集中在{focus}，与事件方向存在交集，但对应产品的经营规模尚未被单独识别。"
+            )
+        sentences.append(operating_mechanism())
+        sentences.append(
+            f"这类标的应以{transmission['signals']}检验业务交集是否扩大，"
+            "不能因为业务方向相近就把行业空间直接外推为公司盈利空间。"
+        )
+    elif relation_status == "business_mismatch":
+        revenue_anchor = top_revenue_text or "现有收入项目"
+        product_anchor = business_base or known_product_text or "现有产品体系"
+        sentences.append(
+            f"{stock_name}当前收入集中在{revenue_anchor}，产品和服务主要是{product_anchor}。"
+        )
+        sentences.append(
+            f"这些业务与“{event_label}”中的{reason_clause}不处在同一产品链条，名称相近或同属大科技类别都不足以建立收入关联。"
+        )
+        sentences.append(operating_mechanism())
+        sentences.append(
+            "在出现对应产品、明确客户和批量订单之前，这只股票更适合按主题相关处理，而不是按业绩相关处理。"
+        )
+    else:
+        focus = profile_focus or business_base
+        sentences.append(
+            f"{stock_name}与“{event_label}”的关联线索是{reason_clause}。"
+        )
+        if top_revenue_text:
+            sentences.append(
+                f"公司收入重心是{top_revenue_text}，现有经营内容{('集中在' + focus) if focus else '尚未把事件相关产品单独列出'}，"
+                "目前无法确认新闻对应业务在公司内部的实际规模。"
+            )
+        else:
+            sentences.append(
+                f"公司现有业务以{focus or '已披露产品和服务'}为主，事件相关部分尚未形成可独立识别的收入项目。"
+            )
+        sentences.append(operating_mechanism())
+        sentences.append(
+            f"在{transmission['signals']}出现持续变化前，不宜把{filled_stars}星关联直接解释为公司收入或利润变化。"
+        )
+
+    analysis = clean_text("".join(sentences))
+    if len(analysis) < 180:
+        analysis += (
+            f"更有效的验证方式是把{transmission['signals']}与公司相关业务收入、毛利率和现金回款放在一起观察，"
+            "而不是仅依据行业新闻判断盈利方向。"
+        )
+    if len(analysis) > 590:
+        analysis = compact_text(analysis, 590)
+    return finalize_investment_analysis(analysis, stock_name)
 def build_investment_opportunities(
     event_rows: pd.DataFrame,
     company_paths_by_source_row: dict[str, list[dict[str, str]]],
@@ -2276,7 +2327,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--investment-prompt-template",
         type=Path,
-        default=project_root / "prompts" / "investment-opportunity-analyst-v4.md",
+        default=project_root / "prompts" / "investment-opportunity-analyst-v5.md",
     )
     parser.add_argument(
         "--report-corpus",
