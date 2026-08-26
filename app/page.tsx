@@ -489,7 +489,8 @@ export default function Home() {
   useEffect(() => {
     const controller = new AbortController();
 
-    fetch(`/data/impact-chains/${selected.apiMainId}.json`, { signal: controller.signal })
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+    fetch(`${basePath}/data/impact-chains/${selected.apiMainId}.json`, { signal: controller.signal })
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json() as Promise<ImpactChainRecord>;
