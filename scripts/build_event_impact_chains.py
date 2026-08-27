@@ -169,6 +169,22 @@ INVESTMENT_ANALYSIS_BANNED_PHRASES = (
     "小基数布局。",
     "业务错位。",
     "蹭概念。",
+    "最终要落到",
+    "落到报表",
+    "报表兑现",
+    "收入端只能看到",
+    "没有单独拆出",
+    "却没有单独拆出",
+    "尚未形成可单独识别的科目",
+    "宽口径科目",
+    "收入容器",
+    "业务敞口",
+    "经营权重",
+    "经营含量",
+    "利润隔断",
+    "题材映射",
+    "验真点",
+    "逐层扣完",
 )
 
 INVESTMENT_GROUPS = {
@@ -1183,6 +1199,7 @@ BUSINESS_ROLE_KEYWORDS = {
     "liquid_cooling": ("液冷", "冷板", "冷却工质", "冷却液", "液冷机组", "浸没式冷却", "冷板式冷却"),
     "thermal_management": ("温控", "散热", "热管理", "精密空调", "机房空调", "均热板", "冷水机组"),
     "server_compute": ("服务器", "交换机", "数据中心", "算力", "超算", "hpc"),
+    "cleanroom": ("洁净室", "净化工程", "洁净工程", "无尘室"),
     "innovative_drug": ("创新药", "新药", "临床", "适应症", "药物授权", "药品获批"),
     "drug_service": ("cro", "cdmo", "研发服务", "临床服务", "医药外包", "商业化生产"),
     "biofuel_feedstock": ("废弃油脂", "地沟油", "餐厨废油", "uco", "原料收集", "油脂回收"),
@@ -1191,7 +1208,7 @@ BUSINESS_ROLE_KEYWORDS = {
     "solar": ("光伏", "太阳能", "光伏组件", "逆变器", "电池片"),
     "grid": ("电网", "输变电", "变压器", "配电", "电力设备", "电力电子", "充电桩"),
     "robotics": ("机器人", "减速器", "伺服", "机器视觉", "工业自动化"),
-    "software_ai": ("人工智能", "大模型", "ai软件", "算法", "数据库", "操作系统", "云服务"),
+    "software_ai": ("人工智能", "大模型", "ai软件", "ai应用", "算法", "数据库", "操作系统", "云服务", "豆包", "智能体"),
 }
 
 BUSINESS_ROLE_LABELS = {
@@ -1206,6 +1223,7 @@ BUSINESS_ROLE_LABELS = {
     "liquid_cooling": "液冷系统、冷板与工质",
     "thermal_management": "温控与散热设备",
     "server_compute": "服务器与数据中心设备",
+    "cleanroom": "洁净室工程",
     "innovative_drug": "创新药权益与商业化",
     "drug_service": "医药研发及生产服务",
     "biofuel_feedstock": "废弃油脂原料",
@@ -1226,6 +1244,8 @@ ROLE_COMPATIBILITY = {
     "thermal_management": {"liquid_cooling", "thermal_management"},
     "innovative_drug": {"innovative_drug", "drug_service"},
     "biofuel_production": {"biofuel_production", "biofuel_feedstock"},
+    "software_ai": {"software_ai", "server_compute"},
+    "server_compute": {"server_compute", "software_ai"},
 }
 
 
@@ -1253,6 +1273,46 @@ def roles_are_compatible(event_roles: set[str], company_roles: set[str]) -> bool
 def role_label(roles: set[str], fallback: str) -> str:
     labels = [BUSINESS_ROLE_LABELS[role] for role in BUSINESS_ROLE_LABELS if role in roles]
     return "、".join(labels[:2]) or fallback
+
+
+def choose_retail_product_anchor(
+    candidates: list[str],
+    event_roles: set[str],
+    company_roles: set[str],
+    fallback: str,
+) -> str:
+    """Pick the product that best explains the customer purchase caused by the event."""
+
+    def product_score(product: str) -> int:
+        text = normalize_text(product)
+        product_roles = infer_business_roles(product)
+        score = 10 if roles_are_compatible(event_roles, product_roles) else 0
+        score += 3 if product_roles & company_roles else 0
+        if "software_ai" in event_roles:
+            score += 8 if any(term in text for term in ("加速卡", "服务器", "算力", "云端", "ai软件", "模型服务")) else 0
+            score += 1 if "ip授权" in text else 0
+        if event_roles & {"biofuel_feedstock", "biofuel_production"}:
+            score += 8 if any(term in text for term in ("uco", "废弃食用油脂", "废弃油脂", "生物航油", "可持续航空燃料")) else 0
+        if event_roles & {"cpo", "optical_module", "optical_component", "optical_chip"}:
+            if "semiconductor_equipment" in company_roles:
+                score += 8 if any(term in text for term in ("测试设备", "耦合设备", "封装设备", "测试系统")) else 0
+            else:
+                score += 8 if any(term in text for term in ("cpo", "光模块", "光引擎", "光芯片", "激光器", "光器件")) else 0
+        if "cleanroom" in event_roles:
+            score += 8 if any(term in text for term in ("洁净室", "净化工程", "无尘室")) else 0
+        if event_roles & {"liquid_cooling", "thermal_management"}:
+            score += 8 if any(term in text for term in ("液冷", "冷板", "冷却液", "温控", "散热")) else 0
+        return score
+
+    cleaned = [clean_text(product) for product in candidates if clean_text(product)]
+    if not cleaned:
+        return compact_text(fallback, 46)
+    best_index, best_product = max(
+        enumerate(cleaned),
+        key=lambda item: (product_score(item[1]), -item[0]),
+    )
+    _ = best_index
+    return compact_text(best_product, 46)
 
 
 def infer_realization_stage(event_title: str, reason: str) -> tuple[int, str, str]:
@@ -1295,6 +1355,325 @@ def extract_reason_fact(reason: str, event_title: str) -> str:
     if not candidates:
         return ""
     return compact_text(max(candidates, key=lambda item: (item[0], len(item[1])))[1], 72)
+
+
+def format_segment_names(segments: list[dict[str, Any]], limit: int = 2) -> str:
+    names = [
+        clean_text(segment.get("name"))
+        for segment in segments
+        if clean_text(segment.get("name"))
+        and normalize_text(segment.get("name")) not in {"其他", "其他业务", "其他产品"}
+    ]
+    if not names:
+        names = [
+            clean_text(segment.get("name"))
+            for segment in segments
+            if clean_text(segment.get("name"))
+        ]
+    return "、".join(names[:limit])
+
+
+def compose_retail_investment_analysis(
+    *,
+    event_key: str,
+    event_focus: str,
+    stock_name: str,
+    filled_stars: int,
+    relation_label: str,
+    event_role_text: str,
+    company_role_text: str,
+    product_anchor: str,
+    direct_share: float,
+    direct_segments: list[dict[str, Any]],
+    contained_segments: list[dict[str, Any]],
+    top_segments: list[dict[str, Any]],
+    driver: str,
+    stage_rank: int,
+    stage_label: str,
+    context_roles: set[str],
+    company_roles: set[str],
+    same_profit_pool: bool,
+    reason_fact: str,
+) -> dict[str, str]:
+    """Explain an event-stock relationship in plain language for retail readers."""
+
+    narrative_key = (
+        event_key,
+        event_focus,
+        stock_name,
+        product_anchor,
+        relation_label,
+        reason_fact,
+    )
+    if "cleanroom" in context_roles:
+        link_explanation = f"芯片厂扩建洁净室时会采购{product_anchor}，公司的产品正好用于这类建设项目。"
+    elif context_roles & {"cpo", "optical_module", "optical_component", "optical_chip"}:
+        if "semiconductor_equipment" in company_roles:
+            link_explanation = "CPO产线需要耦合、封装和测试设备，这正是生产环节必须配置的设备。"
+        elif "optical_chip" in company_roles:
+            link_explanation = "CPO系统需要激光器和光芯片提供光源，这类部件会随设备出货一起采购。"
+        elif "optical_component" in company_roles:
+            link_explanation = "CPO设备需要精密光连接和耦合部件，这类产品会直接装进设备。"
+        else:
+            link_explanation = "CPO交换机需要高速光互联产品，这类模块是客户会直接采购的核心部件。"
+    elif context_roles & {"biofuel_feedstock", "biofuel_production"}:
+        if "biofuel_feedstock" in company_roles:
+            link_explanation = "生产SAF需要废弃油脂作原料，燃料生产商会直接采购这类上游原料。"
+        else:
+            link_explanation = f"航空公司增加SAF使用量，会直接增加对{product_anchor}的需求。"
+    elif context_roles & {"innovative_drug", "drug_service"}:
+        if "drug_service" in company_roles:
+            link_explanation = f"药企推进新药项目时会采购研发或生产服务，{product_anchor}就是公司向药企收取服务费的业务。"
+        else:
+            link_explanation = f"新闻涉及的药物合作会影响{product_anchor}的授权收入、研发进度或后续销售。"
+    elif context_roles & {"liquid_cooling", "thermal_management"}:
+        link_explanation = f"数据中心采用液冷时需要采购冷却和温控产品，{product_anchor}就是系统中会用到的设备或材料。"
+    elif "semiconductor_equipment" in company_roles:
+        link_explanation = f"芯片厂扩产或升级工艺时需要购买{product_anchor}，公司的客户采购场景与新闻方向一致。"
+    elif "software_ai" in context_roles and "server_compute" in company_roles:
+        link_explanation = f"AI应用使用量增加会提高算力需求，客户可能因此增加对{product_anchor}的采购。"
+    elif "software_ai" in context_roles and "software_ai" in company_roles:
+        link_explanation = f"客户增加AI应用投入时，会购买更多{product_anchor}，公司的产品与新闻所说的使用场景一致。"
+    else:
+        link_explanation = f"新闻涉及的客户在增加建设或采购时会用到{product_anchor}，因此公司存在真实的销售关系。"
+
+    if relation_label == "真相关":
+        opening_options = (
+            f"{stock_name}和“{event_focus}”的直接联系是{product_anchor}。{link_explanation}",
+            f"看{stock_name}与“{event_focus}”的关系，关键不是行业名称相似，而是公司已经在卖{product_anchor}。{link_explanation}",
+            f"{stock_name}确实做着“{event_focus}”涉及的生意，具体产品是{product_anchor}。{link_explanation}",
+            f"“{event_focus}”会影响{stock_name}，原因很具体：公司销售{product_anchor}。{link_explanation}",
+        )
+    elif relation_label == "宽口径相关":
+        opening_options = (
+            f"{stock_name}与“{event_focus}”有实际业务联系，连接点是{product_anchor}。{link_explanation}这项需求只会影响相关产品。",
+            f"“{event_focus}”能影响{stock_name}，不是因为题材名称相近，而是公司确实提供{product_anchor}。{link_explanation}只是这项产品目前还不能代表公司的全部生意。",
+            f"{stock_name}真正与“{event_focus}”相连的是{product_anchor}。{link_explanation}公司存在接单机会，但受影响的是其中一块业务。",
+            f"看{stock_name}的实际产品，公司确实提供{product_anchor}，与“{event_focus}”不是只沾名字。{link_explanation}公司其他业务不会因此一起增长。",
+        )
+    elif relation_label == "小基数布局":
+        opening_options = (
+            f"{stock_name}与“{event_focus}”的联系在{product_anchor}。{link_explanation}不过这项业务目前规模较小或仍在导入阶段。",
+            f"“{event_focus}”在{stock_name}身上不是完全没产品，公司确实提供{product_anchor}。{link_explanation}问题在于这还是小业务。",
+            f"{stock_name}通过{product_anchor}参与“{event_focus}”涉及的业务。{link_explanation}只是这项产品还没有成为公司主要收入来源。",
+            f"看产品，{stock_name}能用{product_anchor}接上“{event_focus}”所说的需求。{link_explanation}看公司整体，这块生意仍小。",
+        )
+    elif relation_label == "错位":
+        opening_options = (
+            f"{stock_name}和“{event_focus}”看起来在同一大行业，实际卖的不是同一种东西。新闻影响的是{event_role_text}，公司主要做{company_role_text}，前者的客户不会因此自然增加对后者的采购。",
+            f"“{event_focus}”说的是{event_role_text}，{stock_name}主要靠{company_role_text}做生意。两类产品的用途和购买方不同，所以行业热度不能直接变成公司的订单。",
+            f"把产品用途说白了，{stock_name}卖的是{company_role_text}，而“{event_focus}”带动的是{event_role_text}。两者即使同属一个板块，也没有直接的客户采购关系。",
+            f"{stock_name}并不是“{event_focus}”对应需求的直接供应商。公司收入来自{company_role_text}，新闻中的客户需要的是{event_role_text}，中间少了真实的买卖关系。",
+        )
+    else:
+        opening_options = (
+            f"目前看不出{stock_name}与“{event_focus}”之间有直接生意。公司主要提供{company_role_text}，新闻涉及的客户需要{event_role_text}，现有产品里没有清楚的采购连接。",
+            f"“{event_focus}”可以带动相关板块情绪，但{stock_name}现有业务是{company_role_text}，并没有明确产品会因为{event_role_text}需求变化而多卖。",
+            f"{stock_name}与“{event_focus}”更多是行业联想。公司的{company_role_text}并非新闻所说客户必须采购的产品，暂时看不到订单增加的直接原因。",
+            f"从{stock_name}实际经营的{company_role_text}看，“{event_focus}”没有带来明确的客户购买场景。名称能沾边，不代表公司会因此多卖货。",
+        )
+    sentences = [choose_narrative_option(opening_options, *narrative_key, salt="retail-opening")]
+
+    direct_names = format_segment_names(direct_segments, 2)
+    contained_names = format_segment_names(contained_segments, 2)
+    top_names = format_segment_names(top_segments, 2)
+    if relation_label == "错位" and top_names:
+        revenue_options = (
+            f"公司的收入主要来自{top_names}，这些产品与{event_role_text}不是同一种生意，新闻很难明显改变公司整体收入。",
+            f"{top_names}才是公司目前的收入主力，{event_role_text}需求变化不会自然带动这些产品销量。",
+            f"从公司的生意构成看，{top_names}占主导，客户不会因为{event_role_text}需求变强就增加对这些产品的采购。",
+        )
+    elif direct_share >= 50 and direct_names:
+        revenue_options = (
+            f"相关的{direct_names}约占公司收入{format_share_pct(direct_share)}，已经是公司的饭碗，客户采购量或产品售价变化会明显影响整体业绩。",
+            f"公司约{format_share_pct(direct_share)}的收入来自{direct_names}，这不是边角业务，需求增减会比较直接地反映到收入上。",
+            f"{direct_names}合计约占收入{format_share_pct(direct_share)}，相关产品本身就是主业，新闻的影响不只停留在板块情绪。",
+        )
+    elif direct_share >= 15 and direct_names:
+        revenue_options = (
+            f"{direct_names}约占公司收入{format_share_pct(direct_share)}，这项业务有一定分量，订单变化能够影响业绩，但不会代表公司所有业务。",
+            f"公司约{format_share_pct(direct_share)}的收入来自{direct_names}，新闻确实可能影响一部分业绩，影响大小仍取决于实际销售变化。",
+            f"相关的{direct_names}合计约占收入{format_share_pct(direct_share)}，不是小到可以忽略，也没有大到决定整家公司。",
+        )
+    elif direct_share > 0 and direct_names:
+        revenue_options = (
+            f"{direct_names}目前约占公司收入{format_share_pct(direct_share)}，产品虽然已经在卖，基数仍小，即使增长较快，对公司整体的拉动也有限。",
+            f"公司来自{direct_names}的收入约占{format_share_pct(direct_share)}，说明业务是真实的，但短期还不是业绩主角。",
+            f"相关的{direct_names}合计约占收入{format_share_pct(direct_share)}，现阶段更像小业务增加销量，而不是公司整体利润大幅变化。",
+        )
+    elif contained_names and top_names and relation_label not in {"错位", "蹭概念"}:
+        revenue_options = (
+            f"公司收入主要来自{top_names}，{product_anchor}只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。",
+            f"{top_names}是公司的主要生意，{product_anchor}包含在相关业务中，目前更适合把它看成局部增量。",
+            f"公司的收入主体仍是{top_names}，{product_anchor}能参与新闻所说的需求，但暂时不是决定公司业绩的唯一产品。",
+        )
+    elif top_names:
+        revenue_options = (
+            f"公司目前主要靠{top_names}取得收入，{product_anchor}对整体业绩的影响需要结合它在主营业务中的实际分量理解。",
+            f"{top_names}构成公司的主要收入，{product_anchor}即使出现新增需求，也不会自动带动其他业务一起增长。",
+            f"公司的生意重心在{top_names}，因此消息能影响多大，取决于{product_anchor}在这些业务中的实际销售规模。",
+        )
+    else:
+        revenue_options = ()
+    if revenue_options:
+        sentences.append(choose_narrative_option(revenue_options, *narrative_key, salt="retail-revenue"))
+
+    if not same_profit_pool:
+        effect_options = (
+            f"客户会不会多买{company_role_text}，取决于它自身的应用需求，而不是{event_role_text}的热度；目前两者之间没有必然的销量变化。",
+            f"{event_role_text}需求变强，首先增加的是对应产品采购，不会自动增加{company_role_text}的用量或售价。",
+            f"这件事改变的是{event_role_text}市场，{company_role_text}没有成为其中必需的采购项，公司很难因此直接多赚钱。",
+        )
+    elif context_roles & {"cpo", "optical_module", "optical_component", "optical_chip"}:
+        if "semiconductor_equipment" in company_roles:
+            effect_options = (
+                f"CPO进入量产后，生产企业需要增加耦合、封装和测试工位，才会采购更多{product_anchor}；公司赚的是设备订单和交付验收的钱。",
+                f"客户扩建CPO产线时会新增测试和耦合设备采购，{product_anchor}因此可能增加订单，但设备交付后还要验收才能确认收入。",
+            )
+        elif "optical_chip" in company_roles:
+            effect_options = (
+                f"CPO出货增加会提高对激光器和光芯片的采购需求，{product_anchor}能否多卖，还要看产品规格是否进入客户方案以及批量生产的良率。",
+                f"客户采用更多CPO方案，会增加对光源芯片的需求；公司能赚多少取决于{product_anchor}的单套用量、供货份额和生产良率。",
+            )
+        elif "optical_component" in company_roles:
+            effect_options = (
+                f"CPO设备量产会增加对光纤连接、耦合和光器件的采购，{product_anchor}销量可能随之增长，客户份额和批量良率决定公司实际赚到多少。",
+                f"更多CPO交换机意味着更多精密光连接部件需求，{product_anchor}能否转成收入，主要看公司拿到的供货份额和量产成本。",
+            )
+        else:
+            effect_options = (
+                f"CPO量产会增加高速光互联产品需求，但也会改变传统光模块的产品形态；{product_anchor}能否多卖，要同时看客户份额和旧产品被替代的影响。",
+                f"客户建设更多CPO网络会采购新的光互联产品，{product_anchor}可能增加出货，不过产品升级也可能压缩旧型号销量。",
+            )
+    elif context_roles & {"biofuel_feedstock", "biofuel_production"}:
+        if "biofuel_feedstock" in company_roles:
+            effect_options = (
+                f"SAF厂商扩大生产会多买废弃油脂，{stock_name}因此可能多卖{product_anchor}；公司赚的是收购价与卖出价之间的差，原料涨得太快反而会压缩利润。",
+                f"航空燃料需求增加会带动废弃油脂采购，{product_anchor}销量和售价可能上升，但库存、运费和收购成本会决定公司是否真的多赚钱。",
+            )
+        else:
+            effect_options = (
+                f"SAF需求增加会带动{product_anchor}的销量和售价，公司的利润还取决于原料、能耗和新产线磨合成本。",
+                f"航空公司多用SAF，生产企业才会增加{product_anchor}出货；产品提价赶不上原料上涨时，销量增加也未必带来更多利润。",
+            )
+    elif context_roles & {"innovative_drug", "drug_service"}:
+        if "drug_service" in company_roles:
+            effect_options = (
+                f"药企增加研发或生产项目，才会向{stock_name}采购{product_anchor}服务；新闻中的药品交易金额不能直接算成公司的收入。",
+                f"创新药项目变多会增加研发和生产外包需求，{product_anchor}可能获得新订单，但公司赚的是服务费，不是药品授权总额。",
+            )
+        else:
+            effect_options = (
+                f"创新药合作会影响{product_anchor}的首付款、研发投入和后续分成，新闻中的交易总额通常分多年、分阶段实现，不能一次算成利润。",
+                f"公司能拿到多少钱，取决于{product_anchor}的首付款、研发里程碑和销售分成，临床进度仍会影响后续收入。",
+            )
+    elif context_roles & {"liquid_cooling", "thermal_management"}:
+        effect_options = (
+            f"数据中心提高液冷使用量，会多买{product_anchor}，公司可能增加订单；定制成本、材料价格和客户压价会影响新增收入能留下多少利润。",
+            f"客户新建或改造液冷系统时需要采购{product_anchor}，需求增加能带动销售，但产品定制和售后投入也会增加成本。",
+        )
+    elif "cleanroom" in context_roles:
+        effect_options = (
+            f"芯片厂增加资本开支，会先带来洁净室设计和施工项目；{stock_name}能否多赚钱取决于{product_anchor}新增合同、施工进度和项目回款。",
+            f"客户扩建晶圆厂会增加{product_anchor}订单，公司按项目施工并结算，工期、人工材料成本和回款速度都会影响利润。",
+        )
+    elif "semiconductor_equipment" in company_roles:
+        effect_options = (
+            f"晶圆厂扩产或改造时才会采购更多{product_anchor}，公司先拿设备订单，再经过交付和验收确认收入。",
+            f"行业扩产会增加设备采购预算，{stock_name}能否多赚钱要看{product_anchor}订单和验收，芯片价格上涨本身不会直接变成设备收入。",
+        )
+    elif "software_ai" in context_roles and company_roles & {"software_ai", "server_compute"}:
+        effect_options = (
+            f"AI应用用户和调用量增加，会提高软件服务或算力需求，{product_anchor}可能增加销量；公司能分到多少取决于客户是否实际采购它的产品。",
+            f"付费用户增加会推高应用方的算力和软件投入，{product_anchor}只有进入客户采购清单，才会增加公司的订单或服务收入。",
+        )
+    elif company_roles & {"wafer_foundry", "power_semiconductor"}:
+        effect_options = (
+            f"供需变紧会提高{product_anchor}的报价和排产，公司可能同时增加销量和售价；原料、良率和折旧上涨过快，会吃掉一部分利润。",
+            f"客户多下单并接受更高价格时，{product_anchor}才会带来更多收入，产能利用率和生产成本决定利润增幅。",
+        )
+    elif "供需缺口" in driver:
+        effect_options = (
+            f"市场缺货或涨价会让客户增加{product_anchor}采购，公司可能多卖货或提高售价；采购成本和库存变化会决定利润是否同步增加。",
+            f"供需变紧对公司的实际作用是{product_anchor}订单增加或提价，原材料涨得更快时，收入增加也可能留不下更多利润。",
+        )
+    elif "政策约束" in driver:
+        effect_options = (
+            f"政策本身不会给公司付款，客户增加预算、启动招标并采购{product_anchor}，才会带来销售变化；项目回款慢也会占用现金。",
+            f"政策改变客户的准入和采购预算后，{product_anchor}才可能增加合同，项目能否开工和结算决定公司实际收入。",
+        )
+    elif "产能释放" in driver:
+        effect_options = (
+            f"新产能让公司可以多交付{product_anchor}，但客户订单不足时，新增设备和折旧反而会增加成本。",
+            f"公司扩产只是具备了多卖{product_anchor}的能力，产线是否有足够订单、售价能否覆盖新增成本，决定利润变化。",
+        )
+    elif "终端需求" in driver:
+        effect_options = (
+            f"下游需求增加会让客户多买{product_anchor}，公司能增加多少收入，还要看供货份额、产品售价和同业竞争。",
+            f"终端市场变好会增加{product_anchor}采购，但客户买多少、公司拿到多少订单以及售价高低，都会影响最后的利润。",
+        )
+    elif "技术商业化" in driver:
+        effect_options = (
+            f"技术从试验走向量产，会增加客户对{product_anchor}的采购可能，产品通过认证、稳定生产并拿到订单后才会增加销售。",
+            f"技术成熟会加快客户采用{product_anchor}，公司还要完成产品定型和批量生产，才能把需求变成收入。",
+        )
+    elif "经营约束" in driver:
+        effect_options = (
+            f"这类负面变化可能压低客户对{product_anchor}的采购，或增加交付和生产成本，对公司的影响更可能表现为订单减少或利润被压缩。",
+            f"事件带来的限制会影响{product_anchor}的订单、售价或交付，公司能否转嫁成本决定利润受多大影响。",
+        )
+    else:
+        effect_options = (
+            f"这件事能否让公司多赚钱，主要看客户是否增加{product_anchor}采购，以及售价变化能否覆盖生产和销售成本。",
+            f"对公司最实际的影响是{product_anchor}的销量、售价和成本变化，新闻热度本身不会直接增加收入。",
+        )
+    sentences.append(choose_narrative_option(effect_options, *narrative_key, salt="retail-effect"))
+
+    stage_sentence = ""
+    if stage_rank >= 8:
+        stage_sentence = f"相关业务已经走到{stage_label}，说明客户采购正在发生，接下来收入质量主要受回款和持续订单影响。"
+    elif stage_rank >= 6:
+        stage_sentence = f"目前进展到了{stage_label}，业务关系已经比较具体，后续交付、验收和回款会影响收入确认时间。"
+    elif stage_rank in {4, 5}:
+        stage_sentence = f"目前进展在{stage_label}，说明公司进入了客户方案，但采购数量和交付时间还没有完全确定。"
+    elif stage_rank in {2, 3}:
+        stage_sentence = f"目前进展还在{stage_label}，产品用途虽然对得上，距离稳定供货和形成较大收入还有一段距离。"
+    if stage_sentence and relation_label not in {"错位", "蹭概念"}:
+        sentences.append(stage_sentence)
+
+    if relation_label in {"错位", "蹭概念"}:
+        weak_closings = (
+            f"按公司现在的业务结构，股价可能跟随板块波动，但订单和利润不会因为这则消息自然增加。",
+            f"对普通投资者来说，这更像板块情绪带来的联动，公司的销量、售价和客户订单暂时没有直接变化。",
+            f"市场短期可能把它和热点一起交易，经营上却缺少公司多接单、多卖货或多赚钱的理由。",
+        )
+        sentences.append(choose_narrative_option(weak_closings, *narrative_key, salt="retail-closing"))
+
+    analysis = clean_text("".join(sentences))
+    if len(analysis) < 180:
+        short_additions = (
+            f"简单说，真正影响公司收入的是客户对{product_anchor}的实际采购量，而不是新闻本身有多热。",
+            f"判断影响大小，直接看{product_anchor}能不能多卖、能不能提价，以及新增销售是否被成本吃掉。",
+            f"新闻可以改变市场想象，但公司赚不赚钱仍取决于{product_anchor}有没有新增销量和合理利润。",
+        )
+        analysis = clean_text(
+            analysis
+            + choose_narrative_option(short_additions, *narrative_key, salt="retail-short")
+        )
+    if len(analysis) > 380 and stage_sentence in sentences:
+        sentences.remove(stage_sentence)
+        analysis = clean_text("".join(sentences))
+    if len(analysis) < 180:
+        analysis = clean_text(
+            analysis
+            + f"对普通投资者来说，最直观的判断就是客户有没有因此多买{product_anchor}，公司有没有因此增加销售。"
+        )
+    if len(analysis) > 420:
+        analysis = compact_text(analysis, 420)
+    return {
+        "relationLabel": relation_label,
+        "analysis": finalize_investment_analysis(analysis, stock_name),
+    }
 
 
 def build_investment_analysis(
@@ -1412,8 +1791,52 @@ def build_investment_analysis(
 
     if relation_label == "真相关" and not same_profit_pool:
         relation_label = "宽口径相关"
+    if (
+        event_roles
+        and company_roles
+        and not same_profit_pool
+        and not semantic_overlap
+        and not event_names_company
+    ):
+        relation_label = "错位"
     if process_spec_mismatch:
         relation_label = "错位"
+
+    retail_event_role_text = role_label(event_roles, "新闻涉及的产品或项目")
+    retail_company_role_text = role_label(
+        company_roles,
+        "、".join(known_products[:2]) or compact_text(business_base, 42),
+    )
+    retail_product_anchor = choose_retail_product_anchor(
+        relevant_products or known_products,
+        event_roles,
+        company_roles,
+        business_base,
+    )
+    if process_spec_mismatch:
+        retail_event_role_text = "7nm及以下先进制程代工"
+        retail_company_role_text = "成熟制程或特色工艺晶圆制造"
+    return compose_retail_investment_analysis(
+        event_key=event_key,
+        event_focus=compact_text(event_label, 42),
+        stock_name=stock_name,
+        filled_stars=filled_stars,
+        relation_label=relation_label,
+        event_role_text=retail_event_role_text,
+        company_role_text=retail_company_role_text,
+        product_anchor=retail_product_anchor,
+        direct_share=direct_share,
+        direct_segments=effective_direct_segments,
+        contained_segments=contained_segments,
+        top_segments=top_segments,
+        driver=transmission["driver"],
+        stage_rank=stage_rank,
+        stage_label=stage_label,
+        context_roles=event_roles | company_roles | reason_roles,
+        company_roles=company_roles,
+        same_profit_pool=same_profit_pool,
+        reason_fact=extract_reason_fact(reason, event_title),
+    )
 
     event_role_text = role_label(event_roles, compact_text(event_label, 38))
     company_role_text = role_label(company_roles, known_product_text or compact_text(business_base, 46))
@@ -1997,7 +2420,7 @@ def audit_investment_narratives(drafts: list[dict[str, Any]]) -> dict[str, int]:
         "这条新闻和",
     )
     seen_openings: dict[str, tuple[str, str]] = {}
-    seen_analyses: dict[str, str] = {}
+    seen_analyses: dict[str, tuple[str, str]] = {}
     stock_count = 0
 
     for draft in drafts:
@@ -2019,22 +2442,24 @@ def audit_investment_narratives(drafts: list[dict[str, Any]]) -> dict[str, int]:
 
                 opening_match = re.match(r"^.*?[。！？]", analysis)
                 opening = opening_match.group(0) if opening_match else analysis
+                signature = f"{event_title}:{stock['stockCode']}:{stock['stockName']}"
                 if opening in seen_openings:
                     previous_key, previous_signature = seen_openings[opening]
-                    signature = f"{event_title}:{stock['stockCode']}:{stock['stockName']}"
                     if signature != previous_signature:
                         raise ValueError(
                             f"不同事件或个股出现重复开场: {previous_key} 与 {stock_key}: {opening}"
                         )
                 if analysis in seen_analyses:
-                    raise ValueError(
-                        f"个股研究判断整段重复: {seen_analyses[analysis]} 与 {stock_key}"
-                    )
+                    previous_key, previous_signature = seen_analyses[analysis]
+                    if signature != previous_signature:
+                        raise ValueError(
+                            f"个股研究判断整段重复: {previous_key} 与 {stock_key}"
+                        )
                 seen_openings[opening] = (
                     stock_key,
-                    f"{event_title}:{stock['stockCode']}:{stock['stockName']}",
+                    signature,
                 )
-                seen_analyses[analysis] = stock_key
+                seen_analyses[analysis] = (stock_key, signature)
 
     return {
         "stockCount": stock_count,
@@ -2605,7 +3030,7 @@ def finalize_event(
         level5_catalog,
     )
     return {
-        "schemaVersion": 17,
+        "schemaVersion": 18,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -2689,7 +3114,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--investment-prompt-template",
         type=Path,
-        default=project_root / "prompts" / "investment-opportunity-analyst-v8.md",
+        default=project_root / "prompts" / "investment-opportunity-analyst-v9.md",
     )
     parser.add_argument(
         "--report-corpus",
@@ -2824,7 +3249,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 17,
+        "schemaVersion": 18,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),
