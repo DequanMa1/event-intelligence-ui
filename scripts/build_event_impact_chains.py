@@ -1468,40 +1468,9 @@ def build_investment_analysis(
             f"把产品和客户环节摊开看，{stock_name}的{company_role_text}接不到“{event_focus}”所需的{event_role_text}，当前缺少订单层面的连接。",
             f"“{event_focus}”可以让{stock_name}的分时图跟着动，暂时却没有落到公司的产品、收入科目或供货关系上。",
             f"{stock_name}与“{event_focus}”目前只共享题材标签，公司手里的{company_role_text}没有变成{event_role_text}对应的可验证收入。",
-            f"新闻讲的是{event_role_text}，{stock_name}实际经营的是{company_role_text}；两边缺少同产品、同用途和同付款客户的交集。",
+            f"“{event_focus}”讲的是{event_role_text}，{stock_name}实际经营的是{company_role_text}；两边缺少同产品、同用途和同付款客户的交集。",
         )
     opening = choose_narrative_option(opening_options, *narrative_key, salt="opening")
-    opening_lead = choose_narrative_option(
-        (
-            "从实际收款环节看，",
-            "把题材还原成公司生意，",
-            "拆到产品和客户层面，",
-            "按利润表能承接的口径，",
-            "顺着采购与交付链条看，",
-            "把行业叙事压到公司层面，",
-            "对照公司真正卖出的东西，",
-            "从订单最终落在哪边看，",
-            "按产品用途而不是概念名称，",
-            "把新闻换成经营语言，",
-            "从客户为什么付款来判断，",
-            "沿着收入确认的位置往回拆，",
-            "看产品而不看题材标签，",
-            "从公司能否因此多卖货出发，",
-            "把产业链位置和利润位置分开，",
-            "落到公司现有业务结构，",
-            "从事件能否形成新增订单看，",
-            "按业务实货逐项拆开，",
-            "对照产品规格与应用场景，",
-            "把市场联想落到收入科目，",
-            "从量、价和供货份额看，",
-            "沿着客户采购决策往下看，",
-            "把热度和报表分开处理，",
-            "从公司能交付什么开始，",
-        ),
-        *narrative_key,
-        salt="opening-lead",
-    )
-    opening = f"{opening_lead}{opening}"
     fact_sentence = ""
     if reason_fact:
         fact_sentence = choose_narrative_option(
@@ -1751,8 +1720,8 @@ def build_investment_analysis(
         )
     elif stage_rank <= 3:
         disproof_options = (
-            f"“{event_focus}”最容易被{stock_name}的商业化进度证伪：认证、送样或布局迟迟转不成定点和批量订单，{product_anchor}收入就不会抬头。",
-            f"后续看{stock_name}能否把{product_anchor}推进到定点和批量采购，仍停在验证阶段，就说明题材速度远快于经营速度。",
+            f"{stock_name}这条线的验真点是商业化进度：认证、送样或布局迟迟转不成定点和批量订单，{product_anchor}收入就不会抬头。",
+            f"{product_anchor}要是一直停在验证阶段、拿不到定点和批量采购，就说明{stock_name}的题材速度远快于经营速度。",
         )
     elif stage_rank <= 6:
         disproof_options = (
@@ -1766,20 +1735,109 @@ def build_investment_analysis(
         )
     disproof_sentence = choose_narrative_option(disproof_options, *narrative_key, salt="disproof")
 
-    middle_parts = [part for part in (fact_sentence, revenue_sentence, operating_sentence, stage_sentence) if part]
-    middle_orders = (
-        middle_parts,
-        [*middle_parts[:1], *middle_parts[2:3], *middle_parts[1:2], *middle_parts[3:]],
-        [*middle_parts[1:2], *middle_parts[:1], *middle_parts[2:]],
+    section_scores = {
+        "relation": 118 if relation_label in {"错位", "蹭概念"} else 86,
+        "fact": 122 if reason_fact else 0,
+        "revenue": 124 if (direct_share > 0 or contained_text) else 82,
+        "operation": 116 if driver != DEFAULT_TRANSMISSION_PROFILE["driver"] else 78,
+        "stage": 126 if stage_rank >= 2 else (108 if stage_rank in {0, 1} else 76),
+        "disproof": 106 if relation_label in {"错位", "蹭概念"} else (94 if stage_rank <= 6 else 58),
+    }
+    sections = [
+        ("relation", opening),
+        ("revenue", revenue_sentence),
+        ("operation", operating_sentence),
+        ("stage", stage_sentence),
+    ]
+    if fact_sentence:
+        sections.append(("fact", fact_sentence))
+    include_disproof = (
+        relation_label in {"错位", "蹭概念"}
+        or stage_rank <= 6
+        or narrative_variant(*narrative_key, salt="include-disproof", modulo=2) == 0
     )
-    ordered_middle = middle_orders[narrative_variant(*narrative_key, salt="order", modulo=len(middle_orders))]
-    parts = [opening, *ordered_middle, disproof_sentence]
+    if include_disproof:
+        sections.append(("disproof", disproof_sentence))
 
-    analysis = clean_text("".join(parts))
+    def section_rank(section: tuple[str, str]) -> tuple[int, int]:
+        key, _ = section
+        jitter = narrative_variant(*narrative_key, salt=f"section-{key}", modulo=19) - 9
+        return section_scores[key] + jitter, -len(sections)
+
+    ranked_sections = sorted(sections, key=section_rank, reverse=True)
+    if relation_label in {"错位", "蹭概念"}:
+        lead_section = next(section for section in sections if section[0] == "relation")
+    else:
+        lead_section = next(section for section in ranked_sections if section[0] != "disproof")
+    relation_section = next(section for section in sections if section[0] == "relation")
+    detail_sections = [
+        section
+        for section in ranked_sections
+        if section not in {lead_section, relation_section} and section[0] != "disproof"
+    ]
+    ordered_sections = [lead_section]
+    if relation_section != lead_section:
+        ordered_sections.append(relation_section)
+    ordered_sections.extend(detail_sections)
+    disproof_sections = [section for section in sections if section[0] == "disproof"]
+    ordered_sections.extend(disproof_sections)
+    lead_key, lead_text = ordered_sections[0]
+    if lead_key != "relation" and event_focus not in lead_text:
+        lead_context_options = {
+            "fact": (
+                f"“{event_focus}”落到{stock_name}，最值得先拿出来的业务事实是：",
+                f"先看{stock_name}与“{event_focus}”之间已经发生的实际动作：",
+                f"判断“{event_focus}”在{stock_name}这里走到哪一步，现成抓手是：",
+            ),
+            "revenue": (
+                f"核“{event_focus}”对{stock_name}的报表分量，",
+                f"把“{event_focus}”对应产品放回{stock_name}的收入结构，",
+                f"“{event_focus}”对应到{stock_name}的收入结构，",
+            ),
+            "operation": (
+                f"“{event_focus}”会不会变成{stock_name}利润，",
+                f"把“{event_focus}”换成{stock_name}的经营变量，",
+                f"拆“{event_focus}”对{stock_name}的实际作用项，",
+            ),
+            "stage": (
+                f"“{event_focus}”什么时候能进{stock_name}报表，",
+                f"看{stock_name}从“{event_focus}”里拿到多少钱，先卡商业阶段：",
+                f"判断“{event_focus}”对{stock_name}是不是当期生意，",
+            ),
+            "disproof": (
+                f"“{event_focus}”在{stock_name}这里是否成立，",
+                f"检验{stock_name}与“{event_focus}”的真实关系，",
+                f"要推翻{stock_name}这条“{event_focus}”逻辑，",
+            ),
+        }
+        lead_prefix = choose_narrative_option(
+            lead_context_options[lead_key],
+            *narrative_key,
+            salt=f"lead-context-{lead_key}",
+        )
+        ordered_sections[0] = (lead_key, f"{lead_prefix}{lead_text}")
+    analysis = clean_text("".join(text for _, text in ordered_sections))
+    while len(analysis) > 500 and len(ordered_sections) > 4:
+        removable_indexes = [
+            index
+            for index, (key, _) in enumerate(ordered_sections)
+            if key != "relation"
+            and not (relation_label in {"错位", "蹭概念"} and key == "disproof")
+        ]
+        removable = min(
+            removable_indexes,
+            key=lambda index: (
+                section_scores[ordered_sections[index][0]],
+                index,
+            ),
+        )
+        ordered_sections.pop(removable)
+        analysis = clean_text("".join(text for _, text in ordered_sections))
+
     if len(analysis) < 180:
         analysis += f"要让“{event_focus}”真正进入{stock_name}报表，{product_anchor}至少需要在正式订单、收入确认和现金回款中出现两项，板块上涨本身不能证明公司多赚钱。"
-    if len(analysis) > 540:
-        analysis = compact_text(analysis, 540)
+    if len(analysis) > 500:
+        analysis = compact_text(analysis, 500)
     return {
         "relationLabel": relation_label,
         "analysis": finalize_investment_analysis(analysis, stock_name),
@@ -1938,12 +1996,13 @@ def audit_investment_narratives(drafts: list[dict[str, Any]]) -> dict[str, int]:
         "这次不能硬往",
         "这条新闻和",
     )
-    seen_openings: dict[str, str] = {}
+    seen_openings: dict[str, tuple[str, str]] = {}
     seen_analyses: dict[str, str] = {}
     stock_count = 0
 
     for draft in drafts:
         main_id = clean_text(draft.get("mainId"))
+        event_title = clean_text(draft.get("title"))
         for group in draft["investmentOpportunities"]["groups"]:
             for stock in group["stocks"]:
                 stock_count += 1
@@ -1961,14 +2020,20 @@ def audit_investment_narratives(drafts: list[dict[str, Any]]) -> dict[str, int]:
                 opening_match = re.match(r"^.*?[。！？]", analysis)
                 opening = opening_match.group(0) if opening_match else analysis
                 if opening in seen_openings:
-                    raise ValueError(
-                        f"个股研究判断出现重复开场: {seen_openings[opening]} 与 {stock_key}: {opening}"
-                    )
+                    previous_key, previous_signature = seen_openings[opening]
+                    signature = f"{event_title}:{stock['stockCode']}:{stock['stockName']}"
+                    if signature != previous_signature:
+                        raise ValueError(
+                            f"不同事件或个股出现重复开场: {previous_key} 与 {stock_key}: {opening}"
+                        )
                 if analysis in seen_analyses:
                     raise ValueError(
                         f"个股研究判断整段重复: {seen_analyses[analysis]} 与 {stock_key}"
                     )
-                seen_openings[opening] = stock_key
+                seen_openings[opening] = (
+                    stock_key,
+                    f"{event_title}:{stock['stockCode']}:{stock['stockName']}",
+                )
                 seen_analyses[analysis] = stock_key
 
     return {
@@ -2540,7 +2605,7 @@ def finalize_event(
         level5_catalog,
     )
     return {
-        "schemaVersion": 16,
+        "schemaVersion": 17,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -2624,7 +2689,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--investment-prompt-template",
         type=Path,
-        default=project_root / "prompts" / "investment-opportunity-analyst-v7.md",
+        default=project_root / "prompts" / "investment-opportunity-analyst-v8.md",
     )
     parser.add_argument(
         "--report-corpus",
@@ -2759,7 +2824,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 16,
+        "schemaVersion": 17,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),
