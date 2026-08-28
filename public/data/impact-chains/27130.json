@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 18,
-  "generatedAt": "2026-08-27T11:16:12+08:00",
+  "schemaVersion": 19,
+  "generatedAt": "2026-08-28T15:50:34+08:00",
   "status": "ready",
   "event": {
     "mainId": "27130",
@@ -1054,7 +1054,7 @@
     "companyProfileMatchedCount": 27,
     "companyProfileUnmatchedCount": 0,
     "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
-    "analysisPromptVersion": "investment-opportunity-analyst-v9.md",
+    "analysisPromptVersion": "investment-opportunity-analyst-v10.md",
     "groups": [
       {
         "filledStars": 5,
@@ -1160,8 +1160,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "错位",
-            "analysis": "顺丰控股和“北美高温致部分地区电价飙升”看起来在同一大行业，实际卖的不是同一种东西。新闻影响的是新闻涉及的产品或项目，公司主要做无人机快递服务、时效快递服务，前者的客户不会因此自然增加对后者的采购。公司的收入主要来自国内时效产品、供应链，这些产品与新闻涉及的产品或项目不是同一种生意，新闻很难明显改变公司整体收入。对公司最实际的影响是无人机快递服务的销量、售价和成本变化，新闻热度本身不会直接增加收入。市场短期可能把它和热点一起交易，经营上却缺少公司多接单、多卖货或多赚钱的理由。"
+            "relationLabel": "宽口径相关",
+            "analysis": "把顺丰控股放到产业范围内看，“北美高温致部分地区电价飙升”涉及发电工程及其中的核电工程、水电站工程。公司与该产业发生联系的产品主要是无人机快递服务、时效快递服务。公司通过无人机快递服务、时效快递服务进入与核电工程、水电站工程相衔接的产品和应用体系，两项业务在发电工程相关场景中各自承担功能。公司主营收入集中在国内时效产品（42.52%）、供应链（23.66%），这组业务构成公司参与相关技术与应用场景的经营基础。"
           },
           {
             "sourceRowNumber": 20599,
@@ -1230,8 +1230,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "错位",
-            "analysis": "把产品用途说白了，潍柴动力卖的是垃圾车、扫路车，而“北美高温致部分地区电价飙升”带动的是新闻涉及的产品或项目。两者即使同属一个板块，也没有直接的客户采购关系。公司的收入主要来自动力总成、整车整机及关键零部件、智慧物流，这些产品与新闻涉及的产品或项目不是同一种生意，新闻很难明显改变公司整体收入。对公司最实际的影响是垃圾车的销量、售价和成本变化，新闻热度本身不会直接增加收入。按公司现在的业务结构，股价可能跟随板块波动，但订单和利润不会因为这则消息自然增加。"
+            "relationLabel": "宽口径相关",
+            "analysis": "潍柴动力的业务主要涉及产品远销150多个国家和地区，其中与“北美高温致部分地区电价飙升”能够衔接的是垃圾车、扫路车。垃圾车、扫路车是公司参与相关产业场景的具体业务，与核电工程、水电站工程在设备、技术或应用层面形成配合。动力总成、整车整机及关键零部件（43.32%）、智慧物流（39.29%）构成公司的主要收入来源，垃圾车、扫路车是其中可与发电工程相衔接的产品方向。这里比较的是发电工程中的核电工程、水电站工程。"
           }
         ]
       },
@@ -1315,27 +1315,57 @@
                 "relevantProducts": [
                   {
                     "name": "发电用燃气轮机",
-                    "category": "燃气轮机"
+                    "category": "燃气轮机",
+                    "hierarchyPath": "机械设备 > 专用设备 > 其它专用机械 > 燃气轮机 > 燃气轮机 > 发电用燃气轮机",
+                    "level5IndustryCode": "1200000593",
+                    "level5IndustryName": "燃气轮机",
+                    "level7ProductCode": "1140173990",
+                    "level7ProductName": "发电用燃气轮机"
                   },
                   {
                     "name": "核电蒸汽发生器",
-                    "category": "核电设备"
+                    "category": "核电设备",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 核电设备 > 核电设备 > 核电蒸汽发生器",
+                    "level5IndustryCode": "1210000360",
+                    "level5IndustryName": "核电设备",
+                    "level7ProductCode": "1140044193",
+                    "level7ProductName": "核电蒸汽发生器"
                   },
                   {
                     "name": "汽轮发电机",
-                    "category": "电站辅机"
+                    "category": "电站辅机",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 火电设备 > 锅炉辅助设备 > 电站辅机 > 汽轮发电机",
+                    "level5IndustryCode": "1200000338",
+                    "level5IndustryName": "锅炉辅助设备",
+                    "level7ProductCode": "1140043083",
+                    "level7ProductName": "汽轮发电机"
                   },
                   {
                     "name": "火电机组",
-                    "category": "火力发电机"
+                    "category": "火力发电机",
+                    "hierarchyPath": "电气设备 > 电机 > 电机 > 发电机 > 火力发电机 > 火电机组",
+                    "level5IndustryCode": "1200000306",
+                    "level5IndustryName": "发电机",
+                    "level7ProductCode": "1140012416",
+                    "level7ProductName": "火电机组"
                   },
                   {
                     "name": "燃气-蒸汽联合循环发电设备(GTCC)",
-                    "category": "火电站用锅炉"
+                    "category": "火电站用锅炉",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 火电设备 > 火电站用锅炉 > 火电站用锅炉 > 燃气-蒸汽联合循环发电设备(GTCC)",
+                    "level5IndustryCode": "1200000337",
+                    "level5IndustryName": "火电站用锅炉",
+                    "level7ProductCode": "1140166344",
+                    "level7ProductName": "燃气-蒸汽联合循环发电设备(GTCC)"
                   },
                   {
                     "name": "光伏电站工程",
-                    "category": "发电工程"
+                    "category": "发电工程",
+                    "hierarchyPath": "建筑装饰 > 专业工程 > 电力工程 > 发电工程 > 发电工程 > 光伏电站工程",
+                    "level5IndustryCode": "1210000277",
+                    "level5IndustryName": "发电工程",
+                    "level7ProductCode": "1140088979",
+                    "level7ProductName": "光伏电站工程"
                   }
                 ],
                 "knownProducts": [
@@ -1352,8 +1382,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "东方电气与“北美高温致部分地区电价飙升”的联系在光伏电站工程。新闻涉及的客户在增加建设或采购时会用到光伏电站工程，因此公司存在真实的销售关系。不过这项业务目前规模较小或仍在导入阶段。清洁高效发电设备-核电常规岛设备、清洁高效发电设备-燃机目前约占公司收入14.36%，产品虽然已经在卖，基数仍小，即使增长较快，对公司整体的拉动也有限。新产能让公司可以多交付光伏电站工程，但客户订单不足时，新增设备和折旧反而会增加成本。"
+            "relationLabel": "宽口径相关",
+            "analysis": "东方电气的业务主要涉及产品和服务已出口到美国、加拿大、印度、巴基斯坦、越南、印度尼西亚、沙特、波黑、瑞典、巴西等近110多个国家和地区，其中与“北美高温致部分地区电价飙升”能够衔接的是核电工程。按产品实质区分，核电工程就是发电工程所包含的一类实际产品。主营构成中，清洁高效发电设备-核电常规岛设备合计约占7.2%，上述产品在公司业务中已有明确位置。核电工程、水电站工程属于本次事件所指的发电工程。"
           },
           {
             "sourceRowNumber": 20609,
@@ -1404,27 +1434,57 @@
                 "relevantProducts": [
                   {
                     "name": "一体化逆变并网装置",
-                    "category": "输变电监测设备"
+                    "category": "输变电监测设备",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 输变电监测设备 > 输变电监测设备 > 一体化逆变并网装置",
+                    "level5IndustryCode": "1210000338",
+                    "level5IndustryName": "输变电监测设备",
+                    "level7ProductCode": "1140143803",
+                    "level7ProductName": "一体化逆变并网装置"
                   },
                   {
                     "name": "中压开关成套设备",
-                    "category": "开关设备"
+                    "category": "开关设备",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 中压开关成套设备",
+                    "level5IndustryCode": "1210000339",
+                    "level5IndustryName": "开关设备",
+                    "level7ProductCode": "1140166297",
+                    "level7ProductName": "中压开关成套设备"
                   },
                   {
                     "name": "低压开关成套设备",
-                    "category": "开关设备"
+                    "category": "开关设备",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 开关设备 > 开关设备 > 低压开关成套设备",
+                    "level5IndustryCode": "1210000339",
+                    "level5IndustryName": "开关设备",
+                    "level7ProductCode": "1140166298",
+                    "level7ProductName": "低压开关成套设备"
                   },
                   {
                     "name": "干式变压器",
-                    "category": "干式变压器"
+                    "category": "干式变压器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 变压器 > 干式变压器 > 干式变压器",
+                    "level5IndustryCode": "1210000337",
+                    "level5IndustryName": "变压器",
+                    "level7ProductCode": "1137000101",
+                    "level7ProductName": "干式变压器"
                   },
                   {
                     "name": "干式铁心电抗器",
-                    "category": "电抗器"
+                    "category": "电抗器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 电抗器 > 电抗器 > 干式铁心电抗器",
+                    "level5IndustryCode": "1210003126",
+                    "level5IndustryName": "电抗器",
+                    "level7ProductCode": "1140200646",
+                    "level7ProductName": "干式铁心电抗器"
                   },
                   {
                     "name": "油浸式变压器",
-                    "category": "油浸式变压器"
+                    "category": "油浸式变压器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 变压器 > 油浸式变压器 > 油浸式变压器",
+                    "level5IndustryCode": "1210000337",
+                    "level5IndustryName": "变压器",
+                    "level7ProductCode": "1140010600",
+                    "level7ProductName": "油浸式变压器"
                   }
                 ],
                 "knownProducts": [
@@ -1441,8 +1501,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "金盘科技和“北美高温致部分地区电价飙升”的直接联系是干式变压器。新闻涉及的客户在增加建设或采购时会用到干式变压器，因此公司存在真实的销售关系。输配电设备合计约占收入85.99%，相关产品本身就是主业，新闻的影响不只停留在板块情绪。对公司最实际的影响是干式变压器的销量、售价和成本变化，新闻热度本身不会直接增加收入。新闻可以改变市场想象，但公司赚不赚钱仍取决于干式变压器有没有新增销量和合理利润。"
+            "relationLabel": "宽口径相关",
+            "analysis": "对金盘科技来说，“北美高温致部分地区电价飙升”指向发电工程，新闻里的产品主要是核电工程、水电站工程。发电工程不只包含核电工程、水电站工程，光伏电站转让销售也是其中一类实际产品，因此两者属于产业内部关联。金盘科技的业务主要涉及金盘科技是全球电力设备供应商，其中可与核心产业衔接的产品是光伏电站转让销售。主营构成中，输配电设备合计约占85.99%，上述产品在公司业务中已有明确位置。"
           },
           {
             "sourceRowNumber": 20610,
@@ -1511,27 +1571,57 @@
                 "relevantProducts": [
                   {
                     "name": "有源电力滤波器(APF)",
-                    "category": "电能质量治理设备"
+                    "category": "电能质量治理设备",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 电能质量治理设备 > 电能质量治理设备 > 有源电力滤波器(APF)",
+                    "level5IndustryCode": "1210000341",
+                    "level5IndustryName": "电能质量治理设备",
+                    "level7ProductCode": "1140166317",
+                    "level7ProductName": "有源电力滤波器(APF)"
                   },
                   {
                     "name": "电力电容器",
-                    "category": "电力电容器"
+                    "category": "电力电容器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 电力电容器 > 电力电容器 > 电力电容器",
+                    "level5IndustryCode": "1210003127",
+                    "level5IndustryName": "电力电容器",
+                    "level7ProductCode": "1140010572",
+                    "level7ProductName": "电力电容器"
                   },
                   {
                     "name": "直流充电机",
-                    "category": "充电桩"
+                    "category": "充电桩",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 直流充电机",
+                    "level5IndustryCode": "1200000347",
+                    "level5IndustryName": "新能源电力设备",
+                    "level7ProductCode": "1140133311",
+                    "level7ProductName": "直流充电机"
                   },
                   {
                     "name": "直流充电桩",
-                    "category": "充电桩"
+                    "category": "充电桩",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 直流充电桩",
+                    "level5IndustryCode": "1200000347",
+                    "level5IndustryName": "新能源电力设备",
+                    "level7ProductCode": "1140029278",
+                    "level7ProductName": "直流充电桩"
                   },
                   {
                     "name": "中性点接地成套装置",
-                    "category": "电网设备零部件"
+                    "category": "电网设备零部件",
+                    "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 电网设备零部件 > 电网设备零部件 > 中性点接地成套装置",
+                    "level5IndustryCode": "1210000349",
+                    "level5IndustryName": "电网设备零部件",
+                    "level7ProductCode": "1140166554",
+                    "level7ProductName": "中性点接地成套装置"
                   },
                   {
                     "name": "互感器",
-                    "category": "电网设备零部件"
+                    "category": "电网设备零部件",
+                    "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 电网设备零部件 > 电网设备零部件 > 互感器",
+                    "level5IndustryCode": "1210000349",
+                    "level5IndustryName": "电网设备零部件",
+                    "level7ProductCode": "1140029204",
+                    "level7ProductName": "互感器"
                   }
                 ],
                 "knownProducts": [
@@ -1549,7 +1639,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "看思源电气的实际产品，公司确实提供直流充电桩，与“北美高温致部分地区电价飙升”不是只沾名字。CPO设备需要精密光连接和耦合部件，这类产品会直接装进设备。公司其他业务不会因此一起增长。开关类业务、变压器类业务是公司的主要生意，直流充电桩包含在相关业务中，目前更适合把它看成局部增量。更多CPO交换机意味着更多精密光连接部件需求，直流充电桩能否转成收入，主要看公司拿到的供货份额和量产成本。"
+            "analysis": "对思源电气来说，“北美高温致部分地区电价飙升”指向发电工程，新闻里的产品主要是核电工程、水电站工程。在发电工程的完整产品体系中，变电站工程、直流充电机与核电工程、水电站工程承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。思源电气的业务主要涉及业务为输配电设备的研发、生产、销售及服务，与核心产业的具体联系由变电站工程、直流充电机体现。公司主营收入集中在开关类业务（41.48%）、变压器类业务（21.51%），这组业务构成公司参与相关技术与应用场景的经营基础。"
           },
           {
             "sourceRowNumber": 20615,
@@ -1612,19 +1702,39 @@
                 "relevantProducts": [
                   {
                     "name": "工商用储能一体柜",
-                    "category": "储能系统"
+                    "category": "储能系统",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 储能系统 > 储能系统 > 工商用储能一体柜",
+                    "level5IndustryCode": "1200000324",
+                    "level5IndustryName": "储能系统",
+                    "level7ProductCode": "1140221734",
+                    "level7ProductName": "工商用储能一体柜"
                   },
                   {
                     "name": "集装箱储能系统",
-                    "category": "储能系统"
+                    "category": "储能系统",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 储能系统 > 储能系统 > 集装箱储能系统",
+                    "level5IndustryCode": "1200000324",
+                    "level5IndustryName": "储能系统",
+                    "level7ProductCode": "1140199859",
+                    "level7ProductName": "集装箱储能系统"
                   },
                   {
                     "name": "集中式储能变流器(PCS)",
-                    "category": "变流器"
+                    "category": "变流器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变流器 > 集中式储能变流器(PCS)",
+                    "level5IndustryCode": "1200000371",
+                    "level5IndustryName": "通用电控设备",
+                    "level7ProductCode": "1140221733",
+                    "level7ProductName": "集中式储能变流器(PCS)"
                   },
                   {
                     "name": "储能锂电池",
-                    "category": "锂离子电池"
+                    "category": "锂离子电池",
+                    "hierarchyPath": "电气设备 > 电池 > 锂电池 > 锂离子电池 > 锂离子电池 > 储能锂电池",
+                    "level5IndustryCode": "1210000367",
+                    "level5IndustryName": "锂离子电池",
+                    "level7ProductCode": "1140069150",
+                    "level7ProductName": "储能锂电池"
                   }
                 ],
                 "knownProducts": [
@@ -1641,8 +1751,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "“北美高温致部分地区电价飙升”会影响阳光电源，原因很具体：公司销售储能锂电池。新闻涉及的客户在增加建设或采购时会用到储能锂电池，因此公司存在真实的销售关系。相关的储能系统合计约占收入41.81%，不是小到可以忽略，也没有大到决定整家公司。对公司最实际的影响是储能锂电池的销量、售价和成本变化，新闻热度本身不会直接增加收入。新闻可以改变市场想象，但公司赚不赚钱仍取决于储能锂电池有没有新增销量和合理利润。"
+            "relationLabel": "宽口径相关",
+            "analysis": "判断阳光电源与“北美高温致部分地区电价飙升”的关系，要把公司业务放进发电工程中比较，具体产品包括核电工程、水电站工程。公司的光伏电站工程位于发电工程内部，和新闻所指的核电工程、水电站工程是同一产业下的不同产品环节。阳光电源的业务定位是全球领先的清洁能源科技企业，其中可与核心产业衔接的产品是光伏电站工程。公司约34.91%的主营收入归在光伏逆变器等电力转换设备，产品名称与收入分部能够相互对应。"
           },
           {
             "sourceRowNumber": 20616,
@@ -1698,8 +1808,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "错位",
-            "analysis": "把产品用途说白了，聚胶股份卖的是卫材热熔胶，而“北美高温致部分地区电价飙升”带动的是新闻涉及的产品或项目。两者即使同属一个板块，也没有直接的客户采购关系。从公司的生意构成看，热熔压敏胶占主导，客户不会因为新闻涉及的产品或项目需求变强就增加对这些产品的采购。对公司最实际的影响是卫材热熔胶的销量、售价和成本变化，新闻热度本身不会直接增加收入。按公司现在的业务结构，股价可能跟随板块波动，但订单和利润不会因为这则消息自然增加。"
+            "relationLabel": "宽口径相关",
+            "analysis": "聚胶股份和“北美高温致部分地区电价飙升”的业务交集，主要在卫材热熔胶。在发电工程的完整产品体系中，卫材热熔胶与核电工程、水电站工程承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。公司主营收入集中在热熔压敏胶（97.34%），这组业务构成公司参与相关技术与应用场景的经营基础。产业这一侧是发电工程，核心产品为核电工程、水电站工程。"
           }
         ]
       },
@@ -1772,7 +1882,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“北美高温致部分地区电价飙升”能影响联德股份，不是因为题材名称相近，而是公司确实提供压缩机吸气座。数据中心采用液冷时需要采购冷却和温控产品，压缩机吸气座就是系统中会用到的设备或材料。只是这项产品目前还不能代表公司的全部生意。公司目前主要靠压缩机零部件、工程机械零部件取得收入，压缩机吸气座对整体业绩的影响需要结合它在主营业务中的实际分量理解。客户新建或改造液冷系统时需要采购压缩机吸气座，需求增加能带动销售，但产品定制和售后投入也会增加成本。"
+            "analysis": "对联德股份来说，“北美高温致部分地区电价飙升”指向发电工程，新闻里的产品主要是核电工程、水电站工程。压缩机吸气座、压缩机喷嘴板是公司参与相关产业场景的具体业务，与核电工程、水电站工程在设备、技术或应用层面形成配合。联德股份的业务主要涉及高精度机械零部件以及精密型腔模产品的研发、设计、生产和销售，其中可与核心产业衔接的产品是压缩机吸气座、压缩机喷嘴板。压缩机零部件（51.71%）、工程机械零部件（37.69%）构成公司的主要收入来源，压缩机吸气座、压缩机喷嘴板是其中可与发电工程相衔接的产品方向。"
           },
           {
             "sourceRowNumber": 20602,
@@ -1830,7 +1940,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "应流股份与“北美高温致部分地区电价飙升”有实际业务联系，连接点是压盖。新闻涉及的客户在增加建设或采购时会用到压盖，因此公司存在真实的销售关系。这项需求只会影响相关产品。机械装备构件、泵及阀门零件构成公司的主要收入，压盖即使出现新增需求，也不会自动带动其他业务一起增长。这件事能否让公司多赚钱，主要看客户是否增加压盖采购，以及售价变化能否覆盖生产和销售成本。简单说，真正影响公司收入的是客户对压盖的实际采购量，而不是新闻本身有多热。"
+            "analysis": "应流股份的业务主要涉及涵盖热等静压、机械加工和喷涂；放到“北美高温致部分地区电价飙升”里比较的具体产品是压盖、叶轮。在发电工程的完整产品体系中，压盖、叶轮与核电工程、水电站工程承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。主营构成以机械装备构件（56.61%）、泵及阀门零件（40.49%）为主，公司与核电工程、水电站工程的联系主要由压盖、叶轮这项具体业务承接。产业这一侧是发电工程，核心产品为核电工程、水电站工程。"
           },
           {
             "sourceRowNumber": 20603,
@@ -1869,7 +1979,12 @@
                 "relevantProducts": [
                   {
                     "name": "燃气-蒸汽联合循环发电用余热锅炉(HRSG)",
-                    "category": "火电站用锅炉"
+                    "category": "火电站用锅炉",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 火电设备 > 火电站用锅炉 > 火电站用锅炉 > 燃气-蒸汽联合循环发电用余热锅炉(HRSG)",
+                    "level5IndustryCode": "1200000337",
+                    "level5IndustryName": "火电站用锅炉",
+                    "level7ProductCode": "1140088917",
+                    "level7ProductName": "燃气-蒸汽联合循环发电用余热锅炉(HRSG)"
                   }
                 ],
                 "knownProducts": [
@@ -1884,8 +1999,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "博盈特焊通过燃气-蒸汽联合循环发电用余热锅炉(HRSG)参与“北美高温致部分地区电价飙升”涉及的业务。新闻涉及的客户在增加建设或采购时会用到燃气-蒸汽联合循环发电用余热锅炉(HRSG)，因此公司存在真实的销售关系。只是这项产品还没有成为公司主要收入来源。防腐耐磨堆焊产品构成公司的主要收入，燃气-蒸汽联合循环发电用余热锅炉(HRSG)即使出现新增需求，也不会自动带动其他业务一起增长。公司扩产只是具备了多卖燃气-蒸汽联合循环发电用余热锅炉(HRSG)的能力，产线是否有足够订单、售价能否覆盖新增成本，决定利润变化。"
+            "relationLabel": "宽口径相关",
+            "analysis": "博盈特焊和“北美高温致部分地区电价飙升”的业务交集，主要在不锈钢反应釜、锅炉水冷壁。核电工程、水电站工程属于本次事件所指的发电工程。在发电工程的完整产品体系中，不锈钢反应釜、锅炉水冷壁与核电工程、水电站工程承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。主营构成以防腐耐磨堆焊产品（65.33%）为主，公司与核电工程、水电站工程的联系主要由不锈钢反应釜、锅炉水冷壁这项具体业务承接。"
           },
           {
             "sourceRowNumber": 20611,
@@ -1942,27 +2057,57 @@
                 "relevantProducts": [
                   {
                     "name": "交流充电桩",
-                    "category": "充电桩"
+                    "category": "充电桩",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 交流充电桩",
+                    "level5IndustryCode": "1200000347",
+                    "level5IndustryName": "新能源电力设备",
+                    "level7ProductCode": "1140029279",
+                    "level7ProductName": "交流充电桩"
                   },
                   {
                     "name": "交直流一体充电桩",
-                    "category": "充电桩"
+                    "category": "充电桩",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 交直流一体充电桩",
+                    "level5IndustryCode": "1200000347",
+                    "level5IndustryName": "新能源电力设备",
+                    "level7ProductCode": "1140173730",
+                    "level7ProductName": "交直流一体充电桩"
                   },
                   {
                     "name": "新能源汽车充电网运营",
-                    "category": "充电桩"
+                    "category": "充电桩",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 新能源汽车充电网运营",
+                    "level5IndustryCode": "1200000347",
+                    "level5IndustryName": "新能源电力设备",
+                    "level7ProductCode": "1140111232",
+                    "level7ProductName": "新能源汽车充电网运营"
                   },
                   {
                     "name": "智能柔性充电弓",
-                    "category": "充电桩"
+                    "category": "充电桩",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 智能柔性充电弓",
+                    "level5IndustryCode": "1200000347",
+                    "level5IndustryName": "新能源电力设备",
+                    "level7ProductCode": "1140111234",
+                    "level7ProductName": "智能柔性充电弓"
                   },
                   {
                     "name": "直流充电桩",
-                    "category": "充电桩"
+                    "category": "充电桩",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 新能源电力设备 > 充电桩 > 直流充电桩",
+                    "level5IndustryCode": "1200000347",
+                    "level5IndustryName": "新能源电力设备",
+                    "level7ProductCode": "1140029278",
+                    "level7ProductName": "直流充电桩"
                   },
                   {
                     "name": "干式变压器",
-                    "category": "干式变压器"
+                    "category": "干式变压器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 变压器 > 干式变压器 > 干式变压器",
+                    "level5IndustryCode": "1210000337",
+                    "level5IndustryName": "变压器",
+                    "level7ProductCode": "1137000101",
+                    "level7ProductName": "干式变压器"
                   }
                 ],
                 "knownProducts": [
@@ -1980,7 +2125,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "特锐德与“北美高温致部分地区电价飙升”有实际业务联系，连接点是交流充电桩。新闻涉及的客户在增加建设或采购时会用到交流充电桩，因此公司存在真实的销售关系。这项需求只会影响相关产品。公司收入主要来自中压预制舱变电站、电动汽车充电设备，交流充电桩只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。技术成熟会加快客户采用交流充电桩，公司还要完成产品定型和批量生产，才能把需求变成收入。"
+            "analysis": "判断特锐德与“北美高温致部分地区电价飙升”的关系，要把公司业务放进发电工程中比较，具体产品包括核电工程、水电站工程。特锐德的业务主要涉及以智能箱式电力设备为主的“智能制造+集成服务”业务，与核心产业的具体联系由交流充电桩、交直流一体充电桩体现。公司通过交流充电桩、交直流一体充电桩进入与核电工程、水电站工程相衔接的产品和应用体系，两项业务在发电工程相关场景中各自承担功能。主营结构中，中压预制舱变电站（28.33%）、电动汽车充电设备（21.5%）是公司的业务主体；放到发电工程中，对应的连接点是交流充电桩、交直流一体充电桩。"
           },
           {
             "sourceRowNumber": 20612,
@@ -2031,23 +2176,48 @@
                 "relevantProducts": [
                   {
                     "name": "光伏升压变压器",
-                    "category": "其他变压器"
+                    "category": "其他变压器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 变压器 > 其他变压器 > 光伏升压变压器",
+                    "level5IndustryCode": "1210000337",
+                    "level5IndustryName": "变压器",
+                    "level7ProductCode": "1140171224",
+                    "level7ProductName": "光伏升压变压器"
                   },
                   {
                     "name": "干式变压器",
-                    "category": "干式变压器"
+                    "category": "干式变压器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 变压器 > 干式变压器 > 干式变压器",
+                    "level5IndustryCode": "1210000337",
+                    "level5IndustryName": "变压器",
+                    "level7ProductCode": "1137000101",
+                    "level7ProductName": "干式变压器"
                   },
                   {
                     "name": "移相变压器",
-                    "category": "其他变压器"
+                    "category": "其他变压器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 变压器 > 其他变压器 > 移相变压器",
+                    "level5IndustryCode": "1210000337",
+                    "level5IndustryName": "变压器",
+                    "level7ProductCode": "1140146135",
+                    "level7ProductName": "移相变压器"
                   },
                   {
                     "name": "箱式变电站",
-                    "category": "变电站"
+                    "category": "变电站",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 变电站 > 变电站 > 箱式变电站",
+                    "level5IndustryCode": "1210000340",
+                    "level5IndustryName": "变电站",
+                    "level7ProductCode": "1140010608",
+                    "level7ProductName": "箱式变电站"
                   },
                   {
                     "name": "配电变压器",
-                    "category": "其他变压器"
+                    "category": "其他变压器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 变压器 > 其他变压器 > 配电变压器",
+                    "level5IndustryCode": "1210000337",
+                    "level5IndustryName": "变压器",
+                    "level7ProductCode": "1140029758",
+                    "level7ProductName": "配电变压器"
                   }
                 ],
                 "knownProducts": [
@@ -2064,8 +2234,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "“北美高温致部分地区电价飙升”在伊戈尔身上不是完全没产品，公司确实提供光伏升压变压器。新闻涉及的客户在增加建设或采购时会用到光伏升压变压器，因此公司存在真实的销售关系。问题在于这还是小业务。公司目前主要靠变压设备产品、照明器具取得收入，光伏升压变压器对整体业绩的影响需要结合它在主营业务中的实际分量理解。技术从试验走向量产，会增加客户对光伏升压变压器的采购可能，产品通过认证、稳定生产并拿到订单后才会增加销售。"
+            "relationLabel": "宽口径相关",
+            "analysis": "在伊戈尔现有业务里，能够与“北美高温致部分地区电价飙升”放在同一产业框架下比较的是逆变电感、LED驱动电源。核心产业发电工程在产品端主要体现为核电工程、水电站工程。公司通过逆变电感、LED驱动电源进入与核电工程、水电站工程相衔接的产品和应用体系，两项业务在发电工程相关场景中各自承担功能。主营结构中，变压设备产品（72.45%）、照明器具（17.54%）是公司的业务主体；放到发电工程中，对应的连接点是逆变电感、LED驱动电源。"
           },
           {
             "sourceRowNumber": 20613,
@@ -2116,27 +2286,57 @@
                 "relevantProducts": [
                   {
                     "name": "大型储能EMS",
-                    "category": "资源管理IT"
+                    "category": "资源管理IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 资源管理IT > 大型储能EMS",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140221736",
+                    "level7ProductName": "大型储能EMS"
                   },
                   {
                     "name": "配用电运维管控系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 配用电运维管控系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140174003",
+                    "level7ProductName": "配用电运维管控系统"
                   },
                   {
                     "name": "变压器保护装置",
-                    "category": "电能质量治理设备"
+                    "category": "电能质量治理设备",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 电能质量治理设备 > 电能质量治理设备 > 变压器保护装置",
+                    "level5IndustryCode": "1210000341",
+                    "level5IndustryName": "电能质量治理设备",
+                    "level7ProductCode": "1140174002",
+                    "level7ProductName": "变压器保护装置"
                   },
                   {
                     "name": "变电站监控系统",
-                    "category": "输变电监测设备"
+                    "category": "输变电监测设备",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 输变电监测设备 > 输变电监测设备 > 变电站监控系统",
+                    "level5IndustryCode": "1210000338",
+                    "level5IndustryName": "输变电监测设备",
+                    "level7ProductCode": "1140163183",
+                    "level7ProductName": "变电站监控系统"
                   },
                   {
                     "name": "可编程逻辑控制器(PLC)",
-                    "category": "控制柜"
+                    "category": "控制柜",
+                    "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 控制柜 > 可编程逻辑控制器(PLC)",
+                    "level5IndustryCode": "1200000371",
+                    "level5IndustryName": "通用电控设备",
+                    "level7ProductCode": "1140091062",
+                    "level7ProductName": "可编程逻辑控制器(PLC)"
                   },
                   {
                     "name": "干式变压器",
-                    "category": "干式变压器"
+                    "category": "干式变压器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 变压器 > 干式变压器 > 干式变压器",
+                    "level5IndustryCode": "1210000337",
+                    "level5IndustryName": "变压器",
+                    "level7ProductCode": "1137000101",
+                    "level7ProductName": "干式变压器"
                   }
                 ],
                 "knownProducts": [
@@ -2154,7 +2354,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“北美高温致部分地区电价飙升”能影响四方股份，不是因为题材名称相近，而是公司确实提供变压器保护装置。新闻涉及的客户在增加建设或采购时会用到变压器保护装置，因此公司存在真实的销售关系。只是这项产品目前还不能代表公司的全部生意。公司收入主要来自电厂及工业自动化、电网自动化，变压器保护装置只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。技术成熟会加快客户采用变压器保护装置，公司还要完成产品定型和批量生产，才能把需求变成收入。"
+            "analysis": "“北美高温致部分地区电价飙升”放到四方股份身上，需要比较的具体产品是分散控制系统(DCS)、功率协调控制系统(PMS)。分散控制系统(DCS)、功率协调控制系统(PMS)是公司参与相关产业场景的具体业务，与核电工程、水电站工程在设备、技术或应用层面形成配合。主营构成以电厂及工业自动化（46.7%）、电网自动化（44.9%）为主，公司与核电工程、水电站工程的联系主要由分散控制系统(DCS)、功率协调控制系统(PMS)这项具体业务承接。这里比较的是发电工程中的核电工程、水电站工程。"
           },
           {
             "sourceRowNumber": 20617,
@@ -2235,11 +2435,21 @@
                 "relevantProducts": [
                   {
                     "name": "储能逆变器",
-                    "category": "变流器"
+                    "category": "变流器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变流器 > 储能逆变器",
+                    "level5IndustryCode": "1200000371",
+                    "level5IndustryName": "通用电控设备",
+                    "level7ProductCode": "1140061538",
+                    "level7ProductName": "储能逆变器"
                   },
                   {
                     "name": "储能锂电池",
-                    "category": "锂离子电池"
+                    "category": "锂离子电池",
+                    "hierarchyPath": "电气设备 > 电池 > 锂电池 > 锂离子电池 > 锂离子电池 > 储能锂电池",
+                    "level5IndustryCode": "1210000367",
+                    "level5IndustryName": "锂离子电池",
+                    "level7ProductCode": "1140069150",
+                    "level7ProductName": "储能锂电池"
                   }
                 ],
                 "knownProducts": [
@@ -2256,8 +2466,8 @@
                 "containedSegmentCount": 4
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "看德业股份与“北美高温致部分地区电价飙升”的关系，关键不是行业名称相似，而是公司已经在卖储能逆变器。新闻涉及的客户在增加建设或采购时会用到储能逆变器，因此公司存在真实的销售关系。相关的储能逆变器合计约占收入42.68%，不是小到可以忽略，也没有大到决定整家公司。这件事能否让公司多赚钱，主要看客户是否增加储能逆变器采购，以及售价变化能否覆盖生产和销售成本。判断影响大小，直接看储能逆变器能不能多卖、能不能提价，以及新增销售是否被成本吃掉。"
+            "relationLabel": "宽口径相关",
+            "analysis": "要说明德业股份与“北美高温致部分地区电价飙升”的产业联系，需要对照发电工程及其中的核电工程、水电站工程。公司与该产业发生联系的产品主要是空调冷凝器、空调蒸发器。公司通过空调冷凝器、空调蒸发器进入与核电工程、水电站工程相衔接的产品和应用体系，两项业务在发电工程相关场景中各自承担功能。主营构成以储能逆变器（42.68%）、储能电池包（31.35%）为主，公司与核电工程、水电站工程的联系主要由空调冷凝器、空调蒸发器这项具体业务承接。"
           },
           {
             "sourceRowNumber": 20618,
@@ -2314,23 +2524,48 @@
                 "relevantProducts": [
                   {
                     "name": "工商用储能一体柜",
-                    "category": "储能系统"
+                    "category": "储能系统",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 储能系统 > 储能系统 > 工商用储能一体柜",
+                    "level5IndustryCode": "1200000324",
+                    "level5IndustryName": "储能系统",
+                    "level7ProductCode": "1140221734",
+                    "level7ProductName": "工商用储能一体柜"
                   },
                   {
                     "name": "户用储能一体机",
-                    "category": "储能系统"
+                    "category": "储能系统",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 储能系统 > 储能系统 > 户用储能一体机",
+                    "level5IndustryCode": "1200000324",
+                    "level5IndustryName": "储能系统",
+                    "level7ProductCode": "1140204277",
+                    "level7ProductName": "户用储能一体机"
                   },
                   {
                     "name": "集装箱储能系统",
-                    "category": "储能系统"
+                    "category": "储能系统",
+                    "hierarchyPath": "电气设备 > 其他电源设备 > 其他能源设备 > 储能系统 > 储能系统 > 集装箱储能系统",
+                    "level5IndustryCode": "1200000324",
+                    "level5IndustryName": "储能系统",
+                    "level7ProductCode": "1140199859",
+                    "level7ProductName": "集装箱储能系统"
                   },
                   {
                     "name": "组串式储能变流器(PCS)",
-                    "category": "变流器"
+                    "category": "变流器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变流器 > 组串式储能变流器(PCS)",
+                    "level5IndustryCode": "1200000371",
+                    "level5IndustryName": "通用电控设备",
+                    "level7ProductCode": "1140221732",
+                    "level7ProductName": "组串式储能变流器(PCS)"
                   },
                   {
                     "name": "太阳能电池组件",
-                    "category": "光伏电池组件"
+                    "category": "光伏电池组件",
+                    "hierarchyPath": "电气设备 > 光伏设备 > 光伏电池组件 > 光伏电池组件 > 光伏电池组件 > 太阳能电池组件",
+                    "level5IndustryCode": "1210000351",
+                    "level5IndustryName": "光伏电池组件",
+                    "level7ProductCode": "1140010433",
+                    "level7ProductName": "太阳能电池组件"
                   }
                 ],
                 "knownProducts": [
@@ -2347,8 +2582,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "阿特斯和“北美高温致部分地区电价飙升”的直接联系是太阳能电池组件。新闻涉及的客户在增加建设或采购时会用到太阳能电池组件，因此公司存在真实的销售关系。公司约90.24%的收入来自光伏组件、大型储能系统，这不是边角业务，需求增减会比较直接地反映到收入上。这件事能否让公司多赚钱，主要看客户是否增加太阳能电池组件采购，以及售价变化能否覆盖生产和销售成本。简单说，真正影响公司收入的是客户对太阳能电池组件的实际采购量，而不是新闻本身有多热。"
+            "relationLabel": "宽口径相关",
+            "analysis": "把阿特斯放到产业范围内看，“北美高温致部分地区电价飙升”涉及发电工程及其中的核电工程、水电站工程。阿特斯的业务主要涉及掌握了具有自主知识产权的核心技术体系，与核心产业的具体联系由光伏电站工程体现。发电工程不只包含核电工程、水电站工程，光伏电站工程也是其中一类实际产品，因此两者属于产业内部关联。公司约63.29%的主营收入归在光伏组件，产品名称与收入分部能够相互对应。"
           },
           {
             "sourceRowNumber": 20619,
@@ -2405,27 +2640,57 @@
                 "relevantProducts": [
                   {
                     "name": "储能变流器(PCS)",
-                    "category": "变流器"
+                    "category": "变流器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变流器 > 储能变流器(PCS)",
+                    "level5IndustryCode": "1200000371",
+                    "level5IndustryName": "通用电控设备",
+                    "level7ProductCode": "1140061558",
+                    "level7ProductName": "储能变流器(PCS)"
                   },
                   {
                     "name": "数据中心配电柜",
-                    "category": "配电柜"
+                    "category": "配电柜",
+                    "hierarchyPath": "电气设备 > 电网设备 > 配电设备 > 配电柜 > 配电柜 > 数据中心配电柜",
+                    "level5IndustryCode": "1210000343",
+                    "level5IndustryName": "配电柜",
+                    "level7ProductCode": "1140192190",
+                    "level7ProductName": "数据中心配电柜"
                   },
                   {
                     "name": "IDC高压直流电源系统",
-                    "category": "IDC硬件产品"
+                    "category": "IDC硬件产品",
+                    "hierarchyPath": "通信 > 通信设备 > 通信配套服务 > IDC服务 > IDC硬件产品 > IDC高压直流电源系统",
+                    "level5IndustryCode": "1200001406",
+                    "level5IndustryName": "IDC服务",
+                    "level7ProductCode": "1140213209",
+                    "level7ProductName": "IDC高压直流电源系统"
                   },
                   {
                     "name": "光伏离网控制器",
-                    "category": "光伏电池辅件"
+                    "category": "光伏电池辅件",
+                    "hierarchyPath": "电气设备 > 光伏设备 > 光伏辅材 > 光伏电池辅件 > 光伏电池辅件 > 光伏离网控制器",
+                    "level5IndustryCode": "1210000354",
+                    "level5IndustryName": "光伏电池辅件",
+                    "level7ProductCode": "1140030205",
+                    "level7ProductName": "光伏离网控制器"
                   },
                   {
                     "name": "冷却液分配单元(CDU)",
-                    "category": "IDC硬件产品"
+                    "category": "IDC硬件产品",
+                    "hierarchyPath": "通信 > 通信设备 > 通信配套服务 > IDC服务 > IDC硬件产品 > 冷却液分配单元(CDU)",
+                    "level5IndustryCode": "1200001406",
+                    "level5IndustryName": "IDC服务",
+                    "level7ProductCode": "1140216650",
+                    "level7ProductName": "冷却液分配单元(CDU)"
                   },
                   {
                     "name": "数据中心服务器托管服务(IDC)",
-                    "category": "IDC基础业务"
+                    "category": "IDC基础业务",
+                    "hierarchyPath": "通信 > 通信设备 > 通信配套服务 > IDC服务 > IDC基础业务 > 数据中心服务器托管服务(IDC)",
+                    "level5IndustryCode": "1200001406",
+                    "level5IndustryName": "IDC服务",
+                    "level7ProductCode": "1140014690",
+                    "level7ProductName": "数据中心服务器托管服务(IDC)"
                   }
                 ],
                 "knownProducts": [
@@ -2442,8 +2707,8 @@
                 "containedSegmentCount": 2
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "科华数据和“北美高温致部分地区电价飙升”的直接联系是数据中心配电柜。数据中心采用液冷时需要采购冷却和温控产品，数据中心配电柜就是系统中会用到的设备或材料。公司约27.44%的收入来自数据中心产品，新闻确实可能影响一部分业绩，影响大小仍取决于实际销售变化。数据中心提高液冷使用量，会多买数据中心配电柜，公司可能增加订单；定制成本、材料价格和客户压价会影响新增收入能留下多少利润。"
+            "relationLabel": "宽口径相关",
+            "analysis": "把科华数据放到产业范围内看，“北美高温致部分地区电价飙升”涉及发电工程及其中的核电工程、水电站工程。在发电工程的完整产品体系中，光伏发电、光伏离网控制器与核电工程、水电站工程承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。公司现有产品中，光伏发电、光伏离网控制器与这次事件最接近。新能源产品（46.56%）、数据中心产品（27.44%）构成公司的主要收入来源，光伏发电、光伏离网控制器是其中可与发电工程相衔接的产品方向。"
           },
           {
             "sourceRowNumber": 20620,
@@ -2500,19 +2765,39 @@
                 "relevantProducts": [
                   {
                     "name": "储能变流器(PCS)",
-                    "category": "变流器"
+                    "category": "变流器",
+                    "hierarchyPath": "电气设备 > 电网设备 > 线缆部件及其他 > 通用电控设备 > 变流器 > 储能变流器(PCS)",
+                    "level5IndustryCode": "1200000371",
+                    "level5IndustryName": "通用电控设备",
+                    "level7ProductCode": "1140061558",
+                    "level7ProductName": "储能变流器(PCS)"
                   },
                   {
                     "name": "三相不平衡调节装置(SPC)",
-                    "category": "电能质量治理设备"
+                    "category": "电能质量治理设备",
+                    "hierarchyPath": "电气设备 > 电网设备 > 输变电设备 > 电能质量治理设备 > 电能质量治理设备 > 三相不平衡调节装置(SPC)",
+                    "level5IndustryCode": "1210000341",
+                    "level5IndustryName": "电能质量治理设备",
+                    "level7ProductCode": "1140030207",
+                    "level7ProductName": "三相不平衡调节装置(SPC)"
                   },
                   {
                     "name": "锂电池化成分容系统",
-                    "category": "锂电池电芯检测设备"
+                    "category": "锂电池电芯检测设备",
+                    "hierarchyPath": "电气设备 > 电池 > 锂电专用设备 > 锂电池设备 > 锂电池电芯检测设备 > 锂电池化成分容系统",
+                    "level5IndustryCode": "1200000586",
+                    "level5IndustryName": "锂电池设备",
+                    "level7ProductCode": "1140033502",
+                    "level7ProductName": "锂电池化成分容系统"
                   },
                   {
                     "name": "锂电池电芯测试系统",
-                    "category": "锂电池电芯检测设备"
+                    "category": "锂电池电芯检测设备",
+                    "hierarchyPath": "电气设备 > 电池 > 锂电专用设备 > 锂电池设备 > 锂电池电芯检测设备 > 锂电池电芯测试系统",
+                    "level5IndustryCode": "1200000586",
+                    "level5IndustryName": "锂电池设备",
+                    "level7ProductCode": "1140204868",
+                    "level7ProductName": "锂电池电芯测试系统"
                   }
                 ],
                 "knownProducts": [
@@ -2530,7 +2815,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "看盛弘股份的实际产品，公司确实提供锂电池化成分容系统，与“北美高温致部分地区电价飙升”不是只沾名字。新闻涉及的客户在增加建设或采购时会用到锂电池化成分容系统，因此公司存在真实的销售关系。公司其他业务不会因此一起增长。电动汽车充电桩、新能源电能变换设备是公司的主要生意，锂电池化成分容系统包含在相关业务中，目前更适合把它看成局部增量。这件事能否让公司多赚钱，主要看客户是否增加锂电池化成分容系统采购，以及售价变化能否覆盖生产和销售成本。"
+            "analysis": "在盛弘股份现有业务里，能够与“北美高温致部分地区电价飙升”放在同一产业框架下比较的是交流充电桩、直流充电桩。新闻对应的核心产业是发电工程，代表性产品包括核电工程、水电站工程。交流充电桩、直流充电桩对应核电工程、水电站工程之外的技术与应用配套，两者通过发电工程所涉及的设备、工序或应用场景形成业务连接。主营结构中，电动汽车充电桩（43.2%）、新能源电能变换设备（23.84%）是公司的业务主体；放到发电工程中，对应的连接点是交流充电桩、直流充电桩。"
           },
           {
             "sourceRowNumber": 20623,
@@ -2581,27 +2866,57 @@
                 "relevantProducts": [
                   {
                     "name": "供热",
-                    "category": "供暖"
+                    "category": "供暖",
+                    "hierarchyPath": "公用事业 > 电力 > 热电 > 供暖 > 供暖 > 供热",
+                    "level5IndustryCode": "1200000640",
+                    "level5IndustryName": "供暖",
+                    "level7ProductCode": "1140077380",
+                    "level7ProductName": "供热"
                   },
                   {
                     "name": "光伏发电",
-                    "category": "太阳能发电"
+                    "category": "太阳能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 太阳能发电 > 太阳能发电 > 光伏发电",
+                    "level5IndustryCode": "1200000643",
+                    "level5IndustryName": "太阳能发电",
+                    "level7ProductCode": "1112000352",
+                    "level7ProductName": "光伏发电"
                   },
                   {
                     "name": "光伏电站工程",
-                    "category": "发电工程"
+                    "category": "发电工程",
+                    "hierarchyPath": "建筑装饰 > 专业工程 > 电力工程 > 发电工程 > 发电工程 > 光伏电站工程",
+                    "level5IndustryCode": "1210000277",
+                    "level5IndustryName": "发电工程",
+                    "level7ProductCode": "1140088979",
+                    "level7ProductName": "光伏电站工程"
                   },
                   {
                     "name": "天然气发电",
-                    "category": "燃气发电"
+                    "category": "燃气发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃气发电 > 燃气发电 > 天然气发电",
+                    "level5IndustryCode": "1200000638",
+                    "level5IndustryName": "燃气发电",
+                    "level7ProductCode": "1140009703",
+                    "level7ProductName": "天然气发电"
                   },
                   {
                     "name": "水力发电",
-                    "category": "水力发电"
+                    "category": "水力发电",
+                    "hierarchyPath": "公用事业 > 电力 > 水电 > 水力发电 > 水力发电 > 水力发电",
+                    "level5IndustryCode": "1200000642",
+                    "level5IndustryName": "水力发电",
+                    "level7ProductCode": "1140077781",
+                    "level7ProductName": "水力发电"
                   },
                   {
                     "name": "煤炭销售",
-                    "category": "煤炭贸易"
+                    "category": "煤炭贸易",
+                    "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 煤炭贸易 > 煤炭销售",
+                    "level5IndustryCode": "1200001164",
+                    "level5IndustryName": "工业品贸易",
+                    "level7ProductCode": "1140033013",
+                    "level7ProductName": "煤炭销售"
                   }
                 ],
                 "knownProducts": [
@@ -2619,7 +2934,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "华能国际与“北美高温致部分地区电价飙升”有实际业务联系，连接点是光伏发电。新闻涉及的客户在增加建设或采购时会用到光伏发电，因此公司存在真实的销售关系。这项需求只会影响相关产品。公司收入主要来自热力及电力、港口服务，光伏发电只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。这件事能否让公司多赚钱，主要看客户是否增加光伏发电采购，以及售价变化能否覆盖生产和销售成本。"
+            "analysis": "对华能国际来说，“北美高温致部分地区电价飙升”指向发电工程，新闻里的产品主要是核电工程、水电站工程。公司现有产品中，光伏电站工程与这次事件最接近。发电工程不只包含核电工程、水电站工程，光伏电站工程也是其中一类实际产品，因此两者属于产业内部关联。主营构成中，热力及电力合计约占96.37%，上述产品在公司业务中已有明确位置。"
           },
           {
             "sourceRowNumber": 20624,
@@ -2694,23 +3009,48 @@
                 "relevantProducts": [
                   {
                     "name": "供热",
-                    "category": "供暖"
+                    "category": "供暖",
+                    "hierarchyPath": "公用事业 > 电力 > 热电 > 供暖 > 供暖 > 供热",
+                    "level5IndustryCode": "1200000640",
+                    "level5IndustryName": "供暖",
+                    "level7ProductCode": "1140077380",
+                    "level7ProductName": "供热"
                   },
                   {
                     "name": "光伏发电",
-                    "category": "太阳能发电"
+                    "category": "太阳能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 太阳能发电 > 太阳能发电 > 光伏发电",
+                    "level5IndustryCode": "1200000643",
+                    "level5IndustryName": "太阳能发电",
+                    "level7ProductCode": "1112000352",
+                    "level7ProductName": "光伏发电"
                   },
                   {
                     "name": "天然气发电",
-                    "category": "燃气发电"
+                    "category": "燃气发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃气发电 > 燃气发电 > 天然气发电",
+                    "level5IndustryCode": "1200000638",
+                    "level5IndustryName": "燃气发电",
+                    "level7ProductCode": "1140009703",
+                    "level7ProductName": "天然气发电"
                   },
                   {
                     "name": "燃煤发电",
-                    "category": "燃煤发电"
+                    "category": "燃煤发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃煤发电 > 燃煤发电 > 燃煤发电",
+                    "level5IndustryCode": "1200000636",
+                    "level5IndustryName": "燃煤发电",
+                    "level7ProductCode": "1140084062",
+                    "level7ProductName": "燃煤发电"
                   },
                   {
                     "name": "风力发电",
-                    "category": "风能发电"
+                    "category": "风能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 风能发电 > 风能发电 > 风力发电",
+                    "level5IndustryCode": "1200000644",
+                    "level5IndustryName": "风能发电",
+                    "level7ProductCode": "1140077141",
+                    "level7ProductName": "风力发电"
                   }
                 ],
                 "knownProducts": [
@@ -2724,8 +3064,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "粤电力A和“北美高温致部分地区电价飙升”的直接联系是光伏发电。新闻涉及的客户在增加建设或采购时会用到光伏发电，因此公司存在真实的销售关系。燃煤发电、燃气发电合计约占收入89.26%，相关产品本身就是主业，新闻的影响不只停留在板块情绪。这件事能否让公司多赚钱，主要看客户是否增加光伏发电采购，以及售价变化能否覆盖生产和销售成本。简单说，真正影响公司收入的是客户对光伏发电的实际采购量，而不是新闻本身有多热。"
+            "relationLabel": "宽口径相关",
+            "analysis": "就现有产品而言，粤电力A与“北美高温致部分地区电价飙升”最接近的一项业务是光伏发电、风力发电。核心产业发电工程在产品端主要体现为核电工程、水电站工程。光伏发电、风力发电是公司参与相关产业场景的具体业务，与核电工程、水电站工程在设备、技术或应用层面形成配合。燃煤发电（61.02%）、燃气发电（28.24%）构成公司的主要收入来源，光伏发电、风力发电是其中可与发电工程相衔接的产品方向。"
           },
           {
             "sourceRowNumber": 20625,
@@ -2788,23 +3128,48 @@
                 "relevantProducts": [
                   {
                     "name": "供热",
-                    "category": "供暖"
+                    "category": "供暖",
+                    "hierarchyPath": "公用事业 > 电力 > 热电 > 供暖 > 供暖 > 供热",
+                    "level5IndustryCode": "1200000640",
+                    "level5IndustryName": "供暖",
+                    "level7ProductCode": "1140077380",
+                    "level7ProductName": "供热"
                   },
                   {
                     "name": "光伏发电",
-                    "category": "太阳能发电"
+                    "category": "太阳能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 太阳能发电 > 太阳能发电 > 光伏发电",
+                    "level5IndustryCode": "1200000643",
+                    "level5IndustryName": "太阳能发电",
+                    "level7ProductCode": "1112000352",
+                    "level7ProductName": "光伏发电"
                   },
                   {
                     "name": "水力发电",
-                    "category": "水力发电"
+                    "category": "水力发电",
+                    "hierarchyPath": "公用事业 > 电力 > 水电 > 水力发电 > 水力发电 > 水力发电",
+                    "level5IndustryCode": "1200000642",
+                    "level5IndustryName": "水力发电",
+                    "level7ProductCode": "1140077781",
+                    "level7ProductName": "水力发电"
                   },
                   {
                     "name": "燃煤发电",
-                    "category": "燃煤发电"
+                    "category": "燃煤发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃煤发电 > 燃煤发电 > 燃煤发电",
+                    "level5IndustryCode": "1200000636",
+                    "level5IndustryName": "燃煤发电",
+                    "level7ProductCode": "1140084062",
+                    "level7ProductName": "燃煤发电"
                   },
                   {
                     "name": "风力发电",
-                    "category": "风能发电"
+                    "category": "风能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 风能发电 > 风能发电 > 风力发电",
+                    "level5IndustryCode": "1200000644",
+                    "level5IndustryName": "风能发电",
+                    "level7ProductCode": "1140077141",
+                    "level7ProductName": "风力发电"
                   }
                 ],
                 "knownProducts": [
@@ -2821,8 +3186,8 @@
                 "containedSegmentCount": 2
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "国电电力通过光伏发电参与“北美高温致部分地区电价飙升”涉及的业务。新闻涉及的客户在增加建设或采购时会用到光伏发电，因此公司存在真实的销售关系。只是这项产品还没有成为公司主要收入来源。水力发电产品目前约占公司收入6.76%，产品虽然已经在卖，基数仍小，即使增长较快，对公司整体的拉动也有限。对公司最实际的影响是光伏发电的销量、售价和成本变化，新闻热度本身不会直接增加收入。"
+            "relationLabel": "宽口径相关",
+            "analysis": "国电电力和“北美高温致部分地区电价飙升”的业务交集，主要在光伏发电、风力发电。公司通过光伏发电、风力发电进入与核电工程、水电站工程相衔接的产品和应用体系，两项业务在发电工程相关场景中各自承担功能。火力发电产品（83.24%）、新能源发电产品（8.63%）构成公司的主要收入来源，光伏发电、风力发电是其中可与发电工程相衔接的产品方向。这里比较的是发电工程中的核电工程、水电站工程。"
           },
           {
             "sourceRowNumber": 20626,
@@ -2891,27 +3256,57 @@
                 "relevantProducts": [
                   {
                     "name": "光伏发电",
-                    "category": "太阳能发电"
+                    "category": "太阳能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 太阳能发电 > 太阳能发电 > 光伏发电",
+                    "level5IndustryCode": "1200000643",
+                    "level5IndustryName": "太阳能发电",
+                    "level7ProductCode": "1112000352",
+                    "level7ProductName": "光伏发电"
                   },
                   {
                     "name": "天然气",
-                    "category": "陆地天然气开采"
+                    "category": "陆地天然气开采",
+                    "hierarchyPath": "采掘 > 其他采掘 > 其他采掘 > 天然气开采 > 陆地天然气开采 > 天然气",
+                    "level5IndustryCode": "1200000814",
+                    "level5IndustryName": "天然气开采",
+                    "level7ProductCode": "1115000044",
+                    "level7ProductName": "天然气"
                   },
                   {
                     "name": "天然气发电",
-                    "category": "燃气发电"
+                    "category": "燃气发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃气发电 > 燃气发电 > 天然气发电",
+                    "level5IndustryCode": "1200000638",
+                    "level5IndustryName": "燃气发电",
+                    "level7ProductCode": "1140009703",
+                    "level7ProductName": "天然气发电"
                   },
                   {
                     "name": "煤炭销售",
-                    "category": "煤炭贸易"
+                    "category": "煤炭贸易",
+                    "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 煤炭贸易 > 煤炭销售",
+                    "level5IndustryCode": "1200001164",
+                    "level5IndustryName": "工业品贸易",
+                    "level7ProductCode": "1140033013",
+                    "level7ProductName": "煤炭销售"
                   },
                   {
                     "name": "燃煤发电",
-                    "category": "燃煤发电"
+                    "category": "燃煤发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃煤发电 > 燃煤发电 > 燃煤发电",
+                    "level5IndustryCode": "1200000636",
+                    "level5IndustryName": "燃煤发电",
+                    "level7ProductCode": "1140084062",
+                    "level7ProductName": "燃煤发电"
                   },
                   {
                     "name": "风力发电",
-                    "category": "风能发电"
+                    "category": "风能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 风能发电 > 风能发电 > 风力发电",
+                    "level5IndustryCode": "1200000644",
+                    "level5IndustryName": "风能发电",
+                    "level7ProductCode": "1140077141",
+                    "level7ProductName": "风力发电"
                   }
                 ],
                 "knownProducts": [
@@ -2926,8 +3321,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "申能股份与“北美高温致部分地区电价飙升”的联系在光伏发电。新闻涉及的客户在增加建设或采购时会用到光伏发电，因此公司存在真实的销售关系。不过这项业务目前规模较小或仍在导入阶段。相关的煤炭销售、光伏发电业务合计约占收入12%，现阶段更像小业务增加销量，而不是公司整体利润大幅变化。这件事能否让公司多赚钱，主要看客户是否增加光伏发电采购，以及售价变化能否覆盖生产和销售成本。"
+            "relationLabel": "宽口径相关",
+            "analysis": "分析申能股份与“北美高温致部分地区电价飙升”的联系，所依据的产业范围是发电工程，事件主要围绕核电工程、水电站工程展开。公司通过光伏发电、风力发电进入与核电工程、水电站工程相衔接的产品和应用体系，两项业务在发电工程相关场景中各自承担功能。就实际业务而言，公司提供的是光伏发电、风力发电。煤电业务（43.93%）、气电业务（21.36%）构成公司的主要收入来源，光伏发电、风力发电是其中可与发电工程相衔接的产品方向。"
           },
           {
             "sourceRowNumber": 20627,
@@ -2966,15 +3361,30 @@
                 "relevantProducts": [
                   {
                     "name": "燃煤发电",
-                    "category": "燃煤发电"
+                    "category": "燃煤发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃煤发电 > 燃煤发电 > 燃煤发电",
+                    "level5IndustryCode": "1200000636",
+                    "level5IndustryName": "燃煤发电",
+                    "level7ProductCode": "1140084062",
+                    "level7ProductName": "燃煤发电"
                   },
                   {
                     "name": "生物质发电",
-                    "category": "生物质能发电"
+                    "category": "生物质能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 生物质能发电 > 生物质能发电 > 生物质发电",
+                    "level5IndustryCode": "1200000645",
+                    "level5IndustryName": "生物质能发电",
+                    "level7ProductCode": "1140012143",
+                    "level7ProductName": "生物质发电"
                   },
                   {
                     "name": "风力发电",
-                    "category": "风能发电"
+                    "category": "风能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 风能发电 > 风能发电 > 风力发电",
+                    "level5IndustryCode": "1200000644",
+                    "level5IndustryName": "风能发电",
+                    "level7ProductCode": "1140077141",
+                    "level7ProductName": "风力发电"
                   }
                 ],
                 "knownProducts": [
@@ -2987,7 +3397,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "宝新能源与“北美高温致部分地区电价飙升”有实际业务联系，连接点是燃煤发电。新闻涉及的客户在增加建设或采购时会用到燃煤发电，因此公司存在真实的销售关系。这项需求只会影响相关产品。公司的收入主体仍是电力，燃煤发电能参与新闻所说的需求，但暂时不是决定公司业绩的唯一产品。市场缺货或涨价会让客户增加燃煤发电采购，公司可能多卖货或提高售价；采购成本和库存变化会决定利润是否同步增加。"
+            "analysis": "“北美高温致部分地区电价飙升”放到宝新能源身上，需要比较的具体产品是生物质发电、风力发电。这里比较的是发电工程中的核电工程、水电站工程。公司通过生物质发电、风力发电进入与核电工程、水电站工程相衔接的产品和应用体系，两项业务在发电工程相关场景中各自承担功能。主营构成以电力（99.85%）为主，公司与核电工程、水电站工程的联系主要由生物质发电、风力发电这项具体业务承接。"
           },
           {
             "sourceRowNumber": 20628,
@@ -3044,19 +3454,39 @@
                 "relevantProducts": [
                   {
                     "name": "供热",
-                    "category": "供暖"
+                    "category": "供暖",
+                    "hierarchyPath": "公用事业 > 电力 > 热电 > 供暖 > 供暖 > 供热",
+                    "level5IndustryCode": "1200000640",
+                    "level5IndustryName": "供暖",
+                    "level7ProductCode": "1140077380",
+                    "level7ProductName": "供热"
                   },
                   {
                     "name": "天然气发电",
-                    "category": "燃气发电"
+                    "category": "燃气发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃气发电 > 燃气发电 > 天然气发电",
+                    "level5IndustryCode": "1200000638",
+                    "level5IndustryName": "燃气发电",
+                    "level7ProductCode": "1140009703",
+                    "level7ProductName": "天然气发电"
                   },
                   {
                     "name": "煤炭销售",
-                    "category": "煤炭贸易"
+                    "category": "煤炭贸易",
+                    "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 煤炭贸易 > 煤炭销售",
+                    "level5IndustryCode": "1200001164",
+                    "level5IndustryName": "工业品贸易",
+                    "level7ProductCode": "1140033013",
+                    "level7ProductName": "煤炭销售"
                   },
                   {
                     "name": "燃煤发电",
-                    "category": "燃煤发电"
+                    "category": "燃煤发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃煤发电 > 燃煤发电 > 燃煤发电",
+                    "level5IndustryCode": "1200000636",
+                    "level5IndustryName": "燃煤发电",
+                    "level7ProductCode": "1140084062",
+                    "level7ProductName": "燃煤发电"
                   }
                 ],
                 "knownProducts": [
@@ -3073,8 +3503,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "看产品，江苏国信能用供热接上“北美高温致部分地区电价飙升”所说的需求。新闻涉及的客户在增加建设或采购时会用到供热，因此公司存在真实的销售关系。看公司整体，这块生意仍小。煤炭目前约占公司收入8.08%，产品虽然已经在卖，基数仍小，即使增长较快，对公司整体的拉动也有限。这件事能否让公司多赚钱，主要看客户是否增加供热采购，以及售价变化能否覆盖生产和销售成本。新闻可以改变市场想象，但公司赚不赚钱仍取决于供热有没有新增销量和合理利润。"
+            "relationLabel": "宽口径相关",
+            "analysis": "判断江苏国信与“北美高温致部分地区电价飙升”的关系，要把公司业务放进发电工程中比较，具体产品包括核电工程、水电站工程。天然气发电、燃煤发电对应核电工程、水电站工程之外的技术与应用配套，两者通过发电工程所涉及的设备、工序或应用场景形成业务连接。江苏国信聚焦能源和金融主业，与核心产业的具体联系由天然气发电、燃煤发电体现。主营结构中，电力（84.12%）、煤炭（8.08%）是公司的业务主体；放到发电工程中，对应的连接点是天然气发电、燃煤发电。"
           },
           {
             "sourceRowNumber": 20630,
@@ -3137,15 +3567,30 @@
                 "relevantProducts": [
                   {
                     "name": "核电",
-                    "category": "核电"
+                    "category": "核电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 核电 > 核电 > 核电",
+                    "level5IndustryCode": "1200000651",
+                    "level5IndustryName": "核电",
+                    "level7ProductCode": "1137000047",
+                    "level7ProductName": "核电"
                   },
                   {
                     "name": "光伏发电",
-                    "category": "太阳能发电"
+                    "category": "太阳能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 太阳能发电 > 太阳能发电 > 光伏发电",
+                    "level5IndustryCode": "1200000643",
+                    "level5IndustryName": "太阳能发电",
+                    "level7ProductCode": "1112000352",
+                    "level7ProductName": "光伏发电"
                   },
                   {
                     "name": "风力发电",
-                    "category": "风能发电"
+                    "category": "风能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 风能发电 > 风能发电 > 风力发电",
+                    "level5IndustryCode": "1200000644",
+                    "level5IndustryName": "风能发电",
+                    "level7ProductCode": "1140077141",
+                    "level7ProductName": "风力发电"
                   }
                 ],
                 "knownProducts": [
@@ -3157,8 +3602,8 @@
                 "containedSegmentCount": 2
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "中国核电确实做着“北美高温致部分地区电价飙升”涉及的生意，具体产品是光伏发电。新闻涉及的客户在增加建设或采购时会用到光伏发电，因此公司存在真实的销售关系。相关的光伏、风电合计约占收入17.26%，不是小到可以忽略，也没有大到决定整家公司。这件事能否让公司多赚钱，主要看客户是否增加光伏发电采购，以及售价变化能否覆盖生产和销售成本。简单说，真正影响公司收入的是客户对光伏发电的实际采购量，而不是新闻本身有多热。"
+            "relationLabel": "宽口径相关",
+            "analysis": "要理解中国核电和“北美高温致部分地区电价飙升”的联系，可以先看公司实际提供的核电。两项业务共享部分技术或应用场景，核电位于核电工程、水电站工程旁侧的产品环节，边界需要区分清楚。主营构成中，核电合计约占79.75%，上述产品在公司业务中已有明确位置。产业这一侧是发电工程，核心产品为核电工程、水电站工程。"
           },
           {
             "sourceRowNumber": 20632,
@@ -3203,27 +3648,57 @@
                 "relevantProducts": [
                   {
                     "name": "能源互联网平台",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 能源互联网平台",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140203020",
+                    "level7ProductName": "能源互联网平台"
                   },
                   {
                     "name": "充电桩管理平台",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 充电桩管理平台",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140112906",
+                    "level7ProductName": "充电桩管理平台"
                   },
                   {
                     "name": "智能计量生产调度系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 智能计量生产调度系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140112902",
+                    "level7ProductName": "智能计量生产调度系统"
                   },
                   {
                     "name": "智能防窃电监测系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 智能防窃电监测系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140112901",
+                    "level7ProductName": "智能防窃电监测系统"
                   },
                   {
                     "name": "用电信息采集系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 用电信息采集系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140028999",
+                    "level7ProductName": "用电信息采集系统"
                   },
                   {
                     "name": "电力企业运营监控系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 电力企业运营监控系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140112904",
+                    "level7ProductName": "电力企业运营监控系统"
                   }
                 ],
                 "knownProducts": [
@@ -3241,7 +3716,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "朗新科技与“北美高温致部分地区电价飙升”有实际业务联系，连接点是充电桩管理平台。新闻涉及的客户在增加建设或采购时会用到充电桩管理平台，因此公司存在真实的销售关系。这项需求只会影响相关产品。公司的收入主体仍是软件服务、平台运营，充电桩管理平台能参与新闻所说的需求，但暂时不是决定公司业绩的唯一产品。技术从试验走向量产，会增加客户对充电桩管理平台的采购可能，产品通过认证、稳定生产并拿到订单后才会增加销售。"
+            "analysis": "把朗新科技放到产业范围内看，“北美高温致部分地区电价飙升”涉及发电工程及其中的核电工程、水电站工程。在发电工程的完整产品体系中，线上生活缴费平台运营、互联网电视业务(OTTTV)与核电工程、水电站工程承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。朗新科技聚焦能源数智化、能源互联网双轮发展战略，其中可与核心产业衔接的产品是线上生活缴费平台运营、互联网电视业务(OTTTV)。软件服务（50.92%）、平台运营（43.81%）构成公司的主要收入来源，线上生活缴费平台运营、互联网电视业务(OTTTV)是其中可与发电工程相衔接的产品方向。"
           },
           {
             "sourceRowNumber": 20633,
@@ -3310,19 +3785,39 @@
                 "relevantProducts": [
                   {
                     "name": "电力交易辅助决策平台",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 电力交易辅助决策平台",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140217585",
+                    "level7ProductName": "电力交易辅助决策平台"
                   },
                   {
                     "name": "新能源发电功率预测系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 新能源发电功率预测系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140164695",
+                    "level7ProductName": "新能源发电功率预测系统"
                   },
                   {
                     "name": "新能源并网智能控制系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 新能源并网智能控制系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140164696",
+                    "level7ProductName": "新能源并网智能控制系统"
                   },
                   {
                     "name": "电网新能源管理系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 电网新能源管理系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140164697",
+                    "level7ProductName": "电网新能源管理系统"
                   }
                 ],
                 "knownProducts": [
@@ -3336,7 +3831,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "国能日新与“北美高温致部分地区电价飙升”有实际业务联系，连接点是电网新能源管理系统。新闻涉及的客户在增加建设或采购时会用到电网新能源管理系统，因此公司存在真实的销售关系。这项需求只会影响相关产品。公司的收入主体仍是新能源发电功率预测产品、新能源并网智能控制产品，电网新能源管理系统能参与新闻所说的需求，但暂时不是决定公司业绩的唯一产品。对公司最实际的影响是电网新能源管理系统的销量、售价和成本变化，新闻热度本身不会直接增加收入。"
+            "analysis": "对国能日新来说，“北美高温致部分地区电价飙升”指向发电工程，新闻里的产品主要是核电工程、水电站工程。公司与该产业发生联系的产品主要是新能源发电功率预测系统、新能源并网智能控制系统。新能源发电功率预测系统、新能源并网智能控制系统是公司参与相关产业场景的具体业务，与核电工程、水电站工程在设备、技术或应用层面形成配合。新能源发电功率预测产品（61.51%）、新能源并网智能控制产品（15.17%）构成公司的主要收入来源，新能源发电功率预测系统、新能源并网智能控制系统是其中可与发电工程相衔接的产品方向。"
           },
           {
             "sourceRowNumber": 20634,
@@ -3411,11 +3906,21 @@
                 "relevantProducts": [
                   {
                     "name": "用电信息采集系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 用电信息采集系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140028999",
+                    "level7ProductName": "用电信息采集系统"
                   },
                   {
                     "name": "电力营销系统",
-                    "category": "电力IT"
+                    "category": "电力IT",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 行业应用软件 > 电力IT > 电力营销系统",
+                    "level5IndustryCode": "1200001386",
+                    "level5IndustryName": "行业应用软件",
+                    "level7ProductCode": "1140121867",
+                    "level7ProductName": "电力营销系统"
                   }
                 ],
                 "knownProducts": [
@@ -3432,8 +3937,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "“北美高温致部分地区电价飙升”在东方电子身上不是完全没产品，公司确实提供用电信息采集系统。新闻涉及的客户在增加建设或采购时会用到用电信息采集系统，因此公司存在真实的销售关系。问题在于这还是小业务。综合能源及虚拟电厂目前约占公司收入3.05%，产品虽然已经在卖，基数仍小，即使增长较快，对公司整体的拉动也有限。这件事能否让公司多赚钱，主要看客户是否增加用电信息采集系统采购，以及售价变化能否覆盖生产和销售成本。"
+            "relationLabel": "宽口径相关",
+            "analysis": "东方电子的业务主要涉及产品体系涵盖“发电-输变电-配用电”全环节，其中与“北美高温致部分地区电价飙升”能够衔接的是分布式电源、岸电电源。产业这一侧是发电工程，核心产品为核电工程、水电站工程。在发电工程的完整产品体系中，分布式电源、岸电电源与核电工程、水电站工程承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。智能配用电业务（55.99%）、调度及云化业务（14.85%）构成公司的主要收入来源，分布式电源、岸电电源是其中可与发电工程相衔接的产品方向。"
           }
         ]
       }

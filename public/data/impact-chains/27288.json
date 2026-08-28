@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 18,
-  "generatedAt": "2026-08-27T11:16:12+08:00",
+  "schemaVersion": 19,
+  "generatedAt": "2026-08-28T15:50:34+08:00",
   "status": "ready",
   "event": {
     "mainId": "27288",
@@ -1346,7 +1346,7 @@
     "companyProfileMatchedCount": 27,
     "companyProfileUnmatchedCount": 0,
     "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
-    "analysisPromptVersion": "investment-opportunity-analyst-v9.md",
+    "analysisPromptVersion": "investment-opportunity-analyst-v10.md",
     "groups": [
       {
         "filledStars": 5,
@@ -1398,15 +1398,30 @@
                 "relevantProducts": [
                   {
                     "name": "天然气",
-                    "category": "陆地天然气开采"
+                    "category": "陆地天然气开采",
+                    "hierarchyPath": "采掘 > 其他采掘 > 其他采掘 > 天然气开采 > 陆地天然气开采 > 天然气",
+                    "level5IndustryCode": "1200000814",
+                    "level5IndustryName": "天然气开采",
+                    "level7ProductCode": "1115000044",
+                    "level7ProductName": "天然气"
                   },
                   {
                     "name": "原油",
-                    "category": "天然原油"
+                    "category": "天然原油",
+                    "hierarchyPath": "采掘 > 石油开采 > 石油开采 > 陆地石油开采 > 天然原油 > 原油",
+                    "level5IndustryCode": "1200000819",
+                    "level5IndustryName": "陆地石油开采",
+                    "level7ProductCode": "1115000075",
+                    "level7ProductName": "原油"
                   },
                   {
                     "name": "原油贸易",
-                    "category": "石油现货贸易"
+                    "category": "石油现货贸易",
+                    "hierarchyPath": "化工 > 石油化工 > 石油贸易 > 石油现货贸易 > 石油现货贸易 > 原油贸易",
+                    "level5IndustryCode": "1200000977",
+                    "level5IndustryName": "石油现货贸易",
+                    "level7ProductCode": "1140032364",
+                    "level7ProductName": "原油贸易"
                   }
                 ],
                 "knownProducts": [
@@ -1418,8 +1433,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "中国海油通过天然气参与“美军对伊朗发动新一轮打击油价跳涨”涉及的业务。新闻涉及的客户在增加建设或采购时会用到天然气，因此公司存在真实的销售关系。只是这项产品还没有成为公司主要收入来源。公司来自贸易的收入约占13.48%，说明业务是真实的，但短期还不是业绩主角。这件事能否让公司多赚钱，主要看客户是否增加天然气采购，以及售价变化能否覆盖生产和销售成本。简单说，真正影响公司收入的是客户对天然气的实际采购量，而不是新闻本身有多热。"
+            "relationLabel": "宽口径相关",
+            "analysis": "要说明中国海油与“美军对伊朗发动新一轮打击油价跳涨”的产业联系，需要对照远洋航运及其中的LNG航运、乙烯航运。公司与该产业发生联系的产品主要是原油。公司的原油和LNG航运、乙烯航运属于同一技术场景下的不同工序，关联来自具体的产业协作。公司约13.48%的主营收入归在贸易，产品名称与收入分部能够相互对应。"
           },
           {
             "sourceRowNumber": 23965,
@@ -1445,27 +1460,57 @@
                 "relevantProducts": [
                   {
                     "name": "LNG航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > LNG航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144925",
+                    "level7ProductName": "LNG航运"
                   },
                   {
                     "name": "原油航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 原油航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144923",
+                    "level7ProductName": "原油航运"
                   },
                   {
                     "name": "干散货航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 干散货航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144867",
+                    "level7ProductName": "干散货航运"
                   },
                   {
                     "name": "杂货航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 杂货航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144987",
+                    "level7ProductName": "杂货航运"
                   },
                   {
                     "name": "货滚运输",
-                    "category": "沿海货物航运"
+                    "category": "沿海货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 沿海航运 > 沿海货物航运 > 货滚运输",
+                    "level5IndustryCode": "1200000783",
+                    "level5IndustryName": "沿海航运",
+                    "level7ProductCode": "1140044900",
+                    "level7ProductName": "货滚运输"
                   },
                   {
                     "name": "集装箱航运业务",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 集装箱航运业务",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144988",
+                    "level7ProductName": "集装箱航运业务"
                   }
                 ],
                 "knownProducts": [
@@ -1481,7 +1526,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“美军对伊朗发动新一轮打击油价跳涨”能影响招商轮船，不是因为题材名称相近，而是公司确实提供LNG航运。新闻涉及的客户在增加建设或采购时会用到LNG航运，因此公司存在真实的销售关系。只是这项产品目前还不能代表公司的全部生意。对公司最实际的影响是LNG航运的销量、售价和成本变化，新闻热度本身不会直接增加收入。新闻可以改变市场想象，但公司赚不赚钱仍取决于LNG航运有没有新增销量和合理利润。"
+            "analysis": "判断招商轮船与“美军对伊朗发动新一轮打击油价跳涨”的关系，要把公司业务放进远洋航运中比较，具体产品包括LNG航运、乙烯航运。就实际业务而言，公司提供的是LNG航运。按产品实质区分，LNG航运就是远洋航运所包含的一类实际产品。LNG航运在公司的主营收入结构中未形成可单独识别的分部比例。"
           },
           {
             "sourceRowNumber": 23966,
@@ -1568,11 +1613,21 @@
                 "relevantProducts": [
                   {
                     "name": "LNG航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > LNG航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144925",
+                    "level7ProductName": "LNG航运"
                   },
                   {
                     "name": "成品油航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 成品油航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144924",
+                    "level7ProductName": "成品油航运"
                   }
                 ],
                 "knownProducts": [
@@ -1588,7 +1643,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“美军对伊朗发动新一轮打击油价跳涨”能影响中远海能，不是因为题材名称相近，而是公司确实提供LNG航运。CPO交换机需要高速光互联产品，这类模块是客户会直接采购的核心部件。只是这项产品目前还不能代表公司的全部生意。外贸原油、内贸原油是公司的主要生意，LNG航运包含在相关业务中，目前更适合把它看成局部增量。CPO量产会增加高速光互联产品需求，但也会改变传统光模块的产品形态；LNG航运能否多卖，要同时看客户份额和旧产品被替代的影响。"
+            "analysis": "对中远海能来说，“美军对伊朗发动新一轮打击油价跳涨”指向远洋航运，新闻里的产品主要是LNG航运、乙烯航运。LNG航运本身属于远洋航运，是这一核心产业中的具体产品之一。公司的业务边界可以从LNG航运这项产品看清。主营构成中，LNG运输合计约占10.66%，上述产品在公司业务中已有明确位置。"
           }
         ]
       },
@@ -1666,27 +1721,57 @@
                 "relevantProducts": [
                   {
                     "name": "光伏发电",
-                    "category": "太阳能发电"
+                    "category": "太阳能发电",
+                    "hierarchyPath": "公用事业 > 电力 > 新能源发电 > 太阳能发电 > 太阳能发电 > 光伏发电",
+                    "level5IndustryCode": "1200000643",
+                    "level5IndustryName": "太阳能发电",
+                    "level7ProductCode": "1112000352",
+                    "level7ProductName": "光伏发电"
                   },
                   {
                     "name": "原油",
-                    "category": "天然原油"
+                    "category": "天然原油",
+                    "hierarchyPath": "采掘 > 石油开采 > 石油开采 > 陆地石油开采 > 天然原油 > 原油",
+                    "level5IndustryCode": "1200000819",
+                    "level5IndustryName": "陆地石油开采",
+                    "level7ProductCode": "1115000075",
+                    "level7ProductName": "原油"
                   },
                   {
                     "name": "天然气",
-                    "category": "陆地天然气开采"
+                    "category": "陆地天然气开采",
+                    "hierarchyPath": "采掘 > 其他采掘 > 其他采掘 > 天然气开采 > 陆地天然气开采 > 天然气",
+                    "level5IndustryCode": "1200000814",
+                    "level5IndustryName": "天然气开采",
+                    "level7ProductCode": "1115000044",
+                    "level7ProductName": "天然气"
                   },
                   {
                     "name": "柴油",
-                    "category": "柴油"
+                    "category": "柴油",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 燃料 > 柴油 > 柴油",
+                    "level5IndustryCode": "1200000975",
+                    "level5IndustryName": "燃料",
+                    "level7ProductCode": "1115000048",
+                    "level7ProductName": "柴油"
                   },
                   {
                     "name": "汽油",
-                    "category": "汽油"
+                    "category": "汽油",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 燃料 > 汽油 > 汽油",
+                    "level5IndustryCode": "1200000975",
+                    "level5IndustryName": "燃料",
+                    "level7ProductCode": "1115000047",
+                    "level7ProductName": "汽油"
                   },
                   {
                     "name": "油气开采业务",
-                    "category": "天然原油"
+                    "category": "天然原油",
+                    "hierarchyPath": "采掘 > 石油开采 > 石油开采 > 陆地石油开采 > 天然原油 > 油气开采业务",
+                    "level5IndustryCode": "1200000819",
+                    "level5IndustryName": "陆地石油开采",
+                    "level7ProductCode": "1140052903",
+                    "level7ProductName": "油气开采业务"
                   }
                 ],
                 "knownProducts": [
@@ -1703,8 +1788,8 @@
                 "containedSegmentCount": 2
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "看中国石油与“美军对伊朗发动新一轮打击油价跳涨”的关系，关键不是行业名称相似，而是公司已经在卖光伏发电。新闻涉及的客户在增加建设或采购时会用到光伏发电，因此公司存在真实的销售关系。天然气销售约占公司收入21.41%，这项业务有一定分量，订单变化能够影响业绩，但不会代表公司所有业务。对公司最实际的影响是光伏发电的销量、售价和成本变化，新闻热度本身不会直接增加收入。"
+            "relationLabel": "宽口径相关",
+            "analysis": "要理解中国石油和“美军对伊朗发动新一轮打击油价跳涨”的联系，可以先看公司实际提供的乙烯。公司与远洋航运的连接点在乙烯：它构成LNG航运、乙烯航运的一部分，或用于该产品的制造。天然气销售约占主营收入21.41%，收入结构能够对应到这项产品业务。核心产业远洋航运在产品端主要体现为LNG航运、乙烯航运。"
           },
           {
             "sourceRowNumber": 23957,
@@ -1761,15 +1846,30 @@
                 "relevantProducts": [
                   {
                     "name": "原油",
-                    "category": "天然原油"
+                    "category": "天然原油",
+                    "hierarchyPath": "采掘 > 石油开采 > 石油开采 > 陆地石油开采 > 天然原油 > 原油",
+                    "level5IndustryCode": "1200000819",
+                    "level5IndustryName": "陆地石油开采",
+                    "level7ProductCode": "1115000075",
+                    "level7ProductName": "原油"
                   },
                   {
                     "name": "石油钻机",
-                    "category": "钻井完井设备"
+                    "category": "钻井完井设备",
+                    "hierarchyPath": "机械设备 > 专用设备 > 冶金矿采化工设备 > 油服装备 > 钻井完井设备 > 石油钻机",
+                    "level5IndustryCode": "1200000624",
+                    "level5IndustryName": "油服装备",
+                    "level7ProductCode": "1140032767",
+                    "level7ProductName": "石油钻机"
                   },
                   {
                     "name": "钻井服务",
-                    "category": "钻井服务"
+                    "category": "钻井服务",
+                    "hierarchyPath": "采掘 > 采掘服务 > 油气钻采服务 > 钻完井服务 > 钻井服务 > 钻井服务",
+                    "level5IndustryCode": "1200000801",
+                    "level5IndustryName": "钻完井服务",
+                    "level7ProductCode": "1111000053",
+                    "level7ProductName": "钻井服务"
                   }
                 ],
                 "knownProducts": [
@@ -1782,7 +1882,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“美军对伊朗发动新一轮打击油价跳涨”能影响中曼石油，不是因为题材名称相近，而是公司确实提供原油。新闻涉及的客户在增加建设或采购时会用到原油，因此公司存在真实的销售关系。只是这项产品目前还不能代表公司的全部生意。公司收入主要来自原油及其衍生品、钻井工程服务，原油只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。这件事能否让公司多赚钱，主要看客户是否增加原油采购，以及售价变化能否覆盖生产和销售成本。"
+            "analysis": "中曼石油提供油气工程服务和石油装备产品；放到“美军对伊朗发动新一轮打击油价跳涨”里比较的具体产品是原油。产业这一侧是远洋航运，核心产品为LNG航运、乙烯航运。原油与LNG航运、乙烯航运处在相邻或配套环节，在同一产业方向中分别承担不同功能。相关产品归入石油及制品分部，该分部约占主营收入0.26%；由于还包含其他产品，这一比例只说明业务归属。"
           },
           {
             "sourceRowNumber": 23958,
@@ -1827,11 +1927,21 @@
                 "relevantProducts": [
                   {
                     "name": "油气开采业务",
-                    "category": "天然原油"
+                    "category": "天然原油",
+                    "hierarchyPath": "采掘 > 石油开采 > 石油开采 > 陆地石油开采 > 天然原油 > 油气开采业务",
+                    "level5IndustryCode": "1200000819",
+                    "level5IndustryName": "陆地石油开采",
+                    "level7ProductCode": "1140052903",
+                    "level7ProductName": "油气开采业务"
                   },
                   {
                     "name": "石油设备租赁",
-                    "category": "工程机械租赁服务"
+                    "category": "工程机械租赁服务",
+                    "hierarchyPath": "机械设备 > 专用设备 > 工程机械 > 工程机械租赁服务 > 工程机械租赁服务 > 石油设备租赁",
+                    "level5IndustryCode": "1200000537",
+                    "level5IndustryName": "工程机械租赁服务",
+                    "level7ProductCode": "1140100683",
+                    "level7ProductName": "石油设备租赁"
                   }
                 ],
                 "knownProducts": [
@@ -1843,8 +1953,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "潜能恒信和“美军对伊朗发动新一轮打击油价跳涨”的直接联系是油气开采业务。客户增加AI应用投入时，会购买更多油气开采业务，公司的产品与新闻所说的使用场景一致。公司约97.45%的收入来自油气开采、租赁，这不是边角业务，需求增减会比较直接地反映到收入上。AI应用用户和调用量增加，会提高软件服务或算力需求，油气开采业务可能增加销量；公司能分到多少取决于客户是否实际采购它的产品。"
+            "relationLabel": "宽口径相关",
+            "analysis": "分析潜能恒信与“美军对伊朗发动新一轮打击油价跳涨”的联系，所依据的产业范围是远洋航运，事件主要围绕LNG航运、乙烯航运展开。潜能恒信的业务定位是集高端勘探开发技术服务与油气投资管理生产于一身的国际化能源企业，其中可与核心产业衔接的产品是石油设备租赁、地震数据处理解释服务。石油设备租赁、地震数据处理解释服务是公司参与相关产业场景的具体业务，与LNG航运、乙烯航运在设备、技术或应用层面形成配合。主营结构中，油气开采（96.48%）、石油勘探技术（2.55%）是公司的业务主体；放到远洋航运中，对应的连接点是石油设备租赁、地震数据处理解释服务。"
           },
           {
             "sourceRowNumber": 23961,
@@ -1895,19 +2005,39 @@
                 "relevantProducts": [
                   {
                     "name": "油田技术服务",
-                    "category": "油田生产服务"
+                    "category": "油田生产服务",
+                    "hierarchyPath": "采掘 > 采掘服务 > 油气钻采服务 > 油田生产服务 > 油田生产服务 > 油田技术服务",
+                    "level5IndustryCode": "1200000803",
+                    "level5IndustryName": "油田生产服务",
+                    "level7ProductCode": "1140032934",
+                    "level7ProductName": "油田技术服务"
                   },
                   {
                     "name": "海洋油气物探服务",
-                    "category": "物探服务"
+                    "category": "物探服务",
+                    "hierarchyPath": "采掘 > 采掘服务 > 其他采掘服务 > 物探服务 > 物探服务 > 海洋油气物探服务",
+                    "level5IndustryCode": "1200000799",
+                    "level5IndustryName": "物探服务",
+                    "level7ProductCode": "1140174010",
+                    "level7ProductName": "海洋油气物探服务"
                   },
                   {
                     "name": "钻井服务",
-                    "category": "钻井服务"
+                    "category": "钻井服务",
+                    "hierarchyPath": "采掘 > 采掘服务 > 油气钻采服务 > 钻完井服务 > 钻井服务 > 钻井服务",
+                    "level5IndustryCode": "1200000801",
+                    "level5IndustryName": "钻完井服务",
+                    "level7ProductCode": "1111000053",
+                    "level7ProductName": "钻井服务"
                   },
                   {
                     "name": "钻井船舶服务",
-                    "category": "钻井服务"
+                    "category": "钻井服务",
+                    "hierarchyPath": "采掘 > 采掘服务 > 油气钻采服务 > 钻完井服务 > 钻井服务 > 钻井船舶服务",
+                    "level5IndustryCode": "1200000801",
+                    "level5IndustryName": "钻完井服务",
+                    "level7ProductCode": "1111000090",
+                    "level7ProductName": "钻井船舶服务"
                   }
                 ],
                 "knownProducts": [
@@ -1920,8 +2050,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "中海油服确实做着“美军对伊朗发动新一轮打击油价跳涨”涉及的生意，具体产品是油田技术服务。新闻涉及的客户在增加建设或采购时会用到油田技术服务，因此公司存在真实的销售关系。相关的油田技术服务、船舶服务约占公司收入65.02%，已经是公司的饭碗，客户采购量或产品售价变化会明显影响整体业绩。对公司最实际的影响是油田技术服务的销量、售价和成本变化，新闻热度本身不会直接增加收入。"
+            "relationLabel": "宽口径相关",
+            "analysis": "要理解中海油服和“美军对伊朗发动新一轮打击油价跳涨”的联系，可以先看公司实际提供的钻井船舶服务。这里比较的是远洋航运中的LNG航运、乙烯航运。两者通过服务环节相连：LNG航运、乙烯航运属于产品端，钻井船舶服务提供完成相关流程所需的能力。公司约10.34%的主营收入归在船舶服务，产品名称与收入分部能够相互对应。"
           },
           {
             "sourceRowNumber": 23962,
@@ -1990,19 +2120,39 @@
                 "relevantProducts": [
                   {
                     "name": "LNG接收存储站工程",
-                    "category": "化学工程"
+                    "category": "化学工程",
+                    "hierarchyPath": "建筑装饰 > 专业工程 > 化学工程 > 化学工程 > 化学工程 > LNG接收存储站工程",
+                    "level5IndustryCode": "1210000283",
+                    "level5IndustryName": "化学工程",
+                    "level7ProductCode": "1140208386",
+                    "level7ProductName": "LNG接收存储站工程"
                   },
                   {
                     "name": "大型LNG储罐工程",
-                    "category": "化学工程"
+                    "category": "化学工程",
+                    "hierarchyPath": "建筑装饰 > 专业工程 > 化学工程 > 化学工程 > 化学工程 > 大型LNG储罐工程",
+                    "level5IndustryCode": "1210000283",
+                    "level5IndustryName": "化学工程",
+                    "level7ProductCode": "1140208385",
+                    "level7ProductName": "大型LNG储罐工程"
                   },
                   {
                     "name": "海上风电工程",
-                    "category": "发电工程"
+                    "category": "发电工程",
+                    "hierarchyPath": "建筑装饰 > 专业工程 > 电力工程 > 发电工程 > 发电工程 > 海上风电工程",
+                    "level5IndustryCode": "1210000277",
+                    "level5IndustryName": "发电工程",
+                    "level7ProductCode": "1140134063",
+                    "level7ProductName": "海上风电工程"
                   },
                   {
                     "name": "海洋油气工程",
-                    "category": "油田工程建设服务"
+                    "category": "油田工程建设服务",
+                    "hierarchyPath": "采掘 > 采掘服务 > 油气钻采服务 > 油田工程建设服务 > 油田工程建设服务 > 海洋油气工程",
+                    "level5IndustryCode": "1200000804",
+                    "level5IndustryName": "油田工程建设服务",
+                    "level7ProductCode": "1140173975",
+                    "level7ProductName": "海洋油气工程"
                   }
                 ],
                 "knownProducts": [
@@ -2016,7 +2166,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "看海油工程的实际产品，公司确实提供LNG接收存储站工程，与“美军对伊朗发动新一轮打击油价跳涨”不是只沾名字。新闻涉及的客户在增加建设或采购时会用到LNG接收存储站工程，因此公司存在真实的销售关系。公司其他业务不会因此一起增长。公司的生意重心在海洋工程总承包项目、陆地建造收入，因此消息能影响多大，取决于LNG接收存储站工程在这些业务中的实际销售规模。终端市场变好会增加LNG接收存储站工程采购，但客户买多少、公司拿到多少订单以及售价高低，都会影响最后的利润。"
+            "analysis": "海油工程的业务主要涉及在天津滨海新区、山东青岛、广东珠海等地拥有大型海洋工程制造基地；放到“美军对伊朗发动新一轮打击油价跳涨”里比较的具体产品是LNG接收存储站工程、大型LNG储罐工程。LNG航运、乙烯航运属于本次事件所指的远洋航运。在远洋航运的完整产品体系中，LNG接收存储站工程、大型LNG储罐工程与LNG航运、乙烯航运承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。公司主营收入集中在海洋工程总承包项目（74.28%）、陆地建造收入（8.74%），这组业务构成公司参与相关技术与应用场景的经营基础。"
           },
           {
             "sourceRowNumber": 23963,
@@ -2042,11 +2192,21 @@
                 "relevantProducts": [
                   {
                     "name": "天然气液化模块",
-                    "category": "油田工程建设服务"
+                    "category": "油田工程建设服务",
+                    "hierarchyPath": "采掘 > 采掘服务 > 油气钻采服务 > 油田工程建设服务 > 油田工程建设服务 > 天然气液化模块",
+                    "level5IndustryCode": "1200000804",
+                    "level5IndustryName": "油田工程建设服务",
+                    "level7ProductCode": "1140027424",
+                    "level7ProductName": "天然气液化模块"
                   },
                   {
                     "name": "海洋油气开发模块",
-                    "category": "油田工程建设服务"
+                    "category": "油田工程建设服务",
+                    "hierarchyPath": "采掘 > 采掘服务 > 油气钻采服务 > 油田工程建设服务 > 油田工程建设服务 > 海洋油气开发模块",
+                    "level5IndustryCode": "1200000804",
+                    "level5IndustryName": "油田工程建设服务",
+                    "level7ProductCode": "1140027422",
+                    "level7ProductName": "海洋油气开发模块"
                   }
                 ],
                 "knownProducts": [
@@ -2059,7 +2219,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "博迈科真正与“美军对伊朗发动新一轮打击油价跳涨”相连的是天然气液化模块。新闻涉及的客户在增加建设或采购时会用到天然气液化模块，因此公司存在真实的销售关系。公司存在接单机会，但受影响的是其中一块业务。终端市场变好会增加天然气液化模块采购，但客户买多少、公司拿到多少订单以及售价高低，都会影响最后的利润。新闻可以改变市场想象，但公司赚不赚钱仍取决于天然气液化模块有没有新增销量和合理利润。"
+            "analysis": "博迈科提供的矿业开采模块、天然气液化模块，决定了它与“美军对伊朗发动新一轮打击油价跳涨”之间的产业关系。矿业开采模块、天然气液化模块是公司参与相关产业场景的具体业务，与LNG航运、乙烯航运在设备、技术或应用层面形成配合。现有主营构成没有给出矿业开采模块、天然气液化模块对应的独立业务比例。LNG航运、乙烯航运属于本次事件所指的远洋航运。"
           },
           {
             "sourceRowNumber": 23967,
@@ -2128,15 +2288,30 @@
                 "relevantProducts": [
                   {
                     "name": "LNG航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > LNG航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144925",
+                    "level7ProductName": "LNG航运"
                   },
                   {
                     "name": "化学品航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 化学品航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144928",
+                    "level7ProductName": "化学品航运"
                   },
                   {
                     "name": "成品油航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 成品油航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144924",
+                    "level7ProductName": "成品油航运"
                   }
                 ],
                 "knownProducts": [
@@ -2153,7 +2328,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "招商南油真正与“美军对伊朗发动新一轮打击油价跳涨”相连的是LNG航运。新闻涉及的客户在增加建设或采购时会用到LNG航运，因此公司存在真实的销售关系。公司存在接单机会，但受影响的是其中一块业务。公司收入主要来自成品油运输、原油运输，LNG航运只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。终端市场变好会增加LNG航运采购，但客户买多少、公司拿到多少订单以及售价高低，都会影响最后的利润。"
+            "analysis": "分析招商南油与“美军对伊朗发动新一轮打击油价跳涨”的联系，所依据的产业范围是远洋航运，事件主要围绕LNG航运、乙烯航运展开。招商南油的业务主要涉及市场定位为“全球石化产品的运输服务商”，与核心产业的具体联系由LNG航运体现。LNG航运本身属于远洋航运，是这一核心产业中的具体产品之一。主营构成中，成品油运输合计约占52.4%，上述产品在公司业务中已有明确位置。"
           },
           {
             "sourceRowNumber": 23969,
@@ -2210,27 +2385,57 @@
                 "relevantProducts": [
                   {
                     "name": "PTA(精对苯二甲酸)",
-                    "category": "其他石化副产品"
+                    "category": "其他石化副产品",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 其他石化副产品 > PTA(精对苯二甲酸)",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140007402",
+                    "level7ProductName": "PTA(精对苯二甲酸)"
                   },
                   {
                     "name": "燃料油",
-                    "category": "燃料油"
+                    "category": "燃料油",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 燃料 > 燃料油 > 燃料油",
+                    "level5IndustryCode": "1200000975",
+                    "level5IndustryName": "燃料",
+                    "level7ProductCode": "1140010746",
+                    "level7ProductName": "燃料油"
                   },
                   {
                     "name": "石油沥青",
-                    "category": "沥青"
+                    "category": "沥青",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 沥青 > 石油沥青",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140028589",
+                    "level7ProductName": "石油沥青"
                   },
                   {
                     "name": "石蜡",
-                    "category": "石蜡"
+                    "category": "石蜡",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 石蜡 > 石蜡",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140028588",
+                    "level7ProductName": "石蜡"
                   },
                   {
                     "name": "BOPET功能性薄膜",
-                    "category": "PET类膜材料"
+                    "category": "PET类膜材料",
+                    "hierarchyPath": "化工 > 塑料 > 膜材料 > PET类膜材料 > PET类膜材料 > BOPET功能性薄膜",
+                    "level5IndustryCode": "1210003311",
+                    "level5IndustryName": "PET类膜材料",
+                    "level7ProductCode": "1140192234",
+                    "level7ProductName": "BOPET功能性薄膜"
                   },
                   {
                     "name": "DTY(拉伸变形丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > DTY(拉伸变形丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007424",
+                    "level7ProductName": "DTY(拉伸变形丝)"
                   }
                 ],
                 "knownProducts": [
@@ -2247,8 +2452,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "看恒力石化与“美军对伊朗发动新一轮打击油价跳涨”的关系，关键不是行业名称相似，而是公司已经在卖PTA(精对苯二甲酸)。新闻涉及的客户在增加建设或采购时会用到PTA(精对苯二甲酸)，因此公司存在真实的销售关系。公司约28.46%的收入来自PTA，新闻确实可能影响一部分业绩，影响大小仍取决于实际销售变化。对公司最实际的影响是PTA(精对苯二甲酸)的销量、售价和成本变化，新闻热度本身不会直接增加收入。"
+            "relationLabel": "宽口径相关",
+            "analysis": "在恒力石化现有业务里，能够与“美军对伊朗发动新一轮打击油价跳涨”放在同一产业框架下比较的是乙烯。LNG航运、乙烯航运属于本次事件所指的远洋航运。公司与远洋航运的连接点在乙烯：它构成LNG航运、乙烯航运的一部分，或用于该产品的制造。主营构成中，PTA合计约占28.46%，上述产品在公司业务中已有明确位置。"
           },
           {
             "sourceRowNumber": 23970,
@@ -2305,27 +2510,57 @@
                 "relevantProducts": [
                   {
                     "name": "PTA(精对苯二甲酸)",
-                    "category": "其他石化副产品"
+                    "category": "其他石化副产品",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 其他石化副产品 > PTA(精对苯二甲酸)",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140007402",
+                    "level7ProductName": "PTA(精对苯二甲酸)"
                   },
                   {
                     "name": "柴油",
-                    "category": "柴油"
+                    "category": "柴油",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 燃料 > 柴油 > 柴油",
+                    "level5IndustryCode": "1200000975",
+                    "level5IndustryName": "燃料",
+                    "level7ProductCode": "1115000048",
+                    "level7ProductName": "柴油"
                   },
                   {
                     "name": "汽油",
-                    "category": "汽油"
+                    "category": "汽油",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 燃料 > 汽油 > 汽油",
+                    "level5IndustryCode": "1200000975",
+                    "level5IndustryName": "燃料",
+                    "level7ProductCode": "1115000047",
+                    "level7ProductName": "汽油"
                   },
                   {
                     "name": "煤油",
-                    "category": "煤油"
+                    "category": "煤油",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 燃料 > 煤油 > 煤油",
+                    "level5IndustryCode": "1200000975",
+                    "level5IndustryName": "燃料",
+                    "level7ProductCode": "1115000049",
+                    "level7ProductName": "煤油"
                   },
                   {
                     "name": "BOPET功能性薄膜",
-                    "category": "PET类膜材料"
+                    "category": "PET类膜材料",
+                    "hierarchyPath": "化工 > 塑料 > 膜材料 > PET类膜材料 > PET类膜材料 > BOPET功能性薄膜",
+                    "level5IndustryCode": "1210003311",
+                    "level5IndustryName": "PET类膜材料",
+                    "level7ProductCode": "1140192234",
+                    "level7ProductName": "BOPET功能性薄膜"
                   },
                   {
                     "name": "DTY(拉伸变形丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > DTY(拉伸变形丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007424",
+                    "level7ProductName": "DTY(拉伸变形丝)"
                   }
                 ],
                 "knownProducts": [
@@ -2342,8 +2577,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "荣盛石化与“美军对伊朗发动新一轮打击油价跳涨”的联系在PTA(精对苯二甲酸)。新闻涉及的客户在增加建设或采购时会用到PTA(精对苯二甲酸)，因此公司存在真实的销售关系。不过这项业务目前规模较小或仍在导入阶段。公司来自PTA的收入约占10.36%，说明业务是真实的，但短期还不是业绩主角。这件事能否让公司多赚钱，主要看客户是否增加PTA(精对苯二甲酸)采购，以及售价变化能否覆盖生产和销售成本。"
+            "relationLabel": "宽口径相关",
+            "analysis": "要理解荣盛石化和“美军对伊朗发动新一轮打击油价跳涨”的联系，可以先看公司实际提供的乙烯。这条新闻的产业范围集中在远洋航运及其LNG航运、乙烯航运。乙烯作为材料、芯片或功能部件进入LNG航运、乙烯航运，两者形成清晰的组成关系。PTA约占主营收入10.36%，收入结构能够对应到这项产品业务。"
           },
           {
             "sourceRowNumber": 23971,
@@ -2442,27 +2677,57 @@
                 "relevantProducts": [
                   {
                     "name": "ABS塑料",
-                    "category": "通用塑料"
+                    "category": "通用塑料",
+                    "hierarchyPath": "化工 > 塑料 > 其他塑料制品 > 合成塑料 > 通用塑料 > ABS塑料",
+                    "level5IndustryCode": "1200000943",
+                    "level5IndustryName": "合成塑料",
+                    "level7ProductCode": "1119001813",
+                    "level7ProductName": "ABS塑料"
                   },
                   {
                     "name": "PTA(精对苯二甲酸)",
-                    "category": "其他石化副产品"
+                    "category": "其他石化副产品",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 其他石化副产品 > PTA(精对苯二甲酸)",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140007402",
+                    "level7ProductName": "PTA(精对苯二甲酸)"
                   },
                   {
                     "name": "PVC(聚氯乙烯)",
-                    "category": "PVC"
+                    "category": "PVC",
+                    "hierarchyPath": "化工 > 化学原料 > 氯碱 > PVC > PVC > PVC(聚氯乙烯)",
+                    "level5IndustryCode": "1200000870",
+                    "level5IndustryName": "PVC",
+                    "level7ProductCode": "1140007372",
+                    "level7ProductName": "PVC(聚氯乙烯)"
                   },
                   {
                     "name": "丁基橡胶",
-                    "category": "丁基橡胶"
+                    "category": "丁基橡胶",
+                    "hierarchyPath": "化工 > 化学制品 > 其他化学制品 > 合成橡胶 > 丁基橡胶 > 丁基橡胶",
+                    "level5IndustryCode": "1200000944",
+                    "level5IndustryName": "合成橡胶",
+                    "level7ProductCode": "1140041396",
+                    "level7ProductName": "丁基橡胶"
                   },
                   {
                     "name": "丁苯橡胶(SBR)",
-                    "category": "丁苯橡胶"
+                    "category": "丁苯橡胶",
+                    "hierarchyPath": "化工 > 化学制品 > 其他化学制品 > 合成橡胶 > 丁苯橡胶 > 丁苯橡胶(SBR)",
+                    "level5IndustryCode": "1200000944",
+                    "level5IndustryName": "合成橡胶",
+                    "level7ProductCode": "1140046290",
+                    "level7ProductName": "丁苯橡胶(SBR)"
                   },
                   {
                     "name": "丁苯热塑性弹性体",
-                    "category": "高分子聚合物"
+                    "category": "高分子聚合物",
+                    "hierarchyPath": "化工 > 化学制品 > 其他化学制品 > 特种复合材料 > 高分子聚合物 > 丁苯热塑性弹性体",
+                    "level5IndustryCode": "1200000945",
+                    "level5IndustryName": "特种复合材料",
+                    "level7ProductCode": "1140173959",
+                    "level7ProductName": "丁苯热塑性弹性体"
                   }
                 ],
                 "knownProducts": [
@@ -2480,7 +2745,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "中国石化与“美军对伊朗发动新一轮打击油价跳涨”有实际业务联系，连接点是ABS塑料。新闻涉及的客户在增加建设或采购时会用到ABS塑料，因此公司存在真实的销售关系。这项需求只会影响相关产品。公司收入主要来自汽油、柴油，ABS塑料只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。对公司最实际的影响是ABS塑料的销量、售价和成本变化，新闻热度本身不会直接增加收入。"
+            "analysis": "把中国石化放到产业范围内看，“美军对伊朗发动新一轮打击油价跳涨”涉及远洋航运及其中的LNG航运、乙烯航运。公司这一侧对应的具体产品是乙烯。乙烯作为材料、芯片或功能部件进入LNG航运、乙烯航运，两者形成清晰的组成关系。天然气约占主营收入3.71%，公司将相关产品与同类业务合并披露，因此可确认分部位置而非单品比例。"
           }
         ]
       },
@@ -2546,11 +2811,21 @@
                 "relevantProducts": [
                   {
                     "name": "原油",
-                    "category": "天然原油"
+                    "category": "天然原油",
+                    "hierarchyPath": "采掘 > 石油开采 > 石油开采 > 陆地石油开采 > 天然原油 > 原油",
+                    "level5IndustryCode": "1200000819",
+                    "level5IndustryName": "陆地石油开采",
+                    "level7ProductCode": "1115000075",
+                    "level7ProductName": "原油"
                   },
                   {
                     "name": "天然气",
-                    "category": "陆地天然气开采"
+                    "category": "陆地天然气开采",
+                    "hierarchyPath": "采掘 > 其他采掘 > 其他采掘 > 天然气开采 > 陆地天然气开采 > 天然气",
+                    "level5IndustryCode": "1200000814",
+                    "level5IndustryName": "天然气开采",
+                    "level7ProductCode": "1115000044",
+                    "level7ProductName": "天然气"
                   }
                 ],
                 "knownProducts": [
@@ -2568,7 +2843,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“美军对伊朗发动新一轮打击油价跳涨”能影响海南矿业，不是因为题材名称相近，而是公司确实提供原油。新闻涉及的客户在增加建设或采购时会用到原油，因此公司存在真实的销售关系。只是这项产品目前还不能代表公司的全部生意。公司的收入主体仍是油气开采、铁矿石(自采及加工)，原油能参与新闻所说的需求，但暂时不是决定公司业绩的唯一产品。对公司最实际的影响是原油的销量、售价和成本变化，新闻热度本身不会直接增加收入。"
+            "analysis": "把海南矿业放到产业范围内看，“美军对伊朗发动新一轮打击油价跳涨”涉及远洋航运及其中的LNG航运、乙烯航运。海南矿业的业务主要涉及优化“产业运营+产业投资”双轮驱动，其中可与核心产业衔接的产品是原油。原油与LNG航运、乙烯航运处在相邻或配套环节，在同一产业方向中分别承担不同功能。相关产品归入油气开采分部，该分部约占主营收入59.24%；由于还包含其他产品，这一比例只说明业务归属。"
           },
           {
             "sourceRowNumber": 23960,
@@ -2607,19 +2882,39 @@
                 "relevantProducts": [
                   {
                     "name": "原油",
-                    "category": "天然原油"
+                    "category": "天然原油",
+                    "hierarchyPath": "采掘 > 石油开采 > 石油开采 > 陆地石油开采 > 天然原油 > 原油",
+                    "level5IndustryCode": "1200000819",
+                    "level5IndustryName": "陆地石油开采",
+                    "level7ProductCode": "1115000075",
+                    "level7ProductName": "原油"
                   },
                   {
                     "name": "油气开采业务",
-                    "category": "天然原油"
+                    "category": "天然原油",
+                    "hierarchyPath": "采掘 > 石油开采 > 石油开采 > 陆地石油开采 > 天然原油 > 油气开采业务",
+                    "level5IndustryCode": "1200000819",
+                    "level5IndustryName": "陆地石油开采",
+                    "level7ProductCode": "1140052903",
+                    "level7ProductName": "油气开采业务"
                   },
                   {
                     "name": "石油化工产品贸易",
-                    "category": "化工产品贸易"
+                    "category": "化工产品贸易",
+                    "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 化工产品贸易 > 石油化工产品贸易",
+                    "level5IndustryCode": "1200001164",
+                    "level5IndustryName": "工业品贸易",
+                    "level7ProductCode": "1140052869",
+                    "level7ProductName": "石油化工产品贸易"
                   },
                   {
                     "name": "石油化工工程设计",
-                    "category": "工程设计"
+                    "category": "工程设计",
+                    "hierarchyPath": "建筑装饰 > 工程咨询服务 > 工程服务 > 建筑工程设计 > 工程设计 > 石油化工工程设计",
+                    "level5IndustryCode": "1210000290",
+                    "level5IndustryName": "建筑工程设计",
+                    "level7ProductCode": "1140033888",
+                    "level7ProductName": "石油化工工程设计"
                   }
                 ],
                 "knownProducts": [
@@ -2633,7 +2928,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "看ST洲际的实际产品，公司确实提供原油，与“美军对伊朗发动新一轮打击油价跳涨”不是只沾名字。新闻涉及的客户在增加建设或采购时会用到原油，因此公司存在真实的销售关系。公司其他业务不会因此一起增长。公司收入主要来自油气销售、租赁、服务，原油只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。对公司最实际的影响是原油的销量、售价和成本变化，新闻热度本身不会直接增加收入。"
+            "analysis": "ST洲际的业务主要涉及集中精力发展能源相关行业主营业务、积极拓展盈利渠道；放到“美军对伊朗发动新一轮打击油价跳涨”里比较的具体产品是原油。新闻对应的核心产业是远洋航运，代表性产品包括LNG航运、乙烯航运。公司的原油和LNG航运、乙烯航运属于同一技术场景下的不同工序，关联来自具体的产业协作。相关产品归入油气销售分部，该分部约占主营收入99.6%；由于还包含其他产品，这一比例只说明业务归属。"
           },
           {
             "sourceRowNumber": 23964,
@@ -2679,7 +2974,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "*ST动力真正与“美军对伊朗发动新一轮打击油价跳涨”相连的是锅炉点火系统。新闻涉及的客户在增加建设或采购时会用到锅炉点火系统，因此公司存在真实的销售关系。公司存在接单机会，但受影响的是其中一块业务。洁净燃烧及锅炉节能提效经营分部构成公司的主要收入，锅炉点火系统即使出现新增需求，也不会自动带动其他业务一起增长。下游需求增加会让客户多买锅炉点火系统，公司能增加多少收入，还要看供货份额、产品售价和同业竞争。"
+            "analysis": "判断*ST动力与“美军对伊朗发动新一轮打击油价跳涨”的关系，要把公司业务放进远洋航运中比较，具体产品包括LNG航运、乙烯航运。在远洋航运的完整产品体系中，锅炉点火系统、锅炉燃烧器与LNG航运、乙烯航运承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。公司与该产业发生联系的产品主要是锅炉点火系统、锅炉燃烧器。洁净燃烧及锅炉节能提效经营分部（96.63%）构成公司的主要收入来源，锅炉点火系统、锅炉燃烧器是其中可与远洋航运相衔接的产品方向。"
           },
           {
             "sourceRowNumber": 23968,
@@ -2724,11 +3019,21 @@
                 "relevantProducts": [
                   {
                     "name": "危险化学品航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 危险化学品航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140150671",
+                    "level7ProductName": "危险化学品航运"
                   },
                   {
                     "name": "成品油航运",
-                    "category": "远洋货物航运"
+                    "category": "远洋货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 远洋航运 > 远洋货物航运 > 成品油航运",
+                    "level5IndustryCode": "1200000784",
+                    "level5IndustryName": "远洋航运",
+                    "level7ProductCode": "1140144924",
+                    "level7ProductName": "成品油航运"
                   }
                 ],
                 "knownProducts": [
@@ -2741,7 +3046,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“美军对伊朗发动新一轮打击油价跳涨”能影响盛航股份，不是因为题材名称相近，而是公司确实提供危险化学品航运。新闻涉及的客户在增加建设或采购时会用到危险化学品航运，因此公司存在真实的销售关系。只是这项产品目前还不能代表公司的全部生意。公司目前主要靠化学品运输、油品运输取得收入，危险化学品航运对整体业绩的影响需要结合它在主营业务中的实际分量理解。对公司最实际的影响是危险化学品航运的销量、售价和成本变化，新闻热度本身不会直接增加收入。"
+            "analysis": "盛航股份的业务主要涉及为大型化工企业提供配套物流服务；放到“美军对伊朗发动新一轮打击油价跳涨”里比较的具体产品是成品油航运。成品油航运本身属于远洋航运，是这一核心产业中的具体产品之一。化学品运输（76.58%）、油品运输（23.33%）是公司当前的主要收入来源，成品油航运在收入结构中的单独占比并不明确。这条新闻的产业范围集中在远洋航运及其LNG航运、乙烯航运。"
           },
           {
             "sourceRowNumber": 23972,
@@ -2792,27 +3097,57 @@
                 "relevantProducts": [
                   {
                     "name": "丙烯",
-                    "category": "烯烃"
+                    "category": "烯烃",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 烯烃 > 丙烯",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140007230",
+                    "level7ProductName": "丙烯"
                   },
                   {
                     "name": "丙烯酸",
-                    "category": "有机酸"
+                    "category": "有机酸",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 有机酸 > 丙烯酸",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140077134",
+                    "level7ProductName": "丙烯酸"
                   },
                   {
                     "name": "丙烯酸乙酯",
-                    "category": "酯"
+                    "category": "酯",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 酯 > 丙烯酸乙酯",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140047593",
+                    "level7ProductName": "丙烯酸乙酯"
                   },
                   {
                     "name": "丙烯酸异辛酯",
-                    "category": "酯"
+                    "category": "酯",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 酯 > 丙烯酸异辛酯",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140157574",
+                    "level7ProductName": "丙烯酸异辛酯"
                   },
                   {
                     "name": "丙烯酸正丁酯",
-                    "category": "酯"
+                    "category": "酯",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 酯 > 丙烯酸正丁酯",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140204188",
+                    "level7ProductName": "丙烯酸正丁酯"
                   },
                   {
                     "name": "丙烯酸甲酯(MA)",
-                    "category": "酯"
+                    "category": "酯",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 酯 > 丙烯酸甲酯(MA)",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140215950",
+                    "level7ProductName": "丙烯酸甲酯(MA)"
                   }
                 ],
                 "knownProducts": [
@@ -2830,7 +3165,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“美军对伊朗发动新一轮打击油价跳涨”能影响卫星化学，不是因为题材名称相近，而是公司确实提供丙烯。CPO交换机需要高速光互联产品，这类模块是客户会直接采购的核心部件。只是这项产品目前还不能代表公司的全部生意。公司收入主要来自功能化学品、高分子新材料，丙烯只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。客户建设更多CPO网络会采购新的光互联产品，丙烯可能增加出货，不过产品升级也可能压缩旧型号销量。"
+            "analysis": "要说明卫星化学与“美军对伊朗发动新一轮打击油价跳涨”的产业联系，需要对照远洋航运及其中的LNG航运、乙烯航运。公司通过吸水树脂SAP、颜料中间体进入与LNG航运、乙烯航运相衔接的产品和应用体系，两项业务在远洋航运相关场景中各自承担功能。就实际业务而言，公司提供的是吸水树脂SAP、颜料中间体。主营构成以功能化学品（56.16%）、高分子新材料（19.02%）为主，公司与LNG航运、乙烯航运的联系主要由吸水树脂SAP、颜料中间体这项具体业务承接。"
           },
           {
             "sourceRowNumber": 23973,
@@ -2887,27 +3222,57 @@
                 "relevantProducts": [
                   {
                     "name": "PTA(精对苯二甲酸)",
-                    "category": "其他石化副产品"
+                    "category": "其他石化副产品",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 其他石化副产品 > PTA(精对苯二甲酸)",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140007402",
+                    "level7ProductName": "PTA(精对苯二甲酸)"
                   },
                   {
                     "name": "DTY(拉伸变形丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > DTY(拉伸变形丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007424",
+                    "level7ProductName": "DTY(拉伸变形丝)"
                   },
                   {
                     "name": "FDY(全拉伸丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > FDY(全拉伸丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007404",
+                    "level7ProductName": "FDY(全拉伸丝)"
                   },
                   {
                     "name": "POY(预取向丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > POY(预取向丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007423",
+                    "level7ProductName": "POY(预取向丝)"
                   },
                   {
                     "name": "丙烯腈",
-                    "category": "腈"
+                    "category": "腈",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 腈 > 丙烯腈",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140047288",
+                    "level7ProductName": "丙烯腈"
                   },
                   {
                     "name": "丙酮",
-                    "category": "酮"
+                    "category": "酮",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 酮 > 丙酮",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140007458",
+                    "level7ProductName": "丙酮"
                   }
                 ],
                 "knownProducts": [
@@ -2924,8 +3289,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "东方盛虹和“美军对伊朗发动新一轮打击油价跳涨”的直接联系是PTA(精对苯二甲酸)。新闻涉及的客户在增加建设或采购时会用到PTA(精对苯二甲酸)，因此公司存在真实的销售关系。公司约18.23%的收入来自涤纶丝，新闻确实可能影响一部分业绩，影响大小仍取决于实际销售变化。这件事能否让公司多赚钱，主要看客户是否增加PTA(精对苯二甲酸)采购，以及售价变化能否覆盖生产和销售成本。"
+            "relationLabel": "宽口径相关",
+            "analysis": "要说明东方盛虹与“美军对伊朗发动新一轮打击油价跳涨”的产业联系，需要对照远洋航运及其中的LNG航运、乙烯航运。公司与远洋航运的连接点在乙烯：它构成LNG航运、乙烯航运的一部分，或用于该产品的制造。东方盛虹的业务主要涉及依托炼化一体化、醇基多联产、丙烷产业链项目构建的“大化工”综合化学原材料供应平台为基础，其中可与核心产业衔接的产品是乙烯。涤纶丝约占主营收入18.23%，收入结构能够对应到这项产品业务。"
           },
           {
             "sourceRowNumber": 23974,
@@ -3000,27 +3365,57 @@
                 "relevantProducts": [
                   {
                     "name": "PTA(精对苯二甲酸)",
-                    "category": "其他石化副产品"
+                    "category": "其他石化副产品",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 其他石化副产品 > PTA(精对苯二甲酸)",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140007402",
+                    "level7ProductName": "PTA(精对苯二甲酸)"
                   },
                   {
                     "name": "DTY(拉伸变形丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > DTY(拉伸变形丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007424",
+                    "level7ProductName": "DTY(拉伸变形丝)"
                   },
                   {
                     "name": "FDY(全拉伸丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > FDY(全拉伸丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007404",
+                    "level7ProductName": "FDY(全拉伸丝)"
                   },
                   {
                     "name": "POY(预取向丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > POY(预取向丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007423",
+                    "level7ProductName": "POY(预取向丝)"
                   },
                   {
                     "name": "平牵丝",
-                    "category": "其他合成纤维"
+                    "category": "其他合成纤维",
+                    "hierarchyPath": "化工 > 化学纤维 > 其他化学纤维 > 合成纤维 > 其他合成纤维 > 平牵丝",
+                    "level5IndustryCode": "1200000853",
+                    "level5IndustryName": "合成纤维",
+                    "level7ProductCode": "1140067146",
+                    "level7ProductName": "平牵丝"
                   },
                   {
                     "name": "涤纶复合丝",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > 涤纶复合丝",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140067145",
+                    "level7ProductName": "涤纶复合丝"
                   }
                 ],
                 "knownProducts": [
@@ -3036,8 +3431,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "桐昆股份与“美军对伊朗发动新一轮打击油价跳涨”的联系在PTA(精对苯二甲酸)。新闻涉及的客户在增加建设或采购时会用到PTA(精对苯二甲酸)，因此公司存在真实的销售关系。不过这项业务目前规模较小或仍在导入阶段。相关的精对苯二甲酸、复合丝合计约占收入7.94%，现阶段更像小业务增加销量，而不是公司整体利润大幅变化。供需变紧对公司的实际作用是PTA(精对苯二甲酸)订单增加或提价，原材料涨得更快时，收入增加也可能留不下更多利润。"
+            "relationLabel": "宽口径相关",
+            "analysis": "判断桐昆股份与“美军对伊朗发动新一轮打击油价跳涨”的关系，要把公司业务放进远洋航运中比较，具体产品包括LNG航运、乙烯航运。桐昆股份的业务主要涉及其中港区基地和江苏南通基地均实现了“PTA-长丝”一体化生产，与核心产业的具体联系由PTA(精对苯二甲酸)体现。公司的PTA(精对苯二甲酸)和LNG航运、乙烯航运属于同一技术场景下的不同工序，关联来自具体的产业协作。精对苯二甲酸约占主营收入7.69%，收入结构能够对应到这项产品业务。"
           },
           {
             "sourceRowNumber": 23975,
@@ -3106,27 +3501,57 @@
                 "relevantProducts": [
                   {
                     "name": "DTY(拉伸变形丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > DTY(拉伸变形丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007424",
+                    "level7ProductName": "DTY(拉伸变形丝)"
                   },
                   {
                     "name": "FDY(全拉伸丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > FDY(全拉伸丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007404",
+                    "level7ProductName": "FDY(全拉伸丝)"
                   },
                   {
                     "name": "POY(预取向丝)",
-                    "category": "涤纶民用丝"
+                    "category": "涤纶民用丝",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶长丝 > 涤纶民用丝 > POY(预取向丝)",
+                    "level5IndustryCode": "1200000841",
+                    "level5IndustryName": "涤纶长丝",
+                    "level7ProductCode": "1140007423",
+                    "level7ProductName": "POY(预取向丝)"
                   },
                   {
                     "name": "PTA(精对苯二甲酸)",
-                    "category": "其他石化副产品"
+                    "category": "其他石化副产品",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 其他石化副产品 > PTA(精对苯二甲酸)",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140007402",
+                    "level7ProductName": "PTA(精对苯二甲酸)"
                   },
                   {
                     "name": "差异化涤纶短纤",
-                    "category": "涤纶短纤"
+                    "category": "涤纶短纤",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶短纤 > 涤纶短纤 > 差异化涤纶短纤",
+                    "level5IndustryCode": "1200000842",
+                    "level5IndustryName": "涤纶短纤",
+                    "level7ProductCode": "1140192236",
+                    "level7ProductName": "差异化涤纶短纤"
                   },
                   {
                     "name": "直纺涤纶短纤",
-                    "category": "涤纶短纤"
+                    "category": "涤纶短纤",
+                    "hierarchyPath": "化工 > 化学纤维 > 涤纶 > 涤纶短纤 > 涤纶短纤 > 直纺涤纶短纤",
+                    "level5IndustryCode": "1200000842",
+                    "level5IndustryName": "涤纶短纤",
+                    "level7ProductCode": "1140192238",
+                    "level7ProductName": "直纺涤纶短纤"
                   }
                 ],
                 "knownProducts": [
@@ -3142,8 +3567,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "新凤鸣确实做着“美军对伊朗发动新一轮打击油价跳涨”涉及的生意，具体产品是DTY(拉伸变形丝)。新闻涉及的客户在增加建设或采购时会用到DTY(拉伸变形丝)，因此公司存在真实的销售关系。POY、FDY合计约占收入95.19%，相关产品本身就是主业，新闻的影响不只停留在板块情绪。这件事能否让公司多赚钱，主要看客户是否增加DTY(拉伸变形丝)采购，以及售价变化能否覆盖生产和销售成本。"
+            "relationLabel": "宽口径相关",
+            "analysis": "把新凤鸣放到产业范围内看，“美军对伊朗发动新一轮打击油价跳涨”涉及远洋航运及其中的LNG航运、乙烯航运。公司的业务边界可以从PTA(精对苯二甲酸)这项产品看清。两项业务共享部分技术或应用场景，PTA(精对苯二甲酸)位于LNG航运、乙烯航运旁侧的产品环节，边界需要区分清楚。PTA约占主营收入13.81%，收入结构能够对应到这项产品业务。"
           },
           {
             "sourceRowNumber": 23976,
@@ -3200,27 +3625,57 @@
                 "relevantProducts": [
                   {
                     "name": "不粘煤",
-                    "category": "动力煤"
+                    "category": "动力煤",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 不粘煤",
+                    "level5IndustryCode": "1200000811",
+                    "level5IndustryName": "动力煤",
+                    "level7ProductCode": "1111000005",
+                    "level7ProductName": "不粘煤"
                   },
                   {
                     "name": "煤炭水路运输",
-                    "category": "内河货物航运"
+                    "category": "内河货物航运",
+                    "hierarchyPath": "交通运输 > 航运 > 航运 > 内河航运 > 内河货物航运 > 煤炭水路运输",
+                    "level5IndustryCode": "1200000782",
+                    "level5IndustryName": "内河航运",
+                    "level7ProductCode": "1140161771",
+                    "level7ProductName": "煤炭水路运输"
                   },
                   {
                     "name": "煤炭港口装卸堆存业务",
-                    "category": "港口综合服务"
+                    "category": "港口综合服务",
+                    "hierarchyPath": "交通运输 > 港口 > 港口 > 货运港口 > 港口综合服务 > 煤炭港口装卸堆存业务",
+                    "level5IndustryCode": "1200000773",
+                    "level5IndustryName": "货运港口",
+                    "level7ProductCode": "1140144949",
+                    "level7ProductName": "煤炭港口装卸堆存业务"
                   },
                   {
                     "name": "煤炭铁路运输",
-                    "category": "铁路货物运输"
+                    "category": "铁路货物运输",
+                    "hierarchyPath": "交通运输 > 铁路运输 > 铁路运输 > 铁路货物运输 > 铁路货物运输 > 煤炭铁路运输",
+                    "level5IndustryCode": "1200000791",
+                    "level5IndustryName": "铁路货物运输",
+                    "level7ProductCode": "1140065110",
+                    "level7ProductName": "煤炭铁路运输"
                   },
                   {
                     "name": "燃煤发电",
-                    "category": "燃煤发电"
+                    "category": "燃煤发电",
+                    "hierarchyPath": "公用事业 > 电力 > 火电 > 燃煤发电 > 燃煤发电 > 燃煤发电",
+                    "level5IndustryCode": "1200000636",
+                    "level5IndustryName": "燃煤发电",
+                    "level7ProductCode": "1140084062",
+                    "level7ProductName": "燃煤发电"
                   },
                   {
                     "name": "褐煤",
-                    "category": "褐煤"
+                    "category": "褐煤",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 褐煤 > 褐煤 > 褐煤",
+                    "level5IndustryCode": "1200000812",
+                    "level5IndustryName": "褐煤",
+                    "level7ProductCode": "1111000002",
+                    "level7ProductName": "褐煤"
                   }
                 ],
                 "knownProducts": [
@@ -3238,7 +3693,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“美军对伊朗发动新一轮打击油价跳涨”能影响中国神华，不是因为题材名称相近，而是公司确实提供不粘煤。新闻涉及的客户在增加建设或采购时会用到不粘煤，因此公司存在真实的销售关系。只是这项产品目前还不能代表公司的全部生意。煤炭收入、电力收入是公司的主要生意，不粘煤包含在相关业务中，目前更适合把它看成局部增量。技术成熟会加快客户采用不粘煤，公司还要完成产品定型和批量生产，才能把需求变成收入。"
+            "analysis": "在中国神华现有业务里，能够与“美军对伊朗发动新一轮打击油价跳涨”放在同一产业框架下比较的是煤炭水路运输。新闻对应的核心产业是远洋航运，代表性产品包括LNG航运、乙烯航运。煤炭水路运输与LNG航运、乙烯航运处在相邻或配套环节，在同一产业方向中分别承担不同功能。公司约60.47%的主营收入归在煤炭收入，产品名称与收入分部能够相互对应。"
           },
           {
             "sourceRowNumber": 23977,
@@ -3301,27 +3756,57 @@
                 "relevantProducts": [
                   {
                     "name": "1/3焦煤",
-                    "category": "炼焦煤"
+                    "category": "炼焦煤",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 1/3焦煤",
+                    "level5IndustryCode": "1200000810",
+                    "level5IndustryName": "炼焦煤",
+                    "level7ProductCode": "1111000007",
+                    "level7ProductName": "1/3焦煤"
                   },
                   {
                     "name": "不粘煤",
-                    "category": "动力煤"
+                    "category": "动力煤",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 不粘煤",
+                    "level5IndustryCode": "1200000811",
+                    "level5IndustryName": "动力煤",
+                    "level7ProductCode": "1111000005",
+                    "level7ProductName": "不粘煤"
                   },
                   {
                     "name": "供热",
-                    "category": "供暖"
+                    "category": "供暖",
+                    "hierarchyPath": "公用事业 > 电力 > 热电 > 供暖 > 供暖 > 供热",
+                    "level5IndustryCode": "1200000640",
+                    "level5IndustryName": "供暖",
+                    "level7ProductCode": "1140077380",
+                    "level7ProductName": "供热"
                   },
                   {
                     "name": "气煤",
-                    "category": "炼焦煤"
+                    "category": "炼焦煤",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 气煤",
+                    "level5IndustryCode": "1200000810",
+                    "level5IndustryName": "炼焦煤",
+                    "level7ProductCode": "1111000008",
+                    "level7ProductName": "气煤"
                   },
                   {
                     "name": "焦煤",
-                    "category": "炼焦煤"
+                    "category": "炼焦煤",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 炼焦煤 > 炼焦煤 > 焦煤",
+                    "level5IndustryCode": "1200000810",
+                    "level5IndustryName": "炼焦煤",
+                    "level7ProductCode": "1140032373",
+                    "level7ProductName": "焦煤"
                   },
                   {
                     "name": "煤炭贸易",
-                    "category": "煤炭贸易"
+                    "category": "煤炭贸易",
+                    "hierarchyPath": "商业贸易 > 贸易 > 贸易 > 工业品贸易 > 煤炭贸易 > 煤炭贸易",
+                    "level5IndustryCode": "1200001164",
+                    "level5IndustryName": "工业品贸易",
+                    "level7ProductCode": "1140052897",
+                    "level7ProductName": "煤炭贸易"
                   }
                 ],
                 "knownProducts": [
@@ -3338,8 +3823,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "看兖矿能源与“美军对伊朗发动新一轮打击油价跳涨”的关系，关键不是行业名称相似，而是公司已经在卖1/3焦煤。新闻涉及的客户在增加建设或采购时会用到1/3焦煤，因此公司存在真实的销售关系。煤炭合计约占收入61.18%，相关产品本身就是主业，新闻的影响不只停留在板块情绪。新产能让公司可以多交付1/3焦煤，但客户订单不足时，新增设备和折旧反而会增加成本。简单说，真正影响公司收入的是客户对1/3焦煤的实际采购量，而不是新闻本身有多热。"
+            "relationLabel": "宽口径相关",
+            "analysis": "兖矿能源面对的比较对象是远洋航运中的LNG航运、乙烯航运，这也是“美军对伊朗发动新一轮打击油价跳涨”所说的技术和产品。煤炭铁路运输、燃煤发电是公司参与相关产业场景的具体业务，与LNG航运、乙烯航运在设备、技术或应用层面形成配合。兖矿能源的业务主要涉及华东地区最大的煤炭生产商和中国最大的煤炭出口企业之一，其中可与核心产业衔接的产品是煤炭铁路运输、燃煤发电。主营结构中，煤炭（61.18%）、煤化工、电力及热力（18.98%）是公司的业务主体；放到远洋航运中，对应的连接点是煤炭铁路运输、燃煤发电。"
           },
           {
             "sourceRowNumber": 23978,
@@ -3390,27 +3875,57 @@
                 "relevantProducts": [
                   {
                     "name": "改质沥青",
-                    "category": "沥青"
+                    "category": "沥青",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 沥青 > 改质沥青",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140057093",
+                    "level7ProductName": "改质沥青"
                   },
                   {
                     "name": "MTBE(甲基叔丁基醚)",
-                    "category": "醚"
+                    "category": "醚",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 醚 > MTBE(甲基叔丁基醚)",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140007223",
+                    "level7ProductName": "MTBE(甲基叔丁基醚)"
                   },
                   {
                     "name": "乙烯-醋酸乙烯共聚物(EVA)",
-                    "category": "高分子聚合物"
+                    "category": "高分子聚合物",
+                    "hierarchyPath": "化工 > 化学制品 > 其他化学制品 > 特种复合材料 > 高分子聚合物 > 乙烯-醋酸乙烯共聚物(EVA)",
+                    "level5IndustryCode": "1200000945",
+                    "level5IndustryName": "特种复合材料",
+                    "level7ProductCode": "1140046289",
+                    "level7ProductName": "乙烯-醋酸乙烯共聚物(EVA)"
                   },
                   {
                     "name": "工业萘",
-                    "category": "芳烃"
+                    "category": "芳烃",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 有机化学原料 > 芳烃 > 工业萘",
+                    "level5IndustryCode": "1200000873",
+                    "level5IndustryName": "有机化学原料",
+                    "level7ProductCode": "1140007300",
+                    "level7ProductName": "工业萘"
                   },
                   {
                     "name": "氢气",
-                    "category": "一般气体"
+                    "category": "一般气体",
+                    "hierarchyPath": "化工 > 化学原料 > 其他化学原料 > 气体及稀有气体 > 一般气体 > 氢气",
+                    "level5IndustryCode": "1200000874",
+                    "level5IndustryName": "气体及稀有气体",
+                    "level7ProductCode": "1140007462",
+                    "level7ProductName": "氢气"
                   },
                   {
                     "name": "焦炭",
-                    "category": "冶金焦"
+                    "category": "冶金焦",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 焦炭加工 > 焦炭产品 > 冶金焦 > 焦炭",
+                    "level5IndustryCode": "1200000807",
+                    "level5IndustryName": "焦炭产品",
+                    "level7ProductCode": "1111000018",
+                    "level7ProductName": "焦炭"
                   }
                 ],
                 "knownProducts": [
@@ -3428,7 +3943,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "宝丰能源与“美军对伊朗发动新一轮打击油价跳涨”有实际业务联系，连接点是改质沥青。新闻涉及的客户在增加建设或采购时会用到改质沥青，因此公司存在真实的销售关系。这项需求只会影响相关产品。公司目前主要靠烯烃产品、焦化产品取得收入，改质沥青对整体业绩的影响需要结合它在主营业务中的实际分量理解。技术从试验走向量产，会增加客户对改质沥青的采购可能，产品通过认证、稳定生产并拿到订单后才会增加销售。"
+            "analysis": "宝丰能源和“美军对伊朗发动新一轮打击油价跳涨”的业务交集，主要在改质沥青。公司的改质沥青和LNG航运、乙烯航运属于同一技术场景下的不同工序，关联来自具体的产业协作。公司主营收入主要由烯烃产品（78.28%）、焦化产品（15.6%）构成，改质沥青的独立比例未在分部结构中列示。这条新闻的产业范围集中在远洋航运及其LNG航运、乙烯航运。"
           },
           {
             "sourceRowNumber": 23979,
@@ -3479,27 +3994,57 @@
                 "relevantProducts": [
                   {
                     "name": "LNG(液化天然气)",
-                    "category": "陆地天然气开采"
+                    "category": "陆地天然气开采",
+                    "hierarchyPath": "采掘 > 其他采掘 > 其他采掘 > 天然气开采 > 陆地天然气开采 > LNG(液化天然气)",
+                    "level5IndustryCode": "1200000814",
+                    "level5IndustryName": "天然气开采",
+                    "level7ProductCode": "1140046633",
+                    "level7ProductName": "LNG(液化天然气)"
                   },
                   {
                     "name": "加氢尾油",
-                    "category": "矿物油"
+                    "category": "矿物油",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 矿物油 > 加氢尾油",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140067097",
+                    "level7ProductName": "加氢尾油"
                   },
                   {
                     "name": "粗白油",
-                    "category": "矿物油"
+                    "category": "矿物油",
+                    "hierarchyPath": "化工 > 石油化工 > 石油加工 > 石化制品 > 矿物油 > 粗白油",
+                    "level5IndustryCode": "1200000976",
+                    "level5IndustryName": "石化制品",
+                    "level7ProductCode": "1140067096",
+                    "level7ProductName": "粗白油"
                   },
                   {
                     "name": "不粘煤",
-                    "category": "动力煤"
+                    "category": "动力煤",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 不粘煤",
+                    "level5IndustryCode": "1200000811",
+                    "level5IndustryName": "动力煤",
+                    "level7ProductCode": "1111000005",
+                    "level7ProductName": "不粘煤"
                   },
                   {
                     "name": "轻质煤焦油",
-                    "category": "煤焦油"
+                    "category": "煤焦油",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 焦炭加工 > 焦油产品 > 煤焦油 > 轻质煤焦油",
+                    "level5IndustryCode": "1200000808",
+                    "level5IndustryName": "焦油产品",
+                    "level7ProductCode": "1140067095",
+                    "level7ProductName": "轻质煤焦油"
                   },
                   {
                     "name": "长焰煤",
-                    "category": "动力煤"
+                    "category": "动力煤",
+                    "hierarchyPath": "采掘 > 煤炭开采 > 煤炭开采 > 动力煤 > 动力煤 > 长焰煤",
+                    "level5IndustryCode": "1200000811",
+                    "level5IndustryName": "动力煤",
+                    "level7ProductCode": "1111000001",
+                    "level7ProductName": "长焰煤"
                   }
                 ],
                 "knownProducts": [
@@ -3516,8 +4061,8 @@
                 "containedSegmentCount": 2
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "广汇能源通过LNG(液化天然气)参与“美军对伊朗发动新一轮打击油价跳涨”涉及的业务。新闻涉及的客户在增加建设或采购时会用到LNG(液化天然气)，因此公司存在真实的销售关系。只是这项产品还没有成为公司主要收入来源。煤化工产品目前约占公司收入14.2%，产品虽然已经在卖，基数仍小，即使增长较快，对公司整体的拉动也有限。市场缺货或涨价会让客户增加LNG(液化天然气)采购，公司可能多卖货或提高售价；采购成本和库存变化会决定利润是否同步增加。"
+            "relationLabel": "宽口径相关",
+            "analysis": "分析广汇能源与“美军对伊朗发动新一轮打击油价跳涨”的联系，所依据的产业范围是远洋航运，事件主要围绕LNG航运、乙烯航运展开。公司的业务边界可以从加氢尾油这项产品看清。公司的加氢尾油和LNG航运、乙烯航运属于同一技术场景下的不同工序，关联来自具体的产业协作。公司约14.2%的主营收入归在煤化工产品，产品名称与收入分部能够相互对应。"
           },
           {
             "sourceRowNumber": 23980,
@@ -3550,15 +4095,30 @@
                 "relevantProducts": [
                   {
                     "name": "无人机",
-                    "category": "民用无人机"
+                    "category": "民用无人机",
+                    "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机 > 民用无人机 > 无人机",
+                    "level5IndustryCode": "1200000400",
+                    "level5IndustryName": "无人机",
+                    "level7ProductCode": "1140005644",
+                    "level7ProductName": "无人机"
                   },
                   {
                     "name": "无人机系统",
-                    "category": "其他无人机零部件"
+                    "category": "其他无人机零部件",
+                    "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机零部件 > 其他无人机零部件 > 无人机系统",
+                    "level5IndustryCode": "1200000399",
+                    "level5IndustryName": "无人机零部件",
+                    "level7ProductCode": "1140142095",
+                    "level7ProductName": "无人机系统"
                   },
                   {
                     "name": "无人机飞行服务",
-                    "category": "无人机技术服务"
+                    "category": "无人机技术服务",
+                    "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 无人机技术服务 > 无人机技术服务 > 无人机飞行服务",
+                    "level5IndustryCode": "1210003128",
+                    "level5IndustryName": "无人机技术服务",
+                    "level7ProductCode": "1140172937",
+                    "level7ProductName": "无人机飞行服务"
                   }
                 ],
                 "knownProducts": [
@@ -3570,8 +4130,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "中无人机确实做着“美军对伊朗发动新一轮打击油价跳涨”涉及的生意，具体产品是无人机。新闻涉及的客户在增加建设或采购时会用到无人机，因此公司存在真实的销售关系。无人机系统及相关产品合计约占收入100%，相关产品本身就是主业，新闻的影响不只停留在板块情绪。这件事能否让公司多赚钱，主要看客户是否增加无人机采购，以及售价变化能否覆盖生产和销售成本。判断影响大小，直接看无人机能不能多卖、能不能提价，以及新增销售是否被成本吃掉。"
+            "relationLabel": "宽口径相关",
+            "analysis": "把中无人机放到产业范围内看，“美军对伊朗发动新一轮打击油价跳涨”涉及远洋航运及其中的LNG航运、乙烯航运。在远洋航运的完整产品体系中，无人机、无人机飞行服务与LNG航运、乙烯航运承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。中无人机专注于为客户提供无人机系统成体系、多场景、全寿命的整体解决方案，其中可与核心产业衔接的产品是无人机、无人机飞行服务。公司主营收入集中在无人机系统及相关产品（100%），这组业务构成公司参与相关技术与应用场景的经营基础。"
           },
           {
             "sourceRowNumber": 23981,
@@ -3622,19 +4182,39 @@
                 "relevantProducts": [
                   {
                     "name": "气象应用与服务系统",
-                    "category": "航空配套系统"
+                    "category": "航空配套系统",
+                    "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 航空配套系统 > 航空配套系统 > 气象应用与服务系统",
+                    "level5IndustryCode": "1200005598",
+                    "level5IndustryName": "航空配套系统",
+                    "level7ProductCode": "1140145625",
+                    "level7ProductName": "气象应用与服务系统"
                   },
                   {
                     "name": "气象雷达",
-                    "category": "雷达"
+                    "category": "雷达",
+                    "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 雷达 > 雷达 > 气象雷达",
+                    "level5IndustryCode": "1200000401",
+                    "level5IndustryName": "雷达",
+                    "level7ProductCode": "1140022095",
+                    "level7ProductName": "气象雷达"
                   },
                   {
                     "name": "火控雷达",
-                    "category": "雷达"
+                    "category": "雷达",
+                    "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 雷达 > 雷达 > 火控雷达",
+                    "level5IndustryCode": "1200000401",
+                    "level5IndustryName": "雷达",
+                    "level7ProductCode": "1140146971",
+                    "level7ProductName": "火控雷达"
                   },
                   {
                     "name": "防空预警雷达",
-                    "category": "雷达"
+                    "category": "雷达",
+                    "hierarchyPath": "国防军工 > 航空装备 > 航空装备 > 雷达 > 雷达 > 防空预警雷达",
+                    "level5IndustryCode": "1200000401",
+                    "level5IndustryName": "雷达",
+                    "level7ProductCode": "1140190595",
+                    "level7ProductName": "防空预警雷达"
                   }
                 ],
                 "knownProducts": [
@@ -3652,7 +4232,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "国睿科技真正与“美军对伊朗发动新一轮打击油价跳涨”相连的是气象应用与服务系统。新闻涉及的客户在增加建设或采购时会用到气象应用与服务系统，因此公司存在真实的销售关系。公司存在接单机会，但受影响的是其中一块业务。公司的收入主体仍是雷达整机与相关系统、工业软件及智能制造，气象应用与服务系统能参与新闻所说的需求，但暂时不是决定公司业绩的唯一产品。这件事能否让公司多赚钱，主要看客户是否增加气象应用与服务系统采购，以及售价变化能否覆盖生产和销售成本。"
+            "analysis": "“美军对伊朗发动新一轮打击油价跳涨”放到国睿科技身上，需要比较的具体产品是气象应用与服务系统、气象雷达。这条新闻的产业范围集中在远洋航运及其LNG航运、乙烯航运。气象应用与服务系统、气象雷达对应LNG航运、乙烯航运之外的技术与应用配套，两者通过远洋航运所涉及的设备、工序或应用场景形成业务连接。主营构成以雷达整机与相关系统（83.35%）、工业软件及智能制造（9.09%）为主，公司与LNG航运、乙烯航运的联系主要由气象应用与服务系统、气象雷达这项具体业务承接。"
           }
         ]
       }

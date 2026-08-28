@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 18,
-  "generatedAt": "2026-08-27T11:16:12+08:00",
+  "schemaVersion": 19,
+  "generatedAt": "2026-08-28T15:50:34+08:00",
   "status": "ready",
   "event": {
     "mainId": "27189",
@@ -584,7 +584,7 @@
     "companyProfileMatchedCount": 10,
     "companyProfileUnmatchedCount": 0,
     "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
-    "analysisPromptVersion": "investment-opportunity-analyst-v9.md",
+    "analysisPromptVersion": "investment-opportunity-analyst-v10.md",
     "groups": [
       {
         "filledStars": 5,
@@ -654,8 +654,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "错位",
-            "analysis": "万通发展和“万通发展子公司PCIe5.0交换芯片量产”看起来在同一大行业，实际卖的不是同一种东西。新闻影响的是新闻涉及的产品或项目，公司主要做产业园区运营、房地产开发(住宅-北京)，前者的客户不会因此自然增加对后者的采购。公司的收入主要来自销售开发产品、物业出租，这些产品与新闻涉及的产品或项目不是同一种生意，新闻很难明显改变公司整体收入。对公司最实际的影响是产业园区运营的销量、售价和成本变化，新闻热度本身不会直接增加收入。按公司现在的业务结构，股价可能跟随板块波动，但订单和利润不会因为这则消息自然增加。"
+            "relationLabel": "宽口径相关",
+            "analysis": "万通发展的业务主要涉及发展以住宅开发和商用物业为核心的业务体系；放到“万通发展子公司PCIe5.0交换芯片量产”里比较的具体产品是产业园区运营、房地产开发(住宅-北京)。产业园区运营、房地产开发(住宅-北京)对应PCIeRetimer芯片之外的技术与应用配套，两者通过IC设计所涉及的设备、工序或应用场景形成业务连接。销售开发产品（50.37%）、物业出租（39.71%）构成公司的主要收入来源，产业园区运营、房地产开发(住宅-北京)是其中可与IC设计相衔接的产品方向。新闻对应的核心产业是IC设计，代表性产品包括PCIeRetimer芯片。"
           }
         ]
       },
@@ -709,27 +709,57 @@
                 "relevantProducts": [
                   {
                     "name": "PCIeRetimer芯片",
-                    "category": "信号链芯片"
+                    "category": "信号链芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 信号链芯片 > PCIeRetimer芯片",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140157923",
+                    "level7ProductName": "PCIeRetimer芯片"
                   },
                   {
                     "name": "内存扩展控制器",
-                    "category": "接口芯片"
+                    "category": "接口芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 接口芯片 > 内存扩展控制器",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140215305",
+                    "level7ProductName": "内存扩展控制器"
                   },
                   {
                     "name": "服务器CPU",
-                    "category": "计算控制芯片"
+                    "category": "计算控制芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 服务器CPU",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140007907",
+                    "level7ProductName": "服务器CPU"
                   },
                   {
                     "name": "DDR PMIC",
-                    "category": "电源管理芯片"
+                    "category": "电源管理芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > DDR PMIC",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140215267",
+                    "level7ProductName": "DDR PMIC"
                   },
                   {
                     "name": "SPD Hub",
-                    "category": "存储器芯片"
+                    "category": "存储器芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 存储器芯片 > SPD Hub",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140215406",
+                    "level7ProductName": "SPD Hub"
                   },
                   {
                     "name": "可信计算芯片",
-                    "category": "安全芯片"
+                    "category": "安全芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 安全芯片 > 可信计算芯片",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140023130",
+                    "level7ProductName": "可信计算芯片"
                   }
                 ],
                 "knownProducts": [
@@ -747,7 +777,7 @@
               }
             },
             "relationLabel": "真相关",
-            "analysis": "澜起科技和“万通发展子公司PCIe5.0交换芯片量产”的直接联系是服务器CPU。新闻涉及的客户在增加建设或采购时会用到服务器CPU，因此公司存在真实的销售关系。内存接口芯片合计约占收入94.18%，相关产品本身就是主业，新闻的影响不只停留在板块情绪。这件事能否让公司多赚钱，主要看客户是否增加服务器CPU采购，以及售价变化能否覆盖生产和销售成本。新闻可以改变市场想象，但公司赚不赚钱仍取决于服务器CPU有没有新增销量和合理利润。"
+            "analysis": "对澜起科技来说，“万通发展子公司PCIe5.0交换芯片量产”指向IC设计，新闻里的产品主要是PCIeRetimer芯片。按产品实质区分，PCIeRetimer芯片就是IC设计所包含的一类实际产品。公司与该产业发生联系的产品主要是PCIeRetimer芯片。公司约94.18%的主营收入归在内存接口芯片，产品名称与收入分部能够相互对应。"
           },
           {
             "sourceRowNumber": 21688,
@@ -786,19 +816,39 @@
                 "relevantProducts": [
                   {
                     "name": "深度计算处理器(DCU)",
-                    "category": "中央处理器"
+                    "category": "中央处理器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 中央处理器 > 深度计算处理器(DCU)",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140170231",
+                    "level7ProductName": "深度计算处理器(DCU)"
                   },
                   {
                     "name": "工作站CPU",
-                    "category": "计算控制芯片"
+                    "category": "计算控制芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 工作站CPU",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140170230",
+                    "level7ProductName": "工作站CPU"
                   },
                   {
                     "name": "数据中心CPU",
-                    "category": "计算控制芯片"
+                    "category": "计算控制芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 数据中心CPU",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140215344",
+                    "level7ProductName": "数据中心CPU"
                   },
                   {
                     "name": "服务器CPU",
-                    "category": "计算控制芯片"
+                    "category": "计算控制芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 服务器CPU",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140007907",
+                    "level7ProductName": "服务器CPU"
                   }
                 ],
                 "knownProducts": [
@@ -812,7 +862,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "看海光信息的实际产品，公司确实提供数据中心CPU，与“万通发展子公司PCIe5.0交换芯片量产”不是只沾名字。AI应用使用量增加会提高算力需求，客户可能因此增加对数据中心CPU的采购。公司其他业务不会因此一起增长。公司收入主要来自高端处理器，数据中心CPU只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。AI应用用户和调用量增加，会提高软件服务或算力需求，数据中心CPU可能增加销量；公司能分到多少取决于客户是否实际采购它的产品。"
+            "analysis": "要说明海光信息与“万通发展子公司PCIe5.0交换芯片量产”的产业联系，需要对照IC设计及其中的PCIeRetimer芯片。工作站CPU与PCIeRetimer芯片同属IC设计，两者可能承担不同功能，但都在这一产业的产品体系内。海光信息的业务主要涉及业务是研发、设计和销售应用于服务器、工作站等计算、存储设备中的高端处理器，其中可与核心产业衔接的产品是工作站CPU。主营构成中，高端处理器合计约占99.9%，上述产品在公司业务中已有明确位置。"
           }
         ]
       },
@@ -879,7 +929,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "看中科曙光的实际产品，公司确实提供云服务器，与“万通发展子公司PCIe5.0交换芯片量产”不是只沾名字。AI应用使用量增加会提高算力需求，客户可能因此增加对云服务器的采购。公司其他业务不会因此一起增长。公司目前主要靠IT设备、围绕高端计算机的软件开发、系统集成及技术服务取得收入，云服务器对整体业绩的影响需要结合它在主营业务中的实际分量理解。付费用户增加会推高应用方的算力和软件投入，云服务器只有进入客户采购清单，才会增加公司的订单或服务收入。"
+            "analysis": "分析中科曙光与“万通发展子公司PCIe5.0交换芯片量产”的联系，所依据的产业范围是IC设计，事件主要围绕PCIeRetimer芯片展开。国资数字化转型解决方案、智慧交通解决方案对应PCIeRetimer芯片之外的技术与应用配套，两者通过IC设计所涉及的设备、工序或应用场景形成业务连接。中科曙光的业务主要涉及为中国及全球用户提供创新、高效、可靠的IT产品、解决方案及服务，与核心产业的具体联系由国资数字化转型解决方案、智慧交通解决方案体现。主营构成以IT设备（83.56%）、围绕高端计算机的软件开发、系统集成及技术服务（16.35%）为主，公司与PCIeRetimer芯片的联系主要由国资数字化转型解决方案、智慧交通解决方案这项具体业务承接。"
           },
           {
             "sourceRowNumber": 21690,
@@ -936,11 +986,21 @@
                 "relevantProducts": [
                   {
                     "name": "以太网交换芯片",
-                    "category": "通信芯片"
+                    "category": "通信芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 通信芯片 > 以太网交换芯片",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140193315",
+                    "level7ProductName": "以太网交换芯片"
                   },
                   {
                     "name": "以太网交换芯片模组",
-                    "category": "网络分流设备"
+                    "category": "网络分流设备",
+                    "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > 以太网交换芯片模组",
+                    "level5IndustryCode": "1200001395",
+                    "level5IndustryName": "网络设备",
+                    "level7ProductCode": "1140193316",
+                    "level7ProductName": "以太网交换芯片模组"
                   }
                 ],
                 "knownProducts": [
@@ -952,8 +1012,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "看盛科通信与“万通发展子公司PCIe5.0交换芯片量产”的关系，关键不是行业名称相似，而是公司已经在卖以太网交换芯片。新闻涉及的客户在增加建设或采购时会用到以太网交换芯片，因此公司存在真实的销售关系。以太网交换芯片、以太网交换芯片模组合计约占收入83.21%，相关产品本身就是主业，新闻的影响不只停留在板块情绪。这件事能否让公司多赚钱，主要看客户是否增加以太网交换芯片采购，以及售价变化能否覆盖生产和销售成本。"
+            "relationLabel": "宽口径相关",
+            "analysis": "要理解盛科通信和“万通发展子公司PCIe5.0交换芯片量产”的联系，可以先看公司实际提供的以太网交换芯片。这条新闻的产业范围集中在IC设计及其PCIeRetimer芯片。公司的以太网交换芯片位于IC设计内部，和新闻所指的PCIeRetimer芯片是同一产业下的不同产品环节。以太网交换芯片、以太网交换芯片模组约占主营收入83.21%，收入结构能够对应到这项产品业务。"
           },
           {
             "sourceRowNumber": 21692,
@@ -992,7 +1052,12 @@
                 "relevantProducts": [
                   {
                     "name": "半导体IP授权服务",
-                    "category": "电子技术服务"
+                    "category": "电子技术服务",
+                    "hierarchyPath": "电子 > 其他电子 > 其他电子 > 电子技术服务 > 电子技术服务 > 半导体IP授权服务",
+                    "level5IndustryCode": "1200001341",
+                    "level5IndustryName": "电子技术服务",
+                    "level7ProductCode": "1140111364",
+                    "level7ProductName": "半导体IP授权服务"
                   }
                 ],
                 "knownProducts": [
@@ -1008,7 +1073,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "沐曦股份真正与“万通发展子公司PCIe5.0交换芯片量产”相连的是半导体IP授权服务。AI应用使用量增加会提高算力需求，客户可能因此增加对半导体IP授权服务的采购。公司存在接单机会，但受影响的是其中一块业务。GPU产品及配件、IP、技术服务及其他构成公司的主要收入，半导体IP授权服务即使出现新增需求，也不会自动带动其他业务一起增长。付费用户增加会推高应用方的算力和软件投入，半导体IP授权服务只有进入客户采购清单，才会增加公司的订单或服务收入。"
+            "analysis": "对沐曦股份来说，“万通发展子公司PCIe5.0交换芯片量产”指向IC设计，新闻里的产品主要是PCIeRetimer芯片。这里需要辨认的公司产品是桥接板、半导体IP授权服务。在IC设计的完整产品体系中，桥接板、半导体IP授权服务与PCIeRetimer芯片承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。GPU产品及配件（99.19%）、IP、技术服务及其他（0.81%）构成公司的主要收入来源，桥接板、半导体IP授权服务是其中可与IC设计相衔接的产品方向。"
           },
           {
             "sourceRowNumber": 21693,
@@ -1065,27 +1130,57 @@
                 "relevantProducts": [
                   {
                     "name": "高速背板连接器",
-                    "category": "计算机连接器"
+                    "category": "计算机连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 计算机连接器 > 高速背板连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140190158",
+                    "level7ProductName": "高速背板连接器"
                   },
                   {
                     "name": "EVS信号控制系统连接器",
-                    "category": "新能源汽车连接器"
+                    "category": "新能源汽车连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 新能源汽车连接器 > EVS信号控制系统连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140194865",
+                    "level7ProductName": "EVS信号控制系统连接器"
                   },
                   {
                     "name": "PDU连接器",
-                    "category": "新能源汽车连接器"
+                    "category": "新能源汽车连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 新能源汽车连接器 > PDU连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140194861",
+                    "level7ProductName": "PDU连接器"
                   },
                   {
                     "name": "交换机连接器",
-                    "category": "通信连接器"
+                    "category": "通信连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 通信连接器 > 交换机连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140194878",
+                    "level7ProductName": "交换机连接器"
                   },
                   {
                     "name": "光纤连接器",
-                    "category": "无源光器件"
+                    "category": "无源光器件",
+                    "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 无源光器件 > 光纤连接器",
+                    "level5IndustryCode": "1200001393",
+                    "level5IndustryName": "光通信设备",
+                    "level7ProductCode": "1140022886",
+                    "level7ProductName": "光纤连接器"
                   },
                   {
                     "name": "射频连接器",
-                    "category": "通信连接器"
+                    "category": "通信连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 通信连接器 > 射频连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140005720",
+                    "level7ProductName": "射频连接器"
                   }
                 ],
                 "knownProducts": [
@@ -1102,8 +1197,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "华丰科技和“万通发展子公司PCIe5.0交换芯片量产”的直接联系是高速背板连接器。CPO设备需要精密光连接和耦合部件，这类产品会直接装进设备。公司约28.72%的收入来自连接器，新闻确实可能影响一部分业绩，影响大小仍取决于实际销售变化。CPO设备量产会增加对光纤连接、耦合和光器件的采购，高速背板连接器销量可能随之增长，客户份额和批量良率决定公司实际赚到多少。"
+            "relationLabel": "宽口径相关",
+            "analysis": "分析华丰科技与“万通发展子公司PCIe5.0交换芯片量产”的联系，所依据的产业范围是IC设计，事件主要围绕PCIeRetimer芯片展开。电池切断单元(BDU)、电源分配单元(PDU)对应PCIeRetimer芯片之外的技术与应用配套，两者通过IC设计所涉及的设备、工序或应用场景形成业务连接。就实际业务而言，公司提供的是电池切断单元(BDU)、电源分配单元(PDU)。公司主营收入集中在组件（61.53%）、连接器（28.72%），这组业务构成公司参与相关技术与应用场景的经营基础。"
           },
           {
             "sourceRowNumber": 21694,
@@ -1154,27 +1249,57 @@
                 "relevantProducts": [
                   {
                     "name": "Lightning连接器",
-                    "category": "消费电子连接器"
+                    "category": "消费电子连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 消费电子连接器 > Lightning连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140173783",
+                    "level7ProductName": "Lightning连接器"
                   },
                   {
                     "name": "USB连接器",
-                    "category": "消费电子连接器"
+                    "category": "消费电子连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 消费电子连接器 > USB连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140104785",
+                    "level7ProductName": "USB连接器"
                   },
                   {
                     "name": "射频连接器",
-                    "category": "通信连接器"
+                    "category": "通信连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 通信连接器 > 射频连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140005720",
+                    "level7ProductName": "射频连接器"
                   },
                   {
                     "name": "网络接口连接器",
-                    "category": "通信连接器"
+                    "category": "通信连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 通信连接器 > 网络接口连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140194871",
+                    "level7ProductName": "网络接口连接器"
                   },
                   {
                     "name": "基站天线",
-                    "category": "天线"
+                    "category": "天线",
+                    "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 天馈系统 > 天线 > 基站天线",
+                    "level5IndustryCode": "1200001394",
+                    "level5IndustryName": "天馈系统",
+                    "level7ProductCode": "1125000056",
+                    "level7ProductName": "基站天线"
                   },
                   {
                     "name": "室分天线",
-                    "category": "天线"
+                    "category": "天线",
+                    "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 天馈系统 > 天线 > 室分天线",
+                    "level5IndustryCode": "1200001394",
+                    "level5IndustryName": "天馈系统",
+                    "level7ProductCode": "1140176146",
+                    "level7ProductName": "室分天线"
                   }
                 ],
                 "knownProducts": [
@@ -1191,8 +1316,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "小基数布局",
-            "analysis": "立讯精密与“万通发展子公司PCIe5.0交换芯片量产”的联系在Lightning连接器。CPO设备需要精密光连接和耦合部件，这类产品会直接装进设备。不过这项业务目前规模较小或仍在导入阶段。其它连接器目前约占公司收入1.28%，产品虽然已经在卖，基数仍小，即使增长较快，对公司整体的拉动也有限。更多CPO交换机意味着更多精密光连接部件需求，Lightning连接器能否转成收入，主要看公司拿到的供货份额和量产成本。"
+            "relationLabel": "宽口径相关",
+            "analysis": "就现有产品而言，立讯精密与“万通发展子公司PCIe5.0交换芯片量产”最接近的一项业务是车载逆变器、汽车线束。产业这一侧是IC设计，核心产品为PCIeRetimer芯片。在IC设计的完整产品体系中，车载逆变器、汽车线束与PCIeRetimer芯片承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。消费性电子（79.52%）、汽车互联产品及精密组件（11.81%）构成公司的主要收入来源，车载逆变器、汽车线束是其中可与IC设计相衔接的产品方向。"
           },
           {
             "sourceRowNumber": 21695,
@@ -1237,11 +1362,21 @@
                 "relevantProducts": [
                   {
                     "name": "服务器液冷板",
-                    "category": "IDC硬件产品"
+                    "category": "IDC硬件产品",
+                    "hierarchyPath": "通信 > 通信设备 > 通信配套服务 > IDC服务 > IDC硬件产品 > 服务器液冷板",
+                    "level5IndustryCode": "1200001406",
+                    "level5IndustryName": "IDC服务",
+                    "level7ProductCode": "1140202350",
+                    "level7ProductName": "服务器液冷板"
                   },
                   {
                     "name": "浸没式液冷机柜(TANK)",
-                    "category": "IDC硬件产品"
+                    "category": "IDC硬件产品",
+                    "hierarchyPath": "通信 > 通信设备 > 通信配套服务 > IDC服务 > IDC硬件产品 > 浸没式液冷机柜(TANK)",
+                    "level5IndustryCode": "1200001406",
+                    "level5IndustryName": "IDC服务",
+                    "level7ProductCode": "1140216648",
+                    "level7ProductName": "浸没式液冷机柜(TANK)"
                   }
                 ],
                 "knownProducts": [
@@ -1259,7 +1394,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "中航光电真正与“万通发展子公司PCIe5.0交换芯片量产”相连的是服务器液冷板。CPO设备需要精密光连接和耦合部件，这类产品会直接装进设备。公司存在接单机会，但受影响的是其中一块业务。公司的收入主体仍是电连接器、光器件及光电设备，服务器液冷板能参与新闻所说的需求，但暂时不是决定公司业绩的唯一产品。更多CPO交换机意味着更多精密光连接部件需求，服务器液冷板能否转成收入，主要看公司拿到的供货份额和量产成本。"
+            "analysis": "对中航光电来说，“万通发展子公司PCIe5.0交换芯片量产”指向IC设计，新闻里的产品主要是PCIeRetimer芯片。公司通过氧化锆瓷块、钴铬烤瓷合金进入与PCIeRetimer芯片相衔接的产品和应用体系，两项业务在IC设计相关场景中各自承担功能。中航光电的业务定位是专业为航空及防务和高端制造提供互连解决方案的高科技企业，其中可与核心产业衔接的产品是氧化锆瓷块、钴铬烤瓷合金。主营结构中，电连接器（74.55%）、光器件及光电设备（17.11%）是公司的业务主体；放到IC设计中，对应的连接点是氧化锆瓷块、钴铬烤瓷合金。"
           },
           {
             "sourceRowNumber": 21696,
@@ -1328,23 +1463,48 @@
                 "relevantProducts": [
                   {
                     "name": "背板连接器塑料壳体",
-                    "category": "连接器组件"
+                    "category": "连接器组件",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 连接器组件 > 背板连接器塑料壳体",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140194888",
+                    "level7ProductName": "背板连接器塑料壳体"
                   },
                   {
                     "name": "连接器塑料壳体",
-                    "category": "连接器组件"
+                    "category": "连接器组件",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 连接器组件 > 连接器塑料壳体",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140194889",
+                    "level7ProductName": "连接器塑料壳体"
                   },
                   {
                     "name": "连接器端子",
-                    "category": "连接器组件"
+                    "category": "连接器组件",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 连接器组件 > 连接器端子",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140104788",
+                    "level7ProductName": "连接器端子"
                   },
                   {
                     "name": "通讯连接器壳体(CAGE)",
-                    "category": "连接器组件"
+                    "category": "连接器组件",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 连接器组件 > 通讯连接器壳体(CAGE)",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140175335",
+                    "level7ProductName": "通讯连接器壳体(CAGE)"
                   },
                   {
                     "name": "光模块用液冷板",
-                    "category": "光模块"
+                    "category": "光模块",
+                    "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 光通信设备 > 光模块 > 光模块用液冷板",
+                    "level5IndustryCode": "1200001393",
+                    "level5IndustryName": "光通信设备",
+                    "level7ProductCode": "1140220965",
+                    "level7ProductName": "光模块用液冷板"
                   }
                 ],
                 "knownProducts": [
@@ -1361,8 +1521,8 @@
                 "containedSegmentCount": 1
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "看鼎通科技与“万通发展子公司PCIe5.0交换芯片量产”的关系，关键不是行业名称相似，而是公司已经在卖背板连接器塑料壳体。CPO设备需要精密光连接和耦合部件，这类产品会直接装进设备。相关的通讯连接器壳体、汽车连接器组件约占公司收入73.63%，已经是公司的饭碗，客户采购量或产品售价变化会明显影响整体业绩。CPO设备量产会增加对光纤连接、耦合和光器件的采购，背板连接器塑料壳体销量可能随之增长，客户份额和批量良率决定公司实际赚到多少。"
+            "relationLabel": "宽口径相关",
+            "analysis": "要说明鼎通科技与“万通发展子公司PCIe5.0交换芯片量产”的产业联系，需要对照IC设计及其中的PCIeRetimer芯片。在IC设计的完整产品体系中，新能源汽车电控系统连接器、新能源汽车高压互锁连接器与PCIeRetimer芯片承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。公司现有产品中，新能源汽车电控系统连接器、新能源汽车高压互锁连接器与这次事件最接近。公司主营收入集中在通讯连接器壳体（47.8%）、汽车连接器组件（25.83%），这组业务构成公司参与相关技术与应用场景的经营基础。"
           }
         ]
       }

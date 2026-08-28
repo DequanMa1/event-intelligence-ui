@@ -802,12 +802,18 @@ def match_company_profile(
 ) -> tuple[dict[str, Any] | None, str]:
     normalized_code = normalize_security_code(stock_code)
     matched = company_profiles["byCode"].get(normalized_code)
-    if matched:
+    normalized_name = normalize_text(stock_name)
+    if matched and (
+        not normalized_name
+        or normalize_text(matched.get("companyName")) == normalized_name
+    ):
         return matched, "stock_code"
 
-    name_matches = company_profiles["byName"].get(normalize_text(stock_name), [])
+    name_matches = company_profiles["byName"].get(normalized_name, [])
     if len(name_matches) == 1:
         return name_matches[0], "stock_name"
+    if matched:
+        return matched, "stock_code"
     return None, "none"
 
 
@@ -1051,6 +1057,7 @@ def build_company_evidence(
                 "status": "unavailable",
                 "relevantProducts": [],
                 "knownProducts": [],
+                "mappedProducts": [],
                 "directSegmentCount": 0,
                 "containedSegmentCount": 0,
             },
@@ -1128,10 +1135,34 @@ def build_company_evidence(
         "businessRelation": {
             "status": relation_status,
             "relevantProducts": [
-                {"name": product["name"], "category": product["category"]}
+                {
+                    "name": product["name"],
+                    "category": product["category"],
+                    "hierarchyPath": product["hierarchyPath"],
+                    "level5IndustryCode": product["level5IndustryCode"],
+                    "level5IndustryName": product["level5IndustryName"],
+                    "level7ProductCode": product["level7ProductCode"],
+                    "level7ProductName": product["level7ProductName"],
+                }
                 for product in relevant_products
             ],
             "knownProducts": known_products[:8],
+            "mappedProducts": [
+                {
+                    "name": clean_text(path.get("matched_node_name"))
+                    or clean_text(path.get("7industry_name")),
+                    "category": clean_text(path.get("6industry_name"))
+                    or clean_text(path.get("5industry_name")),
+                    "hierarchyPath": clean_text(path.get("hierarchy_path")),
+                    "level5IndustryCode": clean_text(path.get("5industry_code")),
+                    "level5IndustryName": clean_text(path.get("5industry_name")),
+                    "level7ProductCode": clean_text(path.get("7industry_code")),
+                    "level7ProductName": clean_text(path.get("7industry_name")),
+                }
+                for path in stock_paths
+                if clean_text(path.get("matched_node_name"))
+                or clean_text(path.get("7industry_name"))
+            ],
             "directSegmentCount": direct_segment_count,
             "containedSegmentCount": contained_segment_count,
         },
@@ -2265,6 +2296,665 @@ def build_investment_analysis(
         "relationLabel": relation_label,
         "analysis": finalize_investment_analysis(analysis, stock_name),
     }
+RELATIONSHIP_NARRATIVE_FORBIDDEN_PHRASES = (
+    "客户会",
+    "客户是否",
+    "客户采购",
+    "客户需求",
+    "新增订单",
+    "订单增加",
+    "利润增长",
+    "业绩增长",
+    "股价上涨",
+    "股价下跌",
+    "股价表现",
+    "股价波动",
+    "估值提升",
+    "估值下降",
+    "估值重估",
+    "估值空间",
+    "公司估值",
+    "建议买入",
+    "建议卖出",
+    "给予买入评级",
+    "给予卖出评级",
+    "给出目标价",
+    "目标价为",
+    "有望受益",
+    "建议关注",
+    "后续重点看",
+    "兑现",
+    "事件催化",
+    "市场催化",
+    "股价催化",
+    "催化逻辑",
+    "催化因素",
+    "研报显示",
+    "研报认为",
+    "没有关系",
+    "毫无关系",
+    "不相关",
+    "不直接相关",
+    "业务错位",
+    "并不一致",
+    "不足以把两者视为直接关联",
+    "业务范围并不重合",
+    "业务范围不重合",
+    "经营主体不在",
+    "并非同类产品",
+)
+
+
+def split_major_product_names(value: Any, limit: int = 5) -> list[str]:
+    names = [
+        clean_text(item).strip("。；;，, ")
+        for item in re.split(r"[、,，;；|/／]", clean_text(value))
+    ]
+    return unique_ordered(name for name in names if 2 <= len(name) <= 42)[:limit]
+
+
+def objective_industry_excerpt(value: Any, limit: int = 138) -> str:
+    text = clean_text(value)
+    if not text:
+        return ""
+    excluded_terms = (
+        "客户", "采购", "订单", "销量", "售价", "利润", "业绩", "估值", "股价",
+        "受益", "兑现", "催化", "建议关注", "后续",
+    )
+    sentences = [
+        sentence.strip()
+        for sentence in re.split(r"(?<=[。！？])", text)
+        if sentence.strip() and not any(term in sentence for term in excluded_terms)
+    ]
+    return compact_text("".join(sentences) or text, limit).rstrip("，,；; ")
+
+
+def mapped_product_text(product: dict[str, Any]) -> str:
+    return clean_text(" ".join((
+        clean_text(product.get("name")),
+        clean_text(product.get("category")),
+        clean_text(product.get("hierarchyPath")),
+        clean_text(product.get("level5IndustryName")),
+        clean_text(product.get("level7ProductName")),
+    )))
+
+
+def ensure_sentence_end(value: Any) -> str:
+    sentence = clean_text(value).rstrip("，,；;：: ")
+    if sentence and sentence[-1] not in "。！？!?":
+        sentence += "。"
+    return sentence
+
+
+def core_chain_context(
+    company_core_products: list[dict[str, Any]],
+    industry_analysis: dict[str, Any],
+) -> dict[str, Any]:
+    target = industry_analysis.get("target") or {}
+    target_code = clean_text(target.get("code"))
+    target_name = clean_text(target.get("name")) or "本次新闻对应的核心产业"
+    target_products = [
+        product
+        for product in company_core_products
+        if not target_code or clean_text(product.get("level5IndustryCode")) == target_code
+    ]
+    core_names = unique_ordered(
+        clean_text(product.get("level7ProductName")) or clean_text(product.get("name"))
+        for product in target_products
+    )
+    core_codes = {
+        clean_text(product.get("level7ProductCode")) or clean_text(product.get("code"))
+        for product in target_products
+        if clean_text(product.get("level7ProductCode")) or clean_text(product.get("code"))
+    }
+    overview = objective_industry_excerpt(industry_analysis.get("overview"))
+    context_text = clean_text(f"{target_name} {overview} {' '.join(core_names)}")
+    return {
+        "targetCode": target_code,
+        "targetName": target_name,
+        "coreNames": core_names,
+        "coreCodes": core_codes,
+        "overview": overview,
+        "roles": infer_business_roles(context_text),
+        "tags": semantic_business_tags(context_text),
+        "isMaterial": any(
+            term in normalize_text(context_text)
+            for term in (
+                "原料", "材料", "特种气体", "电子气体", "电子特气", "硅片",
+                "基板", "金属", "矿产", "化学品", "油脂", "药用辅料",
+            )
+        ),
+    }
+
+
+def score_product_against_core(product: dict[str, Any], core: dict[str, Any]) -> int:
+    text = mapped_product_text(product)
+    normalized = normalize_text(text)
+    product_code = clean_text(product.get("level7ProductCode"))
+    level5_code = clean_text(product.get("level5IndustryCode"))
+    score = 0
+    if product_code and product_code in core["coreCodes"]:
+        score += 100
+    if core["targetCode"] and level5_code == core["targetCode"]:
+        score += 70
+    for core_name in core["coreNames"]:
+        normalized_core = normalize_text(core_name)
+        if len(normalized_core) >= 3 and (
+            normalized_core in normalized
+            or normalize_text(product.get("name")) in normalized_core
+        ):
+            score += 35
+            break
+    product_roles = infer_business_roles(text)
+    product_tags = semantic_business_tags(text)
+    if roles_are_compatible(core["roles"], product_roles) or roles_are_compatible(product_roles, core["roles"]):
+        score += 18
+    score += 10 * len(core["tags"] & product_tags & SPECIFIC_BUSINESS_TAGS)
+    if "semiconductor_equipment" in product_roles and core["roles"] & {
+        "wafer_foundry", "chip_packaging", "cpo", "optical_chip",
+    }:
+        score += 18
+    if (
+        core["isMaterial"]
+        and "semiconductor_equipment" in product_roles
+        and "半导体" in normalize_text(f"{core['targetName']} {core['overview']}")
+    ):
+        score += 18
+    if "cleanroom" in product_roles and core["roles"] & {"wafer_foundry", "semiconductor_equipment"}:
+        score += 18
+    return score
+
+
+def classify_core_business_relation(
+    product: dict[str, Any] | None,
+    core: dict[str, Any],
+    company_business_text: str,
+) -> str:
+    if product:
+        product_score = score_product_against_core(product, core)
+        product_code = clean_text(product.get("level7ProductCode"))
+        if product_code and product_code in core["coreCodes"]:
+            return "same_product"
+        if core["targetCode"] and clean_text(product.get("level5IndustryCode")) == core["targetCode"]:
+            return "same_industry"
+        text = mapped_product_text(product)
+        normalized = normalize_text(text)
+        product_roles = infer_business_roles(text)
+        if core["isMaterial"] and "semiconductor_equipment" in product_roles and product_score >= 18:
+            return "equipment_using_core_material"
+        if core["isMaterial"] and product_roles & {"wafer_foundry", "power_semiconductor"} and product_score >= 18:
+            return "uses_core_material"
+        if product_score < 18:
+            product = None
+        elif any(term in normalized for term in ("测试设备", "测试系统", "检测设备", "量测设备", "耦合设备")):
+            return "testing_support"
+        elif any(term in normalized for term in ("设备", "产线", "自动化装备", "洁净室", "工程")):
+            return "production_support"
+        elif any(term in normalized for term in ("原料", "材料", "芯片", "器件", "组件", "部件", "基板", "硅片", "连接器")):
+            return "component_or_material"
+        elif any(term in normalized for term in ("服务", "软件", "系统", "运营", "研发")):
+            return "service_support"
+        else:
+            return "adjacent_process"
+
+    company_roles = infer_business_roles(company_business_text)
+    if roles_are_compatible(core["roles"], company_roles):
+        return "profile_related"
+    return "mismatch"
+
+
+def relationship_label(relation_kind: str, company_evidence: dict[str, Any]) -> str:
+    segments = company_evidence.get("revenueSegments", [])
+    direct_share = sum(
+        float(segment.get("sharePct", 0))
+        for segment in segments
+        if segment.get("relationType") == "direct"
+    )
+    if relation_kind == "same_product":
+        return "真相关" if direct_share >= 15 else "宽口径相关"
+    if relation_kind in {
+        "same_industry", "testing_support", "production_support",
+        "component_or_material", "service_support", "adjacent_process",
+        "equipment_using_core_material", "uses_core_material",
+    }:
+        return "宽口径相关"
+    if relation_kind == "profile_related":
+        return "小基数布局"
+    return "宽口径相关"
+
+
+def describe_core_product_relation(
+    relation_kind: str,
+    company_product: str,
+    core_product: str,
+    target_name: str,
+    narrative_key: tuple[Any, ...],
+) -> str:
+    if relation_kind == "same_product":
+        options = (
+            f"{company_product}本身属于{target_name}，是这一核心产业中的具体产品之一。",
+            f"这里的连接落在产品本身：{company_product}归在{target_name}内部，不是外围配套。",
+            f"按产品实质区分，{company_product}就是{target_name}所包含的一类实际产品。",
+        )
+    elif relation_kind == "same_industry":
+        options = (
+            f"{company_product}与{core_product}同属{target_name}，两者可能承担不同功能，但都在这一产业的产品体系内。",
+            f"公司的{company_product}位于{target_name}内部，和新闻所指的{core_product}是同一产业下的不同产品环节。",
+            f"{target_name}不只包含{core_product}，{company_product}也是其中一类实际产品，因此两者属于产业内部关联。",
+        )
+    elif relation_kind == "testing_support":
+        options = (
+            f"{company_product}用于{core_product}制造或装配过程中的检测、校准与耦合，用来确认产品功能和连接精度。",
+            f"两者的接口出现在生产环节：{core_product}是被制造的产品，{company_product}承担测试或精密连接工作。",
+            f"公司提供的{company_product}属于工艺设备，作用是完成{core_product}生产中的测试、检测或耦合。",
+        )
+    elif relation_kind == "production_support":
+        options = (
+            f"{company_product}属于生产配套，用在{core_product}的加工、装配或制造环境中，两项业务通过具体工序衔接。",
+            f"{core_product}是产业链中的产品端，{company_product}提供制造设备或工程条件，两者通过生产工序发生联系。",
+            f"公司的{company_product}服务于{core_product}的生产过程，产业关系体现为制造设备和工程条件的配套。",
+        )
+    elif relation_kind == "component_or_material":
+        options = (
+            f"{company_product}作为材料、芯片或功能部件进入{core_product}，两者形成清晰的组成关系。",
+            f"{core_product}需要由多个器件和材料构成，公司的{company_product}对应其中的功能部件或基础材料。",
+            f"公司与{target_name}的连接点在{company_product}：它构成{core_product}的一部分，或用于该产品的制造。",
+        )
+    elif relation_kind == "equipment_using_core_material":
+        options = (
+            f"{core_product}属于制造过程使用的材料或工艺介质，{company_product}则是承载相关加工步骤的设备，两者在生产工序中配合使用。",
+            f"公司提供的是{company_product}，核心产业提供的是{core_product}；前者完成加工或检测，后者作为材料或介质进入同一制造流程。",
+            f"{company_product}与{core_product}的关系，是设备与工艺材料共同服务于相应制造步骤。",
+        )
+    elif relation_kind == "uses_core_material":
+        options = (
+            f"{core_product}是制造{company_product}所需的基础材料或工艺介质，公司产品位于其后的器件制造环节。",
+            f"两者是前后工序关系：{core_product}先作为生产材料，经过加工后形成{company_product}这类器件或芯片。",
+            f"公司的{company_product}使用{core_product}这类材料完成制造，位于其后的器件或芯片环节。",
+        )
+    elif relation_kind == "service_support":
+        options = (
+            f"{company_product}提供的是软件或专业服务，作用在{core_product}的研发、生产或运行环节，与核心产品形成配套关系。",
+            f"公司的{company_product}承担{core_product}相关流程中的软件、技术或运营支持。",
+            f"两者通过服务环节相连：{core_product}属于产品端，{company_product}提供完成相关流程所需的能力。",
+        )
+    elif relation_kind in {"adjacent_process", "profile_related"}:
+        options = (
+            f"{company_product}与{core_product}处在相邻或配套环节，在同一产业方向中分别承担不同功能。",
+            f"公司的{company_product}和{core_product}属于同一技术场景下的不同工序，关联来自具体的产业协作。",
+            f"两项业务共享部分技术或应用场景，{company_product}位于{core_product}旁侧的产品环节，边界需要区分清楚。",
+        )
+    else:
+        company_roles = infer_business_roles(company_product)
+        core_roles = infer_business_roles(f"{target_name} {core_product}")
+        if company_roles & {"power_semiconductor", "semiconductor_chip"} and core_roles & {
+            "cpo", "optical_module", "optical_component", "optical_chip",
+        }:
+            options = (
+                f"{core_product}承担高速数据传输，{company_product}承担电子系统中的电能控制或基础器件功能，两者共同进入数据中心和算力设备。",
+                f"在高密度算力设备中，{core_product}负责光信号互联，{company_product}负责电能转换、控制或电子器件支持，因此分别对应数据传输与供电控制环节。",
+                f"{company_product}与{core_product}共同服务于算力硬件系统，前者提供电力电子或基础器件能力，后者完成高速光互联。",
+            )
+        else:
+            options = (
+                f"{company_product}对应{core_product}之外的技术与应用配套，两者通过{target_name}所涉及的设备、工序或应用场景形成业务连接。",
+                f"在{target_name}的完整产品体系中，{company_product}与{core_product}承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。",
+                f"{company_product}是公司参与相关产业场景的具体业务，与{core_product}在设备、技术或应用层面形成配合。",
+                f"公司通过{company_product}进入与{core_product}相衔接的产品和应用体系，两项业务在{target_name}相关场景中各自承担功能。",
+            )
+    return choose_narrative_option(options, *narrative_key, salt=f"core-relation-{relation_kind}")
+
+
+def revenue_segments_for_product(
+    segments: list[dict[str, Any]],
+    product: dict[str, Any] | None,
+    product_name: str,
+    relation_kind: str,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    if relation_kind == "mismatch":
+        return [], []
+
+    product_values = unique_ordered((
+        clean_text((product or {}).get("name")),
+        clean_text((product or {}).get("category")),
+        clean_text((product or {}).get("level7ProductName")),
+        clean_text(product_name),
+    ))
+    product_norms = [normalize_text(value) for value in product_values if len(normalize_text(value)) >= 3]
+    product_tags = semantic_business_tags(" ".join(product_values))
+    explicit_direct: list[dict[str, Any]] = []
+    explicit_contained: list[dict[str, Any]] = []
+
+    for segment in segments:
+        segment_name = clean_text(segment.get("name"))
+        segment_norm = normalize_text(segment_name)
+        explicit_match = any(
+            segment_norm in product_norm
+            or product_norm in segment_norm
+            for product_norm in product_norms
+            if len(segment_norm) >= 3
+        )
+        if explicit_match:
+            (
+                explicit_contained
+                if is_broad_revenue_segment(segment_name)
+                else explicit_direct
+            ).append(segment)
+
+    if explicit_direct or explicit_contained:
+        return explicit_direct, explicit_contained
+
+    generic_product_segments = {
+        "器件", "封装成品", "产品与方案", "产品", "主营产品", "设备", "服务",
+    }
+    generic_matches = [
+        segment
+        for segment in segments
+        if clean_text(segment.get("name")) in generic_product_segments
+    ]
+    if generic_matches and relation_kind != "profile_related":
+        return [], [max(generic_matches, key=lambda segment: float(segment.get("sharePct", 0)))]
+
+    semantic_matches = [
+        segment
+        for segment in segments
+        if semantic_business_tags(segment.get("name"))
+        & product_tags
+        & SEMANTIC_SEGMENT_MATCH_TAGS
+    ]
+    if semantic_matches:
+        selected = max(semantic_matches, key=lambda segment: float(segment.get("sharePct", 0)))
+        return (
+            ([], [selected])
+            if is_broad_revenue_segment(clean_text(selected.get("name")))
+            else ([selected], [])
+        )
+
+    # Some company disclosures use functional segment names that do not repeat
+    # the physical product name (for example UCO inside environmental treatment).
+    fallback_direct = [segment for segment in segments if segment.get("relationType") == "direct"]
+    fallback_contained = [segment for segment in segments if segment.get("relationType") == "contained"]
+    if fallback_direct:
+        return [max(fallback_direct, key=lambda segment: float(segment.get("sharePct", 0)))], []
+    if fallback_contained:
+        return [], [max(fallback_contained, key=lambda segment: float(segment.get("sharePct", 0)))]
+    return [], []
+
+
+def compose_core_chain_relationship_analysis(
+    *,
+    event_key: str,
+    event_title: str,
+    stock_name: str,
+    company_evidence: dict[str, Any],
+    company_core_products: list[dict[str, Any]],
+    industry_analysis: dict[str, Any],
+) -> dict[str, str]:
+    core = core_chain_context(company_core_products, industry_analysis)
+    relation = company_evidence.get("businessRelation", {})
+    mapped_products = relation.get("mappedProducts", [])
+    ranked_products = sorted(
+        (
+            (score_product_against_core(product, core), product)
+            for product in mapped_products
+        ),
+        key=lambda item: (-item[0], clean_text(item[1].get("name"))),
+    )
+    best_score, best_product = ranked_products[0] if ranked_products else (0, None)
+    if best_score < 18:
+        best_product = None
+
+    known_products = unique_ordered(
+        clean_text(product)
+        for product in relation.get("knownProducts", [])
+        if clean_text(product)
+    )
+    major_products = split_major_product_names(company_evidence.get("majorProducts"))
+    fallback_products = known_products or major_products
+    product_name = clean_text((best_product or {}).get("name"))
+    if not product_name:
+        product_name = "、".join(fallback_products[:2])
+    if not product_name:
+        product_name = objective_industry_excerpt(
+            company_evidence.get("profileSummary") or company_evidence.get("companyProfile"),
+            56,
+        ).rstrip("。") or "现有产品与服务"
+
+    company_business_text = clean_text(" ".join((
+        company_evidence.get("companyProfile", ""),
+        company_evidence.get("majorProducts", ""),
+        " ".join(known_products),
+        mapped_product_text(best_product or {}),
+    )))
+    relation_kind = classify_core_business_relation(best_product, core, company_business_text)
+    label = relationship_label(relation_kind, company_evidence)
+    core_product = "、".join(core["coreNames"][:2]) or core["targetName"]
+    event_label = clean_text(event_title)
+    for source_term, client_term in (
+        ("半年度报告", "中期业绩"),
+        ("半年报", "中期业绩"),
+        ("年度报告", "年度业绩"),
+        ("年报", "年度业绩"),
+        ("季度报告", "季度业绩"),
+        ("季报", "季度业绩"),
+        ("公告显示", "公告披露"),
+        ("数据显示", "数据反映"),
+        ("资料显示", "公开信息反映"),
+        ("研报认为", "行业研究讨论"),
+        ("客户采购", "产业应用"),
+        ("客户需求", "应用需求"),
+        ("新增订单", "新增业务"),
+        ("订单增加", "业务量增加"),
+        ("利润增长", "经营改善"),
+        ("业绩增长", "经营改善"),
+        ("有望受益", "存在业务关联"),
+        ("建议关注", "涉及"),
+        ("后续重点看", "后续观察"),
+        ("兑现", "落地"),
+    ):
+        event_label = event_label.replace(source_term, client_term)
+    event_focus = compact_text(event_label, 48)
+    narrative_key = (event_key, stock_name, event_focus, product_name, core_product, relation_kind)
+
+    profile_raw = clean_text(
+        company_evidence.get("profileSummary") or company_evidence.get("companyProfile")
+    )
+    profile_candidates: list[str] = []
+    profile_business_terms = (
+        "制造", "加工", "研制", "生产", "提供", "服务", "聚焦", "专注",
+        "从事", "开发", "销售", "运营", "处理", "设备", "产品", "材料",
+        "技术", "软件", "能源", "医药", "电子", "半导体", "通信", "环保",
+    )
+    profile_descriptor_terms = ("上市公司", "集团旗下", "控股子公司", "证券交易所")
+    for clause in re.split(r"[；;。！？]", profile_raw):
+        candidate = re.sub(
+            r"^(?:公司|本公司)?(?:(?:是一家|是)|(?:主营|主要从事|经营范围)\s*[:：]?)?\s*",
+            "",
+            clean_text(clause),
+        ).rstrip("，,：: ")
+        for piece in re.split(r"[，,]", candidate):
+            piece = re.sub(r"^(?:公司|本公司)\s*", "", clean_text(piece)).rstrip("，,：: ")
+            if (
+                len(piece) >= 8
+                and any(term in piece for term in profile_business_terms)
+                and not any(term in piece for term in profile_descriptor_terms)
+                and not any(term in piece for term in RELATIONSHIP_NARRATIVE_FORBIDDEN_PHRASES)
+            ):
+                profile_candidates.append(piece)
+    profile_excerpt = profile_candidates[0] if profile_candidates else ""
+    if profile_excerpt.endswith(("企业", "提供商", "服务商", "制造商", "平台")):
+        profile_clause = f"{stock_name}的业务定位是{profile_excerpt}"
+    elif profile_excerpt.startswith(("聚焦", "专注", "从事", "研制", "生产", "开发", "提供", "运营", "销售")):
+        profile_clause = f"{stock_name}{profile_excerpt}"
+    elif profile_excerpt:
+        profile_clause = f"{stock_name}的业务主要涉及{profile_excerpt}"
+    else:
+        profile_clause = ""
+
+    company_event_options = (
+        *((f"{profile_clause}，其中与“{event_focus}”能够衔接的是{product_name}。",) if profile_clause else ()),
+        *((f"{profile_clause}；放到“{event_focus}”里比较的具体产品是{product_name}。",) if profile_clause else ()),
+        f"{stock_name}和“{event_focus}”的业务交集，主要在{product_name}。",
+        f"就现有产品而言，{stock_name}与“{event_focus}”最接近的一项业务是{product_name}。",
+        f"“{event_focus}”放到{stock_name}身上，需要比较的具体产品是{product_name}。",
+        f"{stock_name}提供的{product_name}，决定了它与“{event_focus}”之间的产业关系。",
+        f"要理解{stock_name}和“{event_focus}”的联系，可以先看公司实际提供的{product_name}。",
+        f"在{stock_name}现有业务里，能够与“{event_focus}”放在同一产业框架下比较的是{product_name}。",
+    )
+    company_plain_options = (
+        *((f"{profile_clause}，与核心产业的具体联系由{product_name}体现。",) if profile_clause else ()),
+        *((f"{profile_clause}，其中可与核心产业衔接的产品是{product_name}。",) if profile_clause else ()),
+        f"公司这一侧对应的具体产品是{product_name}。",
+        f"就实际业务而言，公司提供的是{product_name}。",
+        f"公司与该产业发生联系的产品主要是{product_name}。",
+        f"这里需要辨认的公司产品是{product_name}。",
+        f"公司的业务边界可以从{product_name}这项产品看清。",
+        f"公司现有产品中，{product_name}与这次事件最接近。",
+    )
+    company_event_sentence = choose_narrative_option(
+        company_event_options, *narrative_key, salt="core-company-event-entry"
+    )
+    company_plain_sentence = choose_narrative_option(
+        company_plain_options, *narrative_key, salt="core-company-plain-entry"
+    )
+
+    industry_options = (
+        f"判断{stock_name}与“{event_focus}”的关系，要把公司业务放进{core['targetName']}中比较，具体产品包括{core_product}。",
+        f"对{stock_name}来说，“{event_focus}”指向{core['targetName']}，新闻里的产品主要是{core_product}。",
+        f"{stock_name}面对的比较对象是{core['targetName']}中的{core_product}，这也是“{event_focus}”所说的技术和产品。",
+        f"要说明{stock_name}与“{event_focus}”的产业联系，需要对照{core['targetName']}及其中的{core_product}。",
+        f"把{stock_name}放到产业范围内看，“{event_focus}”涉及{core['targetName']}及其中的{core_product}。",
+        f"分析{stock_name}与“{event_focus}”的联系，所依据的产业范围是{core['targetName']}，事件主要围绕{core_product}展开。",
+    )
+    industry_event_sentence = choose_narrative_option(
+        industry_options, *narrative_key, salt="core-industry-entry"
+    )
+    industry_plain_options = (
+        f"新闻对应的核心产业是{core['targetName']}，代表性产品包括{core_product}。",
+        f"核心产业{core['targetName']}在产品端主要体现为{core_product}。",
+        f"这里比较的是{core['targetName']}中的{core_product}。",
+        f"{core_product}属于本次事件所指的{core['targetName']}。",
+        f"产业这一侧是{core['targetName']}，核心产品为{core_product}。",
+        f"这条新闻的产业范围集中在{core['targetName']}及其{core_product}。",
+    )
+    industry_plain_sentence = choose_narrative_option(
+        industry_plain_options, *narrative_key, salt="core-industry-plain"
+    )
+    relation_sentence = describe_core_product_relation(
+        relation_kind,
+        product_name,
+        core_product,
+        core["targetName"],
+        narrative_key,
+    )
+
+    segments = [
+        segment
+        for segment in company_evidence.get("revenueSegments", [])
+        if float(segment.get("sharePct", 0)) > 0
+        and clean_text(segment.get("name")) not in GENERIC_REVENUE_NAMES
+    ]
+    direct_segments, contained_segments = revenue_segments_for_product(
+        segments,
+        best_product,
+        product_name,
+        relation_kind,
+    )
+    top_segments = segments[:2]
+    if relation_kind == "mismatch" and top_segments:
+        top_text = format_segment_evidence(top_segments, 2)
+        revenue_options = (
+            f"公司主营收入集中在{top_text}，这组业务构成公司参与相关技术与应用场景的经营基础。",
+            f"{top_text}构成公司的主要收入来源，{product_name}是其中可与{core['targetName']}相衔接的产品方向。",
+            f"主营构成以{top_text}为主，公司与{core_product}的联系主要由{product_name}这项具体业务承接。",
+            f"主营结构中，{top_text}是公司的业务主体；放到{core['targetName']}中，对应的连接点是{product_name}。",
+        )
+    elif direct_segments:
+        share = sum(float(segment.get("sharePct", 0)) for segment in direct_segments)
+        names = "、".join(clean_text(segment.get("name")) for segment in direct_segments[:2])
+        revenue_options = (
+            f"主营构成中，{names}合计约占{format_share_pct(share)}，上述产品在公司业务中已有明确位置。",
+            f"{names}约占主营收入{format_share_pct(share)}，收入结构能够对应到这项产品业务。",
+            f"公司约{format_share_pct(share)}的主营收入归在{names}，产品名称与收入分部能够相互对应。",
+        )
+    elif contained_segments:
+        segment = contained_segments[0]
+        name = clean_text(segment.get("name"))
+        share = format_share_pct(float(segment.get("sharePct", 0)))
+        revenue_options = (
+            f"相关产品归入{name}分部，该分部约占主营收入{share}；由于还包含其他产品，这一比例只说明业务归属。",
+            f"主营结构把这项产品放在{name}中，分部占比约{share}，但单一产品的比例并未另行列示。",
+            f"{name}约占主营收入{share}，公司将相关产品与同类业务合并披露，因此可确认分部位置而非单品比例。",
+        )
+    elif top_segments:
+        top_text = format_segment_evidence(top_segments, 2)
+        revenue_options = (
+            f"公司主营收入主要由{top_text}构成，{product_name}的独立比例未在分部结构中列示。",
+            f"主营构成列出的主要板块是{top_text}，其中没有把{product_name}作为独立分部呈现。",
+            f"{top_text}是公司当前的主要收入来源，{product_name}在收入结构中的单独占比并不明确。",
+        )
+    else:
+        revenue_options = (
+            f"现有主营构成没有给出{product_name}对应的独立业务比例。",
+            f"{product_name}在公司的主营收入结构中未形成可单独识别的分部比例。",
+        )
+    revenue_sentence = choose_narrative_option(
+        revenue_options, *narrative_key, salt="core-revenue-scope"
+    )
+
+    order = narrative_variant(*narrative_key, salt="core-paragraph-order", modulo=4)
+    company_sentence = company_event_sentence if order in {0, 2} else company_plain_sentence
+    industry_sentence = industry_plain_sentence if order in {0, 2} else industry_event_sentence
+    sentences_by_order = (
+        (company_sentence, industry_sentence, relation_sentence, revenue_sentence),
+        (industry_sentence, company_sentence, relation_sentence, revenue_sentence),
+        (company_sentence, relation_sentence, revenue_sentence, industry_sentence),
+        (industry_sentence, relation_sentence, company_sentence, revenue_sentence),
+    )
+    analysis = clean_text("".join(
+        ensure_sentence_end(sentence)
+        for sentence in sentences_by_order[order]
+    ))
+    if len(analysis) < 120:
+        short_supplements = (
+            f"上述产品和主营结构共同说明{stock_name}在{core['targetName']}相关产业中的业务位置。",
+            f"公司与新闻主题的关联因此体现在上述产品及其所在的{core['targetName']}产业环节。",
+            f"这使公司的实际业务能够从产品功能和产业分工两方面与{core['targetName']}建立联系。",
+            f"上述业务构成{stock_name}与{core['targetName']}发生联系的产品和产业基础。",
+        )
+        analysis += choose_narrative_option(
+            short_supplements, *narrative_key, salt="core-short-supplement"
+        )
+    if len(analysis) > 420:
+        analysis = compact_text(analysis, 420)
+    forbidden = [
+        phrase for phrase in RELATIONSHIP_NARRATIVE_FORBIDDEN_PHRASES
+        if phrase in analysis
+    ]
+    if forbidden:
+        raise ValueError(f"{stock_name}的业务关联说明包含越界判断: {forbidden}")
+    return {
+        "relationLabel": label,
+        "analysis": finalize_investment_analysis(analysis, stock_name),
+    }
+
+
+def refresh_investment_analyses(
+    draft: dict[str, Any],
+    industry_analysis: dict[str, Any],
+) -> None:
+    for group in draft["investmentOpportunities"]["groups"]:
+        for stock in group["stocks"]:
+            stock.update(compose_core_chain_relationship_analysis(
+                event_key=draft["mainId"],
+                event_title=draft["title"],
+                stock_name=stock["stockName"],
+                company_evidence=stock["companyEvidence"],
+                company_core_products=draft["selectedCoreProducts"],
+                industry_analysis=industry_analysis,
+            ))
+
+
 def build_investment_opportunities(
     event_rows: pd.DataFrame,
     company_paths_by_source_row: dict[str, list[dict[str, str]]],
@@ -2307,14 +2997,11 @@ def build_investment_opportunities(
         reason = clean_reason(row["reason"])
         stock_paths = company_paths_by_source_row.get(row["source_row_number"], [])
         company_evidence = build_company_evidence(row, company_profiles, stock_paths)
-        assessment = build_investment_analysis(
-            event_key,
-            event_title,
-            stock_name or stock_code,
-            reason,
-            company_evidence,
-            filled_stars,
-        )
+        if (
+            company_evidence.get("matchMethod") == "stock_name"
+            and clean_text(company_evidence.get("companyCode"))
+        ):
+            stock_code = normalize_security_code(company_evidence["companyCode"])
         record = {
             "sourceRowNumber": int(row["source_row_number"]),
             "stockCode": stock_code,
@@ -2324,7 +3011,8 @@ def build_investment_opportunities(
             "reason": reason,
             "reasonSourceAvailable": bool(reason),
             "companyEvidence": company_evidence,
-            **assessment,
+            "relationLabel": "宽口径相关",
+            "analysis": "",
         }
         stock_key = (stock_code, stock_name)
         existing = selected_by_stock.get(stock_key)
@@ -2426,6 +3114,9 @@ def audit_investment_narratives(drafts: list[dict[str, Any]]) -> dict[str, int]:
     for draft in drafts:
         main_id = clean_text(draft.get("mainId"))
         event_title = clean_text(draft.get("title"))
+        target_name = clean_text(
+            (((draft.get("industryAnalysis") or {}).get("target")) or {}).get("name")
+        )
         for group in draft["investmentOpportunities"]["groups"]:
             for stock in group["stocks"]:
                 stock_count += 1
@@ -2436,6 +3127,17 @@ def audit_investment_narratives(drafts: list[dict[str, Any]]) -> dict[str, int]:
                     raise ValueError(f"{stock_key}缺少有效关联类型: {label!r}")
                 if category_opening_pattern.search(analysis):
                     raise ValueError(f"{stock_key}仍使用分类标签作固定开场")
+                if not 120 <= len(analysis) <= 420:
+                    raise ValueError(f"{stock_key}业务关联说明长度异常: {len(analysis)}")
+                if target_name and target_name not in analysis:
+                    raise ValueError(f"{stock_key}未说明与核心产业{target_name}的关系")
+                overreach = [
+                    phrase
+                    for phrase in RELATIONSHIP_NARRATIVE_FORBIDDEN_PHRASES
+                    if phrase in analysis
+                ]
+                if overreach:
+                    raise ValueError(f"{stock_key}包含客户或经营结果判断: {overreach}")
                 stale = [phrase for phrase in removed_template_phrases if phrase in analysis]
                 if stale:
                     raise ValueError(f"{stock_key}仍包含已移除模板: {stale}")
@@ -3014,7 +3716,7 @@ def finalize_event(
     if unmapped_stocks:
         caveats.append(f"{len(unmapped_stocks)}只4星A股标的未穿透到事件相关七级产品。")
 
-    industry_analysis = build_industry_analysis(
+    industry_analysis = draft.get("industryAnalysis") or build_industry_analysis(
         company_core_products,
         level5_catalog,
         research_bundle,
@@ -3029,8 +3731,14 @@ def finalize_event(
         core_industry_code,
         level5_catalog,
     )
+    investment_opportunities = draft["investmentOpportunities"]
+    for group in investment_opportunities.get("groups", []):
+        for stock in group.get("stocks", []):
+            business_relation = stock.get("companyEvidence", {}).get("businessRelation", {})
+            business_relation.pop("mappedProducts", None)
+
     return {
-        "schemaVersion": 18,
+        "schemaVersion": 19,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -3061,7 +3769,7 @@ def finalize_event(
         },
         "industryPortfolio": industry_portfolio,
         "industryAnalysis": industry_analysis,
-        "investmentOpportunities": draft["investmentOpportunities"],
+        "investmentOpportunities": investment_opportunities,
         "caveats": caveats,
     }
 
@@ -3114,7 +3822,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--investment-prompt-template",
         type=Path,
-        default=project_root / "prompts" / "investment-opportunity-analyst-v9.md",
+        default=project_root / "prompts" / "investment-opportunity-analyst-v10.md",
     )
     parser.add_argument(
         "--report-corpus",
@@ -3163,10 +3871,12 @@ def main() -> None:
         placeholder
         for placeholder in (
             "{{event_title}}",
+            "{{core_industry_name}}",
+            "{{core_industry_description}}",
+            "{{core_products}}",
+            "{{industry_research_summary}}",
             "{{stock_name}}",
             "{{stock_code}}",
-            "{{filled_stars}}",
-            "{{reason}}",
             "{{company_profile}}",
             "{{major_products}}",
             "{{revenue_composition}}",
@@ -3207,6 +3917,12 @@ def main() -> None:
 
     for draft in drafts:
         draft["selectedCoreProducts"] = choose_core_products(draft["candidates"])
+        draft["industryAnalysis"] = build_industry_analysis(
+            draft["selectedCoreProducts"],
+            level5_catalog,
+            research_by_main_id.get(draft["mainId"]),
+        )
+        refresh_investment_analyses(draft, draft["industryAnalysis"])
     narrative_audit = audit_investment_narratives(drafts)
 
     generated_at = datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
@@ -3249,7 +3965,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 18,
+        "schemaVersion": 19,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),

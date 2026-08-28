@@ -23,8 +23,9 @@ test("renders the event research page and the impact-chain section", async () =>
   assert.match(html, /核心产品、两个相关产业与利好利空判断/);
   assert.match(html, /第三部分 · 投资机会/);
   assert.match(html, /A股3—5星事件投资组合/);
-  assert.match(html, /仅限A股 · 3—5星 · 分组研判/);
-  assert.match(html, /A股3—5星组合与逐股研究判断/);
+  assert.match(html, /仅限A股 · 3—5星 · 业务关联说明/);
+  assert.match(html, /A股3—5星组合与逐股业务关联说明/);
+  assert.match(html, /逐股说明公司产品、主营收入结构与核心产业的具体关系/);
   assert.doesNotMatch(html, /年报验证|证券代码精确匹配|公司简称匹配|缺少 reason|语料说明/);
 });
 
@@ -37,7 +38,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
   for (const mainId of demoMainIds) {
     const fileUrl = new URL(`../public/data/impact-chains/${mainId}.json`, import.meta.url);
     const payload = JSON.parse(await readFile(fileUrl, "utf8"));
-    assert.equal(payload.schemaVersion, 18);
+    assert.equal(payload.schemaVersion, 19);
     assert.equal(payload.event.mainId, mainId);
     assert.equal(payload.status, "ready");
     assert.ok(payload.selection.sourceStockCount > 0);
@@ -88,7 +89,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
       }
     }
     assert.equal(payload.investmentOpportunities.status, "ready");
-    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v9.md");
+    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v10.md");
     assert.ok(payload.investmentOpportunities.totalStockCount > 0);
     assert.ok(payload.investmentOpportunities.groupCount > 0);
     assert.equal(payload.investmentOpportunities.groups.length, payload.investmentOpportunities.groupCount);
@@ -113,12 +114,16 @@ test("ships valid impact-chain data for every visible demo event", async () => {
         assert.match(stock.stockCode, /^\d{6}\.(?:SH|SZ|BJ)$/);
         assert.ok(["真相关", "宽口径相关", "小基数布局", "蹭概念", "错位"].includes(stock.relationLabel));
         assert.ok(stock.analysis.includes(stock.stockName));
-        assert.ok(stock.analysis.length >= 180);
-        assert.ok(stock.analysis.length <= 500);
+        assert.ok(stock.analysis.includes(payload.industryAnalysis.target.name));
+        assert.ok(stock.analysis.length >= 120);
+        assert.ok(stock.analysis.length <= 420);
         assert.equal(stock.analysis.includes("\n"), false);
-        assert.match(stock.analysis, /收入|业务|经营|订单|销量|售价|客户.*采购/);
+        assert.match(stock.analysis, /产品|服务|设备|材料|业务/);
+        assert.match(stock.analysis, /主营|收入/);
+        assert.doesNotMatch(stock.analysis, /客户(?:会|是否|采购|需求)|新增订单|订单增加|利润增长|业绩增长|股价(?:上涨|下跌|表现|波动)|估值(?:提升|下降|重估|空间)|公司估值|建议买入|建议卖出|给予买入评级|给予卖出评级|给出目标价|目标价为|有望受益|建议关注|后续重点看|兑现|事件催化|市场催化|股价催化|催化逻辑|催化因素/);
         assert.doesNotMatch(stock.analysis, /^(?:真相关|宽口径相关|小基数布局|蹭概念|业务错位)[。 ：:]/);
         assert.doesNotMatch(stock.analysis, /不是纯蹭热点，不过只能算宽口径相关/);
+        assert.doesNotMatch(stock.analysis, /没有关系|毫无关系|不相关|不直接相关|业务错位|并不一致|不足以把两者视为直接关联|业务范围并不重合|业务范围不重合|经营主体不在|并非同类产品/);
         investmentOpenings.add(stock.analysis.slice(0, 24));
         for (const phrase of [
           "年报",
@@ -195,6 +200,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
           assert.ok(["direct_segment", "broad_segment", "product_confirmed", "profile_supported", "business_mismatch", "unverified"].includes(stock.companyEvidence.businessRelation.status));
           assert.ok(Array.isArray(stock.companyEvidence.businessRelation.relevantProducts));
           assert.ok(Array.isArray(stock.companyEvidence.businessRelation.knownProducts));
+          assert.equal(Object.hasOwn(stock.companyEvidence.businessRelation, "mappedProducts"), false);
         } else {
           assert.equal(stock.companyEvidence.matchMethod, "none");
           assert.equal(stock.companyEvidence.companyProfile, "");
@@ -277,7 +283,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   const manifest = JSON.parse(await readFile(manifestUrl, "utf8"));
   const statusTotal = Object.values(manifest.statusCounts).reduce((sum, value) => sum + value, 0);
 
-  assert.equal(manifest.schemaVersion, 18);
+  assert.equal(manifest.schemaVersion, 19);
   assert.equal(manifest.eventCount, 813);
   assert.equal(manifest.events.length, manifest.eventCount);
   assert.equal(statusTotal, manifest.eventCount);
@@ -288,7 +294,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   );
   assert.equal(manifest.source.companyProfiles, "2025年报公司简介和主营业务占比.xlsx");
   assert.equal(manifest.source.companyProfileCount, 5499);
-  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v9.md");
+  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v10.md");
   assert.equal(Object.hasOwn(manifest.source, "edges"), false);
   assert.ok(manifest.events.every((event) => event.relatedIndustryCount >= 0 && event.relatedIndustryCount <= 2));
   assert.ok(manifest.events.some((event) => event.relatedIndustryCount === 2));
@@ -312,28 +318,38 @@ test("keeps the reusable prompt internal instead of publishing it to visitors", 
 });
 
 test("keeps the investment analyst prompt structured and internal", async () => {
-  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v9.md", import.meta.url);
+  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v10.md", import.meta.url);
   const prompt = await readFile(promptUrl, "utf8");
 
-  for (const placeholder of ["event_title", "stock_name", "stock_code", "filled_stars", "reason", "company_profile", "major_products", "revenue_composition", "mapped_products", "revenue_segment_relations"]) {
+  for (const placeholder of ["event_title", "core_industry_name", "core_industry_description", "core_products", "industry_research_summary", "stock_name", "stock_code", "company_profile", "major_products", "revenue_composition", "mapped_products", "revenue_segment_relations"]) {
     assert.ok(prompt.includes(`{{${placeholder}}}`));
   }
-  for (const requirement of ["你真正要讲清楚的事", "先理解生意，再写文字", "使用业务资料，不复述业务资料", "允许明确否定", "语言亲民"]) {
+  for (const requirement of ["要写清楚的内容", "穿透名称解释实物和工序", "产业研究只用于补足产业知识", "只写能够成立的关联路径", "只解释业务关联，不推演经营结果", "自由选择切入点", "公司概况用于形成自然语境"]) {
     assert.match(prompt, new RegExp(requirement));
   }
-  for (const requirement of ["输入（只供你理解", "正文中严禁介绍来源", "内部处理过程"]) {
+  for (const requirement of ["输入（只供你理解", "正文中严禁介绍字段", "内部过程"]) {
     assert.match(prompt, new RegExp(requirement));
   }
-  for (const requirement of ["公司到底卖什么", "客户为什么会买", "主营业务结构只用来判断影响大小", "不要把输入中的产品和百分比逐项抄一遍", "新闻标题最多出现一次"]) {
+  for (const requirement of ["公司实际提供的产品或服务是什么", "在同一技术与应用场景中承担不同功能", "不判断客户会不会购买", "星级与系统关联理由不参与正文写作", "不要给每只股票套相同的开头", "不要为了拉近关系编造公司没有的产品"]) {
     assert.match(prompt, new RegExp(requirement));
   }
-  for (const forbiddenSkeleton of ["最终要落到", "没有单独拆出", "收入容器", "有望受益", "固定三段论"]) {
+  for (const forbiddenSkeleton of ["有望受益", "首先、其次、最后", "从……来看", "真正相关的是", "买卖建议"]) {
     assert.match(prompt, new RegExp(forbiddenSkeleton));
   }
-  assert.match(prompt, /180—360字/);
+  assert.match(prompt, /160—340字/);
 
-  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v9.md", import.meta.url);
+  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v10.md", import.meta.url);
   await assert.rejects(readFile(publicPromptUrl, "utf8"), { code: "ENOENT" });
+});
+
+test("shows each stock as one objective business-relationship paragraph", async () => {
+  const pageUrl = new URL("../app/page.tsx", import.meta.url);
+  const page = await readFile(pageUrl, "utf8");
+
+  assert.match(page, />业务关联说明</);
+  assert.doesNotMatch(page, />研究判断</);
+  assert.doesNotMatch(page, /data-relation=/);
+  assert.doesNotMatch(page, /查看完整公司概况|查看完整收入构成|不进一步外推利润弹性/);
 });
 
 test("presents industry analysis as two uninterrupted customer-facing paragraphs", async () => {

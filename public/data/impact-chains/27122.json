@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 18,
-  "generatedAt": "2026-08-27T11:16:12+08:00",
+  "schemaVersion": 19,
+  "generatedAt": "2026-08-28T15:50:34+08:00",
   "status": "ready",
   "event": {
     "mainId": "27122",
@@ -834,7 +834,7 @@
     "companyProfileMatchedCount": 9,
     "companyProfileUnmatchedCount": 0,
     "sourceWorkbook": "2025年报公司简介和主营业务占比.xlsx",
-    "analysisPromptVersion": "investment-opportunity-analyst-v9.md",
+    "analysisPromptVersion": "investment-opportunity-analyst-v10.md",
     "groups": [
       {
         "filledStars": 4,
@@ -880,15 +880,30 @@
                 "relevantProducts": [
                   {
                     "name": "服务器CPU",
-                    "category": "计算控制芯片"
+                    "category": "计算控制芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 服务器CPU",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140007907",
+                    "level7ProductName": "服务器CPU"
                   },
                   {
                     "name": "数据中心CPU",
-                    "category": "计算控制芯片"
+                    "category": "计算控制芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 数据中心CPU",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140215344",
+                    "level7ProductName": "数据中心CPU"
                   },
                   {
                     "name": "工作站CPU",
-                    "category": "计算控制芯片"
+                    "category": "计算控制芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 工作站CPU",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140170230",
+                    "level7ProductName": "工作站CPU"
                   }
                 ],
                 "knownProducts": [
@@ -902,7 +917,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "海光信息真正与“英特尔上调高端服务器CPU价格超10%”相连的是服务器CPU。AI应用使用量增加会提高算力需求，客户可能因此增加对服务器CPU的采购。公司存在接单机会，但受影响的是其中一块业务。公司收入主要来自高端处理器，服务器CPU只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。付费用户增加会推高应用方的算力和软件投入，服务器CPU只有进入客户采购清单，才会增加公司的订单或服务收入。"
+            "analysis": "海光信息面对的比较对象是IC设计中的工作站CPU、数据中心CPU，这也是“英特尔上调高端服务器CPU价格超10%”所说的技术和产品。这里的连接落在产品本身：数据中心CPU归在IC设计内部，不是外围配套。海光信息的业务主要涉及业务是研发、设计和销售应用于服务器、工作站等计算、存储设备中的高端处理器，与核心产业的具体联系由数据中心CPU体现。公司约99.9%的主营收入归在高端处理器，产品名称与收入分部能够相互对应。"
           },
           {
             "sourceRowNumber": 20398,
@@ -959,7 +974,12 @@
                 "relevantProducts": [
                   {
                     "name": "交换机连接器",
-                    "category": "通信连接器"
+                    "category": "通信连接器",
+                    "hierarchyPath": "电子 > 元件 > 被动元件 > 连接器 > 通信连接器 > 交换机连接器",
+                    "level5IndustryCode": "1210003144",
+                    "level5IndustryName": "连接器",
+                    "level7ProductCode": "1140194878",
+                    "level7ProductName": "交换机连接器"
                   }
                 ],
                 "knownProducts": [
@@ -976,8 +996,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "“英特尔上调高端服务器CPU价格超10%”会影响华丰科技，原因很具体：公司销售交换机连接器。CPO设备需要精密光连接和耦合部件，这类产品会直接装进设备。相关的连接器合计约占收入28.72%，不是小到可以忽略，也没有大到决定整家公司。CPO设备量产会增加对光纤连接、耦合和光器件的采购，交换机连接器销量可能随之增长，客户份额和批量良率决定公司实际赚到多少。新闻可以改变市场想象，但公司赚不赚钱仍取决于交换机连接器有没有新增销量和合理利润。"
+            "relationLabel": "宽口径相关",
+            "analysis": "把华丰科技放到产业范围内看，“英特尔上调高端服务器CPU价格超10%”涉及IC设计及其中的工作站CPU、数据中心CPU。交换机连接器作为材料、芯片或功能部件进入工作站CPU、数据中心CPU，两者形成清晰的组成关系。就实际业务而言，公司提供的是交换机连接器。主营构成中，连接器合计约占28.72%，上述产品在公司业务中已有明确位置。"
           },
           {
             "sourceRowNumber": 20401,
@@ -1022,27 +1042,57 @@
                 "relevantProducts": [
                   {
                     "name": "AI服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > AI服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140112576",
+                    "level7ProductName": "AI服务器"
                   },
                   {
                     "name": "存储服务器",
-                    "category": "数据管理系统"
+                    "category": "数据管理系统",
+                    "hierarchyPath": "计算机 > 计算机应用 > 软件开发 > 专业应用软件 > 数据管理系统 > 存储服务器",
+                    "level5IndustryCode": "1200001387",
+                    "level5IndustryName": "专业应用软件",
+                    "level7ProductCode": "1140121599",
+                    "level7ProductName": "存储服务器"
                   },
                   {
                     "name": "关键应用主机",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 关键应用主机",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140108739",
+                    "level7ProductName": "关键应用主机"
                   },
                   {
                     "name": "液冷服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 液冷服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140202373",
+                    "level7ProductName": "液冷服务器"
                   },
                   {
                     "name": "超节点服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 超节点服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140220847",
+                    "level7ProductName": "超节点服务器"
                   },
                   {
                     "name": "边缘服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 边缘服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140112577",
+                    "level7ProductName": "边缘服务器"
                   }
                 ],
                 "knownProducts": [
@@ -1059,8 +1109,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "真相关",
-            "analysis": "“英特尔上调高端服务器CPU价格超10%”会影响浪潮信息，原因很具体：公司销售AI服务器。数据中心采用液冷时需要采购冷却和温控产品，AI服务器就是系统中会用到的设备或材料。服务器产品合计约占收入93.82%，相关产品本身就是主业，新闻的影响不只停留在板块情绪。数据中心提高液冷使用量，会多买AI服务器，公司可能增加订单；定制成本、材料价格和客户压价会影响新增收入能留下多少利润。"
+            "relationLabel": "宽口径相关",
+            "analysis": "把浪潮信息放到产业范围内看，“英特尔上调高端服务器CPU价格超10%”涉及IC设计及其中的工作站CPU、数据中心CPU。浪潮信息的业务定位是作为全球领先的IT基础设施产品、方案和服务提供商，其中可与核心产业衔接的产品是AI服务器。AI服务器属于生产配套，用在工作站CPU、数据中心CPU的加工、装配或制造环境中，两项业务通过具体工序衔接。主营构成中，服务器产品合计约占93.82%，上述产品在公司业务中已有明确位置。"
           }
         ]
       },
@@ -1095,7 +1145,12 @@
                 "relevantProducts": [
                   {
                     "name": "覆铜板(CCL)",
-                    "category": "电路板材料"
+                    "category": "电路板材料",
+                    "hierarchyPath": "电子 > 元件 > 印制电路板 > 电路板材料 > 电路板材料 > 覆铜板(CCL)",
+                    "level5IndustryCode": "1200001366",
+                    "level5IndustryName": "电路板材料",
+                    "level7ProductCode": "1140022867",
+                    "level7ProductName": "覆铜板(CCL)"
                   }
                 ],
                 "knownProducts": [
@@ -1107,8 +1162,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "宽口径相关",
-            "analysis": "生益科技与“英特尔上调高端服务器CPU价格超10%”有实际业务联系，连接点是覆铜板(CCL)。新闻涉及的客户在增加建设或采购时会用到覆铜板(CCL)，因此公司存在真实的销售关系。这项需求只会影响相关产品。市场缺货或涨价会让客户增加覆铜板(CCL)采购，公司可能多卖货或提高售价；采购成本和库存变化会决定利润是否同步增加。简单说，真正影响公司收入的是客户对覆铜板(CCL)的实际采购量，而不是新闻本身有多热。"
+            "relationLabel": "小基数布局",
+            "analysis": "生益科技提供的PCB(印刷电路板)、粘结片，决定了它与“英特尔上调高端服务器CPU价格超10%”之间的产业关系。PCB(印刷电路板)、粘结片与工作站CPU、数据中心CPU处在相邻或配套环节，在同一产业方向中分别承担不同功能。现有主营构成没有给出PCB(印刷电路板)、粘结片对应的独立业务比例。工作站CPU、数据中心CPU属于本次事件所指的IC设计。"
           },
           {
             "sourceRowNumber": 20399,
@@ -1177,8 +1232,8 @@
                 "containedSegmentCount": 0
               }
             },
-            "relationLabel": "宽口径相关",
-            "analysis": "航天电器与“英特尔上调高端服务器CPU价格超10%”有实际业务联系，连接点是军用连接器。CPO系统需要激光器和光芯片提供光源，这类部件会随设备出货一起采购。这项需求只会影响相关产品。连接器及互连一体化产品、电机与控制组件构成公司的主要收入，军用连接器即使出现新增需求，也不会自动带动其他业务一起增长。CPO出货增加会提高对激光器和光芯片的采购需求，军用连接器能否多卖，还要看产品规格是否进入客户方案以及批量生产的良率。"
+            "relationLabel": "小基数布局",
+            "analysis": "就现有产品而言，航天电器与“英特尔上调高端服务器CPU价格超10%”最接近的一项业务是固体继电器、军用连接器。固体继电器、军用连接器与工作站CPU、数据中心CPU处在相邻或配套环节，在同一产业方向中分别承担不同功能。公司约4.13%的主营收入归在继电器，产品名称与收入分部能够相互对应。这里比较的是IC设计中的工作站CPU、数据中心CPU。"
           },
           {
             "sourceRowNumber": 20400,
@@ -1235,11 +1290,21 @@
                 "relevantProducts": [
                   {
                     "name": "专属云平台",
-                    "category": "PaaS"
+                    "category": "PaaS",
+                    "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > PaaS > 专属云平台",
+                    "level5IndustryCode": "1210003145",
+                    "level5IndustryName": "云计算",
+                    "level7ProductCode": "1140200637",
+                    "level7ProductName": "专属云平台"
                   },
                   {
                     "name": "BIOS固件",
-                    "category": "固件"
+                    "category": "固件",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 固件 > 固件 > BIOS固件",
+                    "level5IndustryCode": "1210003336",
+                    "level5IndustryName": "固件",
+                    "level7ProductCode": "1140076679",
+                    "level7ProductName": "BIOS固件"
                   }
                 ],
                 "knownProducts": [
@@ -1255,7 +1320,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“英特尔上调高端服务器CPU价格超10%”能影响卓易信息，不是因为题材名称相近，而是公司确实提供专属云平台。AI应用使用量增加会提高算力需求，客户可能因此增加对专属云平台的采购。只是这项产品目前还不能代表公司的全部生意。公司收入主要来自云计算设备核心固件业务、PB业务，专属云平台只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。付费用户增加会推高应用方的算力和软件投入，专属云平台只有进入客户采购清单，才会增加公司的订单或服务收入。"
+            "analysis": "在卓易信息现有业务里，能够与“英特尔上调高端服务器CPU价格超10%”放在同一产业框架下比较的是智能体开发平台。公司的智能体开发平台承担工作站CPU、数据中心CPU相关流程中的软件、技术或运营支持。公司约17.87%的主营收入归在物联网云服务，产品名称与收入分部能够相互对应。工作站CPU、数据中心CPU属于本次事件所指的IC设计。"
           },
           {
             "sourceRowNumber": 20402,
@@ -1300,27 +1365,57 @@
                 "relevantProducts": [
                   {
                     "name": "液冷服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 液冷服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140202373",
+                    "level7ProductName": "液冷服务器"
                   },
                   {
                     "name": "通用服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 通用服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140119057",
+                    "level7ProductName": "通用服务器"
                   },
                   {
                     "name": "专属云平台",
-                    "category": "PaaS"
+                    "category": "PaaS",
+                    "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > PaaS > 专属云平台",
+                    "level5IndustryCode": "1210003145",
+                    "level5IndustryName": "云计算",
+                    "level7ProductCode": "1140200637",
+                    "level7ProductName": "专属云平台"
                   },
                   {
                     "name": "云存储服务",
-                    "category": "IaaS"
+                    "category": "IaaS",
+                    "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > IaaS > 云存储服务",
+                    "level5IndustryCode": "1210003145",
+                    "level5IndustryName": "云计算",
+                    "level7ProductCode": "1140200638",
+                    "level7ProductName": "云存储服务"
                   },
                   {
                     "name": "云数据库平台服务",
-                    "category": "PaaS"
+                    "category": "PaaS",
+                    "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > PaaS > 云数据库平台服务",
+                    "level5IndustryCode": "1210003145",
+                    "level5IndustryName": "云计算",
+                    "level7ProductCode": "1140200640",
+                    "level7ProductName": "云数据库平台服务"
                   },
                   {
                     "name": "云服务器",
-                    "category": "IaaS"
+                    "category": "IaaS",
+                    "hierarchyPath": "计算机 > 计算机应用 > IT服务 > 云计算 > IaaS > 云服务器",
+                    "level5IndustryCode": "1210003145",
+                    "level5IndustryName": "云计算",
+                    "level7ProductCode": "1140018544",
+                    "level7ProductName": "云服务器"
                   }
                 ],
                 "knownProducts": [
@@ -1338,7 +1433,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "“英特尔上调高端服务器CPU价格超10%”能影响中科曙光，不是因为题材名称相近，而是公司确实提供液冷服务器。数据中心采用液冷时需要采购冷却和温控产品，液冷服务器就是系统中会用到的设备或材料。只是这项产品目前还不能代表公司的全部生意。公司收入主要来自IT设备、围绕高端计算机的软件开发、系统集成及技术服务，液冷服务器只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。数据中心提高液冷使用量，会多买液冷服务器，公司可能增加订单；定制成本、材料价格和客户压价会影响新增收入能留下多少利润。"
+            "analysis": "要说明中科曙光与“英特尔上调高端服务器CPU价格超10%”的产业联系，需要对照IC设计及其中的工作站CPU、数据中心CPU。公司现有产品中，云数据库平台服务与这次事件最接近。公司的云数据库平台服务承担工作站CPU、数据中心CPU相关流程中的软件、技术或运营支持。围绕高端计算机的软件开发、系统集成及技术服务约占主营收入16.35%，收入结构能够对应到这项产品业务。"
           },
           {
             "sourceRowNumber": 20404,
@@ -1389,27 +1484,57 @@
                 "relevantProducts": [
                   {
                     "name": "AI服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > AI服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140112576",
+                    "level7ProductName": "AI服务器"
                   },
                   {
                     "name": "超节点服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 超节点服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140220847",
+                    "level7ProductName": "超节点服务器"
                   },
                   {
                     "name": "边缘服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 边缘服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140112577",
+                    "level7ProductName": "边缘服务器"
                   },
                   {
                     "name": "通用服务器",
-                    "category": "服务器"
+                    "category": "服务器",
+                    "hierarchyPath": "计算机 > 计算机设备 > 计算机设备 > 硬件设备 > 服务器 > 通用服务器",
+                    "level5IndustryCode": "1200001368",
+                    "level5IndustryName": "硬件设备",
+                    "level7ProductCode": "1140119057",
+                    "level7ProductName": "通用服务器"
                   },
                   {
                     "name": "IPv6交换机",
-                    "category": "网络分流设备"
+                    "category": "网络分流设备",
+                    "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > IPv6交换机",
+                    "level5IndustryCode": "1200001395",
+                    "level5IndustryName": "网络设备",
+                    "level7ProductCode": "1140216095",
+                    "level7ProductName": "IPv6交换机"
                   },
                   {
                     "name": "IPv6路由器",
-                    "category": "网络分流设备"
+                    "category": "网络分流设备",
+                    "hierarchyPath": "通信 > 通信设备 > 通信传输设备 > 网络设备 > 网络分流设备 > IPv6路由器",
+                    "level5IndustryCode": "1200001395",
+                    "level5IndustryName": "网络设备",
+                    "level7ProductCode": "1140216096",
+                    "level7ProductName": "IPv6路由器"
                   }
                 ],
                 "knownProducts": [
@@ -1427,7 +1552,7 @@
               }
             },
             "relationLabel": "宽口径相关",
-            "analysis": "看紫光股份的实际产品，公司确实提供AI服务器，与“英特尔上调高端服务器CPU价格超10%”不是只沾名字。AI应用使用量增加会提高算力需求，客户可能因此增加对AI服务器的采购。公司其他业务不会因此一起增长。公司收入主要来自ICT基础设施及服务、IT产品分销与供应链服务，AI服务器只是其中的具体产品，所以消息影响的是这一部分销售，不是公司全部收入。AI应用用户和调用量增加，会提高软件服务或算力需求，AI服务器可能增加销量；公司能分到多少取决于客户是否实际采购它的产品。"
+            "analysis": "“英特尔上调高端服务器CPU价格超10%”放到紫光股份身上，需要比较的具体产品是AI服务器。产业这一侧是IC设计，核心产品为工作站CPU、数据中心CPU。公司的AI服务器服务于工作站CPU、数据中心CPU的生产过程，产业关系体现为制造设备和工程条件的配套。主营结构把这项产品放在ICT基础设施及服务中，分部占比约79.43%，但单一产品的比例并未另行列示。"
           },
           {
             "sourceRowNumber": 20406,
@@ -1472,27 +1597,57 @@
                 "relevantProducts": [
                   {
                     "name": "服务器CPU",
-                    "category": "计算控制芯片"
+                    "category": "计算控制芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 计算控制芯片 > 服务器CPU",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140007907",
+                    "level7ProductName": "服务器CPU"
                   },
                   {
                     "name": "内存扩展控制器",
-                    "category": "接口芯片"
+                    "category": "接口芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 接口芯片 > 内存扩展控制器",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140215305",
+                    "level7ProductName": "内存扩展控制器"
                   },
                   {
                     "name": "SPD Hub",
-                    "category": "存储器芯片"
+                    "category": "存储器芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 存储器芯片 > SPD Hub",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140215406",
+                    "level7ProductName": "SPD Hub"
                   },
                   {
                     "name": "DDR PMIC",
-                    "category": "电源管理芯片"
+                    "category": "电源管理芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 电源管理芯片 > DDR PMIC",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140215267",
+                    "level7ProductName": "DDR PMIC"
                   },
                   {
                     "name": "PCIeRetimer芯片",
-                    "category": "信号链芯片"
+                    "category": "信号链芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 信号链芯片 > PCIeRetimer芯片",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140157923",
+                    "level7ProductName": "PCIeRetimer芯片"
                   },
                   {
                     "name": "可信计算芯片",
-                    "category": "安全芯片"
+                    "category": "安全芯片",
+                    "hierarchyPath": "电子 > 半导体 > 集成电路 > IC设计 > 安全芯片 > 可信计算芯片",
+                    "level5IndustryCode": "1200001282",
+                    "level5IndustryName": "IC设计",
+                    "level7ProductCode": "1140023130",
+                    "level7ProductName": "可信计算芯片"
                   }
                 ],
                 "knownProducts": [
@@ -1510,7 +1665,7 @@
               }
             },
             "relationLabel": "真相关",
-            "analysis": "看澜起科技与“英特尔上调高端服务器CPU价格超10%”的关系，关键不是行业名称相似，而是公司已经在卖服务器CPU。新闻涉及的客户在增加建设或采购时会用到服务器CPU，因此公司存在真实的销售关系。公司约94.18%的收入来自内存接口芯片，这不是边角业务，需求增减会比较直接地反映到收入上。市场缺货或涨价会让客户增加服务器CPU采购，公司可能多卖货或提高售价；采购成本和库存变化会决定利润是否同步增加。"
+            "analysis": "澜起科技的业务主要涉及是国际领先的数据处理及互连芯片设计公司，其中与“英特尔上调高端服务器CPU价格超10%”能够衔接的是服务器CPU。服务器CPU本身属于IC设计，是这一核心产业中的具体产品之一。公司约94.18%的主营收入归在内存接口芯片，产品名称与收入分部能够相互对应。这条新闻的产业范围集中在IC设计及其工作站CPU、数据中心CPU。"
           }
         ]
       }

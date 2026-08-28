@@ -317,20 +317,11 @@ function createInvestmentPlainText(impact: ImpactChainRecord | null) {
 
   const groups = opportunities.groups.flatMap((group) => [
     `【${group.filledStars}星｜${group.name}｜${group.stockCount}只】`,
-    ...group.stocks.flatMap((stock) => {
-      const evidence = stock.companyEvidence;
-      const revenue = evidence.revenueSegments
-        .slice(0, 6)
-        .map((segment) => `${segment.name} ${segment.sharePct.toFixed(2).replace(/\.00$/, "")}%`)
-        .join("、");
-      return [
-        `${stock.stockName}${stock.stockCode ? `（${stock.stockCode}）` : ""} · ${stock.rating} · ${stock.relationLabel}`,
-        stock.analysis,
-        evidence.matched ? `公司概况：${evidence.profileSummary || evidence.companyProfile}` : "公司概况：暂缺。",
-        evidence.matched ? `主营业务结构：${revenue || "暂无可展示的分部占比"}` : "",
-        "",
-      ].filter(Boolean);
-    }),
+    ...group.stocks.flatMap((stock) => [
+      `${stock.stockName}${stock.stockCode ? `（${stock.stockCode}）` : ""} · ${stock.rating}`,
+      stock.analysis,
+      "",
+    ]),
   ]);
   return [
     "（三）投资机会",
@@ -382,63 +373,13 @@ function InvestmentOpportunitiesPanel({ opportunities }: { opportunities: Invest
                       {stock.stockCode && <span>{stock.stockCode}</span>}
                     </div>
                     <div className="stock-assessment-meta">
-                      <span className="relation-label" data-relation={stock.relationLabel}>{stock.relationLabel}</span>
                       <span className="stock-rating">{stock.rating}</span>
                     </div>
                   </header>
                   <div className="investment-analysis-block">
-                    <span>研究判断</span>
+                    <span>业务关联说明</span>
                     <p className="investment-analysis">{stock.analysis}</p>
                   </div>
-
-                  {stock.companyEvidence.matched ? (
-                    <div className="company-evidence">
-                      <section className="company-profile-block">
-                        <header>
-                          <span>公司概况</span>
-                        </header>
-                        <p>{stock.companyEvidence.profileSummary || stock.companyEvidence.companyProfile}</p>
-                        {stock.companyEvidence.companyProfile !== stock.companyEvidence.profileSummary && (
-                          <details>
-                            <summary>查看完整公司概况</summary>
-                            <p>{stock.companyEvidence.companyProfile}</p>
-                          </details>
-                        )}
-                      </section>
-
-                      <section className="revenue-mix-block">
-                        <header>
-                          <span>主营业务结构</span>
-                        </header>
-                        {stock.companyEvidence.revenueSegments.length > 0 ? (
-                          <div className="revenue-segments">
-                            {stock.companyEvidence.revenueSegments.slice(0, 6).map((segment) => {
-                              const barWidth = Math.max(0, Math.min(100, segment.sharePct));
-                              return (
-                                <div
-                                  className={segment.relationType === "direct" ? "revenue-segment related" : segment.relationType === "contained" ? "revenue-segment contained" : "revenue-segment"}
-                                  key={`${segment.name}-${segment.sharePct}`}
-                                >
-                                  <div><span>{segment.name}</span><strong>{segment.sharePct.toFixed(2).replace(/\.00$/, "")}%</strong></div>
-                                  <i aria-hidden="true"><b style={{ width: `${barWidth}%` }} /></i>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        ) : (
-                          <p className="evidence-note">暂无可展示的主营收入分部。</p>
-                        )}
-                        {stock.companyEvidence.revenueSegments.length > 6 && (
-                          <details>
-                            <summary>查看完整收入构成</summary>
-                            <p>{stock.companyEvidence.revenueComposition}</p>
-                          </details>
-                        )}
-                      </section>
-                    </div>
-                  ) : (
-                    <p className="company-evidence-missing">相关业务收入权重尚未明确，因此不进一步外推利润弹性。</p>
-                  )}
                 </article>
               ))}
             </div>
@@ -455,13 +396,13 @@ function createPlainText(event: EventRecord, impact: ImpactChainRecord | null) {
     .map((section) => `【${section.number} ${section.kicker}】\n${section.body}`)
     .join("\n\n");
 
-  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n【新闻原文】\n${getNewsOriginal(event.sourceReason)}\n\n${sections}\n\n${createImpactPlainText(impact)}\n\n${createInvestmentPlainText(impact)}\n\n本内容用于解释事件与经营变量之间的关系，不构成个股买卖建议。`;
+  return `事件研究报告\n\n（一）事件基本情况\n\n${event.title}\n${formatDate(event.date)}｜${event.industry}｜热度 ${event.frequencyLevel}\n\n【新闻原文】\n${getNewsOriginal(event.sourceReason)}\n\n${sections}\n\n${createImpactPlainText(impact)}\n\n${createInvestmentPlainText(impact)}\n\n本内容用于解释事件、产业与公司业务之间的关系，不构成个股买卖建议。`;
 }
 
 const reportParts = [
   { number: "一", title: "事件基本情况", description: "AI事件事实与关联研报摘要", state: "已接入" },
   { number: "二", title: "影响产业链", description: "核心产品、两个相关产业与利好利空判断", state: "已接入" },
-  { number: "三", title: "投资机会", description: "A股3—5星组合与逐股研究判断", state: "已接入" },
+  { number: "三", title: "投资机会", description: "A股3—5星组合与逐股业务关联说明", state: "已接入" },
 ] as const;
 
 export default function Home() {
@@ -726,9 +667,9 @@ export default function Home() {
                 <div>
                   <p className="article-kicker">第三部分 · 投资机会</p>
                   <h2 id={`${selected.id}-investment-title`}>A股3—5星事件投资组合</h2>
-                  <p>只保留沪深北交易所的3至5星A股标的，按相关强度从高到低分组，并给出逐股的业务联系、业绩传导与关键约束。</p>
+                  <p>只保留沪深北交易所的3至5星A股标的，按相关强度从高到低分组，逐股说明公司产品、主营收入结构与核心产业的具体关系。</p>
                 </div>
-                <span className="impact-method">仅限A股 · 3—5星 · 分组研判</span>
+                <span className="impact-method">仅限A股 · 3—5星 · 业务关联说明</span>
               </header>
 
               {impactLoadState === "loading" && (
