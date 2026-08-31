@@ -2342,6 +2342,21 @@ RELATIONSHIP_NARRATIVE_FORBIDDEN_PHRASES = (
     "业务范围不重合",
     "经营主体不在",
     "并非同类产品",
+    "单一产品的比例",
+    "只说明业务归属",
+    "合并披露",
+    "未在分部结构中列示",
+    "没有把",
+    "作为独立分部",
+    "单独占比",
+    "未形成可单独识别",
+    "需要比较",
+    "需要对照",
+    "这里需要辨认",
+    "面对的比较对象",
+    "判断关系",
+    "判断依据",
+    "公司概况",
 )
 
 
@@ -2530,79 +2545,313 @@ def describe_core_product_relation(
     target_name: str,
     narrative_key: tuple[Any, ...],
 ) -> str:
-    if relation_kind == "same_product":
-        options = (
-            f"{company_product}本身属于{target_name}，是这一核心产业中的具体产品之一。",
-            f"这里的连接落在产品本身：{company_product}归在{target_name}内部，不是外围配套。",
-            f"按产品实质区分，{company_product}就是{target_name}所包含的一类实际产品。",
-        )
-    elif relation_kind == "same_industry":
-        options = (
-            f"{company_product}与{core_product}同属{target_name}，两者可能承担不同功能，但都在这一产业的产品体系内。",
-            f"公司的{company_product}位于{target_name}内部，和新闻所指的{core_product}是同一产业下的不同产品环节。",
-            f"{target_name}不只包含{core_product}，{company_product}也是其中一类实际产品，因此两者属于产业内部关联。",
-        )
-    elif relation_kind == "testing_support":
-        options = (
-            f"{company_product}用于{core_product}制造或装配过程中的检测、校准与耦合，用来确认产品功能和连接精度。",
-            f"两者的接口出现在生产环节：{core_product}是被制造的产品，{company_product}承担测试或精密连接工作。",
-            f"公司提供的{company_product}属于工艺设备，作用是完成{core_product}生产中的测试、检测或耦合。",
-        )
-    elif relation_kind == "production_support":
-        options = (
-            f"{company_product}属于生产配套，用在{core_product}的加工、装配或制造环境中，两项业务通过具体工序衔接。",
-            f"{core_product}是产业链中的产品端，{company_product}提供制造设备或工程条件，两者通过生产工序发生联系。",
-            f"公司的{company_product}服务于{core_product}的生产过程，产业关系体现为制造设备和工程条件的配套。",
-        )
-    elif relation_kind == "component_or_material":
-        options = (
-            f"{company_product}作为材料、芯片或功能部件进入{core_product}，两者形成清晰的组成关系。",
-            f"{core_product}需要由多个器件和材料构成，公司的{company_product}对应其中的功能部件或基础材料。",
-            f"公司与{target_name}的连接点在{company_product}：它构成{core_product}的一部分，或用于该产品的制造。",
-        )
-    elif relation_kind == "equipment_using_core_material":
-        options = (
-            f"{core_product}属于制造过程使用的材料或工艺介质，{company_product}则是承载相关加工步骤的设备，两者在生产工序中配合使用。",
-            f"公司提供的是{company_product}，核心产业提供的是{core_product}；前者完成加工或检测，后者作为材料或介质进入同一制造流程。",
-            f"{company_product}与{core_product}的关系，是设备与工艺材料共同服务于相应制造步骤。",
-        )
-    elif relation_kind == "uses_core_material":
-        options = (
-            f"{core_product}是制造{company_product}所需的基础材料或工艺介质，公司产品位于其后的器件制造环节。",
-            f"两者是前后工序关系：{core_product}先作为生产材料，经过加工后形成{company_product}这类器件或芯片。",
-            f"公司的{company_product}使用{core_product}这类材料完成制造，位于其后的器件或芯片环节。",
-        )
-    elif relation_kind == "service_support":
-        options = (
-            f"{company_product}提供的是软件或专业服务，作用在{core_product}的研发、生产或运行环节，与核心产品形成配套关系。",
-            f"公司的{company_product}承担{core_product}相关流程中的软件、技术或运营支持。",
-            f"两者通过服务环节相连：{core_product}属于产品端，{company_product}提供完成相关流程所需的能力。",
-        )
-    elif relation_kind in {"adjacent_process", "profile_related"}:
-        options = (
-            f"{company_product}与{core_product}处在相邻或配套环节，在同一产业方向中分别承担不同功能。",
-            f"公司的{company_product}和{core_product}属于同一技术场景下的不同工序，关联来自具体的产业协作。",
-            f"两项业务共享部分技术或应用场景，{company_product}位于{core_product}旁侧的产品环节，边界需要区分清楚。",
-        )
-    else:
-        company_roles = infer_business_roles(company_product)
-        core_roles = infer_business_roles(f"{target_name} {core_product}")
-        if company_roles & {"power_semiconductor", "semiconductor_chip"} and core_roles & {
-            "cpo", "optical_module", "optical_component", "optical_chip",
-        }:
+    product_roles = infer_business_roles(company_product)
+    core_roles = infer_business_roles(f"{target_name} {core_product}")
+    product_normalized = normalize_text(company_product)
+    optical_roles = {"cpo", "optical_module", "optical_component", "optical_chip"}
+    material_terms = (
+        "特种气体", "电子气体", "电子特气", "硅片", "晶圆", "原料", "材料",
+        "基板", "光刻胶", "靶材", "化学品",
+    )
+    material_core = any(term in normalize_text(f"{target_name} {core_product}") for term in material_terms)
+
+    if core_roles & optical_roles:
+        if relation_kind == "same_product" and any(
+            term in product_normalized
+            for term in ("cpo", "共封装光学", "dpo", "含dsp可插拔光模块")
+        ):
             options = (
-                f"{core_product}承担高速数据传输，{company_product}承担电子系统中的电能控制或基础器件功能，两者共同进入数据中心和算力设备。",
-                f"在高密度算力设备中，{core_product}负责光信号互联，{company_product}负责电能转换、控制或电子器件支持，因此分别对应数据传输与供电控制环节。",
-                f"{company_product}与{core_product}共同服务于算力硬件系统，前者提供电力电子或基础器件能力，后者完成高速光互联。",
+                f"{company_product}就是新闻所说的CPO产品本体：它把光引擎靠近交换芯片布置，用更短的电连接完成高速信号传输，再通过光纤把数据送出。产品价值直接落在带宽密度、互联功耗和光电集成能力上。",
+                f"公司提供的{company_product}承担CPO架构中的高速光电转换与传输，把交换芯片输出的电信号变成可在光纤中传输的光信号。它不是外围配套，而是决定端口带宽、功耗和连接密度的产品本体。",
+                f"{company_product}将光学器件、光电转换芯片和封装结构集成到交换芯片附近，核心作用是缩短高速电通道、提高带宽密度并控制互联功耗，因此直接构成{target_name}的核心功能。",
+            )
+        elif relation_kind == "testing_support":
+            options = (
+                f"CPO把光引擎贴近交换芯片后，光纤阵列与硅光器件的耦合精度会直接影响插损、良率和量产节拍；{company_product}承担自动对准、耦合或检测，价值集中在把实验室工艺变成可重复的规模制造。",
+                f"{core_product}进入规模制造时，难点会从单纯传输速率转向封装、耦合和光电联合测试。{company_product}负责把光路对准并验证连接质量，其精度和效率决定成品一致性与生产速度。",
+                f"{company_product}服务的是{core_product}最精细的装配与检测工序：光路需要微米级对准，完成后还要验证光电性能。设备能力因此与CPO能否稳定量产紧密相连。",
+            )
+        elif relation_kind == "production_support" or "semiconductor_equipment" in product_roles:
+            options = (
+                f"{core_product}需要把光学器件、电子芯片和封装结构高密度集成，制造难点集中在定位精度、封装一致性和自动化节拍。{company_product}提供完成这些工序所需的设备或工程条件。",
+                f"CPO的产业化不只是增加一个光模块型号，而是重做光引擎与交换芯片的装配流程；{company_product}参与制造端的加工、装配或检测，作用在规模生产能力上。",
+                f"{company_product}承接{core_product}从器件到成品之间的制造步骤，设备精度、稳定性和生产节拍会影响封装质量及良率，因此属于量产环节的关键配套。",
+            )
+        elif "optical_chip" in product_roles:
+            options = (
+                f"{company_product}负责产生或调制高速光信号，是{core_product}内部的光源与光电转换基础。CPO提高通道密度并缩短电连接后，对光源稳定性、功耗和集成能力的要求随之提高。",
+                f"{core_product}要把电信号转换成光信号并送入光纤，核心起点就是{company_product}。它决定光链路的发光效率与稳定性，属于CPO光引擎内部的功能器件。",
+                f"在CPO架构中，{company_product}提供高速光源或光电转换能力，直接参与光引擎工作；通道数量增加后，器件的一致性和集成密度会成为系统性能的一部分。",
+            )
+        elif "optical_component" in product_roles:
+            options = (
+                f"{company_product}负责把光信号从芯片或光引擎稳定引入光纤，连接精度会影响插损和传输可靠性。CPO把光学接口做得更紧凑，因而更依赖高密度、低损耗的精密连接。",
+                f"{core_product}完成高速光互联，需要光纤、连接器或耦合组件把光路真正接通；{company_product}承担这一物理接口，其精度和可靠性直接影响光链路质量。",
+                f"CPO缩短的是电连接，却增加了光学装配密度。{company_product}位于光引擎与光纤之间，负责光路连接和信号传递，是系统能够稳定工作的基础环节。",
+            )
+        elif "optical_module" in product_roles:
+            options = (
+                f"{company_product}与{core_product}都要完成电信号与光信号之间的转换，并处理光器件封装、光纤接口和高速传输。两者的共同基础是光电芯片、封装工艺与光链路设计能力。",
+                f"{company_product}积累的光电转换、器件封装和高速信号处理能力，也用于理解{core_product}的光引擎。公司与新闻的产品接口位于相同的光通信技术底座。",
+                f"从物理功能看，{company_product}和{core_product}都把高速电信号转换成光信号并接入光纤，产品形态虽有差别，底层仍共享光器件集成、封装和传输技术。",
+            )
+        elif product_roles & {"power_semiconductor", "semiconductor_chip"}:
+            options = (
+                f"{core_product}解决高速数据传输，{company_product}负责交换机和算力设备中的电能转换与控制。CPO提高端口密度并降低互联功耗时，整机仍需要高效率供电，两类器件在同一设备内分别支撑数据通道和电源系统。",
+                f"高密度CPO交换设备一侧要处理高速光信号，另一侧要完成稳定供电和电能管理；{company_product}承担后者。它与{core_product}的连接点是算力设备整体的功耗和供电效率。",
+                f"{company_product}不参与光信号传输，它负责CPO交换机及相关算力硬件的电能控制。端口密度和计算负载提升后，供电效率、发热和可靠性成为整机设计的一部分。",
+            )
+        elif product_roles & {"server_compute", "software_ai"}:
+            options = (
+                f"{core_product}用于服务器或交换机之间的高速互联，{company_product}则是承载或调度这些连接的整机与系统。两者的产业接口在数据中心网络：一个提供传输通道，一个提供计算与网络运行平台。",
+                f"CPO最终部署在交换机、服务器和算力集群中，{company_product}属于这一应用载体。光互联提升带宽密度后，整机架构、网络调度和系统集成需要同步适配。",
+                f"{company_product}承载{core_product}的实际使用场景，负责计算、交换或系统运行；CPO负责节点之间的数据搬运，两项业务共同构成算力基础设施。",
             )
         else:
             options = (
-                f"{company_product}对应{core_product}之外的技术与应用配套，两者通过{target_name}所涉及的设备、工序或应用场景形成业务连接。",
-                f"在{target_name}的完整产品体系中，{company_product}与{core_product}承担不同功能，关联体现在共同的技术基础、生产环节或应用场景。",
-                f"{company_product}是公司参与相关产业场景的具体业务，与{core_product}在设备、技术或应用层面形成配合。",
-                f"公司通过{company_product}进入与{core_product}相衔接的产品和应用体系，两项业务在{target_name}相关场景中各自承担功能。",
+                f"{company_product}参与{core_product}所在的光通信系统，在光信号产生、连接、封装或传输环节承担具体功能。CPO提高集成密度后，这些环节共同决定带宽、功耗和可靠性。",
+                f"{core_product}把光学与电子器件更紧密地集成，{company_product}对应其中的器件或系统配套。它的产业价值来自对光链路效率、装配质量或整机运行的支撑。",
+                f"{company_product}与{core_product}的技术接口位于高速光互联体系，两者分别承担器件、连接、制造或系统功能，最终共同服务数据中心的高速传输。",
             )
+    elif core_roles & {"biofuel_feedstock", "biofuel_production"}:
+        if "biofuel_feedstock" in product_roles:
+            options = (
+                f"{company_product}是生物柴油和SAF可采用的油脂原料，经过收集、除杂和预处理后进入燃料转化装置。原料品质与可获得性会影响后续燃料产量、成本和碳减排属性。",
+                f"{company_product}位于{core_product}之前的原料端，作用是把废弃油脂转化为可继续加工的能源原料。新闻与公司的联系来自燃料生产对合格油脂原料的直接依赖。",
+                f"生物燃料生产先要获得稳定、可追溯的油脂原料，{company_product}承担这一入口。它连接城市有机废弃物处理与{core_product}制造，是资源化利用链条的前端。",
+            )
+        else:
+            options = (
+                f"{company_product}参与油脂原料向{core_product}的转化过程，产业价值集中在原料预处理、燃料加工和资源化利用效率。",
+                f"{core_product}需要把废弃油脂等含碳原料转化为可使用燃料，{company_product}对应生产、处理或配套环节，连接原料回收与能源产品。",
+                f"公司通过{company_product}参与生物质燃料链条，功能是处理原料、完成转化或提供生产配套，使废弃资源进入燃料体系。",
+            )
+    elif material_core:
+        if relation_kind == "equipment_using_core_material" or "semiconductor_equipment" in product_roles:
+            options = (
+                f"{core_product}是晶圆制造中的材料或工艺介质，{company_product}负责承载相应的沉积、刻蚀、清洗或检测步骤。材料纯度和设备控制共同决定制程稳定性与芯片良率。",
+                f"半导体前道工艺需要设备与材料协同工作：{core_product}参与反应或成膜，{company_product}控制工艺条件。两者在同一道制造步骤中共同影响线宽、均匀性和缺陷率。",
+                f"{company_product}提供晶圆加工环境，{core_product}作为材料或介质进入工艺腔体；设备精度与材料质量相互配合，决定先进制程能否稳定重复。",
+            )
+        elif product_roles & {"wafer_foundry", "power_semiconductor"} or relation_kind == "uses_core_material":
+            options = (
+                f"{core_product}位于晶圆或器件制造的材料端，{company_product}则是经过加工形成的芯片或功率器件。材料质量会传递到器件性能、良率和可靠性。",
+                f"{company_product}的制造要经过以{core_product}为基础的前道工序，二者是材料投入与器件产出的关系。核心材料的纯度和一致性决定后续器件加工空间。",
+                f"{core_product}先进入晶圆制造流程，再形成{company_product}这类器件。公司与新闻产业的联系来自材料性能向芯片功能和制造良率的传递。",
+            )
+        elif "chip_packaging" in product_roles or any(
+            term in normalize_text(company_product)
+            for term in ("封装", "封测", "晶圆测试")
+        ):
+            options = (
+                f"{core_product}主要作用于晶圆前道制造，{company_product}承接完成晶圆后的封装与测试。两者前后衔接，先进制程复杂度提高会同步增加封装集成和成品测试要求。",
+                f"芯片先经过{core_product}参与的晶圆工艺，再进入{company_product}环节完成互连、封装和测试。公司处在同一半导体制造链的后段，承接前道制程形成的芯片。",
+                f"{core_product}主要参与前道晶圆加工，{company_product}把完成的芯片做成可交付器件并验证性能；产业联系来自先进制程向封装和测试环节的连续传递。",
+            )
+        elif "六氟化钨" in company_product:
+            options = (
+                f"六氟化钨是半导体制造中的含钨沉积材料，可用于形成芯片内部的金属连接结构；三氟化氮更多用于腔体清洗，六氟丁二烯用于精细刻蚀。三者工序不同，但都直接服务先进制程晶圆制造。",
+                f"{company_product}进入沉积工序，为芯片内部导电结构提供钨材料；{core_product}分别承担清洗或刻蚀功能。公司产品与新闻对应的是先进制程对多类高纯电子气体的共同需求。",
+                f"先进制程既需要{core_product}完成刻蚀和设备清洗，也需要{company_product}参与含钨薄膜或连接结构的形成。公司的产业位置在电子特气材料本体，作用点是具体晶圆工序。",
+            )
+        else:
+            options = (
+                f"{company_product}与{core_product}在制造流程中形成材料、加工或成品之间的衔接，材料性能会继续影响后续产品的质量和可靠性。",
+                f"{core_product}提供制造所需的基础材料或介质，{company_product}承接后续加工与应用，两项业务在同一生产链中前后相接。",
+                f"公司通过{company_product}参与{target_name}相关制造体系，产品价值来自对材料加工、工艺稳定或成品功能的支撑。",
+            )
+    elif core_roles & {"liquid_cooling", "thermal_management"}:
+        options = (
+            f"{company_product}承担服务器和数据中心的热量转移或温度控制。液冷系统要把芯片热量经冷板、工质和换热设备持续带走，各环节共同决定散热效率与设备稳定性。",
+            f"高功率设备产生的热量需要由{company_product}完成传导、循环或散出，它与{core_product}共同构成热管理回路，直接影响系统温度和持续运行能力。",
+            f"{core_product}负责建立液体散热路径，{company_product}在冷却、换热或温控环节承担功能；两者围绕单位空间散热能力形成技术接口。",
+        )
+    elif core_roles & {"innovative_drug", "drug_service"}:
+        options = (
+            f"{company_product}参与药物研发、生产或商业化环节，核心价值在于把候选分子推进为可生产、可验证的药品。它与{core_product}通过研发技术、生产平台或具体产品权益相连。",
+            f"创新药产业的关键不是名称相近，而是靶点、产品权益和研发生产能力能否衔接；{company_product}对应其中的药物产品或专业服务环节。",
+            f"{company_product}承接{core_product}相关的研发、临床或生产步骤，为药物从技术方案走向产品提供具体能力。",
+        )
+    elif relation_kind == "same_product":
+        options = (
+            f"{company_product}就是{target_name}中的核心产品，公司直接参与其设计、制造或交付，产品性能与产业变化处在同一层级。",
+            f"公司提供的{company_product}与{core_product}属于同一产品，产业变化会首先反映在这项产品的技术、供给和应用环节。",
+            f"{company_product}直接承担{target_name}的核心功能，公司的产业位置位于产品本体，而不是外围服务。",
+        )
+    elif relation_kind == "testing_support":
+        options = (
+            f"{company_product}负责{core_product}制造中的检测、校准或性能验证，决定不良品能否被识别以及生产过程能否保持一致。",
+            f"{core_product}从样品走向规模生产，需要{company_product}控制测试精度和生产节拍，因此公司的价值位于质量控制环节。",
+            f"{company_product}把{core_product}的关键性能转化为可测量、可重复的生产指标，是制造环节稳定运行的基础。",
+        )
+    elif relation_kind == "production_support":
+        options = (
+            f"{company_product}承担{core_product}的加工、装配或制造环境建设，设备精度和产线效率会传递到产品质量与生产节拍。",
+            f"公司通过{company_product}参与{core_product}的制造过程，价值来自把产品设计转化为稳定、重复的生产能力。",
+            f"{core_product}需要具体设备和工程条件才能生产，{company_product}提供这一制造基础并影响工艺稳定性。",
+        )
+    elif relation_kind == "component_or_material":
+        options = (
+            f"{company_product}作为材料、芯片或功能部件进入{core_product}，其性能会继续影响成品的效率、可靠性或制造难度。",
+            f"{core_product}由多种材料和器件共同构成，{company_product}承担其中一项具体功能，是产品性能形成的基础环节。",
+            f"公司通过{company_product}进入{core_product}的物料与器件体系，产业价值来自对成品功能和质量的贡献。",
+        )
+    elif relation_kind == "service_support":
+        options = (
+            f"{company_product}为{core_product}提供研发、生产、软件或运行支持，作用是让核心产品完成设计、制造或实际使用。",
+            f"公司通过{company_product}承接{core_product}所需的技术与运营能力，价值位于产品之外但直接服务其运行流程。",
+            f"{core_product}的应用需要配套软件、技术服务或运营系统，{company_product}承担这一功能接口。",
+        )
+    else:
+        options = (
+            f"{company_product}与{core_product}位于同一产业或应用系统的不同环节，前者承担配套、制造或系统功能，使核心产品能够完成生产和使用。",
+            f"公司通过{company_product}参与{target_name}的技术与应用体系，产品功能与{core_product}在设备、工序或系统层面衔接。",
+            f"{company_product}连接{core_product}所在的生产或应用场景，产业价值来自两项产品之间明确的功能分工。",
+        )
     return choose_narrative_option(options, *narrative_key, salt=f"core-relation-{relation_kind}")
+
+
+def describe_event_company_link(
+    event_focus: str,
+    stock_name: str,
+    company_product: str,
+    target_name: str,
+    core_product: str,
+    narrative_key: tuple[Any, ...],
+) -> str:
+    options = (
+        f"“{event_focus}”指向{target_name}，{stock_name}与之相连的实际业务是{company_product}。",
+        f"{stock_name}之所以与“{event_focus}”对应的{target_name}相关，连接点在{company_product}与{core_product}的功能接口。",
+        f"拆到具体产品，{stock_name}通过{company_product}参与“{event_focus}”所涉及的{target_name}。",
+        f"{stock_name}在“{event_focus}”所指{target_name}中的产业位置，由{company_product}这项实际产品体现。",
+        f"“{event_focus}”涉及的{target_name}核心产品是{core_product}，{stock_name}对应的业务环节是{company_product}。",
+        f"围绕“{event_focus}”所涉及的{target_name}，{stock_name}的连接点是{company_product}与{core_product}之间的产品或系统接口。",
+    )
+    return choose_narrative_option(options, *narrative_key, salt="research-event-company-link")
+
+
+def describe_event_industry_angle(
+    event_focus: str,
+    company_product: str,
+    core_product: str,
+    target_name: str,
+    narrative_key: tuple[Any, ...],
+) -> str:
+    normalized = normalize_text(event_focus)
+    industry_context = normalize_text(f"{target_name} {core_product}")
+    company_product_context = normalize_text(company_product)
+    if (
+        any(term in normalized for term in ("saf", "uco", "生物柴油", "废弃油脂", "可持续航空燃料"))
+        and any(term in industry_context for term in ("生物质燃料", "生物柴油", "废弃油脂", "油脂原料"))
+    ):
+        options = (
+            f"SAF扩产会增加对废弃油脂等低碳原料的争夺，影响沿原料收集、预处理和燃料转化传递。对{target_name}而言，原料可获得性、杂质控制和转化效率共同决定可生产的燃料数量与成本。",
+            f"UCO是SAF和生物柴油可采用的前端原料，需求抬升会先作用于废油收集与加工，再传到燃料生产。{company_product}对应公司在原料入口或后续转化端承担的实体功能。",
+            f"这条新闻把{target_name}的约束落到原料端：废弃油脂需要经过稳定回收、除杂和预处理才能进入燃料装置，原料品质和供给量会直接影响后续产出。{company_product}对应其中的实体产品或处理环节。",
+        )
+    elif (
+        any(term in normalized for term in ("7nm", "先进制程", "台积电", "晶圆代工", "晶圆价格"))
+        and any(term in industry_context for term in ("特种气体", "电子气体", "电子特气"))
+    ):
+        if any(term in company_product_context for term in (
+            "特种气体", "电子气体", "电子特气", "六氟化钨", "三氟化氮",
+            "六氟丁二烯", "硅烷", "锗烷", "磷烷", "砷烷",
+        )):
+            options = (
+                f"先进制程晶圆要反复经过沉积、刻蚀和腔体清洗，{company_product}与{core_product}分别进入其中的具体工序。不同气体作用不同，但共同要求极高纯度和稳定配比，直接影响薄膜、线宽与缺陷控制。",
+                f"晶圆代工价格变化背后是先进制程更复杂的制造步骤，{company_product}属于直接参与这些步骤的高纯工艺材料。它与{core_product}共同构成沉积、刻蚀或清洗所需的电子特气组合。",
+                f"7nm及以下制程需要多类电子特气分工完成成膜、刻蚀和设备清洗，{company_product}承担其中一项材料功能。公司的产品因此直接落在先进制程晶圆制造环节。",
+            )
+        else:
+            options = (
+                f"先进制程晶圆要反复经过刻蚀、沉积和腔体清洗，{core_product}作为工艺材料进入这些步骤。制程越复杂，对气体纯度、配方稳定和设备控制的要求越高，{company_product}在相应制造环节与其衔接。",
+                f"晶圆代工价格变化背后对应先进制程的制造难度和成本结构，{core_product}并非普通耗材，而是参与成膜、刻蚀或清洗的电子特气。{company_product}沿设备控制、晶圆加工或封装测试承接这条制造链。",
+                f"7nm及以下制程依靠更多精密工序完成芯片结构，{core_product}用于相应的刻蚀、沉积或清洗过程。新闻与{target_name}的联系，实质上来自先进制程对高纯工艺材料和稳定制造条件的依赖。",
+            )
+    elif any(term in normalized for term in ("量产", "投产", "规模生产", "批量", "商业化", "交付")):
+        options = (
+            f"量产使{core_product}的产业重点转向良率、精度、生产节拍和一致性，{company_product}所承担的功能也由技术可行性进入规模制造体系。",
+            f"事件的产业含义是{core_product}开始接受规模生产约束，制造效率、可靠性和配套完整度随之成为{target_name}的关键指标。",
+            f"从量产阶段看，{core_product}需要的不只是性能达标，还包括稳定制造和持续运行，{company_product}的价值正体现在相应的产品或工艺环节。",
+        )
+    elif any(term in normalized for term in ("涨价", "提价", "价格", "缺货", "短缺", "供给紧张", "排产")):
+        options = (
+            f"价格与供给变化把{target_name}的核心变量集中到产能、成本和替代关系，{company_product}所在环节会通过材料、制造或产品供给与{core_product}相连。",
+            f"这类事件反映{core_product}的供给条件正在变化，产业价值会沿材料、设备和后续产品环节重新分配，{company_product}处在其中一段。",
+            f"供给偏紧或价格变化会放大{core_product}各生产环节的成本与产能差异，{company_product}与新闻的联系来自同一制造链中的功能位置。",
+        )
+    elif any(term in normalized for term in ("政策", "规划", "补贴", "标准", "规范", "办法", "通知", "试点")):
+        options = (
+            f"政策改变的是{target_name}的建设、准入或使用条件，{company_product}通过自身承担的产品功能进入{core_product}对应的实施环节。",
+            f"事件为{core_product}设定了新的产业条件，影响会沿项目建设、设备配置和产品应用展开，{company_product}对应其中的具体功能。",
+            f"政策信号把{target_name}从技术方向推进到建设或应用层面，{company_product}与新闻的联系体现在实际产品配置与产业实施。",
+        )
+    elif any(term in normalized for term in ("授权", "合作", "签约", "协议", "获批", "批准", "临床")):
+        options = (
+            f"事件推进了{core_product}的产品权益、研发或应用进程，{company_product}在同一产品体系中承担研发、生产或配套功能。",
+            f"这类进展使{target_name}的价值从技术储备转向具体产品和实施环节，{company_product}对应公司能够参与的业务部分。",
+            f"新闻强化的是{core_product}从研发、权益到产品实施的进程，{company_product}通过相应技术或服务能力与之衔接。",
+        )
+    elif any(term in normalized for term in ("突破", "发布", "验证", "升级", "首发", "首款", "成功")):
+        options = (
+            f"技术进展改变了{core_product}的性能边界或实现方式，{company_product}所负责的器件、制造或系统功能需要与新的技术路线协同。",
+            f"事件推动{target_name}进入新的技术阶段，{company_product}与新闻的关联来自对{core_product}性能、制造或应用的具体支撑。",
+            f"{core_product}的技术路线变化会重新定义材料、器件和制造配套，{company_product}对应其中一项可识别的功能环节。",
+        )
+    else:
+        options = (
+            f"事件把{target_name}的产业重点集中到{core_product}，{company_product}通过自身的产品功能参与这一体系。",
+            f"新闻涉及的产业变化由{core_product}承载，{company_product}在其制造、组成或应用系统中承担具体任务。",
+            f"{core_product}是事件变化的产品载体，{company_product}则对应公司能够参与的技术、工序或应用环节。",
+        )
+    return choose_narrative_option(options, *narrative_key, salt="research-event-industry-angle")
+
+
+def describe_revenue_research_conclusion(
+    *,
+    stock_name: str,
+    company_product: str,
+    target_name: str,
+    company_roles: set[str],
+    direct_segments: list[dict[str, Any]],
+    contained_segments: list[dict[str, Any]],
+    top_segments: list[dict[str, Any]],
+    narrative_key: tuple[Any, ...],
+) -> str:
+    if direct_segments:
+        share = sum(float(segment.get("sharePct", 0)) for segment in direct_segments)
+        names = "、".join(clean_text(segment.get("name")) for segment in direct_segments[:2])
+        options = (
+            f"{names}约占主营收入{format_share_pct(share)}，说明{company_product}所代表的业务已经进入公司的主要经营构成。",
+            f"公司主营收入中约{format_share_pct(share)}来自{names}，{target_name}关联对应的是一项有实际经营分量的业务。",
+            f"{names}贡献主营收入约{format_share_pct(share)}，公司在{target_name}中的产品位置与自身经营主体能够相互印证。",
+        )
+    elif contained_segments:
+        segment = contained_segments[0]
+        name = clean_text(segment.get("name"))
+        share = format_share_pct(float(segment.get("sharePct", 0)))
+        options = (
+            f"承载{company_product}的{name}业务约占主营收入{share}，公司参与{target_name}的经营基础来自这一产品板块。",
+            f"{name}约占主营收入{share}，{company_product}依托该板块进入{target_name}的产品与制造体系。",
+            f"公司{name}业务占比约{share}，{company_product}是其中连接{target_name}的具体产品环节。",
+        )
+    elif top_segments:
+        segment = top_segments[0]
+        name = clean_text(segment.get("name"))
+        share = format_share_pct(float(segment.get("sharePct", 0)))
+        business_label = role_label(company_roles, company_product)
+        options = (
+            f"公司收入主体是{name}（{share}），经营重心偏向{business_label}；{company_product}把这一业务基础连接到{target_name}。",
+            f"{name}约占主营收入{share}，公司的核心能力集中在{business_label}，与新闻产业的接口由{company_product}承担。",
+            f"公司主要收入来自{name}（{share}），{company_product}体现了这项主业在{target_name}中的具体功能。",
+        )
+    else:
+        options = (
+            f"对{stock_name}而言，{company_product}体现的是公司在{target_name}中的具体产品能力。",
+            f"{company_product}使公司的业务能力能够进入{target_name}的产品或应用体系。",
+            f"公司的产业价值集中在{company_product}所承担的技术与产品功能。",
+        )
+    return choose_narrative_option(options, *narrative_key, salt="research-revenue-conclusion")
 
 
 def revenue_segments_for_product(
@@ -2681,6 +2930,97 @@ def revenue_segments_for_product(
     return [], []
 
 
+def compose_researcher_business_analysis(
+    *,
+    event_focus: str,
+    stock_name: str,
+    product_name: str,
+    core_product: str,
+    core: dict[str, Any],
+    relation_kind: str,
+    company_business_text: str,
+    company_evidence: dict[str, Any],
+    best_product: dict[str, Any] | None,
+    narrative_key: tuple[Any, ...],
+    label: str,
+) -> dict[str, str]:
+    company_roles = infer_business_roles(company_business_text)
+    lead_sentence = describe_event_company_link(
+        event_focus,
+        stock_name,
+        product_name,
+        core["targetName"],
+        core_product,
+        narrative_key,
+    )
+    event_angle_sentence = describe_event_industry_angle(
+        event_focus,
+        product_name,
+        core_product,
+        core["targetName"],
+        narrative_key,
+    )
+    mechanism_sentence = describe_core_product_relation(
+        relation_kind,
+        product_name,
+        core_product,
+        core["targetName"],
+        narrative_key,
+    )
+
+    segments = [
+        segment
+        for segment in company_evidence.get("revenueSegments", [])
+        if float(segment.get("sharePct", 0)) > 0
+        and clean_text(segment.get("name")) not in GENERIC_REVENUE_NAMES
+    ]
+    direct_segments, contained_segments = revenue_segments_for_product(
+        segments,
+        best_product,
+        product_name,
+        relation_kind,
+    )
+    revenue_sentence = describe_revenue_research_conclusion(
+        stock_name=stock_name,
+        company_product=product_name,
+        target_name=core["targetName"],
+        company_roles=company_roles,
+        direct_segments=direct_segments,
+        contained_segments=contained_segments,
+        top_segments=segments[:1],
+        narrative_key=narrative_key,
+    )
+
+    order = narrative_variant(*narrative_key, salt="research-paragraph-order", modulo=3)
+    sentence_orders = (
+        (lead_sentence, mechanism_sentence, event_angle_sentence, revenue_sentence),
+        (lead_sentence, event_angle_sentence, mechanism_sentence, revenue_sentence),
+        (lead_sentence, mechanism_sentence, revenue_sentence, event_angle_sentence),
+    )
+    analysis = clean_text("".join(
+        ensure_sentence_end(sentence)
+        for sentence in sentence_orders[order]
+        if clean_text(sentence)
+    ))
+    if len(analysis) > 420:
+        reduced = clean_text("".join(
+            ensure_sentence_end(sentence)
+            for sentence in (lead_sentence, mechanism_sentence, revenue_sentence)
+            if clean_text(sentence)
+        ))
+        analysis = reduced if len(reduced) <= 420 else compact_text(reduced, 420)
+    forbidden = [
+        phrase for phrase in RELATIONSHIP_NARRATIVE_FORBIDDEN_PHRASES
+        if phrase in analysis
+    ]
+    if forbidden:
+        raise ValueError(f"{stock_name}的业务关联说明包含后台判断过程: {forbidden}")
+    return {
+        "relationLabel": label,
+        "analysis": finalize_investment_analysis(analysis, stock_name),
+    }
+
+
 def compose_core_chain_relationship_analysis(
     *,
     event_key: str,
@@ -2755,6 +3095,20 @@ def compose_core_chain_relationship_analysis(
         event_label = event_label.replace(source_term, client_term)
     event_focus = compact_text(event_label, 48)
     narrative_key = (event_key, stock_name, event_focus, product_name, core_product, relation_kind)
+
+    return compose_researcher_business_analysis(
+        event_focus=event_focus,
+        stock_name=stock_name,
+        product_name=product_name,
+        core_product=core_product,
+        core=core,
+        relation_kind=relation_kind,
+        company_business_text=company_business_text,
+        company_evidence=company_evidence,
+        best_product=best_product,
+        narrative_key=narrative_key,
+        label=label,
+    )
 
     profile_raw = clean_text(
         company_evidence.get("profileSummary") or company_evidence.get("companyProfile")
@@ -3127,7 +3481,7 @@ def audit_investment_narratives(drafts: list[dict[str, Any]]) -> dict[str, int]:
                     raise ValueError(f"{stock_key}缺少有效关联类型: {label!r}")
                 if category_opening_pattern.search(analysis):
                     raise ValueError(f"{stock_key}仍使用分类标签作固定开场")
-                if not 120 <= len(analysis) <= 420:
+                if not 140 <= len(analysis) <= 420:
                     raise ValueError(f"{stock_key}业务关联说明长度异常: {len(analysis)}")
                 if target_name and target_name not in analysis:
                     raise ValueError(f"{stock_key}未说明与核心产业{target_name}的关系")
@@ -3738,7 +4092,7 @@ def finalize_event(
             business_relation.pop("mappedProducts", None)
 
     return {
-        "schemaVersion": 19,
+        "schemaVersion": 20,
         "generatedAt": generated_at,
         "status": status,
         "event": {
@@ -3822,7 +4176,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--investment-prompt-template",
         type=Path,
-        default=project_root / "prompts" / "investment-opportunity-analyst-v10.md",
+        default=project_root / "prompts" / "investment-opportunity-analyst-v11.md",
     )
     parser.add_argument(
         "--report-corpus",
@@ -3965,7 +4319,7 @@ def main() -> None:
 
     index_events.sort(key=lambda item: (item["date"], natural_code_key(item["mainId"])), reverse=True)
     manifest = {
-        "schemaVersion": 19,
+        "schemaVersion": 20,
         "generatedAt": generated_at,
         "eventCount": len(index_events),
         "statusCounts": dict(sorted(status_counts.items())),

@@ -38,7 +38,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
   for (const mainId of demoMainIds) {
     const fileUrl = new URL(`../public/data/impact-chains/${mainId}.json`, import.meta.url);
     const payload = JSON.parse(await readFile(fileUrl, "utf8"));
-    assert.equal(payload.schemaVersion, 19);
+    assert.equal(payload.schemaVersion, 20);
     assert.equal(payload.event.mainId, mainId);
     assert.equal(payload.status, "ready");
     assert.ok(payload.selection.sourceStockCount > 0);
@@ -89,7 +89,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
       }
     }
     assert.equal(payload.investmentOpportunities.status, "ready");
-    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v10.md");
+    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v11.md");
     assert.ok(payload.investmentOpportunities.totalStockCount > 0);
     assert.ok(payload.investmentOpportunities.groupCount > 0);
     assert.equal(payload.investmentOpportunities.groups.length, payload.investmentOpportunities.groupCount);
@@ -115,15 +115,17 @@ test("ships valid impact-chain data for every visible demo event", async () => {
         assert.ok(["真相关", "宽口径相关", "小基数布局", "蹭概念", "错位"].includes(stock.relationLabel));
         assert.ok(stock.analysis.includes(stock.stockName));
         assert.ok(stock.analysis.includes(payload.industryAnalysis.target.name));
-        assert.ok(stock.analysis.length >= 120);
+        assert.ok(stock.analysis.length >= 140);
         assert.ok(stock.analysis.length <= 420);
         assert.equal(stock.analysis.includes("\n"), false);
         assert.match(stock.analysis, /产品|服务|设备|材料|业务/);
-        assert.match(stock.analysis, /主营|收入/);
+        assert.match(stock.analysis, /功能|制造|良率|功耗|可靠性|生产|工序|系统|技术|转化/);
+        assert.match(stock.analysis, /主营|收入|占比/);
         assert.doesNotMatch(stock.analysis, /客户(?:会|是否|采购|需求)|新增订单|订单增加|利润增长|业绩增长|股价(?:上涨|下跌|表现|波动)|估值(?:提升|下降|重估|空间)|公司估值|建议买入|建议卖出|给予买入评级|给予卖出评级|给出目标价|目标价为|有望受益|建议关注|后续重点看|兑现|事件催化|市场催化|股价催化|催化逻辑|催化因素/);
         assert.doesNotMatch(stock.analysis, /^(?:真相关|宽口径相关|小基数布局|蹭概念|业务错位)[。 ：:]/);
         assert.doesNotMatch(stock.analysis, /不是纯蹭热点，不过只能算宽口径相关/);
         assert.doesNotMatch(stock.analysis, /没有关系|毫无关系|不相关|不直接相关|业务错位|并不一致|不足以把两者视为直接关联|业务范围并不重合|业务范围不重合|经营主体不在|并非同类产品/);
+        assert.doesNotMatch(stock.analysis, /单一产品的比例|只说明业务归属|合并披露|未在分部结构中列示|作为独立分部|单独占比|未形成可单独识别|需要比较|需要对照|这里需要辨认|面对的比较对象|判断关系|判断依据|公司概况/);
         investmentOpenings.add(stock.analysis.slice(0, 24));
         for (const phrase of [
           "年报",
@@ -283,7 +285,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   const manifest = JSON.parse(await readFile(manifestUrl, "utf8"));
   const statusTotal = Object.values(manifest.statusCounts).reduce((sum, value) => sum + value, 0);
 
-  assert.equal(manifest.schemaVersion, 19);
+  assert.equal(manifest.schemaVersion, 20);
   assert.equal(manifest.eventCount, 813);
   assert.equal(manifest.events.length, manifest.eventCount);
   assert.equal(statusTotal, manifest.eventCount);
@@ -294,7 +296,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   );
   assert.equal(manifest.source.companyProfiles, "2025年报公司简介和主营业务占比.xlsx");
   assert.equal(manifest.source.companyProfileCount, 5499);
-  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v10.md");
+  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v11.md");
   assert.equal(Object.hasOwn(manifest.source, "edges"), false);
   assert.ok(manifest.events.every((event) => event.relatedIndustryCount >= 0 && event.relatedIndustryCount <= 2));
   assert.ok(manifest.events.some((event) => event.relatedIndustryCount === 2));
@@ -318,27 +320,27 @@ test("keeps the reusable prompt internal instead of publishing it to visitors", 
 });
 
 test("keeps the investment analyst prompt structured and internal", async () => {
-  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v10.md", import.meta.url);
+  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v11.md", import.meta.url);
   const prompt = await readFile(promptUrl, "utf8");
 
   for (const placeholder of ["event_title", "core_industry_name", "core_industry_description", "core_products", "industry_research_summary", "stock_name", "stock_code", "company_profile", "major_products", "revenue_composition", "mapped_products", "revenue_segment_relations"]) {
     assert.ok(prompt.includes(`{{${placeholder}}}`));
   }
-  for (const requirement of ["要写清楚的内容", "穿透名称解释实物和工序", "产业研究只用于补足产业知识", "只写能够成立的关联路径", "只解释业务关联，不推演经营结果", "自由选择切入点", "公司概况用于形成自然语境"]) {
+  for (const requirement of ["正文真正要回答的问题", "先穿透产品功能", "把新闻放进产业机制", "公司资料只做证据，不做正文填充", "只输出结论，不展示思考轨迹", "关联表达保持客观且以成立的路径为主", "自由组织语言"]) {
     assert.match(prompt, new RegExp(requirement));
   }
-  for (const requirement of ["输入（只供你理解", "正文中严禁介绍字段", "内部过程"]) {
+  for (const requirement of ["输入（仅供内部分析", "正文不得介绍字段", "处理过程"]) {
     assert.match(prompt, new RegExp(requirement));
   }
-  for (const requirement of ["公司实际提供的产品或服务是什么", "在同一技术与应用场景中承担不同功能", "不判断客户会不会购买", "星级与系统关联理由不参与正文写作", "不要给每只股票套相同的开头", "不要为了拉近关系编造公司没有的产品"]) {
+  for (const requirement of ["公司哪一项真实产品参与其中", "物理接口或技术接口", "为什么这个接口具有产业价值", "不能改写或拼接公司简介", "不得把外围配套冒充核心产品", "不套固定三段式"]) {
     assert.match(prompt, new RegExp(requirement));
   }
-  for (const forbiddenSkeleton of ["有望受益", "首先、其次、最后", "从……来看", "真正相关的是", "买卖建议"]) {
+  for (const forbiddenSkeleton of ["有望受益", "需要比较", "需要对照", "判断依据", "买卖建议"]) {
     assert.match(prompt, new RegExp(forbiddenSkeleton));
   }
-  assert.match(prompt, /160—340字/);
+  assert.match(prompt, /150—360字/);
 
-  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v10.md", import.meta.url);
+  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v11.md", import.meta.url);
   await assert.rejects(readFile(publicPromptUrl, "utf8"), { code: "ENOENT" });
 });
 
