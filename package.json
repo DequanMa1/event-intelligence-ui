@@ -11,7 +11,7 @@
     "build:sites": "npm run build && node scripts/stage_sites_static.mjs",
     "start": "node scripts/serve_static_export.mjs",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern out --ignore-pattern .local-site",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
