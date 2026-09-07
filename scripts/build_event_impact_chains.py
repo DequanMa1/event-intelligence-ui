@@ -15,6 +15,8 @@ from zoneinfo import ZoneInfo
 
 import pandas as pd
 
+from business_structure import describe_business_structure, refined_revenue_matches, revenue_structure
+
 
 EVENT_COLUMNS = [
     "main_id",
@@ -301,7 +303,7 @@ GENERIC_REVENUE_NAMES = {
 # differs from the event terminology.
 BUSINESS_SEMANTIC_GROUPS = {
     "optical_communication": (
-        "光通信", "光模块", "光器件", "光子器件", "光互联", "光收发", "光传输",
+        "光通信", "光通讯", "光模块", "光器件", "光子器件", "光互联", "光收发", "光传输",
         "光纤", "光缆", "硅光", "光芯片", "激光器", "外置光源", "cpo", "npo",
         "lpo", "dpo", "xpo", "fau", "els",
     ),
@@ -369,7 +371,7 @@ BUSINESS_SEMANTIC_GROUPS = {
     ),
     "biofuel": (
         "可持续航空燃料", "航空生物燃料", "生物航油", "生物燃料", "生物柴油",
-        "废弃油脂", "餐厨废油", "地沟油", "再生废油", "生物能源", "saf", "uco", "hvo",
+        "废弃油脂", "餐厨废油", "地沟油", "再生废油", "油脂产品加工", "工业级混合油", "生物能源", "saf", "uco", "hvo",
     ),
     "chemicals": (
         "化工", "化学品", "化学材料", "树脂", "涂料", "胶", "添加剂", "催化剂",
@@ -573,7 +575,12 @@ def extract_news_text(value: Any) -> str:
 
 
 def normalize_text(value: Any) -> str:
-    text = unicodedata.normalize("NFKC", clean_text(value)).casefold()
+    return normalize_clean_text(clean_text(value))
+
+
+@lru_cache(maxsize=65536)
+def normalize_clean_text(value: str) -> str:
+    text = unicodedata.normalize("NFKC", value).casefold()
     return re.sub(r"[^0-9a-z\u4e00-\u9fff]+", "", text)
 
 
@@ -819,14 +826,24 @@ def match_company_profile(
 
 
 def semantic_business_tags(value: Any) -> set[str]:
-    normalized = normalize_text(value)
+    return set(cached_semantic_business_tags(normalize_text(value)))
+
+
+@lru_cache(maxsize=1)
+def normalized_business_keywords() -> tuple:
+    return tuple((tag, tuple(normalize_text(k) for k in keywords))
+                 for tag, keywords in BUSINESS_SEMANTIC_GROUPS.items())
+
+
+@lru_cache(maxsize=32768)
+def cached_semantic_business_tags(normalized: str) -> frozenset[str]:
     if not normalized:
-        return set()
-    return {
+        return frozenset()
+    return frozenset(
         tag
-        for tag, keywords in BUSINESS_SEMANTIC_GROUPS.items()
-        if any(normalize_text(keyword) in normalized for keyword in keywords)
-    }
+        for tag, keywords in normalized_business_keywords()
+        if any(keyword in normalized for keyword in keywords)
+    )
 
 
 def event_business_terms(row: pd.Series) -> set[str]:
@@ -1282,12 +1299,22 @@ ROLE_COMPATIBILITY = {
 
 
 def infer_business_roles(value: Any) -> set[str]:
-    text = normalize_text(value)
-    return {
+    return set(cached_business_roles(normalize_text(value)))
+
+
+@lru_cache(maxsize=1)
+def normalized_role_keywords() -> tuple:
+    return tuple((role, tuple(normalize_text(k) for k in keywords))
+                 for role, keywords in BUSINESS_ROLE_KEYWORDS.items())
+
+
+@lru_cache(maxsize=32768)
+def cached_business_roles(text: str) -> frozenset[str]:
+    return frozenset(
         role
-        for role, keywords in BUSINESS_ROLE_KEYWORDS.items()
-        if any(normalize_text(keyword) in text for keyword in keywords)
-    }
+        for role, keywords in normalized_role_keywords()
+        if any(keyword in text for keyword in keywords)
+    )
 
 
 def roles_are_compatible(event_roles: set[str], company_roles: set[str]) -> bool:
@@ -2406,7 +2433,8 @@ PROFILE_RELATION_NOISE_TERMS = (
     "业务机构", "国家和地区", "客户", "供应商的信任", "发展前景",
     "国家战略", "发展蓝图", "战略核心支撑者", "行业领军者向",
     "一带一路", "全覆盖",
-    "国家或地区", "全球六大洲",
+    "国家或地区", "全球六大洲", "发展成为", "排名", "全球第一", "全球第二", "全球第三",
+    "未来", "加速推动", "引领行业", "技术赋能", "以技术为核心", "资本为翼", "管理为纲",
 )
 
 PROFILE_RELATION_MARKETING_TERMS = (
@@ -2780,6 +2808,25 @@ def describe_core_product_relation(
     )
     material_core = any(term in normalize_text(f"{target_name} {core_product}") for term in material_terms)
 
+    # Explain the actual optical module before consulting a broad category such
+    # as "光通信设备". That category does not make the module a manufacturing tool,
+    # and a pluggable DPO module must not be described as co-packaged optics.
+    if "optical_module" in product_roles and not any(
+        term in product_normalized for term in ("设备", "测试系统", "检测系统")
+    ):
+        if "cpo" in product_roles:
+            return (
+                f"{company_product}把光引擎与电子芯片更紧密地集成，承担电信号和光信号之间的转换。"
+                "光纤负责将信号传到另一端，模块的光电接口负责把两种信号接起来；"
+                f"公司这项业务连接{target_name}中的高速数据互联环节。"
+            )
+        dsp = "其中的数字信号处理功能用于改善高速信号质量。" if "dsp" in product_normalized else ""
+        return (
+            f"{company_product}负责把设备内部的电信号转换成可在光纤中传输的光信号，并完成反向转换。"
+            f"{dsp}光模块由此成为电子设备与光纤网络之间的功能接口，"
+            f"公司在{target_name}中的具体业务联系来自这种高速连接能力。"
+        )
+
     if any(term in normalize_text(core_product) for term in ("光纤", "光缆", "预制棒")):
         options = (
             f"{company_product}负责让光信号在通信网络中长距离传输，光纤预制棒则是拉制光纤的关键原料。预制棒供应和价格变化会直接影响光纤光缆的生产成本与供给。",
@@ -3066,51 +3113,6 @@ def describe_event_industry_angle(
     return choose_narrative_option(options, *narrative_key, salt="research-event-industry-angle")
 
 
-def describe_revenue_research_conclusion(
-    *,
-    stock_name: str,
-    company_product: str,
-    target_name: str,
-    company_roles: set[str],
-    direct_segments: list[dict[str, Any]],
-    contained_segments: list[dict[str, Any]],
-    top_segments: list[dict[str, Any]],
-    narrative_key: tuple[Any, ...],
-) -> str:
-    if direct_segments:
-        share = sum(float(segment.get("sharePct", 0)) for segment in direct_segments)
-        names = "、".join(clean_text(segment.get("name")) for segment in direct_segments[:2])
-        options = (
-            f"{names}约占主营收入{format_share_pct(share)}，是公司的主要收入来源之一，相关产品在公司业务中分量较重。",
-            f"公司约{format_share_pct(share)}的主营收入来自{names}，{company_product}属于公司已有规模的核心业务。",
-            f"{names}贡献主营收入约{format_share_pct(share)}，{company_product}并非边缘业务，而是公司主业的一部分。",
-        )
-    elif contained_segments:
-        segment = contained_segments[0]
-        name = clean_text(segment.get("name"))
-        share = format_share_pct(float(segment.get("sharePct", 0)))
-        options = (
-            f"{company_product}归在{name}业务中，该板块约占主营收入{share}，属于公司已有一定基础的业务方向。",
-            f"{name}约占主营收入{share}，{company_product}是这一板块中与{target_name}相连的具体产品。",
-            f"公司{name}业务占比约{share}，其中的{company_product}构成公司参与{target_name}的现有产品基础。",
-        )
-    elif top_segments:
-        segment = top_segments[0]
-        name = clean_text(segment.get("name"))
-        share = format_share_pct(float(segment.get("sharePct", 0)))
-        business_label = role_label(company_roles, company_product)
-        options = (
-            f"公司主要收入来自{name}（{share}），主营能力集中在{business_label}，{company_product}建立在这项业务基础上。",
-            f"{name}约占主营收入{share}，是公司的经营主体；{company_product}是这项主业与{target_name}相连的产品。",
-            f"公司收入主体是{name}（{share}），{company_product}属于现有主业能力在{target_name}中的具体应用。",
-        )
-    else:
-        options = (
-            f"对{stock_name}而言，{company_product}是公司参与{target_name}的现有产品基础。",
-            f"{company_product}属于公司的现有产品线，承担其在{target_name}中的具体功能。",
-            f"公司通过{company_product}这项现有业务参与{target_name}的产品或应用体系。",
-        )
-    return choose_narrative_option(options, *narrative_key, salt="research-revenue-conclusion")
 
 
 def revenue_segments_for_product(
@@ -3129,6 +3131,9 @@ def revenue_segments_for_product(
         clean_text(product_name),
     ))
     product_norms = [normalize_text(value) for value in product_values if len(normalize_text(value)) >= 3]
+    refined = refined_revenue_matches(segments, " ".join(product_values))
+    if refined is not None:
+        return refined
     product_tags = semantic_business_tags(" ".join(product_values))
     explicit_direct: list[dict[str, Any]] = []
     explicit_contained: list[dict[str, Any]] = []
@@ -3229,145 +3234,70 @@ def compose_researcher_business_analysis(
         company_evidence=company_evidence,
         narrative_key=narrative_key,
     )
+    if len(profile_sentence) < 70:
+        # Short positioning phrases can omit the actual operating capability.
+        # Add a distinct, relevant profile fact, never an invented revenue share.
+        for fact in profile_business_facts(company_evidence, product_name, core_product, core["targetName"], limit=4):
+            if len(fact) < 24 or normalize_text(fact) in normalize_text(profile_sentence):
+                continue
+            if any(phrase in fact for phrase in (*RELATIONSHIP_NARRATIVE_FORBIDDEN_PHRASES, *INVESTMENT_ANALYSIS_BANNED_PHRASES)):
+                continue
+            if any(normalize_text(clause) in normalize_text(fact)
+                   for clause in re.split(r"[。；]", profile_sentence)
+                   if len(normalize_text(clause)) >= 12):
+                continue
+            profile_sentence = ensure_sentence_end(profile_sentence) + ensure_sentence_end(
+                profile_fact_statement(stock_name, fact, narrative_key)
+            )
+            break
 
-    segments = [
-        segment
-        for segment in company_evidence.get("revenueSegments", [])
-        if float(segment.get("sharePct", 0)) > 0
-        and clean_text(segment.get("name")) not in GENERIC_REVENUE_NAMES
-    ]
+    # Keep the entire composition for denominator and concentration checks.
+    # Selection of relevant products is separate from interpretation of the mix.
+    segments = company_evidence.get("revenueSegments", [])
     direct_segments, contained_segments = revenue_segments_for_product(
-        segments,
-        best_product,
-        product_name,
-        relation_kind,
+        [s for s in segments if clean_text(s.get("name")) not in GENERIC_REVENUE_NAMES],
+        best_product, product_name, relation_kind,
     )
-    revenue_sentence = describe_revenue_research_conclusion(
-        stock_name=stock_name,
+    revenue_sentence = describe_business_structure(
         company_product=product_name,
         target_name=core["targetName"],
-        company_roles=company_roles,
+        company_evidence=company_evidence,
         direct_segments=direct_segments,
         contained_segments=contained_segments,
-        top_segments=segments[:1],
-        narrative_key=narrative_key,
     )
+    mix = revenue_structure(segments, direct_segments, contained_segments)
+    focus = mix["focus"]
+    peer = mix["peer"]
+    if focus and mix["comparable"] and focus["sharePct"] < 10:
+        parts = [lead_sentence, revenue_sentence, profile_sentence, mechanism_sentence]
+    elif focus and peer and mix["comparable"] and abs(focus["sharePct"] - peer["sharePct"]) <= 10:
+        parts = [lead_sentence, profile_sentence, revenue_sentence, mechanism_sentence]
+    else:
+        parts = [lead_sentence, mechanism_sentence, profile_sentence, revenue_sentence]
 
-    optional_sentences: list[str] = []
+    # Remove duplicates at sentence boundaries. Do not fill to a minimum length
+    # with industry background or cut business evidence to a fixed 58 characters.
+    def render(parts: list[str]) -> str:
+        sentences: list[str] = []
+        for part in parts:
+            for sentence in re.split(r"(?<=[。！？])", ensure_sentence_end(part)):
+                sentence = clean_text(sentence)
+                if sentence and sentence not in sentences:
+                    sentences.append(sentence)
+        return "".join(sentences)
 
-    def render_analysis() -> str:
-        return clean_text("".join(
-            ensure_sentence_end(sentence)
-            for sentence in (
-                lead_sentence,
-                profile_sentence,
-                mechanism_sentence,
-                *optional_sentences,
-                revenue_sentence,
-            )
-            if clean_text(sentence)
-        ))
-
-    analysis = render_analysis()
-    if len(analysis) < 250:
-        optional_sentences.append(describe_event_industry_angle(
-            event_focus,
-            product_name,
-            core_product,
-            core["targetName"],
-            narrative_key,
-        ))
-        analysis = render_analysis()
-    if len(analysis) < 250:
-        overview = objective_industry_excerpt(core.get("overview"), 88)
-        overview_options = (
-            f"{core['targetName']}在产业链中的实际作用是{overview}",
-            f"从产品用途看，{core['targetName']}主要涉及{overview}",
-            f"具体到{core['targetName']}这一环节，其产业内容包括{overview}",
-        ) if overview else (
-            f"{core_product}是{core['targetName']}中承接具体生产或使用功能的产品，公司业务与它在前述工序或系统内形成配合。",
-        )
-        optional_sentences.append(choose_narrative_option(
-            overview_options,
-            *narrative_key,
-            salt="research-core-overview-supplement",
-        ))
-        analysis = render_analysis()
-    if len(analysis) < 250:
-        major_products = split_major_product_names(company_evidence.get("majorProducts"), 3)
-        product_scope = "、".join(major_products[:2])
-        business_label = role_label(company_roles, product_name)
-        if product_scope:
-            final_context_options = (
-                f"公司现有产品体系还包括{product_scope}，共同构成{business_label}的业务基础。",
-                f"{product_scope}也是公司既有业务的一部分，与{product_name}共同体现其{business_label}能力。",
-                f"公司围绕{business_label}形成了包含{product_scope}在内的产品组合。",
-            )
-        else:
-            final_context_options = (
-                f"公司参与{core['targetName']}的方式，具体体现在{product_name}承担的生产、配套或应用功能上。",
-                f"{product_name}把公司的现有业务能力放进{core['targetName']}的具体生产与应用环节。",
-                f"这项产品使公司的技术或服务能力在{core['targetName']}中对应到明确的实体环节。",
-            )
-        optional_sentences.append(choose_narrative_option(
-            final_context_options,
-            *narrative_key,
-            salt="research-company-scope-supplement",
-        ))
-        analysis = render_analysis()
-
-    while len(analysis) > 350 and optional_sentences:
-        candidate_optional = optional_sentences[:-1]
-        candidate = clean_text("".join(
-            ensure_sentence_end(sentence)
-            for sentence in (
-                lead_sentence,
-                profile_sentence,
-                mechanism_sentence,
-                *candidate_optional,
-                revenue_sentence,
-            )
-            if clean_text(sentence)
-        ))
-        if len(candidate) < 250:
-            break
-        optional_sentences = candidate_optional
-        analysis = candidate
-    if len(analysis) > 350:
-        compact_lead_sentence = (
-            f"{stock_name}与{core['targetName']}的连接来自{product_name}，"
-            f"对应“{event_focus}”所涉及的产业环节。"
-        )
-        component_limits = [
-            (compact_lead_sentence, 72),
-            (profile_sentence, 106),
-            (mechanism_sentence, 105),
-            (revenue_sentence, 58),
-        ]
-        for sentence in reversed(optional_sentences):
-            component_limits.insert(-1, (sentence, 36))
-        analysis = clean_text("".join(
-            compact_complete_sentence(sentence, limit)
-            for sentence, limit in component_limits
-            if clean_text(sentence)
-        ))
-    if len(analysis) > 350:
-        analysis = compact_text(analysis, 350)
-    if len(analysis) < 250:
-        minimum_context_options = (
-            f"在{core['targetName']}中，{product_name}承担与{core_product}配套的制造、连接或应用功能。",
-            f"{product_name}对应{core_product}所需的具体产品、工序或系统配套。",
-            f"公司以{product_name}参与{core_product}所在的生产、设备或应用环节。",
-        )
-        minimum_context = choose_narrative_option(
-            minimum_context_options,
-            *narrative_key,
-            salt="research-minimum-length-context",
-        )
-        analysis += compact_complete_sentence(
-            minimum_context,
-            min(82, 350 - len(analysis)),
-        )
+    analysis = render(parts)
+    if len(analysis) > 550:
+        profile_sentence = compact_complete_sentence(profile_sentence, 72)
+        parts = [lead_sentence, mechanism_sentence, profile_sentence, revenue_sentence]
+        analysis = render(parts)
+    if len(analysis) > 550:
+        # Preserve the revenue interpretation and product mechanism. The news
+        # title is already visible in the page, so its lead can be shortened.
+        parts[0] = f"{stock_name}通过{product_name}参与{core['targetName']}，与“{event_focus}”相接。"
+        analysis = render(parts)
+    if len(analysis) > 550:
+        raise ValueError(f"{stock_name}业务解释超过550字，需要精简完整句子: {len(analysis)}")
     forbidden = [
         phrase for phrase in RELATIONSHIP_NARRATIVE_FORBIDDEN_PHRASES
         if phrase in analysis
@@ -3840,7 +3770,7 @@ def audit_investment_narratives(drafts: list[dict[str, Any]]) -> dict[str, int]:
                     raise ValueError(f"{stock_key}缺少有效关联类型: {label!r}")
                 if category_opening_pattern.search(analysis):
                     raise ValueError(f"{stock_key}仍使用分类标签作固定开场")
-                if not 250 <= len(analysis) <= 350:
+                if not 120 <= len(analysis) <= 550:
                     raise ValueError(f"{stock_key}业务关联说明长度异常: {len(analysis)}")
                 if target_name and target_name not in analysis:
                     raise ValueError(f"{stock_key}未说明与核心产业{target_name}的关系")
@@ -4535,7 +4465,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--investment-prompt-template",
         type=Path,
-        default=project_root / "prompts" / "investment-opportunity-analyst-v13.md",
+        default=project_root / "prompts" / "investment-opportunity-analyst-v14.md",
     )
     parser.add_argument(
         "--report-corpus",

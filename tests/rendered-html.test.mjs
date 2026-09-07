@@ -89,7 +89,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
       }
     }
     assert.equal(payload.investmentOpportunities.status, "ready");
-    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v13.md");
+    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v14.md");
     assert.ok(payload.investmentOpportunities.totalStockCount > 0);
     assert.ok(payload.investmentOpportunities.groupCount > 0);
     assert.equal(payload.investmentOpportunities.groups.length, payload.investmentOpportunities.groupCount);
@@ -115,8 +115,8 @@ test("ships valid impact-chain data for every visible demo event", async () => {
         assert.ok(["真相关", "宽口径相关", "小基数布局", "蹭概念", "错位"].includes(stock.relationLabel));
         assert.ok(stock.analysis.includes(stock.stockName));
         assert.ok(stock.analysis.includes(payload.industryAnalysis.target.name));
-        assert.ok(stock.analysis.length >= 250);
-        assert.ok(stock.analysis.length <= 350);
+        assert.ok(stock.analysis.length >= 120);
+        assert.ok(stock.analysis.length <= 550);
         assert.equal(stock.analysis.includes("\n"), false);
         assert.match(stock.analysis, /产品|服务|设备|材料|业务/);
         assert.match(stock.analysis, /功能|制造|良率|功耗|可靠性|生产|工序|系统|技术|转化/);
@@ -297,7 +297,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   );
   assert.equal(manifest.source.companyProfiles, "2025年报公司简介和主营业务占比.xlsx");
   assert.equal(manifest.source.companyProfileCount, 5499);
-  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v13.md");
+  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v14.md");
   assert.equal(Object.hasOwn(manifest.source, "edges"), false);
   assert.ok(manifest.events.every((event) => event.relatedIndustryCount >= 0 && event.relatedIndustryCount <= 2));
   assert.ok(manifest.events.some((event) => event.relatedIndustryCount === 2));
@@ -321,13 +321,13 @@ test("keeps the reusable prompt internal instead of publishing it to visitors", 
 });
 
 test("keeps the investment analyst prompt structured and internal", async () => {
-  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v13.md", import.meta.url);
+  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v14.md", import.meta.url);
   const prompt = await readFile(promptUrl, "utf8");
 
   for (const placeholder of ["event_title", "core_industry_name", "core_industry_description", "core_products", "industry_research_summary", "stock_name", "stock_code", "company_profile", "major_products", "revenue_composition", "mapped_products", "revenue_segment_relations"]) {
     assert.ok(prompt.includes(`{{${placeholder}}}`));
   }
-  for (const requirement of ["核心任务", "明确公司靠什么接上新闻", "重点提炼公司概况中的经营定位", "校准相关业务在公司的分量", "第一原则：关系优先，公司概况必须服务于关系解释", "第二原则：穿透产品名称，讲清产业接口", "第三原则：自然组织，避免固定句式", "第四原则：只写能够成立的关系"]) {
+  for (const requirement of ["完整阅读主营业务占比", "结合整体结构进行解读", "自由决定切入点", "大分部中包含相关产品", "只写能够成立的关系"]) {
     assert.match(prompt, new RegExp(requirement));
   }
   for (const requirement of ["以上信息仅用于内部判断", "正文不得介绍字段", "分析过程"]) {
@@ -339,10 +339,35 @@ test("keeps the investment analyst prompt structured and internal", async () => 
   for (const forbiddenSkeleton of ["有望受益", "产业关注度提升", "需要判断", "未单独披露", "买卖建议"]) {
     assert.match(prompt, new RegExp(forbiddenSkeleton));
   }
-  assert.match(prompt, /严格控制在250—350字/);
+  assert.match(prompt, /通常350—500字/);
+  assert.match(prompt, /不要把不同分类、重叠科目相加/);
 
-  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v13.md", import.meta.url);
+  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v14.md", import.meta.url);
   await assert.rejects(readFile(publicPromptUrl, "utf8"), { code: "ENOENT" });
+});
+
+test("explains the revenue mix rather than promoting every related segment to core business", async () => {
+  const loadStock = async (eventId, name) => {
+    const payload = JSON.parse(await readFile(new URL(`../public/data/impact-chains/${eventId}.json`, import.meta.url), "utf8"));
+    return payload.investmentOpportunities.groups.flatMap((group) => group.stocks).find((stock) => stock.stockName === name);
+  };
+  const dongshan = await loadStock("26303", "东山精密");
+  assert.match(dongshan.analysis, /3\.58%/);
+  assert.match(dongshan.analysis, /63\.85%/);
+  assert.match(dongshan.analysis, /较小/);
+  assert.doesNotMatch(dongshan.analysis, /分量较重|光模块.*主营支柱/);
+
+  const shangao = await loadStock("26314", "山高环能");
+  assert.match(shangao.analysis, /油脂产品加工和销售占主营收入51\.33%/);
+  assert.match(shangao.analysis, /25\.37%/);
+  assert.match(shangao.analysis, /原料回收与加工利用/);
+
+  const luobo = await loadStock("26405", "罗博特科");
+  assert.match(luobo.analysis, /46\.23%/);
+  assert.match(luobo.analysis, /45\.59%/);
+  assert.match(luobo.analysis, /规模接近/);
+  assert.match(luobo.analysis, /不同的制造对象/);
+  assert.ok(luobo.analysis.length > 350);
 });
 
 test("shows each stock as one objective business-relationship paragraph", async () => {
