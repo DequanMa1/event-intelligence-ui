@@ -1,0 +1,80 @@
+name: Publish client-friendly stock analysis
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/release-v15.yml'
+      - '.github/releases/release-v15.zip'
+permissions:
+  contents: write
+  actions: read
+  pages: write
+  id-token: write
+concurrency:
+  group: release-v15
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      NEXT_PUBLIC_BASE_PATH: /event-intelligence-ui
+      NEXT_PUBLIC_SITE_ORIGIN: https://dequanma1.github.io
+    steps:
+      - uses: actions/checkout@v6
+      - name: Verify and apply the locally tested change
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, pathlib, zipfile
+          archive = pathlib.Path('.github/releases/release-v15.zip')
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == '78d70ad0bbdadb54a4b6b52a024c4754249eb372ce7783d6cc1c4f503c283228'
+          with zipfile.ZipFile(archive) as z:
+              assert len(z.namelist()) == 1
+              name = z.namelist()[0]
+              assert '/' not in name and '\\' not in name and name.endswith('.patch')
+              pathlib.Path('/tmp/adviser-tone-v15.patch').write_bytes(z.read(name))
+          PY
+          git apply --check --index /tmp/adviser-tone-v15.patch
+          git apply --index /tmp/adviser-tone-v15.patch
+          git rm -- .github/releases/release-v15.zip .github/workflows/release-v15.yml
+          test "$(git write-tree)" = "53b572645f354d5e831346c7a155837a1ea69667"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Save verified source and remove temporary release files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Use a plain-language adviser tone"
+          git push origin HEAD:main
+      - name: Wait for the prior Pages build to finish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, os, time, urllib.request
+          url = 'https://api.github.com/repos/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs?head_sha=' + os.environ['GITHUB_SHA'] + '&per_page=20'
+          for _ in range(100):
+              req = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+              with urllib.request.urlopen(req) as response:
+                  runs = json.load(response)['workflow_runs']
+              pending = [r for r in runs if str(r['id']) != os.environ['GITHUB_RUN_ID'] and r['status'] != 'completed']
+              if not pending:
+                  break
+              time.sleep(3)
+          else:
+              raise RuntimeError('Prior build is still active; refusing to race the deployment')
+          PY
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: out
+      - name: Deploy the verified website
+        id: deployment
+        uses: actions/deploy-pages@v4
