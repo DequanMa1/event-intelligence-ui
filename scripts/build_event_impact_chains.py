@@ -2434,7 +2434,8 @@ PROFILE_RELATION_NOISE_TERMS = (
     "国家战略", "发展蓝图", "战略核心支撑者", "行业领军者向",
     "一带一路", "全覆盖",
     "国家或地区", "全球六大洲", "发展成为", "排名", "全球第一", "全球第二", "全球第三",
-    "未来", "加速推动", "引领行业", "技术赋能", "以技术为核心", "资本为翼", "管理为纲",
+    "未来", "加速推动", "引领行业", "技术赋能", "以技术为核心", "资本为翼", "管理为纲", "完整的研发", "销售和服务体系",
+    "授权专利", "软件著作权", "先行企业", "合作关系", "核心技术", "技术沉淀",
 )
 
 PROFILE_RELATION_MARKETING_TERMS = (
@@ -2453,6 +2454,7 @@ def clean_profile_relation_clause(value: Any) -> str:
     clause = clause.replace("国家高新技术企业", "企业").replace("高新技术企业", "企业")
     for term in PROFILE_RELATION_MARKETING_TERMS:
         clause = clause.replace(term, "")
+    clause = re.sub(r"^是一家(.+?)的(?:企业|公司)$", r"\1", clause)
     clause = re.sub(r"\s+", "", clause)
     return clause.strip("。！？!?；;，,：: ")
 
@@ -2823,8 +2825,8 @@ def describe_core_product_relation(
         dsp = "其中的数字信号处理功能用于改善高速信号质量。" if "dsp" in product_normalized else ""
         return (
             f"{company_product}负责把设备内部的电信号转换成可在光纤中传输的光信号，并完成反向转换。"
-            f"{dsp}光模块由此成为电子设备与光纤网络之间的功能接口，"
-            f"公司在{target_name}中的具体业务联系来自这种高速连接能力。"
+            f"{dsp}光模块就这样把电子设备接入光纤网络，"
+            "解决高速信号如何传出去、再接收回来的问题。"
         )
 
     if any(term in normalize_text(core_product) for term in ("光纤", "光缆", "预制棒")):
@@ -2845,8 +2847,8 @@ def describe_core_product_relation(
             )
         elif relation_kind == "testing_support":
             options = (
-                f"CPO把光引擎贴近交换芯片后，光纤阵列与硅光器件的耦合精度会直接影响插损、良率和量产节拍；{company_product}承担自动对准、耦合或检测，价值集中在把实验室工艺变成可重复的规模制造。",
-                f"{core_product}进入规模制造时，难点会从单纯传输速率转向封装、耦合和光电联合测试。{company_product}负责把光路对准并验证连接质量，其精度和效率决定成品一致性与生产速度。",
+                f"CPO把光引擎放到交换芯片附近，光路要对得准，传输时才不容易损失信号。{company_product}用来完成自动对准、连接和检测。这类工作不能只靠人工反复调试，批量生产时，每件产品都要保持一致的连接质量，这就是相关设备的实际用途。",
+                f"{core_product}批量生产时，不光要传得快，还要把器件装好、光路对准，并逐一检查连接质量。{company_product}就是做这些工作的设备。对准得是否准确、检测得是否稳定，会影响整批产品的质量和生产速度。",
                 f"{company_product}服务的是{core_product}最精细的装配与检测工序：光路需要微米级对准，完成后还要验证光电性能。设备能力因此与CPO能否稳定量产紧密相连。",
             )
         elif relation_kind == "production_support" or "semiconductor_equipment" in product_roles:
@@ -2900,7 +2902,7 @@ def describe_core_product_relation(
             )
         else:
             options = (
-                f"{company_product}参与油脂原料向{core_product}的转化过程，产业价值集中在原料预处理、燃料加工和资源化利用效率。",
+                f"{company_product}与{core_product}的生产都涉及油脂加工，需要先去除杂质，再加工成可以使用的燃料。原料处理和后面的加工能否衔接好，会影响油脂的利用效率。",
                 f"{core_product}需要把废弃油脂等含碳原料转化为可使用燃料，{company_product}对应生产、处理或配套环节，连接原料回收与能源产品。",
                 f"公司通过{company_product}参与生物质燃料链条，功能是处理原料、完成转化或提供生产配套，使废弃资源进入燃料体系。",
             )
@@ -3026,12 +3028,12 @@ def describe_event_company_link(
             salt="research-event-company-link-same-product",
         )
     options = (
-        f"“{event_focus}”指向{target_name}，{stock_name}与之相连的实际业务是{company_product}。",
-        f"{stock_name}之所以与“{event_focus}”对应的{target_name}相关，连接点在{company_product}与{core_product}的功能接口。",
-        f"拆到具体产品，{stock_name}通过{company_product}参与“{event_focus}”所涉及的{target_name}。",
-        f"{stock_name}在“{event_focus}”所指{target_name}中的产业位置，由{company_product}这项实际产品体现。",
-        f"“{event_focus}”涉及的{target_name}核心产品是{core_product}，{stock_name}对应的业务环节是{company_product}。",
-        f"围绕“{event_focus}”所涉及的{target_name}，{stock_name}的连接点是{company_product}与{core_product}之间的产品或系统接口。",
+        f"这次“{event_focus}”谈到{target_name}，{stock_name}相关的业务是{company_product}。",
+        f"“{event_focus}”涉及{target_name}，说到{stock_name}，具体要看它的{company_product}业务。",
+        f"{stock_name}做的{company_product}，用在{target_name}相关产品中，这也是它与“{event_focus}”有关的原因。",
+        f"{stock_name}与这次“{event_focus}”有关的，是{company_product}业务；新闻讨论的产业是{target_name}。",
+        f"这次{target_name}的新闻“{event_focus}”，与{stock_name}的{company_product}业务有关。",
+        f"{stock_name}与“{event_focus}”的关系，要从{company_product}在{target_name}里具体怎么用说起。",
     )
     return choose_narrative_option(options, *narrative_key, salt="research-event-company-link")
 
@@ -3234,7 +3236,7 @@ def compose_researcher_business_analysis(
         company_evidence=company_evidence,
         narrative_key=narrative_key,
     )
-    if len(profile_sentence) < 70:
+    if len(profile_sentence) < 40:
         # Short positioning phrases can omit the actual operating capability.
         # Add a distinct, relevant profile fact, never an invented revenue share.
         for fact in profile_business_facts(company_evidence, product_name, core_product, core["targetName"], limit=4):
@@ -3250,6 +3252,7 @@ def compose_researcher_business_analysis(
                 profile_fact_statement(stock_name, fact, narrative_key)
             )
             break
+    profile_sentence = profile_sentence.replace(stock_name, "公司")
 
     # Keep the entire composition for denominator and concentration checks.
     # Selection of relevant products is separate from interpretation of the mix.
@@ -4465,7 +4468,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--investment-prompt-template",
         type=Path,
-        default=project_root / "prompts" / "investment-opportunity-analyst-v14.md",
+        default=project_root / "prompts" / "investment-opportunity-analyst-v15.md",
     )
     parser.add_argument(
         "--report-corpus",

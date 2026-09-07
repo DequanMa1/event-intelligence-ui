@@ -1,7 +1,7 @@
 """Revenue evidence and structural interpretation for the offline site preview.
 
 This is deterministic evidence-based copy, not an LLM call. The model-facing
-editorial contract lives in prompts/investment-opportunity-analyst-v14.md.
+editorial contract lives in prompts/investment-opportunity-analyst-v15.md.
 """
 from __future__ import annotations
 
@@ -87,17 +87,17 @@ def functional_comparison(focus: str, peer: str, profile: str) -> str:
     """Explain supported business functions, not assumed commercial synergy."""
     both = focus + " " + peer
     if "油脂" in focus and "处理" in peer and "餐厨" in profile:
-        return "餐厨废弃物处理负责收集后的无害化处置和资源回收，油脂加工把回收物进一步整理为可利用的能源原料，两项业务分别对应原料回收与加工利用。新闻所涉及的生物燃料原料，具体连接在这段资源化利用过程。"
+        return "餐厨处理要把收来的废弃物做无害化处置，并回收其中还能利用的油脂。油脂经过加工，可以作为生物燃料的原料。公司既做餐厨处理，也做油脂加工，原料回收与加工利用是两项实际业务，新闻提到的燃料原料就与此有关。"
     if "封测设备" in focus and "光伏" in peer and "自动化" in profile:
-        return "这两类设备服务不同的制造对象：一类完成光电子器件的装配、耦合与检测，另一类用于光伏生产。公司的自动化装备和制造软件能力，落实到不同工序后形成两块业务，光通信技术变化对应的是前一类设备承担的制造任务。"
+        return "两类设备做的事情不同：光电子器件需要装配、对准光路并检测性能，光伏设备则用来生产太阳能电池等产品。公司做的是生产过程中用的自动化装备和软件。理解这次光通信新闻，重点就在光电子器件如何装得准、测得好，而不是光伏设备的用途。"
     if "光模块" in focus and ("电路" in peer or "线路板" in peer):
-        return "电子电路承担器件承载和电信号连接，光模块负责光信号与电信号之间的转换，两者在电子设备中执行不同任务。围绕光互联的新闻，具体产品联系在光模块；电路业务则体现公司更大范围的电子制造基础。"
+        return "电子电路用来安装元器件、连接电信号，光模块则把电信号转换成光信号，通过光纤传输。这是两类不同的产品。此次光互联新闻涉及光模块，但公司更大的一块生意仍然是电子电路，理解这家公司时，这两个业务的大小需要分清。"
     if "功率器件" in focus and "芯片" in peer:
-        return "芯片承担半导体内部的电功能，器件经过封装后成为能够装入电源、电机控制等系统的部件。器件收入占主导，反映公司的主要产品形态更靠近可使用的电子部件；芯片业务同时保留了更靠前的产品环节。"
+        return "芯片经过封装，才成为能装到电源或电机控制系统里的器件。公司的收入以器件为主，也有芯片业务，卖的产品既包括封装后的电子部件，也包括加工在前的芯片。"
     if "原料药" in both and "制剂" in both:
         return "原料药提供药物发挥作用的有效成分，制剂把成分制成适合使用的药品形态。两项业务处在药品生产的不同环节，具体药物或工艺变化应对应到实际承担该功能的产品。"
     if "软件" in both and ("硬件" in both or "设备" in both):
-        return "硬件提供计算、采集或执行的实体载体，软件负责规则、流程和功能控制。两类业务的收入分布，体现公司既有产品更偏向设备交付还是软件功能，具体产业应用则要通过相应产品实现。"
+        return "硬件负责计算、采集数据或执行指令，软件决定这些设备按什么规则工作。设备和软件各占多少收入，可以帮助区分公司主要卖哪一类产品，不能把两项业务混在一起理解。"
     return ""
 
 
@@ -113,41 +113,39 @@ def describe_business_structure(*, company_product, target_name, company_evidenc
         # Individual source percentages remain usable, cross-segment rankings do not.
         selected = focus or top
         return f"{selected['name']}在主营收入构成中占{pct(selected['sharePct'])}。" + (
-            f"{company_product}属于这一业务方向，具体承担前述产业功能。" if focus else ""
+            f"{company_product}属于这一业务方向，用来完成前面提到的工作。" if focus else ""
         )
     if focus:
         name, share = focus["name"], focus["sharePct"]
         anchor = f"{name}占主营收入{pct(share)}"
         if share >= 80:
-            sentence = anchor + "，公司经营重心高度集中在这一类产品，相关产业的产品功能与公司的主要经营活动紧密相连。"
+            sentence = anchor + "，公司绝大部分收入来自这类业务。"
         elif share > 50:
             sentence = anchor + "，超过一半，是公司目前的主营支柱。"
         elif share == 50:
-            sentence = anchor + "，占公司主营收入的一半，是公司目前的重要业务板块。"
+            sentence = anchor + "，正好占一半，是公司的一项主要业务。"
         elif peer and abs(share - peer["sharePct"]) <= 10 and share >= 20:
-            sentence = anchor + f"，与占{pct(peer['sharePct'])}的{peer['name']}规模接近，公司同时围绕这两个业务板块开展经营。"
+            sentence = anchor + f"，与占{pct(peer['sharePct'])}的{peer['name']}规模接近，两块业务都占了相当分量。"
         elif share < 10:
-            sentence = anchor + f"；占{pct(top['sharePct'])}的{top['name']}承担更大部分的经营活动，相关新闻连接的是公司较小的一项产品业务。"
+            sentence = anchor + f"；占{pct(top['sharePct'])}的{top['name']}才是公司收入的大头，相关产品目前只是其中较小的一项业务。"
         else:
-            sentence = anchor + "，已经是有一定分量的业务板块。"
+            sentence = anchor + "，在公司收入中已经占有一定比例。"
             if peer:
-                sentence += f"{peer['name']}占{pct(peer['sharePct'])}，公司整体业务还包含另一类重要产品或服务。"
+                sentence += f"{peer['name']}占{pct(peer['sharePct'])}，也是公司主要经营的业务。"
         if peer and share >= 50 and peer["sharePct"] >= 10:
-            sentence += f"{peer['name']}占{pct(peer['sharePct'])}，也是理解公司业务组合的重要部分。"
+            sentence += f"{peer['name']}占{pct(peer['sharePct'])}，是另一块主要收入来源。"
         explanation = functional_comparison(name, peer["name"] if peer else "", profile)
         if explanation:
             sentence += explanation
         elif not mix["exact"]:
-            sentence += f"{company_product}是{name}中的具体产品方向，其与{target_name}的联系体现在产品用途和实际承担的功能。"
-        elif share < 50:
-            sentence += f"{company_product}的产业作用应放在上述业务组合中理解，产品与{target_name}的联系具体而明确。"
+            sentence += f"{company_product}属于{name}这一类业务。"
         return sentence
     # No reliable parent relationship: describe the overall business, without
     # inventing that the selected product belongs to the largest revenue bucket.
     if len(segments) > 1 and segments[1]["sharePct"] >= 10:
         second = segments[1]
         return (f"公司主营收入主要来自{top['name']}（{pct(top['sharePct'])}）和"
-                f"{second['name']}（{pct(second['sharePct'])}），这两项业务体现了整体经营的主要方向。"
-                f"理解其在{target_name}中的位置，应具体到{company_product}承担的功能，不能把公司其他业务一并理解为同一种产品。")
-    return (f"公司主营收入集中在{top['name']}，占{pct(top['sharePct'])}，其经营重心主要围绕这一类业务展开。"
-            f"{company_product}与{target_name}的联系，具体体现在前述产品功能及使用场景。")
+                f"{second['name']}（{pct(second['sharePct'])}），收入主要由这两类业务支撑。"
+                f"公司做{company_product}，同时还经营这些其他业务。")
+    return (f"公司主营收入集中在{top['name']}，占{pct(top['sharePct'])}，这是目前主要的收入来源。"
+            "")

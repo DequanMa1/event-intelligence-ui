@@ -89,7 +89,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
       }
     }
     assert.equal(payload.investmentOpportunities.status, "ready");
-    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v14.md");
+    assert.equal(payload.investmentOpportunities.analysisPromptVersion, "investment-opportunity-analyst-v15.md");
     assert.ok(payload.investmentOpportunities.totalStockCount > 0);
     assert.ok(payload.investmentOpportunities.groupCount > 0);
     assert.equal(payload.investmentOpportunities.groups.length, payload.investmentOpportunities.groupCount);
@@ -118,7 +118,7 @@ test("ships valid impact-chain data for every visible demo event", async () => {
         assert.ok(stock.analysis.length >= 120);
         assert.ok(stock.analysis.length <= 550);
         assert.equal(stock.analysis.includes("\n"), false);
-        assert.match(stock.analysis, /产品|服务|设备|材料|业务/);
+        assert.match(stock.analysis, /产品|服务|设备|材料|业务|生产|研发|经营/);
         assert.match(stock.analysis, /功能|制造|良率|功耗|可靠性|生产|工序|系统|技术|转化/);
         assert.match(stock.analysis, /主营|收入|占比/);
         assert.doesNotMatch(stock.analysis, /客户(?:会|是否|采购|需求)|新增订单|订单增加|利润增长|业绩增长|股价(?:上涨|下跌|表现|波动)|估值(?:提升|下降|重估|空间)|公司估值|建议买入|建议卖出|给予买入评级|给予卖出评级|给出目标价|目标价为|有望受益|建议关注|后续重点看|兑现|事件催化|市场催化|股价催化|催化逻辑|催化因素/);
@@ -297,7 +297,7 @@ test("keeps the generated manifest consistent with per-event files", async () =>
   );
   assert.equal(manifest.source.companyProfiles, "2025年报公司简介和主营业务占比.xlsx");
   assert.equal(manifest.source.companyProfileCount, 5499);
-  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v14.md");
+  assert.equal(manifest.source.investmentPrompt, "investment-opportunity-analyst-v15.md");
   assert.equal(Object.hasOwn(manifest.source, "edges"), false);
   assert.ok(manifest.events.every((event) => event.relatedIndustryCount >= 0 && event.relatedIndustryCount <= 2));
   assert.ok(manifest.events.some((event) => event.relatedIndustryCount === 2));
@@ -321,13 +321,13 @@ test("keeps the reusable prompt internal instead of publishing it to visitors", 
 });
 
 test("keeps the investment analyst prompt structured and internal", async () => {
-  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v14.md", import.meta.url);
+  const promptUrl = new URL("../prompts/investment-opportunity-analyst-v15.md", import.meta.url);
   const prompt = await readFile(promptUrl, "utf8");
 
   for (const placeholder of ["event_title", "core_industry_name", "core_industry_description", "core_products", "industry_research_summary", "stock_name", "stock_code", "company_profile", "major_products", "revenue_composition", "mapped_products", "revenue_segment_relations"]) {
     assert.ok(prompt.includes(`{{${placeholder}}}`));
   }
-  for (const requirement of ["完整阅读主营业务占比", "结合整体结构进行解读", "自由决定切入点", "大分部中包含相关产品", "只写能够成立的关系"]) {
+  for (const requirement of ["完整阅读主营业务占比", "结合整体结构进行解读", "自由决定怎么讲", "大分部中包含相关产品", "只写能够成立的关系"]) {
     assert.match(prompt, new RegExp(requirement));
   }
   for (const requirement of ["以上信息仅用于内部判断", "正文不得介绍字段", "分析过程"]) {
@@ -342,7 +342,7 @@ test("keeps the investment analyst prompt structured and internal", async () => 
   assert.match(prompt, /通常350—500字/);
   assert.match(prompt, /不要把不同分类、重叠科目相加/);
 
-  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v14.md", import.meta.url);
+  const publicPromptUrl = new URL("../public/data/prompts/investment-opportunity-analyst-v15.md", import.meta.url);
   await assert.rejects(readFile(publicPromptUrl, "utf8"), { code: "ENOENT" });
 });
 
@@ -366,8 +366,9 @@ test("explains the revenue mix rather than promoting every related segment to co
   assert.match(luobo.analysis, /46\.23%/);
   assert.match(luobo.analysis, /45\.59%/);
   assert.match(luobo.analysis, /规模接近/);
-  assert.match(luobo.analysis, /不同的制造对象/);
-  assert.ok(luobo.analysis.length > 350);
+  assert.match(luobo.analysis, /两类设备做的事情不同/);
+  assert.ok(luobo.analysis.length >= 250);
+  assert.doesNotMatch(luobo.analysis, /价值集中在|经营重心高度集中|承担更大部分的经营活动|功能接口|产业位置/);
 });
 
 test("shows each stock as one objective business-relationship paragraph", async () => {
